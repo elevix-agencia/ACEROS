@@ -37,10 +37,11 @@ export function Clients() {
       <div className="container mx-auto px-4">
         <div className="text-center animate-fade-in-up mb-12">
           <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            {t.clients.title}
+            {t.clients?.title || 'Atendendo Gigantes da Indústria'}
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
-            {t.clients.subtitle}
+            {t.clients?.subtitle ||
+              'Nossa excelência em engenharia de materiais nos permite fornecer componentes críticos para os líderes globais em setores como mineração, naval, siderurgia e óleo & gás.'}
           </p>
         </div>
 
