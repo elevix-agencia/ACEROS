@@ -1,0 +1,457 @@
+
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "qualifications": "Quality",
+    "products": "Products",
+    "contact": "Contact",
+    "expertise": "Areas of Expertise"
+  },
+  "footer": {
+    "description": "Excellence and innovation in centrifugally cast steels for the most demanding industries.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
+    "commercial_phone": "+55 (11) 2944-1901 (Commercial)",
+    "industrial_phone": "+55 (11) 5555-6551 (Industrial)",
+    "email": "comercial@aceros.com.br",
+    "newsletter": "Subscribe",
+    "newsletter_prompt": "Receive news and updates about our products and innovations.",
+    "subscribe": "Subscribe",
+    "rights_reserved": "Aceros. All rights reserved."
+  },
+  "hero": {
+    "title": "ACEROS CENTRIFUGADOS",
+    "subtitle": "Aceros designs and manufactures high-performance stainless steel alloy products to assist its national and international clients, increasing the efficiency of their processes.",
+    "learn_more": "Learn More",
+    "contact_us": "Contact Us"
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "subtitle": "The trust and satisfaction of our global partners are our greatest certificate of quality.",
+    "translate": "Translate to English",
+    "show_original": "Show original"
+  },
+  "sectors": {
+    "title": "Areas of Expertise",
+    "subtitle": "Aceros stands out in the industry for its unique expertise in materials engineering. Enhancing the performance of equipment and components in service is one of its core strengths."
+  },
+  "about": {
+    "title": "Get to know our story",
+    "paragraph1": "Aceros is a manufacturer of stainless steel parts and, with its technical skill and focus on development, stands out in the centrifugation of alloys and superalloys. Our expertise in machining and boiler making allows us to deliver a final product of high quality, resistant to heat, abrasion, and corrosion.",
+    "paragraph2": "Our goal is to optimize the quality of production processes, especially in centrifugal tubes and static castings, ensuring complete solutions with cutting-edge technology.",
+    "pillars_title": "Our Pillars",
+    "mission_title": "Our Mission",
+    "mission_description": "To drive industrial progress with steel and engineering solutions, ensuring safety and efficiency for our partners.",
+    "vision_title": "Our Vision",
+    "vision_description": "To be the global reference in centrifugally cast steels, recognized for continuous innovation, sustainability, and excellence in every piece produced."
+  },
+  "gallery": {
+    "title": "Some of Our Products",
+    "subtitle": "Discover some of the products developed with high technical standards, industrial precision, and engineering excellence."
+  },
+  "quality": {
+    "title": "Laboratories and Quality",
+    "subtitle": "Our laboratories conduct research on corrosion analysis, chemical analysis, ultrasound, hardness, and mechanical tests, allowing Aceros to study improvements in the design or metallurgy of cast parts, resistant to heat, abrasion, and special alloys.",
+    "analysis_title": "Research and Analysis",
+    "analysis_description": "Corrosion analysis, chemical analysis, ultrasound, hardness, and mechanical tests.",
+    "improvement_title": "Continuous Improvement",
+    "improvement_description": "Study of improvements in the design and metallurgy of cast parts and special alloys.",
+    "resistance_title": "Superior Resistance",
+    "resistance_description": "Development of alloys resistant to heat, abrasion, and corrosion for maximum performance.",
+    "cta_button": "Learn About Our Qualifications"
+  },
+  "clients": {
+    "title": "Serving Industry Giants",
+    "subtitle": "Our excellence in materials engineering allows us to supply critical components to global leaders in sectors such as mining, naval, steel, and oil & gas."
+  },
+  "client_logos": {
+    "title": "Quality that Drives Leaders",
+    "subtitle": "We are proud to provide high-performance solutions to leaders in the steel industry."
+  },
+  "location": {
+    "title": "Our Location",
+    "subtitle": "Visit our commercial office in São Paulo. We are ready to present our solutions and discuss your project's needs.",
+    "map_title": "Aceros Address"
+  },
+  "whatsapp": {
+    "title": "Shall We Talk About Your Needs?",
+    "subtitle": "Our team of experts is ready to understand your project and offer the ideal steel solution for you. Click the button below and talk to us directly on WhatsApp.",
+    "button": "Start Conversation on WhatsApp",
+    "message": "Hello! I am contacting you through the Aceros website. I would like information about supply and steel solutions for my sector. Could you assist me?",
+    "whatsapp_quote": "Request a Quote via WhatsApp"
+  },
+  "contact": {
+    "title": "Request Your Quote",
+    "subtitle": "Aceros is a specialist in the centrifugation of alloys and superalloys, offering complete solutions in machining and boiler making. Fill out the fields below or talk to us on WhatsApp.",
+    "form_title": "Send Your Message",
+    "form_name": "Name",
+    "form_name_placeholder": "Your full name",
+    "form_email": "Email",
+    "form_email_placeholder": "your.email@example.com",
+    "form_phone": "Phone",
+    "form_phone_placeholder": "(XX) XXXXX-XXXX",
+    "form_message": "Message",
+    "form_message_placeholder": "Describe your need or project...",
+    "form_submit": "Send Quote",
+    "form_submitting": "Sending...",
+    "form_whatsapp": "Contact via WhatsApp",
+    "details_title": "Contact Us",
+    "details_hours": "Service from Monday to Friday from 8 am to 6 pm",
+    "details_address_title": "Commercial Address",
+    "details_commercial_office": "Commercial Office",
+    "details_industrial_area": "Industrial Area",
+    "toast_success_title": "Message sent!",
+    "toast_success_description": "We have received your contact and will get back to you shortly.",
+    "toast_error_title": "Error sending message.",
+    "toast_error_description": "Please try again or contact us through another channel."
+  },
+  "manufacturing_history": {
+    "title": "Manufacturing History",
+    "subtitle": "Explore our journey through pieces that have marked our history, demonstrating our capability and evolution in producing high-performance components."
+  },
+  "products": {
+    "title": "Discover Our Complete Product Line",
+    "subtitle": "Explore our portfolio, which ranges from centrifugal tubes and static castings to high-precision machined components. Each item is produced under strict quality control to ensure maximum performance and durability.",
+    "quote_button": "Quote",
+    "view_image_button": "View Image",
+    "itrac_seal_name": "ITRAC Compliance Seal",
+    "itrac_seal_description": "Guarantee of compliance and traceability in our processes, validated by recognized certifications.",
+    "classification_seals_name": "International Certifications",
+    "classification_seals_description": "Our quality is validated by the world's largest naval and industrial classifiers, such as DNV, ABS, Bureau Veritas, and Lloyd's Register.",
+    "product_tube_name": "Centrifugal Tubes",
+    "product_tube_description": "We produce tubes in stainless steel and special alloys, ensuring extended service life and superior performance in demanding environments.",
+    "product_bushing_name": "Bushings and Rings",
+    "product_bushing_description": "We manufacture precision bushings and rings for applications requiring high resistance to wear, heat, and corrosion.",
+    "product_ring_name": "Static Castings",
+    "product_ring_description": "Statically cast parts in various alloys for complex components that require structural integrity and reliability.",
+    "product_valve_body_name": "Valve Bodies",
+    "product_valve_body_description": "Robust valve bodies for flow control in high-pressure and high-temperature systems, machined with precision.",
+    "product_rollers_name": "Industrial Rollers",
+    "product_rollers_description": "Rollers for conveyors and rolling systems, designed for maximum durability and wear resistance.",
+    "product_large_ring_name": "Large Rings",
+    "product_large_ring_description": "Large-diameter rings for heavy equipment, manufactured in special alloys to withstand extreme loads.",
+    "product_machined_parts_name": "Machined Components",
+    "product_machined_parts_description": "Various custom machined components to meet the exact specifications of your industrial project.",
+    "product_custom_castings_name": "Custom Castings",
+    "product_custom_castings_description": "Custom cast parts, developed in collaboration to solve specific engineering challenges.",
+    "product_thick_wall_pipe_name": "Thick-Walled Pipes",
+    "product_thick_wall_pipe_description": "Thick-walled centrifugal tubes for applications requiring maximum structural strength and containment.",
+    "product_flange_name": "Flanges and Connections",
+    "product_flange_description": "High-integrity flanges and connections for piping systems in corrosive and high-pressure environments.",
+    "product_housing_name": "Machined Housings",
+    "product_housing_description": "Complex machined housing or casing component.",
+    "product_collars_name": "Locking Collars",
+    "product_collars_description": "Set of machined locking collars or rings.",
+    "product_precision_parts_name": "Precision Mechanical Parts",
+    "product_precision_parts_description": "Mechanical components developed with high precision for critical industrial applications."
+  },
+  "cta": {
+    "ready_title": "Ready to Start?",
+    "ready_subtitle": "Our team is ready to help you find the perfect solution for your project. Get in touch today.",
+    "request_quote": "Request Your Quote Now",
+    "whatsapp": "Talk on WhatsApp"
+  },
+  "qualifications": {
+    "page_title": "Our Qualifications",
+    "page_subtitle": "Guarantee of precision and reliability in every process.",
+    "expertise_title": "Technical Expertise and Rigorous Quality Control",
+    "expertise_paragraph1": "With vast experience and state-of-the-art equipment, Aceros features Engineer Daniel Garcia, qualified by Drever (Belgium), for 'rollprof roll' measurement. We have already controlled over 600 furnace rolls for clients like Drever, Efco, Danieli, and SDI.",
+    "expertise_paragraph2": "The quality of our products is guaranteed by a wide variety of inspection instruments and calibration standards, all tracked by the RBC, ensuring the precision and reliability of our processes.",
+    "control_title": "Quality Control",
+    "control_description": "Our laboratories are equipped to perform a wide range of analyses, including corrosion tests, detailed chemical analysis, ultrasound for detecting internal flaws, hardness measurements, and complete mechanical tests.",
+    "innovation_title": "Innovation and Development",
+    "innovation_description": "We continuously invest in research to improve designs and the metallurgy of cast parts. We develop special alloys resistant to heat, abrasion, and corrosion to ensure maximum performance and durability of our products.",
+    "alloy_tables_title": "Alloy Specifications",
+    "alloy_tables_subtitle": "Detailed technical information about the alloys we produce, ensuring maximum performance and compliance.",
+    "steel_classes_title": "Special Steel Classes",
+    "steel_classes_subtitle": "We offer a wide range of steel classes, developed to meet the most rigorous technical and performance specifications.",
+    "machining_gallery_title": "Precision Machining Gallery",
+    "machining_gallery_subtitle": "Our machining department is equipped with CNC equipment, ensuring precision and excellence in every part delivered.",
+    "structural_analysis_title": "Structural Analysis and Optimization",
+    "structural_analysis_subtitle": "We use finite element simulation to validate projects and ensure structural integrity.",
+    "process_optimization_title": "Process Optimization",
+    "process_optimization_subtitle": "Structural calculations and temperature simulations.",
+    "diagrams_and_processes_title": "Diagrams and Processes",
+    "diagrams_and_processes_subtitle": "Detailed visualizations of our processes and technical capabilities.",
+    "items": [
+      {
+        "title": "Specialized Certification",
+        "description": "Engineer qualified by Drever (Belgium) for precise 'rollprof roll' measurement."
+      },
+      {
+        "title": "Vast Experience",
+        "description": "Control of over 600 furnace rolls for global clients like Drever, Efco, and Danieli."
+      },
+      {
+        "title": "RBC Standards",
+        "description": "Inspection instruments and calibration standards tracked by the RBC for maximum reliability."
+      },
+      {
+        "title": "Cutting-Edge Technology",
+        "description": "Use of advanced equipment to ensure precision in all our measurement processes."
+      }
+    ]
+  },
+  "certificates": {
+    "title": "Our Certificates: Quality Assured by Global Standards",
+    "subtitle": "The excellence and reliability of our products are proven through certifications issued by the most respected industrial and naval classifiers in the world.",
+    "dnv": "Certification that attests to compliance with international standards of quality and safety in various industrial and maritime sectors.",
+    "abs": "Recognition from the American Bureau of Shipping, ensuring that our products meet the strictest standards of the naval sector.",
+    "bureau_veritas": "Seal from a world leader in testing, inspection, and certification, validating the excellence of our processes and products.",
+    "lloyds": "Certification that ensures compliance with the highest standards of engineering, safety, and performance for critical applications."
+  },
+  "expertise_sectors": {
+    "page": {
+      "solutions_for": "Solutions for",
+      "gallery_title": "Project Gallery",
+      "video_title": "Processes in Action",
+      "sector_not_found": "Sector not found.",
+      "feature_title": "Differentiators for the Sector",
+      "feature_description_1": "We offer tailor-made solutions that meet the specific demands of the industry of",
+      "feature_item1": "High-performance alloys",
+      "feature_item2": "Superior corrosion and wear resistance",
+      "feature_item3": "Specialized technical support",
+      "featured_products_title": "Featured Products",
+      "featured_products_subtitle": "Discover some of the essential components we supply for the pig iron industry.",
+      "mining_solutions_title": "Solutions for Mining",
+      "mining_solutions_subtitle": "Robust and high-performance components, designed to overcome the most extreme challenges of the mining industry.",
+      "mining_quality_title": "Excellence in every component",
+      "mining_quality_subtitle": "Our commitment is to deliver solutions that not only meet but exceed performance and durability expectations.",
+      "mining_quality_pillar1_title": "Superior quality",
+      "mining_quality_pillar1_description": "Our alloys and processes ensure components that surpass industry standards.",
+      "mining_quality_pillar2_title": "Precision engineering",
+      "mining_quality_pillar2_description": "Each part is designed for maximum efficiency, durability, and a perfect fit.",
+      "mining_quality_pillar3_title": "Extreme durability",
+      "mining_quality_pillar3_description": "Components built to withstand the harshest conditions of abrasion and impact.",
+      "staves_title": "Staves (Cooling Plates)",
+      "staves_description": "Crucial components for the efficient cooling of the blast furnace, ensuring structural integrity and operational longevity. Manufactured with high thermal conductivity and resistant alloys.",
+      "tuyeres_title": "Tuyeres (Blow Valves)",
+      "tuyeres_description": "Designed for the precise injection of hot air into the blast furnace, our tuyeres are manufactured to withstand extreme temperatures and aggressive environments, optimizing the combustion process.",
+      "housings_title": "Machined Housings",
+      "housings_description": "Complex machined housings and casings to protect internal components and ensure perfect alignment in industrial equipment. Manufactured to withstand harsh environments.",
+      "projects_gallery_title": "Engineering Projects Gallery",
+      "projects_gallery_subtitle": "Explore some of the complex components and custom parts developed by our engineering team.",
+      "oil_gas_products_title": "Essential Components for Oil & Gas",
+      "oil_gas_products_subtitle": "Explore our critical components designed for maximum reliability in high-pressure and corrosive environments.",
+      "oil_gas_valves_title": "High-Performance Valves",
+      "oil_gas_valves_description": "We develop bodies and internal components for valves that operate in the most severe conditions, ensuring safe and efficient flow control. Our special alloys offer superior resistance to corrosion and wear, extending the equipment's service life.",
+      "oil_gas_connections_title": "Connections and Flanges",
+      "oil_gas_connections_description": "We manufacture flanges and connections that ensure the structural integrity of piping systems. Each part is designed to withstand high pressures and temperatures, preventing leaks and ensuring operational safety.",
+      "oil_gas_custom_parts_title": "Custom Parts",
+      "oil_gas_custom_parts_description": "We work in partnership with our clients to develop custom cast and machined parts that meet specific engineering challenges for oil and gas exploration, production, and refining.",
+      "mining_deck_rollers_title": "ROLLERS FOR SCREENING DECK",
+      "mining_deck_rollers_description": "Rollers for screens, each individually driven by a gear motor or chain, with the possibility of automatically varying the gap between rollers without stopping the machine. Manufactured with WC-carbide coating and also uncoated rollers.",
+      "mining_sinter_car_walls_title": "UPPER AND LOWER SIDE WALLS FOR PELLETIZING AND SINTERING CARS",
+      "mining_sinter_car_walls_description": "Special design and specific alloys to optimize service life and prevent pre-burning on the upper profile.",
+      "mining_grate_bars_title": "GRATE BARS FOR PELLETIZING CARS",
+      "mining_grate_bars_description": "Cast in fully austenitic alloys to optimize resistance to corrosion and heat at high temperatures.",
+      "mining_sinter_cars_title": "COMPLETE PELLETIZING AND SINTERING CARS FOR SMALL PLANTS",
+      "mining_sinter_cars_description": "CIS designs, develops, and produces complete pelletizing and sintering cars (frame, side walls, grate bars, wheels).",
+      "mining_blast_furnace_title": "BLAST FURNACE: ARMOR AND WEAR PLATES",
+      "mining_blast_furnace_description": "Armor and wear plates for both Paul Wurth type and Double Bell type blast furnaces.",
+      "mining_deck_hot_cold_title": "HOT AND COLD SCREENING DECKS",
+      "mining_deck_hot_cold_description": "Wear-resistant screening decks, with different shapes and profiles; holes cast by the shell molding process in a 'herringbone' design, to optimize the open area and the 'self-cleaning' effect. Superalloys for operation at very high temperatures (up to 1,100 °C).",
+      "hsp_title": "ROLLERS FOR HOT STRIP TRANSPORT (HSP)",
+      "hsp_description": "New generation of rollers for TRANSFER TABLE, RUN-OUT TABLE, LOOPER, TENSION, PINCH, and WRAPPER.",
+      "hsp_feature1_title": "Bi-metallic Process",
+      "hsp_feature1_description": "Martensitic and ferritic stainless steel microstructure with a hard outer layer and a softer, more resistant inner core.",
+      "hsp_feature2_title": "Performance Guarantee",
+      "hsp_feature2_description": "Maximum runout reduction of 0.5 mm (mono-metallic) or 0.3 mm (bi-metallic) per million tons processed.",
+      "hsp_feature3_title": "Critical Applications",
+      "hsp_feature3_description": "For pinch rollers, we use a centrifugally cast bi-metallic table to ensure the best performance.",
+      "furnace_capl_cgl_title": "FURNACE ROLLS FOR BAR TRANSPORT",
+      "furnace_capl_cgl_description": "Complete solutions for Continuous Annealing and Processing Lines (CAPL) and Continuous Galvanizing Lines (CGL).",
+      "furnace_capl_cgl_item1": "Radiant tubes ('W', 'U', 'P' single and double types) with heat recuperators.",
+      "furnace_capl_cgl_item2": "Coated and uncoated furnace rolls.",
+      "furnace_capl_cgl_item3": "HVOF or SUPER D-GUN technology for coated rolls.",
+      "furnace_capl_cgl_item4": "Brush rolls.",
+      "pot_hot_dip_title": "HOT-DIP GALVANIZING LINES (POT)",
+      "pot_hot_dip_description": "High-performance components submerged in Zinc, Zincalume, and Aluminum+Si baths, and galvalume with special ACEROS alloys that ensure superior durability.",
+      "pot_hot_dip_item1": "Sink Rolls, Stabilizer Rolls, Arms, Cradles, and Snouts cast in one piece.",
+      "pot_hot_dip_item2": "ACEROS alloys TOTALLY FERRITE FREE for superior performance.",
+      "pot_hot_dip_item3": "Bi-metallic bearings (Bushings) with 3 to 7 times greater performance.",
+      "bar_furnace_title": "Parts for Bar Furnace, Inlet and Outlet, Loading and Unloading",
+      "bar_furnace_subtitle": "COOLED AND UNCOOLED LOADING AND UNLOADING ROLLERS.",
+      "bar_furnace_description": "Coated and uncoated rollers to optimize service life and minimize pick-up (adhesion).",
+      "guseira_staves_title": "Reaction Columns Serpentine Glendons",
+      "guseira_staves_cta_title": "Ready to Optimize?",
+      "guseira_staves_cta_subtitle": "Talk to our experts and discover the best solution for your blast furnace.",
+      "guseira_tuyeres_title": "Reaction Columns Serpentine Glendons – Step 2",
+      "guseira_tuyeres_cta_title": "Unmatched Performance",
+      "guseira_tuyeres_cta_subtitle": "Our valves ensure precise and efficient injection, maximizing your blast furnace's productivity.",
+      "guseira_housings_feature1_title": "Precision Machining",
+      "guseira_housings_feature1_description": "We guarantee tight tolerances and a superior finish for a perfect fit and optimized performance.",
+      "guseira_housings_feature2_title": "High-Strength Materials",
+      "guseira_housings_feature2_description": "We use special alloys that offer maximum durability and resistance to fatigue and impact.",
+      "guseira_housings_feature3_title": "Custom Projects",
+      "guseira_housings_feature3_description": "We develop custom housings to meet the unique specifications of each piece of equipment.",
+      "guseira_housings_cta_button": "Request a Quote",
+      "guseira_wear_plates_cta_button": "Talk to a Specialist",
+      "tratamento_new_section_title": "High-Performance Furnace Components",
+      "tratamento_new_section_subtitle": "Precision engineering to ensure maximum durability and efficiency in heat treatment processes.",
+      "tratamento_videos_title": "Processes in Action",
+      "tratamento_videos_subtitle": "Get a close look at the precision and technology involved in manufacturing our components.",
+      "tratamento_extra_gallery_title": "Component Gallery",
+      "tratamento_extra_gallery_subtitle": "More examples of our precision engineering for heat treatment.",
+      "grelha_forno_poco_title": "Grate for Pit Furnace",
+      "tratamento_orange_gallery_title": "Heat Treatment Baskets",
+      "tratamento_orange_gallery_subtitle": "Innovative designs and robust components for the most demanding applications.",
+      "tratamento_creative_gallery_title": "Furnace Grates and Fixtures",
+      "tratamento_creative_cta_title": "Unmatched Performance",
+      "tratamento_creative_cta_subtitle": "Our components ensure maximum efficiency and durability for your heat treatment process.",
+      "tratamento_creative_cta_button": "Consult an Expert",
+      "mining_new_section_title": "ROLLER SCREENS FOR PELLET CLASSIFICATION",
+      "mining_new_section_subtitle": "TPC AND TDE TYPES: THE BEST SOLUTION IN PELLETIZING",
+      "mining_roller_screens_title": "Roller screens for iron ore pellet classification",
+      "naval_flanges_title": "Steering system",
+      "naval_flanges_subtitle": "High-strength machined components for naval steering systems, responsible for rudder control.",
+      "naval_tubes_title": "Naval thrusters and propellers",
+      "naval_tubes_subtitle": "We develop propellers and components for the naval industry to ensure better propulsion quality.",
+      "naval_analysis_title": "Anchoring system",
+      "naval_analysis_subtitle": "Using cutting-edge engineering, we validate each component through simulations and detailed technical analysis to ensure performance and safety.",
+      "naval_assemblies_title": "Underwater propulsion assembly and disassembly",
+      "naval_assemblies_subtitle": "We produce complex structural and precision assemblies that are the foundation of high-performance naval equipment.",
+      "naval_connectors_title": "MANGANESE PHOSPHATE",
+      "naval_connectors_subtitle": "Manganese phosphate: greater wear resistance, reduced friction, and corrosion protection.",
+      "naval_new_products_title": "High-Performance Naval Components",
+      "naval_winch_title": "MARINE WINCH",
+      "kort_nozzle_title": "Kort Nozzle Manufacturing",
+      "kort_nozzle_subtitle": "Visually follow all stages of the Kort nozzle's development, from initial construction to final application in high-performance naval systems.",
+      "kort_nozzle_step1_title": "Step 1: Initial Construction",
+      "kort_nozzle_step2_title": "Step 2: Kort Nozzle Completed",
+      "kort_nozzle_step3_title": "Step 3: Kort Nozzle and Telescopic Tunnel",
+      "kort_nozzle_step4_title": "Step 4: Application on Drillships"
+    },
+    "mineracao": {
+      "title": "Mining",
+      "subtitle": "Robust solutions for a demanding sector.",
+      "description": "We supply high-durability components for the mining industry, ensuring efficiency and safety in ore extraction, crushing, and transportation processes. Our alloys are designed to withstand the most severe conditions.",
+      "cardDescription": "Robust solutions for mineral extraction and processing industries.",
+      "icon": "Drill",
+      "solutions": {
+        "mining_crusher_components": { "title": "Crusher Components", "description": "Rings, bushings, and linings that increase the lifespan of crushing equipment." },
+        "mining_sieving_parts": { "title": "Sieving Parts", "description": "Solutions that ensure efficiency in material classification with high wear resistance." },
+        "mining_conveyor_systems": { "title": "Conveyor Systems", "description": "Rollers, drums, and other parts for conveyor belts operating in aggressive environments." }
+      }
+    },
+    "naval": {
+      "title": "Naval",
+      "subtitle": "Precision components for the sea.",
+      "description": "With extensive experience in the naval sector, we produce essential parts that meet rigorous international standards. Our products ensure the performance and reliability of vessels, from propulsion systems to structural components.",
+      "cardDescription": "Cast parts like bushings, propellers, and tubes, manufactured to meet the sector's rigorous demands.",
+      "icon": "Ship",
+      "solutions": {
+        "naval_shaft_bushings": { "title": "Shaft Bushings", "description": "High-precision bushings for propeller shafts, ensuring smooth operation and resistance to marine corrosion." },
+        "naval_propeller_components": { "title": "Propeller Components", "description": "Rings and custom parts for naval propulsion systems, made with special alloys." },
+        "naval_system_pipes": { "title": "System Pipes", "description": "Centrifugally cast tubes for hydraulic and cooling systems, with high durability in a saline environment." }
+      }
+    },
+    "siderurgia": {
+      "title": "Steel Industry",
+      "subtitle": "The strength of steel for the steel industry.",
+      "description": "Aceros is a strategic partner for the steel industry, supplying components that withstand extreme temperatures and constant wear. Our furnace rollers, rings, and other parts are crucial for the continuous production of high-quality steel.",
+      "cardDescription": "Parts for furnaces and steel equipment, ensuring high-quality steel production.",
+      "icon": "Factory",
+      "solutions": {
+        "siderurgia_continuous_casting": {
+          "title": "CONTINUOUS CASTING",
+          "description": "Rollers for Continuous Casting Machines: Mono-metallic and bi-metallic rollers, and standard welded overlaid rollers. These martensitic stainless steel rollers (42 to 48 HRC), through sulfur, carbon, and phosphorus control, ensure the absence of thermal cracks when in contact with continuous casting slabs. These rollers are in operation in Brazilian and overseas casting machines and produce about 3.5 million tons of slabs without any need for replacement or re-machining of the rollers."
+        },
+        "siderurgia_tunnel_furnace_rollers": {
+          "title": "FURNACE ROLLERS",
+          "description": "Cooled and uncooled rollers are part of ACEROS' standard production. To date, more than 800 rollers have been supplied to high-potential clients. We can supply both our own designs and designs according to the client."
+        },
+        "siderurgia_hot_strip_mill_rollers": {
+          "title": "ROLLERS FOR HOT STRIP TRANSPORT (HSP)",
+          "description": "New generation of rollers for TRANSFER TABLE, RUN-OUT TABLE, LOOPER, TENSION, PINCH, and WRAPPER."
+        },
+        "siderurgia_capl_cgl_furnace": {
+          "title": "CAPL & CGL - FURNACE",
+          "description": "Complete solutions for Continuous Annealing and Processing Lines and Continuous Galvanizing Lines."
+        },
+        "siderurgia_hot_dip_galvanizing": {
+          "title": "HOT-DIP GALVANIZING LINES (POT)",
+          "description": "High-performance components submerged in Zinc, Zincalume, and Aluminum+Si baths."
+        },
+        "siderurgia_walking_beam_furnaces": {
+          "title": "WALKING BEAM FURNACES FOR PIPE HEAT TREATMENT",
+          "description": "WALKING BEAMS, COLUMNS, and UPPER AND LOWER SEALS with special design and alloys."
+        },
+        "siderurgia_bar_furnace_parts": {
+          "title": "Parts for Bar Furnace, Inlet and Outlet, Loading and Unloading",
+          "description": "DRY AND WET LOADING AND UNLOADING ROLLERS, coated and uncoated."
+        }
+      }
+    },
+    "oleo_e_gas": {
+      "title": "Oil & Gas",
+      "subtitle": "Performance and safety in extreme environments.",
+      "description": "We supply critical components for the Oil & Gas sector that operate under high pressure and in corrosive environments. Our superalloys and stainless steels ensure the integrity and safety of exploration, production, and refining equipment.",
+      "cardDescription": "Solutions in robust components for critical applications in oil and gas.",
+      "icon": "Component",
+      "solutions": {
+        "oil_gas_valve_components": { "title": "Valve Components", "description": "Internal parts for control and safety valves that resist corrosion and high pressure." },
+        "oil_gas_refinery_furnace_tubes": { "title": "Refinery Furnace Tubes", "description": "Centrifugally cast tubes for cracking furnaces, designed to operate at high temperatures." },
+        "oil_gas_subsea_equipment_parts": { "title": "Subsea Equipment Parts", "description": "Components for subsea systems that require maximum reliability and resistance to marine corrosion." }
+      }
+    },
+    "guseira": {
+      "title": "Iron Industry",
+      "subtitle": "Robust components for pig iron production.",
+      "description": "We supply high-performance parts for blast furnaces and for handling pig iron, ensuring maximum efficiency and safety in the primary steelmaking process.",
+      "cardDescription": "Parts and components for blast furnaces and pig iron production.",
+      "icon": "Gem",
+      "solutions": {
+        "pig_iron_blast_furnace_components": { "title": "Blast Furnace Components", "description": "Wear and high-temperature resistant linings and parts to increase the lifespan of blast furnaces." },
+        "pig_iron_torpedo_cars_ladles": { "title": "Torpedo Cars and Ladles", "description": "Replacement parts and components that ensure the safe and efficient transport of liquid pig iron." },
+        "pig_iron_casting_systems": { "title": "Casting Systems", "description": "Components that ensure a continuous and high-quality pig iron casting process." }
+      }
+    },
+    "tratamento_termico": {
+      "title": "Heat Treatment",
+      "subtitle": "Special alloys for high-temperature processes.",
+      "description": "We develop components and parts in special alloys for heat treatment furnaces, ensuring the performance and the durability of equipment in processes such as quenching, tempering, carburizing, and nitriding.",
+      "cardDescription": "Components for industrial furnaces and heat treatment processes.",
+      "icon": "Cpu",
+      "solutions": {
+        "heat_treatment_grids_baskets": { "title": "Grids and Baskets", "description": "Grids, baskets, and fixtures in refractory alloys for supporting parts in furnaces." },
+        "heat_treatment_rollers_radiant_tubes": { "title": "Rollers and Radiant Tubes", "description": "Conveyor rollers and radiant tubes for continuous and batch furnaces." },
+        "heat_treatment_spare_parts": { "title": "Spare Parts", "description": "Fans, supports, and other components for heat treatment furnaces." }
+      }
+    },
+    "engenharia": {
+      "title": "Aceros Engineering",
+      "subtitle": "Innovation and custom solutions.",
+      "description": "Our engineering team develops custom metallurgical solutions, optimizing the performance of equipment and components to meet the specific needs of each client. From conception to implementation, we offer consulting and specialized technical support.",
+      "cardDescription": "Consulting services and development of custom metallurgical solutions.",
+      "icon": "Lightbulb",
+      "solutions": {
+        "engineering_metallurgical_consulting": {
+          "title": "Metallurgical Consulting",
+          "description": "Failure analysis, material selection, and process optimization to increase equipment lifespan and efficiency.",
+          "icon": "Component"
+        },
+        "engineering_alloy_development": {
+          "title": "Alloy Development",
+          "description": "Creation of custom alloys for specific applications that require superior mechanical, thermal, or chemical properties.",
+          "icon": "Zap"
+        },
+        "engineering_component_design": {
+          "title": "Component Design",
+          "description": "Design and simulation of components using CAD and FEA tools to ensure performance and reliability before manufacturing."
+        }
+      }
+    },
+    "certificados": {
+      "title": "Certificates",
+      "subtitle": "Quality Assured by Global Standards",
+      "description": "The excellence and reliability of our products are proven through certifications issued by the most respected industrial and naval classifiers in the world.",
+      "cardDescription": "Explore our certifications and quality seals that guarantee our excellence.",
+      "icon": "Award",
+      "solutions": []
+    }
+  }
+}
+    

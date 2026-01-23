@@ -244,7 +244,7 @@
       "oil_gas_connections_description": "Wir stellen Flansche und Verbindungen her, die die strukturelle Integrität von Rohrleitungssystemen gewährleisten. Jedes Teil ist so konzipiert, dass es hohen Drücken und Temperaturen standhält, Leckagen verhindert und die Betriebssicherheit gewährleistet.",
       "oil_gas_custom_parts_title": "Kundenspezifische Teile",
       "oil_gas_custom_parts_description": "Wir arbeiten partnerschaftlich mit unseren Kunden zusammen, um kundenspezifische Guss- und bearbeitete Teile zu entwickeln, die spezifische technische Herausforderungen für die Exploration, Produktion und Raffination von Öl und Gas bewältigen.",
-      "mining_deck_rollers_title": "ROLLEN FÜR SIEBDECK",
+      "mining_deck_rollers_title": "ROLLENSIEBEN FÜR SIEBDECK",
       "mining_deck_rollers_description": "Rollen für Siebe, die jeweils einzeln von einem Getriebemotor oder einer Kette angetrieben werden, mit der Möglichkeit, den Abstand zwischen den Rollen automatisch zu variieren, ohne die Maschine anhalten zu müssen. Hergestellt mit WC-Hartmetallbeschichtung und auch unbeschichtete Rollen.",
       "mining_sinter_car_walls_title": "OBERE UND UNTERE SEITENWÄNDE FÜR PELLETISIER- UND SINTERWAGEN",
       "mining_sinter_car_walls_description": "Spezielles Design und spezifische Legierungen zur Optimierung der Lebensdauer und zur Vermeidung von Vorverbrennung am oberen Profil.",
@@ -263,7 +263,7 @@
       "hsp_feature2_title": "Leistungsgarantie",
       "hsp_feature2_description": "Maximale Runout-Reduzierung von 0,5 mm (mono-metallisch) oder 0,3 mm (bi-metallisch) pro Million verarbeiteter Tonnen.",
       "hsp_feature3_title": "Kritische Anwendungen",
-      "hsp_feature3_description": "Für Klemmrollen (pinch rollers) verwenden wir einen zentrifugal gegossenen bi-metallischen Tisch, um die beste Leistung zu gewährleisten.",
+      "hsp_feature3_description": "Für Klemmrollen (pinch rollers), verwenden wir einen zentrifugal gegossenen bi-metallischen Tisch, um die beste Leistung zu gewährleisten.",
       "furnace_capl_cgl_title": "OFENROLLEN FÜR BARRENTRANSPORT",
       "furnace_capl_cgl_description": "Komplettlösungen für kontinuierliche Glüh- und Verarbeitungslinien (CAPL) und kontinuierliche Verzinkungslinien (CGL).",
       "furnace_capl_cgl_item1": "Strahlrohre ('W', 'U', 'P' Einzel- und Doppeltypen) mit Wärmerückgewinnern.",
@@ -364,7 +364,7 @@
         "siderurgia_capl_cgl_furnace": { "title": "CAPL & CGL - OFEN", "description": "Komplettlösungen für kontinuierliche Glüh- und Verarbeitungslinien und kontinuierliche Verzinkungslinien." },
         "siderurgia_hot_dip_galvanizing": { "title": "FEUERVERZINKUNGSLINIEN (TIEGEL)", "description": "Hochleistungskomponenten, die in Zink-, Zincalume- und Aluminium+Si-Bädern eingetaucht sind." },
         "siderurgia_walking_beam_furnaces": { "title": "WALKING-BEAM-ÖFEN FÜR ROHRWÄRMEBEHANDLUNG", "description": "WALKING BEAMS, SÄULEN und OBERE UND UNTERE DICHTUNGEN mit speziellem Design und Legierungen." },
-        "siderurgia_bar_furnace_parts": { "title": "Teile für Stabofen, Ein- und Auslass, Be- und Entladen", "description": "TROCKENE UND NASSE BE- UND ENTLADEROLLEN, beschichtet und unbeschichtet." }
+        "siderurgia_bar_furnace_parts": { "title": "Teile für Stabofen, Ein- und Auslass, Be- und Entladen", "description": "TROCKENE UND NASSE BE- UND ENTLADERROLLEN, beschichtet und unbeschichtet." }
       }
     },
     "oleo_e_gas": {

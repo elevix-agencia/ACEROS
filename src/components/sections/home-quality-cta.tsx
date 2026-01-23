@@ -17,18 +17,18 @@ export function QualityCta() {
   const qualities = [
     {
       icon: 'Microscope' as const,
-      title: t.quality.analysis_title,
-      description: t.quality.analysis_description,
+      title: t.quality?.analysis_title || 'Pesquisa e Análise',
+      description: t.quality?.analysis_description || 'Análises de corrosão, análise química, ultrassom, dureza e ensaios mecânicos.',
     },
     {
       icon: 'ShieldCheck' as const,
-      title: t.quality.improvement_title,
-      description: t.quality.improvement_description,
+      title: t.quality?.improvement_title || 'Melhoria Contínua',
+      description: t.quality?.improvement_description || 'Estudo de melhorias no projeto e na metalurgia de peças fundidas e ligas especiais.',
     },
     {
       icon: 'Award' as const,
-      title: t.quality.resistance_title,
-      description: t.quality.resistance_description,
+      title: t.quality?.resistance_title || 'Resistência Superior',
+      description: t.quality?.resistance_description || 'Desenvolvimento de ligas resistentes ao calor, abrasão e corrosão para máxima performance.',
     },
   ];
 
@@ -40,10 +40,10 @@ export function QualityCta() {
         <div className="grid md:grid-cols-2 gap-12 sm:gap-24 items-center">
           <div className="flex flex-col animate-fade-in-up md:animate-slide-in-right">
             <h2 className="mb-4 font-headline text-4xl sm:text-5xl font-bold tracking-tight text-accent-foreground">
-              {t.quality.title}
+              {t.quality?.title || 'Laboratórios e Qualidade'}
             </h2>
             <p className="mb-10 text-lg text-accent-foreground/90">
-              {t.quality.subtitle}
+              {t.quality?.subtitle || 'Nossos laboratórios realizam pesquisas em análises de corrosão, análise química, ultrassom, dureza e ensaios mecânicos, permitindo que a Aceros possa estudar melhorias no projeto ou na metalurgia de peças fundidas, resistentes ao calor, abrasão e ligas especiais.'}
             </p>
             <div className="space-y-8 mb-10">
               {qualities.map((quality, index) => (
@@ -77,7 +77,7 @@ export function QualityCta() {
                 className="bg-accent-foreground border-accent-foreground text-accent hover:bg-accent-foreground/90 hover:text-accent transition-transform duration-300 hover:scale-110"
               >
                 <Link href="/qualificacao">
-                  {t.quality.cta_button}
+                  {t.quality?.cta_button || 'Conheça Nossas Qualificações'}
                 </Link>
               </Button>
             </div>
