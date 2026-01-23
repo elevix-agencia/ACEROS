@@ -22,10 +22,11 @@ export function ClientLogos() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center animate-fade-in-up">
           <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-shadow-lg">
-            {t.client_logos.title}
+            {t.client_logos?.title || 'Qualidade que Impulsiona Líderes'}
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-white/90 md:text-xl text-shadow">
-            {t.client_logos.subtitle}
+            {t.client_logos?.subtitle ||
+              'Temos orgulho de fornecer soluções de alta performance para os líderes da indústria do aço.'}
           </p>
         </div>
       </div>
