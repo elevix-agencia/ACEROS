@@ -1,0 +1,439 @@
+
+{
+  "header": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "qualifications": "Qualität",
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "expertise": "Kompetenzbereiche",
+    "open_menu": "Menü öffnen"
+  },
+  "footer": {
+    "description": "Exzellenz und Innovation bei schleudergegossenen Stählen für die anspruchsvollsten Branchen.",
+    "navigation": "Navigation",
+    "contact": "Kontakt",
+    "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
+    "commercial_phone": "+55 (11) 2944-1901 (Handel)",
+    "industrial_phone": "+55 (11) 5555-6551 (Industrie)",
+    "email": "comercial@aceros.com.br",
+    "newsletter": "Abonnieren",
+    "newsletter_prompt": "Erhalten Sie Neuigkeiten und Updates zu unseren Produkten und Innovationen.",
+    "subscribe": "Abonnieren",
+    "rights_reserved": "Aceros. Alle Rechte vorbehalten."
+  },
+  "hero": {
+    "title": "ACEROS CENTRIFUGADOS",
+    "subtitle": "Aceros entwickelt und fertigt Produkte aus Hochleistungs-Edelstahllegierungen, um seine nationalen und internationalen Kunden zu unterstützen und die Effizienz ihrer Prozesse zu steigern.",
+    "learn_more": "Erfahren Sie mehr",
+    "contact_us": "Kontaktiere uns"
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "subtitle": "Das Vertrauen und die Zufriedenheit unserer globalen Partner sind unser größtes Qualitätszertifikat.",
+    "translate": "Ins Deutsche übersetzen",
+    "show_original": "Original anzeigen"
+  },
+  "sectors": {
+    "title": "Kompetenzbereiche",
+    "subtitle": "Aceros zeichnet sich in der Branche durch seine einzigartige Expertise in der Werkstofftechnik aus. Die Leistungssteigerung von Anlagen und Komponenten im Betrieb ist eine seiner Kernkompetenzen."
+  },
+  "about": {
+    "title": "Lernen Sie unsere Geschichte kennen",
+    "paragraph1": "Aceros ist Hersteller von Edelstahlteilen und zeichnet sich durch seine technische Kompetenz und seinen Fokus auf Entwicklung beim Schleuderguss von Legierungen und Superlegierungen aus. Unsere Expertise in der Zerspanung und im Kesselbau ermöglicht es uns, ein Endprodukt von hoher Qualität zu liefern, das hitze-, abrieb- und korrosionsbeständig ist.",
+    "paragraph2": "Unser Ziel ist es, die Qualität der Produktionsprozesse zu optimieren, insbesondere bei zentrifugal gegossenen Rohren und statischen Gussteilen, und so Komplettlösungen mit modernster Technologie zu gewährleisten.",
+    "pillars_title": "Unsere Säulen",
+    "mission_title": "Unsere Mission",
+    "mission_description": "Den industriellen Fortschritt mit Stahl- und Ingenieurlösungen vorantreiben und dabei Sicherheit und Effizienz für unsere Partner gewährleisten.",
+    "vision_title": "Unsere Vision",
+    "vision_description": "Die weltweite Referenz für zentrifugal gegossenen Stahl zu sein, anerkannt für kontinuierliche Innovation, Nachhaltigkeit und Exzellenz in jedem produzierten Teil."
+  },
+  "gallery": {
+    "title": "Einige unserer Produkte",
+    "subtitle": "Entdecken Sie einige der Produkte, die mit hohem technischen Standard, industrieller Präzision und ingenieurwissenschaftlicher Exzellenz entwickelt wurden."
+  },
+  "quality": {
+    "title": "Labore und Qualität",
+    "subtitle": "Unsere Labore führen Forschungen zu Korrosionsanalysen, chemischen Analysen, Ultraschall, Härte und mechanischen Tests durch, was es Aceros ermöglicht, Verbesserungen im Design oder in der Metallurgie von Gussteilen, die hitze-, abrieb- und korrosionsbeständig sind, zu untersuchen.",
+    "analysis_title": "Forschung und Analyse",
+    "analysis_description": "Korrosionsanalysen, chemische Analysen, Ultraschall, Härte und mechanische Tests.",
+    "improvement_title": "Kontinuierliche Verbesserung",
+    "improvement_description": "Studie zur Verbesserung des Designs und der Metallurgie von Gussteilen und Speziallegierungen.",
+    "resistance_title": "Überlegene Widerstandsfähigkeit",
+    "resistance_description": "Entwicklung von Legierungen, die hitze-, abrieb- und korrosionsbeständig sind, für maximale Leistung.",
+    "cta_button": "Lernen Sie unsere Qualifikationen kennen"
+  },
+  "clients": {
+    "title": "Dienstleistungen für Branchenriesen",
+    "subtitle": "Unsere Exzellenz in der Werkstofftechnik ermöglicht es uns, kritische Komponenten für weltweit führende Unternehmen in Sektoren wie Bergbau, Schifffahrt, Stahl und Öl & Gas zu liefern."
+  },
+  "client_logos": {
+    "title": "Qualität, die führende Unternehmen antreibt",
+    "subtitle": "Wir sind stolz darauf, Hochleistungslösungen für die führenden Unternehmen der Stahlindustrie anzubieten."
+  },
+  "location": {
+    "title": "Unser Standort",
+    "subtitle": "Besuchen Sie unser Vertriebsbüro in São Paulo. Wir sind bereit, unsere Lösungen zu präsentieren und die Bedürfnisse Ihres Projekts zu besprechen.",
+    "map_title": "Adresse von Aceros"
+  },
+  "whatsapp": {
+    "title": "Sprechen wir über Ihre Bedürfnisse?",
+    "subtitle": "Unser Expertenteam ist bereit, Ihr Projekt zu verstehen und die ideale Stahllösung für Sie anzubieten. Klicken Sie auf die Schaltfläche unten und sprechen Sie direkt mit uns über WhatsApp.",
+    "button": "Gespräch auf WhatsApp beginnen",
+    "message": "Hallo! Ich kontaktiere Sie über die Aceros-Website. Ich möchte Informationen über die Lieferung und Stahllösungen für meinen Sektor. Können Sie mir helfen?",
+    "whatsapp_quote": "Fordern Sie ein Angebot über WhatsApp an"
+  },
+  "contact": {
+    "title": "Fordern Sie Ihr Angebot an",
+    "subtitle": "Aceros ist Spezialist für den Schleuderguss von Legierungen und Superlegierungen und bietet Komplettlösungen in der Zerspanung und im Kesselbau. Füllen Sie die folgenden Felder aus oder sprechen Sie uns über WhatsApp an.",
+    "form_title": "Senden Sie Ihre Nachricht",
+    "form_name": "Name",
+    "form_name_placeholder": "Ihr vollständiger Name",
+    "form_email": "E-Mail",
+    "form_email_placeholder": "ihre.email@beispiel.com",
+    "form_phone": "Telefon",
+    "form_phone_placeholder": "(XX) XXXXX-XXXX",
+    "form_message": "Nachricht",
+    "form_message_placeholder": "Beschreiben Sie Ihren Bedarf oder Ihr Projekt...",
+    "form_submit": "Angebot senden",
+    "form_submitting": "Senden...",
+    "form_whatsapp": "Kontakt per WhatsApp",
+    "details_title": "Kontaktieren Sie uns",
+    "details_hours": "Service von Montag bis Freitag von 8 bis 18 Uhr",
+    "details_address_title": "Geschäftsadresse",
+    "details_commercial_office": "Handelsbüro",
+    "details_industrial_area": "Industriegebiet",
+    "toast_success_title": "Nachricht gesendet!",
+    "toast_success_description": "Wir haben Ihre Kontaktanfrage erhalten und werden uns in Kürze bei Ihnen melden.",
+    "toast_error_title": "Fehler beim Senden der Nachricht.",
+    "toast_error_description": "Bitte versuchen Sie es erneut oder kontaktieren Sie uns über einen anderen Kanal."
+  },
+  "manufacturing_history": {
+    "title": "Herstellungsgeschichte",
+    "subtitle": "Entdecken Sie unsere Reise durch Teile, die unsere Geschichte geprägt haben und unsere Fähigkeit und Entwicklung bei der Herstellung von Hochleistungskomponenten demonstrieren."
+  },
+  "products": {
+    "title": "Entdecken Sie unsere komplette Produktlinie",
+    "subtitle": "Entdecken Sie unser Portfolio, das von zentrifugal gegossenen Rohren und statischen Gussteilen bis hin zu hochpräzisen bearbeiteten Komponenten reicht. Jeder Artikel wird unter strenger Qualitätskontrolle hergestellt, um maximale Leistung und Haltbarkeit zu gewährleisten.",
+    "quote_button": "Angebot",
+    "view_image_button": "Bild ansehen",
+    "view_gallery": "Galerie ansehen",
+    "view_media": "Medien ansehen",
+    "itrac_seal_name": "ITRAC-Konformitätssiegel",
+    "itrac_seal_description": "Gewährleistung der Konformität und Rückverfolgbarkeit unserer Prozesse, validiert durch anerkannte Zertifizierungen.",
+    "classification_seals_name": "Internationale Zertifizierungen",
+    "classification_seals_description": "Unsere Qualität wird von den größten Schiffbau- und Industrie-Klassifikationsgesellschaften der Welt validiert, wie DNV, ABS, Bureau Veritas und Lloyd's Register.",
+    "product_tube_name": "Zentrifugal gegossene Rohre",
+    "product_tube_description": "Wir produzieren Rohre aus Edelstahl und Speziallegierungen, die eine längere Lebensdauer und überlegene Leistung in anspruchsvollen Umgebungen gewährleisten.",
+    "product_bushing_name": "Buchsen und Ringe",
+    "product_bushing_description": "Wir fertigen präzise Buchsen und Ringe für Anwendungen, die eine hohe Verschleiß-, Hitze- und Korrosionsbeständigkeit erfordern.",
+    "product_ring_name": "Statische Gussteile",
+    "product_ring_description": "Statisch gegossene Teile in verschiedenen Legierungen für komplexe Komponenten, die strukturelle Integrität und Zuverlässigkeit erfordern.",
+    "product_valve_body_name": "Ventilkörper",
+    "product_valve_body_description": "Robuste Ventilkörper zur Durchflussregelung in Hochdruck- und Hochtemperatursystemen, präzise bearbeitet.",
+    "product_rollers_name": "Industrierollen",
+    "product_rollers_description": "Rollen für Förderbänder und Walzsysteme, ausgelegt für maximale Haltbarkeit und Verschleißfestigkeit.",
+    "product_large_ring_name": "Große Ringe",
+    "product_large_ring_description": "Ringe mit großem Durchmesser für schwere Geräte, hergestellt aus Speziallegierungen, um extremen Belastungen standzuhalten.",
+    "product_machined_parts_name": "Bearbeitete Komponenten",
+    "product_machined_parts_description": "Verschiedene kundenspezifische bearbeitete Komponenten, um die genauen Spezifikationen Ihres Industrieprojekts zu erfüllen.",
+    "product_custom_castings_name": "Kundenspezifische Gussteile",
+    "product_custom_castings_description": "Kundenspezifische Gussteile, die in Zusammenarbeit entwickelt wurden, um spezifische technische Herausforderungen zu lösen.",
+    "product_thick_wall_pipe_name": "Dickwandige Rohre",
+    "product_thick_wall_pipe_description": "Zentrifugal gegossene dickwandige Rohre für Anwendungen, die maximale strukturelle Festigkeit und Eindämmung erfordern.",
+    "product_flange_name": "Flansche und Verbindungen",
+    "product_flange_description": "Flansche und Verbindungen mit hoher Integrität für Rohrleitungssysteme in korrosiven und Hochdruckumgebungen.",
+    "product_housing_name": "Bearbeitete Gehäuse",
+    "product_housing_description": "Komplexes bearbeitetes Gehäuse oder Verkleidungskomponente.",
+    "product_collars_name": "Sicherungsringe",
+    "product_collars_description": "Satz bearbeiteter Sicherungsringe oder -kragen.",
+    "product_precision_parts_name": "Präzisionsmechanikteile",
+    "product_precision_parts_description": "Mechanische Komponenten, die mit hoher Präzision für kritische Industrieanwendungen entwickelt wurden."
+  },
+  "cta": {
+    "ready_title": "Bereit zum Start?",
+    "ready_subtitle": "Unser Team ist bereit, Ihnen bei der Suche nach der perfekten Lösung für Ihr Projekt zu helfen. Kontaktieren Sie uns noch heute.",
+    "request_quote": "Fordern Sie jetzt Ihr Angebot an",
+    "whatsapp": "Sprechen Sie über WhatsApp"
+  },
+  "qualifications": {
+    "page_title": "Unsere Qualifikationen",
+    "page_subtitle": "Garantie für Präzision und Zuverlässigkeit in jedem Prozess.",
+    "expertise_title": "Technisches Fachwissen und strenge Qualitätskontrolle",
+    "expertise_paragraph1": "Mit umfassender Erfahrung und modernster Ausrüstung verfügt Aceros über den von Drever (Belgien) qualifizierten Ingenieur Daniel Garcia für die Messung von 'rollprof roll'. Wir haben bereits die Kontrolle von über 600 Ofenrollen für Kunden wie Drever, Efco, Danieli und SDI durchgeführt.",
+    "expertise_paragraph2": "Die Qualität unserer Produkte wird durch eine Vielzahl von Inspektionsinstrumenten und Kalibrierstandards gewährleistet, die alle vom RBC rückverfolgbar sind und die Präzision und Zuverlässigkeit unserer Prozesse sicherstellen.",
+    "control_title": "Qualitätskontrolle",
+    "control_description": "Unsere Labore sind ausgestattet, um eine breite Palette von Analysen durchzuführen, einschließlich Korrosionstests, detaillierter chemischer Analysen, Ultraschall zur Erkennung interner Fehler, Härtemessungen und vollständiger mechanischer Tests.",
+    "innovation_title": "Innovation und Entwicklung",
+    "innovation_description": "Wir investieren kontinuierlich in die Forschung, um das Design und die Metallurgie von Gussteilen zu verbessern. Wir entwickeln spezielle Legierungen, die hitze-, abrieb- und korrosionsbeständig sind, um maximale Leistung und Haltbarkeit unserer Produkte zu gewährleisten.",
+    "alloy_tables_title": "Spezifikationen der Legierungen",
+    "alloy_tables_subtitle": "Detaillierte technische Informationen zu den von uns produzierten Legierungen, die maximale Leistung und Konformität gewährleisten.",
+    "steel_classes_title": "Spezialstahlklassen",
+    "steel_classes_subtitle": "Wir bieten eine breite Palette von Stahlklassen an, die entwickelt wurden, um die strengsten technischen und Leistungsanforderungen zu erfüllen.",
+    "machining_gallery_title": "Präzisionsbearbeitungsgalerie",
+    "machining_gallery_subtitle": "Unsere Bearbeitungsabteilung ist mit CNC-Geräten ausgestattet, die Präzision und Exzellenz in jedem gelieferten Teil gewährleisten.",
+    "structural_analysis_title": "Strukturanalyse und Optimierung",
+    "structural_analysis_subtitle": "Wir verwenden die Finite-Elemente-Simulation, um Projekte zu validieren und die strukturelle Integrität zu gewährleisten.",
+    "process_optimization_title": "Prozessoptimierung",
+    "process_optimization_subtitle": "Strukturberechnungen und Temperatursimulationen.",
+    "diagrams_and_processes_title": "Diagramme und Prozesse",
+    "diagrams_and_processes_subtitle": "Detaillierte Visualisierungen unserer Prozesse und technischen Fähigkeiten.",
+    "items": [
+      {
+        "title": "Spezialisierte Zertifizierung",
+        "description": "Ingenieur, qualifiziert von Drever (Belgien) für die präzise Messung von 'rollprof roll'."
+      },
+      {
+        "title": "Umfangreiche Erfahrung",
+        "description": "Kontrolle von über 600 Ofenrollen für globale Kunden wie Drever, Efco und Danieli."
+      },
+      {
+        "title": "RBC-Standards",
+        "description": "Inspektionsinstrumente und Kalibrierstandards, die vom RBC für maximale Zuverlässigkeit rückverfolgbar sind."
+      },
+      {
+        "title": "Modernste Technologie",
+        "description": "Einsatz modernster Ausrüstung zur Gewährleistung der Präzision in all unseren Messprozessen."
+      }
+    ]
+  },
+  "certificates": {
+    "title": "Unsere Zertifikate: Qualität durch globale Standards gesichert",
+    "subtitle": "Die Exzellenz und Zuverlässigkeit unserer Produkte wird durch Zertifizierungen der angesehensten Industrie- und Schiffsklassifikationsgesellschaften der Welt bestätigt.",
+    "dnv": "Zertifizierung, die die Einhaltung internationaler Qualitäts- und Sicherheitsstandards in verschiedenen Industrie- und Schifffahrtssektoren bescheinigt.",
+    "abs": "Anerkennung durch das American Bureau of Shipping, die sicherstellt, dass unsere Produkte die strengsten Normen des Marinesektors erfüllen.",
+    "bureau_veritas": "Siegel eines weltweit führenden Unternehmens für Tests, Inspektion und Zertifizierung, das die Exzellenz unserer Prozesse und Produkte bestätigt.",
+    "lloyds": "Zertifizierung, die die Einhaltung der höchsten Standards in Technik, Sicherheit und Leistung für kritische Anwendungen gewährleistet."
+  },
+  "expertise_sectors": {
+    "page": {
+      "solutions_for": "Lösungen für",
+      "gallery_title": "Projektgalerie",
+      "video_title": "Prozesse in Aktion",
+      "sector_not_found": "Sektor nicht gefunden.",
+      "feature_title": "Besonderheiten für den Sektor",
+      "feature_description_1": "Wir bieten maßgeschneiderte Lösungen, die den spezifischen Anforderungen der Branche von",
+      "feature_item1": "Hochleistungslegierungen",
+      "feature_item2": "Überlegene Korrosions- und Verschleißfestigkeit",
+      "feature_item3": "Spezialisierter technischer Support",
+      "featured_products_title": "Hervorgehobene Produkte",
+      "featured_products_subtitle": "Lernen Sie einige der wesentlichen Komponenten kennen, die wir für die Roheisenindustrie liefern.",
+      "mining_solutions_title": "Lösungen für den Bergbau",
+      "mining_solutions_subtitle": "Robuste und leistungsstarke Komponenten, die entwickelt wurden, um die extremsten Herausforderungen der Bergbauindustrie zu meistern.",
+      "mining_quality_title": "Exzellenz in jeder Komponente",
+      "mining_quality_subtitle": "Unser Engagement ist es, Lösungen zu liefern, die nicht nur die Erwartungen an Leistung und Haltbarkeit erfüllen, sondern übertreffen.",
+      "mining_quality_pillar1_title": "Überlegene Qualität",
+      "mining_quality_pillar1_description": "Unsere Legierungen und Prozesse gewährleisten Komponenten, die die Industriestandards übertreffen.",
+      "mining_quality_pillar2_title": "Präzisionstechnik",
+      "mining_quality_pillar2_description": "Jedes Teil ist für maximale Effizienz, Haltbarkeit und perfekte Passform ausgelegt.",
+      "mining_quality_pillar3_title": "Extreme Haltbarkeit",
+      "mining_quality_pillar3_description": "Komponenten, die gebaut sind, um den härtesten Bedingungen von Abrieb und Stößen standzuhalten.",
+      "staves_title": "Staves (Kühlplatten)",
+      "staves_description": "Entscheidende Komponenten für die effiziente Kühlung des Hochofens, die die strukturelle Integrität und die Langlebigkeit des Betriebs gewährleisten. Hergestellt aus Legierungen mit hoher Wärmeleitfähigkeit und Widerstandsfähigkeit.",
+      "tuyeres_title": "Düsen (Blasventile)",
+      "tuyeres_description": "Entwickelt für die präzise Injektion von Heißluft in den Hochofen, sind unsere Düsen so gefertigt, dass sie extremen Temperaturen und aggressiven Umgebungen standhalten und den Verbrennungsprozess optimieren.",
+      "housings_title": "Bearbeitete Gehäuse",
+      "housings_description": "Komplexe bearbeitete Gehäuse und Verkleidungen zum Schutz interner Komponenten und zur Gewährleistung einer perfekten Ausrichtung in Industrieanlagen. Hergestellt, um rauen Umgebungen standzuhalten.",
+      "projects_gallery_title": "Galerie für Ingenieurprojekte",
+      "projects_gallery_subtitle": "Entdecken Sie einige der komplexen Komponenten und kundenspezifischen Teile, die von unserem Ingenieurteam entwickelt wurden.",
+      "oil_gas_products_title": "Wesentliche Komponenten für Öl & Gas",
+      "oil_gas_products_subtitle": "Entdecken Sie unsere kritischen Komponenten, die für maximale Zuverlässigkeit in Hochdruck- und korrosiven Umgebungen entwickelt wurden.",
+      "oil_gas_valves_title": "Hochleistungsventile",
+      "oil_gas_valves_description": "Wir entwickeln Gehäuse und interne Komponenten für Ventile, die unter den härtesten Bedingungen arbeiten und eine sichere und effiziente Durchflussregelung gewährleisten. Unsere Speziallegierungen bieten eine überlegene Korrosions- und Verschleißfestigkeit und verlängern die Lebensdauer der Ausrüstung.",
+      "oil_gas_connections_title": "Verbindungen und Flansche",
+      "oil_gas_connections_description": "Wir stellen Flansche und Verbindungen her, die die strukturelle Integrität von Rohrleitungssystemen gewährleisten. Jedes Teil ist so konzipiert, dass es hohen Drücken und Temperaturen standhält, Leckagen verhindert und die Betriebssicherheit gewährleistet.",
+      "oil_gas_custom_parts_title": "Kundenspezifische Teile",
+      "oil_gas_custom_parts_description": "Wir arbeiten partnerschaftlich mit unseren Kunden zusammen, um kundenspezifische Guss- und bearbeitete Teile zu entwickeln, die spezifische technische Herausforderungen für die Exploration, Produktion und Raffination von Öl und Gas bewältigen.",
+      "mining_deck_rollers_title": "ROLLEN FÜR SIEBDECK",
+      "mining_deck_rollers_description": "Rollen für Siebe, die jeweils einzeln von einem Getriebemotor oder einer Kette angetrieben werden, mit der Möglichkeit, den Abstand zwischen den Rollen automatisch zu variieren, ohne die Maschine anhalten zu müssen. Hergestellt mit WC-Hartmetallbeschichtung und auch unbeschichtete Rollen.",
+      "mining_sinter_car_walls_title": "OBERE UND UNTERE SEITENWÄNDE FÜR PELLETISIER- UND SINTERWAGEN",
+      "mining_sinter_car_walls_description": "Spezielles Design und spezifische Legierungen zur Optimierung der Lebensdauer und zur Vermeidung von Vorverbrennung am oberen Profil.",
+      "mining_grate_bars_title": "ROSTSTÄBE FÜR PELLETISIERWAGEN",
+      "mining_grate_bars_description": "Gegossen aus vollständig austenitischen Legierungen zur Optimierung der Korrosions- und Hitzebeständigkeit bei hohen Temperaturen.",
+      "mining_sinter_cars_title": "KOMPLETTE PELLETISIER- UND SINTERWAGEN FÜR KLEINE ANLAGEN",
+      "mining_sinter_cars_description": "CIS entwirft, entwickelt und produziert komplette Pelletisier- und Sinterwagen (Rahmen, Seitenwände, Roststäbe, Räder).",
+      "mining_blast_furnace_title": "HOCHOFEN: PANZERUNG UND VERSCHLEISSPLATTEN",
+      "mining_blast_furnace_description": "Panzerung und Verschleißplatten für Hochöfen vom Typ Paul Wurth sowie vom Typ Doppelglocke.",
+      "mining_deck_hot_cold_title": "HEISSE UND KALTE SIEBDECKS",
+      "mining_deck_hot_cold_description": "Verschleißfeste Siebdecks mit unterschiedlichen Formen und Profilen; Löcher, die im Schalenformverfahren im 'Fischgrät'-Design gegossen werden, um die offene Fläche und den 'Selbstreinigungseffekt' zu optimieren. Superlegierungen für den Betrieb bei sehr hohen Temperaturen (bis zu 1.100 °C).",
+      "hsp_title": "ROLLEN FÜR WARMBANDTRANSPORT (HSP)",
+      "hsp_description": "Neue Generation von Rollen für TRANSFERTISCH, AUSLAUFTISCH, LOOPER, SPANNUNG, PINCH und WRAPPER.",
+      "hsp_feature1_title": "Bi-metallisches Verfahren",
+      "hsp_feature1_description": "Martensitische und ferritische Edelstahl-Mikrostruktur mit einer harten Außenschicht und einem weicheren, widerstandsfähigeren Innenkern.",
+      "hsp_feature2_title": "Leistungsgarantie",
+      "hsp_feature2_description": "Maximale Runout-Reduzierung von 0,5 mm (mono-metallisch) oder 0,3 mm (bi-metallisch) pro Million verarbeiteter Tonnen.",
+      "hsp_feature3_title": "Kritische Anwendungen",
+      "hsp_feature3_description": "Für Klemmrollen (pinch rollers) verwenden wir einen zentrifugal gegossenen bi-metallischen Tisch, um die beste Leistung zu gewährleisten.",
+      "furnace_capl_cgl_title": "OFENROLLEN FÜR BARRENTRANSPORT",
+      "furnace_capl_cgl_description": "Komplettlösungen für kontinuierliche Glüh- und Verarbeitungslinien (CAPL) und kontinuierliche Verzinkungslinien (CGL).",
+      "furnace_capl_cgl_item1": "Strahlrohre ('W', 'U', 'P' Einzel- und Doppeltypen) mit Wärmerückgewinnern.",
+      "furnace_capl_cgl_item2": "Beschichtete und unbeschichtete Ofenrollen.",
+      "furnace_capl_cgl_item3": "HVOF- oder SUPER D-GUN-Technologie für beschichtete Rollen.",
+      "furnace_capl_cgl_item4": "Bürstenrollen.",
+      "pot_hot_dip_title": "FEUERVERZINKUNGSLINIEN (TIEGEL)",
+      "pot_hot_dip_description": "Hochleistungskomponenten, die in Zink-, Zincalume- und Aluminium+Si-Bädern eingetaucht sind, und Galvalume mit speziellen ACEROS-Legierungen, die eine überlegene Haltbarkeit gewährleisten.",
+      "pot_hot_dip_item1": "Tauchrollen, Stabilisatorrollen, Arme, Wiegen und Schnauzen aus einem Guss.",
+      "pot_hot_dip_item2": "ACEROS-Legierungen VOLLSTÄNDIG FERRITFREI für überlegene Leistung.",
+      "pot_hot_dip_item3": "Bi-metallische Lager (Buchsen) mit 3- bis 7-facher Leistung.",
+      "bar_furnace_title": "Teile für Stabofen, Ein- und Auslass, Be- und Entladen",
+      "bar_furnace_subtitle": "GEKÜHLTE UND UNGEKÜHLTE BE- UND ENTLADEROLLEN.",
+      "bar_furnace_description": "Beschichtete und unbeschichtete Rollen zur Optimierung der Lebensdauer und zur Minimierung von Anhaftungen (pick-up).",
+      "guseira_staves_title": "Reaktionssäulen Serpentinen Glendons",
+      "guseira_staves_cta_title": "Bereit zur Optimierung?",
+      "guseira_staves_cta_subtitle": "Sprechen Sie mit unseren Experten und entdecken Sie die beste Lösung für Ihren Hochofen.",
+      "guseira_tuyeres_title": "Reaktionssäulen Serpentinen Glendons – Schritt 2",
+      "guseira_tuyeres_cta_title": "Unvergleichliche Leistung",
+      "guseira_tuyeres_cta_subtitle": "Unsere Ventile gewährleisten eine präzise und effiziente Injektion und maximieren die Produktivität Ihres Hochofens.",
+      "guseira_housings_feature1_title": "Präzisionsbearbeitung",
+      "guseira_housings_feature1_description": "Wir garantieren strenge Toleranzen und eine hervorragende Oberflächengüte für eine perfekte Passform und optimierte Leistung.",
+      "guseira_housings_feature2_title": "Hochfeste Materialien",
+      "guseira_housings_feature2_description": "Wir verwenden Speziallegierungen, die maximale Haltbarkeit und Beständigkeit gegen Ermüdung und Stöße bieten.",
+      "guseira_housings_feature3_title": "Kundenspezifische Projekte",
+      "guseira_housings_feature3_description": "Wir entwickeln maßgeschneiderte Gehäuse, um die einzigartigen Spezifikationen jeder Ausrüstung zu erfüllen.",
+      "guseira_housings_cta_button": "Angebot anfordern",
+      "guseira_wear_plates_cta_button": "Sprechen Sie mit einem Spezialisten",
+      "tratamento_new_section_title": "Komponenten für Hochleistungsöfen",
+      "tratamento_new_section_subtitle": "Präzisionstechnik zur Gewährleistung maximaler Haltbarkeit und Effizienz in Wärmebehandlungsprozessen.",
+      "tratamento_videos_title": "Prozesse in Aktion",
+      "tratamento_videos_subtitle": "Sehen Sie sich die Präzision und Technologie an, die bei der Herstellung unserer Komponenten zum Einsatz kommen.",
+      "tratamento_extra_gallery_title": "Komponentengalerie",
+      "tratamento_extra_gallery_subtitle": "Weitere Beispiele unserer Präzisionstechnik für die Wärmebehandlung.",
+      "grelha_forno_poco_title": "Rost für Schachtofen",
+      "tratamento_orange_gallery_title": "Körbe für die Wärmebehandlung",
+      "tratamento_orange_gallery_subtitle": "Innovative Designs und robuste Komponenten für die anspruchsvollsten Anwendungen.",
+      "tratamento_creative_gallery_title": "Roste und Vorrichtungen für Öfen",
+      "tratamento_creative_cta_title": "Unvergleichliche Leistung",
+      "tratamento_creative_cta_subtitle": "Unsere Komponenten gewährleisten maximale Effizienz und Haltbarkeit für Ihren Wärmebehandlungsprozess.",
+      "tratamento_creative_cta_button": "Einen Experten konsultieren",
+      "mining_new_section_title": "ROLLENSIEBEN ZUR KLASSIFIZIERUNG VON PELLETS",
+      "mining_new_section_subtitle": "TYPEN TPC UND TDE: DIE BESTE LÖSUNG BEIM PELLETISIEREN",
+      "mining_roller_screens_title": "Rollensiebe zur Klassifizierung von Eisenerzpellets",
+      "naval_flanges_title": "Steuersystem",
+      "naval_flanges_subtitle": "Hochfeste bearbeitete Komponenten für Schiffssteuersysteme, verantwortlich für die Rudersteuerung.",
+      "naval_tubes_title": "Schiffsantriebe und Propeller",
+      "naval_tubes_subtitle": "Wir entwickeln Propeller und Komponenten für die Schiffsindustrie, um eine bessere Antriebsqualität zu gewährleisten.",
+      "naval_analysis_title": "Ankersystem",
+      "naval_analysis_subtitle": "Mit modernster Technik validieren wir jede Komponente durch Simulationen und detaillierte technische Analysen, um Leistung und Sicherheit zu gewährleisten.",
+      "naval_assemblies_title": "Unterwasser-Antriebsmontage und -demontage",
+      "naval_assemblies_subtitle": "Wir fertigen komplexe Strukturbauteile und Präzisionsmontagen, die die Grundlage für leistungsstarke Schiffsausrüstung bilden.",
+      "naval_connectors_title": "MANGANPHOSPHAT",
+      "naval_connectors_subtitle": "Manganphosphat: höhere Verschleißfestigkeit, geringere Reibung und Korrosionsschutz.",
+      "naval_new_products_title": "Hochleistungs-Schiffskomponenten",
+      "naval_winch_title": "SCHIFFSWINDE",
+      "kort_nozzle_title": "Herstellung der Kort-Düse",
+      "kort_nozzle_subtitle": "Verfolgen Sie visuell alle Phasen der Entwicklung der Kort-Düse, von der ersten Konstruktion bis zur Endanwendung in Hochleistungs-Schiffssystemen.",
+      "kort_nozzle_step1_title": "Schritt 1: Erstkonstruktion",
+      "kort_nozzle_step2_title": "Schritt 2: Fertige Kort-Düse",
+      "kort_nozzle_step3_title": "Schritt 3: Kort-Düse und Teleskoptunnel",
+      "kort_nozzle_step4_title": "Schritt 4: Anwendung auf Bohrschiffen"
+    },
+    "mineracao": {
+      "title": "Bergbau",
+      "subtitle": "Robuste Lösungen für einen anspruchsvollen Sektor.",
+      "description": "Wir liefern hochbeständige Komponenten für die Bergbauindustrie und gewährleisten Effizienz und Sicherheit bei der Erzgewinnung, Zerkleinerung und dem Transport. Unsere Legierungen sind für die härtesten Bedingungen ausgelegt.",
+      "cardDescription": "Robuste Lösungen für Mineralgewinnungs- und Verarbeitungsindustrien.",
+      "icon": "Drill",
+      "solutions": {
+        "mining_crusher_components": { "title": "Brecherkomponenten", "description": "Ringe, Buchsen und Auskleidungen, die die Lebensdauer von Zerkleinerungsanlagen verlängern." },
+        "mining_sieving_parts": { "title": "Siebteile", "description": "Lösungen, die die Effizienz bei der Materialklassifizierung mit hoher Verschleißfestigkeit gewährleisten." },
+        "mining_conveyor_systems": { "title": "Fördersysteme", "description": "Rollen, Trommeln und andere Teile für Förderbänder, die in aggressiven Umgebungen arbeiten." }
+      }
+    },
+    "naval": {
+      "title": "Marine",
+      "subtitle": "Präzisionskomponenten für das Meer.",
+      "description": "Mit umfassender Erfahrung im Marinesektor produzieren wir wesentliche Teile, die den strengen internationalen Normen entsprechen. Unsere Produkte gewährleisten die Leistung und Zuverlässigkeit von Schiffen, von Antriebssystemen bis zu Strukturkomponenten.",
+      "cardDescription": "Gussteile wie Buchsen, Propeller und Rohre, hergestellt, um den strengen Anforderungen des Sektors gerecht zu werden.",
+      "icon": "Ship",
+      "solutions": {
+        "naval_shaft_bushings": { "title": "Wellenbuchsen", "description": "Hochpräzise Buchsen für Propellerwellen, die einen reibungslosen und korrosionsbeständigen Betrieb gewährleisten." },
+        "naval_propeller_components": { "title": "Propellerkomponenten", "description": "Ringe und kundenspezifische Teile für Schiffsantriebssysteme, hergestellt aus Speziallegierungen." },
+        "naval_system_pipes": { "title": "Systemrohre", "description": "Zentrifugal gegossene Rohre für Hydraulik- und Kühlsysteme, mit hoher Haltbarkeit in salzhaltiger Umgebung." }
+      }
+    },
+    "siderurgia": {
+      "title": "Stahlindustrie",
+      "subtitle": "Die Stärke von Stahl für die Stahlindustrie.",
+      "description": "Aceros ist ein strategischer Partner für die Stahlindustrie und liefert Komponenten, die extremen Temperaturen und ständigem Verschleiß standhalten. Unsere Ofenrollen, Ringe und andere Teile sind entscheidend für die kontinuierliche Produktion von hochwertigem Stahl.",
+      "cardDescription": "Teile für Öfen und Stahlausrüstung, die eine hochwertige Stahlproduktion gewährleisten.",
+      "icon": "Factory",
+      "solutions": {
+        "siderurgia_continuous_casting": { "title": "STRANGGUSS", "description": "Rollen für Stranggussanlagen mit außergewöhnlicher Leistung." },
+        "siderurgia_tunnel_furnace_rollers": { "title": "ROLLEN FÜR CSP-TUNNELÖFEN", "description": "Gekühlte und ungekühlte Rollen, die Teil der Standardproduktion sind." },
+        "siderurgia_hot_strip_mill_rollers": { "title": "ROLLEN FÜR WARMBANDWALZWERK (HSP)", "description": "Neue Generation von Rollen für TRANSFERTISCH, AUSLAUFTISCH, LOOPER, SPANNUNG, PINCH und WRAPPER." },
+        "siderurgia_capl_cgl_furnace": { "title": "CAPL & CGL - OFEN", "description": "Komplettlösungen für kontinuierliche Glüh- und Verarbeitungslinien und kontinuierliche Verzinkungslinien." },
+        "siderurgia_hot_dip_galvanizing": { "title": "FEUERVERZINKUNGSLINIEN (TIEGEL)", "description": "Hochleistungskomponenten, die in Zink-, Zincalume- und Aluminium+Si-Bädern eingetaucht sind." },
+        "siderurgia_walking_beam_furnaces": { "title": "WALKING-BEAM-ÖFEN FÜR ROHRWÄRMEBEHANDLUNG", "description": "WALKING BEAMS, SÄULEN und OBERE UND UNTERE DICHTUNGEN mit speziellem Design und Legierungen." },
+        "siderurgia_bar_furnace_parts": { "title": "Teile für Stabofen, Ein- und Auslass, Be- und Entladen", "description": "TROCKENE UND NASSE BE- UND ENTLADEROLLEN, beschichtet und unbeschichtet." }
+      }
+    },
+    "oleo_e_gas": {
+      "title": "Öl und Gas",
+      "subtitle": "Leistung und Sicherheit in extremen Umgebungen.",
+      "description": "Wir liefern kritische Komponenten für den Öl- und Gassektor, die unter hohem Druck und in korrosiven Umgebungen arbeiten. Unsere Superlegierungen und Edelstähle gewährleisten die Integrität und Sicherheit von Explorations-, Produktions- und Raffinerieanlagen.",
+      "cardDescription": "Lösungen in robusten Komponenten für kritische Anwendungen in Öl und Gas.",
+      "icon": "Component",
+      "solutions": {
+        "oil_gas_valve_components": { "title": "Ventilkomponenten", "description": "Innenteile für Regel- und Sicherheitsventile, die Korrosion und hohem Druck standhalten." },
+        "oil_gas_refinery_furnace_tubes": { "title": "Raffinerieofenrohre", "description": "Zentrifugal gegossene Rohre für Cracköfen, ausgelegt für den Betrieb bei hohen Temperaturen." },
+        "oil_gas_subsea_equipment_parts": { "title": "Unterwasser-Ausrüstungsteile", "description": "Komponenten für Unterwassersysteme, die maximale Zuverlässigkeit und Korrosionsbeständigkeit erfordern." }
+      }
+    },
+    "guseira": {
+      "title": "Eisenindustrie",
+      "subtitle": "Robuste Komponenten für die Roheisenproduktion.",
+      "description": "Wir liefern Hochleistungsteile für Hochöfen und für den Umgang mit Roheisen, um maximale Effizienz und Sicherheit im primären Stahlherstellungsprozess zu gewährleisten.",
+      "cardDescription": "Teile und Komponenten für Hochöfen und die Roheisenproduktion.",
+      "icon": "Gem",
+      "solutions": {
+        "pig_iron_blast_furnace_components": { "title": "Hochofenkomponenten", "description": "Verschleiß- und hochtemperaturbeständige Auskleidungen und Teile zur Verlängerung der Lebensdauer von Hochöfen." },
+        "pig_iron_torpedo_cars_ladles": { "title": "Torpedowagen und Pfannen", "description": "Ersatzteile und Komponenten, die den sicheren und effizienten Transport von flüssigem Roheisen gewährleisten." },
+        "pig_iron_casting_systems": { "title": "Stranggusssysteme", "description": "Komponenten, die einen kontinuierlichen und qualitativ hochwertigen Roheisen-Stranggussprozess gewährleisten." }
+      }
+    },
+    "tratamento_termico": {
+      "title": "Wärmebehandlung",
+      "subtitle": "Speziallegierungen für Hochtemperaturprozesse.",
+      "description": "Wir entwickeln Komponenten und Teile aus Speziallegierungen für Wärmebehandlungsöfen und gewährleisten so die Leistung und die Haltbarkeit von Anlagen in Prozessen wie Härten, Anlassen, Aufkohlen und Nitrieren.",
+      "cardDescription": "Komponenten für Industrieöfen und Wärmebehandlungsprozesse.",
+      "icon": "Cpu",
+      "solutions": {
+        "heat_treatment_grids_baskets": { "title": "Roste und Körbe", "description": "Roste, Körbe und Vorrichtungen aus feuerfesten Legierungen zur Unterstützung von Teilen in Öfen." },
+        "heat_treatment_rollers_radiant_tubes": { "title": "Rollen und Strahlrohre", "description": "Förderrollen und Strahlrohre für kontinuierliche und Chargenöfen." },
+        "heat_treatment_spare_parts": { "title": "Ersatzteile", "description": "Ventilatoren, Stützen und andere Komponenten für Wärmebehandlungsöfen." }
+      }
+    },
+    "engenharia": {
+      "title": "Aceros Engineering",
+      "subtitle": "Innovation und maßgeschneiderte Lösungen.",
+      "description": "Unser Ingenieurteam entwickelt maßgeschneiderte metallurgische Lösungen und optimiert die Leistung von Geräten und Komponenten, um den spezifischen Anforderungen jedes Kunden gerecht zu werden. Von der Konzeption bis zur Implementierung bieten wir Beratung und spezialisierte technische Unterstützung.",
+      "cardDescription": "Beratungsdienstleistungen und Entwicklung maßgeschneiderter metallurgischer Lösungen.",
+      "icon": "Lightbulb",
+      "solutions": {
+        "engineering_metallurgical_consulting": {
+          "title": "Metallurgische Beratung",
+          "description": "Fehleranalyse, Materialauswahl und Prozessoptimierung zur Verlängerung der Lebensdauer und Effizienz von Geräten.",
+          "icon": "Component"
+        },
+        "engineering_alloy_development": {
+          "title": "Legierungsentwicklung",
+          "description": "Erstellung von kundenspezifischen Legierungen für spezifische Anwendungen, die überlegene mechanische, thermische oder chemische Eigenschaften erfordern.",
+          "icon": "Zap"
+        },
+        "engineering_component_design": {
+          "title": "Komponentendesign",
+          "description": "Design und Simulation von Komponenten mit CAD- und FEA-Tools, um Leistung und Zuverlässigkeit vor der Herstellung zu gewährleisten."
+        }
+      }
+    },
+    "certificados": {
+      "title": "Zertifikate",
+      "subtitle": "Qualität durch globale Standards gesichert",
+      "description": "Die Exzellenz und Zuverlässigkeit unserer Produkte wird durch Zertifizierungen der angesehensten Industrie- und Schiffsklassifikationsgesellschaften der Welt bestätigt.",
+      "cardDescription": "Entdecken Sie unsere Zertifizierungen und Qualitätssiegel, die unsere Exzellenz garantieren.",
+      "icon": "Award",
+      "solutions": []
+    }
+  }
+}
+    

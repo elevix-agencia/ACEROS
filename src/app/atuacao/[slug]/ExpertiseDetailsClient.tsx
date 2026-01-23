@@ -105,7 +105,7 @@ function OilGasNewGallerySection() {
   );
 }
 
-function TratamentoTermicoNewSection() {
+function TratamentoTermicoNewSection({translations}: {translations: any}) {
   const images = [
     PlaceHolderImages.find(img => img.id === 'tratamento-new-1'),
     PlaceHolderImages.find(img => img.id === 'tratamento-new-2'),
@@ -142,10 +142,10 @@ function TratamentoTermicoNewSection() {
           className="text-center mb-16"
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Componentes para Fornos de Alta Performance
+            {translations.expertise_sectors.page.tratamento_new_section_title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Engenharia de precisão para garantir a máxima durabilidade e eficiência em processos de tratamento térmico.
+            {translations.expertise_sectors.page.tratamento_new_section_subtitle}
           </p>
         </motion.div>
 
@@ -203,7 +203,7 @@ function TratamentoTermicoNewSection() {
 }
 
 
-function TratamentoTermicoVideos({ videoUrls }: { videoUrls: string[] }) {
+function TratamentoTermicoVideos({ videoUrls, translations }: { videoUrls: string[], translations: any }) {
   if (!videoUrls || videoUrls.length === 0) return null;
 
   return (
@@ -223,10 +223,10 @@ function TratamentoTermicoVideos({ videoUrls }: { videoUrls: string[] }) {
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Processos em Ação
+            {translations.expertise_sectors.page.tratamento_videos_title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Veja de perto a precisão e a tecnologia envolvida na fabricação de nossos componentes.
+            {translations.expertise_sectors.page.tratamento_videos_subtitle}
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -283,7 +283,7 @@ function TratamentoTermicoFinalSection() {
   );
 }
 
-function TratamentoTermicoExtraGallery() {
+function TratamentoTermicoExtraGallery({translations}: {translations: any}) {
   const images = [
     PlaceHolderImages.find(img => img.id === 'tratamento-extra-1'),
     PlaceHolderImages.find(img => img.id === 'tratamento-extra-2'),
@@ -308,10 +308,10 @@ function TratamentoTermicoExtraGallery() {
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Galeria de Componentes
+            {translations.expertise_sectors.page.tratamento_extra_gallery_title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Mais exemplos da nossa engenharia de precisão para tratamento térmico.
+            {translations.expertise_sectors.page.tratamento_extra_gallery_subtitle}
           </p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -354,7 +354,7 @@ function TratamentoTermicoExtraGallery() {
   );
 }
 
-function GrelhaFornoPocoSection() {
+function GrelhaFornoPocoSection({translations}: {translations: any}) {
   const image = PlaceHolderImages.find(img => img.id === 'tratamento-grelha-forno-poco');
 
   if (!image) return null;
@@ -376,7 +376,7 @@ function GrelhaFornoPocoSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Grelha para Forno de Poço
+            {translations.expertise_sectors.page.grelha_forno_poco_title}
           </h2>
         </motion.div>
         <motion.div
@@ -402,7 +402,7 @@ function GrelhaFornoPocoSection() {
   );
 }
 
-function TratamentoTermicoOrangeGallery() {
+function TratamentoTermicoOrangeGallery({translations}: {translations: any}) {
   const images = [
     PlaceHolderImages.find(img => img.id === 'tratamento-orange-1'),
     PlaceHolderImages.find(img => img.id === 'tratamento-orange-2'),
@@ -427,10 +427,10 @@ function TratamentoTermicoOrangeGallery() {
           className="text-center mb-16"
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Cestos para Tratamento Térmico
+            {translations.expertise_sectors.page.tratamento_orange_gallery_title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Designs inovadores e componentes robustos para as aplicações mais exigentes.
+            {translations.expertise_sectors.page.tratamento_orange_gallery_subtitle}
           </p>
         </motion.div>
 
@@ -475,7 +475,7 @@ function TratamentoTermicoOrangeGallery() {
 }
 
 
-function TratamentoTermicoCreativeGallery() {
+function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
   const { t } = useLanguage();
   const allImages = [
     PlaceHolderImages.find(img => img.id === 'tratamento-creative-1'),
@@ -519,7 +519,7 @@ function TratamentoTermicoCreativeGallery() {
                 transition={{ duration: 0.8, delay: 0.1 }}
             >
                 <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-                    Grelhas e Dispositivos para Fornos
+                    {translations.expertise_sectors.page.tratamento_creative_gallery_title}
                 </h2>
                 
             </motion.div>
@@ -565,11 +565,11 @@ function TratamentoTermicoCreativeGallery() {
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.6, delay: 0.7 }}
                     >
-                        <h3 className="font-headline text-2xl font-bold text-foreground mb-3">Performance Incomparável</h3>
-                        <p className="text-muted-foreground mb-6">Nossos componentes garantem a máxima eficiência e durabilidade para seu processo de tratamento térmico.</p>
+                        <h3 className="font-headline text-2xl font-bold text-foreground mb-3">{translations.expertise_sectors.page.tratamento_creative_cta_title}</h3>
+                        <p className="text-muted-foreground mb-6">{translations.expertise_sectors.page.tratamento_creative_cta_subtitle}</p>
                         <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                             <Link href={whatsappUrl} target="_blank">
-                                Consulte um especialista
+                                {translations.expertise_sectors.page.tratamento_creative_cta_button}
                             </Link>
                         </Button>
                     </motion.div>
@@ -582,7 +582,7 @@ function TratamentoTermicoCreativeGallery() {
 
 
 
-function MiningNewSection() {
+function MiningNewSection({translations}: {translations: any}) {
   const newImage = PlaceHolderImages.find(
     (img) => img.id === 'mining-new-pelletizing-image'
   );
@@ -638,7 +638,7 @@ function MiningNewSection() {
               transition={{ duration: 1, delay: 0.2 }}
               className="mb-6 font-headline text-3xl font-bold tracking-tight text-accent sm:text-4xl"
             >
-              PENEIRAS DE ROLOS PARA A CLASSIFICAÇÃO DE PELLETS
+              {translations.expertise_sectors.page.mining_new_section_title}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -646,7 +646,7 @@ function MiningNewSection() {
               transition={{ duration: 1, delay: 0.5 }}
               className="font-body text-lg text-slate-200"
             >
-              TIPOS TPC E TDE: A MELHOR SOLUÇÃO EM PELOTIZAÇÃO
+              {translations.expertise_sectors.page.mining_new_section_subtitle}
             </motion.p>
           </div>
         </div>
@@ -688,7 +688,7 @@ function MiningNewSection2() {
   );
 }
 
-function MiningRollerScreens() {
+function MiningRollerScreens({translations}: {translations: any}) {
   const images = [
     PlaceHolderImages.find((img) => img.id === 'mining-new-gallery-1'),
     PlaceHolderImages.find((img) => img.id === 'mining-new-gallery-2'),
@@ -717,7 +717,7 @@ function MiningRollerScreens() {
           className="text-center mb-16"
         >
           <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-accent-foreground sm:text-4xl">
-            Peneiras de Rolos para Classificação de Pelotas de Minério
+            {translations.expertise_sectors.page.mining_roller_screens_title}
           </h2>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -773,7 +773,7 @@ function MiningRollerScreens() {
   );
 }
 
-function NavalFlangesSection() {
+function NavalFlangesSection({translations}: {translations: any}) {
   const { t } = useLanguage();
   const images = [
     PlaceHolderImages.find((img) => img.id === 'naval-product-flange-1'),
@@ -798,10 +798,10 @@ function NavalFlangesSection() {
           className="text-center mb-16"
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-            Sistema de Governo
+            {translations.expertise_sectors.page.naval_flanges_title}
           </h2>
           <p className="text-lg text-white max-w-3xl mx-auto leading-relaxed">
-            Componentes usinados de alta resistência para sistemas de governo naval, responsáveis pelo controle do leme.
+            {translations.expertise_sectors.page.naval_flanges_subtitle}
           </p>
         </motion.div>
 
@@ -835,7 +835,7 @@ function NavalFlangesSection() {
   );
 }
 
-function NavalTubesSection() {
+function NavalTubesSection({translations}: {translations: any}) {
   const { t } = useLanguage();
   const images = [
     PlaceHolderImages.find((img) => img.id === 'naval-product-tube-1'),
@@ -864,10 +864,10 @@ function NavalTubesSection() {
                 className="text-center mb-16"
             >
                 <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-                    Propulsores e Hélices Navais
+                    {translations.expertise_sectors.page.naval_tubes_title}
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Desenvolvemos Hélices e componentes para a indústria Naval a fim de garantir melhor qualidade na propulsão.
+                    {translations.expertise_sectors.page.naval_tubes_subtitle}
                 </p>
             </motion.div>
 
@@ -906,7 +906,7 @@ function NavalTubesSection() {
   );
 }
 
-function NavalAnalysisSection() {
+function NavalAnalysisSection({translations}: {translations: any}) {
   const images = [
     PlaceHolderImages.find(img => img.id === 'naval-product-3-img-1'),
     PlaceHolderImages.find(img => img.id === 'naval-product-3-img-2'),
@@ -953,10 +953,10 @@ function NavalAnalysisSection() {
           className="text-center mb-16"
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-black mb-4 tracking-tight">
-            Sistema de Ancoras
+            {translations.expertise_sectors.page.naval_analysis_title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Utilizando engenharia de ponta, validamos cada componente através de simulações e análises técnicas detalhadas para garantir performance e segurança.
+            {translations.expertise_sectors.page.naval_analysis_subtitle}
           </p>
         </motion.div>
 
@@ -1003,7 +1003,7 @@ function NavalAnalysisSection() {
   );
 }
 
-function NavalAssembliesSection() {
+function NavalAssembliesSection({translations}: {translations: any}) {
     const images = [
         PlaceHolderImages.find(img => img.id === 'naval-assembly-1'),
         PlaceHolderImages.find(img => img.id === 'naval-assembly-2'),
@@ -1052,10 +1052,10 @@ function NavalAssembliesSection() {
                 className="text-center mb-16"
             >
                 <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-                    Montagem e Desmontagem de Propulsão dentro d'agua
+                    {translations.expertise_sectors.page.naval_assemblies_title}
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Fabricamos conjuntos estruturais complexos e montagens de precisão que são a base para equipamentos navais de alta performance.
+                    {translations.expertise_sectors.page.naval_assemblies_subtitle}
                 </p>
             </motion.div>
 
@@ -1080,7 +1080,7 @@ function NavalAssembliesSection() {
     );
 }
 
-function NavalConnectorsSection() {
+function NavalConnectorsSection({translations}: {translations: any}) {
   const { t } = useLanguage();
   const images = [
     PlaceHolderImages.find(img => img.id === 'naval-connector-1'),
@@ -1105,14 +1105,14 @@ function NavalConnectorsSection() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6 tracking-tight text-white">
-              FOSFATO DE MANGANÊS
+              {translations.expertise_sectors.page.naval_connectors_title}
             </h2>
             <p className="text-lg leading-relaxed text-white/90 mb-8">
-              Fosfato de manganês: maior resistência ao desgaste, menor atrito e proteção anticorrosiva.
+              {translations.expertise_sectors.page.naval_connectors_subtitle}
             </p>
             <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-white/90">
                 <Link href={whatsappUrl} target="_blank">
-                    Solicitar Orçamento
+                    {t.cta.request_quote}
                 </Link>
             </Button>
           </motion.div>
@@ -1141,7 +1141,7 @@ function NavalConnectorsSection() {
   );
 }
 
-function NavalNewProductsSection() {
+function NavalNewProductsSection({translations}: {translations: any}) {
   const products = [
     {
       id: 'naval-panama-chock-bulwark',
@@ -1174,7 +1174,7 @@ function NavalNewProductsSection() {
           className="text-center mb-16"
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Componentes Navais de Alta Performance
+            {translations.expertise_sectors.page.naval_new_products_title}
           </h2>
         </motion.div>
 
@@ -1217,7 +1217,7 @@ function NavalNewProductsSection() {
   );
 }
 
-function NavalWinchSection() {
+function NavalWinchSection({translations}: {translations: any}) {
   const image = PlaceHolderImages.find(img => img.id === 'naval-winch-image');
 
   if (!image) return null;
@@ -1227,7 +1227,7 @@ function NavalWinchSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            GUINCHO MARITIMO
+            {translations.expertise_sectors.page.naval_winch_title}
           </h2>
         </div>
         <motion.div
@@ -1253,30 +1253,30 @@ function NavalWinchSection() {
   );
 }
 
-function KortNozzleSection() {
+function KortNozzleSection({translations}: {translations: any}) {
   const processSteps = [
     {
-      title: "Etapa 1: Construção Inicial",
+      title: translations.expertise_sectors.page.kort_nozzle_step1_title,
       images: [
         PlaceHolderImages.find(img => img.id === 'kort-nozzle-1'),
         PlaceHolderImages.find(img => img.id === 'kort-nozzle-2'),
       ].filter((img): img is ImagePlaceholder => !!img),
     },
     {
-      title: "Etapa 2: Kort Nozzle Concluído",
+      title: translations.expertise_sectors.page.kort_nozzle_step2_title,
       images: [
         PlaceHolderImages.find(img => img.id === 'kort-nozzle-3'),
         PlaceHolderImages.find(img => img.id === 'kort-nozzle-4'),
       ].filter((img): img is ImagePlaceholder => !!img),
     },
     {
-      title: "Etapa 3: Kort Nozzle e Túnel Telescópico",
+      title: translations.expertise_sectors.page.kort_nozzle_step3_title,
       images: [
         PlaceHolderImages.find(img => img.id === 'kort-nozzle-5'),
       ].filter((img): img is ImagePlaceholder => !!img),
     },
      {
-      title: "Etapa 4: Aplicação em Navios-Sonda",
+      title: translations.expertise_sectors.page.kort_nozzle_step4_title,
       images: [
         PlaceHolderImages.find(img => img.id === 'kort-nozzle-6'),
       ].filter((img): img is ImagePlaceholder => !!img),
@@ -1294,10 +1294,10 @@ function KortNozzleSection() {
           className="text-center mb-16"
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-            Fabricação do Kort Nozzle
+            {translations.expertise_sectors.page.kort_nozzle_title}
           </h2>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Acompanhe visualmente todas as etapas do desenvolvimento do Kort Nozzle, desde a construção inicial até a aplicação final em sistemas navais de alta performance.
+            {translations.expertise_sectors.page.kort_nozzle_subtitle}
           </p>
         </motion.div>
 
@@ -1420,8 +1420,8 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
           <section className="py-20 sm:py-32 bg-background text-foreground relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
               <div className="text-center mb-16 animate-fade-in-up">
-                <h2 className="mb-4 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-accent">Excelência em Cada Componente</h2>
-                <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">Nosso compromisso é entregar soluções que não apenas atendem, mas superam as expectativas de performance e durabilidade.</p>
+                <h2 className="mb-4 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-accent">{translations.expertise_sectors.page.mining_quality_title}</h2>
+                <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">{translations.expertise_sectors.page.mining_quality_subtitle}</p>
               </div>
               <div className="grid md:grid-cols-3 gap-8">
                 {qualityPillars.map((pillar, index) => (
@@ -1438,9 +1438,9 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
               </div>
             </div>
           </section>
-          <MiningRollerScreens />
+          <MiningRollerScreens translations={translations} />
           <MiningProducts />
-          <MiningNewSection />
+          <MiningNewSection translations={translations} />
           <MiningNewSection2 />
         </>
       );
@@ -1455,8 +1455,8 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
           <FurnaceAndPotProducts />
           <WalkingBeamFurnace />
           <BarFurnaceProducts />
-          <TratamentoTermicoNewSection />
-          {sector.videoUrls && sector.videoUrls.length > 0 && <TratamentoTermicoVideos videoUrls={sector.videoUrls} />}
+          <TratamentoTermicoNewSection translations={translations} />
+          {sector.videoUrls && sector.videoUrls.length > 0 && <TratamentoTermicoVideos videoUrls={sector.videoUrls} translations={translations} />}
           <TratamentoTermicoFinalSection />
            {siderurgiaNewImage && (
             <section className="py-20 sm:py-32 bg-white">
@@ -1474,24 +1474,24 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
     case 'tratamento_termico':
       return (
         <>
-          <TratamentoTermicoExtraGallery />
-          <GrelhaFornoPocoSection />
-          <TratamentoTermicoOrangeGallery />
-          <TratamentoTermicoCreativeGallery />
+          <TratamentoTermicoExtraGallery translations={translations} />
+          <GrelhaFornoPocoSection translations={translations} />
+          <TratamentoTermicoOrangeGallery translations={translations} />
+          <TratamentoTermicoCreativeGallery translations={translations} />
         </>
       );
     case 'naval':
         return (
             <>
               <NavalCatalogSection />
-              <NavalTubesSection />
-              <NavalFlangesSection />
-              <NavalAnalysisSection />
-              <NavalAssembliesSection />
-              <NavalConnectorsSection />
-              <NavalNewProductsSection />
-              <NavalWinchSection />
-              <KortNozzleSection />
+              <NavalTubesSection translations={translations} />
+              <NavalFlangesSection translations={translations} />
+              <NavalAnalysisSection translations={translations} />
+              <NavalAssembliesSection translations={translations} />
+              <NavalConnectorsSection translations={translations} />
+              <NavalNewProductsSection translations={translations} />
+              <NavalWinchSection translations={translations} />
+              <KortNozzleSection translations={translations} />
             </>
         );
     case 'oleo_e_gas':

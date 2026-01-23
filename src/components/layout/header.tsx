@@ -79,7 +79,7 @@ export function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="menu-icon-mobile">
                 <Menu className="h-8 w-8" />
-                <span className="sr-only">Abrir menu</span>
+                <span className="sr-only">{t.header.open_menu}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background/95 backdrop-blur-sm">
