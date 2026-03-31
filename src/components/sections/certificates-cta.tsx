@@ -48,9 +48,8 @@ export function CertificatesCta() {
     img.id.startsWith('cert-gallery-')
   );
 
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <div>
@@ -188,7 +187,7 @@ export function CertificatesCta() {
               <p className="mx-auto max-w-2xl text-lg sm:text-xl text-muted-foreground mb-10">
                   {t.cta.ready_subtitle}
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
                   <Button
                       asChild
                       size="lg"
@@ -196,17 +195,20 @@ export function CertificatesCta() {
                   >
                       <Link href="/contato">{t.cta.request_quote}</Link>
                   </Button>
-                  <Button
-                      asChild
-                      size="lg"
-                      variant="outline"
-                      className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110"
-                  >
-                      <Link href={whatsappUrl} target="_blank">
-                          <MessageCircle className="mr-3 h-5 w-5" />
-                          {t.cta.whatsapp}
-                      </Link>
-                  </Button>
+                  {whatsappNumbers.map((number, idx) => (
+                    <Button
+                        key={number}
+                        asChild
+                        size="lg"
+                        variant="outline"
+                        className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110"
+                    >
+                        <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                            <MessageCircle className="mr-3 h-5 w-5" />
+                            {t.cta.whatsapp} {idx + 1}
+                        </Link>
+                    </Button>
+                  ))}
               </div>
           </div>
         </div>

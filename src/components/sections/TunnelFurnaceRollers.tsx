@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -13,17 +12,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '../ui/dialog';
+import { MessageCircle } from 'lucide-react';
 
 export function TunnelFurnaceRollers() {
   const productImage = PlaceHolderImages.find(
     (img) => img.id === 'tunnel-furnace-roller'
   );
 
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para os rolos para fornos.'
   );
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <section
@@ -77,7 +76,7 @@ export function TunnelFurnaceRollers() {
               Rolos resfriados (cooled) e não resfriados (uncooled) fazem parte da produção padrão da ACEROS. Até o momento, mais de 800 rolos foram fornecidos a Clientes de alto potencial. Podemos fornecer tanto projetos próprios quanto projetos conforme o Cliente.
             </p>
 
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 text-muted-foreground mb-10">
               <div>
                 <h4 className="font-semibold text-lg text-foreground">
                   Soluções Especiais e Rolo Refrigerado
@@ -96,11 +95,16 @@ export function TunnelFurnaceRollers() {
               </div>
             </div>
 
-            <Button asChild size="lg" className="mt-8">
-              <Link href={whatsappUrl} target="_blank">
-                Solicitar Orçamento
-              </Link>
-            </Button>
+            <div className="flex flex-wrap gap-3">
+              {whatsappNumbers.map((number, idx) => (
+                <Button key={number} asChild size="lg">
+                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Solicitar Orçamento {idx + 1}
+                  </Link>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

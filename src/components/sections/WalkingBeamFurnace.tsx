@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -17,6 +16,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import { MessageCircle } from 'lucide-react';
 
 export function WalkingBeamFurnace() {
   const { t } = useLanguage();
@@ -32,11 +32,10 @@ export function WalkingBeamFurnace() {
     ['vedantes-1', 'vedantes-2', 'vedantes-3', 'vedantes-4', 'vedantes-5'].includes(img.id)
   ).filter(Boolean) as ImagePlaceholder[];
 
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para os Fornos de Vigas Móveis.'
   );
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <section className="py-20 sm:py-32">
@@ -51,7 +50,7 @@ export function WalkingBeamFurnace() {
               VIGAS MÓVEIS, COLUNAS: Projeto e ligas especiais para otimizar a
               vida útil e minimizar o pick-up (aderência de material).
             </p>
-            <div className="relative flex-col space-y-4 justify-center items-center h-full">
+            <div className="relative flex flex-col space-y-4 justify-center items-center">
               {vigasMoveisImage1 && (
                 <motion.div
                   whileHover={{ scale: 1.05, zIndex: 10, rotate: -2 }}
@@ -89,11 +88,16 @@ export function WalkingBeamFurnace() {
                 </motion.div>
               )}
             </div>
-            <Button asChild size="lg" className="mt-8">
-              <Link href={whatsappUrl} target="_blank">
-                Solicitar Orçamento
-              </Link>
-            </Button>
+            <div className="flex flex-col gap-3 mt-10">
+              {whatsappNumbers.map((number, idx) => (
+                <Button key={number} asChild size="lg">
+                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Solicitar Orçamento {idx + 1}
+                  </Link>
+                </Button>
+              ))}
+            </div>
           </div>
 
           {/* Coluna da Direita */}
@@ -115,15 +119,19 @@ export function WalkingBeamFurnace() {
                 ))}
                 </div>
             </div>
-            <Button asChild size="lg" variant="accent" className="mt-auto w-full">
-              <Link href={whatsappUrl} target="_blank">
-                Solicitar Orçamento
-              </Link>
-            </Button>
+            <div className="flex flex-col gap-3 mt-auto w-full">
+              {whatsappNumbers.map((number, idx) => (
+                <Button key={number} asChild size="lg" variant="accent" className="w-full">
+                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Solicitar Orçamento {idx + 1}
+                  </Link>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-    

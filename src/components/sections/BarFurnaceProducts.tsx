@@ -1,11 +1,10 @@
-
 'use client';
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLanguage } from '@/hooks/use-language';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export function BarFurnaceProducts() {
@@ -15,11 +14,10 @@ export function BarFurnaceProducts() {
     img => img.id === 'bar-furnace-product'
   );
 
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para peças para forno de barras.'
   );
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <section
@@ -51,16 +49,21 @@ export function BarFurnaceProducts() {
                 {(t.expertise_sectors.page as any).bar_furnace_description}
               </p>
             </div>
-            <Button
-              asChild
-              size="lg"
-              className="mt-4 w-fit group"
-            >
-              <Link href={whatsappUrl} target="_blank">
-                {t.cta.request_quote}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </Button>
+            <div className="flex flex-wrap gap-3 mt-4">
+              {whatsappNumbers.map((number, idx) => (
+                <Button
+                  key={number}
+                  asChild
+                  size="lg"
+                  className="w-full sm:w-fit group"
+                >
+                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Orçamento {idx + 1}
+                  </Link>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

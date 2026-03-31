@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useRef, useState, useEffect, Suspense } from 'react';
@@ -29,7 +28,7 @@ import { OilGasProducts } from '@/components/sections/oil-gas-products';
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Search, Check, BrainCircuit } from 'lucide-react';
+import { ArrowRight, Search, Check, BrainCircuit, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { SiderurgiaImageGallery } from '@/components/sections/SiderurgiaImageGallery';
 import {
@@ -487,9 +486,8 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
 
   const [mainImage, sideImage1, sideImage2, ...gallery] = allImages;
 
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de mais informações sobre suas inovações em tratamento térmico.');
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <motion.section 
@@ -567,11 +565,15 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
                     >
                         <h3 className="font-headline text-2xl font-bold text-foreground mb-3">{translations.expertise_sectors.page.tratamento_creative_cta_title}</h3>
                         <p className="text-muted-foreground mb-6">{translations.expertise_sectors.page.tratamento_creative_cta_subtitle}</p>
-                        <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                            <Link href={whatsappUrl} target="_blank">
-                                {translations.expertise_sectors.page.tratamento_creative_cta_button}
-                            </Link>
-                        </Button>
+                        <div className="flex flex-col gap-3">
+                          {whatsappNumbers.map((number, idx) => (
+                            <Button key={number} asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                                <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                                    {translations.expertise_sectors.page.tratamento_creative_cta_button} {idx + 1}
+                                </Link>
+                            </Button>
+                          ))}
+                        </div>
                     </motion.div>
                 </motion.div>
             </div>
@@ -849,6 +851,9 @@ function NavalTubesSection({translations}: {translations: any}) {
     PlaceHolderImages.find((img) => img.id === 'naval-propeller-detail'),
   ].filter((img): img is ImagePlaceholder => !!img);
 
+  const whatsappMessage = encodeURIComponent(t.whatsapp.message);
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+
   return (
     <section className="relative py-20 sm:py-32 bg-gray-50 text-foreground overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,rgba(0,0,0,0.05)_1px,transparent_1px)] [background-size:32px_32px] opacity-50"></div>
@@ -894,12 +899,27 @@ function NavalTubesSection({translations}: {translations: any}) {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.8 }}
             >
-              <Button asChild size="lg" className="border-accent text-accent-foreground bg-orange-500 hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105">
-                <Link href="/contato">
-                  {t.cta.request_quote}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="border-accent text-accent-foreground bg-primary hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105">
+                  <Link href="/contato">
+                    {t.cta.request_quote}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                {whatsappNumbers.map((number, idx) => (
+                  <Button
+                    key={number}
+                    asChild
+                    size="lg"
+                    className="border-accent text-accent-foreground bg-orange-500 hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105"
+                  >
+                    <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                      <MessageCircle className="mr-2 h-5 w-5" />
+                      WhatsApp {idx + 1}
+                    </Link>
+                  </Button>
+                ))}
+              </div>
             </motion.div>
         </div>
     </section>
@@ -1088,11 +1108,10 @@ function NavalConnectorsSection({translations}: {translations: any}) {
   ].filter((img): img is ImagePlaceholder => !!img);
 
   const [mainImage, thumbnailImage] = images;
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para o tratamento de Fosfato de Manganês.'
   );
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <section className="py-20 sm:py-32 bg-orange-500 text-white">
@@ -1110,11 +1129,15 @@ function NavalConnectorsSection({translations}: {translations: any}) {
             <p className="text-lg leading-relaxed text-white/90 mb-8">
               {translations.expertise_sectors.page.naval_connectors_subtitle}
             </p>
-            <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-white/90">
-                <Link href={whatsappUrl} target="_blank">
-                    {t.cta.request_quote}
-                </Link>
-            </Button>
+            <div className="flex flex-col gap-3">
+              {whatsappNumbers.map((number, idx) => (
+                <Button key={number} asChild size="lg" className="bg-white text-orange-500 hover:bg-white/90">
+                    <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                        Solicitar Orçamento {idx + 1}
+                    </Link>
+                </Button>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
@@ -1658,8 +1681,3 @@ export function ExpertiseDetailsClient({
     </div>
   );
 }
-
-    
-    
-
-    

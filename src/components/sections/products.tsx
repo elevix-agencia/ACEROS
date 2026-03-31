@@ -19,7 +19,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Eye, Send } from 'lucide-react';
+import { Eye, Send, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 import {
   Carousel,
@@ -211,9 +211,8 @@ export function Products() {
     },
   ];
 
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <>
@@ -281,23 +280,28 @@ export function Products() {
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="text-center flex-grow flex flex-col justify-end p-4 pt-0">
-                        <div className="flex flex-col sm:flex-row gap-2 justify-center mt-4">
-                          <Button
-                            asChild
-                            size="sm"
-                            variant="accent"
-                            className="bg-accent text-accent-foreground hover:bg-accent/90 flex-grow-0"
-                          >
-                            <Link href={whatsappUrl} target="_blank">
-                              <Send className="mr-2 h-4 w-4" />
-                              {t.products.quote_button}
-                            </Link>
-                          </Button>
+                        <div className="flex flex-col gap-2 mt-4">
+                          <div className="grid grid-cols-1 gap-2">
+                            {whatsappNumbers.map((number, idx) => (
+                              <Button
+                                key={number}
+                                asChild
+                                size="sm"
+                                variant="accent"
+                                className="bg-accent text-accent-foreground hover:bg-accent/90 flex-grow text-xs"
+                              >
+                                <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                                  <MessageCircle className="mr-1 h-3 w-3" />
+                                  Orçamento {idx + 1}
+                                </Link>
+                              </Button>
+                            ))}
+                          </div>
                           <DialogTrigger asChild>
                             <Button
                               size="sm"
                               variant="outline"
-                              className="flex-grow-0"
+                              className="w-full text-xs"
                               disabled={galleryItems.length <= 1}
                             >
                               <Eye className="mr-2 h-4 w-4" />

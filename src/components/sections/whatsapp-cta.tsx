@@ -9,9 +9,8 @@ import { cn } from '@/lib/utils';
 export function WhatsAppCta() {
   const { t } = useLanguage();
 
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <section
@@ -44,17 +43,20 @@ export function WhatsAppCta() {
             <p className="mt-6 max-w-2xl mx-auto text-lg text-accent-foreground/90 drop-shadow-sm">
               {t.whatsapp.subtitle}
             </p>
-            <div className="mt-10">
-              <Button
-                asChild
-                size="lg"
-                className="h-auto transform rounded-lg bg-green-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-green-500/30 transition-all duration-300 hover:scale-105 hover:bg-green-700 animate-pulse-slow"
-              >
-                <Link href={whatsappUrl} target="_blank">
-                  <MessageCircle className="mr-3 h-6 w-6" />
-                  {t.whatsapp.button}
-                </Link>
-              </Button>
+            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+              {whatsappNumbers.map((number, idx) => (
+                <Button
+                  key={number}
+                  asChild
+                  size="lg"
+                  className="h-auto transform rounded-lg bg-green-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-green-500/30 transition-all duration-300 hover:scale-105 hover:bg-green-700 animate-pulse-slow"
+                >
+                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                    <MessageCircle className="mr-3 h-6 w-6" />
+                    {t.whatsapp.button} {idx + 1}
+                  </Link>
+                </Button>
+              ))}
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLanguage } from '@/hooks/use-language';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export function CaplCglProducts() {
@@ -15,9 +15,8 @@ export function CaplCglProducts() {
     (img) => img.id === 'capl-cgl-product'
   );
   
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de um orçamento para produtos de siderurgia.');
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <section
@@ -49,7 +48,7 @@ export function CaplCglProducts() {
              <p className="text-muted-foreground mb-6 text-lg">
                 {t.expertise_sectors.page.furnace_capl_cgl_description}
               </p>
-            <ul className="space-y-4 text-muted-foreground">
+            <ul className="space-y-4 text-muted-foreground mb-8">
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
                 <span>{t.expertise_sectors.page.furnace_capl_cgl_item1}</span>
@@ -67,11 +66,16 @@ export function CaplCglProducts() {
                 <span>{t.expertise_sectors.page.furnace_capl_cgl_item4}</span>
               </li>
             </ul>
-            <Button asChild size="lg" className="mt-8">
-              <Link href={whatsappUrl} target="_blank">
-                {t.cta.request_quote} <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col gap-3">
+              {whatsappNumbers.map((number, idx) => (
+                <Button key={number} asChild size="lg" className="w-full sm:w-fit">
+                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Solicitar Orçamento {idx + 1}
+                  </Link>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

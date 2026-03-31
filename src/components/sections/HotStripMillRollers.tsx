@@ -1,11 +1,10 @@
-
 'use client';
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { ShieldCheck, Layers, Award } from 'lucide-react';
+import { ShieldCheck, Layers, Award, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 import { motion } from 'framer-motion';
 
@@ -19,11 +18,10 @@ export function HotStripMillRollers() {
     img => img.id === 'hot-strip-mill-roller-2'
   );
 
-  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para os Rolos para Laminador de Tiras a Quente.'
   );
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
 
   return (
     <section
@@ -91,7 +89,7 @@ export function HotStripMillRollers() {
               Nova geração de rolos para MESA DE TRANSFERÊNCIA, MESA DE SAÍDA, LOOPER, TENSION (tensão), PINCH (aperto) e WRAPPER (enrolador).
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-6 mb-10">
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 mt-1 items-center justify-center rounded-lg bg-accent-foreground/10 text-accent-foreground">
                   <Layers className="h-6 w-6" />
@@ -133,15 +131,21 @@ export function HotStripMillRollers() {
               </div>
             </div>
 
-            <Button
-              asChild
-              size="lg"
-              className="mt-10 bg-accent-foreground text-accent hover:bg-accent-foreground/90 transition-transform hover:scale-105"
-            >
-              <Link href={whatsappUrl} target="_blank">
-                {t.cta.request_quote}
-              </Link>
-            </Button>
+            <div className="flex flex-wrap gap-3">
+              {whatsappNumbers.map((number, idx) => (
+                <Button
+                  key={number}
+                  asChild
+                  size="lg"
+                  className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 transition-transform hover:scale-105"
+                >
+                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Solicitar Orçamento {idx + 1}
+                  </Link>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
