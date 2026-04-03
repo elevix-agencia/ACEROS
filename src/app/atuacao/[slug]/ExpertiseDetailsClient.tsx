@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useRef, useState, useEffect, Suspense } from 'react';
@@ -42,10 +43,98 @@ import { cn } from '@/lib/utils';
 import { NavalCatalogSection } from '@/components/sections/NavalCatalogSection';
 import { NavalProductCard } from '@/components/sections/NavalProductCard';
 
-export type ExpertisePageData = {
-  sector: Sector | null;
-  translations: any;
-};
+export function ExpertiseDetailsClient({
+  pageData,
+}: {
+  pageData: ExpertisePageData;
+}) {
+  const { t } = useLanguage();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!pageData) {
+    return null;
+  }
+
+  const { sector, translations } = pageData;
+
+  if (!sector) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <p>
+          {(translations && translations.expertise_sectors.page.sector_not_found) ||
+            'Setor não encontrado.'}
+        </p>
+      </div>
+    );
+  }
+
+  const heroImage = PlaceHolderImages.find(img => img.id === sector.heroImageId);
+  
+  if (!isClient) {
+    return (
+      <div className="h-screen w-screen flex items-center justify-center">
+        <p>Carregando...</p>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <section className="relative h-[60vh] min-h-[400px] w-full">
+        {heroImage && (
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            sizes="100vw"
+            data-ai-hint={heroImage.imageHint}
+            className="object-cover"
+            priority
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent" />
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white">
+          <div className="relative z-10 flex flex-col items-center px-4">
+            <motion.p 
+              className="font-headline text-lg sm:text-xl font-medium tracking-wide text-accent"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              {translations.expertise_sectors.page.solutions_for}
+            </motion.p>
+            <motion.h1 
+              className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl uppercase"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              {sector.title}
+            </motion.h1>
+            <motion.p 
+              className="mt-6 max-w-3xl text-lg text-slate-200 md:text-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              {sector.description}
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      <Suspense fallback={<div>Carregando conteúdo...</div>}>
+         <SectorContent sector={sector} translations={translations} />
+      </Suspense>
+
+      <WhatsAppCta />
+    </div>
+  );
+}
 
 function OilGasNewGallerySection() {
   const images = [
@@ -487,7 +576,7 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
   const [mainImage, sideImage1, sideImage2, ...gallery] = allImages;
 
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de mais informações sobre suas inovações em tratamento térmico.');
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <motion.section 
@@ -565,14 +654,12 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
                     >
                         <h3 className="font-headline text-2xl font-bold text-foreground mb-3">{translations.expertise_sectors.page.tratamento_creative_cta_title}</h3>
                         <p className="text-muted-foreground mb-6">{translations.expertise_sectors.page.tratamento_creative_cta_subtitle}</p>
-                        <div className="flex flex-col gap-3">
-                          {whatsappNumbers.map((number, idx) => (
-                            <Button key={number} asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                                <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                                    {translations.expertise_sectors.page.tratamento_creative_cta_button} {idx + 1}
-                                </Link>
-                            </Button>
-                          ))}
+                        <div className="flex justify-center">
+                          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                              <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                                  {translations.expertise_sectors.page.tratamento_creative_cta_button}
+                              </Link>
+                          </Button>
                         </div>
                     </motion.div>
                 </motion.div>
@@ -852,7 +939,7 @@ function NavalTubesSection({translations}: {translations: any}) {
   ].filter((img): img is ImagePlaceholder => !!img);
 
   const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section className="relative py-20 sm:py-32 bg-gray-50 text-foreground overflow-hidden">
@@ -906,19 +993,16 @@ function NavalTubesSection({translations}: {translations: any}) {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                {whatsappNumbers.map((number, idx) => (
-                  <Button
-                    key={number}
-                    asChild
-                    size="lg"
-                    className="border-accent text-accent-foreground bg-orange-500 hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105"
-                  >
-                    <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                      <MessageCircle className="mr-2 h-5 w-5" />
-                      WhatsApp {idx + 1}
-                    </Link>
-                  </Button>
-                ))}
+                <Button
+                  asChild
+                  size="lg"
+                  className="border-accent text-accent-foreground bg-orange-500 hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105"
+                >
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    WhatsApp
+                  </Link>
+                </Button>
               </div>
             </motion.div>
         </div>
@@ -1111,7 +1195,7 @@ function NavalConnectorsSection({translations}: {translations: any}) {
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para o tratamento de Fosfato de Manganês.'
   );
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section className="py-20 sm:py-32 bg-orange-500 text-white">
@@ -1129,14 +1213,12 @@ function NavalConnectorsSection({translations}: {translations: any}) {
             <p className="text-lg leading-relaxed text-white/90 mb-8">
               {translations.expertise_sectors.page.naval_connectors_subtitle}
             </p>
-            <div className="flex flex-col gap-3">
-              {whatsappNumbers.map((number, idx) => (
-                <Button key={number} asChild size="lg" className="bg-white text-orange-500 hover:bg-white/90">
-                    <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                        Solicitar Orçamento {idx + 1}
-                    </Link>
-                </Button>
-              ))}
+            <div className="flex">
+              <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-white/90">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                      Solicitar Orçamento
+                  </Link>
+              </Button>
             </div>
           </motion.div>
 
@@ -1587,97 +1669,3 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
       );
   }
 };
-
-
-export function ExpertiseDetailsClient({
-  pageData,
-}: {
-  pageData: ExpertisePageData;
-}) {
-  const { t } = useLanguage();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!pageData) {
-    return null;
-  }
-
-  const { sector, translations } = pageData;
-
-  if (!sector) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <p>
-          {(translations && translations.expertise_sectors.page.sector_not_found) ||
-            'Setor não encontrado.'}
-        </p>
-      </div>
-    );
-  }
-
-  const heroImage = PlaceHolderImages.find(img => img.id === sector.heroImageId);
-  
-  if (!isClient) {
-    return (
-      <div className="h-screen w-screen flex items-center justify-center">
-        <p>Carregando...</p>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <section className="relative h-[60vh] min-h-[400px] w-full">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            sizes="100vw"
-            data-ai-hint={heroImage.imageHint}
-            className="object-cover"
-            priority
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent" />
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white">
-          <div className="relative z-10 flex flex-col items-center px-4">
-            <motion.p 
-              className="font-headline text-lg sm:text-xl font-medium tracking-wide text-accent"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              {translations.expertise_sectors.page.solutions_for}
-            </motion.p>
-            <motion.h1 
-              className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl uppercase"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              {sector.title}
-            </motion.h1>
-            <motion.p 
-              className="mt-6 max-w-3xl text-lg text-slate-200 md:text-xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              {sector.description}
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      <Suspense fallback={<div>Carregando conteúdo...</div>}>
-         <SectorContent sector={sector} translations={translations} />
-      </Suspense>
-
-      <WhatsAppCta />
-    </div>
-  );
-}

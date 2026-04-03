@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -17,7 +18,7 @@ export function BarFurnaceProducts() {
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para peças para forno de barras.'
   );
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section
@@ -49,20 +50,17 @@ export function BarFurnaceProducts() {
                 {(t.expertise_sectors.page as any).bar_furnace_description}
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 mt-4">
-              {whatsappNumbers.map((number, idx) => (
-                <Button
-                  key={number}
-                  asChild
-                  size="lg"
-                  className="w-full sm:w-fit group"
-                >
-                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Orçamento {idx + 1}
-                  </Link>
-                </Button>
-              ))}
+            <div className="flex mt-4">
+              <Button
+                asChild
+                size="lg"
+                className="w-full sm:w-fit group"
+              >
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Orçamento
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

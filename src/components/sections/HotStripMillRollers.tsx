@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -21,7 +22,7 @@ export function HotStripMillRollers() {
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para os Rolos para Laminador de Tiras a Quente.'
   );
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section
@@ -131,20 +132,17 @@ export function HotStripMillRollers() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              {whatsappNumbers.map((number, idx) => (
-                <Button
-                  key={number}
-                  asChild
-                  size="lg"
-                  className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 transition-transform hover:scale-105"
-                >
-                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Solicitar Orçamento {idx + 1}
-                  </Link>
-                </Button>
-              ))}
+            <div className="flex">
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 transition-transform hover:scale-105"
+              >
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Solicitar Orçamento
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

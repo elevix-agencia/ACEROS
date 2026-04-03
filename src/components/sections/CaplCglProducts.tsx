@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -16,7 +17,7 @@ export function CaplCglProducts() {
   );
   
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de um orçamento para produtos de siderurgia.');
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section
@@ -66,15 +67,13 @@ export function CaplCglProducts() {
                 <span>{t.expertise_sectors.page.furnace_capl_cgl_item4}</span>
               </li>
             </ul>
-            <div className="flex flex-col gap-3">
-              {whatsappNumbers.map((number, idx) => (
-                <Button key={number} asChild size="lg" className="w-full sm:w-fit">
-                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Solicitar Orçamento {idx + 1}
-                  </Link>
-                </Button>
-              ))}
+            <div className="flex">
+              <Button asChild size="lg" className="w-full sm:w-fit">
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Solicitar Orçamento
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

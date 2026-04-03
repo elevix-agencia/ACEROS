@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -212,7 +213,7 @@ export function Products() {
   ];
 
   const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <>
@@ -281,22 +282,17 @@ export function Products() {
                       </CardHeader>
                       <CardContent className="text-center flex-grow flex flex-col justify-end p-4 pt-0">
                         <div className="flex flex-col gap-2 mt-4">
-                          <div className="grid grid-cols-1 gap-2">
-                            {whatsappNumbers.map((number, idx) => (
-                              <Button
-                                key={number}
-                                asChild
-                                size="sm"
-                                variant="accent"
-                                className="bg-accent text-accent-foreground hover:bg-accent/90 flex-grow text-xs"
-                              >
-                                <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                                  <MessageCircle className="mr-1 h-3 w-3" />
-                                  Orçamento {idx + 1}
-                                </Link>
-                              </Button>
-                            ))}
-                          </div>
+                          <Button
+                            asChild
+                            size="sm"
+                            variant="accent"
+                            className="bg-accent text-accent-foreground hover:bg-accent/90 flex-grow text-xs"
+                          >
+                            <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                              <MessageCircle className="mr-1 h-3 w-3" />
+                              Orçamento
+                            </Link>
+                          </Button>
                           <DialogTrigger asChild>
                             <Button
                               size="sm"

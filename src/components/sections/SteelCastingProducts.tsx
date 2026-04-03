@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -23,7 +24,7 @@ export function SteelCastingProducts() {
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para os rolos de lingotamento contínuo.'
   );
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <motion.section
@@ -91,15 +92,13 @@ export function SteelCastingProducts() {
               Rolos para Máquinas de Lingotamento Contínuo: Rolos monometálicos e bi-metálicos e rolos padrão revestidos por soldagem (welded). Estes rolos de aço inoxidável martensíticos (42 a 48 HRC), através do controle de enxofre, carbono e fósforo, garantem a ausência de trincas térmicas quando em contato com as placas do lingotamento contínuo. Estes rolos estão em funcionamento nas máquinas de lingotamento brasileiras e no exterior e produzem cerca de 3,5 milhões de toneladas de placas sem qualquer necessidade de troca ou repasse (re-usinagem) dos rolos.
             </p>
 
-            <div className="flex flex-wrap gap-3">
-              {whatsappNumbers.map((number, idx) => (
-                <Button key={number} asChild size="lg" className="transition-transform hover:scale-105">
-                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Orçamento {idx + 1}
-                  </Link>
-                </Button>
-              ))}
+            <div className="flex">
+              <Button asChild size="lg" className="transition-transform hover:scale-105">
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Orçamento
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>

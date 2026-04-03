@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -49,7 +50,7 @@ export function CertificatesCta() {
   );
 
   const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <div>
@@ -195,20 +196,18 @@ export function CertificatesCta() {
                   >
                       <Link href="/contato">{t.cta.request_quote}</Link>
                   </Button>
-                  {whatsappNumbers.map((number, idx) => (
-                    <Button
-                        key={number}
-                        asChild
-                        size="lg"
-                        variant="outline"
-                        className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110"
-                    >
-                        <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                            <MessageCircle className="mr-3 h-5 w-5" />
-                            {t.cta.whatsapp} {idx + 1}
-                        </Link>
-                    </Button>
-                  ))}
+                  <Button
+                      key="whatsapp-cert"
+                      asChild
+                      size="lg"
+                      variant="outline"
+                      className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110"
+                  >
+                      <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                          <MessageCircle className="mr-3 h-5 w-5" />
+                          {t.cta.whatsapp}
+                      </Link>
+                  </Button>
               </div>
           </div>
         </div>

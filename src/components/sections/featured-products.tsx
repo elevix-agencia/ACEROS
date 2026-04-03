@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -36,7 +37,7 @@ export function GuseiraStavesSection() {
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de mais informações sobre as Placas de Resfriamento (Staves).'
   );
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
   
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -137,14 +138,12 @@ export function GuseiraStavesSection() {
                     <h3 className="font-headline text-xl font-bold text-foreground mb-2">Pronto para Otimizar?</h3>
                     <p className="text-muted-foreground mb-4 text-xs">Fale com nossos especialistas.</p>
                     <div className="flex flex-col gap-2 w-full">
-                      {whatsappNumbers.map((number, idx) => (
-                        <Button key={number} asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform hover:scale-105 text-xs">
-                            <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                                <MessageCircle className="mr-1 h-3 w-3" />
-                                Orçamento {idx + 1}
-                            </Link>
-                        </Button>
-                      ))}
+                      <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform hover:scale-105 text-xs">
+                          <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                              <MessageCircle className="mr-1 h-3 w-3" />
+                              Solicitar Orçamento
+                          </Link>
+                      </Button>
                     </div>
                 </motion.div>
                  {otherImages.slice(5).map((image, i) => (
@@ -173,7 +172,7 @@ export function GuseiraTuyeresSection() {
         .filter((img): img is ImagePlaceholder => !!img);
 
     const whatsappMessage = encodeURIComponent('Olá! Gostaria de mais informações sobre as Válvulas de Sopro (Tuyeres).');
-    const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+    const whatsappNumber = '551155556551';
 
     const mainImage = images[0];
     const sideImage1 = images[1];
@@ -230,15 +229,13 @@ export function GuseiraTuyeresSection() {
                         <div className="bg-gray-800/50 rounded-2xl p-8 text-center border border-accent/20">
                             <h3 className="font-headline text-2xl font-bold text-white mb-3">Performance Incomparável</h3>
                             <p className="text-slate-300 mb-6">Nossas válvulas garantem a injeção precisa e eficiente, maximizando a produtividade do seu alto-forno.</p>
-                            <div className="flex flex-col gap-3">
-                              {whatsappNumbers.map((number, idx) => (
-                                <Button key={number} asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                                    <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                                        <MessageCircle className="mr-2 h-5 w-5" />
-                                        Atendimento {idx + 1}
-                                    </Link>
-                                </Button>
-                              ))}
+                            <div className="flex justify-center">
+                              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                                      <MessageCircle className="mr-2 h-5 w-5" />
+                                      Atendimento
+                                  </Link>
+                              </Button>
                             </div>
                         </div>
                     </motion.div>
@@ -296,7 +293,7 @@ export function GuseiraHousingsSection() {
   const photoImage = PlaceHolderImages.find(img => img.id === 'guseira-housing-photo');
 
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de mais informações sobre Carcaças Usinadas.');
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section className="py-20 sm:py-32 bg-white text-foreground">
@@ -400,15 +397,13 @@ export function GuseiraHousingsSection() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-3">
-              {whatsappNumbers.map((number, idx) => (
-                <Button key={number} asChild size="lg" className="w-full sm:w-auto bg-orange-500 text-white hover:bg-orange-600">
-                    <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                        Solicitar Orçamento {idx + 1}
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                </Button>
-              ))}
+            <div className="flex">
+              <Button asChild size="lg" className="w-full sm:w-auto bg-orange-500 text-white hover:bg-orange-600">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                      Solicitar Orçamento
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -424,7 +419,7 @@ export function GuseiraWearPlatesSection() {
   const drawingImage = PlaceHolderImages.find(img => img.id === 'guseira-analise-quimica-2');
   
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de mais informações sobre a Análise Química Spectro.');
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section className="py-20 sm:py-32 bg-secondary/30 text-foreground">
@@ -503,16 +498,14 @@ export function GuseiraWearPlatesSection() {
             <p className="text-muted-foreground mb-8 leading-relaxed">
               A análise química é realizada retirando corpos de prova durante a montagem da carga. São retiradas amostras, resfriadas e polidas para serem analisadas, onde o profissional Químico faz as correções necessárias com materiais Fe Cr, Fe Si, Fe W, Mo, Co entre outros necessários para cada liga, isto de acordo com informações dadas por normas e pelo Eng. Metalúrgico.
             </p>
-            <div className="flex flex-col gap-3">
-              {whatsappNumbers.map((number, idx) => (
-                <Button key={number} asChild size="lg" className="w-full sm:w-auto">
-                    <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                        <MessageCircle className="mr-2 h-5 w-5" />
-                        Fale com um Especialista {idx + 1}
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                </Button>
-              ))}
+            <div className="flex">
+              <Button asChild size="lg" className="w-full sm:w-auto">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                      <MessageCircle className="mr-2 h-5 w-5" />
+                      Fale com um Especialista
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+              </Button>
             </div>
           </motion.div>
         </div>

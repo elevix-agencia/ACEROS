@@ -80,11 +80,7 @@ export function Footer() {
                 </div>
                 <div className="flex items-center gap-3 justify-start">
                   <Phone className="h-4 w-4 flex-shrink-0 text-primary" />
-                  <span>{t.footer.commercial_phone}</span>
-                </div>
-                <div className="flex items-center gap-3 justify-start">
-                  <Phone className="h-4 w-4 flex-shrink-0 text-primary" />
-                  <span>{t.footer.industrial_phone}</span>
+                  <span>{t.footer.phone}</span>
                 </div>
               </div>
           </div>

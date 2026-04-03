@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -49,7 +50,7 @@ export function Contact() {
   });
 
   const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const result = await saveContactMessage(values);
@@ -177,21 +178,17 @@ export function Contact() {
                           ? t.contact.form_submitting
                           : t.contact.form_submit}
                       </Button>
-                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                        {whatsappNumbers.map((number, idx) => (
-                          <Button
-                            key={number}
-                            asChild
-                            variant="outline"
-                            className="py-7 text-sm bg-green-600 text-white transition-transform duration-300 hover:scale-105 hover:bg-green-700 border-green-600"
-                          >
-                            <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                              <MessageCircle className="w-4 h-4 mr-2" />
-                              WhatsApp {idx + 1}
-                            </Link>
-                          </Button>
-                        ))}
-                      </div>
+                      <Button
+                        key="whatsapp-contact"
+                        asChild
+                        variant="outline"
+                        className="py-7 text-lg bg-green-600 text-white transition-transform duration-300 hover:scale-105 hover:bg-green-700 border-green-600"
+                      >
+                        <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                          <MessageCircle className="w-5 h-5 mr-3" />
+                          WhatsApp
+                        </Link>
+                      </Button>
                     </div>
                   </form>
                 </Form>
@@ -219,13 +216,7 @@ export function Contact() {
                     <Phone className="h-7 w-7 mt-1 text-primary shrink-0" />
                     <div>
                       <p className="text-xl font-semibold">
-                        {t.contact.details_commercial_office}
-                      </p>
-                      <p className="text-lg text-muted-foreground">
-                        +55 (11) 2944-1901
-                      </p>
-                      <p className="mt-4 text-xl font-semibold">
-                        {t.contact.details_industrial_area}
+                        {t.contact.details_phone_title}
                       </p>
                       <p className="text-lg text-muted-foreground">
                         +55 (11) 5555-6551

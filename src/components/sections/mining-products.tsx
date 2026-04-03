@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -73,7 +74,7 @@ export function MiningProducts() {
   ];
 
   const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section className="py-20 sm:py-32 bg-secondary/30">
@@ -123,19 +124,16 @@ export function MiningProducts() {
                           ]}
                         </CardDescription>
                         <div className="flex flex-col gap-2 mt-6">
-                          {whatsappNumbers.map((number, idx) => (
-                            <Button
-                              key={number}
-                              asChild
-                              size="sm"
-                              variant="accent"
-                              className="w-full text-xs"
-                            >
-                              <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                                {t.cta.whatsapp_quote} {idx + 1}
-                              </Link>
-                            </Button>
-                          ))}
+                          <Button
+                            asChild
+                            size="sm"
+                            variant="accent"
+                            className="w-full text-xs"
+                          >
+                            <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                              {t.cta.whatsapp_quote}
+                            </Link>
+                          </Button>
                         </div>
                       </CardContent>
                     </div>
@@ -173,20 +171,17 @@ export function MiningProducts() {
             Tem alguma dúvida ou precisa de um orçamento personalizado? Nossa
             equipe está pronta para ajudar.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            {whatsappNumbers.map((number, idx) => (
-              <Button
-                key={number}
-                asChild
-                size="lg"
-                className="bg-green-600 text-white hover:bg-green-700 transition-transform duration-300 hover:scale-105"
-              >
-                <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                  <MessageCircle className="mr-3 h-5 w-5" />
-                  Atendimento {idx + 1}
-                </Link>
-              </Button>
-            ))}
+          <div className="flex justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-green-600 text-white hover:bg-green-700 transition-transform duration-300 hover:scale-105"
+            >
+              <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                <MessageCircle className="mr-3 h-5 w-5" />
+                Atendimento
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

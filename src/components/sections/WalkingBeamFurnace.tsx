@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -35,7 +36,7 @@ export function WalkingBeamFurnace() {
   const whatsappMessage = encodeURIComponent(
     'Olá! Gostaria de um orçamento para os Fornos de Vigas Móveis.'
   );
-  const whatsappNumbers = ['551155556551', '551146442969', '551146442977'];
+  const whatsappNumber = '551155556551';
 
   return (
     <section className="py-20 sm:py-32">
@@ -88,15 +89,13 @@ export function WalkingBeamFurnace() {
                 </motion.div>
               )}
             </div>
-            <div className="flex flex-col gap-3 mt-10">
-              {whatsappNumbers.map((number, idx) => (
-                <Button key={number} asChild size="lg">
-                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Solicitar Orçamento {idx + 1}
-                  </Link>
-                </Button>
-              ))}
+            <div className="flex mt-10">
+              <Button asChild size="lg">
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Solicitar Orçamento
+                </Link>
+              </Button>
             </div>
           </div>
 
@@ -119,15 +118,13 @@ export function WalkingBeamFurnace() {
                 ))}
                 </div>
             </div>
-            <div className="flex flex-col gap-3 mt-auto w-full">
-              {whatsappNumbers.map((number, idx) => (
-                <Button key={number} asChild size="lg" variant="accent" className="w-full">
-                  <Link href={`https://wa.me/${number}?text=${whatsappMessage}`} target="_blank">
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                    Solicitar Orçamento {idx + 1}
-                  </Link>
-                </Button>
-              ))}
+            <div className="flex mt-auto w-full">
+              <Button asChild size="lg" variant="accent" className="w-full">
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Solicitar Orçamento
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
