@@ -14,7 +14,7 @@
     "contact": "Contatti",
     "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
     "phone": "+55 (11) 5555-6551 (Industrial)",
-    "email": "comercial@aceros.com.br",
+    "email": "vendas@aceros.com.br",
     "newsletter": "Iscriviti",
     "newsletter_prompt": "Ricevi notizie e aggiornamenti sui nostri prodotti e inovações.",
     "subscribe": "Sottoscrivi",
@@ -43,7 +43,7 @@
     "paragraph2": "Il nostro obiettivo è ottimizzare la qualità dei processi di produzione, in particolare nei tubi centrifugati e nelle fusioni statiche, garantendo soluzioni complete con tecnologia all'avanguardia.",
     "pillars_title": "I Nostri Pilastri",
     "mission_title": "La Nostra Missione",
-    "mission_description": "Guidare il progresso industriale con soluzioni in acciaio e ingegneria, garantendo sicurezza ed efficienza per i nostri partner.",
+    "mission_description": "Guidare il progresso industrial con soluzioni in acciaio e ingegneria, garantendo sicurezza ed efficienza per i nostri partner.",
     "vision_title": "La Nostra Visione",
     "vision_description": "Essere il punto di riferimento globale negli acciai centrifugati, riconosciuti per l'innovazione continua, la sostenibilità e l'eccellenza in ogni pezzo prodotto."
   },
@@ -72,7 +72,7 @@
   },
   "location": {
     "title": "La Nostra Posizione",
-    "subtitle": "Visita il nostro ufficio commerciale a San Paolo. Siamo pronti a presentare le nostre soluzioni e a discutere le esigenze del tuo progetto.",
+    "subtitle": "Visita il nostro ufficio commerciale a San Paolo. Siamo pronti a presentare le nostre soluzioni e a discutere le esigene del tuo progetto.",
     "map_title": "Indirizzo di Aceros"
   },
   "whatsapp": {
@@ -114,6 +114,8 @@
     "subtitle": "Esplora il nostro portafoglio, che spazia dai tubi centrifugati e fusioni statiche a componenti lavorati di alta precisione. Ogni articolo è prodotto sotto un rigoroso controllo di qualità per garantire massime prestazioni e durata.",
     "quote_button": "Preventivo",
     "view_image_button": "Vedi Immagine",
+    "view_gallery": "Vedi galleria",
+    "view_media": "Vedi media",
     "itrac_seal_name": "Sigillo di Conformità ITRAC",
     "itrac_seal_description": "Garanzia di conformità e tracciabilità nei nostri processi, convalidata da certificazioni riconosciute.",
     "classification_seals_name": "Certificazioni Internazionali",
@@ -130,7 +132,7 @@
     "product_rollers_description": "Rulli per trasportatori e sistemi di laminazione, progettati per la massima durata e resistenza all'usura.",
     "product_large_ring_name": "Anelli di Grandi Dimensioni",
     "product_large_ring_description": "Anelli di grande diametro per attrezzature pesanti, realizzati in leghe speciali per sopportare carichi estremi.",
-    "product_machined_parts_name": "Componenti Lavorati",
+    "product_machined_parts_name": "Componentes Lavorati",
     "product_machined_parts_description": "Vari componenti lavorati su misura per soddisfare le esatte specifiche del tuo progetto industriale.",
     "product_custom_castings_name": "Fusioni Personalizzate",
     "product_custom_castings_description": "Parti fuse personalizzate, sviluppate in collaborazione per risolvere sfide ingegneristiche specifiche.",
@@ -156,11 +158,11 @@
     "page_subtitle": "Garanzia di precisione e affidabilità in ogni processo.",
     "expertise_title": "Competenza Tecnica e Rigoroso Controllo Qualità",
     "expertise_paragraph1": "Con vasta esperienza e attrezzature all'avanguardia, Aceros si avvale dell'Ingegnere Daniel Garcia, qualificato da Drever (Belgio), per la misurazione 'rollprof roll'. Abbiamo già controllato oltre 600 rulli da forno per clienti come Drever, Efco, Danieli e SDI.",
-    "expertise_paragraph2": "La qualità dei nostri prodotti è garantita da un'ampia varietà di strumenti di ispezione e standard di calibrazione, tutti tracciati dal RBC, garantendo la precisione e l'affidabilità dei nostri processi.",
+    "expertise_paragraph2": "La qualidade dei nostri produtos è garantita da un'ampia varietà di strumenti di ispezione e standard di calibrazione, tutti tracciati dal RBC, garantendo la precisione e l'affidabilità dei nostri processi.",
     "control_title": "Controllo Qualità",
     "control_description": "I nostri laboratori sono attrezzati per eseguire una vasta gamma di analisi, tra cui test di corrosione, analisi chimiche dettagliate, ultrasuoni per il rilevamento di difetti interni, misurazioni di durezza e test meccanici completi.",
     "innovation_title": "Innovazione e Sviluppo",
-    "innovation_description": "Investiamo continuamente nella ricerca per migliorare i progetti e la metallurgia delle parti fuse. Sviluppiamo leghe speciali resistenti al calore, all'abrasione e alla corrosione per garantire le massime prestazioni e durata dei nostri prodotti.",
+    "innovation_description": "Investiamo continuamente nella ricerca per migliorare i progetti e la metallurgia delle parti fuse. Sviluppiamo leghe speciali resistenti al calore, all'abrasione e alla corrosione per garantire le massime prestazioni e durata dei nostri produtos.",
     "alloy_tables_title": "Specifiche delle Leghe",
     "alloy_tables_subtitle": "Informazioni tecniche dettagliate sulle leghe che produciamo, garantendo massime prestazioni e conformità.",
     "steel_classes_title": "Classi di Acciai Speciali",
@@ -171,6 +173,8 @@
     "structural_analysis_subtitle": "Utilizziamo la simulazione agli elementi finiti per convalidare i progetti e garantire l'integrità strutturale.",
     "process_optimization_title": "Ottimizzazione dei Processi",
     "process_optimization_subtitle": "Calcoli strutturali e simulazioni di temperatura.",
+    "diagrams_and_processes_title": "Diagrammi e Processi",
+    "diagrams_and_processes_subtitle": "Visualizzazioni dettagliate dei nostri processi e capacità tecniche.",
     "items": [
       {
         "title": "Certificazione Specializzata",
@@ -178,7 +182,7 @@
       },
       {
         "title": "Vasta Esperienza",
-        "description": "Controllo di oltre 600 rulli da forno per clienti globali come Drever, Efco e Danieli."
+        "description": "Controllo di oltre 600 rulli da forno per clienti globali como Drever, Efco e Danieli."
       },
       {
         "title": "Standard RBC",
@@ -192,10 +196,10 @@
   },
   "certificates": {
     "title": "I Nostri Certificati: Qualità Assicurata da Standard Globali",
-    "subtitle": "L'eccellenza e l'affidabilità dei nostri prodotti sono comprovate da certificazioni rilasciate dai più rispettati enti di classificazione industriali e navali del mondo.",
-    "dnv": "Certificazione che attesta la conformità agli standard internazionali di qualità e sicurezza in vari settori industriali e marittimi.",
-    "abs": "Riconoscimento dell'American Bureau of Shipping, che garantisce che i nostri prodotti soddisfino i più severi standard del settore navale.",
-    "bureau_veritas": "Sigillo di un leader mondiale nei test, ispezione e certificazione, che convalida l'eccellenza dei nostri processi e prodotti.",
+    "subtitle": "L'eccellenza e l'affidabilidade dei nostri produtos sono comprovate da certificazioni rilasciate dai più rispettati enti di classificazione industriali e navali del mondo.",
+    "dnv": "Certificazione che attesta la conformità agli standard internazionali di qualidade e sicurezza in vari settori industriali e marittimi.",
+    "abs": "Riconoscimento dell'American Bureau of Shipping, che garantisce che i nostri produtos soddisfino i più severi standard del settore navale.",
+    "bureau_veritas": "Sigillo di un leader mondiale nei test, ispezione e certificazione, che convalida l'eccellenza dei nostri processi e produtos.",
     "lloyds": "Certificazione che garantisce la conformità ai più alti standard di ingegneria, sicurezza e prestazioni per applicazioni critiche."
   },
   "expertise_sectors": {
@@ -205,10 +209,50 @@
       "video_title": "Processi in Azione",
       "sector_not_found": "Settore non trovato.",
       "feature_title": "Differenziatori per il Settore",
-      "feature_description_1": "Offriamo soluzioni su misura che soddisfano le esigenze specifiche dell'industria di",
+      "feature_description_1": "Offriamo soluzioni su misura che soddisfano le esigene specifiche dell'industria di",
       "feature_item1": "Leghe ad alte prestazioni",
       "feature_item2": "Resistenza superiore alla corrosione e all'usura",
       "feature_item3": "Supporto tecnico specializzato",
+      "featured_products_title": "Prodotti in Evidenza",
+      "featured_products_subtitle": "Scopri alcuni dei componenti essenziali che forniamo per l'industria della ghisa.",
+      "mining_solutions_title": "Soluzioni per l'Industria Mineraria",
+      "mining_solutions_subtitle": "Componenti robusti e ad alte prestazioni, progettati per superare le sfide più estreme dell'industria mineraria.",
+      "mining_quality_title": "Eccellenza in ogni componente",
+      "mining_quality_subtitle": "Il nostro impegno è fornire soluzioni che non solo soddisfino, ma superino le aspettative di prestazioni e durata.",
+      "mining_quality_pillar1_title": "Qualità superiore",
+      "mining_quality_pillar1_description": "Le nostre leghe e i nostri processi garantiscono componenti que superano gli standard del settore.",
+      "mining_quality_pillar2_title": "Ingegneria di precisione",
+      "mining_quality_pillar2_description": "Ogni pezzo è progettato per la massima efficienza, durata e perfetta aderenza.",
+      "mining_quality_pillar3_title": "Durata estrema",
+      "mining_quality_pillar3_description": "Componenti costruiti per resistere alle più severe condizioni di abrasione e impatto.",
+      "staves_title": "Staves (Piastre di Raffreddamento)",
+      "staves_description": "Componenti cruciali per il raffreddamento efficiente dell'altoforno, garantendo l'integrità strutturale e la longevità operativa. Realizzati con leghe ad alta conducibilità termica e resistenza.",
+      "tuyeres_title": "Tubi soffianti (Tuyeres)",
+      "tuyeres_description": "Progettati per l'iniezione precisa di aria calda nell'altoforno, i nostri tubi soffianti sono realizzati per resistere a temperature estreme e ambienti aggressivi, ottimizzando il processo di combustione.",
+      "housings_title": "Alloggiamenti Lavorati",
+      "housings_description": "Alloggiamenti e involucri complessi lavorati con precisione per proteggere i componenti interni e garantire un allineamento perfetto nelle attrezzature industriali. Realizzati per resistere ad ambienti difficili.",
+      "projects_gallery_title": "Galleria dei Progetti di Ingegneria",
+      "projects_gallery_subtitle": "Esplora alcuni dei componenti complessi e delle parti personalizzate sviluppate dal nostro team di ingegneri.",
+      "oil_gas_products_title": "Componenti Essenziali per Petrolio e Gas",
+      "oil_gas_products_subtitle": "Esplora i nostri componenti critici progettati per la massima affidabilità in ambienti ad alta pressione e corrosivi.",
+      "oil_gas_valves_title": "Valvole ad Alte Prestazioni",
+      "oil_gas_valves_description": "Sviluppiamo corpi e componenti interni per valvole che operano nelle condizioni più severe, garantendo un controllo del flusso sicuro ed efficiente. Le nostre leghe speciali offrono una resistenza superiore alla corrosione e all'usura, prolungando la vita utile dell'attrezzatura.",
+      "oil_gas_connections_title": "Connessioni e Flange",
+      "oil_gas_connections_description": "Produciamo flange e connessioni que garantiscono l'integrità strutturale dei sistemi di tubazioni. Ogni pezzo è progettato per resistere ad alte pressioni e temperature, prevenendo perdite e garantendo la sicurezza operativa.",
+      "oil_gas_custom_parts_title": "Parti Personalizzate",
+      "oil_gas_custom_parts_description": "Lavoriamo in partnership con i nostri clienti para sviluppare parti fuse e lavorate su misura que soddisfino specifiche sfide ingegneristiche per l'esplorazione, la produzione e la raffinazione di petrolio e gas.",
+      "mining_deck_rollers_title": "RULLI PER PIANO DI VAGLIATURA",
+      "mining_deck_rollers_description": "Rulli per vagli, ciascuno azionato individualmente da un motoriduttore o da una catena, con la possibilità di variare automaticamente la distanza tra i rulli senza dover fermare la macchina. Realizzati con rivestimento in carburo di WC e anche rulli non rivestiti.",
+      "mining_sinter_car_walls_title": "PARETI LATERALI SUPERIORI E INFERIORES PER CARRI DI PELLETIZZAZIONE E SINTERIZZAZIONE",
+      "mining_sinter_car_walls_description": "Design speciale e leghe specifiche para ottimizzare la durata e prevenire la pre-combustione sul profilo superiore.",
+      "mining_grate_bars_title": "BARRE DI GRIGLIA PER CARRI DI PELLETIZZAZIONE",
+      "mining_grate_bars_description": "Fuse in leghe completamente austenitiche para ottimizzare la resistenza alla corrosione e al calore ad alte temperature.",
+      "mining_sinter_cars_title": "CARRI COMPLETI DI PELLETIZZAZIONE E SINTERIZZAZIONE PER PICCOLI IMPIANTI",
+      "mining_sinter_cars_description": "CIS progetta, sviluppa e produce carri completi di pelletizzazione e sinterizzazione (telaio, pareti laterali, barre di griglia, ruote).",
+      "mining_blast_furnace_title": "ALTOFORNO: CORAZZATURA E PIASTRE DI USURA",
+      "mining_blast_furnace_description": "Corazzatura e piastre di usura sia per altiforni di tipo Paul Wurth que di tipo a Doppia Campana.",
+      "mining_deck_hot_cold_title": "PIANI DI VAGLIATURA A CALDO E A FREDDO",
+      "mining_deck_hot_cold_description": "Piani di vagliatura resistenti all'usura, con diverse forme e profili; fori fusi con il processo di formatura a guscio in un disegno a 'spina di pesce', para ottimizzare l'area aperta e l'effetto di 'autopulizia'. Superleghe para funzionamento a temperature molto elevate (fino a 1.100 °C).",
       "hsp_title": "RULLI PER TRASPORTO A NASTRO A CALDO (HSP)",
       "hsp_description": "Nuova generazione di rulli per TAVOLA DI TRASFERIMENTO, TAVOLA DI USCITA, LOOPER, TENSIONE, PINCH e AVVOLGITORE.",
       "hsp_feature1_title": "Processo Bimetallico",
@@ -216,54 +260,55 @@
       "hsp_feature2_title": "Garanzia di Prestazioni",
       "hsp_feature2_description": "Massima riduzione del runout di 0,5 mm (monometallico) o 0,3 mm (bimetallico) per milione di tonnellate lavorate.",
       "hsp_feature3_title": "Applicazioni Critiche",
-      "hsp_feature3_description": "Per i rulli di presa (pinch rollers), utilizziamo una tavola bimetallica centrifugata per garantire le migliori prestazioni.",
+      "hsp_feature3_description": "Per i rulli di presa (pinch rollers), utilizziamo una tavola bimetallica centrifugata para garantire le migliori prestazioni.",
       "furnace_capl_cgl_title": "RULLI DA FORNO PER TRASPORTO BARRE",
-      "furnace_capl_cgl_description": "Soluzioni complete per Linee di Ricottura e Lavorazione Continua (CAPL) e Linee di Galvanizzazione Continua (CGL).",
+      "furnace_capl_cgl_description": "Soluzioni complete para Linee di Ricottura e Lavorazione Continua (CAPL) e Linee di Galvanizzazione Continua (CGL).",
       "furnace_capl_cgl_item1": "Tubi radianti (tipi 'W', 'U', 'P' singolo e doppio) con recuperatori di calore.",
       "furnace_capl_cgl_item2": "Rulli da forno rivestiti (coated) e non rivestiti (uncoated).",
-      "furnace_capl_cgl_item3": "Tecnologia HVOF o SUPER D-GUN per rulli rivestiti.",
+      "furnace_capl_cgl_item3": "Tecnologia HVOF o SUPER D-GUN para rulli rivestiti.",
       "furnace_capl_cgl_item4": "Rulli a spazzola (Brush rolls).",
       "pot_hot_dip_title": "LINEE DI GALVANIZZAZIONE A CALDO (VASCA)",
-      "pot_hot_dip_description": "Componenti ad alte prestazioni immersi in bagni di Zinco, Zincalume e Alluminio+Si, e galvalume con speciali leghe ACEROS che garantiscono una durata superiore.",
+      "pot_hot_dip_description": "Componenti ad alte prestazioni immersi in bagni di Zinco, Zincalume e Alluminio+Si, e galvalume con speciali leghe ACEROS que garantiscono una durata superiore.",
       "pot_hot_dip_item1": "Rulli di Immersione, Rulli Stabilizzatori, Bracci, Culle e Beccucci fusi in un unico pezzo.",
-      "pot_hot_dip_item2": "Leghe ACEROS TOTALMENTE PRIVE DI FERRITE per prestazioni superiori.",
+      "pot_hot_dip_item2": "Leghe ACEROS TOTALMENTE PRIVE DI FERRITE para prestazioni superiori.",
       "pot_hot_dip_item3": "Cuscinetti bimetallici (Boccole) con prestazioni da 3 a 7 volte superiori."
     },
     "mineracao": {
       "title": "Minerario",
-      "subtitle": "Soluzioni robuste per un settore esigente.",
-      "description": "Forniamo componenti ad alta durabilità per l'industria mineraria, garantendo efficienza e sicurezza nei processi di estrazione, frantumazione e trasporto dei minerali. Le nostre leghe sono progettate per resistere alle condizioni più severe.",
+      "subtitle": "Soluzioni robuste para un settore esigente.",
+      "description": "Forniamo componenti ad alta durabilità per l'industria mineraria, garantendo efficienza e sicurezza nei processos di estrazione, frantumazione e trasporto dei minerali. Le nostre leghe sono progettate para resistere alle condizioni più severe.",
       "cardDescription": "Soluzioni robuste per le industrie di estrazione e lavorazione dei minerali.",
       "icon": "Drill",
       "solutions": {
-        "mining_crusher_components": { "title": "Componenti per Frantoi", "description": "Anelli, boccole e rivestimenti che aumentano la durata delle attrezzature di frantumazione." },
-        "mining_sieving_parts": { "title": "Parti di Vaglio", "description": "Soluzioni che garantiscono l'efficienza nella classificazione dei materiali con un'elevata resistenza all'usura." },
-        "mining_conveyor_systems": { "title": "Sistemi di Trasporto", "description": "Rulli, tamburi e altre parti per nastri trasportatori che operano in ambienti aggressivi." }
+        "mining_crusher_components": { "title": "Componenti per Frantoi", "description": "Anelli, boccole e rivestimenti que aumentano la durata delle attrezzature di frantumazione." },
+        "mining_sieving_parts": { "title": "Parti di Vaglio", "description": "Soluzioni que garantiscono l'efficienza nella classificazione dei materiali con un'elevata resistenza all'usura." },
+        "mining_conveyor_systems": { "title": "Sistemi di Trasporto", "description": "Rulli, tamburi e altre parti per nastri trasportatori que operano in ambienti aggressivi." }
       }
     },
     "naval": {
       "title": "Navale",
-      "subtitle": "Componenti di precisione per il mare.",
-      "description": "Con una vasta esperienza nel settore navale, produciamo parti essenziali che soddisfano rigorosi standard internazionali. I nostri prodotti garantiscono le prestazioni e l'affidabilità delle navi, dai sistemi di propulsione ai componenti strutturali.",
-      "cardDescription": "Parti fuse come boccole, eliche e tubi, prodotte per soddisfare le rigorose esigenze del settore.",
+      "subtitle": "Componenti di precisione para il mare.",
+      "description": "Con una vasta esperienza nel settore navale, produciamo parti essenziali que soddisfano rigorosi standard internazionali. I nostri produtos garantiscono le prestazioni e l'affidabilità delle navi, dai sistemi di propulsione ai componenti strutturali.",
+      "cardDescription": "Parti fuse como boccole, eliche e tubi, prodotte per soddisfare le rigorose esigenze del settore.",
       "icon": "Ship",
       "solutions": {
-        "naval_shaft_bushings": { "title": "Boccole per Alberi", "description": "Boccole di alta precisione per alberi di elica, che garantiscono un funzionamento regolare e resistente alla corrosione marina." },
+        "naval_shaft_bushings": { "title": "Boccole per Alberi", "description": "Boccole di alta precisione per alberi di elica, que garantiscono un funzionamento regolare e resistente alla corrosione marina." },
         "naval_propeller_components": { "title": "Componenti per Eliche", "description": "Anelli e parti personalizzate per sistemi di propulsione navale, realizzati con leghe speciali." },
         "naval_system_pipes": { "title": "Tubi di Sistema", "description": "Tubi centrifugati per sistemi idraulici e di raffreddamento, con elevata durabilità in ambiente salino." }
       }
     },
     "siderurgia": {
       "title": "Siderurgia",
-      "subtitle": "La forza dell'acciaio per l'industria dell'acciaio.",
-      "description": "Aceros è un partner strategico per l'industria siderurgica, fornendo componenti che resistono a temperature estreme e usura costante. I nostri rulli da forno, anelli e altre parti sono cruciali for la produzione continua di acciaio di alta qualità.",
-      "cardDescription": "Parti per forni e attrezzature siderurgiche, che garantiscono la produzione di acciaio di alta qualità.",
+      "subtitle": "La forza dell'acciaio para l'industria dell'acciaio.",
+      "description": "Aceros è un partner strategico per l'industria siderurgica, fornendo componenti que resistono a temperature estreme e usura costante. I nostri rulli da forno, anelli e altre parti sono cruciali for la produzione continua di acciaio di alta qualidade.",
+      "cardDescription": "Parti per forni e attrezzature siderurgiche, que garantiscono la produzione di acciaio di alta qualidade.",
       "icon": "Factory",
       "solutions": {
         "siderurgia_continuous_casting": { "title": "COLATA CONTINUA", "description": "Rulli per Macchine di Colata Continua con prestazioni eccezionali." },
-        "siderurgia_tunnel_furnace_rollers": { "title": "RULLI PER FORNI A TUNNEL CSP", "description": "Rulli raffreddati e non raffreddati che fanno parte della produzione standard." },
+        "siderurgia_tunnel_furnace_rollers": { "title": "RULLI PER FORNI A TUNNEL CSP", "description": "Rulli raffreddati e non raffreddati que fanno parte della produzione standard." },
         "siderurgia_hot_strip_mill_rollers": { "title": "RULLI PER LAMINATOIO A NASTRO A CALDO (HSP)", "description": "Nuova generazione di rulli per TAVOLA DI TRASFERIMENTO, TAVOLA DI USCITA, LOOPER, TENSIONE, PINCH e AVVOLGITORE." },
-        "siderurgia_capl_cgl_furnace": { "title": "CAPL & CGL - FORNO", "description": "Soluzioni complete per Linee di Ricottura e Lavorazione Continua e Linee di Galvanizzazione Continua." },
+        "siderurgia_capl_cgl_furnace": { "title": "CAPL & CGL - FORNO", "description": "Soluzioni complete para Linee di Ricottura e Lavorazione Continua e Linee di Galvanizzazione Continua." },
+        "siderurgia_hot_dip_galvanizing": { "title": "LINEE DI GALVANIZZAZIONE A CALDO (VASCA)", "description": "Componenti ad alte prestazioni immersi in bagni di Zinco, Zincalume e Alluminio+Si." },
         "siderurgia_walking_beam_furnaces": { "title": "FORNI A TRAVI MOBILI PER IL TRATTAMENTO TERMICO DEI TUBI", "description": "TRAVI MOBILI, COLONNE e GUARNIZIONI SUPERIORI E INFERIORI con design e leghe speciali." },
         "siderurgia_bar_furnace_parts": { "title": "Parti per Forno a Barre, Ingresso e Uscita, Carico e Scarico", "description": "RULLI DI CARICO E SCARICO A SECCO E A UMIDO, rivestiti e non rivestiti." }
       }
@@ -271,67 +316,67 @@
     "oleo_e_gas": {
       "title": "Petrolio e Gas",
       "subtitle": "Prestazioni e sicurezza in ambienti estremi.",
-      "description": "Forniamo componenti critici per il settore petrolifero e del gas che operano ad alta pressione e in ambienti corrosivi. Le nostre superleghe e acciai inossidabili garantiscono l'integrità e la sicurezza delle attrezzature di esplorazione, produzione e raffinazione.",
+      "description": "Forniamo componenti critici per il settore petrolifero e del gas que operano ad alta pressione e in ambienti corrosivi. Le nostre superleghe e acciai inossidabili garantiscono l'integrità e la sicurezza delle attrezzature di esplorazione, produzione e raffinazione.",
       "cardDescription": "Soluzioni in componenti robusti per applicazioni critiche nel settore petrolifero e del gas.",
       "icon": "Component",
       "solutions": {
-        "oil_gas_valve_components": { "title": "Componenti per Valvole", "description": "Parti interne per valvole di controllo e sicurezza che resistono alla corrosione e all'alta pressione." },
+        "oil_gas_valve_components": { "title": "Componenti per Valvole", "description": "Parti interne per valvole di controllo e sicurezza que resistono alla corrosione e all'alta pressione." },
         "oil_gas_refinery_furnace_tubes": { "title": "Tubi per Forni di Raffineria", "description": "Tubi centrifugati per forni di cracking, progettati per funzionare ad alte temperature." },
-        "oil_gas_subsea_equipment_parts": { "title": "Parti per Attrezzature Sottomarine", "description": "Componenti per sistemi sottomarini che richiedono la massima affidabilità e resistenza alla corrosione marina." }
+        "oil_gas_subsea_equipment_parts": { "title": "Parti per Attrezzature Sottomarine", "description": "Componenti per sistemi sottomarini que richiedono massima affidabilità e resistenza alla corrosione marina." }
       }
     },
     "guseira": {
       "title": "Industria del Ferro",
-      "subtitle": "Componenti robusti per la produzione di ghisa.",
+      "subtitle": "Componenti robusti para la produzione di ghisa.",
       "description": "Forniamo parti ad alte prestazioni per altiforni e per la movimentazione della ghisa, garantendo la massima efficienza e sicurezza nel processo primario di produzione dell'acciaio.",
       "cardDescription": "Parti e componenti per altiforni e produzione di ghisa.",
       "icon": "Gem",
       "solutions": {
-        "pig_iron_blast_furnace_components": { "title": "Componenti per Alti Forni", "description": "Rivestimenti e parti resistenti all'usura e alle alte temperature per aumentare la durata degli altiforni." },
-        "pig_iron_torpedo_cars_ladles": { "title": "Carri Siluro e Siviere", "description": "Parti di ricambio e componenti che garantiscono il trasporto sicuro ed efficiente della ghisa liquida." },
-        "pig_iron_casting_systems": { "title": "Sistemi di Colata", "description": "Componenti che assicurano un processo di colata continua di ghisa di alta qualità." }
+        "pig_iron_blast_furnace_components": { "title": "Componenti per Alti Forni", "description": "Rivestimenti e parti resistenti all'usura e alle alte temperature para aumentare la durata degli altiforni." },
+        "pig_iron_torpedo_cars_ladles": { "title": "Carri Siluro e Siviere", "description": "Parti di ricambio e componenti que garantiscono il trasporto sicuro ed efficiente della ghisa liquida." },
+        "pig_iron_casting_systems": { "title": "Sistemi di Colata", "description": "Componenti que assicurano un processo di colata continua di ghisa di alta qualidade." }
       }
     },
     "tratamento_termico": {
       "title": "Tratamento Termico",
-      "subtitle": "Leghe speciali per processi ad alta temperatura.",
-      "description": "Sviluppiamo componenti e parti in leghe speciali per forni di trattamento termico, garantendo le prestazioni e la durata delle attrezzature in processi come tempra, rinvenimento, cementazione e nitrurazione.",
+      "subtitle": "Leghe speciali para processi ad alta temperatura.",
+      "description": "Sviluppiamo componenti e parti in leghe speciali para forni di trattamento termico, garantendo le prestazioni e la durata delle attrezzature in processi como tempra, rinvenimento, cementazione e nitrurazione.",
       "cardDescription": "Componentes para hornos industriales y procesos de tratamento térmico.",
       "icon": "Cpu",
       "solutions": {
-        "heat_treatment_grids_baskets": { "title": "Griglie e Cesti", "description": "Griglie, cesti e dispositivi in leghe refrattarie per sostenere parti nei forni." },
-        "heat_treatment_rollers_radiant_tubes": { "title": "Rulli e Tubi Radianti", "description": "Rulli trasportatori e tubi radianti per forni continui e a batch." },
-        "heat_treatment_spare_parts": { "title": "Parti di Ricambio", "description": "Ventilatori, supporti e altri componenti per forni di trattamento termico." }
+        "heat_treatment_grids_baskets": { "title": "Griglie e Cesti", "description": "Griglie, cesti e dispositivi in leghe refrattarie para sostenere parti nei forni." },
+        "heat_treatment_rollers_radiant_tubes": { "title": "Rulli e Tubi Radianti", "description": "Rulli trasportatori e tubi radianti para forni continui e a batch." },
+        "heat_treatment_spare_parts": { "title": "Parti di Ricambio", "description": "Ventilatori, supporti e altri componenti para forni di trattamento termico." }
       }
     },
     "engenharia": {
       "title": "Ingegneria Aceros",
       "subtitle": "Innovazione e soluzioni personalizzate.",
-      "description": "Il nostro team di ingegneri sviluppa soluzioni metallurgiche personalizzate, ottimizzando le prestazioni di attrezzature e componenti per soddisfare le esigenze specifiche di ogni cliente. Dalla concezione all'implementazione, offriamo consulenza e supporto tecnico specializzato.",
+      "description": "Il nostro team di ingegneri sviluppa soluzioni metallurgiche personalizzate, ottimizzando le prestazioni di attrezzature e componenti para soddisfare le esigene specifiche di ogni cliente. Dalla concezione all'implementazione, offriamo consulenza e supporto tecnico specializzato.",
       "cardDescription": "Servizi di consulenza e sviluppo di soluzioni metallurgiche personalizzate.",
       "icon": "Lightbulb",
       "solutions": {
         "engineering_metallurgical_consulting": {
           "title": "Consulenza Metallurgica",
-          "description": "Analisi dei guasti, selezione dei materiali e ottimizzazione dei processi per aumentare la durata e l'efficienza delle attrezzature.",
+          "description": "Analisi dei guasti, selezione dei materiali e ottimizzazione dei processi para aumentare la durata e l'efficienza delle attrezzature.",
           "icon": "Component"
         },
         "engineering_alloy_development": {
           "title": "Sviluppo di Leghe",
-          "description": "Creazione di leghe personalizzate per applicazioni specifiche che richiedono proprietà meccaniche, termiche o chimiche superiori.",
+          "description": "Creazione di leghe personalizzate per applicazioni specifiche que richiedono proprietà meccaniche, termiche o chimiche superiori.",
           "icon": "Zap"
         },
         "engineering_component_design": {
           "title": "Progettazione di Componenti",
-          "description": "Progettazione e simulazione di componenti utilizzando strumenti CAD e FEA per garantire prestazioni e affidabilità prima della produzione."
+          "description": "Progettazione e simulazione di componenti utilizzando strumenti CAD e FEA para garantire prestazioni e affidabilità prima della produzione."
         }
       }
     },
     "certificados": {
       "title": "Certificati",
       "subtitle": "Qualità Assicurata da Standard Globali",
-      "description": "L'eccellenza e l'affidabilità dei nostri prodotti sono comprovate da certificazioni rilasciate dai più rispettati enti di classificazione industriali e navali del mondo.",
-      "cardDescription": "Esplora le nostre certificazioni e sigilli di qualità che garantiscono la nostra eccellenza.",
+      "description": "L'eccellenza e l'affidabilidade dei nostri produtos sono comprovate da certificazioni rilasciate dai più rispettati enti di classificazione industriali e navali del mondo.",
+      "cardDescription": "Esplora le nostre certificazioni e sigilli di qualidade que garantiscono la nostra eccellenza.",
       "icon": "Award",
       "solutions": []
     }

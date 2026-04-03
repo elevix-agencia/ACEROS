@@ -14,9 +14,8 @@
     "navigation": "Navegación",
     "contact": "Contacto",
     "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
-    "commercial_phone": "+55 (11) 2944-1901 (Comercial)",
-    "industrial_phone": "+55 (11) 5555-6551 (Industrial)",
-    "email": "comercial@aceros.com.br",
+    "phone": "+55 (11) 5555-6551 (Industrial)",
+    "email": "vendas@aceros.com.br",
     "newsletter": "Suscríbete",
     "newsletter_prompt": "Recibe noticias y actualizaciones sobre nuestros productos e innovaciones.",
     "subscribe": "Suscribir",
@@ -24,6 +23,7 @@
   },
   "hero": {
     "title": "ACEROS CENTRIFUGADOS",
+    "main_title": "TECNOLOGÍA EN ACEROS INOXIDABLES DE ALTO RENDIMIENTO PARA RESISTENCIA TÉRMICA, ABRASIÓN Y OXIDACIÓN",
     "subtitle": "Aceros diseña y fabrica productos de aleación de acero inoxidable de alto rendimiento para ayudar a sus clientes nacionales e internacionales, aumentando la eficiencia en sus procesos.",
     "learn_more": "Saber más",
     "contact_us": "Contáctenos"
@@ -41,7 +41,7 @@
   "about": {
     "title": "Conoce nuestra historia",
     "paragraph1": "Aceros es un fabricante de piezas de acero inoxidable y, con su habilidad técnica y enfoque en el desarrollo, se destaca en la centrifugación de aleaciones y superaleaciones. Nuestra experiencia en mecanizado y calderería nos permite entregar un producto final de alta calidad, resistente al calor, la abrasión y la corrosión.",
-    "paragraph2": "Nuestro objetivo es optimizar la calidad de los procesos de producción, especialmente en tubos centrifugados y fundiciones estáticas, garantizando soluciones completas con tecnología de punta.",
+    "paragraph2": "Nuestro objetivo es optimizar la calidad de los procesos de producción, especialmente en tubos centrifugados y fundiciones estáticas, garantizando soluciones completas con tecnologia de punta.",
     "pillars_title": "Nuestros Pilares",
     "mission_title": "Nuestra Misión",
     "mission_description": "Impulsar el progreso industrial con soluciones de acero y ingeniería, garantizando seguridad y eficiencia para nuestros socios.",
@@ -68,7 +68,7 @@
     "subtitle": "Nuestra excelencia en ingeniería de materiales nos permite suministrar componentes críticos para los líderes globales en sectores como minería, naval, siderurgia y petróleo y gas."
   },
   "client_logos": {
-    "title": "Calidad que Impulsa a los Líderes",
+    "title": "Qualidad que Impulsa a los Líderes",
     "subtitle": "Estamos orgullosos de proporcionar soluciones de alto rendimiento a los líderes de la industria del acero."
   },
   "location": {
@@ -161,15 +161,15 @@
     "page_subtitle": "Garantía de precisión y fiabilidad en cada proceso.",
     "expertise_title": "Experiencia Técnica y Riguroso Control de Calidad",
     "expertise_paragraph1": "Con vasta experiencia y equipos de última generación, Aceros cuenta con el Ingeniero Daniel Garcia, calificado por Drever (Bélgica), para la medición de 'rollprof roll'. Ya hemos controlado más de 600 rodillos de horno para clientes como Drever, Efco, Danieli y SDI.",
-    "expertise_paragraph2": "La calidad de nuestros productos está garantizada por una amplia variedad de instrumentos de inspección y patrones de calibración, todos rastreados por el RBC, asegurando la precisión y fiabilidad de nuestros procesos.",
+    "expertise_paragraph2": "La calidad de nuestros produtos está garantizada por una amplia variedad de instrumentos de inspección y patrones de calibración, todos rastreados por el RBC, asegurando la precisión y fiabilidad de nuestros procesos.",
     "control_title": "Control de Calidad",
     "control_description": "Nuestros laboratorios están equipados para realizar una amplia gama de análisis, incluyendo pruebas de corrosión, análisis químico detallado, ultrasonido para detectar fallas internas, mediciones de dureza y pruebas mecánicas completas.",
     "innovation_title": "Innovación y Desarrollo",
-    "innovation_description": "Invertimos continuamente en investigación para mejorar los diseños y la metalurgia de las piezas fundidas. Desarrollamos aleaciones especiales resistentes al calor, la abrasión y la corrosión para garantizar el máximo rendimiento y durabilidad de nuestros productos.",
+    "innovation_description": "Invertimos continuamente en investigación para mejorar los diseños y la metalurgia de las piezas fundidas. Desarrollamos aleaciones especiales resistentes al calor, la abrasión y la corrosión para garantizar el máximo rendimiento y durabilidad de nuestros produtos.",
     "alloy_tables_title": "Especificaciones de Aleaciones",
     "alloy_tables_subtitle": "Información técnica detallada sobre las aleaciones que producimos, garantizando el máximo rendimiento y conformidad.",
     "steel_classes_title": "Clases de Aceros Especiales",
-    "steel_classes_subtitle": "Ofrecemos una amplia gama de clases de acero, desarrolladas para cumplir con las especificaciones técnicas y de rendimiento más rigurosas.",
+    "steel_classes_subtitle": "Ofrecemos una amplia gama de clases de acero, desarrolladas para cumplir con las especificaciones técnicas y de rendimiento más riguradas.",
     "machining_gallery_title": "Galería de Mecanizado de Precisión",
     "machining_gallery_subtitle": "Nuestro departamento de mecanizado está equipado con equipos CNC, garantizando precisión y excelencia en cada pieza entregada.",
     "structural_analysis_title": "Análisis Estructural y Optimización",
@@ -247,7 +247,7 @@
       "mining_deck_rollers_title": "RODILLOS PARA CUBIERTA DE CRIBADO",
       "mining_deck_rollers_description": "Rodillos para cribas, cada uno accionado individualmente por un motorreductor o por cadena, con la posibilidad de variar automáticamente el espacio entre los rodillos sin necesidad de detener la máquina. Fabricados con revestimiento de carburo de WC y también rodillos sin revestimiento.",
       "mining_sinter_car_walls_title": "PAREDES LATERALES SUPERIORES E INFERIORES PARA CARROS DE PELETIZACIÓN Y SINTERIZACIÓN",
-      "mining_sinter_car_walls_description": "Diseño especial y aleaciones específicas para optimizar la vida útil y evitar la precombustión en el perfil superior.",
+      "mining_sinter_car_walls_description": "Diseño especial y aleaciones específicas para optimizar la vida útil e evitar la precombustión en el perfil superior.",
       "mining_grate_bars_title": "BARRAS DE PARRILLA PARA CARROS DE PELETIZACIÓN",
       "mining_grate_bars_description": "Fundidas en aleaciones totalmente austeníticas para optimizar la resistencia a la corrosión y al calor a altas temperaturas.",
       "mining_sinter_cars_title": "CARROS COMPLETOS DE PELETIZACIÓN Y SINTERIZACIÓN PARA PLANTAS PEQUEÑAS",
@@ -267,17 +267,17 @@
       "furnace_capl_cgl_title": "RODILLOS DE HORNO PARA TRANSPORTE DE BARRAS",
       "furnace_capl_cgl_description": "Soluciones completas para Líneas de Recocido y Procesamiento Continuo (CAPL) y Líneas de Galvanización Continua (CGL).",
       "furnace_capl_cgl_item1": "Tubos radiantes (tipos 'W', 'U', 'P' simple y doble) con recuperadores de calor.",
-      "furnace_capl_cgl_item2": "Rodillos de horno revestidos (coated) y no revestidos (uncoated).",
+      "furnace_capl_cgl_item2": "Rodillos de horno revestidos (coated) e no revestidos (uncoated).",
       "furnace_capl_cgl_item3": "Tecnología HVOF o SUPER D-GUN para rodillos revestidos.",
       "furnace_capl_cgl_item4": "Rodillos de cepillo (Brush rolls).",
-      "pot_hot_dip_title": "LÍNEAS DE GALVANIZACIÓN POR INMERSIÓN EN CALIENTE (POTE)",
+      "pot_hot_dip_title": "LÍNEAS DE GALVANIZAÇÃO POR INMERSIÓN EN CALIENTE (POTE)",
       "pot_hot_dip_description": "Componentes de alto rendimiento sumergidos en baños de Zinc, Zincalume y Aluminio+Si, y galvalume con aleaciones especiales de ACEROS que garantizan una durabilidad superior.",
       "pot_hot_dip_item1": "Rodillos de Inmersión, Estabilizadores, Brazos, Cunas y Picos fundidos en una sola pieza.",
       "pot_hot_dip_item2": "Aleaciones ACEROS TOTALMENTE LIBRES DE FERRITA para un rendimiento superior.",
       "pot_hot_dip_item3": "Cojinetes (Bujes) bimetálicos con un rendimiento de 3 a 7 veces mayor.",
       "bar_furnace_title": "Piezas para Horno de Barras, Entrada y Salida, Carga y Descarga",
       "bar_furnace_subtitle": "RODILLOS DE CARGA Y DESCARGA CON Y SIN REFRIGERACIÓN.",
-      "bar_furnace_description": "Rodillos revestidos (Coated) y no revestidos (uncoated) para optimizar la vida útil y minimizar la adherencia (pick-up).",
+      "bar_furnace_description": "Rodillos revestidos (Coated) e no revestidos (uncoated) para optimizar la vida útil y minimizar la adherencia (pick-up).",
       "guseira_staves_title": "Columnas de Reacción Serpentinas Glendons",
       "guseira_staves_cta_title": "¿Listo para optimizar?",
       "guseira_staves_cta_subtitle": "Hable con nuestros expertos y descubra la mejor solución para su alto horno.",
@@ -315,7 +315,7 @@
       "naval_analysis_title": "Sistema de anclaje",
       "naval_analysis_subtitle": "Utilizando ingeniería de vanguardia, validamos cada componente a través de simulaciones y análisis técnicos detallados para garantizar el rendimiento y la seguridad.",
       "naval_assemblies_title": "Montaje y desmontaje de propulsión bajo el agua",
-      "naval_assemblies_subtitle": "Fabricamos conjuntos estructurales complejos y montajes de precisión que son la base de los equipos navales de alto rendimiento.",
+      "naval_assemblies_subtitle": "Fabricamos conjuntos estructurales complejos y montagens de precisión que son la base de los equipos navales de alto rendimiento.",
       "naval_connectors_title": "FOSFATO DE MANGANESO",
       "naval_connectors_subtitle": "Fosfato de manganeso: mayor resistencia al desgaste, menor fricción y protección contra la corrosión.",
       "naval_new_products_title": "Componentes navales de alto rendimiento",
@@ -342,7 +342,7 @@
     "naval": {
       "title": "Naval",
       "subtitle": "Componentes de precisión para el mar.",
-      "description": "Con una amplia experiencia en el sector naval, producimos piezas esenciales que cumplen con rigurosas normas internacionales. Nuestros productos garantizan el rendimiento y la fiabilidad de las embarcaciones, desde sistemas de propulsión hasta componentes estructurales.",
+      "description": "Con una amplia experiencia en el sector naval, producimos piezas esenciales que cumplen con rigurosas normas internacionales. Nuestros produtos garantizan el rendimiento y la fiabilidad de las embarcaciones, desde sistemas de propulsión hasta componentes estructurales.",
       "cardDescription": "Piezas fundidas como casquillos, hélices y tubos, fabricadas para cumplir con las rigurosas demandas del sector.",
       "icon": "Ship",
       "solutions": {
@@ -359,11 +359,11 @@
       "icon": "Factory",
       "solutions": {
         "siderurgia_continuous_casting": { "title": "COLADA CONTINUA", "description": "Rodillos para Máquinas de Colada Continua con un rendimiento excepcional." },
-        "siderurgia_tunnel_furnace_rollers": { "title": "RODILLOS PARA HORNOS DE TÚNEL CSP", "description": "Rodillos enfriados (cooled) y no enfriados (uncooled) que forman parte de la producción estándar." },
-        "siderurgia_hot_strip_mill_rollers": { "title": "RODILLOS PARA LAMINADOR DE BANDAS EN CALIENTE (HSP)", "description": "Nueva generación de rodillos para MESA DE TRANSFERENCIA, MESA DE SALIDA, LOOPER (laçador), TENSIÓN (tensión), PINCH (aperto) y WRAPPER (enrollador)." },
+        "siderurgia_tunnel_furnace_rollers": { "title": "RODILLOS PARA HORNOS DE TÚNEL CSP", "description": "Rodillos enfriados (cooled) e no revestidos (uncooled) que forman parte de la producción estándar." },
+        "siderurgia_hot_strip_mill_rollers": { "title": "RODILLOS PARA LAMINADOR DE BANDAS EN CALIENTE (HSP)", "description": "Nueva generación de rodillos para MESA DE TRANSFERENCIA, MESA DE SALIDA, LOOPER, TENSIÓN, PINCH y WRAPPER." },
         "siderurgia_capl_cgl_furnace": { "title": "CAPL & CGL - HORNO", "description": "Soluciones completas para Líneas de Recocido y Procesamiento Continuo y Líneas de Galvanización Continua." },
         "siderurgia_hot_dip_galvanizing": { "title": "LÍNEAS DE GALVANIZACIÓN POR INMERSIÓN EN CALIENTE (POTE)", "description": "Componentes de alto rendimiento sumergidos en baños de Zinc, Zincalume y Aluminio+Si." },
-        "siderurgia_walking_beam_furnaces": { "title": "HORNOS DE VIGAS CAMINANTES PARA TRATAMIENTO TÉRMICO DE TUBOS", "description": "VIGAS CAMINANTES, COLUMNAS y SELLOS SUPERIORES E INFERIORES con diseño y aleaciones especiales." },
+        "siderurgia_walking_beam_furnaces": { "title": "HORNOS DE VIGAS CAMINANTES PARA TRATAMIENTO TÉRMICO DE TUBOS", "description": "HORNOS DE VIGAS CAMINANTES, COLUMNAS y SELLOS SUPERIORES E INFERIORES con diseño y aleaciones especiales." },
         "siderurgia_bar_furnace_parts": { "title": "Piezas para Horno de Barras, Entrada y Salida, Carga y Descarga", "description": "RODILLOS DE CARGA Y DESCARGA SECOS Y HÚMEDOS, revestidos y no revestidos." }
       }
     },
@@ -374,7 +374,7 @@
       "cardDescription": "Soluciones en componentes robustos para aplicaciones críticas en petróleo y gas.",
       "icon": "Component",
       "solutions": {
-        "oil_gas_valve_components": { "title": "Componentes de Válvulas", "description": "Piezas internas para válvulas de control y seguridad que resisten la corrosión y la alta presión." },
+        "oil_gas_valve_components": { "title": "Componentes de Válvulas", "description": "Piezas internas para válvulas de control e seguridad que resisten la corrosión y la alta presión." },
         "oil_gas_refinery_furnace_tubes": { "title": "Tubos de Horno de Refinería", "description": "Tubos centrifugados para hornos de craqueo, diseñados para operar a altas temperaturas." },
         "oil_gas_subsea_equipment_parts": { "title": "Piezas para Equipos Submarinos", "description": "Componentes para sistemas submarinos que requieren máxima fiabilidad y resistencia a la corrosión marina." }
       }
@@ -394,7 +394,7 @@
     "tratamento_termico": {
       "title": "Tratamiento Térmico",
       "subtitle": "Aleaciones especiales para procesos de alta temperatura.",
-      "description": "Desarrollamos componentes y piezas en aleaciones especiales para hornos de tratamiento térmico, garantizando el rendimiento y la durabilidad de los equipos en procesos como temple, revenido, carburización y nitruración.",
+      "description": "Desarrollamos componentes y piezas en aleaciones especiales para hornos de tratamiento térmico, garantizando el rendimiento y la durabilidade de los equipos en procesos como temple, revenido, carburización y nitruración.",
       "cardDescription": "Componentes para hornos industriales y procesos de tratamiento térmico.",
       "icon": "Cpu",
       "solutions": {
@@ -428,12 +428,11 @@
     },
     "certificados": {
       "title": "Certificados",
-      "subtitle": "Calidad Asegurada por Estándares Globales",
-      "description": "La excelencia y fiabilidad de nuestros productos se demuestran a través de certificaciones emitidas por las clasificadoras industriales y navales más respetadas del mundo.",
+      "subtitle": "Qualidad Asegurada por Estándares Globales",
+      "description": "La excelencia y fiabilidad de nuestros produtos se demuestran a través de certificaciones emitidas por las clasificadoras industriales y navales más respetadas del mundo.",
       "cardDescription": "Explore nuestras certificaciones y sellos de calidad que garantizan nuestra excelencia.",
       "icon": "Award",
       "solutions": []
     }
   }
 }
-    

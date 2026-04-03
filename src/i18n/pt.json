@@ -13,8 +13,8 @@
     "navigation": "Navegação",
     "contact": "Contato",
     "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
-    "phone": "+55 (11) 5555-6551",
-    "email": "comercial@aceros.com.br",
+    "phone": "+55 (11) 5555-6551 (Industrial)",
+    "email": "vendas@aceros.com.br",
     "newsletter": "Inscreva-se",
     "newsletter_prompt": "Receba notícias e atualizações sobre nossos produtos e inovações.",
     "subscribe": "Inscrever",
@@ -80,7 +80,8 @@
     "title": "Vamos Conversar Sobre a Sua Necessidade?",
     "subtitle": "Nossa equipe de especialistas está pronta para entender seu projeto e oferecer a solução em aço ideal para você. Clique no botão abaixo e fale conosco diretamente pelo WhatsApp.",
     "button": "Iniciar Conversa no WhatsApp",
-    "message": "Olá! Estou entrando em contato através do site da Aceros. Gostaria de informações sobre fornecimento e soluções em aço para o meu setor. Poderia me auxiliar?"
+    "message": "Olá! Estou entrando em contato através do site da Aceros. Gostaria de informações sobre fornecimento e soluções em aço para o meu setor. Poderia me auxiliar?",
+    "whatsapp_quote": "Solicite um Orçamento via WhatsApp"
   },
   "contact": {
     "title": "Solicite seu orçamento",
@@ -159,7 +160,7 @@
     "expertise_title": "Expertise Técnica e Rigoroso Controle de Qualidade",
     "expertise_paragraph1": "Com vasta experiência e equipamentos de ponta, a Aceros conta com o Engenheiro Daniel Garcia, qualificado pela Drever (Bélgica), para a medição de “rollprof roll”. Já realizamos o controle de mais de 600 rolos de forno para clientes como Drever, Efco, Danieli e SDI.",
     "expertise_paragraph2": "A qualidade de nossos produtos é garantida por uma ampla variedade de instrumentos de inspeção e padrões de calibração, todos rastreados pelo RBC, assegurando a precisão e confiabilidade de nossos processos.",
-    "control_title": "Controle de Qualidade",
+    "control_title": "Control de Qualidade",
     "control_description": "Nossos laboratórios estão equipados para realizar uma vasta gama de análises, incluindo ensaios de corrosão, análise química detalhada, ultrassom para detecção de falhas internas, medições de dureza e ensaios mecânicos completos.",
     "innovation_title": "Inovação e Desenvolvimento",
     "innovation_description": "Investimos continuamente em pesquisa para aprimorar projetos e a metalurgia de peças fundidas. Desenvolvemos ligas especiais resistentes ao calor, à abrasão e à corrosão para garantir a máxima performance e durabilidade dos nossos produtos.",
@@ -271,7 +272,7 @@
       "guseira_staves_cta_title": "Bereit zur Optimierung?",
       "guseira_staves_cta_subtitle": "Sprechen Sie com nossos especialistas e descubra a melhor solução para o seu alto-forno.",
       "guseira_tuyeres_title": "Reaktionssäulen Serpentinen Glendons – Schritt 2",
-      "guseira_tuyeres_cta_title": "Unvergleichliche Leistung",
+      "guseira_tuyeres_cta_title": "Unvergleichliche Performance",
       "guseira_tuyeres_cta_subtitle": "Nossas válvulas garantem uma injeção precisa e eficiente, maximizando a produtividade do seu alto-forno.",
       "guseira_housings_feature1_title": "Usinagem de Precisão",
       "guseira_housings_feature1_description": "Garantimos tolerâncias rigorosas e um excelente acabamento superficial para um encaixe perfeito e desempenho otimizado.",
@@ -379,7 +380,7 @@
         },
         "siderurgia_capl_cgl_furnace": {
           "title": "CAPL & CGL - FORNO",
-          "description": "Soluções completas para Linhas de Recozimento e Processamento Contínuo e Linhas de Galvanização Contínua."
+          "description": "Soluções completas para Linhas de Recozimento e Processamento Contínuo e Linhas de Galvanização Continua."
         },
         "siderurgia_hot_dip_galvanizing": {
           "title": "LINHAS DE GALVANIZAÇÃO POR IMERSÃO A QUENTE (POTE)",
@@ -461,7 +462,7 @@
     "engenharia": {
       "title": "Engenharia Aceros",
       "subtitle": "Inovação e soluções personalizadas.",
-      "description": "Nosso time de engenharia desenvolve soluções metalúrgicas personalizadas, otimizando o desempenho de equipamentos e componentes para atender às necessidades específicas de cada cliente. Da concepção à implementação, oferecemos consultoria e suporte técnico especializado.",
+      "description": "Nosso time de engenharia desenvolve soluções metalúrgicas personalizadas, optimizando o desempenho de equipamentos e componentes para atender às necessidades específicas de cada cliente. Da concepção à implementação, oferecemos consultoria e suporte técnico especializado.",
       "cardDescription": "Serviços de consultoria e desenvolvimento de soluções metalúrgicas personalizadas.",
       "icon": "Lightbulb",
       "solutions": {

@@ -14,9 +14,8 @@
     "navigation": "Navigation",
     "contact": "Kontakt",
     "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
-    "commercial_phone": "+55 (11) 2944-1901 (Handel)",
-    "industrial_phone": "+55 (11) 5555-6551 (Industrie)",
-    "email": "comercial@aceros.com.br",
+    "phone": "+55 (11) 5555-6551 (Industrie)",
+    "email": "vendas@aceros.com.br",
     "newsletter": "Abonnieren",
     "newsletter_prompt": "Erhalten Sie Neuigkeiten und Updates zu unseren Produkten und Innovationen.",
     "subscribe": "Abonnieren",
@@ -24,6 +23,7 @@
   },
   "hero": {
     "title": "ACEROS CENTRIFUGADOS",
+    "main_title": "HOCHLEISTUNGS-EDELSTAHLTECHNOLOGIE FÜR THERMISCHE BESTÄNDIGKEIT, ABRIEB UND OXIDATION",
     "subtitle": "Aceros entwickelt und fertigt Produkte aus Hochleistungs-Edelstahllegierungen, um seine nationalen und internationalen Kunden zu unterstützen und die Effizienz ihrer Prozesse zu steigern.",
     "learn_more": "Erfahren Sie mehr",
     "contact_us": "Kontaktiere uns"
@@ -101,8 +101,7 @@
     "details_title": "Kontaktieren Sie uns",
     "details_hours": "Service von Montag bis Freitag von 8 bis 18 Uhr",
     "details_address_title": "Geschäftsadresse",
-    "details_commercial_office": "Handelsbüro",
-    "details_industrial_area": "Industriegebiet",
+    "details_phone_title": "Telefon",
     "toast_success_title": "Nachricht gesendet!",
     "toast_success_description": "Wir haben Ihre Kontaktanfrage erhalten und werden uns in Kürze bei Ihnen melden.",
     "toast_error_title": "Fehler beim Senden der Nachricht.",
@@ -160,7 +159,7 @@
     "page_title": "Unsere Qualifikationen",
     "page_subtitle": "Garantie für Präzision und Zuverlässigkeit in jedem Prozess.",
     "expertise_title": "Technisches Fachwissen und strenge Qualitätskontrolle",
-    "expertise_paragraph1": "Mit umfassender Erfahrung und modernster Ausrüstung verfügt Aceros über den von Drever (Belgien) qualifizierten Ingenieur Daniel Garcia für die Messung von 'rollprof roll'. Wir haben bereits die Kontrolle von über 600 Ofenrollen für Kunden wie Drever, Efco, Danieli und SDI durchgeführt.",
+    "expertise_paragraph1": "Mit umfassender Erfahrung und modernster Ausrüstung verfügt Aceros über den von Drever (Belgien) qualifizierten Ingenieur Daniel Garcia für die Messung von 'rollprof roll'. Wir haben bereits die Kontrolle von über 600 Ofenrollen für Kunden wie Drever, Efco, Danieli und SDI.",
     "expertise_paragraph2": "Die Qualität unserer Produkte wird durch eine Vielzahl von Inspektionsinstrumenten und Kalibrierstandards gewährleistet, die alle vom RBC rückverfolgbar sind und die Präzision und Zuverlässigkeit unserer Prozesse sicherstellen.",
     "control_title": "Qualitätskontrolle",
     "control_description": "Unsere Labore sind ausgestattet, um eine breite Palette von Analysen durchzuführen, einschließlich Korrosionstests, detaillierter chemischer Analysen, Ultraschall zur Erkennung interner Fehler, Härtemessungen und vollständiger mechanischer Tests.",
@@ -174,7 +173,7 @@
     "machining_gallery_subtitle": "Unsere Bearbeitungsabteilung ist mit CNC-Geräten ausgestattet, die Präzision und Exzellenz in jedem gelieferten Teil gewährleisten.",
     "structural_analysis_title": "Strukturanalyse und Optimierung",
     "structural_analysis_subtitle": "Wir verwenden die Finite-Elemente-Simulation, um Projekte zu validieren und die strukturelle Integrität zu gewährleisten.",
-    "process_optimization_title": "Prozessoptimierung",
+    "process_optimization_title": "Optimierung von Prozessen",
     "process_optimization_subtitle": "Strukturberechnungen und Temperatursimulationen.",
     "diagrams_and_processes_title": "Diagramme und Prozesse",
     "diagrams_and_processes_subtitle": "Detaillierte Visualisierungen unserer Prozesse und technischen Fähigkeiten.",
@@ -201,8 +200,8 @@
     "title": "Unsere Zertifikate: Qualität durch globale Standards gesichert",
     "subtitle": "Die Exzellenz und Zuverlässigkeit unserer Produkte wird durch Zertifizierungen der angesehensten Industrie- und Schiffsklassifikationsgesellschaften der Welt bestätigt.",
     "dnv": "Zertifizierung, die die Einhaltung internationaler Qualitäts- und Sicherheitsstandards in verschiedenen Industrie- und Schifffahrtssektoren bescheinigt.",
-    "abs": "Anerkennung durch das American Bureau of Shipping, die sicherstellt, dass unsere Produkte die strengsten Normen des Marinesektors erfüllen.",
-    "bureau_veritas": "Siegel eines weltweit führenden Unternehmens für Tests, Inspektion und Zertifizierung, das die Exzellenz unserer Prozesse und Produkte bestätigt.",
+    "abs": "Anerkennung durch das American Bureau of Shipping, die sicherstellt, dass unsere produtos die strengsten Normen des Marinesektors erfüllen.",
+    "bureau_veritas": "Siegel eines weltweit führenden Unternehmens für Tests, Inspektion und Zertifizierung, das die Exzellenz unserer Prozesse und produtos bestätigt.",
     "lloyds": "Zertifizierung, die die Einhaltung der höchsten Standards in Technik, Sicherheit und Leistung für kritische Anwendungen gewährleistet."
   },
   "expertise_sectors": {
@@ -231,7 +230,7 @@
       "staves_title": "Staves (Kühlplatten)",
       "staves_description": "Entscheidende Komponenten für die effiziente Kühlung des Hochofens, die die strukturelle Integrität und die Langlebigkeit des Betriebs gewährleisten. Hergestellt aus Legierungen mit hoher Wärmeleitfähigkeit und Widerstandsfähigkeit.",
       "tuyeres_title": "Düsen (Blasventile)",
-      "tuyeres_description": "Entwickelt für die präzise Injektion von Heißluft in den Hochofen, sind unsere Düsen so gefertigt, dass sie extremen Temperaturen und aggressiven Umgebungen standhalten und den Verbrennungsprozess optimieren.",
+      "tuyeres_description": "Entwickelt für die präzise Injektion von Heißluft in den Hochofen, unsere Düsen so gefertigt, dass sie extremen Temperaturen und aggressiven Umgebungen standhalten und den Verbrennungsprozess optimieren.",
       "housings_title": "Bearbeitete Gehäuse",
       "housings_description": "Komplexe bearbeitete Gehäuse und Verkleidungen zum Schutz interner Komponenten und zur Gewährleistung einer perfekten Ausrichtung in Industrieanlagen. Hergestellt, um rauen Umgebungen standzuhalten.",
       "projects_gallery_title": "Galerie für Ingenieurprojekte",
@@ -243,7 +242,7 @@
       "oil_gas_connections_title": "Verbindungen und Flansche",
       "oil_gas_connections_description": "Wir stellen Flansche und Verbindungen her, die die strukturelle Integrität von Rohrleitungssystemen gewährleisten. Jedes Teil ist so konzipiert, dass es hohen Drücken und Temperaturen standhält, Leckagen verhindert und die Betriebssicherheit gewährleistet.",
       "oil_gas_custom_parts_title": "Kundenspezifische Teile",
-      "oil_gas_custom_parts_description": "Wir arbeiten partnerschaftlich mit unseren Kunden zusammen, um kundenspezifische Guss- und bearbeitete Teile zu entwickeln, die spezifische technische Herausforderungen für die Exploration, Produktion und Raffination von Öl und Gas bewältigen.",
+      "oil_gas_custom_parts_description": "Wir arbeiten partnerschaftlich mit unseren Kunden zusammen, um kundenspezifische Guss- und bearbeitete Teile zu entwickeln, die spezifische technische Herausforderungen für die Exploration, Produktion und Raffinerie von Öl und Gas bewältigen.",
       "mining_deck_rollers_title": "ROLLENSIEBEN FÜR SIEBDECK",
       "mining_deck_rollers_description": "Rollen für Siebe, die jeweils einzeln von einem Getriebemotor oder einer Kette angetrieben werden, mit der Möglichkeit, den Abstand zwischen den Rollen automatisch zu variieren, ohne die Maschine anhalten zu müssen. Hergestellt mit WC-Hartmetallbeschichtung und auch unbeschichtete Rollen.",
       "mining_sinter_car_walls_title": "OBERE UND UNTERE SEITENWÄNDE FÜR PELLETISIER- UND SINTERWAGEN",
@@ -271,7 +270,7 @@
       "furnace_capl_cgl_item3": "HVOF- oder SUPER D-GUN-Technologie für beschichtete Rollen.",
       "furnace_capl_cgl_item4": "Bürstenrollen.",
       "pot_hot_dip_title": "FEUERVERZINKUNGSLINIEN (TIEGEL)",
-      "pot_hot_dip_description": "Hochleistungskomponenten, die in Zink-, Zincalume- und Aluminium+Si-Bädern eingetaucht sind, und Galvalume mit speziellen ACEROS-Legierungen, die eine überlegene Haltbarkeit gewährleisten.",
+      "pot_hot_dip_description": "Hochleistungskomponenten, die in Zink-, Zincalume- und Aluminium+Si-Bädern eingetaucht sind, und galvalume mit speziellen ACEROS-Legierungen, die eine überlegene Haltbarkeit gewährleisten.",
       "pot_hot_dip_item1": "Tauchrollen, Stabilisatorrollen, Arme, Wiegen und Schnauzen aus einem Guss.",
       "pot_hot_dip_item2": "ACEROS-Legierungen VOLLSTÄNDIG FERRITFREI für überlegene Leistung.",
       "pot_hot_dip_item3": "Bi-metallische Lager (Buchsen) mit 3- bis 7-facher Leistung.",
@@ -288,7 +287,7 @@
       "guseira_housings_feature1_description": "Wir garantieren strenge Toleranzen und eine hervorragende Oberflächengüte für eine perfekte Passform und optimierte Leistung.",
       "guseira_housings_feature2_title": "Hochfeste Materialien",
       "guseira_housings_feature2_description": "Wir verwenden Speziallegierungen, die maximale Haltbarkeit und Beständigkeit gegen Ermüdung und Stöße bieten.",
-      "guseira_housings_feature3_title": "Kundenspezifische Projekte",
+      "guseira_housings_feature3_title": "Projekte Customizados",
       "guseira_housings_feature3_description": "Wir entwickeln maßgeschneiderte Gehäuse, um die einzigartigen Spezifikationen jeder Ausrüstung zu erfüllen.",
       "guseira_housings_cta_button": "Angebot anfordern",
       "guseira_wear_plates_cta_button": "Sprechen Sie mit einem Spezialisten",
@@ -342,7 +341,7 @@
     "naval": {
       "title": "Marine",
       "subtitle": "Präzisionskomponenten für das Meer.",
-      "description": "Mit umfassender Erfahrung im Marinesektor produzieren wir wesentliche Teile, die den strengen internationalen Normen entsprechen. Unsere Produkte gewährleisten die Leistung und Zuverlässigkeit von Schiffen, von Antriebssystemen bis zu Strukturkomponenten.",
+      "description": "Mit umfassender Erfahrung im Marinesektor produzieren wir wesentliche Teile, die den strengen internationalen Normen entsprechen. Unsere produtos gewährleisten die Leistung und Zuverlässigkeit von Schiffen, von Antriebssystemen bis zu Strukturkomponenten.",
       "cardDescription": "Gussteile wie Buchsen, Propeller und Rohre, hergestellt, um den strengen Anforderungen des Sektors gerecht zu werden.",
       "icon": "Ship",
       "solutions": {
@@ -387,7 +386,7 @@
       "icon": "Gem",
       "solutions": {
         "pig_iron_blast_furnace_components": { "title": "Hochofenkomponenten", "description": "Verschleiß- und hochtemperaturbeständige Auskleidungen und Teile zur Verlängerung der Lebensdauer von Hochöfen." },
-        "pig_iron_torpedo_cars_ladles": { "title": "Torpedowagen und Pfannen", "description": "Ersatzteile und Komponenten, die den sicheren und effizienten Transport von flüssigem Roheisen gewährleisten." },
+        "pig_iron_torpedo_cars_ladles": { "title": "Torpedowagen und Pfannen", "description": "Ersatzteile und Komponenten, die den sicheren e effizienten Transport von flüssigem Roheisen gewährleisten." },
         "pig_iron_casting_systems": { "title": "Stranggusssysteme", "description": "Komponenten, die einen kontinuierlichen und qualitativ hochwertigen Roheisen-Stranggussprozess gewährleisten." }
       }
     },
@@ -412,7 +411,7 @@
       "solutions": {
         "engineering_metallurgical_consulting": {
           "title": "Metallurgische Beratung",
-          "description": "Fehleranalyse, Materialauswahl und Prozessoptimierung zur Verlängerung der Lebensdauer und Effizienz von Geräten.",
+          "description": "Fehleranalyse, Materialauswahl und Prozessoptimierung zur Verlängerung der Lebensdauer e Effizienz von Geräten.",
           "icon": "Component"
         },
         "engineering_alloy_development": {
@@ -422,18 +421,17 @@
         },
         "engineering_component_design": {
           "title": "Komponentendesign",
-          "description": "Design und Simulation von Komponenten mit CAD- und FEA-Tools, um Leistung und Zuverlässigkeit vor der Herstellung zu gewährleisten."
+          "description": "Design e Simulation von Komponenten mit CAD- e FEA-Tools, um Leistung e Zuverlässigkeit vor der Herstellung zu gewährleisten."
         }
       }
     },
     "certificados": {
       "title": "Zertifikate",
       "subtitle": "Qualität durch globale Standards gesichert",
-      "description": "Die Exzellenz und Zuverlässigkeit unserer Produkte wird durch Zertifizierungen der angesehensten Industrie- und Schiffsklassifikationsgesellschaften der Welt bestätigt.",
-      "cardDescription": "Entdecken Sie unsere Zertifizierungen und Qualitätssiegel, die unsere Exzellenz garantieren.",
+      "description": "Die Exzellenz und Zuverlässigkeit unserer produtos wird durch Zertifizierungen der angesehensten Industrie- und Schiffsklassifikationsgesellschaften der Welt bestätigt.",
+      "cardDescription": "Entdecken Sie unsere Zertifizierungen e Qualitätssiegel, die unsere Exzellenz garantieren.",
       "icon": "Award",
       "solutions": []
     }
   }
 }
-    

@@ -13,9 +13,8 @@
     "navigation": "Navigation",
     "contact": "Contact",
     "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
-    "commercial_phone": "+55 (11) 2944-1901 (Commercial)",
-    "industrial_phone": "+55 (11) 5555-6551 (Industrial)",
-    "email": "comercial@aceros.com.br",
+    "phone": "+55 (11) 5555-6551 (Industrial)",
+    "email": "vendas@aceros.com.br",
     "newsletter": "Subscribe",
     "newsletter_prompt": "Receive news and updates about our products and innovations.",
     "subscribe": "Subscribe",
@@ -23,6 +22,7 @@
   },
   "hero": {
     "title": "ACEROS CENTRIFUGADOS",
+    "main_title": "HIGH-PERFORMANCE STAINLESS STEEL TECHNOLOGY FOR THERMAL RESISTANCE, ABRASION AND OXIDATION",
     "subtitle": "Aceros designs and manufactures high-performance stainless steel alloy products to assist its national and international clients, increasing the efficiency of their processes.",
     "learn_more": "Learn More",
     "contact_us": "Contact Us"
@@ -219,12 +219,6 @@
       "mining_solutions_subtitle": "Robust and high-performance components, designed to overcome the most extreme challenges of the mining industry.",
       "mining_quality_title": "Excellence in every component",
       "mining_quality_subtitle": "Our commitment is to deliver solutions that not only meet but exceed performance and durability expectations.",
-      "mining_quality_pillar1_title": "Superior quality",
-      "mining_quality_pillar1_description": "Our alloys and processes ensure components that surpass industry standards.",
-      "mining_quality_pillar2_title": "Precision engineering",
-      "mining_quality_pillar2_description": "Each part is designed for maximum efficiency, durability, and a perfect fit.",
-      "mining_quality_pillar3_title": "Extreme durability",
-      "mining_quality_pillar3_description": "Components built to withstand the harshest conditions of abrasion and impact.",
       "staves_title": "Staves (Cooling Plates)",
       "staves_description": "Crucial components for the efficient cooling of the blast furnace, ensuring structural integrity and operational longevity. Manufactured with high thermal conductivity and resistant alloys.",
       "tuyeres_title": "Tuyeres (Blow Valves)",
@@ -454,4 +448,3 @@
     }
   }
 }
-    

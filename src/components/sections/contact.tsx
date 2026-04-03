@@ -228,7 +228,7 @@ export function Contact() {
                     <div>
                       <p className="text-xl font-semibold">{t.contact.form_email}</p>
                       <p className="text-lg text-muted-foreground">
-                        comercial@aceros.com.br
+                        vendas@aceros.com.br
                       </p>
                     </div>
                   </div>

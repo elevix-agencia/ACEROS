@@ -14,7 +14,7 @@
     "contact": "Contato",
     "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
     "phone": "+55 (11) 5555-6551 (Industrial)",
-    "email": "comercial@aceros.com.br",
+    "email": "vendas@aceros.com.br",
     "newsletter": "Inscreva-se",
     "newsletter_prompt": "Receba notícias e atualizações sobre nossos produtos e inovações.",
     "subscribe": "Inscrever",
@@ -243,7 +243,7 @@
       "mining_sinter_cars_description": "A CIS projeta, desenvolve e produz carros completos de pelotização e sinterização (estrutura, paredes laterais, barras de grelha, rodas).",
       "mining_blast_furnace_title": "ALTO-FORNO: BLINDAGEM E PLACAS DE DESGASTE",
       "mining_blast_furnace_description": "Blindagens e placas de desgaste tanto para altos-fornos do tipo Paul Wurth quanto do tipo Double Bell (duplo sino).",
-      "mining_deck_hot_cold_title": "DECKS DE PENEIRAMENTO A QUENTE E A FRIO",
+      "mining_deck_hot_cold_title": "DECKS DE PENEIRAMENTO A QUENTE e A FRIO",
       "mining_deck_hot_cold_description": "Decks de peneiramento resistentes ao desgaste, com diferentes formatos e perfis; furos fundidos pelo processo de moldagem em casca (shell molding) em desenho “espinha-de-peixe”, para otimizar a área aberta e o efeito de “autolimpeza”.\nSuperligas para operação em temperaturas muito elevadas (até 1.100 °C).",
       "hsp_title": "ROLOS PARA TRANSPORTE DE TIRAS A QUENTE (HSP)",
       "hsp_description": "Nova geração de rolos para MESA DE TRANSFERÊNCIA, MESA DE SAÍDA, LOOPER (laçador), TENSION (tensão), PINCH (aperto) e WRAPPER (enrolador).",
@@ -260,7 +260,7 @@
       "furnace_capl_cgl_item3": "Tecnologia HVOF ou SUPER D-GUN para rolos revestidos.",
       "furnace_capl_cgl_item4": "Rolos Brush (escova).",
       "pot_hot_dip_title": "LINHAS DE GALVANIZAÇÃO POR IMERSÃO A QUENTE (POTE)",
-      "pot_hot_dip_description": "Componentes de alta performance submersos em bagni de Zinco, Zincalume e Alumínio+Si, com ligas especiais C.I.S. que garantem durabilidade superior.",
+      "pot_hot_dip_description": "Componentes de alta performance submersos em banhos de Zinco, Zincalume e Alumínio+Si, com ligas especiais C.I.S. que garantem durabilidade superior.",
       "pot_hot_dip_item1": "Rolos de Imersão, Estabilizadores, Braços, Berços e Bicos fundidos em peça única.",
       "pot_hot_dip_item2": "Ligas C.I.S. TOTALMENTE δ LIVRES DE FERRITA para desempenho superior.",
       "pot_hot_dip_item3": "Mancais (Buchas) bi-metálicas com desempenho de 3 a 7 vezes maior.",
@@ -362,7 +362,7 @@
       "title": "Siderurgia",
       "subtitle": "A força do aço para a indústria do aço.",
       "description": "A Aceros é um parceiro estratégico para a indústria siderúrgica, fornecendo componentes que resistem a temperaturas extremas e ao desgaste constante. Nossos rolos de forno, anéis e outras peças são cruciais para a produção contínua de aço de alta qualidade.",
-      "cardDescription": "Peças para fornos e equipamentos siderúrgicos, assegurando a produção de aço com alto padrão de qualidade.",
+      "cardDescription": "Peças essenciais para fornos e equipamentos, garantindo a produção de aço de alta qualidade.",
       "icon": "Factory",
       "solutions": {
         "siderurgia_continuous_casting": {
@@ -462,7 +462,7 @@
       "title": "Engenharia Aceros",
       "subtitle": "Inovação e soluções personalizadas.",
       "description": "Nosso time de engenharia desenvolve soluções metalúrgicas personalizadas, otimizando o desempenho de equipamentos e componentes para atender às necessidades específicas de cada cliente. Da concepção à implementação, oferecemos consultoria e suporte técnico especializado.",
-      "cardDescription": "Serviços de consultoria e desenvolvimento de soluções metalúrgicas personalizadas.",
+      "cardDescription": "Servicios de consultoria e desenvolvimento de soluções metalúrgicas personalizadas.",
       "icon": "Lightbulb",
       "solutions": {
         "engineering_metallurgical_consulting": {
@@ -483,7 +483,7 @@
       "title": "Certificados",
       "subtitle": "Qualidade Assegurada por Padrões Globais",
       "description": "A excelência e a confiabilidade de nossos produtos são comprovadas através das certificações emitidas pelas mais respeitadas classificadoras industriais e navais do mundo.",
-      "cardDescription": "Explore nossas certificações e selos de qualidade que garantem nossa excelência.",
+      "cardDescription": "Explore nossas certificações e selos de qualidade que garantissem nossa excelência.",
       "icon": "Award",
       "solutions": []
     }
