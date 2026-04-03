@@ -13,8 +13,7 @@
     "navigation": "Navigation",
     "contact": "Kontakt",
     "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
-    "commercial_phone": "+55 (11) 2944-1901 (Handel)",
-    "industrial_phone": "+55 (11) 5555-6551 (Industrie)",
+    "phone": "+55 (11) 5555-6551 (Industrial)",
     "email": "comercial@aceros.com.br",
     "newsletter": "Abonnieren",
     "newsletter_prompt": "Erhalten Sie Neuigkeiten und Updates zu unseren Produkten und Innovationen.",
@@ -23,6 +22,7 @@
   },
   "hero": {
     "title": "ACEROS CENTRIFUGADOS",
+    "main_title": "HOCHLEISTUNGS-EDELSTAHLTECHNOLOGIE FÜR THERMISCHE BESTÄNDIGKEIT, ABRIEB UND OXIDATION",
     "subtitle": "Aceros entwickelt und fertigt Produkte aus Hochleistungs-Edelstahllegierungen, um seine nationalen und internationalen Kunden zu unterstützen und die Effizienz ihrer Prozesse zu steigern.",
     "learn_more": "Erfahren Sie mehr",
     "contact_us": "Kontaktiere uns"
@@ -79,8 +79,7 @@
     "title": "Sprechen wir über Ihre Bedürfnisse?",
     "subtitle": "Unser Expertenteam ist bereit, Ihr Projekt zu verstehen und die ideale Stahllösung für Sie anzubieten. Klicken Sie auf die Schaltfläche unten und sprechen Sie direkt mit uns über WhatsApp.",
     "button": "Gespräch auf WhatsApp beginnen",
-    "message": "Hallo! Ich kontaktiere Sie über die Aceros-Website. Ich möchte Informationen über die Lieferung und Stahllösungen für meinen Sektor. Können Sie mir helfen?",
-    "whatsapp_quote": "Fordern Sie ein Angebot über WhatsApp an"
+    "message": "Hallo! Ich kontaktiere Sie über die Aceros-Website. Ich möchte Informationen über die Lieferung und Stahllösungen für meinen Sektor. Können Sie mir helfen?"
   },
   "contact": {
     "title": "Fordern Sie Ihr Angebot an",
@@ -100,8 +99,7 @@
     "details_title": "Kontaktieren Sie uns",
     "details_hours": "Service von Montag bis Freitag von 8 bis 18 Uhr",
     "details_address_title": "Geschäftsadresse",
-    "details_commercial_office": "Handelsbüro",
-    "details_industrial_area": "Industriegebiet",
+    "details_phone_title": "Telefon",
     "toast_success_title": "Nachricht gesendet!",
     "toast_success_description": "Wir haben Ihre Kontaktanfrage erhalten und werden uns in Kürze bei Ihnen melden.",
     "toast_error_title": "Fehler beim Senden der Nachricht.",
@@ -171,8 +169,8 @@
     "machining_gallery_subtitle": "Unsere Bearbeitungsabteilung ist mit CNC-Geräten ausgestattet, die Präzision und Exzellenz in jedem gelieferten Teil gewährleisten.",
     "structural_analysis_title": "Strukturanalyse und Optimierung",
     "structural_analysis_subtitle": "Wir verwenden die Finite-Elemente-Simulation, um Projekte zu validieren und die strukturelle Integrität zu gewährleisten.",
-    "process_optimization_title": "Prozessoptimierung",
-    "process_optimization_subtitle": "Abbildung und kontinuierliche Verbesserung von Prozessen, um Effizienz und Qualität in jeder Produktionsphase zu gewährleisten.",
+    "process_optimization_title": "Optimierung von Prozessen",
+    "process_optimization_subtitle": "Strukturberechnungen und Temperatursimulationen.",
     "items": [
       {
         "title": "Spezialisierte Zertifizierung",
@@ -339,4 +337,3 @@
     }
   }
 }
-    

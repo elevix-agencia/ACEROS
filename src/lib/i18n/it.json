@@ -13,16 +13,16 @@
     "navigation": "Navigazione",
     "contact": "Contatti",
     "address": "Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP",
-    "commercial_phone": "+55 (11) 2944-1901 (Commerciale)",
-    "industrial_phone": "+55 (11) 5555-6551 (Industriale)",
+    "phone": "+55 (11) 5555-6551 (Industrial)",
     "email": "comercial@aceros.com.br",
     "newsletter": "Iscriviti",
-    "newsletter_prompt": "Ricevi notizie e aggiornamenti sui nostri prodotti e innovazioni.",
+    "newsletter_prompt": "Ricevi notizie e aggiornamenti sui nostri prodotti e inovações.",
     "subscribe": "Sottoscrivi",
     "rights_reserved": "Aceros. Tutti i diritti riservati."
   },
   "hero": {
     "title": "ACEROS CENTRIFUGADOS",
+    "main_title": "TECNOLOGIA IN ACCIAIO INOSSIDABILE AD ALTE PRESTAZIONI PER RESISTENZA TERMICA, ABRASIONE E OSSIDAZIONE",
     "subtitle": "Aceros progetta e produce prodotti in lega di acciaio inossidabile ad alte prestazioni per assistere i suoi clienti nazionali e internazionali, aumentando l'efficienza dei loro processi.",
     "learn_more": "Scopri di più",
     "contact_us": "Contattaci"
@@ -79,8 +79,7 @@
     "title": "Parliamo delle Tue Esigenze?",
     "subtitle": "Il nostro team di esperti è pronto a comprendere il tuo progetto e a offrire la soluzione in acciaio ideale per te. Clicca il pulsante qui sotto e parla direttamente con noi su WhatsApp.",
     "button": "Inizia Conversazione su WhatsApp",
-    "message": "Ciao! Ti contatto tramite il sito web di Aceros. Vorrei informazioni sulla fornitura e sulle soluzioni in acciaio per il mio settore. Potete aiutarmi?",
-    "whatsapp_quote": "Richiedi un Preventivo tramite WhatsApp"
+    "message": "Ciao! Ti contatto tramite il sito web di Aceros. Vorrei informazioni sulla fornitura e sulle soluzioni in acciaio per il mio settore. Potete aiutarmi?"
   },
   "contact": {
     "title": "Richiedi il Tuo Preventivo",
@@ -100,8 +99,7 @@
     "details_title": "Contattaci",
     "details_hours": "Servizio dal lunedì al venerdì dalle 8:00 alle 18:00",
     "details_address_title": "Indirizzo Commerciale",
-    "details_commercial_office": "Ufficio Commerciale",
-    "details_industrial_area": "Area Industriale",
+    "details_phone_title": "Telefono",
     "toast_success_title": "Messaggio inviato!",
     "toast_success_description": "Abbiamo ricevuto il tuo contatto e ti risponderemo a breve.",
     "toast_error_title": "Errore nell'invio del messaggio.",
@@ -172,7 +170,7 @@
     "structural_analysis_title": "Analisi Strutturale e Ottimizzazione",
     "structural_analysis_subtitle": "Utilizziamo la simulazione agli elementi finiti per convalidare i progetti e garantire l'integrità strutturale.",
     "process_optimization_title": "Ottimizzazione dei Processi",
-    "process_optimization_subtitle": "Mappatura e miglioramento continuo dei processi per garantire efficienza e qualità in ogni fase della produzione.",
+    "process_optimization_subtitle": "Calcoli strutturali e simulazioni di temperatura.",
     "items": [
       {
         "title": "Certificazione Specializzata",
@@ -205,6 +203,7 @@
       "solutions_for": "Soluzioni per",
       "gallery_title": "Galleria Progetti",
       "video_title": "Processi in Azione",
+      "sector_not_found": "Settore non trovato.",
       "feature_title": "Differenziatori per il Settore",
       "feature_description_1": "Offriamo soluzioni su misura che soddisfano le esigenze specifiche dell'industria di",
       "feature_item1": "Leghe ad alte prestazioni",
@@ -218,16 +217,16 @@
       "hsp_feature2_description": "Massima riduzione del runout di 0,5 mm (monometallico) o 0,3 mm (bimetallico) per milione di tonnellate lavorate.",
       "hsp_feature3_title": "Applicazioni Critiche",
       "hsp_feature3_description": "Per i rulli di presa (pinch rollers), utilizziamo una tavola bimetallica centrifugata per garantire le migliori prestazioni.",
-      "furnace_capl_cgl_title": "CAPL & CGL - FORNO",
+      "furnace_capl_cgl_title": "RULLI DA FORNO PER TRASPORTO BARRE",
       "furnace_capl_cgl_description": "Soluzioni complete per Linee di Ricottura e Lavorazione Continua (CAPL) e Linee di Galvanizzazione Continua (CGL).",
       "furnace_capl_cgl_item1": "Tubi radianti (tipi 'W', 'U', 'P' singolo e doppio) con recuperatori di calore.",
       "furnace_capl_cgl_item2": "Rulli da forno rivestiti (coated) e non rivestiti (uncoated).",
       "furnace_capl_cgl_item3": "Tecnologia HVOF o SUPER D-GUN per rulli rivestiti.",
       "furnace_capl_cgl_item4": "Rulli a spazzola (Brush rolls).",
       "pot_hot_dip_title": "LINEE DI GALVANIZZAZIONE A CALDO (VASCA)",
-      "pot_hot_dip_description": "Componenti ad alte prestazioni immersi in bagni di Zinco, Zincalume e Alluminio+Si, con speciali leghe C.I.S. che garantiscono una durata superiore.",
+      "pot_hot_dip_description": "Componenti ad alte prestazioni immersi in bagni di Zinco, Zincalume e Alluminio+Si, e galvalume con speciali leghe ACEROS che garantiscono una durata superiore.",
       "pot_hot_dip_item1": "Rulli di Immersione, Rulli Stabilizzatori, Bracci, Culle e Beccucci fusi in un unico pezzo.",
-      "pot_hot_dip_item2": "Leghe C.I.S. TOTALMENTE δ PRIVE DI FERRITE per prestazioni superiori.",
+      "pot_hot_dip_item2": "Leghe ACEROS TOTALMENTE PRIVE DI FERRITE per prestazioni superiori.",
       "pot_hot_dip_item3": "Cuscinetti bimetallici (Boccole) con prestazioni da 3 a 7 volte superiori."
     },
     "mineracao": {
@@ -265,7 +264,6 @@
         "siderurgia_tunnel_furnace_rollers": { "title": "RULLI PER FORNI A TUNNEL CSP", "description": "Rulli raffreddati e non raffreddati che fanno parte della produzione standard." },
         "siderurgia_hot_strip_mill_rollers": { "title": "RULLI PER LAMINATOIO A NASTRO A CALDO (HSP)", "description": "Nuova generazione di rulli per TAVOLA DI TRASFERIMENTO, TAVOLA DI USCITA, LOOPER, TENSIONE, PINCH e AVVOLGITORE." },
         "siderurgia_capl_cgl_furnace": { "title": "CAPL & CGL - FORNO", "description": "Soluzioni complete per Linee di Ricottura e Lavorazione Continua e Linee di Galvanizzazione Continua." },
-        "siderurgia_hot_dip_galvanizing": { "title": "LINEE DI GALVANIZZAZIONE A CALDO (VASCA)", "description": "Componenti ad alte prestazioni immersi in bagni di Zinco, Zincalume e Alluminio+Si." },
         "siderurgia_walking_beam_furnaces": { "title": "FORNI A TRAVI MOBILI PER IL TRATTAMENTO TERMICO DEI TUBI", "description": "TRAVI MOBILI, COLONNE e GUARNIZIONI SUPERIORI E INFERIORI con design e leghe speciali." },
         "siderurgia_bar_furnace_parts": { "title": "Parti per Forno a Barre, Ingresso e Uscita, Carico e Scarico", "description": "RULLI DI CARICO E SCARICO A SECCO E A UMIDO, rivestiti e non rivestiti." }
       }
@@ -295,10 +293,10 @@
       }
     },
     "tratamento_termico": {
-      "title": "Trattamento Termico",
+      "title": "Tratamento Termico",
       "subtitle": "Leghe speciali per processi ad alta temperatura.",
       "description": "Sviluppiamo componenti e parti in leghe speciali per forni di trattamento termico, garantendo le prestazioni e la durata delle attrezzature in processi come tempra, rinvenimento, cementazione e nitrurazione.",
-      "cardDescription": "Componenti per forni industriali e processi di trattamento termico.",
+      "cardDescription": "Componentes para hornos industriales y procesos de tratamento térmico.",
       "icon": "Cpu",
       "solutions": {
         "heat_treatment_grids_baskets": { "title": "Griglie e Cesti", "description": "Griglie, cesti e dispositivi in leghe refrattarie per sostenere parti nei forni." },
@@ -339,4 +337,3 @@
     }
   }
 }
-    

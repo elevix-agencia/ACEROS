@@ -219,7 +219,7 @@ export function Contact() {
                         {t.contact.details_phone_title}
                       </p>
                       <p className="text-lg text-muted-foreground">
-                        +55 (11) 5555-6551
+                        +55 (11) 5555-6551 (Industrial)
                       </p>
                     </div>
                   </div>
