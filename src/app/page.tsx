@@ -10,6 +10,8 @@ import { MainGallery } from '@/components/sections/main-gallery';
 import { Sectors } from '@/components/sections/sectors';
 import { ManufacturingHistory } from '@/components/sections/manufacturing-history';
 import { ClientLogos } from '@/components/sections/client-logos';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -25,6 +27,22 @@ export default function Home() {
       <ManufacturingHistory />
       <ClientLogos />
       <LocationMap />
+      
+      {/* Seção de Redirecionamento para LP de Buchas */}
+      <section className="py-12 bg-white border-t border-b border-slate-100">
+        <div className="container mx-auto px-4 text-center">
+          <Button 
+            asChild 
+            size="lg" 
+            className="track-home-to-lp bg-primary text-primary-foreground hover:bg-primary/90 font-headline font-bold text-lg md:text-xl px-10 py-8 h-auto rounded-xl shadow-xl transition-all hover:scale-105 active:scale-95"
+          >
+            <Link href="/bucha-de-aco-inox">
+              Conheça nossa linha de Buchas de Aço Inox Sob Medida
+            </Link>
+          </Button>
+        </div>
+      </section>
+
       <WhatsAppCta />
     </>
   );
