@@ -4,7 +4,7 @@ import { TubosInoxClient } from './TubosInoxClient';
 
 export const metadata: Metadata = {
   title: 'Tubos de Aço Inox Sob Medida | Fabricante Industrial | Aceros',
-  description: 'A Aceros fabrica tubos de aço inox e tubos centrifugados sob medida para aplicações industriais. Solicite um orçamento com nossa equipe técnica.',
+  description: 'A Aceros fabrica tubos de aço inox e tubos centrifugados sob medida para aplicações industriais. Especialistas em alta temperatura e abrasão. Solicite orçamento.',
   alternates: {
     canonical: 'https://www.aceros.com.br/tubos-de-aco-inox',
   },
@@ -17,42 +17,42 @@ export default function TubosInoxPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Quais ligas de aço inox são utilizadas na fabricação dos tubos?",
+        "name": "Quais as vantagens dos tubos centrifugados da Aceros?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Trabalhamos com as principais ligas como 304, 304L, 316, 316L, 310 e 420, garantindo máxima resistência térmica e química."
+          "text": "Diferente de tubos comuns de prateleira, nossos tubos centrifugados possuem densidade superior, ausência total de porosidade e são fabricados em ligas especiais ASTM A297 para suportar calor e abrasão extrema."
         }
       },
       {
         "@type": "Question",
-        "name": "A Aceros fabrica tubos centrifugados?",
+        "name": "Quais são os estágios de acabamento oferecidos pela fábrica?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, somos especialistas em tubos fundidos por centrifugação, processo que garante maior densidade, ausência de porosidade e resistência superior."
+          "text": "Oferecemos 4 estágios conforme seu projeto: 1. Bruto de centrifugação (alta densidade); 2. Usinado (munhão e corpo acetinado); 3. Polido/Acabado (peça espelhada com revenido térmico); 4. Misto (fornecimento sob demanda)."
         }
       },
       {
         "@type": "Question",
-        "name": "Quais são as dimensões e diâmetros disponíveis?",
+        "name": "A Aceros trabalha com produtos commodities?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Fabricamos sob medida conforme seu projeto técnico. Os diâmetros e comprimentos são definidos de acordo com a necessidade específica da sua aplicação."
+          "text": "Não. Somos uma divisão da Metalúrgica Daniela focada exclusivamente em engenharia e fabricação sob medida de componentes de alta liga centrifugados e usinados conforme desenho técnico."
         }
       },
       {
         "@type": "Question",
-        "name": "Vocês atendem indústrias em todo o Brasil?",
+        "name": "Quais as dimensões e ligas disponíveis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabalhamos com ligas 304, 304L, 316, 316L, 310 e 420. As dimensões (diâmetro, espessura e comprimento) são fabricadas 100% sob medida para seu projeto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Atendem pedidos para todo o Brasil?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Sim, possuímos logística estruturada para atender indústrias de todos os estados brasileiros com pontualidade e segurança."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quais normas técnicas são seguidas na produção dos tubos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Seguimos rigorosamente as normas ABNT, ASTM e DIN, garantindo a rastreabilidade total do material e qualidade certificada."
         }
       }
     ]

@@ -15,7 +15,6 @@ import {
   Factory, 
   Globe, 
   HardHat,
-  Drill,
   Building2,
   FlaskConical,
   Utensils,
@@ -26,11 +25,11 @@ import {
   Phone,
   Mail,
   MapPin,
-  ArrowRight,
   Send,
   Plus,
   Layers,
-  Award
+  Award,
+  Search
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -43,7 +42,13 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 export function TubosInoxClient() {
   const { toast } = useToast();
@@ -60,6 +65,16 @@ export function TubosInoxClient() {
     (e.target as HTMLFormElement).reset();
   };
 
+  const galleryItems = [
+    { url: 'https://i.imgur.com/5Lwzpoh.jpeg', alt: 'Tubo centrifugado bruto (como sai do molde, alta densidade estrutural)' },
+    { url: 'https://i.imgur.com/prSJDU6.jpeg', alt: 'Usinagem de precisão CNC e usinagem da ponta (munhão)' },
+    { url: 'https://i.imgur.com/IFba45o.jpeg', alt: 'Acabamento acetinado em fase de usinagem intermediária' },
+    { url: 'https://i.imgur.com/x36bQK3.jpeg', alt: 'Peça acabada, usinada e polida (com revenido do tratamento térmico)' },
+    { url: 'https://i.imgur.com/LijCHmF.jpeg', alt: 'Comparativo: do tubo bruto centrifugado até a peça final usinada' },
+    { url: 'https://i.imgur.com/IN1l7Mp.jpeg', alt: 'Inspeção técnica e medição de tolerâncias rigorosas' },
+    { url: 'https://i.imgur.com/LijCHmF.jpeg', alt: 'Tubos de alta liga para fornos e aplicações de desgaste extremo' },
+  ];
+
   return (
     <div className="bg-background text-foreground font-body overflow-x-hidden">
       {/* Botão Flutuante WhatsApp */}
@@ -71,13 +86,13 @@ export function TubosInoxClient() {
         <MessageCircle className="h-8 w-8" />
       </Link>
 
-      {/* Seção 1: Hero */}
+      {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-slate-900">
         <Image 
-          src="https://i.imgur.com/f1gnR7Z.png" 
-          alt="Tubos de aço inox industriais empilhados" 
+          src="https://i.imgur.com/x36bQK3.jpeg" 
+          alt="Tubo centrifugado de aço inox usinado para aplicação industrial - Aceros" 
           fill 
-          className="object-cover opacity-30"
+          className="object-cover opacity-40"
           priority
         />
         <div className="container mx-auto px-4 relative z-10">
@@ -106,7 +121,7 @@ export function TubosInoxClient() {
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-xl px-10 py-8">
                 <Link href="#form-landing-tubos">Solicitar Orçamento</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black text-xl px-10 py-8">
+              <Button asChild size="lg" variant="outline" className="bg-white border-white text-black hover:bg-slate-100 text-xl px-10 py-8">
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" className="track-whatsapp-tubos">
                   Falar com um Especialista
                 </Link>
@@ -128,7 +143,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Seção 2: Primeira Dobra */}
+      {/* Introdução */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
@@ -138,7 +153,7 @@ export function TubosInoxClient() {
           >
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 mb-6 uppercase">Tubos de Aço Inox para Projetos Industriais</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              A Aceros é referência na fabricação de tubos de aço inoxidável e superligas, com foco especial em processos que exigem **resistência extrema ao desgaste, temperaturas elevadas e atmosferas corrosivas**.
+              A Aceros é a divisão de aços inoxidáveis do grupo <strong>Metalúrgica Daniela</strong>. Não comercializamos tubos comuns de prateleira ou commodities: nossa fábrica produz via <strong>processo de centrifugação sob medida</strong> em ligas especiais resistentes a calor, abrasão e oxidação severa (<strong>norma ASTM A297</strong>).
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Nossos tubos centrifugados oferecem uma microestrutura homogênea e livre de impurezas, garantindo maior durabilidade mecânica em comparação com processos convencionais. Cada projeto é acompanhado por nossos engenheiros para assegurar que a liga e as dimensões atendam perfeitamente à sua planta industrial.
@@ -146,8 +161,8 @@ export function TubosInoxClient() {
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
             <Image 
-              src="https://i.imgur.com/s2TjAxA.jpeg" 
-              alt="Produção de tubos na Aceros" 
+              src="https://i.imgur.com/IFba45o.jpeg" 
+              alt="Tubo centrifugado de alta liga em processo de usinagem" 
               fill 
               className="object-cover"
             />
@@ -155,7 +170,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Seção 3: Informações Técnicas */}
+      {/* Informações Técnicas */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -174,26 +189,26 @@ export function TubosInoxClient() {
                 <tbody className="divide-y divide-slate-100">
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Ligas Disponíveis</td>
-                    <td className="p-6">Aço Inox 304, 304L, 316, 316L, 310, 420 e Superligas sob consulta</td>
+                    <td className="p-6">Aço Inox 304, 304L, 316, 316L, 310, 420 e Superligas ASTM A297</td>
                   </tr>
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Processo Produtivo</td>
                     <td className="p-6">Fundição por Centrifugação (Centrifugal Casting) e Estática</td>
                   </tr>
                   <tr>
-                    <td className="p-6 font-bold bg-slate-50/50">Dimensões</td>
-                    <td className="p-6">Diâmetros, espessuras e comprimentos fabricados sob medida</td>
+                    <td className="p-6 font-bold bg-slate-50/50">Estágios de Acabamento</td>
+                    <td className="p-6">Bruto de centrifugação, Usinado (Munhão), Polido/Acabado ou Misto</td>
                   </tr>
                   <tr>
-                    <td className="p-6 font-bold bg-slate-50/50">Acabamento</td>
-                    <td className="p-6">Bruto de fundição, semi-usinado ou usinado final conforme projeto</td>
+                    <td className="p-6 font-bold bg-slate-50/50">Dimensões</td>
+                    <td className="p-6">Diâmetros, espessuras e comprimentos fabricados 100% sob medida</td>
                   </tr>
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Normas Técnicas</td>
                     <td className="p-6">ABNT, ASTM, DIN, AISI</td>
                   </tr>
                   <tr>
-                    <td className="p-6 font-bold bg-slate-50/50">Qualidade</td>
+                    <td className="p-6 font-bold bg-slate-50/50">Inspeção</td>
                     <td className="p-6">Rastreabilidade total, ensaios de dureza, análise química e ultrassom</td>
                   </tr>
                 </tbody>
@@ -204,7 +219,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Seção 4: Diferenciais */}
+      {/* Diferenciais */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -238,7 +253,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Seção 5: Aplicações */}
+      {/* Aplicações */}
       <section className="py-20 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -267,39 +282,45 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Seção 6: Galeria */}
+      {/* Galeria Técnica Expandida */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 uppercase">Galeria Técnica</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 uppercase">Galeria Técnica e Evolução de Acabamento</h2>
+            <p className="text-muted-foreground mt-4">Do bruto de centrifugação à peça polida: veja a qualidade Aceros em cada estágio.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { id: 'product-tube', alt: 'Tubo centrifugado em aço inox' },
-              { id: 'product-tube-2', alt: 'Tubo fundido para altas temperaturas' },
-              { id: 'product-tube-3', alt: 'Acabamento interno de tubo centrifugado' },
-              { id: 'product-tube-4', alt: 'Tubos de aço inox para trocadores de calor' }
-            ].map((img, i) => {
-              const placeholder = PlaceHolderImages.find(p => p.id === img.id);
-              return (
-                <div key={i} className="group relative aspect-square rounded-xl overflow-hidden shadow-md bg-gray-100">
-                  <Image 
-                    src={placeholder?.imageUrl || ''} 
-                    alt={img.alt} 
-                    fill 
-                    className="object-contain p-2 group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">
-                    {img.alt}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {galleryItems.map((img, i) => (
+              <Dialog key={i}>
+                <DialogTrigger asChild>
+                  <div className="group relative aspect-square rounded-xl overflow-hidden shadow-md bg-gray-100 cursor-pointer">
+                    <Image 
+                      src={img.url} 
+                      alt={img.alt} 
+                      fill 
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Search className="h-10 w-10 text-white" />
+                    </div>
+                    <div className="absolute bottom-0 w-full p-3 bg-gradient-to-t from-black/90 to-transparent text-white text-[10px] leading-tight">
+                      {img.alt}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl p-4">
+                  <div className="relative aspect-video w-full mt-4">
+                    <Image src={img.url} alt={img.alt} fill className="object-contain" />
+                  </div>
+                  <p className="text-center text-sm font-semibold mt-2">{img.alt}</p>
+                </DialogContent>
+              </Dialog>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Seção 7: Timeline */}
+      {/* Processo de Fabricação (Timeline) */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -310,11 +331,11 @@ export function TubosInoxClient() {
             <div className="space-y-12">
               {[
                 { step: '01', title: 'Recebimento do Projeto', desc: 'Análise dos requisitos dimensionais e operacionais.' },
-                { step: '02', title: 'Análise Técnica', desc: 'Engenharia valida a viabilidade de fabricação.' },
-                { step: '03', title: 'Definição da Liga', desc: 'Escolha do aço inox ideal para o regime de trabalho.' },
-                { step: '04', title: 'Fabricação', desc: 'Centrifugação ou fundição estática da peça bruta.' },
-                { step: '05', title: 'Controle Dimensional', desc: 'Medição precisa para garantir tolerâncias do projeto.' },
-                { step: '06', title: 'Inspeção de Qualidade', desc: 'Testes metalúrgicos e de integridade estrutural.' },
+                { step: '02', title: 'Análise Técnica', desc: 'Engenharia valida a viabilidade de fabricação no Grupo Daniela.' },
+                { step: '03', title: 'Definição da Liga', desc: 'Escolha do aço inox ideal (ASTM A297) para o regime de trabalho.' },
+                { step: '04', title: 'Processo de Fabricação', desc: 'Centrifugação da peça bruta para eliminação de porosidade.' },
+                { step: '05', title: 'Controle Dimensional', desc: 'Medição precisa para garantir as tolerâncias do projeto.' },
+                { step: '06', title: 'Inspeção de Qualidade', desc: 'Testes metalúrgicos e de integridade estrutural rigorosos.' },
                 { step: '07', title: 'Entrega', desc: 'Expedição protegida para indústrias em todo o Brasil.' }
               ].map((item, i) => (
                 <div key={i} className={`flex flex-col md:flex-row items-center gap-8 ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
@@ -336,7 +357,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Seção 10: CTA Intermediário */}
+      {/* CTA Intermediário */}
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold uppercase mb-6">Precisa de Tubos de Aço Inox para sua indústria?</h2>
@@ -356,7 +377,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Seção 11: FAQ */}
+      {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
@@ -364,46 +385,46 @@ export function TubosInoxClient() {
           </div>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left font-bold text-lg">Quais ligas de aço inox são utilizadas nos tubos?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Quais as vantagens dos tubos centrifugados da Aceros?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Trabalhamos com as ligas mais resistentes do mercado, incluindo 304, 304L, 316, 316L, 310 e 420, focando em durabilidade térmica e química.
+                Diferente de tubos comuns de prateleira, nossos tubos centrifugados possuem densidade superior, ausência total de porosidade e são fabricados em ligas especiais ASTM A297 para suportar calor e abrasão extrema.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="text-left font-bold text-lg">A Aceros fabrica tubos centrifugados?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Quais são os estágios de acabamento oferecidos pela fábrica?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Sim, a centrifugação é nossa especialidade. Esse processo garante tubos com densidade superior e ausência de porosidade, ideais para aplicações críticas.
+                Oferecemos 4 estágios conforme seu projeto: 1. Bruto de centrifugação (alta densidade); 2. Usinado (munhão e corpo acetinado); 3. Polido/Acabado (peça espelhada com revenido térmico); 4. Misto (fornecimento sob demanda).
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left font-bold text-lg">Quais são as dimensões disponíveis?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">A Aceros trabalha com produtos commodities?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Nossa produção é 100% customizada. Fabricamos diâmetros e espessuras de acordo com o seu desenho técnico ou especificação de projeto.
+                Não. Somos uma divisão da Metalúrgica Daniela focada exclusivamente em engenharia e fabricação sob medida de componentes de alta liga centrifugados e usinados conforme desenho técnico.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger className="text-left font-bold text-lg">Atendem pedidos para todo o Brasil?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Quais as dimensões e ligas disponíveis?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Sim, possuímos uma rede logística preparada para entregar nossos tubos industriais em qualquer estado do Brasil com total segurança.
+                Trabalhamos com ligas 304, 304L, 316, 316L, 310 e 420. As dimensões (diâmetro, espessura e comprimento) são fabricadas 100% sob medida para seu projeto.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">
-              <AccordionTrigger className="text-left font-bold text-lg">Quais normas técnicas são seguidas?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Atendem pedidos para todo o Brasil?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Nossa produção segue rigorosamente as normas ASTM, DIN e ABNT, com total rastreabilidade de materiais e certificados de qualidade.
+                Sim, possuímos logística estruturada para entregar nossos tubos industriais em qualquer estado brasileiro com pontualidade e segurança.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
       </section>
 
-      {/* Seção 12: Formulário */}
+      {/* Formulário */}
       <section id="form-landing-tubos" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl overflow-hidden">
             <div className="p-8 md:p-12 bg-slate-900 text-white flex flex-col justify-center">
               <h2 className="font-headline text-3xl font-bold uppercase mb-6">Solicite seu Orçamento de Tubos</h2>
-              <p className="text-slate-400 mb-8">Especialistas prontos para analisar seu projeto e enviar uma proposta comercial competitiva.</p>
+              <p className="text-slate-400 mb-8">Especialistas prontos para analisar seu projeto e enviar uma proposta comercial competitiva do Grupo Daniela.</p>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Phone className="h-6 w-6 text-accent" /></div>
@@ -446,7 +467,7 @@ export function TubosInoxClient() {
                   </div>
                   <div>
                     <label className="text-sm font-bold text-slate-700 block mb-2">Mensagem / Especificações</label>
-                    <Textarea placeholder="Descreva diâmetros, espessuras, comprimentos e ligas desejadas..." rows={4} className="bg-slate-50 border-slate-200" />
+                    <Textarea placeholder="Descreva diâmetros, espessuras, comprimentos e ligas desejadas ou mencione o estágio de acabamento..." rows={4} className="bg-slate-50 border-slate-200" />
                   </div>
                 </div>
                 <p className="text-[10px] text-slate-500">Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa Política de Privacidade.</p>
@@ -472,7 +493,7 @@ export function TubosInoxClient() {
                 className="mb-6"
               />
               <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-                Especialista na fabricação de tubos industriais em aços inoxidáveis e ligas de alto desempenho.
+                Especialista na fabricação de tubos industriais em aços inoxidáveis e ligas de alto desempenho do Grupo Metalúrgica Daniela.
               </p>
             </div>
             <div>
