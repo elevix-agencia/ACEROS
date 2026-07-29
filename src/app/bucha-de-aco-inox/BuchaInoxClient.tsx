@@ -15,7 +15,6 @@ import {
   Factory, 
   Globe, 
   HardHat,
-  Drill,
   Building2,
   FlaskConical,
   Utensils,
@@ -26,10 +25,9 @@ import {
   Phone,
   Mail,
   MapPin,
-  ArrowRight,
   Send,
-  Search,
-  Plus
+  Plus,
+  Layers
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -42,9 +40,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Icon } from '@/components/icons';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { LocationMap } from '@/components/sections/location-map';
 
 export function BuchaInoxClient() {
   const { toast } = useToast();
@@ -53,7 +48,6 @@ export function BuchaInoxClient() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulação de envio para GA/Google Ads
     console.log('Conversão: Envio do formulário disparado.');
     toast({
       title: "Solicitação Enviada!",
@@ -131,7 +125,7 @@ export function BuchaInoxClient() {
         </div>
       </section>
 
-      {/* Introdução */}
+      {/* Introdução (Primeira Dobra Atualizada) */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
@@ -141,16 +135,19 @@ export function BuchaInoxClient() {
           >
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 mb-6 uppercase">Excelência em Componentes Industriais</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              A <strong>Aceros</strong> é referência na fabricação de buchas de aço inox para ambientes que exigem máxima resistência mecânica e durabilidade. Nossos componentes são projetados para suportar atmosferas corrosivas, altas temperaturas e regimes de trabalho severos.
+              A <strong>Aceros</strong> é a divisão especializada em aços inoxidáveis do grupo <strong>Metalúrgica Daniela</strong>. Somos referência na fabricação de buchas de aço inox para ambientes que exigem máxima resistência mecânica e durabilidade.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Diferente de fornecedores comuns, a Aceros <strong>não comercializa produtos commodities ou tubos de prateleira</strong>. Nossa engenharia de materiais é focada em <strong>fabricar sob medida peças de alta liga pelo processo de centrifugação (seguindo a norma ASTM A297)</strong>, integradas à usinagem de precisão.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Cada peça passa por um rigoroso controle de fabricação, garantindo que as tolerâncias dimensionais e as propriedades metalúrgicas atendam perfeitamente à necessidade do seu projeto, reduzindo paradas inesperadas e aumentando a vida útil dos seus equipamentos.
+              Nossos componentes são projetados para suportar atmosferas corrosivas, altas temperaturas e regimes de trabalho severos, com alta resistência ao calor, abrasão e oxidação severa, garantindo a performance ideal para cada projeto.
             </p>
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
             <Image 
-              src="https://i.imgur.com/Pwf19y1.jpeg" 
-              alt="Processo de fabricação de buchas na Aceros" 
+              src="https://i.imgur.com/xww7SmN.jpeg" 
+              alt="Processo de fabricação e usinagem de bucha de aço inox Aceros" 
               fill 
               className="object-cover"
             />
@@ -177,19 +174,19 @@ export function BuchaInoxClient() {
                 <tbody className="divide-y divide-slate-100">
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Ligas Disponíveis</td>
-                    <td className="p-6">Aço Inox 304, 304L, 316, 316L, 310, 420 (Consulte outras ligas)</td>
+                    <td className="p-6">Aço Inox 304, 304L, 316, 316L, 310, 420 e Ligas conforme ASTM A297</td>
                   </tr>
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Processo Produtivo</td>
                     <td className="p-6">Fundição por Centrifugação ou Estática + Usinagem CNC de Precisão</td>
                   </tr>
                   <tr>
-                    <td className="p-6 font-bold bg-slate-50/50">Dimensões</td>
-                    <td className="p-6">Diâmetros e comprimentos sob consulta (Fabricação conforme projeto)</td>
+                    <td className="p-6 font-bold bg-slate-50/50">Aplicações Especiais</td>
+                    <td className="p-6">Buchas para ponta de Sink Roll e Rolos de Forno (Furnace Roll)</td>
                   </tr>
                   <tr>
-                    <td className="p-6 font-bold bg-slate-50/50">Tolerâncias</td>
-                    <td className="p-6">Rigoroso controle dimensional conforme normas técnicas</td>
+                    <td className="p-6 font-bold bg-slate-50/50">Dimensões</td>
+                    <td className="p-6">Diâmetros e comprimentos sob consulta (Fabricação conforme projeto)</td>
                   </tr>
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Normas Técnicas</td>
@@ -253,14 +250,14 @@ export function BuchaInoxClient() {
             {[
               { icon: HardHat, label: 'Mineração' },
               { icon: Factory, label: 'Siderurgia' },
+              { icon: Layers, label: 'Sink Roll & Pontas' },
+              { icon: Thermometer, label: 'Rolos de Forno' },
               { icon: FlaskConical, label: 'Indústria Química' },
               { icon: Building2, label: 'Cimento' },
               { icon: FileText, label: 'Papel e Celulose' },
               { icon: Utensils, label: 'Indústria Alimentícia' },
-              { icon: Thermometer, label: 'Tratamento Térmico' },
               { icon: Droplets, label: 'Petroquímica' },
-              { icon: Zap, label: 'Energia' },
-              { icon: Settings, label: 'Bens de Capital' }
+              { icon: Zap, label: 'Energia' }
             ].map((app, i) => (
               <div key={i} className="flex flex-col items-center gap-4 p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
                 <app.icon className="h-10 w-10 text-accent" />
@@ -269,39 +266,36 @@ export function BuchaInoxClient() {
             ))}
           </div>
           <p className="mt-16 text-center text-slate-300 max-w-3xl mx-auto">
-            Atendemos desde projetos específicos até fornecimentos contínuos para indústrias de diversos portes, garantindo sempre a mesma qualidade e compromisso.
+            Atendemos desde projetos específicos até fornecimentos contínuos para indústrias de diversos portes, garantindo sempre a mesma qualidade e compromisso da Metalúrgica Daniela.
           </p>
         </div>
       </section>
 
-      {/* Galeria */}
+      {/* Galeria de Fotos Realistas (Atualizada) */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 uppercase">Galeria de Produtos</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { id: 'product-bushing-main', alt: 'Bucha em aço inox para aplicação industrial' },
-              { id: 'product-bushing-gallery-1', alt: 'Bucha de aço inox usinada com precisão' },
-              { id: 'product-bushing-gallery-2', alt: 'Bucha flangeada em aço inoxidável' },
-              { id: 'product-bushing-gallery-3', alt: 'Controle de qualidade dimensional de buchas' }
-            ].map((img, i) => {
-              const placeholder = PlaceHolderImages.find(p => p.id === img.id);
-              return (
-                <div key={i} className="group relative aspect-square rounded-xl overflow-hidden shadow-md">
-                  <Image 
-                    src={placeholder?.imageUrl || ''} 
-                    alt={img.alt} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">
-                    {img.alt}
-                  </div>
+              { url: 'https://i.imgur.com/hSWH72Z.jpeg', alt: 'Bucha de aço inox usinada sob medida' },
+              { url: 'https://i.imgur.com/nI88ITf.jpeg', alt: 'Bucha para ponta de sink roll / aplicação industrial' },
+              { url: 'https://i.imgur.com/sQxxJW6.jpeg', alt: 'Acabamento e usinagem de alta precisão' },
+              { url: 'https://i.imgur.com/tfqsUjH.jpeg', alt: 'Inspeção e controle de qualidade dimensional' }
+            ].map((img, i) => (
+              <div key={i} className="group relative aspect-square rounded-xl overflow-hidden shadow-md">
+                <Image 
+                  src={img.url} 
+                  alt={img.alt} 
+                  fill 
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  {img.alt}
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -317,11 +311,11 @@ export function BuchaInoxClient() {
             <div className="space-y-12">
               {[
                 { step: '01', title: 'Recebimento do Projeto', desc: 'Análise detalhada dos requisitos fornecidos.' },
-                { step: '02', title: 'Análise Técnica', desc: 'Validação de tolerâncias e viabilidade produtiva.' },
-                { step: '03', title: 'Definição da Liga', desc: 'Escolha do material ideal para o regime de trabalho.' },
-                { step: '04', title: 'Fabricação', desc: 'Geração do blank por centrifugação e usinagem CNC.' },
-                { step: '05', title: 'Controle Dimensional', desc: 'Medição precisa para garantir conformidade com o desenho.' },
-                { step: '06', title: 'Inspeção de Qualidade', desc: 'Ensaios não destrutivos e testes de dureza.' },
+                { step: '02', title: 'Análise Técnica', desc: 'Validação de tolerâncias e viabilidade produtiva pela engenharia.' },
+                { step: '03', title: 'Definição da Liga', desc: 'Escolha do material ideal (ASTM A297) para o regime de trabalho.' },
+                { step: '04', title: 'Fabricação', desc: 'Geração do blank por centrifugação e usinagem CNC de precisão.' },
+                { step: '05', title: 'Controle Dimensional', desc: 'Medição precisa para garantir conformidade total com o desenho.' },
+                { step: '06', title: 'Inspeção de Qualidade', desc: 'Ensaios não destrutivos e testes metalúrgicos rigorosos.' },
                 { step: '07', title: 'Entrega', desc: 'Expedição segura para qualquer local do Brasil.' }
               ].map((item, i) => (
                 <div key={i} className={`flex flex-col md:flex-row items-center gap-8 ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
@@ -359,12 +353,12 @@ export function BuchaInoxClient() {
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 mb-8 uppercase">Por que escolher a Aceros</h2>
               <div className="space-y-6">
                 {[
-                  'Fabricação própria com tecnologia de ponta',
-                  'Equipe técnica altamente especializada',
-                  'Atendimento consultivo e focado no seu projeto',
-                  'Desenvolvimento de componentes sob medida',
-                  'Alto padrão de qualidade e rastreabilidade',
-                  'Soluções robustas para aplicações críticas'
+                  'Divisão de inoxidáveis do Grupo Metalúrgica Daniela',
+                  'Fabricação própria via centrifugação ASTM A297',
+                  'Especialistas em Sink Roll e Furnace Roll',
+                  'Desenvolvimento de componentes sob medida (não commodities)',
+                  'Alto padrão de qualidade e rastreabilidade total',
+                  'Soluções robustas para aplicações de calor e abrasão extrema'
                 ].map((point, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
@@ -382,7 +376,7 @@ export function BuchaInoxClient() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold uppercase mb-6">Precisa de uma Bucha de Aço Inox?</h2>
           <p className="text-xl max-w-3xl mx-auto mb-10 text-accent-foreground/90">
-            Nossa equipe técnica está pronta para analisar seu projeto e indicar a melhor solução para sua necessidade.
+            Nossa equipe técnica está pronta para analisar seu projeto e indicar a melhor solução para sua necessidade industrial.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="bg-slate-900 text-white hover:bg-black px-12 py-8 text-xl">
@@ -407,31 +401,31 @@ export function BuchaInoxClient() {
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left font-bold text-lg">Quais ligas de aço inox a Aceros utiliza na fabricação de buchas?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Trabalhamos com as principais ligas do mercado, incluindo 304, 304L, 316, 316L, 310 e 420, garantindo resistência à corrosão e durabilidade conforme sua aplicação.
+                Trabalhamos com as principais ligas do mercado, incluindo 304, 304L, 316, 316L, 310 e 420, além de ligas especiais fundidas sob a norma ASTM A297 para alta performance.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-left font-bold text-lg">A Aceros produz buchas conforme desenho técnico?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Sim, nossa especialidade é a fabricação sob medida seguindo rigorosamente o desenho técnico ou projeto fornecido pelo cliente.
+                Sim, nossa especialidade é a fabricação 100% sob medida seguindo rigorosamente o desenho técnico ou projeto fornecido pelo cliente, integrando fundição e usinagem.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left font-bold text-lg">Qual o prazo médio de entrega para as buchas sob medida?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Quais as vantagens das buchas para Sink Roll da Aceros?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                O prazo varia conforme a complexidade do projeto e a quantidade solicitada, mas priorizamos a agilidade sem abrir mão do controle de qualidade rigoroso.
+                Nossas buchas para ponta de Sink Roll são usinadas em ligas de alta resistência mecânica e química, projetadas para operar submersas em banhos de galvanização, reduzindo o desgaste e paradas de linha.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger className="text-left font-bold text-lg">Atendem pedidos de pequenas quantidades?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Vocês trabalham com produtos commodities?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Atendemos demandas de diversos volumes, desde projetos específicos e peças únicas até fornecimentos contínuos para manutenção industrial.
+                Não. A Aceros é uma fábrica de peças técnicas de alta liga. Nosso foco é a solução de engenharia para problemas de calor e abrasão, não comercializamos tubos comuns de prateleira.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">
-              <AccordionTrigger className="text-left font-bold text-lg">Quais os diâmetros máximos e mínimos produzidos?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Qual a norma técnica base para a fabricação das buchas?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Nossa capacidade produtiva é versátil. Recomendamos o envio do seu desenho técnico para uma análise detalhada das dimensões requeridas.
+                Nossa fabricação por centrifugação segue rigorosamente as normas internacionais, com destaque para a ASTM A297, garantindo total rastreabilidade e integridade metalúrgica.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -444,7 +438,7 @@ export function BuchaInoxClient() {
           <div className="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl overflow-hidden">
             <div className="p-8 md:p-12 bg-slate-900 text-white flex flex-col justify-center">
               <h2 className="font-headline text-3xl font-bold uppercase mb-6">Solicite seu Orçamento Gratuito</h2>
-              <p className="text-slate-400 mb-8">Nossos especialistas estão prontos para analisar seu projeto e enviar uma proposta comercial competitiva.</p>
+              <p className="text-slate-400 mb-8">Nossos especialistas estão prontos para analisar seu projeto e enviar uma proposta comercial competitiva do Grupo Daniela.</p>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Phone className="h-6 w-6 text-accent" /></div>
@@ -487,7 +481,7 @@ export function BuchaInoxClient() {
                   </div>
                   <div>
                     <label className="text-sm font-bold text-slate-700 block mb-2">Mensagem / Especificações</label>
-                    <Textarea placeholder="Descreva as dimensões, ligas ou envie o link do seu projeto..." rows={4} className="bg-slate-50 border-slate-200" />
+                    <Textarea placeholder="Descreva as dimensões, ligas ou mencione Sink Roll/Furnace Roll..." rows={4} className="bg-slate-50 border-slate-200" />
                   </div>
                 </div>
                 <p className="text-[10px] text-slate-500">Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa Política de Privacidade.</p>
@@ -513,7 +507,7 @@ export function BuchaInoxClient() {
                 className="mb-6"
               />
               <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-                Líder na fabricação de buchas e componentes em aços inoxidáveis e ligas especiais para alta performance industrial.
+                Líder na fabricação de buchas e componentes técnicos em aços inoxidáveis do Grupo Metalúrgica Daniela.
               </p>
             </div>
             <div>
@@ -541,7 +535,7 @@ export function BuchaInoxClient() {
             </div>
           </div>
           <div className="mt-16 pt-8 border-t text-center text-xs text-slate-400">
-            &copy; {new Date().getFullYear()} Aceros Inoxidáveis. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Aceros Inoxidáveis - Grupo Metalúrgica Daniela. Todos os direitos reservados.
           </div>
         </div>
       </footer>
