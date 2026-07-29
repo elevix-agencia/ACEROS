@@ -27,7 +27,8 @@ import {
   MapPin,
   Send,
   Plus,
-  Layers
+  Layers,
+  Award
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -125,7 +126,7 @@ export function BuchaInoxClient() {
         </div>
       </section>
 
-      {/* Introdução (Primeira Dobra Atualizada) */}
+      {/* Introdução (Reforço Técnico Daniela) */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
@@ -135,13 +136,10 @@ export function BuchaInoxClient() {
           >
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 mb-6 uppercase">Excelência em Componentes Industriais</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              A <strong>Aceros</strong> é a divisão especializada em aços inoxidáveis do grupo <strong>Metalúrgica Daniela</strong>. Somos referência na fabricação de buchas de aço inox para ambientes que exigem máxima resistência mecânica e durabilidade.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Diferente de fornecedores comuns, a Aceros <strong>não comercializa produtos commodities ou tubos de prateleira</strong>. Nossa engenharia de materiais é focada em <strong>fabricar sob medida peças de alta liga pelo processo de centrifugação (seguindo a norma ASTM A297)</strong>, integradas à usinagem de precisão.
+              A Aceros é a divisão de aços inoxidáveis do grupo <strong>Metalúrgica Daniela</strong>. Não comercializamos produtos commodities ou tubos comuns de prateleira: nossa fábrica produz via <strong>processo de centrifugação</strong> peças de alta liga resistentes a <strong>calor, abrasão e oxidação severa (norma ASTM A297)</strong>, usinadas sob medida para o projeto do cliente.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Nossos componentes são projetados para suportar atmosferas corrosivas, altas temperaturas e regimes de trabalho severos, com alta resistência ao calor, abrasão e oxidação severa, garantindo a performance ideal para cada projeto.
+              Nossa engenharia é especialista no fornecimento de <strong>buchas de alta precisão para ponta de Sink Roll</strong> (rolos para potes de zinco em linhas de galvanização) e <strong>Rolos de Forno (Furnace Rolls para tratamento térmico)</strong>, garantindo tolerância milimétrica e vida útil prolongada sob as condições mais severas de trabalho.
             </p>
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
@@ -213,12 +211,12 @@ export function BuchaInoxClient() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+              { icon: Award, title: 'Peça de Alta Liga', text: 'Fabricação própria por centrifugação + Engenharia de Materiais + Usinagem CNC sob medida (Não Commodity).' },
               { icon: Settings, title: 'Fabricação sob medida', text: 'Produção customizada para atender requisitos exatos de montagem.' },
               { icon: ShieldCheck, title: 'Alta resistência ao desgaste', text: 'Ligas selecionadas para máxima performance em ambientes abrasivos.' },
               { icon: CheckCircle, title: 'Controle rigoroso de qualidade', text: 'Inspeções em todas as etapas do processo produtivo.' },
               { icon: Users, title: 'Atendimento técnico especializado', text: 'Suporte de engenheiros especialistas em materiais metálicos.' },
               { icon: FileText, title: 'Produção conforme projeto', text: 'Capacidade de interpretar e executar projetos complexos.' },
-              { icon: PenTool, title: 'Conforme desenho técnico', text: 'Precisão milimétrica seguindo seus desenhos originais.' },
               { icon: Factory, title: 'Soluções personalizadas', text: 'Desenvolvimento conjunto de soluções para problemas de corrosão.' },
               { icon: Globe, title: 'Atendimento para todo o Brasil', text: 'Logística ágil para atender indústrias em qualquer região.' },
               { icon: HardHat, title: 'Fabricação para aplicações severas', text: 'Especialistas em componentes que operam no limite térmico e químico.' }
@@ -271,7 +269,7 @@ export function BuchaInoxClient() {
         </div>
       </section>
 
-      {/* Galeria de Fotos Realistas (Atualizada) */}
+      {/* Galeria de Fotos Realistas */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -391,7 +389,7 @@ export function BuchaInoxClient() {
         </div>
       </section>
 
-      {/* FAQ Accordion */}
+      {/* FAQ Accordion (Ajuste Fino de Copy) */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
@@ -399,33 +397,33 @@ export function BuchaInoxClient() {
           </div>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger className="text-left font-bold text-lg">Quais ligas de aço inox a Aceros utiliza na fabricação de buchas?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Quais as vantagens das buchas para Sink Roll da Aceros?</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-base">
+                Fabricadas por centrifugação em ligas ASTM A297, oferecem altíssima resistência à oxidação térmica e corrosão pelo zinco fundido nas linhas de galvanização, garantindo menor desgaste na ponta dos rolos e reduzindo paradas não programadas.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-left font-bold text-lg">Vocês trabalham com produtos commodities / tubos de prateleira?</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-base">
+                Não. A Aceros é focada exclusivamente em engenharia e fabricação sob medida de componentes de alta liga centrifugados e usinados conforme desenho técnico.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-left font-bold text-lg">Qual a aplicação das buchas para Rolos de Forno (Furnace Rolls)?</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground text-base">
+                São aplicadas na sustentação e acoplamento dos rolos centrifugados que operam dentro de fornos de tratamento térmico sob temperaturas extremas.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-left font-bold text-lg">Quais ligas de aço inox a Aceros utiliza na fabricação?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
                 Trabalhamos com as principais ligas do mercado, incluindo 304, 304L, 316, 316L, 310 e 420, além de ligas especiais fundidas sob a norma ASTM A297 para alta performance.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2">
+            <AccordionItem value="item-5">
               <AccordionTrigger className="text-left font-bold text-lg">A Aceros produz buchas conforme desenho técnico?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
                 Sim, nossa especialidade é a fabricação 100% sob medida seguindo rigorosamente o desenho técnico ou projeto fornecido pelo cliente, integrando fundição e usinagem.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-left font-bold text-lg">Quais as vantagens das buchas para Sink Roll da Aceros?</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                Nossas buchas para ponta de Sink Roll são usinadas em ligas de alta resistência mecânica e química, projetadas para operar submersas em banhos de galvanização, reduzindo o desgaste e paradas de linha.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger className="text-left font-bold text-lg">Vocês trabalham com produtos commodities?</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                Não. A Aceros é uma fábrica de peças técnicas de alta liga. Nosso foco é a solução de engenharia para problemas de calor e abrasão, não comercializamos tubos comuns de prateleira.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-5">
-              <AccordionTrigger className="text-left font-bold text-lg">Qual a norma técnica base para a fabricação das buchas?</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                Nossa fabricação por centrifugação segue rigorosamente as normas internacionais, com destaque para a ASTM A297, garantindo total rastreabilidade e integridade metalúrgica.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

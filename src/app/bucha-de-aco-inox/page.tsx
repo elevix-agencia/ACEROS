@@ -17,7 +17,31 @@ export default function BuchaInoxPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Quais ligas de aço inox a Aceros utiliza na fabricação de buchas?",
+        "name": "Quais as vantagens das buchas para Sink Roll da Aceros?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fabricadas por centrifugação em ligas ASTM A297, oferecem altíssima resistência à oxidação térmica e corrosão pelo zinco fundido nas linhas de galvanização, garantindo menor desgaste na ponta dos rolos e reduzindo paradas não programadas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês trabalham com produtos commodities / tubos de prateleira?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. A Aceros é focada exclusivamente em engenharia e fabricação sob medida de componentes de alta liga centrifugados e usinados conforme desenho técnico."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a aplicação das buchas para Rolos de Forno (Furnace Rolls)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "São aplicadas na sustentação e acoplamento dos rolos centrifugados que operam dentro de fornos de tratamento térmico sob temperaturas extremas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais ligas de aço inox a Aceros utiliza na fabricação?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Trabalhamos com as principais ligas do mercado, incluindo 304, 304L, 316, 316L, 310 e 420, além de ligas especiais fundidas sob a norma ASTM A297 para alta performance."
@@ -28,31 +52,7 @@ export default function BuchaInoxPage() {
         "name": "A Aceros produz buchas conforme desenho técnico?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, nossa especialidade é a fabricação sob medida seguindo rigorosamente o desenho técnico ou projeto fornecido pelo cliente, integrando fundição por centrifugação e usinagem CNC."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quais as vantagens das buchas para Sink Roll da Aceros?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nossas buchas para ponta de Sink Roll são usinadas em ligas de alta resistência mecânica e química, projetadas para operar submersas em banhos de galvanização, reduzindo o desgaste e paradas de linha."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Vocês trabalham com produtos commodities?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Não. A Aceros é uma fábrica de peças técnicas de alta liga. Nosso foco é a solução de engenharia para problemas de calor e abrasão, não comercializamos tubos comuns de prateleira."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Qual a norma técnica base para a fabricação das buchas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nossa fabricação por centrifugação segue rigorosamente as normas internacionais, com destaque para a ASTM A297, garantindo total rastreabilidade e integridade metalúrgica."
+          "text": "Sim, nossa especialidade é a fabricação 100% sob medida seguindo rigorosamente o desenho técnico ou projeto fornecido pelo cliente, integrando fundição por centrifugação e usinagem CNC."
         }
       }
     ]
