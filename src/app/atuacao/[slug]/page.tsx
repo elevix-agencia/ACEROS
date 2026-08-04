@@ -5,7 +5,7 @@ import pt from '@/i18n/pt.json'; // Usando como fallback/padrão
 import type { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 // Esta função informa ao Next.js quais slugs existem para gerar as páginas estáticas
@@ -21,7 +21,7 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const slug = params.slug;
+  const { slug } = await params;
   // Carrega os dados do setor para pegar o título. Usamos 'pt' como base.
   const sector = sectorsData(pt).find(s => s.id === slug);
  
@@ -33,9 +33,10 @@ export async function generateMetadata(
 
 // Esta é agora uma página de servidor (Server Component).
 // Os dados são preparados aqui e passados para o componente cliente.
-export default async function ExpertiseDetailsPage({ params }: { params: { slug: string } }) {
+export default async function ExpertiseDetailsPage({ params }: Props) {
+  const { slug } = await params;
   // Carregamos e processamos os dados aqui, no servidor.
-  const sectorData = sectorsData(pt).find(s => s.id === params.slug);
+  const sectorData = sectorsData(pt).find(s => s.id === slug);
 
   if (!sectorData) {
     return <div className="pt-24 text-center">Setor não encontrado.</div>;

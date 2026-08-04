@@ -43,6 +43,11 @@ import { cn } from '@/lib/utils';
 import { NavalCatalogSection } from '@/components/sections/NavalCatalogSection';
 import { NavalProductCard } from '@/components/sections/NavalProductCard';
 
+export type ExpertisePageData = {
+  sector: Sector;
+  translations: any;
+};
+
 export function ExpertiseDetailsClient({
   pageData,
 }: {
