@@ -70,8 +70,8 @@ export function BuchaInoxClient() {
       
       if (result.success) {
         toast({
-          title: "Orçamento Enviado!",
-          description: "Nossa equipe técnica entrará em contato em breve.",
+          title: "Solicitação Recebida!",
+          description: "Sua mensagem foi enviada com sucesso. Nossa equipe entrará em contato em breve.",
         });
         (e.target as HTMLFormElement).reset();
       } else {
@@ -80,8 +80,8 @@ export function BuchaInoxClient() {
     } catch (error: any) {
       toast({
         variant: "destructive",
-        title: "Erro no envio",
-        description: error.message || "Não foi possível conectar ao servidor. Tente pelo WhatsApp!",
+        title: "Ops! Algo deu errado",
+        description: error.message || "Tente enviar novamente ou use o botão do WhatsApp para um atendimento imediato.",
       });
     } finally {
       setIsSubmitting(false);

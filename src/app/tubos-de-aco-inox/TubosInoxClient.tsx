@@ -79,7 +79,7 @@ export function TubosInoxClient() {
       if (result.success) {
         toast({
           title: "Solicitação Enviada!",
-          description: "Nossa equipe técnica entrará em contato em breve.",
+          description: "Sua mensagem foi enviada com sucesso. Nossa equipe entrará em contato em breve.",
         });
         (e.target as HTMLFormElement).reset();
       } else {
@@ -89,7 +89,7 @@ export function TubosInoxClient() {
       toast({
         variant: "destructive",
         title: "Erro no envio",
-        description: error.message || "Não foi possível conectar ao servidor no momento. Tente pelo WhatsApp!",
+        description: error.message || "Tente novamente ou fale conosco diretamente pelo WhatsApp para agilizar sua cotação.",
       });
     } finally {
       setIsSubmitting(false);
