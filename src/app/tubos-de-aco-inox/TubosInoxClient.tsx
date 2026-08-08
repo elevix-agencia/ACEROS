@@ -1,7 +1,6 @@
-
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -29,7 +28,8 @@ import {
   Plus,
   Layers,
   Award,
-  Search
+  Search,
+  Loader2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -49,20 +49,49 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import { saveContactMessage } from '@/lib/contact-actions';
 
 export function TubosInoxClient() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const whatsappNumber = '5511000000000';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de um orçamento para Tubos de Aço Inox sob medida.');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Conversão: Envio do formulário de tubos disparado.');
-    toast({
-      title: "Solicitação Enviada!",
-      description: "Nossa equipe técnica entrará em contato em breve.",
-    });
-    (e.target as HTMLFormElement).reset();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      company: formData.get('company') as string,
+      phone: formData.get('phone') as string,
+      city: formData.get('city') as string,
+      email: formData.get('email') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      const result = await saveContactMessage(data);
+      
+      if (result.success) {
+        toast({
+          title: "Solicitação Enviada!",
+          description: "Nossa equipe técnica entrará em contato em breve.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Erro ao enviar",
+        description: "Não foi possível enviar sua solicitação agora. Tente pelo WhatsApp!",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const galleryItems = [
@@ -121,11 +150,13 @@ export function TubosInoxClient() {
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-xl px-10 py-8">
                 <Link href="#form-landing-tubos">Solicitar Orçamento</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white border-white text-black hover:bg-slate-100 text-xl px-10 py-8">
-                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" className="track-whatsapp-tubos">
-                  Falar com um Especialista
-                </Link>
-              </Button>
+              <Link 
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} 
+                target="_blank" 
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background h-11 rounded-md border-white text-black hover:bg-white text-xl px-10 py-8 track-whatsapp-tubos"
+              >
+                Falar com um Especialista
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -282,7 +313,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Galeria Técnica Expandida */}
+      {/* Galeria */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -320,7 +351,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Processo de Fabricação (Timeline) */}
+      {/* Processo */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -445,36 +476,45 @@ export function TubosInoxClient() {
                 <div className="grid grid-cols-1 gap-4">
                   <div>
                     <label className="text-sm font-bold text-slate-700 block mb-2">Nome Completo *</label>
-                    <Input placeholder="Seu nome" required className="bg-slate-50 border-slate-200" />
+                    <Input name="name" placeholder="Seu nome" required className="bg-slate-50 border-slate-200" disabled={isSubmitting} />
                   </div>
                   <div>
                     <label className="text-sm font-bold text-slate-700 block mb-2">Empresa *</label>
-                    <Input placeholder="Nome da empresa" required className="bg-slate-50 border-slate-200" />
+                    <Input name="company" placeholder="Nome da empresa" required className="bg-slate-50 border-slate-200" disabled={isSubmitting} />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-bold text-slate-700 block mb-2">Telefone / WhatsApp *</label>
-                      <Input placeholder="(00) 00000-0000" required className="bg-slate-50 border-slate-200" />
+                      <Input name="phone" placeholder="(00) 00000-0000" required className="bg-slate-50 border-slate-200" disabled={isSubmitting} />
                     </div>
                     <div>
                       <label className="text-sm font-bold text-slate-700 block mb-2">Cidade / UF</label>
-                      <Input placeholder="Cidade - UF" className="bg-slate-50 border-slate-200" />
+                      <Input name="city" placeholder="Cidade - UF" className="bg-slate-50 border-slate-200" disabled={isSubmitting} />
                     </div>
                   </div>
                   <div>
                     <label className="text-sm font-bold text-slate-700 block mb-2">E-mail Corporativo</label>
-                    <Input type="email" placeholder="email@empresa.com.br" className="bg-slate-50 border-slate-200 track-email-tubos" />
+                    <Input name="email" type="email" placeholder="email@empresa.com.br" className="bg-slate-50 border-slate-200 track-email-tubos" disabled={isSubmitting} />
                   </div>
                   <div>
                     <label className="text-sm font-bold text-slate-700 block mb-2">Mensagem / Especificações</label>
-                    <Textarea placeholder="Descreva diâmetros, espessuras, comprimentos e ligas desejadas ou mencione o estágio de acabamento..." rows={4} className="bg-slate-50 border-slate-200" />
+                    <Textarea name="message" placeholder="Descreva diâmetros, espessuras, comprimentos e ligas desejadas ou mencione o estágio de acabamento..." rows={4} className="bg-slate-50 border-slate-200" disabled={isSubmitting} />
                   </div>
                 </div>
                 <p className="text-[10px] text-slate-500">
                   Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa <Link href="/politica-de-privacidade" className="underline hover:text-accent">Política de Privacidade</Link>.
                 </p>
-                <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-8 text-xl font-bold uppercase tracking-wider">
-                  <Send className="mr-2 h-5 w-5" /> Solicitar Orçamento
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-8 text-xl font-bold uppercase tracking-wider">
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-5 w-5" /> Solicitar Orçamento
+                    </>
+                  )}
                 </Button>
               </form>
             </div>
@@ -482,7 +522,7 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Rodapé Landing Page */}
+      {/* Rodapé */}
       <footer className="bg-white border-t py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

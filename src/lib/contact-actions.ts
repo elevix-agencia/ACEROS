@@ -8,11 +8,11 @@ import { z } from 'zod';
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: 'O nome é obrigatório.' }),
-  email: z.string().email({ message: 'Por favor, insira um email válido.' }),
+  company: z.string().min(2, { message: 'A empresa é obrigatória.' }),
+  email: z.string().email({ message: 'Por favor, insira um email válido.' }).optional().or(z.literal('')),
   phone: z.string().min(10, { message: 'Por favor, insira um telefone válido.' }),
-  message: z
-    .string()
-    .min(10, { message: 'A mensagem deve ter pelo menos 10 caracteres.' }),
+  city: z.string().optional(),
+  message: z.string().optional(),
 });
 
 export async function saveContactMessage(
@@ -29,6 +29,7 @@ export async function saveContactMessage(
     const contactData = {
       ...validatedData,
       createdAt: serverTimestamp(),
+      source: 'landing-page'
     };
 
     const collectionRef = collection(firestore, 'contacts');
@@ -40,13 +41,12 @@ export async function saveContactMessage(
         requestResourceData: contactData,
       });
       errorEmitter.emit('permission-error', permissionError);
-      // Throw a specific error to be caught by the outer try/catch
-      throw new Error('Failed to save message due to a permission issue.');
+      throw new Error('Erro de permissão ao salvar os dados.');
     });
 
     return { success: true };
   } catch (error: unknown) {
-    let errorMessage = 'An unexpected error occurred.';
+    let errorMessage = 'Ocorreu um erro inesperado.';
     if (error instanceof Error) {
       errorMessage = error.message;
     }
