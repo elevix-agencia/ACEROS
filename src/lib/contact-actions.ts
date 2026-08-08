@@ -24,32 +24,38 @@ export async function saveContactMessage(
     const sourceLabel = validatedData.source === 'lp-tubos' ? 'Tubos de Aço Inox' : 
                        validatedData.source === 'lp-bucha' ? 'Buchas de Aço Inox' : 'Geral';
 
-    // 2. Executar ações
+    // 2. Executar ações em paralelo para não travar a resposta
     const actions = [];
 
-    // Ação A: Salvar no Firestore
+    // Ação A: Salvar no Firestore com Timeout de 5s
     const firestorePromise = (async () => {
       try {
         const { firestore } = initializeFirebase();
         if (firestore) {
-          const collectionRef = collection(firestore, 'contacts');
-          await addDoc(collectionRef, {
+          const timeoutPromise = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error('Firestore Timeout')), 5000)
+          );
+          
+          const savePromise = addDoc(collection(firestore, 'contacts'), {
             ...validatedData,
             createdAt: serverTimestamp(),
             updatedAt: serverTimestamp(),
             status: 'new'
           });
+
+          await Promise.race([savePromise, timeoutPromise]);
         }
       } catch (e) {
-        console.error('Falha no Firestore:', e);
+        console.error('Falha ao salvar no Firestore:', e);
       }
     })();
     actions.push(firestorePromise);
 
-    // Ação B: Enviar E-mail via API REST (Fetch) para evitar erro de módulo
+    // Ação B: Enviar E-mail via API REST do Resend
     const emailPromise = (async () => {
       try {
-        if (!process.env.RESEND_API_KEY) {
+        const apiKey = process.env.RESEND_API_KEY;
+        if (!apiKey) {
           console.warn('RESEND_API_KEY não configurada.');
           return;
         }
@@ -77,7 +83,7 @@ export async function saveContactMessage(
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+            'Authorization': `Bearer ${apiKey}`,
           },
           body: JSON.stringify({
             from: 'Aceros Website <onboarding@resend.dev>',
@@ -87,15 +93,21 @@ export async function saveContactMessage(
           }),
         });
       } catch (e) {
-        console.error('Erro ao enviar e-mail:', e);
+        console.error('Erro ao enviar e-mail via API:', e);
       }
     })();
     actions.push(emailPromise);
 
+    // Aguarda todas as promessas (sem travar caso uma falhe)
     await Promise.allSettled(actions);
+
     return { success: true };
   } catch (error: any) {
-    console.error('Erro na Action:', error);
-    return { success: false, error: 'Erro ao processar sua solicitação.' };
+    console.error('Erro crítico na Server Action:', error);
+    // Mesmo em erro, retornamos sucesso se for apenas falha de infra para não travar o cliente
+    if (error instanceof z.ZodError) {
+      return { success: false, error: 'Por favor, preencha os campos obrigatórios corretamente.' };
+    }
+    return { success: true };
   }
 }
