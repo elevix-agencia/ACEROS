@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Linkedin, Twitter, Mail, MapPin, Phone } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter, Mail, MapPin, Phone, ShieldCheck } from 'lucide-react';
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { useLanguage } from '@/hooks/use-language';
@@ -64,6 +64,15 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/politica-de-privacidade"
+                  className="text-sm font-semibold text-slate-900 transition-colors hover:text-primary flex items-center gap-2"
+                >
+                  <ShieldCheck className="h-4 w-4" />
+                  Política de Privacidade
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -76,11 +85,11 @@ export function Footer() {
                 </div>
                  <div className="flex items-center gap-3 justify-start">
                   <Mail className="h-4 w-4 flex-shrink-0 text-primary" />
-                  <span>{t.footer.email}</span>
+                  <span>vendas@aceros.com.br</span>
                 </div>
                 <div className="flex items-center gap-3 justify-start">
                   <Phone className="h-4 w-4 flex-shrink-0 text-primary" />
-                  <span>{t.footer.phone}</span>
+                  <span>+55 (11) 5555-6551</span>
                 </div>
               </div>
           </div>

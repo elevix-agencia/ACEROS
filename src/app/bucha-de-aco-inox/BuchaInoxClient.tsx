@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -46,7 +47,7 @@ import { saveContactMessage } from '@/lib/contact-actions';
 export function BuchaInoxClient() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const whatsappNumber = '5511000000000';
+  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de um orçamento para Buchas de Aço Inox sob medida.');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -61,6 +62,7 @@ export function BuchaInoxClient() {
       city: formData.get('city') as string,
       email: formData.get('email') as string,
       message: formData.get('message') as string,
+      source: 'lp-bucha'
     };
 
     try {
@@ -75,11 +77,11 @@ export function BuchaInoxClient() {
       } else {
         throw new Error(result.error);
       }
-    } catch (error) {
+    } catch (error: any) {
       toast({
         variant: "destructive",
         title: "Erro ao enviar",
-        description: "Não foi possível enviar sua solicitação agora. Tente pelo WhatsApp!",
+        description: error.message || "Não foi possível enviar sua solicitação agora. Tente pelo WhatsApp!",
       });
     } finally {
       setIsSubmitting(false);
@@ -470,7 +472,7 @@ export function BuchaInoxClient() {
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Phone className="h-6 w-6 text-accent" /></div>
-                  <Link href="tel:+5511000000000" className="track-telefone hover:text-accent transition-colors">+55 (11) 0000-0000</Link>
+                  <Link href="tel:+551155556551" className="track-telefone hover:text-accent transition-colors">+55 (11) 5555-6551</Link>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Mail className="h-6 w-6 text-accent" /></div>
@@ -513,7 +515,7 @@ export function BuchaInoxClient() {
                   </div>
                 </div>
                 <p className="text-[10px] text-slate-500">
-                  Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa <Link href="/politica-de-privacidade" className="underline hover:text-accent">Política de Privacidade</Link>.
+                  Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa <Link href="/politica-de-privacidade" className="underline font-bold text-slate-900 hover:text-accent">Política de Privacidade</Link>.
                 </p>
                 <Button type="submit" disabled={isSubmitting} className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-8 text-xl font-bold uppercase tracking-wider">
                   {isSubmitting ? (
@@ -552,9 +554,13 @@ export function BuchaInoxClient() {
             <div>
               <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Contato</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
-                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
+                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
+                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
                 <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-accent" /> vendas@aceros.com.br</li>
+                <li className="flex items-start gap-3 text-slate-900 font-medium">
+                  <FileText className="h-4 w-4 text-accent shrink-0" />
+                  <Link href="/politica-de-privacidade" className="hover:underline">Política de Privacidade</Link>
+                </li>
                 <li className="flex items-start gap-3"><MapPin className="h-4 w-4 text-accent shrink-0" /> Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP</li>
               </ul>
             </div>
