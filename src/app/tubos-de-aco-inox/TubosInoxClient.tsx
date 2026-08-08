@@ -52,7 +52,7 @@ import {
 
 export function TubosInoxClient() {
   const { toast } = useToast();
-  const whatsappNumber = '551155556551';
+  const whatsappNumber = '5511000000000';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de um orçamento para Tubos de Aço Inox sob medida.');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -428,7 +428,7 @@ export function TubosInoxClient() {
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Phone className="h-6 w-6 text-accent" /></div>
-                  <Link href="tel:+551155556551" className="track-telefone-tubos hover:text-accent transition-colors">+55 (11) 5555-6551</Link>
+                  <Link href="tel:+5511000000000" className="track-telefone-tubos hover:text-accent transition-colors">+55 (11) 0000-0000</Link>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Mail className="h-6 w-6 text-accent" /></div>
@@ -470,7 +470,9 @@ export function TubosInoxClient() {
                     <Textarea placeholder="Descreva diâmetros, espessuras, comprimentos e ligas desejadas ou mencione o estágio de acabamento..." rows={4} className="bg-slate-50 border-slate-200" />
                   </div>
                 </div>
-                <p className="text-[10px] text-slate-500">Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa Política de Privacidade.</p>
+                <p className="text-[10px] text-slate-500">
+                  Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa <Link href="/politica-de-privacidade" className="underline hover:text-accent">Política de Privacidade</Link>.
+                </p>
                 <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-8 text-xl font-bold uppercase tracking-wider">
                   <Send className="mr-2 h-5 w-5" /> Solicitar Orçamento
                 </Button>
@@ -499,8 +501,8 @@ export function TubosInoxClient() {
             <div>
               <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Contato</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
-                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
+                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
+                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
                 <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-accent" /> vendas@aceros.com.br</li>
                 <li className="flex items-start gap-3"><MapPin className="h-4 w-4 text-accent shrink-0" /> Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP</li>
               </ul>

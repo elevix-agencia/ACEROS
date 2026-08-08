@@ -44,7 +44,7 @@ import { useToast } from '@/hooks/use-toast';
 
 export function BuchaInoxClient() {
   const { toast } = useToast();
-  const whatsappNumber = '551155556551';
+  const whatsappNumber = '5511000000000';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de um orçamento para Buchas de Aço Inox sob medida.');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -103,7 +103,7 @@ export function BuchaInoxClient() {
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-xl px-10 py-8">
                 <Link href="#form-landing-bucha">Solicitar Orçamento</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black text-xl px-10 py-8">
+              <Button asChild size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-black text-xl px-10 py-8 bg-white">
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" className="track-whatsapp">
                   Falar com um Especialista
                 </Link>
@@ -440,7 +440,7 @@ export function BuchaInoxClient() {
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Phone className="h-6 w-6 text-accent" /></div>
-                  <Link href="tel:+551155556551" className="track-telefone hover:text-accent transition-colors">+55 (11) 5555-6551</Link>
+                  <Link href="tel:+5511000000000" className="track-telefone hover:text-accent transition-colors">+55 (11) 0000-0000</Link>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Mail className="h-6 w-6 text-accent" /></div>
@@ -482,7 +482,9 @@ export function BuchaInoxClient() {
                     <Textarea placeholder="Descreva as dimensões, ligas ou mencione Sink Roll/Furnace Roll..." rows={4} className="bg-slate-50 border-slate-200" />
                   </div>
                 </div>
-                <p className="text-[10px] text-slate-500">Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa Política de Privacidade.</p>
+                <p className="text-[10px] text-slate-500">
+                  Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa <Link href="/politica-de-privacidade" className="underline hover:text-accent">Política de Privacidade</Link>.
+                </p>
                 <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-8 text-xl font-bold uppercase tracking-wider">
                   <Send className="mr-2 h-5 w-5" /> Solicitar Orçamento
                 </Button>
@@ -511,8 +513,8 @@ export function BuchaInoxClient() {
             <div>
               <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Contato</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
-                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
+                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
+                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
                 <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-accent" /> vendas@aceros.com.br</li>
                 <li className="flex items-start gap-3"><MapPin className="h-4 w-4 text-accent shrink-0" /> Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP</li>
               </ul>
