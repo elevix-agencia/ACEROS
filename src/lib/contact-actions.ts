@@ -1,3 +1,4 @@
+
 'use server';
 
 import { initializeFirebase } from '@/firebase';
@@ -6,7 +7,7 @@ import { z } from 'zod';
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: 'O nome é obrigatório.' }),
-  company: z.string().min(2, { message: 'A empresa é obrigatória.' }).optional().or(z.literal('')),
+  company: z.string().optional().or(z.literal('')),
   email: z.string().email({ message: 'Por favor, insira um email válido.' }).optional().or(z.literal('')),
   phone: z.string().min(10, { message: 'Por favor, insira um telefone válido.' }),
   city: z.string().optional().or(z.literal('')),
@@ -18,12 +19,12 @@ export async function saveContactMessage(
   data: any
 ): Promise<{ success: boolean; error?: string }> {
   try {
-    // 1. Validar dados (Obrigatório)
+    // 1. Validar dados
     const validatedData = contactSchema.parse(data);
     const sourceLabel = validatedData.source === 'lp-tubos' ? 'Tubos de Aço Inox' : 
                        validatedData.source === 'lp-bucha' ? 'Buchas de Aço Inox' : 'Geral';
 
-    // 2. Executar ações em paralelo para não travar a resposta
+    // 2. Executar ações
     const actions = [];
 
     // Ação A: Salvar no Firestore
@@ -32,27 +33,24 @@ export async function saveContactMessage(
         const { firestore } = initializeFirebase();
         if (firestore) {
           const collectionRef = collection(firestore, 'contacts');
-          await Promise.race([
-            addDoc(collectionRef, {
-              ...validatedData,
-              createdAt: serverTimestamp(),
-              updatedAt: serverTimestamp(),
-              status: 'new'
-            }),
-            new Promise((_, reject) => setTimeout(() => reject(new Error('Firestore Timeout')), 4000))
-          ]);
+          await addDoc(collectionRef, {
+            ...validatedData,
+            createdAt: serverTimestamp(),
+            updatedAt: serverTimestamp(),
+            status: 'new'
+          });
         }
       } catch (e) {
-        console.error('Falha silenciosa no Firestore:', e);
+        console.error('Falha no Firestore:', e);
       }
     })();
     actions.push(firestorePromise);
 
-    // Ação B: Enviar E-mail via API REST do Resend (sem dependência externa)
+    // Ação B: Enviar E-mail via API REST (Fetch) para evitar erro de módulo
     const emailPromise = (async () => {
       try {
         if (!process.env.RESEND_API_KEY) {
-          console.warn('RESEND_API_KEY não configurada. E-mail não enviado.');
+          console.warn('RESEND_API_KEY não configurada.');
           return;
         }
 
@@ -72,7 +70,6 @@ export async function saveContactMessage(
               <strong>Mensagem/Especificações:</strong><br />
               <p style="white-space: pre-wrap;">${validatedData.message || 'Sem mensagem adicional.'}</p>
             </div>
-            <p style="font-size: 10px; color: #999; margin-top: 30px;">Este é um e-mail automático gerado pelo formulário do site Aceros.</p>
           </div>
         `;
 
@@ -85,22 +82,20 @@ export async function saveContactMessage(
           body: JSON.stringify({
             from: 'Aceros Website <onboarding@resend.dev>',
             to: 'vendas@aceros.com.br',
-            subject: `[Novo Lead LP ${sourceLabel}] - ${validatedData.name}`,
+            subject: `[Lead LP ${sourceLabel}] - ${validatedData.name}`,
             html: emailHtml,
           }),
         });
       } catch (e) {
-        console.error('Erro ao enviar e-mail via API REST:', e);
+        console.error('Erro ao enviar e-mail:', e);
       }
     })();
     actions.push(emailPromise);
 
-    // Aguarda todas as ações (mesmo se falharem, retornaremos sucesso para o usuário se a validação passou)
     await Promise.allSettled(actions);
-
     return { success: true };
   } catch (error: any) {
-    console.error('Erro crítico na Server Action:', error);
-    return { success: false, error: 'Ocorreu um erro ao processar sua solicitação.' };
+    console.error('Erro na Action:', error);
+    return { success: false, error: 'Erro ao processar sua solicitação.' };
   }
 }
