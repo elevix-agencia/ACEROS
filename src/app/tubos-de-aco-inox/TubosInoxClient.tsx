@@ -55,7 +55,7 @@ import { saveContactMessage } from '@/lib/contact-actions';
 export function TubosInoxClient() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const whatsappNumber = '551155556551';
+  const whatsappNumber = '5511000000000';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de um orçamento para Tubos de Aço Inox sob medida.');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -88,8 +88,8 @@ export function TubosInoxClient() {
     } catch (error: any) {
       toast({
         variant: "destructive",
-        title: "Erro ao enviar",
-        description: error.message || "Não foi possível enviar sua solicitação agora. Tente pelo WhatsApp!",
+        title: "Erro no envio",
+        description: error.message || "Não foi possível conectar ao servidor no momento. Tente pelo WhatsApp!",
       });
     } finally {
       setIsSubmitting(false);
@@ -461,7 +461,7 @@ export function TubosInoxClient() {
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Phone className="h-6 w-6 text-accent" /></div>
-                  <Link href="tel:+551155556551" className="track-telefone-tubos hover:text-accent transition-colors">+55 (11) 5555-6551</Link>
+                  <Link href="tel:+551100000000" className="track-telefone-tubos hover:text-accent transition-colors">+55 (11) 0000-0000</Link>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Mail className="h-6 w-6 text-accent" /></div>
@@ -543,8 +543,8 @@ export function TubosInoxClient() {
             <div>
               <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Contato</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
-                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
+                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
+                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
                 <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-accent" /> vendas@aceros.com.br</li>
                 <li className="flex items-start gap-3 text-slate-900 font-medium">
                   <FileText className="h-4 w-4 text-accent shrink-0" />

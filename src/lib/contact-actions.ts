@@ -2,8 +2,6 @@
 'use server';
 
 import { initializeFirebase } from '@/firebase';
-import { errorEmitter } from '@/firebase/error-emitter';
-import { FirestorePermissionError } from '@/firebase/errors';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { z } from 'zod';
 
@@ -20,10 +18,15 @@ const contactSchema = z.object({
 export async function saveContactMessage(
   data: any
 ): Promise<{ success: boolean; error?: string }> {
+  // Timeout de segurança de 5 segundos
+  const timeout = new Promise<never>((_, reject) =>
+    setTimeout(() => reject(new Error('Tempo limite de conexão excedido.')), 5000)
+  );
+
   try {
     const { firestore } = initializeFirebase();
     if (!firestore) {
-      throw new Error('Firestore is not initialized.');
+      throw new Error('Firestore não inicializado.');
     }
 
     // Validar dados
@@ -38,25 +41,26 @@ export async function saveContactMessage(
 
     const collectionRef = collection(firestore, 'contacts');
 
-    await addDoc(collectionRef, contactData).catch(serverError => {
-      const permissionError = new FirestorePermissionError({
-        path: collectionRef.path,
-        operation: 'create',
-        requestResourceData: contactData,
-      });
-      errorEmitter.emit('permission-error', permissionError);
-      throw new Error('Erro de permissão no Firestore.');
-    });
+    // Executa a gravação com corrida contra o timeout
+    await Promise.race([
+      addDoc(collectionRef, contactData),
+      timeout
+    ]);
 
     return { success: true };
-  } catch (error: unknown) {
-    console.error('Erro ao salvar contato:', error);
-    let errorMessage = 'Erro ao processar sua solicitação.';
+  } catch (error: any) {
+    console.error('Erro na Server Action saveContactMessage:', error);
+    
+    let errorMessage = 'Não foi possível processar sua solicitação agora.';
+    
     if (error instanceof z.ZodError) {
-      errorMessage = 'Por favor, preencha todos os campos obrigatórios corretamente.';
-    } else if (error instanceof Error) {
-      errorMessage = error.message;
+      errorMessage = 'Por favor, verifique os campos preenchidos.';
+    } else if (error.message === 'Tempo limite de conexão excedido.') {
+      errorMessage = 'O servidor demorou muito para responder. Tente via WhatsApp!';
+    } else if (error.code === 'permission-denied') {
+      errorMessage = 'Erro de permissão no banco de dados.';
     }
+
     return { success: false, error: errorMessage };
   }
 }
