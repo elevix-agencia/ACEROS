@@ -3,6 +3,7 @@
 
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { WhatsAppFloat } from '@/components/layout/whatsapp-float';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase';
 import { LanguageProvider } from '@/hooks/use-language';
@@ -16,6 +17,7 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
         <Header />
         <Template>{children}</Template>
         <Footer />
+        <WhatsAppFloat />
         <Toaster />
       </LanguageProvider>
     </FirebaseClientProvider>
