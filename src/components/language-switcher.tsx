@@ -28,10 +28,15 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="lg" className="flex items-center gap-2 text-lg px-7 py-4">
-          <span>{selectedLanguage.flag}</span>
+        <Button
+          variant="outline"
+          size="lg"
+          className="flex items-center gap-2 text-lg px-7 py-4"
+          aria-label={`Idioma atual: ${selectedLanguage.name}. Clique para trocar.`}
+        >
+          <span aria-hidden="true">{selectedLanguage.flag}</span>
           <span className="hidden sm:inline">{selectedLanguage.name}</span>
-          <Globe className="h-5 w-5 sm:hidden" />
+          <Globe className="h-5 w-5 sm:hidden" aria-hidden="true" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
