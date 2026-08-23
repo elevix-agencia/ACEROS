@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Linkedin, Twitter, Mail, MapPin, Phone, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, Phone, ShieldCheck } from 'lucide-react';
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { useLanguage } from '@/hooks/use-language';
@@ -13,26 +13,20 @@ export function Footer() {
 
   const navLinks = [
       { href: "/sobre", label: t.header.about },
+      { href: "/produtos", label: t.header.products },
       { href: "/qualificacao", label: t.header.qualifications },
       { href: "/contato", label: t.header.contact },
   ];
-
-  const socialLinks = [
-    { href: "#", label: "Twitter", icon: Twitter },
-    { href: "#", label: "Facebook", icon: Facebook },
-    { href: "#", label: "LinkedIn", icon: Linkedin },
-    { href: "#", label: "Instagram", icon: Instagram },
-  ]
 
   return (
     <footer className="bg-secondary text-secondary-foreground border-t">
       <div className="container mx-auto px-4 sm:px-8 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
           <div className="flex flex-col items-start lg:col-span-1 md:col-span-2">
-            <Link href="/" className="mb-4 flex items-center gap-2 transition-transform duration-300 hover:scale-105">
+            <Link href="/" className="mb-4 flex items-center gap-2 transition-transform duration-300 hover:scale-105" aria-label="Aceros — Página inicial">
                 <Image
                     src="/images/imgur/OBD0nJ0.png"
-                    alt="Aceros Logo"
+                    alt="Aceros — Aços Centrifugados"
                     width={200}
                     height={50}
                     className="h-auto w-52"
@@ -42,13 +36,8 @@ export function Footer() {
             <p className="max-w-xs text-sm text-muted-foreground">
               {t.footer.description}
             </p>
-            <div className="mt-6 flex justify-start gap-4">
-              {socialLinks.map(({href, label, icon: Icon}) => (
-                <Link key={label} href={href} aria-label={label} className="text-muted-foreground transition-colors hover:text-primary">
-                  <Icon className="h-6 w-6" />
-                </Link>
-              ))}
-            </div>
+            {/* Social links removidos ate ter os perfis oficiais da Aceros.
+                Quando o Daniel confirmar Instagram/LinkedIn, adicionar aqui. */}
           </div>
 
           <div className="lg:col-span-1">

@@ -40,10 +40,10 @@ export function Header() {
       <div className="header-container container mx-auto px-4 sm:px-8">
         {/* Logo */}
         <div className="header-logo flex-shrink-0">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2" aria-label="Aceros — Página inicial">
             <Image
               src="/images/imgur/OBD0nJ0.png"
-              alt="Aceros Logo"
+              alt="Aceros — Aços Centrifugados"
               width={280}
               height={70}
               priority
