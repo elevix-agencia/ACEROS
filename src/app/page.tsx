@@ -10,6 +10,7 @@ import { MainGallery } from '@/components/sections/main-gallery';
 import { Sectors } from '@/components/sections/sectors';
 import { ManufacturingHistory } from '@/components/sections/manufacturing-history';
 import { ClientLogos } from '@/components/sections/client-logos';
+import { TrustSignals } from '@/components/sections/trust-signals';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -20,6 +21,7 @@ export default function Home() {
       <div className="pt-8 sm:pt-0">
         <About />
       </div>
+      <TrustSignals />
       <Sectors />
       <MainGallery />
       <QualityCta />
