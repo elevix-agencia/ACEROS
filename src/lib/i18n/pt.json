@@ -462,7 +462,7 @@
       "title": "Engenharia Aceros",
       "subtitle": "Inovação e soluções personalizadas.",
       "description": "Nosso time de engenharia desenvolve soluções metalúrgicas personalizadas, otimizando o desempenho de equipamentos e componentes para atender às necessidades específicas de cada cliente. Da concepção à implementação, oferecemos consultoria e suporte técnico especializado.",
-      "cardDescription": "Servicios de consultoria e desenvolvimento de soluções metalúrgicas personalizadas.",
+      "cardDescription": "Serviços de consultoria e desenvolvimento de soluções metalúrgicas personalizadas.",
       "icon": "Lightbulb",
       "solutions": {
         "engineering_metallurgical_consulting": {
@@ -483,7 +483,7 @@
       "title": "Certificados",
       "subtitle": "Qualidade Assegurada por Padrões Globais",
       "description": "A excelência e a confiabilidade de nossos produtos são comprovadas através das certificações emitidas pelas mais respeitadas classificadoras industriais e navais do mundo.",
-      "cardDescription": "Explore nossas certificações e selos de qualidade que garantissem nossa excelência.",
+      "cardDescription": "Explore nossas certificações e selos de qualidade que garantem nossa excelência.",
       "icon": "Award",
       "solutions": []
     }
