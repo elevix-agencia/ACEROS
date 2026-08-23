@@ -72,11 +72,31 @@ export default function BuchaInoxPage() {
     ]
   };
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Bucha de Aço Inox Centrifugada Sob Medida",
+    "image": "https://aceros.com.br/images/imgur/OBD0nJ0.png",
+    "description": "Buchas de aço inox usinadas sob medida (ASTM A297), especialistas em bucha para ponta de Sink Roll e Furnace Roll. Alta resistência a calor, abrasão e corrosão em ambientes de galvanização e tratamento térmico.",
+    "brand": { "@type": "Brand", "name": "Aceros" },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Aceros Centrifugados LTDA",
+      "url": "https://aceros.com.br",
+      "parentOrganization": { "@type": "Organization", "name": "Metalúrgica Daniela" }
+    },
+    "category": "Buchas industriais em aço inoxidável"
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <BuchaInoxClient />
     </>

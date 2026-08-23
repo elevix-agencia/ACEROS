@@ -72,11 +72,31 @@ export default function TubosInoxPage() {
     ]
   };
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Tubo de Aço Inox Centrifugado Sob Medida",
+    "image": "https://aceros.com.br/images/imgur/OBD0nJ0.png",
+    "description": "Tubos de aço inox fabricados por centrifugação (ASTM A297), sob medida para aplicações industriais. Ligas 304, 304L, 316, 316L, 310, 420 e superligas. Resistência a calor, abrasão e oxidação.",
+    "brand": { "@type": "Brand", "name": "Aceros" },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Aceros Centrifugados LTDA",
+      "url": "https://aceros.com.br",
+      "parentOrganization": { "@type": "Organization", "name": "Metalúrgica Daniela" }
+    },
+    "category": "Tubos industriais em aço inoxidável"
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
       <TubosInoxClient />
     </>
