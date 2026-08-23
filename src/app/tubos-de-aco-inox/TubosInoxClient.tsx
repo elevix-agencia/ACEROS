@@ -496,7 +496,7 @@ export function TubosInoxClient() {
                   </div>
                   <div>
                     <label className="text-sm font-bold text-slate-700 block mb-2">E-mail Corporativo</label>
-                    <Input name="email" type="email" placeholder="email@empresa.com.br" className="bg-slate-50 border-slate-200 track-email-tubos" disabled={isSubmitting} />
+                    <Input name="email" type="email" placeholder="email@empresa.com.br" required className="bg-slate-50 border-slate-200 track-email-tubos" disabled={isSubmitting} />
                   </div>
                   <div>
                     <label className="text-sm font-bold text-slate-700 block mb-2">Mensagem / Especificações</label>

@@ -4,7 +4,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, MapPin, Phone, ShieldCheck } from 'lucide-react';
-import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { useLanguage } from '@/hooks/use-language';
 
@@ -84,12 +83,13 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-1">
-            <h3 className="mb-4 font-headline text-lg font-semibold">{t.footer.newsletter}</h3>
-            <p className="mb-4 text-sm text-muted-foreground">{t.footer.newsletter_prompt}</p>
-            <form className="flex flex-col sm:flex-row gap-2">
-              <Input type="email" placeholder="email@email.com" className="bg-background" />
-              <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform duration-300 hover:scale-105">{t.footer.subscribe}</Button>
-            </form>
+            <h3 className="mb-4 font-headline text-lg font-semibold">Fale com a Aceros</h3>
+            <p className="mb-4 text-sm text-muted-foreground">
+              Solicite um orçamento sob medida. Nossa equipe técnica retorna com uma proposta comercial competitiva.
+            </p>
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform duration-300 hover:scale-105 w-full sm:w-auto">
+              <Link href="/contato">Solicitar orçamento</Link>
+            </Button>
           </div>
         </div>
 
