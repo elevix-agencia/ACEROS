@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidade | Aceros',
+  title: 'Política de Privacidade',
   description:
     'Política de Privacidade da Aceros. Tratamento de dados pessoais conforme a LGPD (Lei nº 13.709/2018).',
   alternates: { canonical: '/politica-de-privacidade' },
