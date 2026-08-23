@@ -104,7 +104,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
+        <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground space-y-1">
+          <p>Aceros Centrifugados LTDA &middot; CNPJ 29.506.517/0001-39</p>
+          <p>Divisão de aços inoxidáveis do Grupo Metalúrgica Daniela</p>
           <p>&copy; {new Date().getFullYear()} {t.footer.rights_reserved}</p>
         </div>
       </div>
