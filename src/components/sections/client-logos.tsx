@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
 import Image from 'next/image';
@@ -12,7 +12,7 @@ export function ClientLogos() {
       className="relative w-full py-20 sm:py-32 text-white"
     >
       <Image
-        src="https://i.imgur.com/9Zqa9hs.png"
+        src="/images/imgur/9Zqa9hs.png"
         alt="Fundo de uma usina siderúrgica moderna em operação"
         fill
         className="object-cover"

@@ -1,4 +1,4 @@
-
+﻿
 'use client';
 
 import React, { useState } from 'react';
@@ -97,13 +97,13 @@ export function TubosInoxClient() {
   };
 
   const galleryItems = [
-    { url: 'https://i.imgur.com/5Lwzpoh.jpeg', alt: 'Tubo centrifugado bruto (como sai do molde, alta densidade estrutural)' },
-    { url: 'https://i.imgur.com/prSJDU6.jpeg', alt: 'Usinagem de precisão CNC e usinagem da ponta (munhão)' },
-    { url: 'https://i.imgur.com/IFba45o.jpeg', alt: 'Acabamento acetinado em fase de usinagem intermediária' },
-    { url: 'https://i.imgur.com/x36bQK3.jpeg', alt: 'Peça acabada, usinada e polida (com revenido do tratamento térmico)' },
-    { url: 'https://i.imgur.com/LijCHmF.jpeg', alt: 'Comparativo: do tubo bruto centrifugado até a peça final usinada' },
-    { url: 'https://i.imgur.com/IN1l7Mp.jpeg', alt: 'Inspeção técnica e medição de tolerâncias rigorosas' },
-    { url: 'https://i.imgur.com/LijCHmF.jpeg', alt: 'Tubos de alta liga para fornos e aplicações de desgaste extremo' },
+    { url: '/images/imgur/5Lwzpoh.jpeg', alt: 'Tubo centrifugado bruto (como sai do molde, alta densidade estrutural)' },
+    { url: '/images/imgur/prSJDU6.jpeg', alt: 'Usinagem de precisão CNC e usinagem da ponta (munhão)' },
+    { url: '/images/imgur/IFba45o.jpeg', alt: 'Acabamento acetinado em fase de usinagem intermediária' },
+    { url: '/images/imgur/x36bQK3.jpeg', alt: 'Peça acabada, usinada e polida (com revenido do tratamento térmico)' },
+    { url: '/images/imgur/LijCHmF.jpeg', alt: 'Comparativo: do tubo bruto centrifugado até a peça final usinada' },
+    { url: '/images/imgur/IN1l7Mp.jpeg', alt: 'Inspeção técnica e medição de tolerâncias rigorosas' },
+    { url: '/images/imgur/LijCHmF.jpeg', alt: 'Tubos de alta liga para fornos e aplicações de desgaste extremo' },
   ];
 
   return (
@@ -120,7 +120,7 @@ export function TubosInoxClient() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-slate-900">
         <Image 
-          src="https://i.imgur.com/x36bQK3.jpeg" 
+          src="/images/imgur/x36bQK3.jpeg" 
           alt="Tubo centrifugado de aço inox usinado para aplicação industrial - Aceros" 
           fill 
           className="object-cover opacity-40"
@@ -194,7 +194,7 @@ export function TubosInoxClient() {
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
             <Image 
-              src="https://i.imgur.com/IFba45o.jpeg" 
+              src="/images/imgur/IFba45o.jpeg" 
               alt="Tubo centrifugado de alta liga em processo de usinagem" 
               fill 
               className="object-cover"
@@ -530,7 +530,7 @@ export function TubosInoxClient() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
               <Image 
-                src="https://i.imgur.com/OBD0nJ0.png" 
+                src="/images/imgur/OBD0nJ0.png" 
                 alt="Aceros Logo" 
                 width={180} 
                 height={50} 

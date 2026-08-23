@@ -1,4 +1,4 @@
-
+﻿
 'use client';
 
 import React, { useState } from 'react';
@@ -102,7 +102,7 @@ export function BuchaInoxClient() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-slate-900">
         <Image 
-          src="https://i.imgur.com/DpEHlwU.png" 
+          src="/images/imgur/DpEHlwU.png" 
           alt="Produção industrial de buchas de aço inox" 
           fill 
           className="object-cover opacity-30"
@@ -176,7 +176,7 @@ export function BuchaInoxClient() {
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
             <Image 
-              src="https://i.imgur.com/xww7SmN.jpeg" 
+              src="/images/imgur/xww7SmN.jpeg" 
               alt="Processo de fabricação e usinagem de bucha de aço inox Aceros" 
               fill 
               className="object-cover"
@@ -309,10 +309,10 @@ export function BuchaInoxClient() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { url: 'https://i.imgur.com/hSWH72Z.jpeg', alt: 'Bucha de aço inox usinada sob medida' },
-              { url: 'https://i.imgur.com/nI88ITf.jpeg', alt: 'Bucha para ponta de sink roll / aplicação industrial' },
-              { url: 'https://i.imgur.com/sQxxJW6.jpeg', alt: 'Acabamento e usinagem de alta precisão' },
-              { url: 'https://i.imgur.com/tfqsUjH.jpeg', alt: 'Inspeção e controle de qualidade dimensional' }
+              { url: '/images/imgur/hSWH72Z.jpeg', alt: 'Bucha de aço inox usinada sob medida' },
+              { url: '/images/imgur/nI88ITf.jpeg', alt: 'Bucha para ponta de sink roll / aplicação industrial' },
+              { url: '/images/imgur/sQxxJW6.jpeg', alt: 'Acabamento e usinagem de alta precisão' },
+              { url: '/images/imgur/tfqsUjH.jpeg', alt: 'Inspeção e controle de qualidade dimensional' }
             ].map((img, i) => (
               <div key={i} className="group relative aspect-square rounded-xl overflow-hidden shadow-md">
                 <Image 
@@ -373,7 +373,7 @@ export function BuchaInoxClient() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1 relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
               <Image 
-                src="https://i.imgur.com/2tolqXg.jpeg" 
+                src="/images/imgur/2tolqXg.jpeg" 
                 alt="Equipe técnica Aceros em operação" 
                 fill 
                 className="object-cover"
@@ -541,7 +541,7 @@ export function BuchaInoxClient() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
               <Image 
-                src="https://i.imgur.com/OBD0nJ0.png" 
+                src="/images/imgur/OBD0nJ0.png" 
                 alt="Aceros Logo" 
                 width={180} 
                 height={50} 

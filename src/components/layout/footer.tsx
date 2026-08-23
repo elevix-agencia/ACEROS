@@ -1,4 +1,4 @@
-
+﻿
 'use client';
 
 import Link from 'next/link';
@@ -31,7 +31,7 @@ export function Footer() {
           <div className="flex flex-col items-start lg:col-span-1 md:col-span-2">
             <Link href="/" className="mb-4 flex items-center gap-2 transition-transform duration-300 hover:scale-105">
                 <Image
-                    src="https://i.imgur.com/OBD0nJ0.png"
+                    src="/images/imgur/OBD0nJ0.png"
                     alt="Aceros Logo"
                     width={200}
                     height={50}

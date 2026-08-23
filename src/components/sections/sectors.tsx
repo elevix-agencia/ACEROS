@@ -1,4 +1,4 @@
-
+﻿
 'use client';
 
 import Link from 'next/link';
@@ -32,21 +32,21 @@ export function Sectors() {
   const getImageUrl = (id: string) => {
     switch (id) {
       case 'mineracao':
-        return 'https://i.imgur.com/WnOxyac.png';
+        return '/images/imgur/WnOxyac.png';
       case 'naval':
-        return 'https://i.imgur.com/jNzhuvc.png';
+        return '/images/imgur/jNzhuvc.png';
       case 'siderurgia':
-        return 'https://i.imgur.com/u6BgJEO.jpeg';
+        return '/images/imgur/u6BgJEO.jpeg';
       case 'oleo_e_gas':
-        return 'https://i.imgur.com/Voi7tth.png';
+        return '/images/imgur/Voi7tth.png';
       case 'guseira':
-        return 'https://i.imgur.com/NJyU0UM.png';
+        return '/images/imgur/NJyU0UM.png';
       case 'tratamento_termico':
-        return 'https://i.imgur.com/vMd79CP.jpeg';
+        return '/images/imgur/vMd79CP.jpeg';
       case 'engenharia':
-        return 'https://i.imgur.com/rzsiIFj.png';
+        return '/images/imgur/rzsiIFj.png';
       case 'certificados':
-        return 'https://i.imgur.com/edUTdWf.jpeg';
+        return '/images/imgur/edUTdWf.jpeg';
       default:
         return '';
     }

@@ -1,4 +1,4 @@
-
+﻿
 'use client';
 
 import { useState } from 'react';
@@ -41,7 +41,7 @@ export function Header() {
         <div className="header-logo flex-shrink-0">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="https://i.imgur.com/OBD0nJ0.png"
+              src="/images/imgur/OBD0nJ0.png"
               alt="Aceros Logo"
               width={280}
               height={70}
@@ -86,7 +86,7 @@ export function Header() {
               <SheetHeader>
                 <SheetTitle>
                    <Image
-                      src="https://i.imgur.com/OBD0nJ0.png"
+                      src="/images/imgur/OBD0nJ0.png"
                       alt="Aceros Logo"
                       width={280}
                       height={70}
