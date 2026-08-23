@@ -2,6 +2,7 @@ import { sectorsData } from '@/lib/expertise-data';
 import { ExpertiseDetailsClient } from './ExpertiseDetailsClient';
 import pt from '@/i18n/pt.json';
 import type { Metadata } from 'next';
+import { sectorSeoContent } from '@/lib/sector-seo-content';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -63,11 +64,28 @@ export default async function ExpertiseDetailsPage({ params }: Props) {
     translations: pt,
   };
 
+  const seoContent = sectorSeoContent[slug];
+
   return (
     <>
       <h1 className="sr-only">
         {sectorData.title} — Aços Centrifugados Aceros para o Setor de {sectorData.title}
       </h1>
+
+      {seoContent && (
+        <section className="sr-only" aria-hidden="false">
+          <p>{seoContent.intro}</p>
+          {seoContent.paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+          <ul>
+            {seoContent.keyPoints.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <ExpertiseDetailsClient pageData={pageData} />
     </>
   );
