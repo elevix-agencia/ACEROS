@@ -1,14 +1,12 @@
-
-import { sectorsData, Sector } from '@/lib/expertise-data';
+import { sectorsData } from '@/lib/expertise-data';
 import { ExpertiseDetailsClient } from './ExpertiseDetailsClient';
-import pt from '@/i18n/pt.json'; // Usando como fallback/padrão
-import type { Metadata, ResolvingMetadata } from 'next'
+import pt from '@/i18n/pt.json';
+import type { Metadata } from 'next';
 
 type Props = {
-  params: Promise<{ slug: string }>
-}
+  params: Promise<{ slug: string }>;
+};
 
-// Esta função informa ao Next.js quais slugs existem para gerar as páginas estáticas
 export async function generateStaticParams() {
   const sectors = sectorsData(pt);
   return sectors.map((sector) => ({
@@ -16,27 +14,45 @@ export async function generateStaticParams() {
   }));
 }
 
-// Esta função gera os metadados dinâmicos (título da página, etc.)
 export async function generateMetadata(
   { params }: Props,
-  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { slug } = await params;
-  // Carrega os dados do setor para pegar o título. Usamos 'pt' como base.
-  const sector = sectorsData(pt).find(s => s.id === slug);
- 
-  return {
-    title: `${sector?.title || 'Setor'} | Aceros`,
-    description: sector?.description || 'Soluções em aços e ligas especiais.',
+  const sector = sectorsData(pt).find((s) => s.id === slug);
+
+  if (!sector) {
+    return {
+      title: 'Setor não encontrado',
+      description: 'Página não encontrada.',
+    };
   }
+
+  const title = `${sector.title} — Aços Centrifugados para o Setor`;
+  const description =
+    sector.description ||
+    `Peças em aços inoxidáveis centrifugados fabricadas sob medida para o setor ${sector.title.toLowerCase()}.`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: `/atuacao/${slug}` },
+    openGraph: {
+      title: `${sector.title} — Aceros`,
+      description,
+      url: `/atuacao/${slug}`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${sector.title} — Aceros`,
+      description,
+    },
+  };
 }
 
-// Esta é agora uma página de servidor (Server Component).
-// Os dados são preparados aqui e passados para o componente cliente.
 export default async function ExpertiseDetailsPage({ params }: Props) {
   const { slug } = await params;
-  // Carregamos e processamos os dados aqui, no servidor.
-  const sectorData = sectorsData(pt).find(s => s.id === slug);
+  const sectorData = sectorsData(pt).find((s) => s.id === slug);
 
   if (!sectorData) {
     return <div className="pt-24 text-center">Setor não encontrado.</div>;
@@ -44,10 +60,15 @@ export default async function ExpertiseDetailsPage({ params }: Props) {
 
   const pageData = {
     sector: sectorData,
-    translations: pt, // Passa todas as traduções para o cliente
+    translations: pt,
   };
 
-
-  // O componente cliente agora recebe todos os dados de que precisa como props.
-  return <ExpertiseDetailsClient pageData={pageData} />;
+  return (
+    <>
+      <h1 className="sr-only">
+        {sectorData.title} — Aços Centrifugados Aceros para o Setor de {sectorData.title}
+      </h1>
+      <ExpertiseDetailsClient pageData={pageData} />
+    </>
+  );
 }

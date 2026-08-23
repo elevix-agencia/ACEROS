@@ -25,6 +25,7 @@ export function Header() {
   const navLinks = [
     { href: '/', label: t.header.home },
     { href: '/sobre', label: t.header.about },
+    { href: '/produtos', label: t.header.products },
     { href: '/#sectors', label: t.header.expertise },
     { href: '/qualificacao', label: t.header.qualifications },
   ];

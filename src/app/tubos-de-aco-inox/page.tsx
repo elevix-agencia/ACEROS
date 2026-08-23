@@ -3,10 +3,24 @@ import { Metadata } from 'next';
 import { TubosInoxClient } from './TubosInoxClient';
 
 export const metadata: Metadata = {
-  title: 'Tubos de Aço Inox Sob Medida | Fabricante Industrial | Aceros',
-  description: 'A Aceros fabrica tubos de aço inox e tubos centrifugados sob medida para aplicações industriais. Especialistas em alta temperatura e abrasão. Solicite orçamento.',
+  title: 'Tubos de Aço Inox Sob Medida | Fabricante Industrial',
+  description:
+    'A Aceros fabrica tubos de aço inox e tubos centrifugados sob medida para aplicações industriais. Especialistas em alta temperatura e abrasão. Solicite orçamento.',
   alternates: {
-    canonical: 'https://www.aceros.com.br/tubos-de-aco-inox',
+    canonical: '/tubos-de-aco-inox',
+  },
+  openGraph: {
+    title: 'Tubos de Aço Inox Sob Medida — Aceros',
+    description:
+      'Tubos centrifugados ASTM A297 em ligas 304, 316, 310 e mais. Fabricação sob medida para siderurgia, petroquímica e tratamento térmico.',
+    url: '/tubos-de-aco-inox',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tubos de Aço Inox Sob Medida — Aceros',
+    description:
+      'Tubos centrifugados ASTM A297 para aplicações severas. Fabricação sob medida.',
   },
 };
 

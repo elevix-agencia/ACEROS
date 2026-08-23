@@ -5,8 +5,16 @@ import pt from '@/i18n/pt.json';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: `Engenharia | Aceros`,
-  description: 'Inovação e soluções personalizadas em engenharia metalúrgica.',
+  title: 'Engenharia Metalúrgica — Projetos Sob Medida',
+  description:
+    'Engenharia de materiais Aceros: desenvolvimento de projetos de peças centrifugadas em ligas ASTM A297. Análise estrutural, cálculo de espessura, seleção de liga e simulação de comportamento térmico.',
+  alternates: { canonical: '/engenharia' },
+  openGraph: {
+    title: 'Engenharia Metalúrgica Aceros — Projetos Sob Medida',
+    description:
+      'Engenharia de materiais, análise estrutural e desenvolvimento de peças centrifugadas em aços inoxidáveis.',
+    url: '/engenharia',
+  },
 };
 
 

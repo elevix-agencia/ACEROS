@@ -3,10 +3,24 @@ import { Metadata } from 'next';
 import { BuchaInoxClient } from './BuchaInoxClient';
 
 export const metadata: Metadata = {
-  title: 'Bucha de Aço Inox | Fabricação Sob Medida | Aceros',
-  description: 'Fabricamos buchas de aço inox sob medida pelo processo de centrifugação (ASTM A297). Especialistas em Sink Roll e Furnace Roll. Solicite seu orçamento.',
+  title: 'Bucha de Aço Inox | Fabricação Sob Medida',
+  description:
+    'Fabricamos buchas de aço inox sob medida pelo processo de centrifugação (ASTM A297). Especialistas em Sink Roll e Furnace Roll. Solicite seu orçamento.',
   alternates: {
-    canonical: 'https://www.aceros.com.br/bucha-de-aco-inox',
+    canonical: '/bucha-de-aco-inox',
+  },
+  openGraph: {
+    title: 'Bucha de Aço Inox Sob Medida — Aceros',
+    description:
+      'Buchas centrifugadas ASTM A297 para Sink Roll e Furnace Roll. Alta resistência a calor, abrasão e corrosão em ambientes de galvanização e tratamento térmico.',
+    url: '/bucha-de-aco-inox',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bucha de Aço Inox Sob Medida — Aceros',
+    description:
+      'Buchas centrifugadas para Sink Roll e Furnace Roll. Fabricação sob medida.',
   },
 };
 
