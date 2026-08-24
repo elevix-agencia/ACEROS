@@ -472,7 +472,7 @@ export function BuchaInoxClient() {
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Phone className="h-6 w-6 text-accent" /></div>
-                  <Link href="tel:+551100000000" className="track-telefone hover:text-accent transition-colors">+55 (11) 0000-0000</Link>
+                  <Link href="tel:+551155556551" className="track-telefone hover:text-accent transition-colors">+55 (11) 5555-6551</Link>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Mail className="h-6 w-6 text-accent" /></div>
@@ -480,7 +480,7 @@ export function BuchaInoxClient() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><MapPin className="h-6 w-6 text-accent" /></div>
-                  <span className="text-sm">Av. Eng. Luiz Carlos Berrini, 1376, São Paulo/SP</span>
+                  <span className="text-sm">Rua Alfa, 301, Bairro do Una, Itaquaquecetuba/SP</span>
                 </div>
               </div>
             </div>
@@ -554,21 +554,21 @@ export function BuchaInoxClient() {
             <div>
               <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Contato</h4>
               <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
-                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 0000-0000</li>
+                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
+                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
                 <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-accent" /> vendas@aceros.com.br</li>
                 <li className="flex items-start gap-3 text-slate-900 font-medium">
                   <FileText className="h-4 w-4 text-accent shrink-0" />
                   <Link href="/politica-de-privacidade" className="hover:underline">Política de Privacidade</Link>
                 </li>
-                <li className="flex items-start gap-3"><MapPin className="h-4 w-4 text-accent shrink-0" /> Av. Eng. Luiz Carlos Berrini, 1376, Monções, São Paulo/SP</li>
+                <li className="flex items-start gap-3"><MapPin className="h-4 w-4 text-accent shrink-0" /> Rua Alfa, 301, Bairro do Una, Itaquaquecetuba/SP</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Nossa Localização</h4>
               <div className="rounded-xl overflow-hidden h-40 border shadow-sm grayscale hover:grayscale-0 transition-all">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3268953186254!2d-46.69639892550993!3d-23.59253456241042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce572f41e57c69%3A0x7769a7c973a95898!2sAv.%20Engenheiro%20Lu%C3%ADs%20Carlos%20Berrini%2C%201376%20-%20Cidade%20Mon%C3%A7%C3%B5es%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004571-000%2C%20Brazil!5e0!3m2!1sen!2sus!4v1721758838384!5m2!1sen!2sus"
+                  src="https://www.google.com/maps?q=Rua+Alfa,+301,+Bairro+do+Una,+Itaquaquecetuba+SP,+08599-670&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

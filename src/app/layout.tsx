@@ -1,4 +1,4 @@
-
+﻿
 import type { Metadata } from 'next';
 import './globals.css';
 import { AppProviders } from './providers';
@@ -85,10 +85,10 @@ const organizationSchema = {
     'Divisão de aços inoxidáveis do Grupo Metalúrgica Daniela. Fabricação sob medida de tubos, buchas e componentes centrifugados em ligas especiais (ASTM A297).',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Av. Eng. Luiz Carlos Berrini, 1376',
-    addressLocality: 'São Paulo',
+    streetAddress: 'Rua Alfa, 301',
+    addressLocality: 'Itaquaquecetuba',
     addressRegion: 'SP',
-    postalCode: '04571-000',
+    postalCode: '08599-670',
     addressCountry: 'BR',
   },
   areaServed: {

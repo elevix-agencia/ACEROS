@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, Phone, ShieldCheck } from 'lucide-react';
+import { Clock, Mail, MapPin, Phone, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useLanguage } from '@/hooks/use-language';
 
@@ -78,6 +78,13 @@ export function Footer() {
                 <div className="flex items-center gap-3 justify-start">
                   <Phone className="h-4 w-4 flex-shrink-0 text-primary" />
                   <span>+55 (11) 5555-6551</span>
+                </div>
+                <div className="flex items-start gap-3 justify-start">
+                  <Clock className="h-4 w-4 mt-1 flex-shrink-0 text-primary" />
+                  <span>
+                    Seg a Qui: 07:30 às 17:30<br />
+                    Sex: 07:30 às 16:30
+                  </span>
                 </div>
               </div>
           </div>

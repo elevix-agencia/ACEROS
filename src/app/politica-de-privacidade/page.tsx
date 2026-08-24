@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidade',
@@ -33,7 +33,7 @@ export default function PoliticaPrivacidadePage() {
           1. Quem somos
         </h2>
         <p>
-          A Aceros — Aços Centrifugados é a divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, inscrita no CNPJ nº 29.506.517/0001-39, com sede na Av. Eng. Luiz Carlos Berrini, 1376, Cidade Monções, São Paulo/SP, CEP 04571-000. A Aceros atua como controladora dos dados pessoais tratados, nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
+          A Aceros — Aços Centrifugados é a divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, inscrita no CNPJ nº 29.506.517/0001-39, com sede na Rua Alfa, 301, Bairro do Una, Itaquaquecetuba/SP, CEP 08599-670. A Aceros atua como controladora dos dados pessoais tratados, nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
         </p>
 
         <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">

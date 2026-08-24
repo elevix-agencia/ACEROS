@@ -13,22 +13,22 @@ const certifications = [
   {
     icon: Award,
     title: 'ISO 9001:2015',
-    description: 'Gestão da Qualidade certificada e revisada em 2019',
+    description: 'Certificado nº 60300915 QM15 — emitido pela DQS GmbH (Alemanha) com acreditação DAkkS e IQNET. Válido até novembro/2028.',
   },
   {
     icon: ShieldCheck,
-    title: 'ABS Certified',
-    description: 'Aprovado pelo American Bureau of Shipping para setor naval',
+    title: 'Grupo Metalúrgica Daniela',
+    description: 'Homologada por sociedades classificadoras internacionais para setor naval e industrial: ABS, RBNA e RINA.',
   },
   {
     icon: ShieldCheck,
     title: 'AWS D1.1 & ASME',
-    description: 'Procedimentos de soldagem qualificados EPS, RQPS e RQSO',
+    description: 'Procedimentos de soldagem qualificados (EPS, RQPS e RQSO) conforme normas internacionais.',
   },
   {
     icon: ShieldCheck,
-    title: 'RBNA / RINA',
-    description: 'Homologado por sociedades classificadoras internacionais',
+    title: 'Rastreabilidade Total',
+    description: 'Cada peça fabricada com laudo metalúrgico, análise química, ensaio de dureza e ultrassom.',
   },
 ];
 

@@ -1,11 +1,11 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 // Nota: numero placeholder — substituir pelo WhatsApp comercial real da Aceros
 // quando o cliente confirmar (hoje aponta pro telefone da Metalurgica Daniela)
-const WHATSAPP_NUMBER = '551146442969';
+const WHATSAPP_NUMBER = '551155556551';
 const DEFAULT_MESSAGE = encodeURIComponent(
   'Olá! Vim pelo site da Aceros e gostaria de solicitar um orçamento.'
 );
