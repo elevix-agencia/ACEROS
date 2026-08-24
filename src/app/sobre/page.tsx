@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { About } from '@/components/sections/about';
 import { LocationMap } from '@/components/sections/location-map';
 import { MainGallery } from '@/components/sections/main-gallery';
-import { Testimonials } from '@/components/sections/testimonials';
+// Testimonials removido: continham depoimentos ficticios de empresas reais
+// (Petrobras, Vale, Gerdau, etc.) sem autorizacao — risco juridico serio.
+// Reintroduzir apenas com depoimentos reais + termo de autorizacao assinado.
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 
 export const metadata: Metadata = {
@@ -24,7 +26,6 @@ export default function SobrePage() {
       <h1 className="sr-only">Sobre a Aceros — Divisão de Aços Inoxidáveis do Grupo Metalúrgica Daniela</h1>
       <About />
       <MainGallery />
-      <Testimonials />
       <LocationMap />
       <WhatsAppCta />
     </div>
