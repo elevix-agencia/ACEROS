@@ -406,6 +406,57 @@ export function BuchaInoxClient() {
         </div>
       </section>
 
+      {/* Certificação ISO 9001:2015 - Selo de Confiança */}
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
+                <Award className="h-4 w-4" />
+                Certificação Internacional
+              </div>
+              <h2 className="font-headline text-3xl md:text-5xl font-bold uppercase leading-tight mb-6">
+                ISO 9001:2015 <span className="text-accent">Certificada</span>
+              </h2>
+              <p className="text-lg text-slate-300 leading-relaxed mb-6">
+                Nosso Sistema de Gestão da Qualidade é auditado e certificado pela
+                <strong className="text-white"> DQS GmbH (Alemanha)</strong>, um dos organismos mais respeitados de certificação do mundo,
+                com acreditação <strong className="text-white">DAkkS</strong> e membro da <strong className="text-white">IQNet</strong>.
+              </p>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="bg-white/5 border border-slate-700 rounded-lg p-4">
+                  <div className="text-slate-400 uppercase text-xs mb-1">Certificado</div>
+                  <div className="text-white font-mono font-bold">60300915 QM15</div>
+                </div>
+                <div className="bg-white/5 border border-slate-700 rounded-lg p-4">
+                  <div className="text-slate-400 uppercase text-xs mb-1">Válido até</div>
+                  <div className="text-white font-bold">19/11/2028</div>
+                </div>
+              </div>
+              <p className="text-slate-400 text-sm mt-6 italic">
+                Cada bucha sai da nossa fábrica com rastreabilidade total, laudo metalúrgico, ensaios de dureza,
+                análise química e ultrassom realizados em nosso laboratório próprio.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-accent/20 to-transparent rounded-3xl p-12 border border-accent/30 flex flex-col items-center justify-center text-center">
+                <Award className="h-24 w-24 text-accent mb-6" />
+                <div className="text-white text-4xl font-headline font-bold mb-2">DQS</div>
+                <div className="text-slate-400 text-sm uppercase tracking-widest mb-6">Deutsche Qualitäts Zertifizierung</div>
+                <div className="flex gap-3 text-xs text-slate-300">
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-slate-600">DAkkS</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-slate-600">IQNet</span>
+                  <span className="bg-white/10 px-3 py-1 rounded-full border border-slate-600">ISO 9001:2015</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Intermediário */}
       <section className="py-20 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 text-center">
