@@ -101,7 +101,7 @@ export function TubosInoxClient() {
     { url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-02.jpg', alt: 'Tubo de aço inox bruto pronto para usinagem' },
     { url: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-01.jpg', alt: 'Tubo de aço inox após usinagem de precisão CNC' },
     { url: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-02.jpg', alt: 'Tubo de aço inox usinado — usinagem da ponta (munhão)' },
-    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-01.jpg', alt: 'Tubo de aço inox usinado e polido — peça acabada com revenido' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg', alt: 'Tubo de aço inox usinado e polido — peça acabada com revenido' },
     { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-02.jpg', alt: 'Tubo de aço inox polido, acabamento espelhado' },
     { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg', alt: 'Tubo de aço inox — peça acabada, controle dimensional rigoroso' },
     { url: '/images/aceros/tubos/tubo-aco-inox-misto-aceros-01.jpg', alt: 'Tubo de aço inox com acabamento misto (usinado + polido)' },
@@ -121,7 +121,7 @@ export function TubosInoxClient() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-slate-900">
         <Image
-          src="/images/aceros/tubos/tubo-aco-inox-polido-aceros-01.jpg"
+          src="/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg"
           alt="Tubo de aço inox centrifugado, usinado e polido — fabricação Aceros"
           fill
           sizes="100vw"
