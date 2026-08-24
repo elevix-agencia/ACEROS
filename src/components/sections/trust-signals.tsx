@@ -5,7 +5,7 @@ import { Award, Factory, Flame, Layers, ShieldCheck, Sparkles } from 'lucide-rea
 const stats = [
   { number: '10', label: 'anos no mercado', sub: 'especialistas em centrifugação' },
   { number: 'ASTM', label: 'A297', sub: 'ligas HK, HH, HP e superligas' },
-  { number: '3', label: 'países atendidos', sub: 'Portugal, EUA e Itália' },
+  { number: '3+', label: 'países atendidos', sub: 'Portugal, EUA, Itália e outros' },
   { number: '100%', label: 'sob medida', sub: 'projetos por desenho técnico' },
 ];
 
