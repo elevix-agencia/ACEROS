@@ -45,24 +45,8 @@ export function Products() {
   const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
   const products: Product[] = [
-    {
-      id: 'itrac-seal',
-      name: t.products.itrac_seal_name,
-      description: t.products.itrac_seal_description,
-      imageIds: ['itrac-cert-1', 'itrac-cert-2', 'itrac-cert-3', 'itrac-cert-4'],
-    },
-    {
-      id: 'classification-seals',
-      name: t.products.classification_seals_name,
-      description: t.products.classification_seals_description,
-      imageIds: [
-        'cert-international-main',
-        'cert-international-1',
-        'cert-international-2',
-        'cert-international-3',
-        'cert-international-4',
-      ],
-    },
+    // Selo ITRAC e Certificacoes Internacionais foram movidos daqui
+    // (nao sao produtos, sao certificacoes — aparecem em /qualificacao e /certificados)
     {
       id: 'product-tube',
       name: t.products.product_tube_name,
