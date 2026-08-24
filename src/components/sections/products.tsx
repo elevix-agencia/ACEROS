@@ -1,347 +1,277 @@
-
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { Eye, Send, MessageCircle } from 'lucide-react';
-import { useLanguage } from '@/hooks/use-language';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '../ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
-import { WhatsAppCta } from './whatsapp-cta';
+import { ArrowRight, Cog, Layers, PenTool, Rocket } from 'lucide-react';
 
-type Product = {
+// Landing pages destaque (as que vao rodar campanha Google Ads)
+type LandingPage = {
   id: string;
-  name: string;
-  description: string;
-  imageIds: string[];
-  videoUrl?: string;
+  titulo: string;
+  descricao: string;
+  imagem: string;
+  imagemAlt: string;
+  bullets: string[];
+  href: string;
+  icone: typeof Cog;
 };
 
+const landingPagesDestaque: LandingPage[] = [
+  {
+    id: 'tubos',
+    titulo: 'Tubos Centrifugados',
+    descricao:
+      'Tubos de aço inox fabricados por centrifugação em ligas ASTM A297 (HK, HH, HP) e ligas 304, 304L, 316, 316L, 310 e 420. Microestrutura densa, livre de porosidade, com alta resistência mecânica e térmica.',
+    imagem: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg',
+    imagemAlt: 'Tubos de aço inox centrifugados usinados e polidos — fabricação Aceros',
+    bullets: [
+      'Estágios: bruto, usinado (munhão), polido, misto',
+      'Diâmetros, espessuras e comprimentos sob medida',
+      'Aplicações: fornos, sink rolls, tubos radiantes',
+    ],
+    href: '/tubos-de-aco-inox',
+    icone: Layers,
+  },
+  {
+    id: 'buchas',
+    titulo: 'Buchas de Aço Inox',
+    descricao:
+      'Buchas centrifugadas em ligas de alta dureza para aplicações industriais severas. Especialistas em buchas para ponta de Sink Roll (linhas de galvanização) e Furnace Roll (rolos de forno).',
+    imagem: '/images/aceros/buchas/bucha-aco-inox-aceros-02.jpg',
+    imagemAlt: 'Buchas de aço inox usinadas sob medida — fabricação Aceros',
+    bullets: [
+      'Usinagem CNC de precisão milimétrica',
+      'Alta dureza superficial e vida útil prolongada',
+      'Aplicações: Sink Roll, Furnace Roll, mancais',
+    ],
+    href: '/bucha-de-aco-inox',
+    icone: Cog,
+  },
+];
+
+// Catalogo completo Aceros (do catalogo MD, produtos que a Aceros faz de verdade)
+type ProdutoCatalogo = {
+  titulo: string;
+  descricao: string;
+  aplicacao: string;
+};
+
+const catalogoAceros: ProdutoCatalogo[] = [
+  {
+    titulo: 'Sink Rolls',
+    descricao: 'Rolos centrifugados para linhas de galvanização a quente (potes de zinco).',
+    aplicacao: 'Siderurgia · Galvanização',
+  },
+  {
+    titulo: 'Snout (Pote de Zincagem)',
+    descricao: 'Componente estrutural para linhas de imersão em zinco fundido.',
+    aplicacao: 'Siderurgia · Galvanização',
+  },
+  {
+    titulo: 'Braços de Sink Roll',
+    descricao: 'Braços de sustentação para conjuntos de Sink Roll em galvanização.',
+    aplicacao: 'Siderurgia · Galvanização',
+  },
+  {
+    titulo: 'Rolos para Fornos de Galvanização',
+    descricao: 'Rolos centrifugados com e sem perfil para linhas de galvanização.',
+    aplicacao: 'Siderurgia · Tratamento Térmico',
+  },
+  {
+    titulo: 'Rolos para Zincagem',
+    descricao: 'Rolos resistentes ao ataque do zinco fundido, alta vida útil.',
+    aplicacao: 'Siderurgia · Galvanização',
+  },
+  {
+    titulo: 'Tubos Radiantes',
+    descricao: 'Tubos radiantes para fornos de tratamento térmico contínuo.',
+    aplicacao: 'Tratamento Térmico',
+  },
+  {
+    titulo: 'Serpentinas de Alta Temperatura',
+    descricao: 'Serpentinas fundidas para aplicações em siderurgia primária.',
+    aplicacao: 'Siderurgia',
+  },
+  {
+    titulo: 'Espulas Refratárias',
+    descricao: 'Espulas em ligas resistentes ao calor para linhas siderúrgicas.',
+    aplicacao: 'Siderurgia',
+  },
+  {
+    titulo: 'Garrafas para Mini Alto-Fornos',
+    descricao: 'Componentes fundidos para pequenos e médios altos-fornos.',
+    aplicacao: 'Guseira · Siderurgia',
+  },
+  {
+    titulo: 'Grelhas Industriais',
+    descricao: 'Grelhas centrifugadas para linhas de sinterização e classificação.',
+    aplicacao: 'Mineração · Siderurgia',
+  },
+  {
+    titulo: 'Esticadores de Corrente',
+    descricao: 'Componentes de precisão para transporte de material em plantas siderúrgicas.',
+    aplicacao: 'Siderurgia · Manuseio',
+  },
+  {
+    titulo: 'Rolos Laminadores',
+    descricao: 'Rolos para linhas de laminação a quente, projetados sob especificação.',
+    aplicacao: 'Siderurgia · Laminação',
+  },
+  {
+    titulo: 'Rolos para Classificação de Minério',
+    descricao: 'Rolos para peneiras de classificação de pellets e minério.',
+    aplicacao: 'Mineração',
+  },
+  {
+    titulo: 'Cilindros Inox + Tungstênio',
+    descricao: 'Exclusividade Aceros: cilindros com adição de tungstênio para abrasão extrema.',
+    aplicacao: 'Mineração',
+  },
+];
+
 export function Products() {
-  const { t } = useLanguage();
-  const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
-
-  const products: Product[] = [
-    // Selo ITRAC e Certificacoes Internacionais foram movidos daqui
-    // (nao sao produtos, sao certificacoes — aparecem em /qualificacao e /certificados)
-    {
-      id: 'product-tube',
-      name: t.products.product_tube_name,
-      description: t.products.product_tube_description,
-      imageIds: [
-        'product-tube',
-        'product-tube-2',
-        'product-tube-3',
-        'product-tube-4',
-        'product-tube-5',
-        'product-tube-6',
-        'product-tube-7',
-        'product-tube-8',
-        'product-tube-9',
-      ],
-    },
-    {
-      id: 'product-bushing',
-      name: t.products.product_bushing_name,
-      description: t.products.product_bushing_description,
-      imageIds: [
-        'product-bushing-main',
-        'product-bushing-gallery-1',
-        'product-bushing-gallery-2',
-        'product-bushing-gallery-3',
-        'product-bushing-gallery-4',
-        'product-bushing-gallery-5',
-        'product-bushing-gallery-6',
-        'product-bushing-gallery-7',
-      ],
-    },
-    {
-      id: 'product-ring',
-      name: t.products.product_ring_name,
-      description: t.products.product_ring_description,
-      imageIds: [
-        'product-ring-main',
-        'product-ring-gallery-1',
-        'product-ring-gallery-2',
-        'product-ring-gallery-3',
-        'product-ring-gallery-4',
-      ],
-    },
-    {
-      id: 'product-valve-body',
-      name: t.products.product_valve_body_name,
-      description: t.products.product_valve_body_description,
-      imageIds: [
-        'product-valve-body',
-        'product-valve-body-2',
-        'product-valve-body-3',
-        'product-valve-body-4',
-      ],
-    },
-    {
-      id: 'product-rollers',
-      name: t.products.product_rollers_name,
-      description: t.products.product_rollers_description,
-      imageIds: ['product-rollers-new', 'product-rollers-2-new'],
-    },
-    {
-      id: 'product-large-ring',
-      name: t.products.product_large_ring_name,
-      description: t.products.product_large_ring_description,
-      imageIds: ['product-large-ring', 'product-large-ring-2'],
-    },
-    {
-      id: 'product-machined-parts',
-      name: t.products.product_machined_parts_name,
-      description: t.products.product_machined_parts_description,
-      imageIds: [
-        'product-machined-parts-new',
-        'product-machined-parts-2-new',
-      ],
-    },
-    {
-      id: 'product-custom-castings',
-      name: t.products.product_custom_castings_name,
-      description: t.products.product_custom_castings_description,
-      imageIds: [
-        'product-custom-castings',
-        'product-custom-castings-2',
-        'product-custom-castings-3',
-        'product-custom-castings-4',
-        'product-custom-castings-5',
-        'product-custom-castings-6',
-      ],
-       videoUrl:
-        'https://player.cloudinary.com/embed/?cloud_name=dhsn2oxv5&public_id=VID-20251115-WA0058_hskpbv&profile=cld-default',
-    },
-    {
-      id: 'product-thick-wall-pipe',
-      name: t.products.product_thick_wall_pipe_name,
-      description: t.products.product_thick_wall_pipe_description,
-      imageIds: [
-        'product-thick-wall-pipe',
-        'product-thick-wall-pipe-2',
-        'product-thick-wall-pipe-3',
-        'product-thick-wall-pipe-4',
-        'product-thick-wall-pipe-5',
-        'product-thick-wall-pipe-6',
-      ],
-      videoUrl: 'https://player.cloudinary.com/embed/?cloud_name=dhsn2oxv5&public_id=VID-20251115-WA0056_epvppw&profile=cld-default'
-    },
-    {
-      id: 'product-flange',
-      name: t.products.product_flange_name,
-      description: t.products.product_flange_description,
-      imageIds: [
-        'product-flange',
-        'product-flange-2',
-        'product-flange-3',
-        'product-flange-4',
-        'product-flange-5',
-        'product-flange-6',
-      ],
-      videoUrl: 'https://player.cloudinary.com/embed/?cloud_name=dhsn2oxv5&public_id=VID-20251115-WA0055_tbyjin&profile=cld-default',
-    },
-    {
-      id: 'product-housing',
-      name: t.products.product_housing_name,
-      description: t.products.product_housing_description,
-      imageIds: ['product-housing'],
-      videoUrl: 'https://player.cloudinary.com/embed/?cloud_name=dhsn2oxv5&public_id=VID-20251115-WA0057_iy6qug&profile=cld-default',
-    },
-    {
-      id: 'product-collars',
-      name: t.products.product_collars_name,
-      description: t.products.product_collars_description,
-      imageIds: ['product-collars'],
-      videoUrl: 'https://player.cloudinary.com/embed/?cloud_name=dhsn2oxv5&public_id=V%C3%ADdeo_do_WhatsApp_de_2025-11-15_%C3%A0_s_14.36.09_0017d2ce_kvcvoh&profile=cld-default',
-    },
-     {
-      id: 'product-precision-parts',
-      name: t.products.product_precision_parts_name,
-      description: t.products.product_precision_parts_description,
-      imageIds: [
-        'new-product-main',
-        'new-product-gallery-1',
-        'new-product-gallery-2',
-        'new-product-gallery-3',
-        'new-product-gallery-4',
-        'new-product-gallery-5',
-      ],
-      videoUrl:
-        'https://player.cloudinary.com/embed/?cloud_name=dhsn2oxv5&public_id=tf_tvmts3&profile=cld-default',
-    },
-  ];
-
-  const whatsappMessage = encodeURIComponent(t.whatsapp.message);
-  const whatsappNumber = '551155556551';
-
   return (
-    <>
-      <section
-        id="products"
-        className="py-20 sm:py-32 bg-white text-foreground"
-      >
-        <div className="container mx-auto px-4">
-          <div className="text-center animate-fade-in-up">
-            <h2 className="mb-4 font-headline text-4xl sm:text-5xl font-bold tracking-tight">
-              {t.products.title}
-            </h2>
-            <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">
-              {t.products.subtitle}
+    <section id="products" className="py-20 sm:py-28 bg-background">
+      <div className="container mx-auto px-4">
+        {/* Cabecalho */}
+        <div className="text-center mb-16 animate-fade-in-up max-w-3xl mx-auto">
+          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
+            O que fabricamos
+          </p>
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">
+            Peças centrifugadas em aço inoxidável, sob medida
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Não vendemos commodities de prateleira. Fabricamos componentes de alta liga para
+            plantas industriais que operam nos limites de calor, abrasão e corrosão.
+          </p>
+        </div>
+
+        {/* DESTAQUE: 2 Landing Pages (Tubos e Buchas) */}
+        <div className="mb-20">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-3">
+              <Rocket className="h-4 w-4" />
+              Linhas de destaque
+            </div>
+            <h3 className="font-headline text-2xl sm:text-3xl font-bold text-slate-900">
+              Nossos carros-chefe
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {landingPagesDestaque.map((lp, i) => (
+              <article
+                key={lp.id}
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-slate-100 hover:border-accent animate-fade-in-up"
+                style={{ animationDelay: `${i * 0.1}s`, animationFillMode: 'both' }}
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                  <Image
+                    src={lp.imagem}
+                    alt={lp.imagemAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent" />
+                  <div className="absolute top-4 left-4 bg-accent text-white rounded-full p-3 shadow-lg">
+                    <lp.icone className="h-6 w-6" />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h4 className="font-headline text-2xl md:text-3xl font-bold uppercase leading-tight">
+                      {lp.titulo}
+                    </h4>
+                  </div>
+                </div>
+
+                <div className="p-6 md:p-8 space-y-5">
+                  <p className="text-muted-foreground leading-relaxed">{lp.descricao}</p>
+
+                  <ul className="space-y-2">
+                    {lp.bullets.map((bullet) => (
+                      <li key={bullet} className="flex items-start gap-2 text-sm text-slate-700">
+                        <span className="text-accent font-bold mt-0.5">▸</span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Button
+                    asChild
+                    size="lg"
+                    className="w-full group/btn bg-slate-900 text-white hover:bg-accent transition-colors"
+                  >
+                    <Link href={lp.href} className="inline-flex items-center justify-center gap-2">
+                      Ver linha completa
+                      <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* CATALOGO COMPLETO */}
+        <div className="mb-20">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-3">
+              <Layers className="h-4 w-4" />
+              Catálogo completo
+            </div>
+            <h3 className="font-headline text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+              Além dos tubos e buchas, também fabricamos
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Portfólio completo de peças centrifugadas para siderurgia, mineração, tratamento térmico, naval e guseira.
             </p>
           </div>
 
-          <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product, index) => {
-              const displayImage = PlaceHolderImages.find(
-                img => img.id === product.imageIds[0]
-              );
-              const galleryImages =
-                product.imageIds
-                  ?.map(id => PlaceHolderImages.find(img => img.id === id))
-                  .filter(Boolean) as ImagePlaceholder[] || [];
-
-              const galleryItems = [
-                ...galleryImages.map(img => ({ ...img, type: 'image' })),
-                ...(product.videoUrl ? [{ type: 'video', url: product.videoUrl, id: product.videoUrl }] : [])
-              ];
-
-
-              return (
-                <Dialog key={product.name}>
-                  <div
-                    className={cn('group w-full animate-fade-in-up')}
-                    style={{
-                      animationDelay: `${index * 0.1}s`,
-                      animationFillMode: 'both',
-                    }}
-                  >
-                    <Card className="relative z-10 h-full transform-gpu rounded-2xl bg-card border-2 border-transparent transition-all duration-300 ease-in-out hover:shadow-2xl hover:border-primary/20 flex flex-col overflow-hidden bg-secondary/30">
-                       <div className="overflow-hidden aspect-square relative p-4">
-                          {displayImage ? (
-                              <Image
-                                src={displayImage.imageUrl}
-                                alt={displayImage.description}
-                                fill
-                                data-ai-hint={displayImage.imageHint}
-                                className="object-contain p-2 transition-transform duration-500 ease-out group-hover:scale-105"
-                              />
-                          ) : product.videoUrl && (
-                             <iframe
-                              src={product.videoUrl}
-                              className="w-full h-full"
-                              allow="autoplay; encrypted-media"
-                              allowFullScreen
-                            ></iframe>
-                          )}
-                      </div>
-                      <CardHeader className="pt-0 text-center">
-                        <CardTitle className="font-headline text-xl text-foreground">
-                          {product.name}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-center flex-grow flex flex-col justify-end p-4 pt-0">
-                        <div className="flex flex-col gap-2 mt-4">
-                          <Button
-                            asChild
-                            size="sm"
-                            variant="accent"
-                            className="bg-accent text-accent-foreground hover:bg-accent/90 flex-grow text-xs"
-                          >
-                            <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
-                              <MessageCircle className="mr-1 h-3 w-3" />
-                              Orçamento
-                            </Link>
-                          </Button>
-                          <DialogTrigger asChild>
-                            <Button
-                              size="sm"
-                              variant="outline"
-                              className="w-full text-xs"
-                              disabled={galleryItems.length <= 1}
-                            >
-                              <Eye className="mr-2 h-4 w-4" />
-                               {galleryItems.length > 1 ? "Ver galeria" : "Ver mídia"}
-                            </Button>
-                          </DialogTrigger>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  <DialogContent className="bg-background border-accent/20 max-w-4xl">
-                    <DialogHeader>
-                      <DialogTitle className="text-foreground">
-                        {product.name}
-                      </DialogTitle>
-                    </DialogHeader>
-                    {galleryItems.length > 0 && (
-                      <Carousel
-                        className="w-full mt-4"
-                        opts={{ loop: true }}
-                        plugins={[plugin.current]}
-                        onMouseEnter={() => plugin.current.stop()}
-                        onMouseLeave={() => plugin.current.reset()}
-                      >
-                        <CarouselContent>
-                          {galleryItems.map((item, i) => (
-                            <CarouselItem key={i}>
-                              <div className="relative aspect-video w-full">
-                                { 'type' in item && item.type === 'video' ? (
-                                  <iframe
-                                    src={item.url}
-                                    className="w-full h-full"
-                                    allow="autoplay; encrypted-media"
-                                    allowFullScreen
-                                  ></iframe>
-                                ) : 'imageUrl' in item && (
-                                  <Image
-                                    src={item.imageUrl}
-                                    alt={item.description}
-                                    fill
-                                    data-ai-hint={item.imageHint}
-                                    className="object-contain rounded-lg"
-                                  />
-                                )}
-                              </div>
-                            </CarouselItem>
-                          ))}
-                        </CarouselContent>
-                        <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10" />
-                        <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10" />
-                      </Carousel>
-                    )}
-                  </DialogContent>
-                </Dialog>
-              );
-            })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {catalogoAceros.map((prod, i) => (
+              <div
+                key={prod.titulo}
+                className="group bg-white border border-slate-200 rounded-xl p-5 hover:border-accent hover:shadow-lg transition-all animate-fade-in-up"
+                style={{ animationDelay: `${i * 0.04}s`, animationFillMode: 'both' }}
+              >
+                <div className="text-xs font-semibold text-accent uppercase tracking-wider mb-2">
+                  {prod.aplicacao}
+                </div>
+                <h4 className="font-headline text-lg font-bold text-slate-900 mb-2 group-hover:text-accent transition-colors">
+                  {prod.titulo}
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {prod.descricao}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
-      <WhatsAppCta />
-    </>
+
+        {/* CTA Final: Envio de Desenho */}
+        <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
+            <PenTool className="h-4 w-4" />
+            Projeto sob desenho
+          </div>
+          <h3 className="font-headline text-2xl md:text-3xl font-bold mb-4">
+            Precisa de uma peça que não está no catálogo?
+          </h3>
+          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+            Fabricamos 100% sob desenho técnico. Nossa engenharia analisa o projeto, especifica a
+            liga ideal (ASTM A297) e retorna proposta comercial.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-10 py-7 h-auto"
+          >
+            <Link href="/contato">Enviar meu desenho técnico</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
   );
 }
