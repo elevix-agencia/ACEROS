@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Qualifications } from '@/components/sections/qualifications';
+import { QualityLab } from '@/components/sections/quality-lab';
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function QualificacaoPage() {
   return (
     <div className="pt-20">
       <Qualifications />
+      <QualityLab />
       <WhatsAppCta />
     </div>
   );

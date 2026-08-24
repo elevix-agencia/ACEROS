@@ -101,9 +101,11 @@ export const sectorsData = (t: any): Sector[] => {
     return [];
   }
   const tSectors = t.expertise_sectors;
+  // Ordem por faturamento (confirmado pelo Daniel):
+  // Mineração > Tratamento Térmico > Naval > Siderurgia > Guseira > Óleo & Gás
   const sectorIds = [
-    'mineracao', 'naval', 'siderurgia', 'oleo_e_gas',
-    'guseira', 'tratamento_termico', 'engenharia', 'certificados'
+    'mineracao', 'tratamento_termico', 'naval', 'siderurgia',
+    'guseira', 'oleo_e_gas', 'engenharia', 'certificados'
   ];
 
   return sectorIds.map(id => {

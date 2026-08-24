@@ -1,5 +1,6 @@
 
 import { EngineeringClient } from './EngineeringClient';
+import { EngineeringCapabilities } from '@/components/sections/engineering-capabilities';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import pt from '@/i18n/pt.json';
 import type { Metadata } from 'next';
@@ -47,8 +48,12 @@ export default function EngenhariaPage() {
     },
   };
 
-  // O componente cliente agora recebe todos os dados de que precisa como props.
-  return <EngineeringClient pageData={pageData} />;
+  return (
+    <>
+      <EngineeringClient pageData={pageData} />
+      <EngineeringCapabilities />
+    </>
+  );
 }
 
     
