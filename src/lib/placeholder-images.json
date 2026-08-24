@@ -2,27 +2,27 @@
     "placeholderImages":  [
                               {
                                   "id":  "hero-carousel-1",
-                                  "description":  "Técnico especialista analisando material em laboratório.",
-                                  "imageUrl":  "/images/imgur/VzIvRLr.png",
-                                  "imageHint":  "lab technician",
-                                  "width":  1376,
-                                  "height":  768
+                                  "description":  "Tubo de aço inox centrifugado usinado e polido, peça acabada - Aceros",
+                                  "imageUrl":  "/images/aceros/tubos/tubo-aco-inox-polido-aceros-01.jpg",
+                                  "imageHint":  "tubo polido aceros",
+                                  "width":  2000,
+                                  "height":  1123
                               },
                               {
                                   "id":  "hero-carousel-2",
-                                  "description":  "CNC machine cutting a piece of metal with sparks flying.",
-                                  "imageUrl":  "/images/imgur/HngCAVv.png",
-                                  "imageHint":  "CNC machine",
-                                  "width":  1344,
-                                  "height":  768
+                                  "description":  "Tubos de aço inox centrifugado brutos, saídos do processo de fundição - Aceros",
+                                  "imageUrl":  "/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg",
+                                  "imageHint":  "tubo bruto centrifugado aceros",
+                                  "width":  2000,
+                                  "height":  1123
                               },
                               {
                                   "id":  "hero-carousel-3",
-                                  "description":  "Engineer examining a large centrifugally cast steel tube.",
-                                  "imageUrl":  "/images/imgur/DpEHlwU.png",
-                                  "imageHint":  "industrial pipes",
-                                  "width":  1024,
-                                  "height":  1024
+                                  "description":  "Bucha de aço inox usinada sob medida - Aceros",
+                                  "imageUrl":  "/images/aceros/buchas/bucha-aco-inox-aceros-01.jpg",
+                                  "imageHint":  "bucha aco inox aceros",
+                                  "width":  2000,
+                                  "height":  1123
                               },
                               {
                                   "id":  "quality-cta-image",

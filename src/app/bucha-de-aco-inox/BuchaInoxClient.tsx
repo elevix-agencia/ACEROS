@@ -101,11 +101,12 @@ export function BuchaInoxClient() {
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-slate-900">
-        <Image 
-          src="/images/imgur/DpEHlwU.png" 
-          alt="Produção industrial de buchas de aço inox" 
-          fill 
-          className="object-cover opacity-30"
+        <Image
+          src="/images/aceros/buchas/bucha-aco-inox-aceros-02.jpg"
+          alt="Bucha de aço inox usinada sob medida — fabricação Aceros"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-40"
           priority
         />
         <div className="container mx-auto px-4 relative z-10">
@@ -175,10 +176,11 @@ export function BuchaInoxClient() {
             </p>
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
-            <Image 
-              src="/images/imgur/xww7SmN.jpeg" 
-              alt="Processo de fabricação e usinagem de bucha de aço inox Aceros" 
-              fill 
+            <Image
+              src="/images/aceros/buchas/bucha-aco-inox-aceros-03.jpg"
+              alt="Processo de fabricação e usinagem de bucha de aço inox Aceros"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -309,10 +311,12 @@ export function BuchaInoxClient() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { url: '/images/imgur/hSWH72Z.jpeg', alt: 'Bucha de aço inox usinada sob medida' },
-              { url: '/images/imgur/nI88ITf.jpeg', alt: 'Bucha para ponta de sink roll / aplicação industrial' },
-              { url: '/images/imgur/sQxxJW6.jpeg', alt: 'Acabamento e usinagem de alta precisão' },
-              { url: '/images/imgur/tfqsUjH.jpeg', alt: 'Inspeção e controle de qualidade dimensional' }
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-01.jpg', alt: 'Bucha de aço inox usinada sob medida — Aceros' },
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-02.jpg', alt: 'Bucha centrifugada de aço inox para aplicação industrial' },
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-03.jpg', alt: 'Bucha de aço inox com acabamento e usinagem de alta precisão' },
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-04.jpg', alt: 'Bucha para ponta de sink roll — fabricação Aceros' },
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-05.jpg', alt: 'Bucha de aço inox — controle dimensional rigoroso' },
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-06.jpg', alt: 'Bucha de aço inox pronta para expedição' }
             ].map((img, i) => (
               <div key={i} className="group relative aspect-square rounded-xl overflow-hidden shadow-md">
                 <Image 
@@ -372,10 +376,11 @@ export function BuchaInoxClient() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1 relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
-              <Image 
-                src="/images/imgur/2tolqXg.jpeg" 
-                alt="Equipe técnica Aceros em operação" 
-                fill 
+              <Image
+                src="/images/aceros/buchas/bucha-aco-inox-aceros-05.jpg"
+                alt="Bucha de aço inox — acabamento final e controle Aceros"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw" 
                 className="object-cover"
               />
             </div>

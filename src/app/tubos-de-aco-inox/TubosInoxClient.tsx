@@ -97,13 +97,14 @@ export function TubosInoxClient() {
   };
 
   const galleryItems = [
-    { url: '/images/imgur/5Lwzpoh.jpeg', alt: 'Tubo centrifugado bruto (como sai do molde, alta densidade estrutural)' },
-    { url: '/images/imgur/prSJDU6.jpeg', alt: 'Usinagem de precisão CNC e usinagem da ponta (munhão)' },
-    { url: '/images/imgur/IFba45o.jpeg', alt: 'Acabamento acetinado em fase de usinagem intermediária' },
-    { url: '/images/imgur/x36bQK3.jpeg', alt: 'Peça acabada, usinada e polida (com revenido do tratamento térmico)' },
-    { url: '/images/imgur/LijCHmF.jpeg', alt: 'Comparativo: do tubo bruto centrifugado até a peça final usinada' },
-    { url: '/images/imgur/IN1l7Mp.jpeg', alt: 'Inspeção técnica e medição de tolerâncias rigorosas' },
-    { url: '/images/imgur/LijCHmF.jpeg', alt: 'Tubos de alta liga para fornos e aplicações de desgaste extremo' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg', alt: 'Tubo centrifugado bruto de aço inox, como sai do processo de fundição' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-02.jpg', alt: 'Tubo de aço inox bruto pronto para usinagem' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-01.jpg', alt: 'Tubo de aço inox após usinagem de precisão CNC' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-02.jpg', alt: 'Tubo de aço inox usinado — usinagem da ponta (munhão)' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-01.jpg', alt: 'Tubo de aço inox usinado e polido — peça acabada com revenido' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-02.jpg', alt: 'Tubo de aço inox polido, acabamento espelhado' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg', alt: 'Tubo de aço inox — peça acabada, controle dimensional rigoroso' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-misto-aceros-01.jpg', alt: 'Tubo de aço inox com acabamento misto (usinado + polido)' },
   ];
 
   return (
@@ -119,10 +120,11 @@ export function TubosInoxClient() {
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-slate-900">
-        <Image 
-          src="/images/imgur/x36bQK3.jpeg" 
-          alt="Tubo centrifugado de aço inox usinado para aplicação industrial - Aceros" 
-          fill 
+        <Image
+          src="/images/aceros/tubos/tubo-aco-inox-polido-aceros-01.jpg"
+          alt="Tubo de aço inox centrifugado, usinado e polido — fabricação Aceros"
+          fill
+          sizes="100vw"
           className="object-cover opacity-40"
           priority
         />
@@ -193,10 +195,11 @@ export function TubosInoxClient() {
             </p>
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
-            <Image 
-              src="/images/imgur/IFba45o.jpeg" 
-              alt="Tubo centrifugado de alta liga em processo de usinagem" 
-              fill 
+            <Image
+              src="/images/aceros/tubos/tubo-aco-inox-usinado-aceros-03.jpg"
+              alt="Tubo centrifugado de alta liga em processo de usinagem"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
