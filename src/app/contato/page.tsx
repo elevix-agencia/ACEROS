@@ -1,10 +1,10 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { Contact } from '@/components/sections/contact';
 
 export const metadata: Metadata = {
   title: 'Contato — Solicite Orçamento de Aços Centrifugados',
   description:
-    'Fale com nossa equipe técnica. Solicite orçamento de tubos, buchas e componentes centrifugados em aços inoxidáveis. Atendimento em todo o Brasil.',
+    'Fale com nossa equipe técnica. Solicite orçamento de tubos, buchas e componentes centrifugados em aços inoxidáveis. Atendimento Brasil e exterior.',
   alternates: { canonical: '/contato' },
   openGraph: {
     title: 'Contato — Solicite Orçamento de Aços Centrifugados',

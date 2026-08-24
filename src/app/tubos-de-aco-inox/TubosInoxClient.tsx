@@ -170,7 +170,7 @@ export function TubosInoxClient() {
             <div className="flex flex-wrap justify-center md:justify-between gap-6 text-white text-sm font-semibold uppercase tracking-wider">
               <span className="flex items-center gap-2"><Settings className="h-5 w-5" /> Fabricação sob medida</span>
               <span className="flex items-center gap-2"><PenTool className="h-5 w-5" /> Conforme desenho técnico</span>
-              <span className="flex items-center gap-2"><Globe className="h-5 w-5" /> Atendimento em todo o Brasil</span>
+              <span className="flex items-center gap-2"><Globe className="h-5 w-5" /> Atendimento Brasil e exterior</span>
               <span className="flex items-center gap-2"><ShieldCheck className="h-5 w-5" /> Controle rigoroso</span>
               <span className="flex items-center gap-2"><Users className="h-5 w-5" /> Equipe especializada</span>
             </div>
@@ -270,7 +270,7 @@ export function TubosInoxClient() {
               { icon: FileText, title: 'Certificação de Qualidade', text: 'Atendimento às normas internacionais mais rigorosas.' },
               { icon: Award, title: 'Durabilidade Elevada', text: 'Redução de paradas para manutenção e troca de peças.' },
               { icon: PenTool, title: 'Usinagem de Precisão', text: 'Acabamento final pronto para instalação imediata.' },
-              { icon: Globe, title: 'Atendimento Nacional', text: 'Entregamos em qualquer região do Brasil com segurança.' },
+              { icon: Globe, title: 'Atendimento Nacional', text: 'Entregamos em todo o Brasil e no exterior com segurança.' },
               { icon: Users, title: 'Engenharia de Materiais', text: 'Suporte técnico na escolha da liga ideal para seu fluido.' }
             ].map((item, i) => (
               <Card key={i} className="hover:shadow-lg transition-shadow border-slate-100">
@@ -445,9 +445,9 @@ export function TubosInoxClient() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">
-              <AccordionTrigger className="text-left font-bold text-lg">Atendem pedidos para todo o Brasil?</AccordionTrigger>
+              <AccordionTrigger className="text-left font-bold text-lg">Atendem pedidos para o Brasil e exterior?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Sim, possuímos logística estruturada para entregar nossos tubos industriais em qualquer estado brasileiro com pontualidade e segurança.
+                Sim, possuímos logística estruturada para entregar nossos tubos industriais em todo o Brasil e exportar para o exterior com pontualidade e segurança.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

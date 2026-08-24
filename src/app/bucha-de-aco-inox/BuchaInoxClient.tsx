@@ -151,7 +151,7 @@ export function BuchaInoxClient() {
             <div className="flex flex-wrap justify-center md:justify-between gap-6 text-white text-sm font-semibold uppercase tracking-wider">
               <span className="flex items-center gap-2"><Settings className="h-5 w-5" /> Fabricação sob medida</span>
               <span className="flex items-center gap-2"><PenTool className="h-5 w-5" /> Conforme desenho técnico</span>
-              <span className="flex items-center gap-2"><Globe className="h-5 w-5" /> Atendimento em todo o Brasil</span>
+              <span className="flex items-center gap-2"><Globe className="h-5 w-5" /> Atendimento Brasil e exterior</span>
               <span className="flex items-center gap-2"><ShieldCheck className="h-5 w-5" /> Controle rigoroso</span>
               <span className="flex items-center gap-2"><Users className="h-5 w-5" /> Equipe especializada</span>
             </div>

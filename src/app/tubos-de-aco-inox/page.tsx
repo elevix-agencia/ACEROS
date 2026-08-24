@@ -1,4 +1,4 @@
-
+﻿
 import { Metadata } from 'next';
 import { TubosInoxClient } from './TubosInoxClient';
 
@@ -63,10 +63,10 @@ export default function TubosInoxPage() {
       },
       {
         "@type": "Question",
-        "name": "Atendem pedidos para todo o Brasil?",
+        "name": "Atendem pedidos para o Brasil e exterior?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, possuímos logística estruturada para atender indústrias de todos os estados brasileiros com pontualidade e segurança."
+          "text": "Sim, possuímos logística estruturada para atender indústrias em todo o Brasil e exportar para o exterior com pontualidade e segurança."
         }
       }
     ]
