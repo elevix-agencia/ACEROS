@@ -24,21 +24,21 @@ export function Sectors() {
   const getImageUrl = (id: string) => {
     switch (id) {
       case 'mineracao':
-        return '/images/aceros/drive/eixo-industrial.webp';
+        return '/images/imgur/GwRqaf7.jpeg';
       case 'naval':
         return '/images/imgur/jNzhuvc.png';
       case 'siderurgia':
-        return '/images/aceros/drive/tubos-polidos.webp';
+        return '/images/aceros/generated/hero-sink-roll-zincagem-v2.webp';
       case 'oleo_e_gas':
-        return '/images/aceros/drive/tubos-usinados.webp';
+        return '/images/aceros/generated/hero-tubos-centrifugados-v2.webp';
       case 'guseira':
-        return '/images/aceros/drive/eixo-industrial.webp';
+        return '/images/imgur/wrq7jcu.jpeg';
       case 'tratamento_termico':
         return '/images/aceros/drive/processo-termico.webp';
       case 'engenharia':
-        return '/images/aceros/drive/tubos-polidos.webp';
+        return '/images/aceros/generated/hero-fabrica-usinagem-v2.webp';
       case 'certificados':
-        return '/images/aceros/drive/tubos-usinados.webp';
+        return '/images/aceros/generated/laboratorio-metalurgico-v2.webp';
       default:
         return '';
     }

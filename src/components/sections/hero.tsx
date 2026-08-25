@@ -2,23 +2,55 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
 import { motion } from 'framer-motion';
 import { ArrowDown, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
+const heroSlides = [
+  {
+    src: '/images/aceros/generated/hero-tubos-centrifugados-v2.webp',
+    alt: 'Tubos de aço centrifugado usinados e polidos pela Aceros',
+    label: 'Tubos centrifugados',
+  },
+  {
+    src: '/images/aceros/generated/hero-sink-roll-zincagem-v2.webp',
+    alt: 'Conjunto Sink Roll com braços instalado em linha de zincagem',
+    label: 'Aplicação em zincagem',
+  },
+  {
+    src: '/images/aceros/generated/hero-fabrica-usinagem-v2.webp',
+    alt: 'Área de usinagem industrial da fábrica Aceros',
+    label: 'Estrutura industrial',
+  },
+];
+
 export function Hero() {
   const { t } = useLanguage();
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % heroSlides.length);
+    }, 6500);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <section className="hero-section relative isolate min-h-[calc(100svh-88px)] overflow-hidden bg-[#07121e] text-white">
-      <Image
-        src="/images/aceros/drive/tubos-usinados.webp"
-        alt="Tubos centrifugados usinados pela Aceros"
-        fill
-        sizes="100vw"
-        className="object-cover object-[58%_center] opacity-70"
-        priority
-      />
+      {heroSlides.map((slide, index) => (
+        <Image
+          key={slide.src}
+          src={slide.src}
+          alt={slide.alt}
+          fill
+          sizes="100vw"
+          className={`object-cover object-center transition-opacity duration-1000 ${index === activeSlide ? 'opacity-70' : 'opacity-0'}`}
+          priority={index === 0}
+        />
+      ))}
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />
       <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.35)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.35)_1px,transparent_1px)] [background-size:64px_64px]" />
       <div className="absolute left-0 top-0 h-full w-1 bg-[#e46f1f]" />
@@ -81,6 +113,25 @@ export function Hero() {
                     <Button asChild size="lg" variant="outline" className="h-14 rounded-none border-white/35 bg-white/5 px-8 text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm hover:border-white hover:bg-white hover:text-[#07121e] sm:h-16">
                         <Link href="/produtos">{t.hero.learn_more}</Link>
                     </Button>
+                </motion.div>
+                <motion.div
+                  className="mt-7 flex items-center gap-3"
+                  variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+                  aria-label="Selecionar imagem principal"
+                >
+                  {heroSlides.map((slide, index) => (
+                    <button
+                      key={slide.src}
+                      type="button"
+                      onClick={() => setActiveSlide(index)}
+                      aria-label={`Exibir ${slide.label}`}
+                      aria-current={index === activeSlide ? 'true' : undefined}
+                      className={`h-1 transition-all duration-300 ${index === activeSlide ? 'w-12 bg-[#e46f1f]' : 'w-7 bg-white/40 hover:bg-white/70'}`}
+                    />
+                  ))}
+                  <span className="ml-2 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-300">
+                    {heroSlides[activeSlide].label}
+                  </span>
                 </motion.div>
             </motion.div>
 
