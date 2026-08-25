@@ -52,7 +52,7 @@ export function Hero() {
         />
       ))}
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />
-      <div className="absolute left-0 top-0 h-full w-1 bg-[#e46f1f]" />
+      <div className="absolute left-0 top-0 h-full w-1 bg-accent" />
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100svh-80px)] max-w-[1440px] items-center px-5 py-16 lg:px-10 lg:pb-28 lg:pt-20">
         <div className="w-full max-w-[920px]">
@@ -72,10 +72,10 @@ export function Hero() {
                 }}
             >
                 <motion.div
-                  className="mb-7 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-[#f09a5c]"
+                  className="mb-7 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-accent"
                   variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}
                 >
-                  <span className="h-px w-10 bg-[#e46f1f]" />
+                  <span className="h-px w-10 bg-accent" />
                   Engenharia metalúrgica desde 2015
                 </motion.div>
                 <motion.h1
@@ -88,7 +88,7 @@ export function Hero() {
                     {t.hero.main_title}
                 </motion.h1>
                 <motion.p 
-                  className="mt-7 max-w-[700px] border-l border-[#e46f1f]/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8"
+                  className="mt-7 max-w-[700px] border-l border-accent/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8"
                    variants={{
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -103,7 +103,7 @@ export function Hero() {
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                   }}
                 >
-                    <Button asChild size="lg" className="h-14 rounded-none bg-[#e46f1f] px-8 text-xs font-bold uppercase tracking-[0.12em] text-white hover:bg-[#bf5412] sm:h-16">
+                    <Button asChild size="lg" className="h-14 rounded-none bg-accent px-8 text-xs font-bold uppercase tracking-[0.12em] text-white hover:bg-[#cf5f11] sm:h-16">
                         <Link href="/contato" className="flex items-center gap-3">
                           {t.hero.contact_us}
                           <ArrowUpRight className="h-4 w-4" />
@@ -125,7 +125,7 @@ export function Hero() {
                       onClick={() => setActiveSlide(index)}
                       aria-label={`Exibir ${slide.label}`}
                       aria-current={index === activeSlide ? 'true' : undefined}
-                      className={`h-1 transition-all duration-300 ${index === activeSlide ? 'w-12 bg-[#e46f1f]' : 'w-7 bg-white/40 hover:bg-white/70'}`}
+                      className={`h-1 transition-all duration-300 ${index === activeSlide ? 'w-12 bg-accent' : 'w-7 bg-white/40 hover:bg-white/70'}`}
                     />
                   ))}
                   <span className="ml-2 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-300">

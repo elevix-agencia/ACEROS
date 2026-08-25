@@ -10,11 +10,11 @@ import { sectorsData } from '@/lib/expertise-data';
 const sectorImages: Record<string, string> = {
   mineracao: '/images/aceros/generated/hero-eixo-industrial-v2.webp',
   tratamento_termico: '/images/aceros/generated/tratamento-termico-v2.webp',
-  naval: '/images/aceros/drive/helice-naval-usinagem.webp',
-  siderurgia: '/images/aceros/generated/hero-sink-roll-zincagem-v2.webp',
+  naval: '/images/imgur/jNzhuvc.png',
+  siderurgia: '/images/aceros/generated/blog-sink-roll-instalado-v2.webp',
   guseira: '/images/aceros/generated/industria-guseira-v2.webp',
   oleo_e_gas: '/images/aceros/generated/hero-tubos-centrifugados-v2.webp',
-  engenharia: '/images/aceros/generated/historia-fabrica-v3.webp',
+  engenharia: '/images/imgur/bPgdSyM.png',
   certificados: '/images/imgur/JNxzPUr.png',
 };
 
@@ -34,7 +34,7 @@ export function Sectors() {
     <section id="sectors" className="bg-[#ef7b21] py-20 text-white sm:py-28">
       <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
         <div className="mb-12 max-w-3xl animate-fade-in-up">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#263d5c]">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
             Soluções por segmento
           </p>
           <h2 className="mb-5 font-headline text-4xl font-bold tracking-tight sm:text-5xl">

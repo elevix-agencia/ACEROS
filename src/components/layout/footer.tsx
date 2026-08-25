@@ -40,13 +40,13 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h3 className="mb-6 border-b border-white/15 pb-3 font-headline text-sm font-bold uppercase tracking-[0.12em] text-[#f09a5c]">{t.footer.navigation}</h3>
+            <h3 className="mb-6 border-b border-white/15 pb-3 font-headline text-sm font-bold uppercase tracking-[0.12em] text-accent">{t.footer.navigation}</h3>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-slate-300 transition-colors hover:text-[#f09a5c]"
+                    className="text-sm text-slate-300 transition-colors hover:text-accent"
                   >
                     {link.label}
                   </Link>
@@ -55,7 +55,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/politica-de-privacidade"
-                  className="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-[#f09a5c]"
+                  className="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-accent"
                 >
                   <ShieldCheck className="h-4 w-4" />
                   Política de Privacidade
@@ -65,7 +65,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-             <h3 className="mb-6 border-b border-white/15 pb-3 font-headline text-sm font-bold uppercase tracking-[0.12em] text-[#f09a5c]">{t.footer.contact}</h3>
+             <h3 className="mb-6 border-b border-white/15 pb-3 font-headline text-sm font-bold uppercase tracking-[0.12em] text-accent">{t.footer.contact}</h3>
               <div className="space-y-4 text-sm leading-6 text-slate-300">
                 <div className="flex items-start gap-3 justify-start">
                   <MapPin className="mt-1 h-4 w-4 flex-shrink-0 text-[#ef7b21]" />

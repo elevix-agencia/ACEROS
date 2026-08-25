@@ -14,13 +14,13 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 221 44% 47%;
+    --primary: 211 62% 7%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 30 96% 56%;
+    --accent: 26 87% 53%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -193,7 +193,7 @@
       clip-path: none !important; /* Garante o corte reto */
       border-radius: 0 !important;
       overflow: hidden !important;
-      border-bottom: 4px solid #ff8c00 !important;
+      border-bottom: 4px solid #ef7b21 !important;
   }
 
   .mercado-atuacao-card .image-inner {
@@ -543,7 +543,7 @@ header.site-header .header-mobile-actions {
 .word-1 { animation: explodeIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards; transform: translate(-100vw, -100vh) rotate(-45deg); } .word-2 { animation: explodeIn 2.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards; transform: translate(100vw, 100vh) rotate(45deg); }
 
 @keyframes explodeIn {     0% { opacity: 0; filter: blur(50px) brightness(2); }     80% { transform: translate(5px, 5px) rotate(0deg); }      100% { opacity: 1; filter: blur(0); transform: translate(0) rotate(0); } }
-.hero-buttons .btn-action {     padding: 25px 70px !important;     font-size: 1.5rem !important;     border-radius: 0 !important;      background: #ff8c00 !important;     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;     animation: zoom4D 2.5s ease-out forwards;     transform-style: preserve-3d; }
+.hero-buttons .btn-action {     padding: 25px 70px !important;     font-size: 1.5rem !important;     border-radius: 0 !important;      background: #ef7b21 !important;     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;     animation: zoom4D 2.5s ease-out forwards;     transform-style: preserve-3d; }
 .hero-buttons .btn-action:hover {     transform: rotateX(20deg) rotateY(20deg) translateZ(80px) scale(1.2) !important;     box-shadow: -20px 20px 60px rgba(0,0,0,0.8), 0 0 30px rgba(255,140,0,0.5) !important; }
 @keyframes zoom4D {     0% { opacity: 0; transform: translateZ(-2000px) scale(0); }     100% { opacity: 1; transform: translateZ(0) scale(1); } }
 

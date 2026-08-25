@@ -30,7 +30,7 @@ export function Qualifications() {
             priority
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07121e] via-[#07121e]/75 to-[#07121e]/20" />
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center text-white">
           <div
             className="flex animate-fade-in-up flex-col items-center"

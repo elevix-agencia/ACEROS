@@ -58,7 +58,7 @@ export function QualityLab() {
   return (
     <>
       {/* Certificação ISO 9001 destacada */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-20 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
