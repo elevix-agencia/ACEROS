@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { blogPosts } from '@/lib/blog-posts';
 
 const siteUrl = 'https://aceros.com.br';
 
@@ -21,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/ligas', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/contato', changeFrequency: 'yearly', priority: 0.6 },
     { path: '/politica-de-privacidade', changeFrequency: 'yearly', priority: 0.2 },
+    { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
   ];
 
   const atuacaoSlugs = [
@@ -38,10 +40,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...atuacaoRoutes].map((route) => ({
-    url: `${siteUrl}${route.path}`,
-    lastModified: now,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
+  const blogRoutes = blogPosts.map((post) => ({
+    path: `/blog/${post.slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+    lastModified: new Date(post.dataPublicacao),
   }));
+
+  return [
+    ...staticRoutes.map((r) => ({
+      url: `${siteUrl}${r.path}`,
+      lastModified: now,
+      changeFrequency: r.changeFrequency,
+      priority: r.priority,
+    })),
+    ...atuacaoRoutes.map((r) => ({
+      url: `${siteUrl}${r.path}`,
+      lastModified: now,
+      changeFrequency: r.changeFrequency,
+      priority: r.priority,
+    })),
+    ...blogRoutes.map((r) => ({
+      url: `${siteUrl}${r.path}`,
+      lastModified: r.lastModified,
+      changeFrequency: r.changeFrequency,
+      priority: r.priority,
+    })),
+  ];
 }
