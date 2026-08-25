@@ -11,171 +11,169 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
+const capacidadesVisuais = [
+  {
+    imagem: '/images/aceros/generated/qualidade-ultrassom-v3.png',
+    alt: 'Técnico realizando inspeção ultrassônica em componente de aço usinado',
+    etiqueta: 'Ensaio não destrutivo',
+    titulo: 'Ultrassom em peças fundidas e usinadas',
+    descricao: 'Verificação de descontinuidades internas e integridade estrutural sem danificar a peça.',
+  },
+  {
+    imagem: '/images/aceros/drive/spectromax-real.jpg',
+    alt: 'Espectrômetro de emissão óptica Spectromax utilizado pela Aceros',
+    etiqueta: 'Análise química',
+    titulo: 'Composição da liga controlada na fusão',
+    descricao: 'Amostras são preparadas e analisadas para orientar as correções necessárias durante o processo.',
+  },
+  {
+    imagem: '/images/aceros/drive/sala-metrologia-real.jpg',
+    alt: 'Sala de metrologia climatizada da Aceros',
+    etiqueta: 'Metrologia',
+    titulo: 'Medição em ambiente climatizado',
+    descricao: 'Instrumentos e padrões calibrados e rastreados pela RBC para o controle dimensional de grande porte.',
+  },
+];
+
 const equipamentos = [
   {
     icone: Beaker,
     nome: 'Spectromax',
     tipo: 'Análise Química',
-    descricao:
-      'Análise por espectrometria de emissão óptica realizada durante o processo de fusão. Nosso engenheiro metalúrgico controla a composição da liga em tempo real, corrigindo matéria-prima e sucata para atingir a especificação exata.',
+    descricao: 'Espectrometria de emissão óptica durante a fusão para controlar a composição e ajustar a liga à especificação do projeto.',
   },
   {
     icone: Gauge,
     nome: 'Ultrassom Krautkramer USM 36',
     tipo: 'Ensaio Não Destrutivo',
-    descricao:
-      'Equipamento portátil de ultrassom de última geração para inspeção de peças fundidas e usinadas. Detecta descontinuidades internas, inclusões e trincas subsuperficiais sem danificar a peça.',
+    descricao: 'Inspeção de peças fundidas e usinadas para detectar descontinuidades internas, inclusões e trincas subsuperficiais.',
   },
   {
     icone: Ruler,
     nome: 'Rollprof (Perfilômetro)',
-    tipo: 'Controle Dimensional de Perfis',
-    descricao:
-      'Perfilômetro operado pelo Eng. Daniel Garcia, com treinamento e qualificação Inspetor Drever (Bélgica). Mais de 200 rolos de forno, furnace rolls e sink rolls inspecionados para clientes Drever, Efco e Danieli.',
+    tipo: 'Controle de Perfil',
+    descricao: 'Medição de perfis de rolos de forno, furnace rolls e sink rolls por profissional com treinamento Drever, Bélgica.',
   },
   {
     icone: ScanLine,
     nome: 'Durômetro',
     tipo: 'Ensaio de Dureza',
-    descricao:
-      'Ensaios de dureza em toda a linha de produção. Cada peça é testada para garantir que atende às especificações mecânicas do projeto.',
+    descricao: 'Controle de dureza ao longo da produção para verificar o atendimento às propriedades mecânicas definidas no projeto.',
   },
   {
     icone: Microscope,
-    nome: 'Sala de Metrologia Climatizada',
-    tipo: 'Controle Dimensional',
-    descricao:
-      'Sala climatizada com centenas de instrumentos de medição calibrados e rastreados pela RBC (Rede Brasileira de Calibração). Controle dimensional de peças de grande porte.',
+    nome: 'Ensaios de Corrosão e Mecânicos',
+    tipo: 'Pesquisa e Validação',
+    descricao: 'Avaliações para estudar o comportamento das ligas e apoiar melhorias em peças resistentes ao calor, abrasão e corrosão.',
   },
   {
     icone: FileCheck,
     nome: 'Soldagem Qualificada',
     tipo: 'AWS D1.1 e ASME',
-    descricao:
-      'Procedimentos de soldagem TIG, MIG, MAG e eletrodo revestido com EPS, RQPS e RQSO qualificados. Todos os soldadores certificados conforme as normas AWS D1.1 e ASME.',
+    descricao: 'Procedimentos TIG, MIG, MAG e eletrodo revestido com EPS, RQPS e RQSO qualificados e soldadores certificados.',
   },
 ];
 
 export function QualityLab() {
   return (
     <>
-      {/* Certificação ISO 9001 destacada */}
-      <section className="py-20 bg-primary text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
-                <Award className="h-4 w-4" />
-                Certificação Internacional
-              </div>
-              <h2 className="font-headline text-3xl md:text-5xl font-bold uppercase leading-tight mb-6">
-                ISO 9001:2015 <span className="text-accent">Certificada</span>
-              </h2>
-              <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                Nosso Sistema de Gestão da Qualidade é auditado e certificado pela
-                <strong className="text-white"> DQS GmbH (Alemanha)</strong>, um dos organismos mais
-                respeitados de certificação do mundo, com acreditação <strong className="text-white">DAkkS</strong>{' '}
-                e membro da <strong className="text-white">IQNet</strong>.
-              </p>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="bg-white/5 border border-slate-700 rounded-lg p-4">
-                  <div className="text-slate-400 uppercase text-xs mb-1">Certificado</div>
-                  <div className="text-white font-mono font-bold">60300915 QM15</div>
-                </div>
-                <div className="bg-white/5 border border-slate-700 rounded-lg p-4">
-                  <div className="text-slate-400 uppercase text-xs mb-1">Válido até</div>
-                  <div className="text-white font-bold">19/11/2028</div>
-                </div>
-              </div>
-              <p className="text-slate-400 text-sm mt-6 italic">
-                Escopo certificado: fabricação de tubos centrifugados e fundidos estáticos em aço
-                inoxidável, ligas resistentes ao calor, à abrasão e superligas; fabricação de
-                dispositivos para tratamento térmico, tubos radiantes, grelhas e rolos transportadores.
-              </p>
+      <section className="relative overflow-hidden bg-primary py-20 text-white">
+        <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1 text-sm font-semibold uppercase tracking-wide text-accent">
+              <Award className="h-4 w-4" />
+              Certificações e rastreabilidade
             </div>
-            <div className="flex justify-center">
-              <Link
-                href="/images/aceros/drive/certificado-iso.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abrir o certificado ISO 9001:2015 atualizado da Aceros"
-                className="group block w-full max-w-md overflow-hidden rounded-2xl border border-white/20 bg-white p-3 shadow-2xl transition-transform duration-300 hover:-translate-y-1"
-              >
-                <Image
-                  src="/images/aceros/generated/certificado-iso-2028.png"
-                  alt="Certificado ISO 9001:2015 da Aceros, válido até 19 de novembro de 2028"
-                  width={795}
-                  height={1124}
-                  sizes="(max-width: 768px) 92vw, 448px"
-                  className="h-auto w-full bg-white object-contain"
-                />
-              </Link>
-            </div>
+            <h2 className="font-headline text-3xl font-bold uppercase leading-tight md:text-5xl">
+              Qualidade <span className="text-accent">documentada</span>
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-slate-300">
+              A certificação do sistema de gestão e a calibração dos equipamentos trabalham juntas para garantir processos controlados e resultados confiáveis.
+            </p>
+          </div>
+
+          <div className="mx-auto grid max-w-6xl gap-7 lg:grid-cols-2">
+            <article className="overflow-hidden rounded-2xl border border-white/15 bg-white/[0.06] shadow-2xl">
+              <div className="grid h-full sm:grid-cols-[0.92fr_1.08fr]">
+                <Link href="/images/aceros/drive/certificado-iso.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado ISO 9001:2015 da Aceros" className="flex min-h-[390px] items-center justify-center bg-white p-4">
+                  <Image src="/images/aceros/generated/certificado-iso-2028.png" alt="Certificado ISO 9001:2015 da Aceros válido até novembro de 2028" width={795} height={1124} className="h-full max-h-[420px] w-auto object-contain" />
+                </Link>
+                <div className="flex flex-col justify-center p-7">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Sistema de gestão</p>
+                  <h3 className="mt-3 font-headline text-2xl font-bold">ISO 9001:2015</h3>
+                  <p className="mt-4 text-sm leading-6 text-slate-300">Certificação DQS com acreditação DAkkS e reconhecimento da rede IQNet para o escopo industrial da Aceros.</p>
+                  <dl className="mt-6 space-y-3 border-t border-white/10 pt-5 text-sm">
+                    <div><dt className="text-slate-400">Certificado</dt><dd className="font-mono font-bold text-white">60300915 QM15</dd></div>
+                    <div><dt className="text-slate-400">Validade</dt><dd className="font-bold text-white">19/11/2028</dd></div>
+                  </dl>
+                  <span className="mt-6 text-sm font-semibold text-accent">Abrir documento completo ↗</span>
+                </div>
+              </div>
+            </article>
+
+            <article className="overflow-hidden rounded-2xl border border-white/15 bg-white/[0.06] shadow-2xl">
+              <div className="grid h-full sm:grid-cols-[1.08fr_0.92fr]">
+                <Link href="/images/aceros/drive/certificado-calibracao-espectrometro.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de revisão e calibração do espectrômetro" className="flex min-h-[390px] items-center justify-center bg-white p-3">
+                  <Image src="/images/aceros/drive/certificado-calibracao-espectrometro.png" alt="Registro de análise química e certificado de calibração número 2044/19 do espectrômetro" width={962} height={717} className="h-auto w-full object-contain" />
+                </Link>
+                <div className="flex flex-col justify-center p-7">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Equipamento de laboratório</p>
+                  <h3 className="mt-3 font-headline text-2xl font-bold">Calibração Spectromax</h3>
+                  <p className="mt-4 text-sm leading-6 text-slate-300">Registro de revisão e calibração nº 2044/19 do espectrômetro de emissão óptica utilizado na análise química das ligas.</p>
+                  <p className="mt-5 text-xs leading-5 text-slate-400">Documento histórico recuperado da página técnica anterior da Aceros.</p>
+                  <span className="mt-6 text-sm font-semibold text-accent">Ampliar documento ↗</span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* Laboratório Próprio */}
-      <section className="py-20 bg-white">
+      <section className="bg-white py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
-              Laboratório próprio
-            </p>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Controle de qualidade em todas as etapas
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Nosso laboratório próprio realiza <strong>análise química</strong>, <strong>ensaio de dureza</strong>{' '}
-              e <strong>ultrassom</strong> internamente. Cada peça sai da fábrica com laudo metalúrgico
-              completo e rastreabilidade total.
-            </p>
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">Laboratório e metrologia</p>
+            <h2 className="font-headline text-3xl font-bold text-slate-900 md:text-4xl">O controle de qualidade acontecendo na prática</h2>
+            <p className="mt-5 text-lg leading-8 text-muted-foreground">Análises químicas, ultrassom, dureza, ensaios de corrosão e ensaios mecânicos apoiam o desenvolvimento de ligas e a validação de cada componente.</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {equipamentos.map((eq, i) => (
-              <div
-                key={eq.nome}
-                className="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:border-accent hover:shadow-lg transition-all animate-fade-in-up"
-                style={{ animationDelay: `${i * 0.08}s`, animationFillMode: 'both' }}
-              >
-                <div className="bg-white p-3 rounded-xl inline-flex mb-4 border border-slate-200">
-                  <eq.icone className="h-6 w-6 text-accent" />
-                </div>
-                <div className="text-xs text-accent font-semibold uppercase tracking-wider mb-1">
-                  {eq.tipo}
-                </div>
-                <h3 className="font-headline text-lg font-bold text-slate-900 mb-3">{eq.nome}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{eq.descricao}</p>
-              </div>
+          <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
+            {capacidadesVisuais.map(item => (
+              <article key={item.titulo} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className="relative aspect-[4/3] overflow-hidden bg-slate-100"><Image src={item.imagem} alt={item.alt} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+                <div className="p-6"><p className="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.etiqueta}</p><h3 className="mt-2 font-headline text-xl font-bold text-slate-900">{item.titulo}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{item.descricao}</p></div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Rastreabilidade */}
-      <section className="py-20 bg-slate-50">
+      <section className="bg-slate-50 py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
-              <ShieldCheck className="h-4 w-4" />
-              Rastreabilidade Total
-            </div>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Cada peça sai da fábrica com laudo metalúrgico
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Não fornecemos peça sem documentação. Todo pedido é entregue com{' '}
-              <strong>certificado de análise química, ensaio de dureza, laudo de ultrassom</strong>{' '}
-              e memorial descritivo do processo — atendendo aos requisitos das normas ABNT, ASTM,
-              DIN, AISI e ASME.
-            </p>
-            <p className="text-slate-500 italic mt-6">
-              Documentação técnica pronta para auditoria em plantas industriais críticas.
-            </p>
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">Capacidade de inspeção</p>
+            <h2 className="font-headline text-3xl font-bold text-slate-900 md:text-4xl">Equipamentos, ensaios e processos qualificados</h2>
+          </div>
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {equipamentos.map((eq, i) => (
+              <article key={eq.nome} className="rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:border-accent hover:shadow-lg" style={{ animationDelay: `${i * 0.08}s` }}>
+                <div className="mb-4 inline-flex rounded-xl border border-slate-200 bg-slate-50 p-3"><eq.icone className="h-6 w-6 text-accent" /></div>
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">{eq.tipo}</div>
+                <h3 className="font-headline text-lg font-bold text-slate-900">{eq.nome}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{eq.descricao}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1 text-sm font-semibold uppercase tracking-wide text-accent"><ShieldCheck className="h-4 w-4" /> Rastreabilidade total</div>
+            <h2 className="font-headline text-3xl font-bold text-slate-900 md:text-4xl">Cada peça sai da fábrica com laudo metalúrgico</h2>
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Todo pedido é entregue com documentação aplicável ao projeto, incluindo análise química, dureza, ultrassom e memorial do processo, conforme os requisitos definidos para o fornecimento.</p>
+            <p className="mt-5 text-sm italic text-slate-500">Documentação técnica organizada para rastreabilidade e auditoria industrial.</p>
           </div>
         </div>
       </section>
