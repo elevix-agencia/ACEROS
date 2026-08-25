@@ -26,10 +26,15 @@ import { Separator } from '../ui/separator';
 
 type MiningProduct = {
   id: string;
-  titleKey: keyof typeof t.expertise_sectors.page;
-  descriptionKey: keyof typeof t.expertise_sectors.page;
+  titleKey: string;
+  descriptionKey: string;
   imageId: string;
 };
+
+function formatProductTitle(title: string) {
+  const normalized = title.toLocaleLowerCase('pt-BR');
+  return normalized.charAt(0).toLocaleUpperCase('pt-BR') + normalized.slice(1);
+}
 
 export function MiningProducts() {
   const { t } = useLanguage();
@@ -84,7 +89,7 @@ export function MiningProducts() {
             {t.expertise_sectors.page.featured_products_title}
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid auto-rows-fr gap-8 md:grid-cols-2 lg:grid-cols-3">
           {products.map((product, index) => {
             const productImage = PlaceHolderImages.find(
               img => img.id === product.imageId
@@ -92,33 +97,33 @@ export function MiningProducts() {
             return (
               <Dialog key={product.id}>
                 <div
-                  className={cn('group animate-fade-in-up')}
+                  className={cn('group h-full animate-fade-in-up')}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <Card className="flex h-full flex-col overflow-hidden rounded-2xl shadow-xl border-none transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+                  <Card className="flex h-full flex-col overflow-hidden rounded-xl border border-slate-200 shadow-[0_14px_35px_rgba(7,18,30,.10)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(7,18,30,.16)] cursor-pointer">
                     {productImage && (
                       <DialogTrigger asChild>
-                        <div className="relative w-full bg-white">
+                        <div className="relative aspect-[16/7] w-full overflow-hidden bg-slate-100">
                           <Image
                             src={productImage.imageUrl}
                             alt={productImage.description}
-                            width={400}
-                            height={400}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             data-ai-hint={productImage.imageHint}
-                            className="object-contain transition-transform duration-500 group-hover:scale-105 w-full h-auto"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                           />
                         </div>
                       </DialogTrigger>
                     )}
                     <Separator />
-                    <div className="flex flex-col flex-grow p-6 bg-background">
+                    <div className="flex flex-col flex-grow bg-white p-6 sm:p-7">
                       <CardHeader className="p-0">
-                        <CardTitle className="font-headline text-lg font-bold text-center">
-                          {(t.expertise_sectors.page as any)[product.titleKey]}
+                        <CardTitle className="font-headline text-xl font-semibold leading-snug tracking-[-0.02em] text-center text-slate-900">
+                          {formatProductTitle((t.expertise_sectors.page as any)[product.titleKey])}
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="flex flex-col flex-grow p-0 mt-4">
-                        <CardDescription className="flex-grow text-center">
+                        <CardDescription className="flex-grow text-center font-body text-[15px] leading-6 text-slate-600">
                           {(t.expertise_sectors.page as any)[
                             product.descriptionKey
                           ]}
@@ -128,7 +133,7 @@ export function MiningProducts() {
                             asChild
                             size="sm"
                             variant="accent"
-                            className="w-full text-xs"
+                            className="h-11 w-full rounded-none font-body text-sm font-semibold"
                           >
                             <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
                               {t.cta.whatsapp_quote}
@@ -175,7 +180,7 @@ export function MiningProducts() {
             <Button
               asChild
               size="lg"
-              className="bg-green-600 text-white hover:bg-green-700 transition-transform duration-300 hover:scale-105"
+              className="rounded-none bg-primary text-white transition-transform duration-300 hover:-translate-y-1 hover:bg-primary/90"
             >
               <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
                 <MessageCircle className="mr-3 h-5 w-5" />

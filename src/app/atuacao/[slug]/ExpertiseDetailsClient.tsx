@@ -811,15 +811,6 @@ function MiningRollerScreens({translations}: {translations: any}) {
 
   return (
     <section className="relative py-20 sm:py-32 bg-accent overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            'repeating-linear-gradient(-45deg, rgba(255,255,255,0.5), rgba(255,255,255,0.5) 1px, transparent 1px, transparent 60px)',
-          backgroundSize: '84px 84px',
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-white/30"></div>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
