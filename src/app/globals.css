@@ -275,13 +275,13 @@ header.site-header .header-mobile-actions {
 @media (min-width: 1400px) {
   header.site-header,
   header.site-header .header-container {
-    height: 96px !important;
-    max-height: 96px !important;
+    height: 112px !important;
+    max-height: 112px !important;
   }
 
   header.site-header .header-logo img {
-    width: 205px !important;
-    max-width: 205px !important;
+    width: 240px !important;
+    max-width: 240px !important;
   }
 
   header.site-header .header-navigation {

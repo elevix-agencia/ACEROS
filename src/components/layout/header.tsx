@@ -40,7 +40,7 @@ export function Header() {
         'bg-white/95 backdrop-blur-xl'
       )}
     >
-      <div className="header-container mx-auto flex h-20 max-w-[1500px] items-center justify-between px-5 lg:px-8 xl:h-24">
+      <div className="header-container mx-auto flex h-20 max-w-[1320px] items-center justify-between px-5 lg:px-8">
         {/* Logo */}
         <div className="header-logo flex-shrink-0">
           <Link href="/" className="flex items-center" aria-label="Aceros — Página inicial">
@@ -49,7 +49,7 @@ export function Header() {
               alt="Aceros — Aços Centrifugados"
               width={220}
               height={55}
-              className="h-auto w-[160px] sm:w-[172px] xl:w-[205px]"
+              className="h-auto w-[160px] sm:w-[172px]"
               priority
             />
           </Link>
@@ -71,7 +71,7 @@ export function Header() {
                 href={link.href}
                 aria-current={isActive ? 'page' : undefined}
                 className={cn(
-                  'relative whitespace-nowrap px-3.5 py-3 text-[14px] font-semibold tracking-[0.01em] transition-colors',
+                  'relative whitespace-nowrap px-4 py-3 text-[15px] font-semibold tracking-[0.01em] transition-colors',
                   'after:absolute after:inset-x-3 after:bottom-1 after:h-0.5 after:origin-left after:bg-accent after:transition-transform',
                   isActive
                     ? 'text-primary after:scale-x-100'
@@ -86,7 +86,7 @@ export function Header() {
             <Button
               asChild
               size="lg"
-              className="btn-contato h-12 rounded-none bg-accent px-6 text-sm font-bold text-white shadow-none hover:bg-[#cf5f11]"
+              className="btn-contato h-14 rounded-none bg-accent px-7 text-[15px] font-bold text-white shadow-none hover:bg-[#cf5f11]"
             >
               <Link href="/contato" className="flex items-center gap-2">
                 {t.header.contact}

@@ -44,21 +44,36 @@ export function Sectors() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {sectors.map((sector, index) => sector.id === 'certificados' ? (
-            <Link
+            <article
               key={sector.id}
-              href={getLink(sector.id)}
-              aria-label="Ver certificados da Aceros"
-              className="group relative min-h-[460px] overflow-hidden rounded-lg bg-white p-3 shadow-[0_18px_45px_rgba(85,35,6,.2)] animate-fade-in-up"
+              className="group flex min-h-[460px] flex-col overflow-hidden rounded-lg bg-[#f1f1f3] text-slate-950 shadow-[0_18px_45px_rgba(85,35,6,.18)] animate-fade-in-up"
               style={{ animationDelay: `${0.1 + index * 0.08}s`, animationFillMode: 'both' }}
             >
-              <Image
-                src={sectorImages[sector.id]}
-                alt="Certificado ISO 9001:2015 da Aceros"
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-contain p-3 transition duration-500 group-hover:scale-[1.02]"
-              />
-            </Link>
+              <div className="relative h-[220px] shrink-0 overflow-hidden border-b-[3px] border-accent bg-white">
+                <Image
+                  src={sectorImages[sector.id]}
+                  alt="Certificado ISO 9001:2015 da Aceros"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-contain p-4 transition duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="flex flex-1 flex-col items-center px-6 py-7 text-center lg:px-7">
+                <h3 className="mb-4 font-headline text-xl font-bold leading-tight text-slate-950">
+                  Certificados
+                </h3>
+                <p className="mb-7 text-sm leading-6 text-slate-500">
+                  Explore mais nossos certificados e selos de qualidade.
+                </p>
+                <Link
+                  href={getLink(sector.id)}
+                  className="mt-auto inline-flex w-full items-center justify-center gap-3 border border-accent px-5 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+                >
+                  Saiba mais
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </article>
           ) : (
             <article
               key={sector.id}
