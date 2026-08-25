@@ -100,7 +100,7 @@ export function BuchaInoxClient() {
       </Link>
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-slate-900">
+      <section className="relative min-h-[90vh] flex items-center pt-24 pb-16 overflow-hidden bg-primary">
         <Image
           src="/images/aceros/buchas/bucha-aco-inox-aceros-02.jpg"
           alt="Bucha de aço inox usinada sob medida — fabricação Aceros"
@@ -197,7 +197,7 @@ export function BuchaInoxClient() {
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
-                <thead className="bg-slate-900 text-white">
+                <thead className="bg-primary text-white">
                   <tr>
                     <th className="p-6 font-semibold">Categoria</th>
                     <th className="p-6 font-semibold">Detalhes Disponíveis</th>
@@ -272,7 +272,7 @@ export function BuchaInoxClient() {
       </section>
 
       {/* Aplicações */}
-      <section className="py-20 bg-slate-900 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl font-bold uppercase">Principais Aplicações</h2>
@@ -407,7 +407,7 @@ export function BuchaInoxClient() {
       </section>
 
       {/* Certificação ISO 9001:2015 - Selo de Confiança */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-20 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
@@ -465,10 +465,10 @@ export function BuchaInoxClient() {
             Nossa equipe técnica está pronta para analisar seu projeto e indicar a melhor solução para sua necessidade industrial.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" className="bg-slate-900 text-white hover:bg-black px-12 py-8 text-xl">
+            <Button asChild size="lg" className="bg-primary text-white hover:bg-black px-12 py-8 text-xl">
               <Link href="#form-landing-bucha">Solicitar Cotação</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-12 py-8 text-xl">
+            <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-12 py-8 text-xl">
               <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" className="track-whatsapp">
                 Enviar Projeto via WhatsApp
               </Link>
@@ -522,7 +522,7 @@ export function BuchaInoxClient() {
       <section id="form-landing-bucha" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <div className="p-8 md:p-12 bg-slate-900 text-white flex flex-col justify-center">
+            <div className="p-8 md:p-12 bg-primary text-white flex flex-col justify-center">
               <h2 className="font-headline text-3xl font-bold uppercase mb-6">Solicite seu Orçamento Gratuito</h2>
               <p className="text-slate-400 mb-8">Nossos especialistas estão prontos para analisar seu projeto e enviar uma proposta comercial competitiva do Grupo Daniela.</p>
               <div className="space-y-6">

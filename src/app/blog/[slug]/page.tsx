@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const categoriaCores: Record<string, string> = {
-  Processo: 'bg-blue-100 text-blue-800 border-blue-300',
+  Processo: 'bg-primary/10 text-primary border-primary/30',
   Ligas: 'bg-orange-100 text-orange-800 border-orange-300',
   'Aplicações': 'bg-green-100 text-green-800 border-green-300',
   Engenharia: 'bg-slate-100 text-slate-800 border-slate-300',
@@ -146,7 +146,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* CTA no fim do post */}
         <div className="container mx-auto px-4 max-w-3xl mt-16">
-          <div className="bg-slate-900 text-white rounded-2xl p-8 md:p-10 text-center">
+          <div className="bg-primary text-white rounded-2xl p-8 md:p-10 text-center">
             <h3 className="font-headline text-2xl font-bold mb-4">
               Precisa aplicar esse conhecimento no seu projeto?
             </h3>
@@ -177,7 +177,7 @@ export default async function BlogPostPage({ params }: Props) {
                 href={`/blog/${p.slug}`}
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all"
               >
-                <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                <div className="relative aspect-[16/10] bg-primary overflow-hidden">
                   <Image
                     src={p.imagem}
                     alt={p.imagemAlt}

@@ -96,7 +96,7 @@ const familiaIcones = {
 };
 
 const familiaCores = {
-  'Série 300': 'from-blue-500/20 to-blue-500/5 border-blue-500/30',
+  'Série 300': 'from-primary/20 to-primary/5 border-primary/30',
   'Série 400': 'from-slate-500/20 to-slate-500/5 border-slate-500/30',
   'ASTM A297 (Refratária)': 'from-orange-500/20 to-orange-500/5 border-orange-500/30',
   'Exclusividade Aceros': 'from-accent/30 to-accent/10 border-accent',
@@ -108,7 +108,7 @@ export default function LigasPage() {
       <h1 className="sr-only">Ligas de Aço Inoxidável Aceros — Série 300, 400 e ASTM A297</h1>
 
       {/* Hero */}
-      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-primary text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
@@ -179,7 +179,7 @@ export default function LigasPage() {
       </section>
 
       {/* CTA técnico */}
-      <section className="py-16 bg-slate-900 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
             <Waves className="h-4 w-4" />

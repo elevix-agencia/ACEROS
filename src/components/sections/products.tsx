@@ -167,7 +167,7 @@ export function Products() {
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-slate-100 hover:border-accent animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.1}s`, animationFillMode: 'both' }}
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                <div className="relative aspect-[16/10] overflow-hidden bg-primary">
                   <Image
                     src={lp.imagem}
                     alt={lp.imagemAlt}
@@ -201,7 +201,7 @@ export function Products() {
                   <Button
                     asChild
                     size="lg"
-                    className="w-full group/btn bg-slate-900 text-white hover:bg-accent transition-colors"
+                    className="w-full group/btn bg-primary text-white hover:bg-accent transition-colors"
                   >
                     <Link href={lp.href} className="inline-flex items-center justify-center gap-2">
                       Ver linha completa
@@ -251,7 +251,7 @@ export function Products() {
         </div>
 
         {/* CTA Final: Envio de Desenho */}
-        <div className="bg-slate-900 text-white rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto animate-fade-in-up">
+        <div className="bg-primary text-white rounded-3xl p-8 md:p-12 text-center max-w-4xl mx-auto animate-fade-in-up">
           <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-4">
             <PenTool className="h-4 w-4" />
             Projeto sob desenho

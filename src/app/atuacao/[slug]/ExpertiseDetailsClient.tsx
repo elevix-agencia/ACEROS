@@ -164,11 +164,11 @@ function OilGasNewGallerySection() {
     >
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.05]"></div>
       <motion.div 
-        className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-blue-900/30 via-transparent to-transparent opacity-50"
+        className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-primary/30 via-transparent to-transparent opacity-50"
         style={{ y: y1 }}
       />
       <motion.div 
-        className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-tl from-cyan-900/30 via-transparent to-transparent opacity-50"
+        className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-tl from-accent/20 via-transparent to-transparent opacity-50"
         style={{ y: y2 }}
       />
       
@@ -880,8 +880,8 @@ function NavalFlangesSection({translations}: {translations: any}) {
   return (
     <section className="relative py-20 sm:py-32 bg-orange-500 text-white overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-blue-900/20 via-transparent to-transparent"></div>
-      <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-cyan-900/20 via-transparent to-transparent"></div>
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-primary/20 via-transparent to-transparent"></div>
+      <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-accent/15 via-transparent to-transparent"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -949,8 +949,8 @@ function NavalTubesSection({translations}: {translations: any}) {
   return (
     <section className="relative py-20 sm:py-32 bg-gray-50 text-foreground overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,rgba(0,0,0,0.05)_1px,transparent_1px)] [background-size:32px_32px] opacity-50"></div>
-        <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-blue-100/30 via-transparent to-transparent"></div>
-        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-cyan-100/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-primary/10 via-transparent to-transparent"></div>
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-accent/10 via-transparent to-transparent"></div>
         
         <div className="container mx-auto px-4 relative z-10">
             <motion.div
@@ -1026,7 +1026,7 @@ function NavalAnalysisSection({translations}: {translations: any}) {
     <section className="relative py-20 sm:py-32 bg-white text-foreground overflow-hidden">
       {/* Background Effects */}
       <motion.div 
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl opacity-50"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl opacity-50"
         animate={{
           x: [0, 50, 0],
           y: [0, -50, 0],
@@ -1039,7 +1039,7 @@ function NavalAnalysisSection({translations}: {translations: any}) {
         }}
       />
       <motion.div 
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full filter blur-3xl opacity-50"
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl opacity-50"
         animate={{
           x: [0, -50, 0],
           y: [0, 50, 0],

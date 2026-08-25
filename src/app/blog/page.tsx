@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const categoriaCores: Record<string, string> = {
-  Processo: 'bg-blue-100 text-blue-800 border-blue-300',
+  Processo: 'bg-primary/10 text-primary border-primary/30',
   Ligas: 'bg-orange-100 text-orange-800 border-orange-300',
   'Aplicações': 'bg-green-100 text-green-800 border-green-300',
   Engenharia: 'bg-slate-100 text-slate-800 border-slate-300',
@@ -32,7 +32,7 @@ export default function BlogPage() {
       <h1 className="sr-only">Blog Técnico Aceros — Conteúdo sobre Aços Centrifugados</h1>
 
       {/* Hero */}
-      <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-primary text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
@@ -59,7 +59,7 @@ export default function BlogPage() {
             className="group block max-w-6xl mx-auto bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all overflow-hidden animate-fade-in-up"
           >
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="relative aspect-[4/3] md:aspect-auto bg-slate-900 overflow-hidden">
+              <div className="relative aspect-[4/3] md:aspect-auto bg-primary overflow-hidden">
                 <Image
                   src={destaque.imagem}
                   alt={destaque.imagemAlt}
@@ -118,7 +118,7 @@ export default function BlogPage() {
                   className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all animate-fade-in-up"
                   style={{ animationDelay: `${i * 0.08}s`, animationFillMode: 'both' }}
                 >
-                  <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
+                  <div className="relative aspect-[16/10] bg-primary overflow-hidden">
                     <Image
                       src={post.imagem}
                       alt={post.imagemAlt}
@@ -154,7 +154,7 @@ export default function BlogPage() {
       </section>
 
       {/* CTA final */}
-      <section className="py-16 bg-slate-900 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h3 className="font-headline text-2xl md:text-3xl font-bold mb-4">
             Precisa de assessoria técnica no seu projeto?

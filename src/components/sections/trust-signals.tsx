@@ -53,7 +53,7 @@ const certifications = [
 
 export function TrustSignals() {
   return (
-    <section className="bg-slate-900 text-white py-20 sm:py-28" id="credibilidade">
+    <section className="bg-primary text-white py-20 sm:py-28" id="credibilidade">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
