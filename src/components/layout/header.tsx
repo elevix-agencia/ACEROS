@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu } from 'lucide-react';
+import { ArrowUpRight, Menu } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/hooks/use-language';
@@ -34,40 +34,46 @@ export function Header() {
   return (
     <header
       className={cn(
-        'site-header top-0 left-0 right-0 z-50',
-        'bg-white/80 backdrop-blur-sm shadow-md'
+        'site-header sticky top-0 left-0 right-0 z-50 border-b border-slate-200/80',
+        'bg-white/95 backdrop-blur-xl'
       )}
     >
-      <div className="header-container container mx-auto px-4 sm:px-8">
+      <div className="header-container mx-auto flex h-[88px] max-w-[1440px] items-center justify-between px-5 lg:px-10">
         {/* Logo */}
         <div className="header-logo flex-shrink-0">
-          <Link href="/" className="flex items-center gap-2" aria-label="Aceros — Página inicial">
+          <Link href="/" className="flex items-center" aria-label="Aceros — Página inicial">
             <Image
               src="/images/imgur/OBD0nJ0.png"
               alt="Aceros — Aços Centrifugados"
-              width={280}
-              height={70}
+              width={220}
+              height={55}
+              className="h-auto w-[172px] lg:w-[196px]"
               priority
             />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="header-navigation hidden md:flex">
+        <nav className="header-navigation hidden items-center lg:flex">
             {navLinks.map(link => (
-              <Button key={link.href} asChild variant="ghost" size="lg" className="transition-colors duration-300 hover:text-primary text-xl px-8 py-5">
-                <Link href={link.href}>
+              <Link
+                key={link.href}
+                href={link.href}
+                className="relative px-3 py-3 text-[13px] font-semibold uppercase tracking-[0.08em] text-slate-600 transition-colors after:absolute after:inset-x-3 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-[#e46f1f] after:transition-transform hover:text-slate-950 hover:after:scale-x-100 xl:px-4 xl:after:inset-x-4"
+              >
                   {link.label}
-                </Link>
-              </Button>
+              </Link>
             ))}
-          <div className="flex items-center gap-4 ml-4">
+          <div className="ml-3 flex items-center gap-3 border-l border-slate-200 pl-5">
             <Button
               asChild
               size="lg"
-              className="btn-contato bg-accent text-accent-foreground hover:bg-accent/90 transition-transform duration-300 hover:scale-105 text-xl px-12 py-6"
+              className="btn-contato h-11 rounded-none bg-[#e46f1f] px-5 text-[12px] font-bold uppercase tracking-[0.1em] text-white shadow-none hover:bg-[#bf5412]"
             >
-              <Link href="/contato">{t.header.contact}</Link>
+              <Link href="/contato" className="flex items-center gap-2">
+                {t.header.contact}
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </Button>
             <div className="btn-idioma">
                 <LanguageSwitcher />
@@ -76,12 +82,12 @@ export function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="flex items-center gap-2 lg:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="menu-icon-mobile">
+              <Button variant="ghost" size="icon" className="menu-icon-mobile h-11 w-11 rounded-none border border-slate-200">
                 <Menu className="h-8 w-8" />
-                <span className="sr-only">{t.header.open_menu}</span>
+                <span className="sr-only">Abrir menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background/95 backdrop-blur-sm">

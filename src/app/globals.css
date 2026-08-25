@@ -63,6 +63,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01";
   }
   main {
     overflow-x: hidden;
@@ -220,6 +221,40 @@
 
   .mercado-atuacao-card:hover h3 {
       transform: translateZ(20px) !important; /* Efeito de flutuação do texto */
+  }
+}
+
+/* Redesign 2026: neutraliza os overrides legados do cabeçalho. */
+header.site-header,
+header.site-header .header-container {
+  height: 88px !important;
+  max-height: 88px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: visible !important;
+}
+
+header.site-header .header-logo img {
+  width: 196px !important;
+  max-width: 196px !important;
+  height: auto !important;
+}
+
+header.site-header .header-navigation a {
+  margin: 0 !important;
+}
+
+@media (max-width: 1023px) {
+  header.site-header .header-logo img {
+    position: static !important;
+    width: 172px !important;
+    max-width: 172px !important;
+    transform: none !important;
+  }
+
+  header.site-header .menu-icon-mobile {
+    margin: 0 !important;
+    transform: none !important;
   }
 }
 
@@ -488,4 +523,3 @@
 .hero-buttons .btn-action:hover {     transform: rotateX(20deg) rotateY(20deg) translateZ(80px) scale(1.2) !important;     box-shadow: -20px 20px 60px rgba(0,0,0,0.8), 0 0 30px rgba(255,140,0,0.5) !important; }
 @keyframes zoom4D {     0% { opacity: 0; transform: translateZ(-2000px) scale(0); }     100% { opacity: 1; transform: translateZ(0) scale(1); } }
 
-    

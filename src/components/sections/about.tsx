@@ -1,12 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, Eye } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
-
-const aboutImage = PlaceHolderImages.find(img => img.id === 'factory-floor');
 
 export function About() {
   const { t } = useLanguage();
@@ -27,7 +24,7 @@ export function About() {
   return (
     <div>
       <section
-        id="about-story"
+        id="sobre"
         className="container mx-auto px-4 pt-20 sm:pt-32 pb-16"
       >
         <div className="grid gap-12 md:gap-20 md:grid-cols-2 items-center">
@@ -43,20 +40,21 @@ export function About() {
             </p>
           </div>
           <div className="relative flex items-center justify-center h-[300px] sm:h-[500px] animate-slide-in-right">
-            {aboutImage && (
-              <Card className="overflow-hidden rounded-2xl shadow-2xl w-full h-full">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={aboutImage.imageUrl}
-                    alt={aboutImage.description}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    data-ai-hint={aboutImage.imageHint}
-                    className="object-cover"
-                  />
+            <Card className="overflow-hidden rounded-none border-0 shadow-2xl w-full h-full">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/aceros/drive/fabrica-usinagem.webp"
+                  alt="Estrutura industrial e área de usinagem da Aceros"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#07121e] via-[#07121e]/75 to-transparent p-6 pt-20 text-white">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f09a5c]">Imagem real Aceros</p>
+                  <p className="mt-2 max-w-sm text-sm text-slate-200">Usinagem e fabricação sob medida para aplicações industriais críticas.</p>
                 </div>
-              </Card>
-            )}
+              </div>
+            </Card>
           </div>
         </div>
       </section>
