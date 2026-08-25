@@ -70,15 +70,15 @@ export function Hero() {
                     }
                 }}
             >
-                <motion.h1 
-                  className="font-headline text-2xl sm:text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-shadow-lg"
-                  style={{ lineHeight: '1.2' }}
+                <motion.h1
+                  className="font-headline text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight text-shadow-lg"
+                  style={{ lineHeight: '1.1' }}
                   variants={{
                     hidden: { opacity: 0, x: -50 },
                     visible: { opacity: 1, x: 0, transition: { duration: 1, ease: [0.25, 0.46, 0.45, 0.94] } }
                   }}
                 >
-                    TECNOLOGIA EM AÇOS INOXIDÁVEIS DE ALTA PERFORMANCE PARA RESISTÊNCIA TÉRMICA, ABRASÃO E OXIDAÇÃO
+                    {t.hero.main_title}
                 </motion.h1>
                 <motion.p 
                   className="mt-6 text-base sm:text-lg md:text-xl text-slate-200 text-shadow-md"
@@ -96,13 +96,13 @@ export function Hero() {
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
                   }}
                 >
-                    <Button asChild size="lg" className="px-10 sm:px-12 py-6 sm:py-7 text-sm sm:text-base font-bold transition-transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg">
-                        <Link href="/sobre">
-                          {t.hero.learn_more}
+                    <Button asChild size="lg" className="px-10 sm:px-12 py-6 sm:py-7 text-sm sm:text-base font-bold bg-accent text-accent-foreground hover:bg-accent/90 transition-transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg">
+                        <Link href="/contato">
+                          {t.hero.contact_us}
                         </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline" className="px-10 sm:px-12 py-6 sm:py-7 text-sm sm:text-base font-bold border-2 border-white bg-transparent text-white transition-colors hover:bg-white hover:text-black hover:-translate-y-1 hover:shadow-lg">
-                        <Link href="/contato">{t.hero.contact_us}</Link>
+                        <Link href="/produtos">{t.hero.learn_more}</Link>
                     </Button>
                 </motion.div>
             </motion.div>
