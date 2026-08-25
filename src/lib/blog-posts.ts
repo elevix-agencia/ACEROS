@@ -20,8 +20,8 @@ export const blogPosts: BlogPost[] = [
     categoria: 'Aplicações',
     tempoLeitura: '6 min',
     dataPublicacao: '2026-08-24',
-    imagem: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg',
-    imagemAlt: 'Sink Roll centrifugado Aceros — aço inox usinado e polido',
+    imagem: '/images/aceros/generated/blog-sink-roll-instalado-v2.webp',
+    imagemAlt: 'Conjunto Sink Roll instalado em linha industrial de galvanização',
     keywords: ['sink roll', 'liga sink roll', 'galvanização', 'pote de zinco', 'ASTM A297'],
     conteudo: `
 <p>O <strong>Sink Roll</strong> é um dos componentes mais críticos de uma linha de galvanização por imersão a quente. Ele opera submerso em um pote de zinco fundido a temperaturas de 450 a 480 °C, com constante ataque químico do zinco e cargas mecânicas cíclicas. A escolha incorreta da liga pode reduzir drasticamente a vida útil do rolo — de 90 dias esperados para apenas 20-30, resultando em paradas não programadas e perdas de produção.</p>
