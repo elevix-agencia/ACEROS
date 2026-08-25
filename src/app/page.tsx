@@ -1,6 +1,5 @@
 'use client';
 import { Hero } from '@/components/sections/hero';
-import { QualityCta } from '@/components/sections/home-quality-cta';
 import { LocationMap } from '@/components/sections/location-map';
 import { About } from '@/components/sections/about';
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
@@ -26,7 +25,6 @@ export default function Home() {
       <TrustSignals />
       <Sectors />
       <MainGallery />
-      <QualityCta />
       <ManufacturingHistory />
       <LocationMap />
 

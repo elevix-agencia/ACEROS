@@ -23,7 +23,7 @@ const landingPagesDestaque: LandingPage[] = [
     titulo: 'Tubos Centrifugados',
     descricao:
       'Tubos de aço inox fabricados por centrifugação em ligas ASTM A297 (HK, HH, HP) e ligas 304, 304L, 316, 316L, 310 e 420. Microestrutura densa, livre de porosidade, com alta resistência mecânica e térmica.',
-    imagem: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg',
+    imagem: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-12.jpg',
     imagemAlt: 'Tubos de aço inox centrifugados usinados e polidos — fabricação Aceros',
     bullets: [
       'Estágios: bruto, usinado (munhão), polido, misto',
@@ -38,7 +38,7 @@ const landingPagesDestaque: LandingPage[] = [
     titulo: 'Buchas de Aço Inox',
     descricao:
       'Buchas centrifugadas em ligas de alta dureza para aplicações industriais severas. Especialistas em buchas para ponta de Sink Roll (linhas de galvanização) e Furnace Roll (rolos de forno).',
-    imagem: '/images/aceros/buchas/bucha-aco-inox-aceros-02.jpg',
+    imagem: '/images/aceros/buchas/bucha-aco-inox-aceros-06.jpg',
     imagemAlt: 'Buchas de aço inox usinadas sob medida — fabricação Aceros',
     bullets: [
       'Usinagem CNC de precisão milimétrica',

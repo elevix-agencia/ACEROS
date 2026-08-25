@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
 import { motion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 const heroSlides = [
   {
@@ -15,14 +15,14 @@ const heroSlides = [
     label: 'Tubos centrifugados',
   },
   {
-    src: '/images/aceros/generated/hero-sink-roll-zincagem-v2.webp',
-    alt: 'Conjunto Sink Roll com braços instalado em linha de zincagem',
-    label: 'Aplicação em zincagem',
+    src: '/images/aceros/generated/hero-buchas-centrifugadas-v3.webp',
+    alt: 'Buchas de aço inox centrifugado usinadas pela Aceros',
+    label: 'Buchas centrifugadas',
   },
   {
-    src: '/images/aceros/generated/hero-fabrica-usinagem-v2.webp',
-    alt: 'Área de usinagem industrial da fábrica Aceros',
-    label: 'Estrutura industrial',
+    src: '/images/aceros/generated/hero-tubos-polidos-v2.webp',
+    alt: 'Tubos de aço inox usinados e polidos pela Aceros',
+    label: 'Tubos polidos',
   },
 ];
 
@@ -56,7 +56,7 @@ export function Hero() {
       <div className="absolute left-0 top-0 h-full w-1 bg-[#e46f1f]" />
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100svh-80px)] max-w-[1440px] items-center px-5 py-16 lg:px-10 lg:pb-28 lg:pt-20">
-        <div className="grid w-full gap-10 xl:grid-cols-[minmax(0,760px)_minmax(300px,1fr)] xl:items-end xl:gap-16">
+        <div className="w-full max-w-[820px]">
             <motion.div
                 className="max-w-[820px]"
                 initial="hidden"
@@ -135,22 +135,6 @@ export function Hero() {
                 </motion.div>
             </motion.div>
 
-          <motion.aside
-            className="hidden border border-white/15 bg-[#07121e]/70 p-7 backdrop-blur-md xl:block"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-          >
-            <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Controle de ponta a ponta</p>
-            <ul className="space-y-4 text-sm text-slate-100">
-              {['ISO 9001:2015 DQS', 'Ligas ASTM A297 — HK, HH e HP', 'Projeto por desenho técnico', 'Rastreabilidade e laudo metalúrgico'].map((item) => (
-                <li key={item} className="flex items-start gap-3 border-t border-white/10 pt-4 first:border-0 first:pt-0">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#e46f1f]" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.aside>
         </div>
       </div>
 
