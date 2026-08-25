@@ -3,7 +3,7 @@
 import { Award, Factory, Flame, Layers, ShieldCheck, Sparkles } from 'lucide-react';
 
 const stats = [
-  { number: '2015', label: 'desde', sub: 'mais de uma década em centrifugação' },
+  { number: '1999', label: 'Grupo Daniela desde', sub: 'Aceros como divisão de inox desde 2015' },
   { number: 'ASTM', label: 'A297', sub: 'ligas HK, HH, HP e superligas' },
   { number: '3', label: 'países atendidos', sub: 'Portugal, EUA e Itália' },
   { number: '100%', label: 'sob medida', sub: 'projetos por desenho técnico' },
