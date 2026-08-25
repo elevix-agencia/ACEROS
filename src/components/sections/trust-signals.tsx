@@ -5,7 +5,7 @@ import { Award, Factory, Flame, Layers, ShieldCheck, Sparkles } from 'lucide-rea
 const stats = [
   { number: '1999', label: 'Grupo Daniela desde', sub: 'Aceros como divisão de inox desde 2015' },
   { number: 'ASTM', label: 'A297', sub: 'ligas HK, HH, HP e superligas' },
-  { number: '3', label: 'países atendidos', sub: 'Portugal, EUA e Itália' },
+  { number: '+3', label: 'países atendidos', sub: 'presença internacional' },
   { number: '100%', label: 'sob medida', sub: 'projetos por desenho técnico' },
 ];
 

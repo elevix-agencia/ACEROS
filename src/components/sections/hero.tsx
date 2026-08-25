@@ -52,13 +52,12 @@ export function Hero() {
         />
       ))}
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />
-      <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.35)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.35)_1px,transparent_1px)] [background-size:64px_64px]" />
       <div className="absolute left-0 top-0 h-full w-1 bg-[#e46f1f]" />
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100svh-80px)] max-w-[1440px] items-center px-5 py-16 lg:px-10 lg:pb-28 lg:pt-20">
-        <div className="w-full max-w-[820px]">
+        <div className="w-full max-w-[920px]">
             <motion.div
-                className="max-w-[820px]"
+                className="max-w-[920px]"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -80,7 +79,7 @@ export function Hero() {
                   Engenharia metalúrgica desde 2015
                 </motion.div>
                 <motion.h1
-                  className="max-w-[760px] font-headline text-[clamp(2.5rem,4.1vw,4.1rem)] font-bold uppercase leading-[0.97] tracking-[-0.04em] text-white"
+                  className="max-w-[900px] text-balance font-headline text-[clamp(2.25rem,3.35vw,3.65rem)] font-semibold uppercase leading-[1.08] tracking-[-0.025em] text-white"
                   variants={{
                     hidden: { opacity: 0, y: 16 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] } }
@@ -89,7 +88,7 @@ export function Hero() {
                     {t.hero.main_title}
                 </motion.h1>
                 <motion.p 
-                  className="mt-8 max-w-2xl border-l border-white/25 pl-5 text-base leading-7 text-slate-200 sm:text-lg"
+                  className="mt-7 max-w-[700px] border-l border-[#e46f1f]/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8"
                    variants={{
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -143,7 +142,7 @@ export function Hero() {
           {[
             ['1999', 'Grupo Daniela'],
             ['2015', 'Divisão Aceros'],
-            ['03', 'Países atendidos'],
+            ['+3', 'Países atendidos'],
             ['100%', 'Sob medida'],
           ].map(([value, label]) => (
             <div key={label} className="border-r border-white/10 px-5 py-4 last:border-0 lg:px-8">
