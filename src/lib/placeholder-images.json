@@ -130,19 +130,19 @@
                               },
                               {
                                   "id":  "qualifications-hero",
-                                  "description":  "Ambiente de metalurgia com aço derretido sendo derramado.",
-                                  "imageUrl":  "/images/imgur/mI4RhYP.png",
-                                  "imageHint":  "metallurgy molten steel",
-                                  "width":  1344,
-                                  "height":  768
+                                  "description":  "Área de usinagem industrial da fábrica Aceros.",
+                                  "imageUrl":  "/images/aceros/generated/hero-fabrica-usinagem-v2.webp",
+                                  "imageHint":  "Aceros factory machining",
+                                  "width":  1600,
+                                  "height":  900
                               },
                               {
                                   "id":  "metallurgy-lab",
-                                  "description":  "Molten steel being poured in a foundry.",
-                                  "imageUrl":  "/images/imgur/65l3CZ7.jpeg",
-                                  "imageHint":  "molten steel",
-                                  "width":  4332,
-                                  "height":  2363
+                                  "description":  "Laboratório metalúrgico para controle de qualidade de peças em aço.",
+                                  "imageUrl":  "/images/aceros/generated/laboratorio-metalurgico-v2.webp",
+                                  "imageHint":  "metallurgical quality laboratory",
+                                  "width":  1600,
+                                  "height":  900
                               },
                               {
                                   "id":  "alloy-chart",

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function QualificacaoPage() {
   return (
-    <div className="pt-20">
+    <div>
       <Qualifications />
       <QualityLab />
       <WhatsAppCta />

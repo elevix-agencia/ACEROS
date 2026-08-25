@@ -69,7 +69,7 @@ export function Header() {
                 aria-current={isActive ? 'page' : undefined}
                 className={cn(
                   'relative whitespace-nowrap px-3 py-3 text-[12px] font-bold uppercase tracking-[0.07em] transition-colors',
-                  'after:absolute after:inset-x-3 after:bottom-1 after:h-0.5 after:origin-left after:bg-[#e46f1f] after:transition-transform',
+                  'after:absolute after:inset-x-3 after:bottom-1 after:h-0.5 after:origin-left after:bg-accent after:transition-transform',
                   isActive
                     ? 'text-slate-950 after:scale-x-100'
                     : 'text-slate-600 after:scale-x-0 hover:text-slate-950 hover:after:scale-x-100'
