@@ -48,6 +48,17 @@ export type ExpertisePageData = {
   translations: any;
 };
 
+const getSilentVideoSource = (url: string) => {
+  if (!url.includes('player.cloudinary.com/embed/')) return url;
+
+  const params = new URL(url).searchParams;
+  const cloudName = params.get('cloud_name');
+  const publicId = params.get('public_id');
+
+  if (!cloudName || !publicId) return url;
+  return `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.mp4`;
+};
+
 export function ExpertiseDetailsClient({
   pageData,
 }: {
@@ -89,7 +100,7 @@ export function ExpertiseDetailsClient({
 
   return (
     <div>
-      <section className="relative h-[60vh] min-h-[400px] w-full">
+      <section className="relative h-[58vh] min-h-[460px] max-h-[660px] w-full overflow-hidden bg-[#07121e]">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -97,23 +108,25 @@ export function ExpertiseDetailsClient({
             fill
             sizes="100vw"
             data-ai-hint={heroImage.imageHint}
-            className="object-cover"
+            className="object-cover object-center"
             priority
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent" />
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white">
-          <div className="relative z-10 flex flex-col items-center px-4">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,18,30,.94)_0%,rgba(7,18,30,.82)_42%,rgba(7,18,30,.34)_72%,rgba(7,18,30,.12)_100%)]" />
+        <div className="absolute inset-0 z-10 flex items-center text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-[820px]">
             <motion.p 
-              className="font-headline text-lg sm:text-xl font-medium tracking-wide text-accent"
+              className="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.22em] text-accent"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
+              <span className="h-px w-10 bg-accent" />
               {translations.expertise_sectors.page.solutions_for}
             </motion.p>
             <motion.h1 
-              className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl uppercase"
+              className="font-headline text-[clamp(2.65rem,5vw,4.75rem)] font-semibold uppercase leading-[1.02] tracking-[-0.025em]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -121,13 +134,14 @@ export function ExpertiseDetailsClient({
               {sector.title}
             </motion.h1>
             <motion.p 
-              className="mt-6 max-w-3xl text-lg text-slate-200 md:text-xl"
+              className="mt-7 max-w-[720px] border-l border-accent/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               {sector.description}
             </motion.p>
+            </div>
           </div>
         </div>
       </section>
@@ -332,12 +346,16 @@ function TratamentoTermicoVideos({ videoUrls, translations }: { videoUrls: strin
               transition={{ duration: 0.8, delay: 0.2 + index * 0.2 }}
             >
               <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg border transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-1">
-                <iframe
-                  src={url}
-                  className="w-full h-full"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                ></iframe>
+                <video
+                  src={getSilentVideoSource(url)}
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-label="Vídeo industrial da Aceros reproduzido sem áudio"
+                />
               </div>
             </motion.div>
           ))}
@@ -1653,7 +1671,16 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
                                     <div className="p-2">
                                         {item.type === 'video' && 'url' in item ? (
                                             <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg">
-                                                <iframe src={item.url} className="w-full h-full" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                                                <video
+                                                  src={getSilentVideoSource(item.url)}
+                                                  className="h-full w-full object-cover"
+                                                  autoPlay
+                                                  loop
+                                                  muted
+                                                  playsInline
+                                                  preload="metadata"
+                                                  aria-label="Vídeo industrial da Aceros reproduzido sem áudio"
+                                                />
                                             </div>
                                         ) : item.type === 'image' && 'imageUrl' in item ? (
                                             <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg">

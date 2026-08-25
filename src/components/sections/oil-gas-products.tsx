@@ -40,11 +40,16 @@ const MediaViewer = ({ item }: { item: MediaItem }) => {
           <CardContent className="p-0">
             <div className="relative aspect-video w-full">
               {item.type === 'video' ? (
-                 <iframe
+                <video
                   src={item.url.replace('/upload/', '/upload/q_auto:low,w_400/')}
-                  className="w-full h-full object-cover pointer-events-none"
-                  allow="autoplay; muted"
-                ></iframe>
+                  className="h-full w-full object-cover pointer-events-none"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-label="Prévia silenciosa de vídeo industrial da Aceros"
+                />
               ) : (
                 'imageUrl' in item && (
                   <Image
@@ -72,12 +77,15 @@ const MediaViewer = ({ item }: { item: MediaItem }) => {
         </DialogHeader>
         <div className="relative flex-grow w-full h-full my-4 flex items-center justify-center">
           {item.type === 'video' ? (
-            <iframe
+            <video
               src={item.url.replace('/upload/', '/upload/q_auto:best/')}
-              className="w-full h-full aspect-video"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+              className="h-full w-full object-contain"
+              controls
+              muted
+              playsInline
+              preload="metadata"
+              aria-label="Vídeo industrial da Aceros"
+            />
           ) : (
             <Image
               src={item.imageUrl}

@@ -581,8 +581,8 @@ export function GuseiraMediaSection({ videoUrls, imageIds }: { videoUrls: string
   const images = imageIds.map(id => PlaceHolderImages.find(img => img.id === id)).filter((img): img is ImagePlaceholder => !!img);
 
   const mediaItems = [
-    ...videoUrls.map(url => ({ type: 'video', url, id: url })),
-    ...images.map(img => ({ type: 'image', ...img }))
+    ...videoUrls.map(url => ({ type: 'video' as const, url, id: url })),
+    ...images.map(img => ({ type: 'image' as const, ...img }))
   ];
 
   if (mediaItems.length === 0) {
@@ -618,12 +618,16 @@ export function GuseiraMediaSection({ videoUrls, imageIds }: { videoUrls: string
             >
               <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg border">
                 {item.type === 'video' ? (
-                  <iframe
+                  <video
                     src={item.url}
-                    className="w-full h-full"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                  ></iframe>
+                    className="h-full w-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    aria-label="Vídeo industrial da Aceros reproduzido sem áudio"
+                  />
                 ) : (
                   <Image
                     src={item.imageUrl}

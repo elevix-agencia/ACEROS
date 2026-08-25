@@ -8,12 +8,12 @@ import { useLanguage } from '@/hooks/use-language';
 import { sectorsData } from '@/lib/expertise-data';
 
 const sectorImages: Record<string, string> = {
-  mineracao: '/images/aceros/generated/hero-eixo-industrial-v2.webp',
-  tratamento_termico: '/images/aceros/generated/tratamento-termico-v2.webp',
-  naval: '/images/imgur/jNzhuvc.png',
-  siderurgia: '/images/aceros/generated/blog-sink-roll-instalado-v2.webp',
-  guseira: '/images/aceros/generated/industria-guseira-v2.webp',
-  oleo_e_gas: '/images/aceros/generated/hero-tubos-centrifugados-v2.webp',
+  mineracao: '/images/imgur/ol4Y0fr.jpeg',
+  tratamento_termico: '/images/imgur/Scmi8ys.jpeg',
+  naval: '/images/imgur/5AsJUxh.png',
+  siderurgia: '/images/imgur/XJLum1h.png',
+  guseira: '/images/aceros/generated/guseira-hero-v3.png',
+  oleo_e_gas: '/images/imgur/I9Ufb7K.jpeg',
   engenharia: '/images/imgur/bPgdSyM.png',
   certificados: '/images/aceros/generated/certificado-iso-2028.png',
 };
