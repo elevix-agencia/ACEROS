@@ -32,7 +32,7 @@ export function Sectors() {
 
   return (
     <section id="sectors" className="bg-[#ef7b21] py-20 text-white sm:py-28">
-      <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
+      <div className="container mx-auto px-4">
         <div className="mx-auto mb-14 max-w-3xl text-center animate-fade-in-up">
           <h2 className="mb-4 font-headline text-4xl font-bold tracking-tight sm:text-5xl">
             {t.sectors.title}

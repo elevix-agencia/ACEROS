@@ -54,7 +54,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />
       <div className="absolute left-0 top-0 h-full w-1 bg-accent" />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-80px)] max-w-[1440px] items-center px-5 py-16 lg:px-10 lg:pb-28 lg:pt-20">
+      <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-80px)] items-center px-4 py-16 lg:pb-28 lg:pt-20">
         <div className="w-full max-w-[920px]">
             <motion.div
                 className="max-w-[920px]"
@@ -138,7 +138,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-20 hidden border-t border-white/15 bg-[#07121e] lg:block">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-2 lg:grid-cols-4">
+        <div className="container mx-auto grid grid-cols-2 px-4 lg:grid-cols-4">
           {[
             ['1999', 'Grupo Daniela'],
             ['2015', 'Divisão Aceros'],
