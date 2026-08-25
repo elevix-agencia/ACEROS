@@ -242,7 +242,7 @@ header.site-header .header-navigation {
 }
 
 header.site-header .btn-contato {
-  font-size: 12px !important;
+  font-size: 14px !important;
 }
 
 header.site-header .btn-idioma {
@@ -273,6 +273,17 @@ header.site-header .header-mobile-actions {
 }
 
 @media (min-width: 1400px) {
+  header.site-header,
+  header.site-header .header-container {
+    height: 96px !important;
+    max-height: 96px !important;
+  }
+
+  header.site-header .header-logo img {
+    width: 205px !important;
+    max-width: 205px !important;
+  }
+
   header.site-header .header-navigation {
     display: flex !important;
   }

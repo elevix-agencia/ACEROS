@@ -33,14 +33,11 @@ export function Sectors() {
   return (
     <section id="sectors" className="bg-[#ef7b21] py-20 text-white sm:py-28">
       <div className="mx-auto max-w-[1440px] px-5 lg:px-10">
-        <div className="mb-12 max-w-3xl animate-fade-in-up">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
-            Soluções por segmento
-          </p>
-          <h2 className="mb-5 font-headline text-4xl font-bold tracking-tight sm:text-5xl">
+        <div className="mx-auto mb-14 max-w-3xl text-center animate-fade-in-up">
+          <h2 className="mb-4 font-headline text-4xl font-bold tracking-tight sm:text-5xl">
             {t.sectors.title}
           </h2>
-          <p className="text-lg leading-8 text-white/90 sm:text-xl">
+          <p className="text-base leading-7 text-white/90 sm:text-lg sm:leading-8">
             {t.sectors.subtitle}
           </p>
         </div>
@@ -51,7 +48,7 @@ export function Sectors() {
               key={sector.id}
               href={getLink(sector.id)}
               aria-label="Ver certificados da Aceros"
-              className="group relative min-h-[430px] overflow-hidden bg-white p-3 shadow-[0_18px_45px_rgba(85,35,6,.2)] animate-fade-in-up"
+              className="group relative min-h-[460px] overflow-hidden rounded-lg bg-white p-3 shadow-[0_18px_45px_rgba(85,35,6,.2)] animate-fade-in-up"
               style={{ animationDelay: `${0.1 + index * 0.08}s`, animationFillMode: 'both' }}
             >
               <Image
@@ -65,32 +62,30 @@ export function Sectors() {
           ) : (
             <article
               key={sector.id}
-              className="group relative min-h-[430px] overflow-hidden bg-[#07121e] shadow-[0_18px_45px_rgba(85,35,6,.2)] animate-fade-in-up"
+              className="group flex min-h-[460px] flex-col overflow-hidden rounded-lg bg-[#f1f1f3] text-slate-950 shadow-[0_18px_45px_rgba(85,35,6,.18)] animate-fade-in-up"
               style={{ animationDelay: `${0.1 + index * 0.08}s`, animationFillMode: 'both' }}
             >
-              <Image
-                src={sectorImages[sector.id]}
-                alt={sector.title}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-95"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#07121e] via-[#07121e]/65 to-[#07121e]/5" />
-              <div className="absolute inset-x-0 bottom-0 flex min-h-[62%] flex-col justify-end p-6 lg:p-7">
-                <span className="mb-4 text-[11px] font-bold tracking-[0.2em] text-accent">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <h3 className="mb-3 font-headline text-2xl font-bold leading-tight text-white">
+              <div className="relative h-[220px] shrink-0 overflow-hidden border-b-[3px] border-accent">
+                <Image
+                  src={sectorImages[sector.id]}
+                  alt={sector.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-1 flex-col items-center px-6 py-7 text-center lg:px-7">
+                <h3 className="mb-4 font-headline text-xl font-bold leading-tight text-slate-950">
                   {sector.title}
                 </h3>
-                <p className="mb-6 text-sm leading-6 text-slate-300">
+                <p className="mb-7 text-sm leading-6 text-slate-500">
                   {sector.cardDescription}
                 </p>
                 <Link
                   href={getLink(sector.id)}
-                  className="inline-flex w-fit items-center gap-2 border-b border-accent pb-2 text-xs font-bold uppercase tracking-[0.1em] text-white transition-colors hover:text-accent"
+                  className="mt-auto inline-flex w-full items-center justify-center gap-3 border border-accent px-5 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
                 >
-                  {t.hero.learn_more}
+                  Saiba mais
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>

@@ -137,7 +137,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-20 hidden border-t border-white/15 bg-[#07121e]/70 backdrop-blur-md lg:block">
+      <div className="relative z-20 hidden border-t border-white/15 bg-[#07121e] lg:block">
         <div className="mx-auto grid max-w-[1440px] grid-cols-2 lg:grid-cols-4">
           {[
             ['1999', 'Grupo Daniela'],
