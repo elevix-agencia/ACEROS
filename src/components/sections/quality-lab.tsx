@@ -8,6 +8,8 @@ import {
   ScanLine,
   ShieldCheck,
 } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const equipamentos = [
   {
@@ -95,18 +97,22 @@ export function QualityLab() {
               </p>
             </div>
             <div className="flex justify-center">
-              <div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-accent/20 to-transparent rounded-3xl p-12 border border-accent/30 flex flex-col items-center justify-center text-center">
-                <Award className="h-24 w-24 text-accent mb-6" />
-                <div className="text-white text-4xl font-headline font-bold mb-2">DQS</div>
-                <div className="text-slate-400 text-sm uppercase tracking-widest mb-6">
-                  Deutsche Qualitäts Zertifizierung
-                </div>
-                <div className="flex gap-3 text-xs text-slate-300 flex-wrap justify-center">
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-slate-600">DAkkS</span>
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-slate-600">IQNet</span>
-                  <span className="bg-white/10 px-3 py-1 rounded-full border border-slate-600">ISO 9001:2015</span>
-                </div>
-              </div>
+              <Link
+                href="/images/aceros/drive/certificado-iso.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abrir o certificado ISO 9001:2015 atualizado da Aceros"
+                className="group block w-full max-w-md overflow-hidden rounded-2xl border border-white/20 bg-white p-3 shadow-2xl transition-transform duration-300 hover:-translate-y-1"
+              >
+                <Image
+                  src="/images/aceros/generated/certificado-iso-2028.png"
+                  alt="Certificado ISO 9001:2015 da Aceros, válido até 19 de novembro de 2028"
+                  width={795}
+                  height={1124}
+                  sizes="(max-width: 768px) 92vw, 448px"
+                  className="h-auto w-full bg-white object-contain"
+                />
+              </Link>
             </div>
           </div>
         </div>

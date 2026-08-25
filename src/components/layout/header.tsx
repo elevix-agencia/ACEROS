@@ -58,9 +58,12 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="header-navigation hidden items-center min-[1400px]:flex" aria-label="Navegação principal">
             {navLinks.map(link => {
+              const isMarketLink = link.href === '/#sectors';
               const isActive = link.href === '/'
                 ? pathname === '/'
-                : !link.href.includes('#') && pathname.startsWith(link.href);
+                : isMarketLink
+                  ? pathname.startsWith('/atuacao/') || pathname === '/engenharia'
+                  : pathname.startsWith(link.href);
 
               return (
               <Link

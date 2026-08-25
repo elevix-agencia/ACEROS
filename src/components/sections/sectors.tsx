@@ -15,7 +15,7 @@ const sectorImages: Record<string, string> = {
   guseira: '/images/aceros/generated/industria-guseira-v2.webp',
   oleo_e_gas: '/images/aceros/generated/hero-tubos-centrifugados-v2.webp',
   engenharia: '/images/imgur/bPgdSyM.png',
-  certificados: '/images/imgur/JNxzPUr.png',
+  certificados: '/images/aceros/generated/certificado-iso-2028.png',
 };
 
 export function Sectors() {

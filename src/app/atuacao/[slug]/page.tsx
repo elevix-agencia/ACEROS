@@ -8,12 +8,9 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  const sectors = sectorsData(pt);
-  return sectors.map((sector) => ({
-    slug: sector.id,
-  }));
-}
+// Renderiza cada setor sob demanda. Isso evita depender de um worker de
+// pré-geração e mantém todas as rotas de Mercado de Atuação disponíveis.
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata(
   { params }: Props,
