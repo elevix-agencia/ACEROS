@@ -64,8 +64,8 @@ export const blogPosts: BlogPost[] = [
     categoria: 'Ligas',
     tempoLeitura: '7 min',
     dataPublicacao: '2026-08-24',
-    imagem: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-03.jpg',
-    imagemAlt: 'Tubo de aço inox ASTM A297 usinado — Aceros',
+    imagem: '/images/aceros/generated/blog-astm-a297-tubos-v2.webp',
+    imagemAlt: 'Tubos centrifugados usinados para aplicações em ligas ASTM A297',
     keywords: ['ASTM A297', 'HK', 'HH', 'HP', 'liga refrataria', 'superliga'],
     conteudo: `
 <p>A norma <strong>ASTM A297</strong> padroniza aços fundidos resistentes ao calor com alto teor de cromo e níquel. As três ligas mais utilizadas no mercado industrial brasileiro são HK, HH e HP, cada uma com composição química e propriedades mecânicas específicas. Escolher a errada compromete a vida útil da peça e a segurança operacional.</p>
@@ -112,8 +112,8 @@ export const blogPosts: BlogPost[] = [
     categoria: 'Processo',
     tempoLeitura: '5 min',
     dataPublicacao: '2026-08-24',
-    imagem: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg',
-    imagemAlt: 'Tubos centrifugados brutos — Aceros',
+    imagem: '/images/aceros/generated/blog-fundicao-centrifugada-v2.webp',
+    imagemAlt: 'Vazamento de aço em máquina de fundição centrífuga horizontal',
     keywords: ['fundição centrifugada', 'centrifugação', 'força centrífuga', 'ASTM A297'],
     conteudo: `
 <p>A <strong>fundição por centrifugação</strong> é um processo de fabricação em que o aço líquido é vazado em uma matriz de aço baixo carbono (coquilha) pré-aquecida e em rotação. A força centrífuga expulsa o metal contra as paredes da matriz, formando peças tubulares com diâmetros interno e externo perfeitamente concêntricos.</p>
@@ -151,8 +151,8 @@ export const blogPosts: BlogPost[] = [
     categoria: 'Aplicações',
     tempoLeitura: '5 min',
     dataPublicacao: '2026-08-24',
-    imagem: '/images/aceros/buchas/bucha-aco-inox-aceros-02.jpg',
-    imagemAlt: 'Bucha bi-metálica de aço inox — Aceros',
+    imagem: '/images/aceros/generated/blog-buchas-centrifugadas-v2.webp',
+    imagemAlt: 'Buchas centrifugadas de aço inox usinadas em diferentes diâmetros',
     keywords: ['bucha bimetálica', 'bucha sink roll', 'ponta sink roll', 'galvanização'],
     conteudo: `
 <p>Nas linhas de galvanização por imersão a quente, a <strong>ponta do Sink Roll</strong> (munhão) é a região que mais sofre desgaste. Combinação de alta temperatura, ataque químico do zinco fundido e carga mecânica cíclica reduz drasticamente a vida útil de buchas convencionais. A resposta técnica é a <strong>bucha bimetálica centrifugada</strong>.</p>
@@ -203,8 +203,8 @@ export const blogPosts: BlogPost[] = [
     categoria: 'Ligas',
     tempoLeitura: '5 min',
     dataPublicacao: '2026-08-24',
-    imagem: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-01.jpg',
-    imagemAlt: 'Tubos de aço inox em várias ligas — Aceros',
+    imagem: '/images/aceros/generated/blog-ligas-inox-v2.webp',
+    imagemAlt: 'Tubos centrifugados em etapas de acabamento bruto, usinado e polido',
     keywords: ['aço inox 304', 'aço inox 316', 'aço inox 310', 'alta temperatura'],
     conteudo: `
 <p>Escolher entre as ligas <strong>304, 316 e 310</strong> é uma das decisões técnicas mais frequentes em projetos de engenharia industrial. Todas são aços inoxidáveis austeníticos, mas com composições diferentes e faixas de aplicação distintas. Este guia ajuda o engenheiro de projeto a especificar a liga certa desde o primeiro esboço.</p>
