@@ -54,7 +54,7 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="header-navigation hidden items-center lg:flex">
+        <nav className="header-navigation hidden items-center xl:flex">
             {navLinks.map(link => (
               <Link
                 key={link.href}
@@ -82,7 +82,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="header-mobile-actions flex items-center gap-2 xl:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="menu-icon-mobile h-11 w-11 rounded-none border border-slate-200">

@@ -258,6 +258,25 @@ header.site-header .header-navigation a {
   }
 }
 
+/* Cabeçalho responsivo: evita comprimir links e controles em larguras intermediárias. */
+header.site-header .header-navigation {
+  display: none !important;
+}
+
+header.site-header .header-mobile-actions {
+  display: flex !important;
+}
+
+@media (min-width: 1280px) {
+  header.site-header .header-navigation {
+    display: flex !important;
+  }
+
+  header.site-header .header-mobile-actions {
+    display: none !important;
+  }
+}
+
 @layer utilities {
   .animate-fade-in {
     animation: fade-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;

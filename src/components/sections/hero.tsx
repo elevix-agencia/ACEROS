@@ -12,11 +12,11 @@ export function Hero() {
   return (
     <section className="hero-section relative isolate min-h-[calc(100svh-88px)] overflow-hidden bg-[#07121e] text-white">
       <Image
-        src="/images/aceros/drive/tubos-polidos.webp"
-        alt="Tubos de aço polidos na estrutura industrial da Aceros"
+        src="/images/aceros/drive/tubos-usinados.webp"
+        alt="Tubos centrifugados usinados pela Aceros"
         fill
         sizes="100vw"
-        className="object-cover object-[62%_center] opacity-75"
+        className="object-cover object-[58%_center] opacity-70"
         priority
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />

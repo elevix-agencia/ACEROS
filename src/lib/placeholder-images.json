@@ -26,11 +26,11 @@
                               },
                               {
                                   "id":  "quality-cta-image",
-                                  "description":  "Técnico especialista analisando material em laboratório.",
-                                  "imageUrl":  "/images/imgur/9T3sGyz.jpeg",
-                                  "imageHint":  "lab technician",
-                                  "width":  1408,
-                                  "height":  768
+                                  "description":  "Laboratório metalúrgico com equipamentos de ensaio e amostras de aço.",
+                                  "imageUrl":  "/images/aceros/generated/laboratorio-metalurgico-v2.webp",
+                                  "imageHint":  "laboratório metalúrgico",
+                                  "width":  1672,
+                                  "height":  941
                               },
                               {
                                   "id":  "factory-floor",

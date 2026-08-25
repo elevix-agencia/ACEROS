@@ -43,15 +43,15 @@ export function About() {
             <Card className="overflow-hidden rounded-none border-0 shadow-2xl w-full h-full">
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/aceros/drive/fabrica-usinagem.webp"
-                  alt="Estrutura industrial e área de usinagem da Aceros"
+                  src="/images/aceros/drive/tubos-polidos.webp"
+                  alt="Tubos de aço polidos produzidos pela Aceros"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#07121e] via-[#07121e]/75 to-transparent p-6 pt-20 text-white">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f09a5c]">Imagem real Aceros</p>
-                  <p className="mt-2 max-w-sm text-sm text-slate-200">Usinagem e fabricação sob medida para aplicações industriais críticas.</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f09a5c]">Produção Aceros</p>
+                  <p className="mt-2 max-w-sm text-sm text-slate-200">Tubos e componentes produzidos sob medida para aplicações industriais críticas.</p>
                 </div>
               </div>
             </Card>
