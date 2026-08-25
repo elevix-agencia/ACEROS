@@ -3,9 +3,9 @@
 import { Award, Factory, Flame, Layers, ShieldCheck, Sparkles } from 'lucide-react';
 
 const stats = [
-  { number: '10', label: 'anos no mercado', sub: 'especialistas em centrifugação' },
+  { number: '2015', label: 'desde', sub: 'mais de uma década em centrifugação' },
   { number: 'ASTM', label: 'A297', sub: 'ligas HK, HH, HP e superligas' },
-  { number: '3+', label: 'países atendidos', sub: 'Portugal, EUA, Itália e outros' },
+  { number: '3', label: 'países atendidos', sub: 'Portugal, EUA e Itália' },
   { number: '100%', label: 'sob medida', sub: 'projetos por desenho técnico' },
 ];
 
