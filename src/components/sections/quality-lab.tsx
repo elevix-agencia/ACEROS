@@ -33,6 +33,14 @@ const capacidadesVisuais = [
     titulo: 'Medição em ambiente climatizado',
     descricao: 'Instrumentos e padrões calibrados e rastreados pela RBC para o controle dimensional de grande porte.',
   },
+  {
+    imagem: '/images/aceros/drive/durometro-mitutoyo-real.jpg',
+    alt: 'Durômetro Mitutoyo utilizado no controle de dureza da Aceros',
+    etiqueta: 'Ensaio de dureza',
+    titulo: 'Durômetro com controle calibrado',
+    descricao: 'Verificação das propriedades mecânicas previstas para cada liga e etapa do processo produtivo.',
+    exibirInteira: true,
+  },
 ];
 
 const equipamentos = [
@@ -137,14 +145,37 @@ export function QualityLab() {
             <h2 className="font-headline text-3xl font-bold text-slate-900 md:text-4xl">O controle de qualidade acontecendo na prática</h2>
             <p className="mt-5 text-lg leading-8 text-muted-foreground">Análises químicas, ultrassom, dureza, ensaios de corrosão e ensaios mecânicos apoiam o desenvolvimento de ligas e a validação de cada componente.</p>
           </div>
-          <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {capacidadesVisuais.map(item => (
               <article key={item.titulo} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <div className="relative aspect-[4/3] overflow-hidden bg-slate-100"><Image src={item.imagem} alt={item.alt} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" /></div>
+                <div className="relative aspect-[4/3] overflow-hidden bg-slate-100"><Image src={item.imagem} alt={item.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className={`${item.exibirInteira ? 'object-contain p-2' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`} /></div>
                 <div className="p-6"><p className="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.etiqueta}</p><h3 className="mt-2 font-headline text-xl font-bold text-slate-900">{item.titulo}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{item.descricao}</p></div>
               </article>
             ))}
           </div>
+
+          <article className="mx-auto mt-8 grid max-w-7xl overflow-hidden rounded-2xl bg-primary text-white shadow-xl md:grid-cols-[1.08fr_0.92fr]">
+            <div className="relative min-h-[320px] md:min-h-[390px]">
+              <Image
+                src="/images/aceros/drive/rollprof-inspecao-real.jpg"
+                alt="Perfilômetro Rollprof realizando a medição de um rolo industrial"
+                fill
+                sizes="(max-width: 768px) 100vw, 55vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="flex flex-col justify-center p-8 md:p-12">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Controle de perfil</p>
+              <h3 className="mt-3 font-headline text-3xl font-bold">Medição especializada com Rollprof</h3>
+              <p className="mt-5 leading-7 text-slate-300">
+                A Aceros realiza a medição precisa de perfis em rolos de forno, furnace rolls e sink rolls com profissional treinado e qualificado pela Drever, Bélgica.
+              </p>
+              <div className="mt-7 grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
+                <div><strong className="block text-2xl text-white">+600</strong><span className="text-sm text-slate-400">rolos controlados</span></div>
+                <div><strong className="block text-2xl text-white">RBC</strong><span className="text-sm text-slate-400">padrões rastreados</span></div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
