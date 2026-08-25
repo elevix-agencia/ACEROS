@@ -39,7 +39,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="hero-section relative isolate min-h-[calc(100svh-88px)] overflow-hidden bg-[#07121e] text-white">
+    <section className="hero-section relative isolate min-h-[calc(100svh-80px)] overflow-hidden bg-[#07121e] text-white">
       {heroSlides.map((slide, index) => (
         <Image
           key={slide.src}
@@ -55,8 +55,8 @@ export function Hero() {
       <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,.35)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.35)_1px,transparent_1px)] [background-size:64px_64px]" />
       <div className="absolute left-0 top-0 h-full w-1 bg-[#e46f1f]" />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-88px)] max-w-[1440px] items-center px-5 py-20 lg:px-10">
-        <div className="grid w-full gap-12 lg:grid-cols-[minmax(0,720px)_1fr] lg:items-end">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-80px)] max-w-[1440px] items-center px-5 py-16 lg:px-10 lg:pb-28 lg:pt-20">
+        <div className="grid w-full gap-10 xl:grid-cols-[minmax(0,760px)_minmax(300px,1fr)] xl:items-end xl:gap-16">
             <motion.div
                 className="max-w-[820px]"
                 initial="hidden"
@@ -80,10 +80,10 @@ export function Hero() {
                   Engenharia metalúrgica desde 2015
                 </motion.div>
                 <motion.h1
-                  className="max-w-[760px] font-headline text-[clamp(2.5rem,4.8vw,5.3rem)] font-bold uppercase leading-[0.94] tracking-[-0.05em] text-white"
+                  className="max-w-[760px] font-headline text-[clamp(2.5rem,4.1vw,4.1rem)] font-bold uppercase leading-[0.97] tracking-[-0.04em] text-white"
                   variants={{
-                    hidden: { opacity: 0, x: -50 },
-                    visible: { opacity: 1, x: 0, transition: { duration: 1, ease: [0.25, 0.46, 0.45, 0.94] } }
+                    hidden: { opacity: 0, y: 16 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] } }
                   }}
                 >
                     {t.hero.main_title}
@@ -136,7 +136,7 @@ export function Hero() {
             </motion.div>
 
           <motion.aside
-            className="hidden border border-white/15 bg-[#07121e]/70 p-7 backdrop-blur-md lg:block"
+            className="hidden border border-white/15 bg-[#07121e]/70 p-7 backdrop-blur-md xl:block"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 0.8 }}

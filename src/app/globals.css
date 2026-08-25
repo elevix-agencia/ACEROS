@@ -70,11 +70,8 @@
   }
   
   /* RESET DO HEADER PARA TAMANHO ORIGINAL E ORGANIZAÇÃO */
-  header, .site-header, .header-container {
-      height: 115px !important;
-      max-height: 115px !important;
-      padding: 0 !important;
-      overflow: visible !important;
+  header:not(.site-header) {
+      height: auto;
   }
 
   .header-container {
@@ -86,11 +83,8 @@
 
   /* AMPLIAÇÃO DA LOGO POR SOBREPOSIÇÃO */
   .header-logo img {
-      width: 280px !important;
-      max-width: 280px !important;
-      height: auto !important;
-      display: block !important;
-      z-index: 9999 !important;
+      height: auto;
+      display: block;
   }
 
   .header-navigation {
@@ -107,8 +101,7 @@
 
 
   .header-navigation a {
-    font-size: 1rem !important;
-    margin: 0 12px !important;
+    margin: 0;
   }
 
   .btn-contato, .btn-idioma {
@@ -227,21 +220,33 @@
 /* Redesign 2026: neutraliza os overrides legados do cabeçalho. */
 header.site-header,
 header.site-header .header-container {
-  height: 88px !important;
-  max-height: 88px !important;
+  height: 80px !important;
+  max-height: 80px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   overflow: visible !important;
 }
 
 header.site-header .header-logo img {
-  width: 196px !important;
-  max-width: 196px !important;
+  width: 172px !important;
+  max-width: 172px !important;
   height: auto !important;
 }
 
 header.site-header .header-navigation a {
   margin: 0 !important;
+}
+
+header.site-header .header-navigation {
+  gap: 0 !important;
+}
+
+header.site-header .btn-contato {
+  font-size: 12px !important;
+}
+
+header.site-header .btn-idioma {
+  padding: 0 !important;
 }
 
 @media (max-width: 1023px) {
@@ -267,7 +272,7 @@ header.site-header .header-mobile-actions {
   display: flex !important;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1400px) {
   header.site-header .header-navigation {
     display: flex !important;
   }

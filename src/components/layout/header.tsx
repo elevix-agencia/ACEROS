@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { ArrowUpRight, Menu } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
@@ -20,6 +21,7 @@ import { LanguageSwitcher } from '../language-switcher';
 
 export function Header() {
   const { t } = useLanguage();
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -38,7 +40,7 @@ export function Header() {
         'bg-white/95 backdrop-blur-xl'
       )}
     >
-      <div className="header-container mx-auto flex h-[88px] max-w-[1440px] items-center justify-between px-5 lg:px-10">
+      <div className="header-container mx-auto flex h-20 max-w-[1480px] items-center justify-between px-5 lg:px-8">
         {/* Logo */}
         <div className="header-logo flex-shrink-0">
           <Link href="/" className="flex items-center" aria-label="Aceros — Página inicial">
@@ -47,28 +49,41 @@ export function Header() {
               alt="Aceros — Aços Centrifugados"
               width={220}
               height={55}
-              className="h-auto w-[172px] lg:w-[196px]"
+              className="h-auto w-[160px] sm:w-[172px]"
               priority
             />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="header-navigation hidden items-center xl:flex">
-            {navLinks.map(link => (
+        <nav className="header-navigation hidden items-center min-[1400px]:flex" aria-label="Navegação principal">
+            {navLinks.map(link => {
+              const isActive = link.href === '/'
+                ? pathname === '/'
+                : !link.href.includes('#') && pathname.startsWith(link.href);
+
+              return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative px-3 py-3 text-[13px] font-semibold uppercase tracking-[0.08em] text-slate-600 transition-colors after:absolute after:inset-x-3 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-[#e46f1f] after:transition-transform hover:text-slate-950 hover:after:scale-x-100 xl:px-4 xl:after:inset-x-4"
+                aria-current={isActive ? 'page' : undefined}
+                className={cn(
+                  'relative whitespace-nowrap px-3 py-3 text-[12px] font-bold uppercase tracking-[0.07em] transition-colors',
+                  'after:absolute after:inset-x-3 after:bottom-1 after:h-0.5 after:origin-left after:bg-[#e46f1f] after:transition-transform',
+                  isActive
+                    ? 'text-slate-950 after:scale-x-100'
+                    : 'text-slate-600 after:scale-x-0 hover:text-slate-950 hover:after:scale-x-100'
+                )}
               >
                   {link.label}
               </Link>
-            ))}
-          <div className="ml-3 flex items-center gap-3 border-l border-slate-200 pl-5">
+              );
+            })}
+          <div className="ml-2 flex items-center gap-2 border-l border-slate-200 pl-4">
             <Button
               asChild
               size="lg"
-              className="btn-contato h-11 rounded-none bg-[#e46f1f] px-5 text-[12px] font-bold uppercase tracking-[0.1em] text-white shadow-none hover:bg-[#bf5412]"
+              className="btn-contato h-11 rounded-none bg-[#e46f1f] px-5 text-[12px] font-bold uppercase tracking-[0.09em] text-white shadow-none hover:bg-[#bf5412]"
             >
               <Link href="/contato" className="flex items-center gap-2">
                 {t.header.contact}
@@ -82,7 +97,10 @@ export function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="header-mobile-actions flex items-center gap-2 xl:hidden">
+        <div className="header-mobile-actions flex items-center gap-2 min-[1400px]:hidden">
+          <div className="btn-idioma">
+            <LanguageSwitcher />
+          </div>
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="menu-icon-mobile h-11 w-11 rounded-none border border-slate-200">
@@ -125,9 +143,6 @@ export function Header() {
               </div>
             </SheetContent>
           </Sheet>
-           <div className="btn-idioma">
-             <LanguageSwitcher />
-           </div>
         </div>
       </div>
     </header>
