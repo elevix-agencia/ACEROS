@@ -201,7 +201,12 @@ export function Contact() {
                   {t.contact.details_hours}
                 </p>
                 <div className="space-y-8">
-                  <div className="flex items-start gap-5">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Rua+Alfa%2C+301%2C+Bairro+do+Una%2C+Itaquaquecetuba%2C+SP"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-5 rounded-lg transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  >
                     <MapPin className="h-7 w-7 mt-1 text-primary shrink-0" />
                     <div>
                       <p className="text-xl font-semibold">
@@ -211,8 +216,11 @@ export function Contact() {
                         {t.footer.address}
                       </p>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-5">
+                  </a>
+                  <a
+                    href="tel:+551155556551"
+                    className="flex items-start gap-5 rounded-lg transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  >
                     <Phone className="h-7 w-7 mt-1 text-primary shrink-0" />
                     <div>
                       <p className="text-xl font-semibold">
@@ -222,8 +230,11 @@ export function Contact() {
                         +55 (11) 5555-6551 (Industrial)
                       </p>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-5">
+                  </a>
+                  <a
+                    href="mailto:vendas@aceros.com.br"
+                    className="flex items-start gap-5 rounded-lg transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                  >
                     <Mail className="h-7 w-7 mt-1 text-primary shrink-0" />
                     <div>
                       <p className="text-xl font-semibold">{t.contact.form_email}</p>
@@ -231,7 +242,7 @@ export function Contact() {
                         vendas@aceros.com.br
                       </p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </CardContent>

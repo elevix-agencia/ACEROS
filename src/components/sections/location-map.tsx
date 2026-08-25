@@ -38,9 +38,15 @@ export function LocationMap() {
             className="text-center mt-6 animate-fade-in-up"
             style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
           >
-            <p className="text-muted-foreground text-lg">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Alfa%2C+301%2C+Bairro+do+Una%2C+Itaquaquecetuba%2C+SP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex text-lg text-muted-foreground underline-offset-4 transition-colors hover:text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              aria-label="Abrir o endereço da Aceros no Google Maps"
+            >
               {t.footer.address}
-            </p>
+            </a>
           </div>
         </div>
       </div>

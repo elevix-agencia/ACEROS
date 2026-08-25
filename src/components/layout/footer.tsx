@@ -67,18 +67,32 @@ export function Footer() {
           <div className="lg:col-span-3">
              <h3 className="mb-6 border-b border-white/15 pb-3 font-headline text-sm font-bold uppercase tracking-[0.12em] text-accent">{t.footer.contact}</h3>
               <div className="space-y-4 text-sm leading-6 text-slate-300">
-                <div className="flex items-start gap-3 justify-start">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Rua+Alfa%2C+301%2C+Bairro+do+Una%2C+Itaquaquecetuba%2C+SP"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abrir o endereço da Aceros no mapa"
+                  className="flex items-start justify-start gap-3 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
                   <MapPin className="mt-1 h-4 w-4 flex-shrink-0 text-[#ef7b21]" />
                   <span>{t.footer.address}</span>
-                </div>
-                 <div className="flex items-center gap-3 justify-start">
+                </a>
+                 <a
+                  href="mailto:vendas@aceros.com.br"
+                  aria-label="Enviar e-mail para vendas da Aceros"
+                  className="flex items-center justify-start gap-3 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
                   <Mail className="h-4 w-4 flex-shrink-0 text-[#ef7b21]" />
                   <span>vendas@aceros.com.br</span>
-                </div>
-                <div className="flex items-center gap-3 justify-start">
+                </a>
+                <a
+                  href="tel:+551155556551"
+                  aria-label="Ligar para a Aceros"
+                  className="flex items-center justify-start gap-3 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
                   <Phone className="h-4 w-4 flex-shrink-0 text-[#ef7b21]" />
                   <span>+55 (11) 5555-6551</span>
-                </div>
+                </a>
                 <div className="flex items-start gap-3 justify-start">
                   <Clock className="mt-1 h-4 w-4 flex-shrink-0 text-[#ef7b21]" />
                   <span>
