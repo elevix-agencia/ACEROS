@@ -99,7 +99,7 @@ export function ExpertiseDetailsClient({
   }
 
   return (
-    <div>
+    <div className={`sector-page sector-page--${sector.id}`}>
       <section className="relative h-[58vh] min-h-[460px] max-h-[660px] w-full overflow-hidden bg-[#07121e]">
         {heroImage && (
           <Image
@@ -146,9 +146,11 @@ export function ExpertiseDetailsClient({
         </div>
       </section>
 
-      <Suspense fallback={<div>Carregando conteúdo...</div>}>
-         <SectorContent sector={sector} translations={translations} />
-      </Suspense>
+      <div className="sector-flow" data-sector={sector.id}>
+        <Suspense fallback={<div>Carregando conteúdo...</div>}>
+          <SectorContent sector={sector} translations={translations} />
+        </Suspense>
+      </div>
 
       <WhatsAppCta />
     </div>
@@ -472,7 +474,7 @@ function GrelhaFornoPocoSection({translations}: {translations: any}) {
 
   return (
     <motion.section
-      className="py-20 sm:py-32 bg-background text-foreground"
+      className="py-20 sm:py-32 bg-slate-50 text-foreground"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -523,7 +525,7 @@ function TratamentoTermicoOrangeGallery({translations}: {translations: any}) {
 
   return (
     <motion.section 
-      className="relative py-20 sm:py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 text-foreground overflow-hidden"
+      className="relative overflow-hidden bg-accent py-20 text-white sm:py-32"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -537,10 +539,10 @@ function TratamentoTermicoOrangeGallery({translations}: {translations: any}) {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-center mb-16"
         >
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
+          <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-white md:text-4xl">
             {translations.expertise_sectors.page.tratamento_orange_gallery_title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-white/85">
             {translations.expertise_sectors.page.tratamento_orange_gallery_subtitle}
           </p>
         </motion.div>
@@ -603,22 +605,14 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
 
   return (
     <motion.section 
-        className="relative py-20 sm:py-32 bg-gradient-to-br from-amber-100 via-orange-100 to-red-100 text-foreground overflow-hidden"
+        className="relative overflow-hidden bg-primary py-20 text-white sm:py-32"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
     >
-        <motion.div 
-            className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-amber-200/50 via-transparent to-transparent rounded-full filter blur-3xl opacity-60"
-            animate={{ x: [0, 100, 0], y: [0, -100, 0], scale: [1, 1.2, 1] }}
-            transition={{ duration: 30, repeat: Infinity, repeatType: "mirror" }}
-        />
-        <motion.div 
-            className="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-tl from-red-200/50 via-transparent to-transparent rounded-full filter blur-3xl opacity-60"
-            animate={{ x: [0, -100, 0], y: [0, 100, 0], scale: [1, 1.2, 1] }}
-            transition={{ duration: 35, repeat: Infinity, repeatType: "mirror", delay: 5 }}
-        />
+        <div className="absolute -left-24 top-0 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
 
         <div className="container mx-auto px-4 relative z-10">
             <motion.div 
@@ -628,7 +622,7 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.1 }}
             >
-                <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
+                <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-white md:text-4xl">
                     {translations.expertise_sectors.page.tratamento_creative_gallery_title}
                 </h2>
                 
@@ -669,14 +663,14 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
                         ))}
                     </div>
                     <motion.div 
-                        className="bg-white/50 rounded-2xl p-8 text-center border border-orange-200/50 backdrop-blur-sm"
+                        className="rounded-2xl border border-white/10 bg-white p-8 text-center shadow-xl"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.6, delay: 0.7 }}
                     >
-                        <h3 className="font-headline text-2xl font-bold text-foreground mb-3">{translations.expertise_sectors.page.tratamento_creative_cta_title}</h3>
-                        <p className="text-muted-foreground mb-6">{translations.expertise_sectors.page.tratamento_creative_cta_subtitle}</p>
+                        <h3 className="mb-3 font-headline text-2xl font-bold text-slate-900">{translations.expertise_sectors.page.tratamento_creative_cta_title}</h3>
+                        <p className="mb-6 text-slate-600">{translations.expertise_sectors.page.tratamento_creative_cta_subtitle}</p>
                         <div className="flex justify-center">
                           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                               <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">

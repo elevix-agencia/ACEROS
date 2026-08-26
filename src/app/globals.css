@@ -217,6 +217,48 @@
   }
 }
 
+/* Mercado de atuação: todas as páginas usam o mesmo eixo, respiro e paleta.
+   O conteúdo interno de cada setor permanece intacto. */
+.sector-flow > section {
+  width: 100%;
+  padding-top: clamp(5rem, 7vw, 8rem) !important;
+  padding-bottom: clamp(5rem, 7vw, 8rem) !important;
+  border-top: 1px solid rgba(7, 18, 30, 0.08);
+}
+
+.sector-flow > section > .container {
+  width: min(100%, 1280px) !important;
+  max-width: 1280px !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(1.25rem, 3vw, 2.5rem) !important;
+}
+
+.sector-flow > section.bg-gray-900 {
+  background-color: #07121e !important;
+}
+
+.sector-flow > section.bg-orange-500 {
+  background-color: #ef7b21 !important;
+}
+
+.sector-flow > section.bg-gray-50,
+.sector-flow > section.bg-background {
+  background-color: #ffffff !important;
+}
+
+.sector-flow > section.bg-gray-100,
+.sector-flow > section[class~="bg-secondary/30"],
+.sector-flow > section[class~="bg-secondary/50"] {
+  background-color: #f8fafc !important;
+}
+
+@media (max-width: 767px) {
+  .sector-flow > section {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+}
+
 /* Redesign 2026: neutraliza os overrides legados do cabeçalho. */
 header.site-header,
 header.site-header .header-container {
