@@ -28,7 +28,7 @@ export function Footer() {
                     alt="Aceros — Aços Centrifugados"
                     width={732}
                     height={247}
-                    className="h-auto w-44 brightness-0 invert"
+                    className="h-auto w-44"
                     priority
                 />
             </Link>
