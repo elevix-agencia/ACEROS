@@ -13,15 +13,24 @@ export const metadata: Metadata = {
 
 export default function PoliticaPrivacidadePage() {
   return (
-    <div className="pt-32 pb-20 container mx-auto px-4 max-w-4xl">
-      <h1 className="font-headline text-4xl font-bold mb-4 uppercase tracking-tight text-slate-900">
-        Política de Privacidade
-      </h1>
-      <p className="text-slate-600 mb-8">
-        Tratamento de dados pessoais conforme a LGPD (Lei nº 13.709/2018).
-      </p>
+    <main className="bg-[#f3f4f6]">
+      <header className="bg-[#07121e] py-14 text-white sm:py-16">
+        <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#ef7b21]">
+            Transparência e segurança
+          </p>
+          <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
+            Política de Privacidade
+          </h1>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+            Tratamento de dados pessoais conforme a LGPD (Lei nº 13.709/2018).
+          </p>
+        </div>
+      </header>
 
-      <div className="prose prose-slate max-w-none space-y-5 text-slate-700 leading-relaxed">
+      <article className="mx-auto max-w-[1280px] px-5 py-16 lg:px-10 lg:py-20">
+        <div className="mx-auto max-w-4xl border-t-4 border-[#ef7b21] bg-white px-6 py-10 shadow-[0_20px_50px_rgba(7,18,30,.10)] sm:px-10 sm:py-12 lg:px-14">
+          <div className="prose prose-slate max-w-none space-y-5 text-base leading-8 text-slate-700">
         <p>
           Última atualização: agosto de 2026
         </p>
@@ -29,14 +38,14 @@ export default function PoliticaPrivacidadePage() {
           Esta Política de Privacidade explica como a Aceros trata os dados pessoais dos usuários que acessam nosso site e preenchem nossos formulários. Ao utilizar o site, você declara estar ciente das condições descritas abaixo.
         </p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           1. Quem somos
         </h2>
         <p>
           A Aceros — Aços Centrifugados é a divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, inscrita no CNPJ nº 29.506.517/0001-39, com sede na Rua Alfa, 301, Bairro do Una, Itaquaquecetuba/SP, CEP 08599-670. A Aceros atua como controladora dos dados pessoais tratados, nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
         </p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           2. Quais dados coletamos
         </h2>
         <p>Coletamos apenas os dados necessários para atender às suas solicitações:</p>
@@ -50,7 +59,7 @@ export default function PoliticaPrivacidadePage() {
         </ul>
         <p>Não coletamos dados pessoais sensíveis nem dados de crianças e adolescentes.</p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           3. Para que usamos seus dados
         </h2>
         <p>Utilizamos seus dados para as seguintes finalidades:</p>
@@ -62,7 +71,7 @@ export default function PoliticaPrivacidadePage() {
           <li>Mensurar a eficácia das nossas campanhas de marketing e anúncios online.</li>
         </ul>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           4. Base legal
         </h2>
         <p>O tratamento dos seus dados se fundamenta nas seguintes bases legais da LGPD:</p>
@@ -78,14 +87,14 @@ export default function PoliticaPrivacidadePage() {
           </li>
         </ul>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           5. Cookies e tecnologias de rastreamento
         </h2>
         <p>
           Nosso site utiliza cookies, que são pequenos arquivos armazenados no seu dispositivo para lembrar preferências e coletar estatísticas de uso. Usamos cookies essenciais (necessários ao funcionamento do site) e cookies de análise e marketing (Google Analytics, Google Ads e Google Tag Manager), que nos ajudam a entender como os visitantes usam o site e a exibir anúncios relevantes. Você pode gerenciar ou bloquear os cookies nas configurações do seu navegador, ciente de que isso pode afetar algumas funcionalidades.
         </p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           6. Compartilhamento de dados
         </h2>
         <p>A Aceros não vende nem comercializa seus dados pessoais. Podemos compartilhar dados apenas com:</p>
@@ -95,21 +104,21 @@ export default function PoliticaPrivacidadePage() {
         </ul>
         <p>Esses terceiros são obrigados a proteger seus dados e a utilizá-los somente conforme nossas instruções.</p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           7. Por quanto tempo guardamos seus dados
         </h2>
         <p>
           Guardamos seus dados apenas pelo tempo necessário para atender à sua solicitação e cumprir obrigações legais. Depois desse período, os dados são eliminados ou anonimizados de forma segura.
         </p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           8. Segurança
         </h2>
         <p>
           Adotamos medidas técnicas e organizacionais para proteger seus dados contra acesso não autorizado, perda, alteração ou divulgação indevida. Ainda assim, nenhum sistema é totalmente imune, e você também deve zelar pela segurança das suas informações.
         </p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           9. Seus direitos
         </h2>
         <p>Nos termos do art. 18 da LGPD, você tem o direito de:</p>
@@ -122,33 +131,35 @@ export default function PoliticaPrivacidadePage() {
           <li>Ser informado sobre com quem seus dados foram compartilhados.</li>
         </ul>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           10. Como exercer seus direitos
         </h2>
         <p>
           Para exercer seus direitos ou tirar dúvidas sobre esta Política, entre em contato pelo e-mail{' '}
-          <span className="font-semibold">privacidade@aceros.com.br</span> ou pelo e-mail comercial{' '}
-          <span className="font-semibold">vendas@aceros.com.br</span>. Responderemos no menor prazo possível, conforme a legislação.
+          <a className="font-semibold text-[#07121e] underline decoration-[#ef7b21] underline-offset-4" href="mailto:privacidade@aceros.com.br">privacidade@aceros.com.br</a> ou pelo e-mail comercial{' '}
+          <a className="font-semibold text-[#07121e] underline decoration-[#ef7b21] underline-offset-4" href="mailto:vendas@aceros.com.br">vendas@aceros.com.br</a>. Responderemos no menor prazo possível, conforme a legislação.
         </p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           11. Alterações desta Política
         </h2>
         <p>
           Esta Política pode ser atualizada a qualquer momento para refletir mudanças legais ou em nossos processos. A versão vigente estará sempre publicada nesta página, com a data da última atualização.
         </p>
 
-        <h2 className="font-headline text-2xl font-bold mt-10 mb-4 text-slate-900">
+        <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           12. Legislação e foro
         </h2>
         <p>
           Esta Política é regida pela legislação brasileira. Fica eleito o foro da comarca de São Paulo/SP para dirimir eventuais controvérsias, salvo disposição legal em contrário.
         </p>
-      </div>
+          </div>
 
-      <div className="mt-12 pt-8 border-t text-sm text-slate-500">
-        <p>Última atualização: agosto de 2026</p>
-      </div>
-    </div>
+          <div className="mt-12 border-t border-slate-200 pt-8 text-sm text-slate-500">
+            <p>Última atualização: agosto de 2026</p>
+          </div>
+        </div>
+      </article>
+    </main>
   );
 }
