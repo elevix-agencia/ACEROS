@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const categoriaCores: Record<string, string> = {
   Processo: 'bg-primary/10 text-primary border-primary/30',
   Ligas: 'bg-orange-100 text-orange-800 border-orange-300',
-  'Aplicações': 'bg-green-100 text-green-800 border-green-300',
+  'Aplicações': 'bg-orange-100 text-orange-800 border-orange-300',
   Engenharia: 'bg-slate-100 text-slate-800 border-slate-300',
 };
 
@@ -28,7 +28,7 @@ export default function BlogPage() {
   const [destaque, ...outrosPosts] = blogPosts;
 
   return (
-    <div className="pt-24 pb-20">
+    <div>
       <h1 className="sr-only">Blog Técnico Aceros — Conteúdo sobre Aços Centrifugados</h1>
 
       {/* Hero */}

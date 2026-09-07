@@ -9,9 +9,7 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
-}
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -46,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const categoriaCores: Record<string, string> = {
   Processo: 'bg-primary/10 text-primary border-primary/30',
   Ligas: 'bg-orange-100 text-orange-800 border-orange-300',
-  'Aplicações': 'bg-green-100 text-green-800 border-green-300',
+  'Aplicações': 'bg-orange-100 text-orange-800 border-orange-300',
   Engenharia: 'bg-slate-100 text-slate-800 border-slate-300',
 };
 
