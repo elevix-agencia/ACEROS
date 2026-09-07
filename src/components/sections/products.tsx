@@ -48,6 +48,51 @@ const landingPagesDestaque: LandingPage[] = [
     href: '/bucha-de-aco-inox',
     icone: Cog,
   },
+  {
+    id: 'rolos-forno',
+    titulo: 'Rolos de Forno',
+    descricao:
+      'Furnace rolls centrifugados para fornos contínuos, linhas CAPL/CGL e tratamento térmico, em versões resfriadas ou não resfriadas.',
+    imagem: '/images/imgur/gbNL57g.png',
+    imagemAlt: 'Rolo industrial para forno túnel CSP',
+    bullets: [
+      'Ligas ASTM A297 resistentes a altas temperaturas',
+      'Opções revestidas e não revestidas',
+      'Projeto conforme forno e condição de operação',
+    ],
+    href: '/rolos-de-forno',
+    icone: Cog,
+  },
+  {
+    id: 'sink-rolls',
+    titulo: 'Sink Rolls',
+    descricao:
+      'Rolos de imersão e componentes para linhas de galvanização a quente, incluindo estabilizadores, braços, berços, snouts e buchas.',
+    imagem: '/images/imgur/KZhCZ6S.png',
+    imagemAlt: 'Sink roll para galvanização por imersão a quente',
+    bullets: [
+      'Resistência ao contato com zinco fundido',
+      'Controle dimensional das pontas e buchas',
+      'Conjuntos fabricados conforme desenho',
+    ],
+    href: '/sink-rolls',
+    icone: Layers,
+  },
+  {
+    id: 'fundicao-centrifugada',
+    titulo: 'Fundição Centrifugada',
+    descricao:
+      'Tubos, buchas, anéis e blanks em aços inoxidáveis e superligas, do bruto de fundição à peça usinada e acabada.',
+    imagem: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg',
+    imagemAlt: 'Tubos brutos produzidos por fundição centrifugada',
+    bullets: [
+      'Peças cilíndricas em ligas especiais',
+      'Bruto, pré-usinado ou pronto para montagem',
+      'Dimensões e liga conforme projeto técnico',
+    ],
+    href: '/fundicao-centrifugada',
+    icone: PenTool,
+  },
 ];
 
 // Catalogo completo Aceros (do catalogo MD, produtos que a Aceros faz de verdade)
@@ -148,7 +193,7 @@ export function Products() {
           </p>
         </div>
 
-        {/* DESTAQUE: 2 Landing Pages (Tubos e Buchas) */}
+        {/* Landing pages preparadas para campanhas de busca */}
         <div className="mb-20">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1 text-accent text-sm font-semibold uppercase tracking-wide mb-3">
@@ -160,7 +205,7 @@ export function Products() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {landingPagesDestaque.map((lp, i) => (
               <article
                 key={lp.id}

@@ -22,12 +22,16 @@ export async function saveContactMessage(
 ): Promise<{ success: boolean; error?: string }> {
   try {
     const validatedData = contactSchema.parse(data);
-    const sourceLabel =
-      validatedData.source === 'lp-tubos'
-        ? 'Tubos de Aço Inox'
-        : validatedData.source === 'lp-bucha'
-          ? 'Buchas de Aço Inox'
-          : 'Geral';
+    const sourceLabels: Record<string, string> = {
+      'lp-tubos': 'Tubos de Aço Inox',
+      'lp-bucha': 'Buchas de Aço Inox',
+      'lp-rolos-forno': 'Rolos de Forno',
+      'lp-sink-rolls': 'Sink Rolls',
+      'lp-fundicao-centrifugada': 'Fundição Centrifugada',
+    };
+    const sourceLabel = validatedData.source
+      ? sourceLabels[validatedData.source] || 'Geral'
+      : 'Geral';
 
     const apiKey = process.env.RESEND_API_KEY;
 
