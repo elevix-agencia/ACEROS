@@ -61,6 +61,15 @@ export function Footer() {
                   Política de Privacidade
                 </Link>
               </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new Event('open-cookie-settings'))}
+                  className="flex items-center gap-2 text-left text-sm text-slate-300 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                >
+                  Preferências de cookies
+                </button>
+              </li>
             </ul>
           </div>
 

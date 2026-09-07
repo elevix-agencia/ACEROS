@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { AppProviders } from './providers';
+import { CookieConsent } from '@/components/layout/cookie-consent';
 
 const siteUrl = 'https://aceros.com.br';
 
@@ -112,17 +113,6 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WMKKZ3CL');`,
-          }}
-        />
-        {/* End Google Tag Manager */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -141,15 +131,10 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        {/* Google Tag Manager (noscript) */}
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMKKZ3CL"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        />
-        {/* End Google Tag Manager (noscript) */}
-        <AppProviders>{children}</AppProviders>
+        <AppProviders>
+          {children}
+          <CookieConsent />
+        </AppProviders>
       </body>
     </html>
   );

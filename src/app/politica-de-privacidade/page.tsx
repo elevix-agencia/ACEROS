@@ -91,7 +91,7 @@ export default function PoliticaPrivacidadePage() {
           5. Cookies e tecnologias de rastreamento
         </h2>
         <p>
-          Nosso site utiliza cookies, que são pequenos arquivos armazenados no seu dispositivo para lembrar preferências e coletar estatísticas de uso. Usamos cookies essenciais (necessários ao funcionamento do site) e cookies de análise e marketing (Google Analytics, Google Ads e Google Tag Manager), que nos ajudam a entender como os visitantes usam o site e a exibir anúncios relevantes. Você pode gerenciar ou bloquear os cookies nas configurações do seu navegador, ciente de que isso pode afetar algumas funcionalidades.
+          Nosso site utiliza cookies, que são pequenos arquivos armazenados no seu dispositivo para lembrar preferências e coletar estatísticas de uso. Usamos cookies essenciais (necessários ao funcionamento do site) e cookies de análise e marketing (Google Analytics, Google Ads e Google Tag Manager), que nos ajudam a entender como os visitantes usam o site e a exibir anúncios relevantes. Os cookies de análise e marketing só são ativados após sua autorização. Você pode aceitar, recusar ou alterar sua escolha a qualquer momento em “Preferências de cookies”, no rodapé do site.
         </p>
 
         <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
