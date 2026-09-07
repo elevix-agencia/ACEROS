@@ -130,11 +130,11 @@
                               },
                               {
                                   "id":  "qualifications-hero",
-                                  "description":  "Área de usinagem industrial da fábrica Aceros.",
-                                  "imageUrl":  "/images/aceros/generated/hero-fabrica-usinagem-v2.webp",
-                                  "imageHint":  "Aceros factory machining",
-                                  "width":  1600,
-                                  "height":  900
+                                  "description":  "Medição de perfil em rolo industrial com equipamento Rollprof.",
+                                  "imageUrl":  "/images/aceros/drive/rollprof-inspecao-real.jpg",
+                                  "imageHint":  "Rollprof industrial inspection",
+                                  "width":  1400,
+                                  "height":  736
                               },
                               {
                                   "id":  "metallurgy-lab",

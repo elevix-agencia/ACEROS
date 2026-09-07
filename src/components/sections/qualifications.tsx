@@ -62,15 +62,15 @@ export function Qualifications() {
             </div>
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl shadow-2xl animate-slide-in-right">
               <Image
-                src="/images/aceros/generated/qualidade-ultrassom-v3.png"
-                alt="Técnico realizando inspeção ultrassônica em componente de aço usinado"
+                src="/images/aceros/drive/sala-metrologia-real.jpg"
+                alt="Sala de metrologia climatizada da Aceros"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#07121e]/95 to-transparent px-6 pb-5 pt-16 text-white">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Ensaio não destrutivo</p>
-                <p className="mt-1 text-sm text-slate-200">Inspeção de integridade sem danificar o componente.</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Metrologia rastreada</p>
+                <p className="mt-1 text-sm text-slate-200">Controle dimensional realizado em ambiente climatizado.</p>
               </div>
             </div>
           </div>

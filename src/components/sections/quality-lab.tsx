@@ -13,11 +13,12 @@ import Link from 'next/link';
 
 const capacidadesVisuais = [
   {
-    imagem: '/images/aceros/generated/qualidade-ultrassom-v3.png',
-    alt: 'Técnico realizando inspeção ultrassônica em componente de aço usinado',
+    imagem: '/images/imgur/Rb6onto.png',
+    alt: 'Equipamento de ultrassom Krautkramer USM 36 utilizado no controle de qualidade da Aceros',
     etiqueta: 'Ensaio não destrutivo',
     titulo: 'Ultrassom em peças fundidas e usinadas',
     descricao: 'Verificação de descontinuidades internas e integridade estrutural sem danificar a peça.',
+    enquadramento: 'object-cover scale-[2.35] origin-[78%_50%]',
   },
   {
     imagem: '/images/aceros/drive/spectromax-real.jpg',
@@ -148,7 +149,15 @@ export function QualityLab() {
           <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {capacidadesVisuais.map(item => (
               <article key={item.titulo} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                <div className="relative aspect-[4/3] overflow-hidden bg-slate-100"><Image src={item.imagem} alt={item.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className={`${item.exibirInteira ? 'object-contain p-2' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`} /></div>
+                <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                  <Image
+                    src={item.imagem}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className={`${item.enquadramento ?? (item.exibirInteira ? 'object-contain p-2' : 'object-cover')} transition-transform duration-500 ${item.enquadramento ? '' : 'group-hover:scale-105'}`}
+                  />
+                </div>
                 <div className="p-6"><p className="text-xs font-bold uppercase tracking-[0.16em] text-accent">{item.etiqueta}</p><h3 className="mt-2 font-headline text-xl font-bold text-slate-900">{item.titulo}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{item.descricao}</p></div>
               </article>
             ))}
