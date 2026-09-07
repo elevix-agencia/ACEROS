@@ -74,22 +74,27 @@ export function Contact() {
     <>
       <section
         id="contact"
-        className="bg-secondary/50 py-20 sm:py-32"
+        className="bg-[#f3f4f6]"
       >
-        <div className="container mx-auto px-4">
-          <div className="mb-12 text-center animate-fade-in-up sm:mb-20">
-            <h2 className="mb-4 font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <div className="bg-[#07121e] py-16 text-white sm:py-20">
+          <div className="mx-auto max-w-[1280px] px-5 text-center lg:px-10">
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#ef7b21]">
+              Fale com a nossa equipe
+            </p>
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
               {t.contact.title}
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300">
               {t.contact.subtitle}
             </p>
           </div>
+        </div>
 
-          <Card className="max-w-6xl mx-auto overflow-hidden shadow-xl rounded-2xl animate-fade-in-up">
+        <div className="mx-auto max-w-[1280px] px-5 pt-16 lg:px-10 lg:pt-20">
+          <Card className="mx-auto max-w-6xl overflow-hidden rounded-none border-0 border-t-4 border-[#ef7b21] shadow-[0_24px_60px_rgba(7,18,30,.14)] animate-fade-in-up">
             <CardContent className="grid p-0 md:grid-cols-5">
               <div className="p-8 sm:p-12 md:col-span-3">
-                <h3 className="mb-8 font-headline text-2xl font-bold sm:text-3xl">
+                <h3 className="mb-8 font-headline text-2xl font-bold text-[#07121e] sm:text-3xl">
                   {t.contact.form_title}
                 </h3>
                 <Form {...form}>
@@ -106,7 +111,7 @@ export function Contact() {
                           <FormControl>
                             <Input
                               placeholder={t.contact.form_name_placeholder}
-                              className="py-6 text-base"
+                              className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]"
                               {...field}
                             />
                           </FormControl>
@@ -124,7 +129,7 @@ export function Contact() {
                             <Input
                               type="email"
                               placeholder={t.contact.form_email_placeholder}
-                              className="py-6 text-base"
+                              className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]"
                               {...field}
                             />
                           </FormControl>
@@ -141,7 +146,7 @@ export function Contact() {
                           <FormControl>
                             <Input
                               placeholder={t.contact.form_phone_placeholder}
-                              className="py-6 text-base"
+                              className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]"
                               {...field}
                             />
                           </FormControl>
@@ -159,7 +164,7 @@ export function Contact() {
                             <Textarea
                               placeholder={t.contact.form_message_placeholder}
                               rows={5}
-                              className="text-base"
+                              className="rounded-none border-slate-300 bg-[#f8fafc] text-base focus-visible:ring-[#ef7b21]"
                               {...field}
                             />
                           </FormControl>
@@ -171,7 +176,7 @@ export function Contact() {
                       <Button
                         type="submit"
                         disabled={form.formState.isSubmitting}
-                        className="w-full py-7 text-lg bg-accent text-accent-foreground transition-transform duration-300 hover:scale-105"
+                        className="w-full rounded-none bg-[#ef7b21] py-7 text-lg font-bold text-white transition-colors hover:bg-[#cf5f11]"
                       >
                         <Send className="w-5 h-5 mr-3" />
                         {form.formState.isSubmitting
@@ -182,7 +187,7 @@ export function Contact() {
                         key="whatsapp-contact"
                         asChild
                         variant="outline"
-                        className="py-7 text-lg bg-green-600 text-white transition-transform duration-300 hover:scale-105 hover:bg-green-700 border-green-600"
+                        className="rounded-none border-[#07121e] bg-[#07121e] py-7 text-lg font-bold text-white hover:border-[#12263a] hover:bg-[#12263a] hover:text-white"
                       >
                         <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
                           <MessageCircle className="w-5 h-5 mr-3" />
@@ -193,11 +198,11 @@ export function Contact() {
                   </form>
                 </Form>
               </div>
-              <div className="flex flex-col justify-center p-8 bg-secondary/50 sm:p-12 md:col-span-2">
+              <div className="flex flex-col justify-center bg-[#07121e] p-8 text-white sm:p-12 md:col-span-2">
                 <h3 className="mb-8 font-headline text-2xl font-bold sm:text-3xl">
                   {t.contact.details_title}
                 </h3>
-                <p className="mb-10 -mt-2 text-lg text-muted-foreground">
+                <p className="mb-10 -mt-2 text-base leading-7 text-slate-300">
                   {t.contact.details_hours}
                 </p>
                 <div className="space-y-8">
@@ -205,40 +210,40 @@ export function Contact() {
                     href="https://www.google.com/maps/search/?api=1&query=Rua+Alfa%2C+301%2C+Bairro+do+Una%2C+Itaquaquecetuba%2C+SP"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-start gap-5 rounded-lg transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    className="flex items-start gap-5 transition-colors hover:text-[#ef7b21] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
                   >
-                    <MapPin className="h-7 w-7 mt-1 text-primary shrink-0" />
+                    <MapPin className="mt-1 h-7 w-7 shrink-0 text-[#ef7b21]" />
                     <div>
                       <p className="text-xl font-semibold">
                         {t.contact.details_address_title}
                       </p>
-                      <p className="text-lg text-muted-foreground">
+                      <p className="text-base leading-7 text-slate-300">
                         {t.footer.address}
                       </p>
                     </div>
                   </a>
                   <a
                     href="tel:+551155556551"
-                    className="flex items-start gap-5 rounded-lg transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    className="flex items-start gap-5 transition-colors hover:text-[#ef7b21] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
                   >
-                    <Phone className="h-7 w-7 mt-1 text-primary shrink-0" />
+                    <Phone className="mt-1 h-7 w-7 shrink-0 text-[#ef7b21]" />
                     <div>
                       <p className="text-xl font-semibold">
                         {t.contact.details_phone_title}
                       </p>
-                      <p className="text-lg text-muted-foreground">
+                      <p className="text-base leading-7 text-slate-300">
                         +55 (11) 5555-6551 (Industrial)
                       </p>
                     </div>
                   </a>
                   <a
                     href="mailto:vendas@aceros.com.br"
-                    className="flex items-start gap-5 rounded-lg transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    className="flex items-start gap-5 transition-colors hover:text-[#ef7b21] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
                   >
-                    <Mail className="h-7 w-7 mt-1 text-primary shrink-0" />
+                    <Mail className="mt-1 h-7 w-7 shrink-0 text-[#ef7b21]" />
                     <div>
                       <p className="text-xl font-semibold">{t.contact.form_email}</p>
-                      <p className="text-lg text-muted-foreground">
+                      <p className="text-base leading-7 text-slate-300">
                         vendas@aceros.com.br
                       </p>
                     </div>
@@ -248,7 +253,7 @@ export function Contact() {
             </CardContent>
           </Card>
 
-          <div className="mt-20 sm:mt-32">
+          <div className="mt-16 lg:mt-20">
             <LocationMap />
           </div>
         </div>

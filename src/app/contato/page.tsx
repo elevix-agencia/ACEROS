@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ContatoPage() {
   return (
-    <div className="pt-20">
+    <div>
       <h1 className="sr-only">Contato Aceros — Solicite Orçamento Técnico</h1>
       <Contact />
     </div>

@@ -8,11 +8,11 @@ export function LocationMap() {
   return (
     <section
       id="location"
-      className="py-20 sm:py-32 bg-white"
+      className="bg-white py-16 sm:py-20"
     >
-      <div className="container mx-auto px-4">
+      <div>
         <div className="text-center animate-fade-in-up">
-          <h2 className="mb-4 font-headline text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
+          <h2 className="mb-4 font-headline text-4xl font-bold tracking-tight text-[#07121e] sm:text-5xl">
             {t.location.title}
           </h2>
           <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">
@@ -20,8 +20,8 @@ export function LocationMap() {
           </p>
         </div>
 
-        <div className="mt-12 sm:mt-20 animate-zoom-in">
-          <div className="relative aspect-video w-full max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-2xl border">
+        <div className="mt-12 animate-zoom-in sm:mt-16">
+          <div className="relative mx-auto aspect-video w-full max-w-6xl overflow-hidden border-t-4 border-[#ef7b21] shadow-[0_20px_50px_rgba(7,18,30,.16)]">
             <iframe
               src="https://www.google.com/maps?q=Rua+Alfa,+301,+Bairro+do+Una,+Itaquaquecetuba+SP,+08599-670&output=embed"
               width="100%"
@@ -42,7 +42,7 @@ export function LocationMap() {
               href="https://www.google.com/maps/search/?api=1&query=Rua+Alfa%2C+301%2C+Bairro+do+Una%2C+Itaquaquecetuba%2C+SP"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex text-lg text-muted-foreground underline-offset-4 transition-colors hover:text-accent hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+              className="inline-flex text-lg text-muted-foreground underline-offset-4 transition-colors hover:text-[#ef7b21] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
               aria-label="Abrir o endereço da Aceros no Google Maps"
             >
               {t.footer.address}
