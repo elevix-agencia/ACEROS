@@ -315,13 +315,50 @@ header.site-header .header-mobile-actions {
 }
 
 /* Mantém a navegação completa em notebooks e na prévia com painel lateral. */
-@media (min-width: 1180px) {
+@media (min-width: 1024px) {
   header.site-header .header-navigation {
     display: flex !important;
   }
 
   header.site-header .header-mobile-actions {
     display: none !important;
+  }
+}
+
+/* Em notebooks menores, preserva o menu aberto sem apertar ou sobrepor os itens. */
+@media (min-width: 1024px) and (max-width: 1179px) {
+  header.site-header .header-container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  header.site-header .header-logo img {
+    width: 140px !important;
+    max-width: 140px !important;
+  }
+
+  header.site-header .header-navigation a {
+    padding-left: 0.375rem !important;
+    padding-right: 0.375rem !important;
+    font-size: 13px !important;
+  }
+
+  header.site-header .header-utilities {
+    margin-left: 0.25rem !important;
+    gap: 0.25rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  header.site-header .btn-contato {
+    height: 48px !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    font-size: 13px !important;
+  }
+
+  header.site-header .btn-idioma button {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 }
 
