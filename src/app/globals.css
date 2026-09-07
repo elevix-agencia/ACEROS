@@ -314,6 +314,17 @@ header.site-header .header-mobile-actions {
   display: flex !important;
 }
 
+/* Mantém a navegação completa em notebooks e na prévia com painel lateral. */
+@media (min-width: 1180px) {
+  header.site-header .header-navigation {
+    display: flex !important;
+  }
+
+  header.site-header .header-mobile-actions {
+    display: none !important;
+  }
+}
+
 @media (min-width: 1400px) {
   header.site-header,
   header.site-header .header-container {

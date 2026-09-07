@@ -56,7 +56,7 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="header-navigation hidden items-center min-[1400px]:flex" aria-label="Navegação principal">
+        <nav className="header-navigation hidden items-center min-[1180px]:flex" aria-label="Navegação principal">
             {navLinks.map(link => {
               const isMarketLink = link.href === '/#sectors';
               const isActive = link.href === '/'
@@ -100,7 +100,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="header-mobile-actions flex items-center gap-2 min-[1400px]:hidden">
+        <div className="header-mobile-actions flex items-center gap-2 min-[1180px]:hidden">
           <div className="btn-idioma">
             <LanguageSwitcher />
           </div>
