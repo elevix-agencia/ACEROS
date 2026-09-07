@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --site-shell-max: 1280px;
+  --site-shell-gutter: clamp(1.25rem, 3vw, 2.5rem);
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
@@ -217,6 +222,24 @@
   }
 }
 
+/* Eixo geral do site: mantém os blocos principais na mesma linha vertical.
+   Contêineres explicitamente mais estreitos continuam centrados para leitura. */
+.container:not([class*="max-w-"]) {
+  width: 100% !important;
+  max-width: var(--site-shell-max) !important;
+  margin-inline: auto !important;
+  padding-inline: var(--site-shell-gutter) !important;
+}
+
+header.site-header .header-container,
+footer .site-footer-container {
+  width: 100% !important;
+  max-width: var(--site-shell-max) !important;
+  margin-inline: auto !important;
+  padding-left: var(--site-shell-gutter) !important;
+  padding-right: var(--site-shell-gutter) !important;
+}
+
 /* Mercado de atuação: todas as páginas usam o mesmo eixo, respiro e paleta.
    O conteúdo interno de cada setor permanece intacto. */
 .sector-flow > section {
@@ -227,10 +250,10 @@
 }
 
 .sector-flow > section > .container {
-  width: min(100%, 1280px) !important;
-  max-width: 1280px !important;
+  width: 100% !important;
+  max-width: var(--site-shell-max) !important;
   margin-inline: auto !important;
-  padding-inline: clamp(1.25rem, 3vw, 2.5rem) !important;
+  padding-inline: var(--site-shell-gutter) !important;
 }
 
 .sector-flow > section.bg-gray-900 {
@@ -328,8 +351,8 @@ header.site-header .header-mobile-actions {
 /* Em notebooks menores, preserva o menu aberto sem apertar ou sobrepor os itens. */
 @media (min-width: 1024px) and (max-width: 1179px) {
   header.site-header .header-container {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: var(--site-shell-gutter) !important;
+    padding-right: var(--site-shell-gutter) !important;
   }
 
   header.site-header .header-logo img {

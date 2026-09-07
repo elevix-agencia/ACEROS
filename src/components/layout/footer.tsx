@@ -19,7 +19,7 @@ export function Footer() {
 
   return (
     <footer className="border-t-4 border-[#ef7b21] bg-[#07121e] text-white">
-      <div className="mx-auto max-w-[1440px] px-5 pb-8 pt-16 lg:px-10 lg:pt-20">
+      <div className="site-footer-container mx-auto max-w-[1280px] px-5 pb-8 pt-16 lg:px-10 lg:pt-20">
         <div className="grid grid-cols-1 gap-12 text-left md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="flex flex-col items-start md:col-span-2 lg:col-span-4 lg:pr-12">
             <Link href="/" className="mb-6 flex items-center" aria-label="Aceros — Página inicial">

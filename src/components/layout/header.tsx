@@ -40,7 +40,7 @@ export function Header() {
         'bg-white/95 backdrop-blur-xl'
       )}
     >
-      <div className="header-container mx-auto flex h-20 max-w-[1320px] items-center justify-between px-5 lg:px-8">
+      <div className="header-container mx-auto flex h-20 max-w-[1280px] items-center justify-between px-5 lg:px-10">
         {/* Logo */}
         <div className="header-logo flex-shrink-0">
           <Link href="/" className="flex items-center" aria-label="Aceros — Página inicial">
