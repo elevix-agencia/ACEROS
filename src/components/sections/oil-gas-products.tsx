@@ -148,7 +148,7 @@ export function OilGasProducts() {
   return (
     <section
       id="oil-gas-products"
-      className="py-20 sm:py-32 bg-secondary/30 text-foreground"
+      className="py-20 sm:py-32 bg-white text-foreground"
     >
       <div className="container mx-auto px-4">
         <div className="text-center animate-fade-in-up mb-16">

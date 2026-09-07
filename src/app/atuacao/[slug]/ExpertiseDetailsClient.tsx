@@ -950,7 +950,7 @@ function NavalTubesSection({translations}: {translations: any}) {
   const whatsappNumber = '551155556551';
 
   return (
-    <section className="relative py-20 sm:py-32 bg-gray-50 text-foreground overflow-hidden">
+    <section className="relative py-20 sm:py-32 bg-secondary/50 text-foreground overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,rgba(0,0,0,0.05)_1px,transparent_1px)] [background-size:32px_32px] opacity-50"></div>
         <div className="absolute inset-x-0 top-0 h-96 bg-gradient-to-b from-primary/10 via-transparent to-transparent"></div>
         <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-accent/10 via-transparent to-transparent"></div>
@@ -1154,7 +1154,7 @@ function NavalAssembliesSection({translations}: {translations: any}) {
     );
 
     return (
-      <section className="py-20 sm:py-32 bg-white">
+      <section className="py-20 sm:py-32 bg-secondary/50">
         <div className="container mx-auto px-4">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

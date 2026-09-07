@@ -296,7 +296,7 @@ export function GuseiraHousingsSection() {
   const whatsappNumber = '551155556551';
 
   return (
-    <section className="py-20 sm:py-32 bg-white text-foreground">
+    <section className="py-20 sm:py-32 bg-secondary/50 text-foreground">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
           <motion.div
@@ -422,7 +422,7 @@ export function GuseiraWearPlatesSection() {
   const whatsappNumber = '551155556551';
 
   return (
-    <section className="py-20 sm:py-32 bg-secondary/30 text-foreground">
+    <section className="py-20 sm:py-32 bg-white text-foreground">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
            <motion.div
@@ -519,14 +519,14 @@ export function GuseiraStructuralComponentsSection() {
     const newImage = PlaceHolderImages.find(img => img.id === 'guseira-new-structural-component');
   
     return (
-      <section className="relative py-20 sm:py-32 bg-gray-900 text-white overflow-hidden">
+      <section className="relative py-20 sm:py-32 bg-white text-foreground overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
           <div className="absolute top-0 left-0 w-1/3 h-2/3 bg-gradient-to-br from-accent/10 via-transparent to-transparent rounded-full filter blur-3xl animate-blob"></div>
           <div className="absolute bottom-0 right-0 w-1/3 h-2/3 bg-gradient-to-tl from-primary/10 via-transparent to-transparent rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
   
           <div className="container mx-auto px-4 flex flex-col items-center justify-center text-center">
               <motion.h2 
-                  className="font-headline text-4xl md:text-6xl font-bold text-white uppercase tracking-wider text-shadow-lg mb-8"
+                  className="font-headline text-4xl md:text-6xl font-bold text-[#07121e] uppercase tracking-wider mb-8"
                   initial={{ opacity: 0, y: -20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

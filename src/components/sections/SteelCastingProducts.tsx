@@ -28,7 +28,7 @@ export function SteelCastingProducts() {
 
   return (
     <motion.section
-      className="py-20 sm:py-32 bg-gray-900 text-white overflow-hidden"
+      className="relative py-20 sm:py-32 bg-white text-foreground overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -46,7 +46,7 @@ export function SteelCastingProducts() {
             {productImage && (
               <Dialog>
                 <DialogTrigger asChild>
-                  <Card className="overflow-hidden rounded-2xl shadow-2xl group cursor-pointer bg-white/5 border border-white/10">
+                  <Card className="overflow-hidden rounded-2xl shadow-2xl group cursor-pointer bg-white border border-slate-200">
                     <CardContent className="p-4">
                       <div className="relative w-full aspect-video">
                         <Image
@@ -88,7 +88,7 @@ export function SteelCastingProducts() {
             <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-accent sm:text-4xl">
               LINGOTAMENTO CONTÍNUO
             </h2>
-            <p className="mb-6 text-lg text-slate-300">
+            <p className="mb-6 text-lg text-muted-foreground">
               Rolos para Máquinas de Lingotamento Contínuo: Rolos monometálicos e bi-metálicos e rolos padrão revestidos por soldagem (welded). Estes rolos de aço inoxidável martensíticos (42 a 48 HRC), através do controle de enxofre, carbono e fósforo, garantem a ausência de trincas térmicas quando em contato com as placas do lingotamento contínuo. Estes rolos estão em funcionamento nas máquinas de lingotamento brasileiras e no exterior e produzem cerca de 3,5 milhões de toneladas de placas sem qualquer necessidade de troca ou repasse (re-usinagem) dos rolos.
             </p>
 

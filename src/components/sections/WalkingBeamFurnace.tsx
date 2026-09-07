@@ -39,7 +39,7 @@ export function WalkingBeamFurnace() {
   const whatsappNumber = '551155556551';
 
   return (
-    <section className="py-20 sm:py-32">
+    <section className="py-20 sm:py-32 bg-white">
       <div className="container mx-auto px-4">
         <div className="relative grid md:grid-cols-2 gap-4 rounded-3xl overflow-hidden shadow-2xl bg-white">
           {/* Coluna da Esquerda */}
