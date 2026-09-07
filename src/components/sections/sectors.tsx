@@ -8,8 +8,8 @@ import { useLanguage } from '@/hooks/use-language';
 import { sectorsData } from '@/lib/expertise-data';
 
 const sectorImages: Record<string, string> = {
-  mineracao: '/images/imgur/ol4Y0fr.jpeg',
-  tratamento_termico: '/images/imgur/Scmi8ys.jpeg',
+  mineracao: '/images/imgur/GwRqaf7.jpeg',
+  tratamento_termico: '/images/imgur/1LtOK33.jpeg',
   naval: '/images/imgur/5AsJUxh.png',
   siderurgia: '/images/imgur/XJLum1h.png',
   guseira: '/images/aceros/generated/guseira-hero-v3.png',
