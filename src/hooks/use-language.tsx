@@ -20,6 +20,31 @@ type Language = keyof typeof translations;
 
 type Translations = typeof pt;
 
+function mergeTranslations<T>(base: T, override: unknown): T {
+  if (
+    typeof base !== 'object' ||
+    base === null ||
+    Array.isArray(base) ||
+    typeof override !== 'object' ||
+    override === null ||
+    Array.isArray(override)
+  ) {
+    return (override ?? base) as T;
+  }
+
+  const merged: Record<string, unknown> = {
+    ...(base as Record<string, unknown>),
+  };
+
+  for (const [key, value] of Object.entries(
+    override as Record<string, unknown>
+  )) {
+    merged[key] = key in merged ? mergeTranslations(merged[key], value) : value;
+  }
+
+  return merged as T;
+}
+
 type LanguageContextType = {
   language: Language;
   setLanguage: (language: Language) => void;
@@ -33,7 +58,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('pt');
 
-  const t = useMemo(() => translations[language], [language]);
+  // Mantém todos os campos disponíveis mesmo quando uma tradução ainda não
+  // possui uma chave específica; nesses casos, o conteúdo original em PT é usado.
+  const t = useMemo(
+    () => mergeTranslations<Translations>(pt, translations[language]),
+    [language]
+  );
 
   const value = {
     language,

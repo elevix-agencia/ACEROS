@@ -55,7 +55,7 @@ import { saveContactMessage } from '@/lib/contact-actions';
 export function TubosInoxClient() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const whatsappNumber = '5511000000000';
+  const whatsappNumber = '551155556551';
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de um orçamento para Tubos de Aço Inox sob medida.');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -523,7 +523,7 @@ export function TubosInoxClient() {
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><MapPin className="h-6 w-6 text-accent" /></div>
-                  <span className="text-sm">Rua Alfa, 301, Bairro do Una, Itaquaquecetuba/SP</span>
+                  <span className="text-sm">Rua Hans Oersted, 20–118, Cidade Monções, São Paulo/SP</span>
                 </div>
               </div>
             </div>
@@ -604,14 +604,14 @@ export function TubosInoxClient() {
                   <FileText className="h-4 w-4 text-accent shrink-0" />
                   <Link href="/politica-de-privacidade" className="hover:underline">Política de Privacidade</Link>
                 </li>
-                <li className="flex items-start gap-3"><MapPin className="h-4 w-4 text-accent shrink-0" /> Rua Alfa, 301, Bairro do Una, Itaquaquecetuba/SP</li>
+                <li className="flex items-start gap-3"><MapPin className="h-4 w-4 text-accent shrink-0" /> Rua Hans Oersted, 20–118, Cidade Monções, São Paulo/SP</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Localização</h4>
               <div className="rounded-xl overflow-hidden h-40 border shadow-sm grayscale hover:grayscale-0 transition-all">
                 <iframe
-                  src="https://www.google.com/maps?q=Rua+Alfa,+301,+Bairro+do+Una,+Itaquaquecetuba+SP,+08599-670&output=embed"
+                  src="https://www.google.com/maps?q=Rua+Hans+Oersted,+20-118,+Cidade+Moncoes,+Sao+Paulo,+SP,+04575-010&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

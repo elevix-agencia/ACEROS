@@ -23,7 +23,7 @@ export function LocationMap() {
         <div className="mt-12 animate-zoom-in sm:mt-16">
           <div className="relative mx-auto aspect-video w-full max-w-6xl overflow-hidden border-t-4 border-[#ef7b21] shadow-[0_20px_50px_rgba(7,18,30,.16)]">
             <iframe
-              src="https://www.google.com/maps?q=Rua+Alfa,+301,+Bairro+do+Una,+Itaquaquecetuba+SP,+08599-670&output=embed"
+              src="https://www.google.com/maps?q=Rua+Hans+Oersted,+20-118,+Cidade+Moncoes,+Sao+Paulo,+SP,+04575-010&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -39,7 +39,7 @@ export function LocationMap() {
             style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
           >
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Rua+Alfa%2C+301%2C+Bairro+do+Una%2C+Itaquaquecetuba%2C+SP"
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Hans+Oersted%2C+20-118%2C+Cidade+Moncoes%2C+Sao+Paulo%2C+SP%2C+04575-010"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex text-lg text-muted-foreground underline-offset-4 transition-colors hover:text-[#ef7b21] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"

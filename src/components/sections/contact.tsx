@@ -207,7 +207,7 @@ export function Contact() {
                 </p>
                 <div className="space-y-8">
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Rua+Alfa%2C+301%2C+Bairro+do+Una%2C+Itaquaquecetuba%2C+SP"
+                    href="https://www.google.com/maps/search/?api=1&query=Rua+Hans+Oersted%2C+20-118%2C+Cidade+Moncoes%2C+Sao+Paulo%2C+SP%2C+04575-010"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start gap-5 transition-colors hover:text-[#ef7b21] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"

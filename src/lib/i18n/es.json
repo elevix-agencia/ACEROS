@@ -13,7 +13,7 @@
     "description": "Excelencia e innovación en aceros centrifugados para las industrias más exigentes.",
     "navigation": "Navegación",
     "contact": "Contacto",
-    "address": "Rua Alfa, 301, Bairro do Una, Itaquaquecetuba/SP",
+    "address": "Rua Hans Oersted, 20–118, Cidade Monções, São Paulo/SP",
     "phone": "+55 (11) 5555-6551 (Industrial)",
     "email": "vendas@aceros.com.br",
     "newsletter": "Suscríbete",
@@ -50,7 +50,8 @@
   },
   "gallery": {
     "title": "Algunos de Nuestros Productos",
-    "subtitle": "Conozca algunos de los productos desarrollados con alto estándar técnico, precisión industrial y excelencia en ingeniería."
+    "subtitle": "Conozca algunos de los productos desarrollados con alto estándar técnico, precisión industrial y excelencia en ingeniería.",
+    "address": "Rua Hans Oersted, 20–118, Cidade Monções, São Paulo/SP, 04575-010"
   },
   "quality": {
     "title": "Laboratorios y Calidad",

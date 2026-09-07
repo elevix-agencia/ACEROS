@@ -26,7 +26,23 @@ export default function EngenhariaPage() {
   const engineeringData = pt.expertise_sectors.engenharia;
 
   const pageData = {
-    sector: engineeringData,
+    sector: {
+      ...engineeringData,
+      solutions: {
+        engineering_metallurgical_consulting: {
+          ...engineeringData.solutions.engineering_metallurgical_consulting,
+          icon: 'Component' as const,
+        },
+        engineering_alloy_development: {
+          ...engineeringData.solutions.engineering_alloy_development,
+          icon: 'Lightbulb' as const,
+        },
+        engineering_component_design: {
+          ...engineeringData.solutions.engineering_component_design,
+          icon: 'Zap' as const,
+        },
+      },
+    },
     translations: {
         qualifications: pt.qualifications,
         manufacturing_history: pt.manufacturing_history,
@@ -55,9 +71,3 @@ export default function EngenhariaPage() {
     </>
   );
 }
-
-    
-    
-    
-
-    

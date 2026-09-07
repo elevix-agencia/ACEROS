@@ -86,10 +86,10 @@ const organizationSchema = {
     'Divisão de aços inoxidáveis do Grupo Metalúrgica Daniela. Fabricação sob medida de tubos, buchas e componentes centrifugados em ligas especiais (ASTM A297).',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Rua Alfa, 301',
-    addressLocality: 'Itaquaquecetuba',
+    streetAddress: 'Rua Hans Oersted, 20-118',
+    addressLocality: 'São Paulo',
     addressRegion: 'SP',
-    postalCode: '08599-670',
+    postalCode: '04575-010',
     addressCountry: 'BR',
   },
   areaServed: {

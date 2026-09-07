@@ -77,7 +77,7 @@ export function Footer() {
              <h3 className="mb-6 border-b border-white/15 pb-3 font-headline text-sm font-bold uppercase tracking-[0.12em] text-accent">{t.footer.contact}</h3>
               <div className="space-y-4 text-sm leading-6 text-slate-300">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Rua+Alfa%2C+301%2C+Bairro+do+Una%2C+Itaquaquecetuba%2C+SP"
+                  href="https://www.google.com/maps/search/?api=1&query=Rua+Hans+Oersted%2C+20-118%2C+Cidade+Moncoes%2C+Sao+Paulo%2C+SP%2C+04575-010"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Abrir o endereço da Aceros no mapa"
