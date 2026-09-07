@@ -130,11 +130,11 @@
                               },
                               {
                                   "id":  "qualifications-hero",
-                                  "description":  "Medição de perfil em rolo industrial com equipamento Rollprof.",
-                                  "imageUrl":  "/images/aceros/drive/rollprof-inspecao-real.jpg",
-                                  "imageHint":  "Rollprof industrial inspection",
-                                  "width":  1400,
-                                  "height":  736
+                                  "description":  "Tubos de aço inox centrifugado usinados e polidos pela Aceros.",
+                                  "imageUrl":  "/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg",
+                                  "imageHint":  "finished centrifuged steel tubes",
+                                  "width":  2000,
+                                  "height":  1123
                               },
                               {
                                   "id":  "metallurgy-lab",
