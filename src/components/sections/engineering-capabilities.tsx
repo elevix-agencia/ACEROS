@@ -126,15 +126,13 @@ export function EngineeringCapabilities() {
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 A centrifugação é o processo de fabricação em que o aço líquido, a temperaturas
                 entre 1.500 e 1.630 °C, é vazado em uma matriz de aço baixo carbono (coquilha)
-                pré-aquecida e em rotação. A força centrífuga expulsa o metal contra as paredes
-                da matriz, formando peças tubulares com diâmetros interno e externo perfeitamente
-                concêntricos.
+                pré-aquecida e em rotação. A força centrífuga direciona o metal contra as paredes
+                da matriz, formando peças tubulares com controle dos diâmetros interno e externo.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                O resultado é uma microestrutura densa, livre de porosidade e com controle
-                dimensional preciso — muito superior a processos de fundição convencionais.
-                Depois da centrifugação, cada peça passa por beneficiamento térmico
-                (solubilização e envelhecimento) para atingir as propriedades finais exigidas.
+                O processo favorece uma estrutura densa. As dimensões e a integridade da peça
+                são verificadas pelos controles definidos para cada projeto. Quando especificado,
+                o fornecimento também pode incluir beneficiamento térmico, como solubilização.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mt-8">

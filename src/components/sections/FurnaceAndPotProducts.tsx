@@ -43,30 +43,29 @@ export function FurnaceAndPotProducts() {
                 LINHAS DE GALVANIZAÇÃO POR IMERSÃO A QUENTE (POTE)
               </h3>
               <p className="text-gray-300 mb-6 text-lg">
-                Componentes de alta performance submersos em banhos de Zinco,
-                Zincalume e Alumínio+Si, e galvalume com ligas especiais da ACEROS que
-                garantem durabilidade superior.
+                Componentes fabricados sob medida para conjuntos que trabalham em
+                linhas de galvanização por imersão a quente.
               </p>
               <ul className="space-y-4 text-gray-300 mb-8">
                 <li className="flex items-start gap-3">
                   <Layers className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <span>
-                    Rolos de Imersão, Estabilizadores, Braços, Berços e Bicos
-                    fundidos em peça única.
+                    Sink Rolls, braços, Snout, buchas de ponta e conjuntos montados
+                    conforme o projeto da linha.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Layers className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <span>
-                    Ligas ACEROS TOTALMENTE LIVRES DE FERRITA para desempenho
-                    superior.
+                    Material selecionado conforme o banho, a temperatura, os esforços
+                    e o histórico de operação.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Layers className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <span>
-                    Mancais (Buchas) bi-metálicas com desempenho de 3 a 7 vezes
-                    maior.
+                    Centrifugação, usinagem e controle dimensional integrados ao
+                    fornecimento.
                   </span>
                 </li>
               </ul>

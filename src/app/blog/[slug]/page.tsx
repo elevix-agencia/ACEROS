@@ -48,6 +48,14 @@ const categoriaCores: Record<string, string> = {
   Engenharia: 'bg-slate-100 text-slate-800 border-slate-300',
 };
 
+const solutionByPost: Record<string, { href: string; label: string }> = {
+  'sink-roll-como-escolher-liga': { href: '/sink-rolls', label: 'Conhecer Sink Rolls e componentes' },
+  'astm-a297-hk-hh-hp-diferencas': { href: '/rolos-de-forno', label: 'Conhecer os rolos de forno' },
+  'fundicao-centrifugada-vantagens': { href: '/fundicao-centrifugada', label: 'Conhecer a fundição centrifugada' },
+  'bucha-bimetalica-sink-roll': { href: '/bucha-de-aco-inox', label: 'Conhecer as buchas para Sink Roll' },
+  'ligas-304-316-310-alta-temperatura': { href: '/tubos-de-aco-inox', label: 'Conhecer os tubos centrifugados' },
+};
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
@@ -55,6 +63,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const outrosPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const relatedSolution = solutionByPost[slug] || { href: '/produtos', label: 'Conhecer os produtos Aceros' };
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -63,6 +72,8 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.descricao,
     image: `https://aceros.com.br${post.imagem}`,
     datePublished: post.dataPublicacao,
+    dateModified: post.dataPublicacao,
+    mainEntityOfPage: `https://aceros.com.br/blog/${post.slug}`,
     author: {
       '@type': 'Organization',
       name: 'Aceros Centrifugados LTDA',
@@ -152,10 +163,10 @@ export default async function BlogPostPage({ params }: Props) {
               Nossa engenharia analisa desenho, especifica a liga ideal e retorna orçamento sem compromisso.
             </p>
             <Link
-              href="/contato"
+              href={relatedSolution.href}
               className="inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-8 py-3 rounded-lg transition-all"
             >
-              Falar com engenheiro
+              {relatedSolution.label}
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>

@@ -22,7 +22,7 @@ const landingPagesDestaque: LandingPage[] = [
     id: 'tubos',
     titulo: 'Tubos Centrifugados',
     descricao:
-      'Tubos de aço inox fabricados por centrifugação em ligas ASTM A297 (HK, HH, HP) e ligas 304, 304L, 316, 316L, 310 e 420. Microestrutura densa, livre de porosidade, com alta resistência mecânica e térmica.',
+      'Tubos mecânicos fabricados por centrifugação em ligas selecionadas conforme a aplicação. Dimensões e acabamento definidos pelo desenho técnico.',
     imagem: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-12.jpg',
     imagemAlt: 'Tubos de aço inox centrifugados usinados e polidos — fabricação Aceros',
     bullets: [
@@ -41,9 +41,9 @@ const landingPagesDestaque: LandingPage[] = [
     imagem: '/images/aceros/buchas/bucha-aco-inox-aceros-06.jpg',
     imagemAlt: 'Buchas de aço inox usinadas sob medida — fabricação Aceros',
     bullets: [
-      'Usinagem CNC de precisão milimétrica',
-      'Alta dureza superficial e vida útil prolongada',
-      'Aplicações: Sink Roll, Furnace Roll, mancais',
+      'Usinagem conforme tolerâncias do desenho',
+      'Material selecionado para a condição de serviço',
+      'Aplicações: Sink Roll e rolos de forno',
     ],
     href: '/bucha-de-aco-inox',
     icone: Cog,
@@ -67,7 +67,7 @@ const landingPagesDestaque: LandingPage[] = [
     id: 'sink-rolls',
     titulo: 'Sink Rolls',
     descricao:
-      'Rolos de imersão e componentes para linhas de galvanização a quente, incluindo estabilizadores, braços, berços, snouts e buchas.',
+      'Rolos de imersão e componentes para linhas de galvanização a quente, incluindo braços, snout, buchas de ponta e conjuntos montados.',
     imagem: '/images/imgur/KZhCZ6S.png',
     imagemAlt: 'Sink roll para galvanização por imersão a quente',
     bullets: [
@@ -82,7 +82,7 @@ const landingPagesDestaque: LandingPage[] = [
     id: 'fundicao-centrifugada',
     titulo: 'Fundição Centrifugada',
     descricao:
-      'Tubos, buchas, anéis e blanks em aços inoxidáveis e superligas, do bruto de fundição à peça usinada e acabada.',
+      'Tubos mecânicos, buchas e componentes cilíndricos em ligas especiais, do bruto de fundição à peça usinada e acabada.',
     imagem: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg',
     imagemAlt: 'Tubos brutos produzidos por fundição centrifugada',
     bullets: [
@@ -209,7 +209,7 @@ export function Products() {
             {landingPagesDestaque.map((lp, i) => (
               <article
                 key={lp.id}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-2 border-slate-100 hover:border-accent animate-fade-in-up"
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border-2 border-slate-100 bg-white shadow-xl transition-all duration-500 hover:border-accent hover:shadow-2xl animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.1}s`, animationFillMode: 'both' }}
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-primary">
@@ -231,10 +231,10 @@ export function Products() {
                   </div>
                 </div>
 
-                <div className="p-6 md:p-8 space-y-5">
+                <div className="flex flex-1 flex-col gap-5 p-6 md:p-8">
                   <p className="text-muted-foreground leading-relaxed">{lp.descricao}</p>
 
-                  <ul className="space-y-2">
+                  <ul className="flex-1 space-y-2">
                     {lp.bullets.map((bullet) => (
                       <li key={bullet} className="flex items-start gap-2 text-sm text-slate-700">
                         <span className="text-accent font-bold mt-0.5">▸</span>
@@ -246,7 +246,7 @@ export function Products() {
                   <Button
                     asChild
                     size="lg"
-                    className="w-full group/btn bg-primary text-white hover:bg-accent transition-colors"
+                    className="mt-auto w-full group/btn bg-primary text-white hover:bg-accent transition-colors"
                   >
                     <Link href={lp.href} className="inline-flex items-center justify-center gap-2">
                       Ver linha completa

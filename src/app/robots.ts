@@ -10,6 +10,16 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/_next/', '/private/'],
       },
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/private/'],
+      },
+      {
+        userAgent: 'ChatGPT-User',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/private/'],
+      },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,
     host: siteUrl,

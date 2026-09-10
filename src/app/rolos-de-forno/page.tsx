@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
 import { IndustrialCampaignPage, type CampaignPageData } from '@/components/landing-pages/industrial-campaign-page';
+import { buildCampaignSchema } from '@/lib/campaign-schema';
 
 export const metadata: Metadata = {
   title: 'Rolos de Forno Sob Medida | Furnace Rolls Industriais',
   description: 'Rolos de forno centrifugados em ligas ASTM A297 para tratamento térmico, CAPL, CGL e fornos contínuos. Fabricação sob medida. Solicite orçamento.',
   alternates: { canonical: '/rolos-de-forno' },
-  openGraph: { title: 'Rolos de Forno e Furnace Rolls — Aceros', description: 'Rolos centrifugados resistentes a altas temperaturas, fabricados conforme desenho técnico.', url: '/rolos-de-forno' },
+  openGraph: { title: 'Rolos de Forno e Furnace Rolls — Aceros', description: 'Rolos centrifugados resistentes a altas temperaturas, fabricados conforme desenho técnico.', url: '/rolos-de-forno', images: [{ url: '/images/imgur/gbNL57g.png', alt: 'Rolo de forno fabricado pela Aceros' }] },
 };
 
 const data: CampaignPageData = {
+  path: '/rolos-de-forno',
   source: 'lp-rolos-forno',
   eyebrow: 'Furnace Rolls · Fabricação Aceros',
   title: 'Rolos de forno para operação contínua em alta temperatura',
@@ -22,7 +24,7 @@ const data: CampaignPageData = {
   ],
   detailImage: '/images/imgur/iYTJsbZ.png',
   detailAlt: 'Tubos radiantes e rolos para fornos CAPL e CGL',
-  benefits: ['Rolos resfriados e não resfriados', 'Ligas ASTM A297 HK, HH e HP', 'Opções revestidas e não revestidas', 'Dimensões e acabamento sob medida'],
+  benefits: ['Rolos resfriados e não resfriados', 'Ligas ASTM A297 conforme o projeto', 'Opções revestidas e não revestidas', 'Dimensões e acabamento sob medida'],
   applications: [
     { title: 'Fornos túnel CSP', description: 'Rolos para transporte de placas sob regime térmico contínuo e elevada carga.' },
     { title: 'Linhas CAPL e CGL', description: 'Furnace rolls para recozimento e galvanização contínua, com ou sem revestimento.' },
@@ -44,7 +46,7 @@ const data: CampaignPageData = {
   ],
   faq: [
     { question: 'Os rolos são fabricados conforme desenho?', answer: 'Sim. Diâmetros, comprimento, pontas, flanges, refrigeração e acabamento são definidos conforme o desenho e a condição de operação.' },
-    { question: 'Quais ligas são usadas?', answer: 'A seleção depende da temperatura, atmosfera e solicitação mecânica. Trabalhamos com ligas ASTM A297, como HK, HH e HP, além de superligas específicas.' },
+    { question: 'Quais ligas são usadas?', answer: 'A seleção depende da temperatura, atmosfera e solicitação mecânica. A liga ASTM A297 e seu grau são definidos conforme os requisitos de cada projeto.' },
     { question: 'A Aceros fornece rolos resfriados?', answer: 'Sim. Fabricamos configurações resfriadas e não resfriadas, de acordo com o projeto do forno.' },
   ],
   whatsappText: 'Olá! Gostaria de solicitar um orçamento para rolos de forno (Furnace Rolls).',
@@ -52,5 +54,6 @@ const data: CampaignPageData = {
 };
 
 export default function RolosDeFornoPage() {
-  return <IndustrialCampaignPage data={data} />;
+  const schema = buildCampaignSchema({ path: data.path, name: 'Rolos de forno sob medida', description: data.heroDescription, image: data.heroImage, applications: data.applications, faq: data.faq });
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /><IndustrialCampaignPage data={data} /></>;
 }

@@ -5,12 +5,12 @@ import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 export const metadata: Metadata = {
   title: 'Produtos — Peças Centrifugadas em Aço Inox Sob Medida',
   description:
-    'Catálogo de produtos Aceros: tubos, buchas, anéis, corpos de válvula, rolos, munhões, flanges e demais peças centrifugadas em aços inox ASTM A297. Fabricação sob medida.',
+    'Catálogo de produtos Aceros: tubos mecânicos, buchas, Sink Rolls, rolos de forno e componentes centrifugados em ligas especiais. Fabricação sob medida.',
   alternates: { canonical: '/produtos' },
   openGraph: {
     title: 'Produtos Aceros — Peças Centrifugadas em Aço Inox',
     description:
-      'Tubos, buchas, anéis e demais componentes fabricados por centrifugação em ligas ASTM A297 (304, 304L, 316, 316L, 310, 420).',
+      'Tubos, buchas, Sink Rolls, rolos de forno e outros componentes fabricados sob medida por centrifugação.',
     url: '/produtos',
   },
 };

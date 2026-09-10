@@ -24,34 +24,28 @@ export const blogPosts: BlogPost[] = [
     imagemAlt: 'Conjunto Sink Roll instalado em linha industrial de galvanização',
     keywords: ['sink roll', 'liga sink roll', 'galvanização', 'pote de zinco', 'ASTM A297'],
     conteudo: `
-<p>O <strong>Sink Roll</strong> é um dos componentes mais críticos de uma linha de galvanização por imersão a quente. Ele opera submerso em um pote de zinco fundido a temperaturas de 450 a 480 °C, com constante ataque químico do zinco e cargas mecânicas cíclicas. A escolha incorreta da liga pode reduzir drasticamente a vida útil do rolo — de 90 dias esperados para apenas 20-30, resultando em paradas não programadas e perdas de produção.</p>
+<p>O <strong>Sink Roll</strong> é um componente de linhas de galvanização por imersão a quente. Por trabalhar submerso no pote de zincagem e submetido a esforços mecânicos, sua especificação deve considerar o banho, a temperatura, a geometria do conjunto e o regime de operação.</p>
 
 <h2>Os 3 critérios técnicos que definem a liga</h2>
 
 <p>Antes de especificar um Sink Roll, o engenheiro de manutenção precisa avaliar:</p>
 
 <ul>
-  <li><strong>Temperatura do banho</strong> — zinco puro (450 °C), Zincalume (600 °C) ou alumínio + silício (660 °C).</li>
-  <li><strong>Velocidade da linha</strong> — quanto maior, mais crítica a resistência à abrasão do zinco fundido nas laterais do rolo.</li>
-  <li><strong>Frequência de troca de bobina</strong> — impacta ciclos térmicos e desgaste mecânico das pontas.</li>
+  <li><strong>Composição e temperatura do banho</strong> — dados necessários para selecionar o material adequado.</li>
+  <li><strong>Geometria e velocidade da linha</strong> — condições que influenciam o projeto do rolo e de suas pontas.</li>
+  <li><strong>Histórico de operação</strong> — desgaste, manutenção e falhas anteriores ajudam a orientar a solução.</li>
 </ul>
 
-<h2>Ligas mais utilizadas para Sink Roll</h2>
+<h2>Componentes que formam o conjunto</h2>
 
-<p>Na prática do mercado brasileiro e internacional, três famílias de ligas são utilizadas:</p>
+<p>O catálogo Aceros apresenta Sink Rolls, buchas para a ponta do rolo, braços, Snout e conjuntos montados para zincagem. Cada item é fabricado conforme o desenho e a condição informada pelo cliente.</p>
 
-<h3>Ligas ASTM A297 Gr. HH e HK</h3>
-<p>Ligas fundidas centrifugadas com alto teor de cromo e níquel. Resistência à corrosão pelo zinco fundido é boa, mas em banhos com maior teor de alumínio (Zincalume) a vida útil pode ser reduzida.</p>
-
-<h3>Ligas C.I.S. livres de δ-ferrita</h3>
-<p>Desenvolvidas especificamente para potes de galvanização. A ausência de δ-ferrita elimina pontos de ataque preferencial pelo zinco fundido, aumentando significativamente a vida útil comparada às ligas convencionais.</p>
-
-<h3>Buchas bi-metálicas para as pontas</h3>
-<p>A ponta do Sink Roll (munhão) é a região que mais sofre — combinação de temperatura, carga mecânica e desgaste no acoplamento. Buchas bi-metálicas centrifugadas, com camada externa dura e núcleo mais tenaz, entregam <strong>3 a 7 vezes mais vida útil</strong> que soluções mono-metálicas.</p>
+<h3>Seleção da liga</h3>
+<p>A escolha do material não deve ser feita por uma regra única. A engenharia considera temperatura, composição do banho, esforços, dimensões e histórico da aplicação antes de definir a liga.</p>
 
 <h2>Como a Aceros fabrica</h2>
 
-<p>Todos os Sink Rolls e buchas de sink roll da Aceros são fundidos por <strong>centrifugação</strong> em ligas da norma ASTM A297, seguidos por usinagem CNC de precisão e beneficiamento térmico (solubilização e envelhecimento). Cada peça sai da fábrica com análise química, ensaio de dureza e laudo de ultrassom.</p>
+<p>A Aceros integra <strong>centrifugação</strong>, usinagem e controle técnico. Conforme o projeto, a verificação pode envolver análise química, dureza, ultrassom e inspeção dimensional.</p>
 
 <p>Antes de recomendar a liga, nossa engenharia analisa o histórico da sua linha: composição do banho, velocidade, ciclos térmicos e histórico de falhas anteriores. É esse casamento fino que garante o melhor custo-benefício.</p>
 `,
@@ -101,7 +95,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Como a Aceros trabalha com essas ligas</h2>
 
-<p>A Aceros fabrica peças em <strong>todas as três grades</strong> (HH, HK, HP) por centrifugação, com controle químico realizado durante a fusão pelo Spectromax. Nossa engenharia auxilia na seleção da liga com base em temperatura de trabalho, atmosfera do forno, ciclos térmicos e histórico da aplicação.</p>
+<p>A Aceros avalia o grau da liga conforme a temperatura de trabalho, a atmosfera do forno, os ciclos térmicos e o histórico da aplicação. A especificação final deve constar no desenho e na documentação técnica do fornecimento.</p>
 `,
   },
   {
@@ -116,7 +110,7 @@ export const blogPosts: BlogPost[] = [
     imagemAlt: 'Vazamento de aço em máquina de fundição centrífuga horizontal',
     keywords: ['fundição centrifugada', 'centrifugação', 'força centrífuga', 'ASTM A297'],
     conteudo: `
-<p>A <strong>fundição por centrifugação</strong> é um processo de fabricação em que o aço líquido é vazado em uma matriz de aço baixo carbono (coquilha) pré-aquecida e em rotação. A força centrífuga expulsa o metal contra as paredes da matriz, formando peças tubulares com diâmetros interno e externo perfeitamente concêntricos.</p>
+<p>A <strong>fundição por centrifugação</strong> é um processo de fabricação em que o aço líquido é vazado em uma matriz de aço baixo carbono (coquilha) pré-aquecida e em rotação. A força centrífuga direciona o metal contra as paredes da matriz, formando peças tubulares com controle dos diâmetros interno e externo.</p>
 
 <h2>Como funciona o processo</h2>
 
@@ -126,17 +120,17 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Vantagens da centrifugação</h2>
 
-<h3>1. Microestrutura densa e sem porosidade</h3>
-<p>A força centrífuga elimina bolhas, inclusões não metálicas e vazios internos — problemas comuns em fundições estáticas convencionais. O resultado é uma peça com resistência mecânica superior e integridade estrutural garantida.</p>
+<h3>1. Estrutura densa</h3>
+<p>A força centrífuga favorece a deposição do metal contra a parede interna da coquilha e a formação de uma estrutura densa. A integridade da peça é confirmada pelos controles e ensaios definidos para o projeto.</p>
 
-<h3>2. Concentricidade perfeita</h3>
-<p>Os diâmetros interno e externo são perfeitamente concêntricos, dispensando etapas adicionais de usinagem para correção. Isso reduz custo e prazo de fabricação para peças tubulares.</p>
+<h3>2. Controle de concentricidade</h3>
+<p>O processo é adequado à formação de peças tubulares com diâmetros interno e externo concêntricos. A usinagem posterior permite atingir as dimensões e tolerâncias indicadas no desenho.</p>
 
-<h3>3. Melhor aproveitamento da liga</h3>
-<p>O sistema de vazamento centrifugado produz menos sucata que a fundição estática, permitindo controle mais rigoroso da composição química e melhor rendimento da matéria-prima.</p>
+<h3>3. Parâmetros definidos para cada peça</h3>
+<p>Rotação, diâmetro da coquilha, perímetro e massa do tubo são considerados no processo para controlar a formação da peça.</p>
 
 <h3>4. Ideal para tubos e buchas</h3>
-<p>Toda a geometria naturalmente tubular do processo torna a centrifugação a escolha padrão do mercado para tubos, buchas, anéis e coletores — componentes centrais em siderurgia, petroquímica e tratamento térmico.</p>
+<p>A geometria tubular torna a centrifugação especialmente adequada à fabricação de tubos mecânicos, buchas e outros componentes cilíndricos avaliados pela engenharia.</p>
 
 <h2>Quando ainda usamos fundição estática?</h2>
 
@@ -145,54 +139,52 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'bucha-bimetalica-sink-roll',
-    titulo: 'Bucha bimetálica para Sink Roll: por que dura 3 a 7 vezes mais',
+    titulo: 'Buchas para Sink Roll: critérios de especificação e fabricação',
     descricao:
-      'A engenharia por trás das buchas bimetálicas centrifugadas: camada externa dura e núcleo tenaz explicam vida útil superior nas pontas de Sink Roll.',
+      'Entenda quais dados do conjunto e da linha devem ser avaliados na especificação de buchas para ponta de Sink Roll.',
     categoria: 'Aplicações',
     tempoLeitura: '5 min',
     dataPublicacao: '2026-08-24',
     imagem: '/images/aceros/generated/blog-buchas-centrifugadas-v2.webp',
     imagemAlt: 'Buchas centrifugadas de aço inox usinadas em diferentes diâmetros',
-    keywords: ['bucha bimetálica', 'bucha sink roll', 'ponta sink roll', 'galvanização'],
+    keywords: ['bucha sink roll', 'ponta sink roll', 'galvanização', 'bucha centrifugada'],
     conteudo: `
-<p>Nas linhas de galvanização por imersão a quente, a <strong>ponta do Sink Roll</strong> (munhão) é a região que mais sofre desgaste. Combinação de alta temperatura, ataque químico do zinco fundido e carga mecânica cíclica reduz drasticamente a vida útil de buchas convencionais. A resposta técnica é a <strong>bucha bimetálica centrifugada</strong>.</p>
+<p>Nas linhas de galvanização por imersão a quente, a <strong>bucha da ponta do Sink Roll</strong> faz parte do conjunto que trabalha no pote de zincagem. Material, dimensões, acabamento e tolerâncias precisam ser definidos conforme o projeto e as condições reais de operação.</p>
 
-<h2>O que é uma bucha bimetálica?</h2>
+<h2>O que deve ser informado para especificar a bucha?</h2>
 
-<p>É uma bucha fundida por centrifugação com <strong>duas camadas de ligas diferentes</strong>:</p>
+<p>A análise técnica deve considerar, no mínimo:</p>
 
 <ul>
-  <li><strong>Camada externa</strong> (superfície de contato) — liga de alta dureza, projetada para resistir à abrasão do zinco fundido e ao desgaste mecânico do acoplamento.</li>
-  <li><strong>Camada interna</strong> (núcleo) — liga mais tenaz, absorve impactos e cargas cíclicas sem quebrar.</li>
+  <li><strong>Desenho e dimensões</strong> da ponta, da bucha e dos componentes associados.</li>
+  <li><strong>Condição de operação</strong>, incluindo banho, temperatura, carga e histórico de desgaste.</li>
+  <li><strong>Material utilizado atualmente</strong> e registros de falha ou manutenção, quando disponíveis.</li>
 </ul>
 
-<p>Essa combinação é possível apenas pelo processo de centrifugação, que permite depositar diferentes ligas em sequência dentro da mesma matriz.</p>
+<h2>O que o fornecimento precisa garantir</h2>
 
-<h2>Ganho real de vida útil</h2>
-
-<p>Comparado a buchas mono-metálicas convencionais, a bucha bimetálica entrega:</p>
+<p>O objetivo é entregar uma bucha compatível com o conjunto e com a condição de serviço:</p>
 
 <ul>
-  <li><strong>3 a 7 vezes mais vida útil</strong> em serviço contínuo</li>
-  <li>Redução significativa de paradas para troca</li>
-  <li>Melhor previsibilidade de manutenção</li>
-  <li>Menor custo total ao longo do ciclo de vida do equipamento</li>
+  <li>Dimensões e tolerâncias conforme desenho</li>
+  <li>Material selecionado para a aplicação</li>
+  <li>Usinagem e acabamento adequados à montagem</li>
+  <li>Inspeções e documentação definidas no projeto</li>
 </ul>
 
 <h2>Aplicações típicas</h2>
 
-<p>Buchas bimetálicas são utilizadas principalmente em:</p>
+<p>Buchas para Sink Roll são utilizadas principalmente em:</p>
 
 <ul>
   <li>Ponta de Sink Roll (linhas de galvanização a quente)</li>
-  <li>Ponta de Furnace Roll (rolos de forno de tratamento térmico)</li>
-  <li>Rolos de pote (Pot Rolls) em Zincalume e Alumínio+Si</li>
-  <li>Mancais de rolos de estabilização em linhas contínuas</li>
+  <li>Conjuntos de Sink Roll em linhas de galvanização</li>
+  <li>Aplicações industriais semelhantes, após avaliação da engenharia</li>
 </ul>
 
 <h2>Fabricação Aceros</h2>
 
-<p>Todas as buchas bimetálicas da Aceros são <strong>centrifugadas em duas etapas</strong>, com cada camada tendo composição química controlada pelo Spectromax durante a fusão. Após o vazamento, cada peça passa por usinagem CNC de precisão, ensaio de dureza, análise química completa e inspeção por ultrassom.</p>
+<p>A Aceros fabrica buchas por <strong>centrifugação</strong> e realiza usinagem conforme desenho. O controle técnico pode incluir análise química, dureza, ultrassom e inspeção dimensional, de acordo com os requisitos do fornecimento.</p>
 `,
   },
   {

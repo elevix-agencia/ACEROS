@@ -34,7 +34,7 @@ export default function BuchaInoxPage() {
         "name": "Quais as vantagens das buchas para Sink Roll da Aceros?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Fabricadas por centrifugação em ligas ASTM A297, oferecem altíssima resistência à oxidação térmica e corrosão pelo zinco fundido nas linhas de galvanização, garantindo menor desgaste na ponta dos rolos e reduzindo paradas não programadas."
+          "text": "Fabricadas por centrifugação e usinadas conforme desenho, são destinadas às pontas de Sink Rolls e a outras aplicações industriais definidas conforme a condição de operação."
         }
       },
       {
@@ -58,7 +58,7 @@ export default function BuchaInoxPage() {
         "name": "Quais ligas de aço inox a Aceros utiliza na fabricação?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Trabalhamos com as principais ligas do mercado, incluindo 304, 304L, 316, 316L, 310 e 420, além de ligas especiais fundidas sob a norma ASTM A297 para alta performance."
+          "text": "A liga é selecionada pela engenharia conforme a temperatura, a corrosão, a abrasão e os requisitos dimensionais de cada projeto, incluindo materiais conforme ASTM A297 quando aplicável."
         }
       },
       {
@@ -76,7 +76,7 @@ export default function BuchaInoxPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Bucha de Aço Inox Centrifugada Sob Medida",
-    "image": "https://aceros.com.br/images/imgur/OBD0nJ0.png",
+    "image": "https://aceros.com.br/images/aceros/buchas/bucha-aco-inox-aceros-06.jpg",
     "description": "Buchas de aço inox usinadas sob medida (ASTM A297), especialistas em bucha para ponta de Sink Roll e Furnace Roll. Alta resistência a calor, abrasão e corrosão em ambientes de galvanização e tratamento térmico.",
     "brand": { "@type": "Brand", "name": "Aceros" },
     "manufacturer": {
@@ -86,6 +86,16 @@ export default function BuchaInoxPage() {
       "parentOrganization": { "@type": "Organization", "name": "Metalúrgica Daniela" }
     },
     "category": "Buchas industriais em aço inoxidável"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://aceros.com.br" },
+      { "@type": "ListItem", "position": 2, "name": "Produtos", "item": "https://aceros.com.br/produtos" },
+      { "@type": "ListItem", "position": 3, "name": "Buchas de aço inox", "item": "https://aceros.com.br/bucha-de-aco-inox" }
+    ]
   };
 
   return (
@@ -98,6 +108,7 @@ export default function BuchaInoxPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <BuchaInoxClient />
     </>
   );

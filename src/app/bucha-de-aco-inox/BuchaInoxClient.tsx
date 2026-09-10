@@ -43,6 +43,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { saveContactMessage } from '@/lib/contact-actions';
+import { RelatedSolutions } from '@/components/landing-pages/related-solutions';
 
 export function BuchaInoxClient() {
   const { toast } = useToast();
@@ -172,7 +173,7 @@ export function BuchaInoxClient() {
               A Aceros é a divisão de aços inoxidáveis do grupo <strong>Metalúrgica Daniela</strong>. Não comercializamos produtos commodities ou tubos comuns de prateleira: nossa fábrica produz via <strong>processo de centrifugação</strong> peças de alta liga resistentes a <strong>calor, abrasão e oxidação severa (norma ASTM A297)</strong>, usinadas sob medida para o projeto do cliente.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Nossa engenharia é especialista no fornecimento de <strong>buchas de alta precisão para ponta de Sink Roll</strong> (rolos para potes de zinco em linhas de galvanização) e <strong>Rolos de Forno (Furnace Rolls para tratamento térmico)</strong>, garantindo tolerância milimétrica e vida útil prolongada sob as condições mais severas de trabalho.
+              Nossa engenharia fornece <strong>buchas para ponta de Sink Roll</strong> (rolos para potes de zinco em linhas de galvanização) e componentes para <strong>Rolos de Forno (Furnace Rolls para tratamento térmico)</strong>, usinados conforme o desenho e as condições de trabalho informadas pelo cliente.
             </p>
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
@@ -206,7 +207,7 @@ export function BuchaInoxClient() {
                 <tbody className="divide-y divide-slate-100">
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Ligas Disponíveis</td>
-                    <td className="p-6">Aço Inox 304, 304L, 316, 316L, 310, 420 e Ligas conforme ASTM A297</td>
+                    <td className="p-6">Ligas selecionadas conforme a aplicação, incluindo materiais conforme ASTM A297 quando aplicável</td>
                   </tr>
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Processo Produtivo</td>
@@ -243,7 +244,7 @@ export function BuchaInoxClient() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 uppercase">Diferenciais Aceros</h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">Por que grandes indústrias confiam na Aceros para o fornecimento de buchas especiais.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { icon: Award, title: 'Peça de Alta Liga (Não Commodity)', text: 'Fabricação própria por centrifugação + Engenharia de Materiais + Usinagem CNC sob medida.' },
               { icon: Settings, title: 'Fabricação sob medida', text: 'Produção customizada para atender requisitos exatos de montagem.' },
@@ -255,14 +256,14 @@ export function BuchaInoxClient() {
               { icon: Globe, title: 'Atendimento para todo o Brasil', text: 'Logística ágil para atender indústrias em qualquer região.' },
               { icon: HardHat, title: 'Fabricação para aplicações severas', text: 'Especialistas em componentes que operam no limite térmico e químico.' }
             ].map((item, i) => (
-              <Card key={i} className="hover:shadow-lg transition-shadow border-slate-100">
+              <Card key={i} className="flex h-full flex-col border-slate-100 transition-shadow hover:shadow-lg">
                 <CardHeader className="flex flex-col items-center text-center">
                   <div className="bg-primary/10 p-4 rounded-xl text-primary mb-4">
                     <item.icon className="h-8 w-8" />
                   </div>
-                  <CardTitle className="text-xl">{item.title}</CardTitle>
+                  <CardTitle className="flex min-h-[3.5rem] items-center justify-center text-xl leading-tight">{item.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center text-muted-foreground">
+                <CardContent className="flex-1 text-center text-muted-foreground">
                   {item.text}
                 </CardContent>
               </Card>
@@ -278,7 +279,7 @@ export function BuchaInoxClient() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold uppercase">Principais Aplicações</h2>
             <p className="text-slate-400 mt-4">Nossas buchas atendem os setores mais exigentes da cadeia produtiva.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 items-stretch gap-8 md:grid-cols-3 lg:grid-cols-5">
             {[
               { icon: HardHat, label: 'Mineração' },
               { icon: Factory, label: 'Siderurgia' },
@@ -291,7 +292,7 @@ export function BuchaInoxClient() {
               { icon: Droplets, label: 'Petroquímica' },
               { icon: Zap, label: 'Energia' }
             ].map((app, i) => (
-              <div key={i} className="flex flex-col items-center gap-4 p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+              <div key={i} className="flex h-full min-h-[150px] flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-6 transition-colors hover:bg-white/10">
                 <app.icon className="h-10 w-10 text-accent" />
                 <span className="font-semibold text-center">{app.label}</span>
               </div>
@@ -477,6 +478,8 @@ export function BuchaInoxClient() {
         </div>
       </section>
 
+      <RelatedSolutions currentPath="/bucha-de-aco-inox" />
+
       {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -487,7 +490,7 @@ export function BuchaInoxClient() {
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left font-bold text-lg">Quais as vantagens das buchas para Sink Roll da Aceros?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Fabricadas por centrifugação em ligas ASTM A297, oferecem altíssima resistência à oxidação térmica e corrosão pelo zinco fundido nas linhas de galvanização, garantindo menor desgaste na ponta dos rolos e reduzindo paradas não programadas.
+                Fabricadas por centrifugação e usinadas conforme desenho, são destinadas às pontas de Sink Rolls e a outras aplicações industriais definidas conforme a condição de operação.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
@@ -505,7 +508,7 @@ export function BuchaInoxClient() {
             <AccordionItem value="item-4">
               <AccordionTrigger className="text-left font-bold text-lg">Quais ligas de aço inox a Aceros utiliza na fabricação?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Trabalhamos com as principais ligas do mercado, incluindo 304, 304L, 316, 316L, 310 e 420, além de ligas especiais fundidas sob a norma ASTM A297 para alta performance.
+                A liga é selecionada pela engenharia conforme a temperatura, corrosão, abrasão e requisitos dimensionais do projeto, incluindo materiais conforme ASTM A297 quando aplicável.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">

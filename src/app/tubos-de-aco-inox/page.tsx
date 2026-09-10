@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tubos de Aço Inox Sob Medida — Aceros',
     description:
-      'Tubos centrifugados ASTM A297 em ligas 304, 316, 310 e mais. Fabricação sob medida para siderurgia, petroquímica e tratamento térmico.',
+      'Tubos centrifugados em ligas especiais, fabricados sob medida conforme desenho e condição de operação.',
     url: '/tubos-de-aco-inox',
     type: 'website',
   },
@@ -34,7 +34,7 @@ export default function TubosInoxPage() {
         "name": "Quais as vantagens dos tubos centrifugados da Aceros?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Diferente de tubos comuns de prateleira, nossos tubos centrifugados possuem densidade superior, ausência total de porosidade e são fabricados em ligas especiais ASTM A297 para suportar calor e abrasão extrema."
+          "text": "Diferente de tubos comuns de prateleira, os tubos centrifugados são fabricados sob medida e o processo favorece uma estrutura densa, adequada a aplicações industriais severas."
         }
       },
       {
@@ -58,7 +58,7 @@ export default function TubosInoxPage() {
         "name": "Quais as dimensões e ligas disponíveis?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Trabalhamos com ligas 304, 304L, 316, 316L, 310 e 420. As dimensões (diâmetro, espessura e comprimento) são fabricadas 100% sob medida para seu projeto."
+          "text": "A liga é selecionada conforme a temperatura, a abrasão, a corrosão e os requisitos do projeto. Diâmetro, espessura e comprimento são definidos conforme desenho técnico."
         }
       },
       {
@@ -76,8 +76,8 @@ export default function TubosInoxPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Tubo de Aço Inox Centrifugado Sob Medida",
-    "image": "https://aceros.com.br/images/imgur/OBD0nJ0.png",
-    "description": "Tubos de aço inox fabricados por centrifugação (ASTM A297), sob medida para aplicações industriais. Ligas 304, 304L, 316, 316L, 310, 420 e superligas. Resistência a calor, abrasão e oxidação.",
+    "image": "https://aceros.com.br/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg",
+    "description": "Tubos de aço inox fabricados por centrifugação, sob medida para aplicações industriais e em ligas selecionadas conforme a condição de operação.",
     "brand": { "@type": "Brand", "name": "Aceros" },
     "manufacturer": {
       "@type": "Organization",
@@ -86,6 +86,16 @@ export default function TubosInoxPage() {
       "parentOrganization": { "@type": "Organization", "name": "Metalúrgica Daniela" }
     },
     "category": "Tubos industriais em aço inoxidável"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://aceros.com.br" },
+      { "@type": "ListItem", "position": 2, "name": "Produtos", "item": "https://aceros.com.br/produtos" },
+      { "@type": "ListItem", "position": 3, "name": "Tubos de aço inox", "item": "https://aceros.com.br/tubos-de-aco-inox" }
+    ]
   };
 
   return (
@@ -98,6 +108,7 @@ export default function TubosInoxPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <TubosInoxClient />
     </>
   );

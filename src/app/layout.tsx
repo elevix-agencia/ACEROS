@@ -77,6 +77,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
   name: 'Aceros Centrifugados LTDA',
   legalName: 'Aceros Centrifugados LTDA',
   url: siteUrl,
@@ -104,6 +105,16 @@ const organizationSchema = {
   sameAs: [],
 };
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: 'Aceros — Aços Centrifugados',
+  publisher: { '@id': `${siteUrl}/#organization` },
+  inLanguage: 'pt-BR',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -127,6 +138,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>

@@ -10,8 +10,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { saveContactMessage } from '@/lib/contact-actions';
 import { useToast } from '@/hooks/use-toast';
+import { RelatedSolutions } from './related-solutions';
 
 export type CampaignPageData = {
+  path: string;
   source: string;
   eyebrow: string;
   title: string;
@@ -135,11 +137,11 @@ export function IndustrialCampaignPage({ data }: { data: CampaignPageData }) {
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#ef7b21]">Aplicações industriais</p>
             <h2 className="font-headline text-3xl font-bold sm:text-4xl">Onde este produto trabalha</h2>
           </div>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
             {data.applications.map((application, index) => (
-              <article key={application.title} className="border-t-4 border-[#ef7b21] bg-white p-7 shadow-sm">
+              <article key={application.title} className="flex h-full flex-col border-t-4 border-[#ef7b21] bg-white p-7 shadow-sm">
                 <span className="text-xs font-bold tracking-widest text-[#ef7b21]">0{index + 1}</span>
-                <h3 className="mt-3 font-headline text-xl font-bold">{application.title}</h3>
+                <h3 className="mt-3 min-h-[3.5rem] font-headline text-xl font-bold">{application.title}</h3>
                 <p className="mt-3 leading-7 text-slate-600">{application.description}</p>
               </article>
             ))}
@@ -192,6 +194,8 @@ export function IndustrialCampaignPage({ data }: { data: CampaignPageData }) {
           })}
         </div>
       </section>
+
+      <RelatedSolutions currentPath={data.path} />
 
       <section className="py-20 sm:py-28">
         <div className="mx-auto grid max-w-[1280px] gap-14 px-5 lg:grid-cols-2 lg:px-10">

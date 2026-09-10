@@ -51,6 +51,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { saveContactMessage } from '@/lib/contact-actions';
+import { RelatedSolutions } from '@/components/landing-pages/related-solutions';
 
 export function TubosInoxClient() {
   const { toast } = useToast();
@@ -191,7 +192,7 @@ export function TubosInoxClient() {
               A Aceros é a divisão de aços inoxidáveis do grupo <strong>Metalúrgica Daniela</strong>. Não comercializamos tubos comuns de prateleira ou commodities: nossa fábrica produz via <strong>processo de centrifugação sob medida</strong> em ligas especiais resistentes a calor, abrasão e oxidação severa (<strong>norma ASTM A297</strong>).
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Nossos tubos centrifugados oferecem uma microestrutura homogênea e livre de impurezas, garantindo maior durabilidade mecânica em comparação com processos convencionais. Cada projeto é acompanhado por nossos engenheiros para assegurar que a liga e as dimensões atendam perfeitamente à sua planta industrial.
+              O processo de centrifugação favorece uma estrutura densa e o controle da geometria tubular. Cada projeto é avaliado pela engenharia para que a liga, as dimensões e o acabamento correspondam às condições de operação informadas pelo cliente.
             </p>
           </motion.div>
           <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
@@ -225,7 +226,7 @@ export function TubosInoxClient() {
                 <tbody className="divide-y divide-slate-100">
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Ligas Disponíveis</td>
-                    <td className="p-6">Aço Inox 304, 304L, 316, 316L, 310, 420 e Superligas ASTM A297</td>
+                    <td className="p-6">Ligas especiais selecionadas conforme a aplicação, incluindo materiais conforme ASTM A297 quando aplicável</td>
                   </tr>
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Processo Produtivo</td>
@@ -261,26 +262,26 @@ export function TubosInoxClient() {
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 uppercase">Diferenciais Aceros em Tubos</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { icon: Settings, title: 'Fabricação sob medida', text: 'Geometrias e dimensões exatas para sua montagem industrial.' },
               { icon: ShieldCheck, title: 'Ligas de alta performance', text: 'Resistência superior a ambientes agressivos e corrosivos.' },
               { icon: Zap, title: 'Resistência Térmica', text: 'Tubos projetados para operar em fornos e zonas de alto calor.' },
-              { icon: Layers, title: 'Processo de Centrifugação', text: 'Eliminação de porosidade e maior densidade estrutural.' },
+              { icon: Layers, title: 'Processo de Centrifugação', text: 'Processo que favorece maior densidade estrutural e concentricidade da peça tubular.' },
               { icon: FileText, title: 'Certificação de Qualidade', text: 'Atendimento às normas internacionais mais rigorosas.' },
               { icon: Award, title: 'Durabilidade Elevada', text: 'Redução de paradas para manutenção e troca de peças.' },
               { icon: PenTool, title: 'Usinagem de Precisão', text: 'Acabamento final pronto para instalação imediata.' },
               { icon: Globe, title: 'Atendimento Nacional', text: 'Entregamos em todo o Brasil e no exterior com segurança.' },
               { icon: Users, title: 'Engenharia de Materiais', text: 'Suporte técnico na escolha da liga ideal para seu fluido.' }
             ].map((item, i) => (
-              <Card key={i} className="hover:shadow-lg transition-shadow border-slate-100">
+              <Card key={i} className="flex h-full flex-col border-slate-100 transition-shadow hover:shadow-lg">
                 <CardHeader className="flex flex-col items-center text-center">
                   <div className="bg-primary/10 p-4 rounded-xl text-primary mb-4">
                     <item.icon className="h-8 w-8" />
                   </div>
-                  <CardTitle className="text-xl">{item.title}</CardTitle>
+                  <CardTitle className="flex min-h-[3.5rem] items-center justify-center text-xl leading-tight">{item.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center text-muted-foreground">
+                <CardContent className="flex-1 text-center text-muted-foreground">
                   {item.text}
                 </CardContent>
               </Card>
@@ -296,7 +297,7 @@ export function TubosInoxClient() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold uppercase">Setores Atendidos</h2>
             <p className="text-slate-400 mt-4">Nossos tubos operam nos ambientes industriais mais desafiadores.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 items-stretch gap-8 md:grid-cols-3 lg:grid-cols-5">
             {[
               { icon: Factory, label: 'Siderurgia' },
               { icon: HardHat, label: 'Mineração' },
@@ -309,7 +310,7 @@ export function TubosInoxClient() {
               { icon: Zap, label: 'Energia' },
               { icon: Settings, label: 'Metalurgia' }
             ].map((app, i) => (
-              <div key={i} className="flex flex-col items-center gap-4 p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+              <div key={i} className="flex h-full min-h-[150px] flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-6 transition-colors hover:bg-white/10">
                 <app.icon className="h-10 w-10 text-accent" />
                 <span className="font-semibold text-center">{app.label}</span>
               </div>
@@ -369,7 +370,7 @@ export function TubosInoxClient() {
                 { step: '01', title: 'Recebimento do Projeto', desc: 'Análise dos requisitos dimensionais e operacionais.' },
                 { step: '02', title: 'Análise Técnica', desc: 'Engenharia valida a viabilidade de fabricação no Grupo Daniela.' },
                 { step: '03', title: 'Definição da Liga', desc: 'Escolha do aço inox ideal (ASTM A297) para o regime de trabalho.' },
-                { step: '04', title: 'Processo de Fabricação', desc: 'Centrifugação da peça bruta para eliminação de porosidade.' },
+                { step: '04', title: 'Processo de Fabricação', desc: 'Centrifugação da peça bruta com parâmetros definidos para seu diâmetro e massa.' },
                 { step: '05', title: 'Controle Dimensional', desc: 'Medição precisa para garantir as tolerâncias do projeto.' },
                 { step: '06', title: 'Inspeção de Qualidade', desc: 'Testes metalúrgicos e de integridade estrutural rigorosos.' },
                 { step: '07', title: 'Entrega', desc: 'Expedição protegida para indústrias em todo o Brasil.' }
@@ -464,6 +465,8 @@ export function TubosInoxClient() {
         </div>
       </section>
 
+      <RelatedSolutions currentPath="/tubos-de-aco-inox" />
+
       {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -474,7 +477,7 @@ export function TubosInoxClient() {
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left font-bold text-lg">Quais as vantagens dos tubos centrifugados da Aceros?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Diferente de tubos comuns de prateleira, nossos tubos centrifugados possuem densidade superior, ausência total de porosidade e são fabricados em ligas especiais ASTM A297 para suportar calor e abrasão extrema.
+                Diferente de tubos comuns de prateleira, nossos tubos centrifugados são fabricados sob medida. O processo favorece uma estrutura densa e permite definir dimensões, liga e acabamento conforme a aplicação industrial.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
@@ -492,7 +495,7 @@ export function TubosInoxClient() {
             <AccordionItem value="item-4">
               <AccordionTrigger className="text-left font-bold text-lg">Quais as dimensões e ligas disponíveis?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Trabalhamos com ligas 304, 304L, 316, 316L, 310 e 420. As dimensões (diâmetro, espessura e comprimento) são fabricadas 100% sob medida para seu projeto.
+                A liga é selecionada conforme a temperatura, abrasão, corrosão e demais condições de serviço. Diâmetro, espessura e comprimento são definidos conforme o desenho técnico do projeto.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">

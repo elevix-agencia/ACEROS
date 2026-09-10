@@ -1,18 +1,20 @@
 import type { Metadata } from 'next';
 import { IndustrialCampaignPage, type CampaignPageData } from '@/components/landing-pages/industrial-campaign-page';
+import { buildCampaignSchema } from '@/lib/campaign-schema';
 
 export const metadata: Metadata = {
   title: 'Fundição Centrifugada Sob Medida | Aços Inoxidáveis',
-  description: 'Fundição centrifugada de tubos, buchas, anéis e componentes em aços inoxidáveis e superligas ASTM A297. Usinagem e fabricação sob desenho.',
+  description: 'Fundição centrifugada de tubos mecânicos, buchas e componentes em aços inoxidáveis e ligas especiais. Usinagem e fabricação sob desenho.',
   alternates: { canonical: '/fundicao-centrifugada' },
-  openGraph: { title: 'Fundição Centrifugada Sob Medida — Aceros', description: 'Peças centrifugadas em aços inoxidáveis e superligas, do bruto ao acabamento final.', url: '/fundicao-centrifugada' },
+  openGraph: { title: 'Fundição Centrifugada Sob Medida — Aceros', description: 'Peças centrifugadas em aços inoxidáveis e ligas especiais, do bruto ao acabamento final.', url: '/fundicao-centrifugada', images: [{ url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg', alt: 'Tubo bruto produzido por fundição centrifugada' }] },
 };
 
 const data: CampaignPageData = {
+  path: '/fundicao-centrifugada',
   source: 'lp-fundicao-centrifugada',
   eyebrow: 'Centrifugação · Usinagem · Engenharia',
   title: 'Fundição centrifugada de aços inoxidáveis sob medida',
-  heroDescription: 'Tubos, buchas, anéis e blanks centrifugados em ligas especiais, fabricados conforme desenho técnico para aplicações de calor, abrasão, corrosão e esforço mecânico.',
+  heroDescription: 'Tubos mecânicos, buchas e componentes centrifugados em ligas especiais, fabricados conforme desenho técnico para aplicações de calor, abrasão e corrosão.',
   heroImage: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg',
   heroAlt: 'Tubos de aço inox bruto produzidos por fundição centrifugada pela Aceros',
   overviewTitle: 'Da liga líquida à peça usinada',
@@ -25,9 +27,9 @@ const data: CampaignPageData = {
   benefits: ['Peças cilíndricas sob medida', 'Bruto, pré-usinado ou acabado', 'Ligas ASTM A297 e especiais', 'Controle químico e dimensional'],
   applications: [
     { title: 'Tubos centrifugados', description: 'Tubos de parede e dimensões definidas conforme o projeto industrial.' },
-    { title: 'Buchas e anéis', description: 'Componentes usinados para calor, corrosão, atrito e desgaste severo.' },
-    { title: 'Rolos industriais', description: 'Blanks e conjuntos para fornos, siderurgia, galvanização e mineração.' },
-    { title: 'Refinaria e petroquímica', description: 'Tubos e componentes para operação contínua em alta temperatura.' },
+    { title: 'Buchas centrifugadas', description: 'Buchas produzidas conforme desenho e posteriormente usinadas para a aplicação industrial.' },
+    { title: 'Rolos industriais', description: 'Componentes centrifugados destinados a rolos para fornos e linhas de galvanização.' },
+    { title: 'Sink rolls', description: 'Rolos de imersão e buchas de ponta para conjuntos empregados no pote de zincagem.' },
     { title: 'Tratamento térmico', description: 'Componentes internos para fornos e dispositivos de processo.' },
     { title: 'Projeto especial', description: 'Desenvolvimento a partir de desenho, amostra ou condição de operação.' },
   ],
@@ -43,7 +45,7 @@ const data: CampaignPageData = {
     { src: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg', alt: 'Tubo centrifugado polido e acabado' },
   ],
   faq: [
-    { question: 'Quais peças podem ser produzidas por centrifugação?', answer: 'Principalmente geometrias cilíndricas, como tubos, buchas, anéis, camisas e blanks para rolos, sempre conforme avaliação técnica.' },
+    { question: 'Quais peças podem ser produzidas por centrifugação?', answer: 'O processo é empregado principalmente na fabricação de tubos mecânicos, buchas e outros componentes cilíndricos, sempre conforme avaliação técnica.' },
     { question: 'A peça pode ser entregue usinada?', answer: 'Sim. O fornecimento pode ser bruto de fundição, pré-usinado ou completamente acabado conforme desenho.' },
     { question: 'Quais informações são necessárias para cotar?', answer: 'Desenho, dimensões, liga desejada, quantidade e condição de trabalho. Quando necessário, nossa engenharia apoia a definição do material.' },
   ],
@@ -52,5 +54,6 @@ const data: CampaignPageData = {
 };
 
 export default function FundicaoCentrifugadaPage() {
-  return <IndustrialCampaignPage data={data} />;
+  const schema = buildCampaignSchema({ path: data.path, name: 'Fundição centrifugada de aços inoxidáveis', description: data.heroDescription, image: data.heroImage, applications: data.applications, faq: data.faq });
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /><IndustrialCampaignPage data={data} /></>;
 }

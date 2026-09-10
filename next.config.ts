@@ -2,6 +2,7 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   /* config options here */
   // This is required to allow the Next.js dev server to accept requests from the
   // Firebase Studio preview URL.
