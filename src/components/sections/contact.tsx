@@ -117,11 +117,11 @@ export function Contact() {
         <div className="bg-[#07121e] py-16 text-white sm:py-20">
           <div className="mx-auto max-w-[1280px] px-5 text-center lg:px-10">
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-[#ef7b21]">
-              Fale com a nossa equipe
+              {t.contact.eyebrow}
             </p>
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">
               {t.contact.title}
-            </h2>
+            </h1>
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300">
               {t.contact.subtitle}
             </p>
@@ -245,7 +245,7 @@ export function Contact() {
                     <FormField control={form.control} name="privacy" render={({ field }) => (
                       <FormItem className="flex items-start gap-3 space-y-0 border border-slate-200 bg-slate-50 p-4">
                         <FormControl>
-                          <Checkbox checked={field.value} onCheckedChange={field.onChange} aria-required="true" className="mt-1 border-slate-500 data-[state=checked]:border-[#ef7b21] data-[state=checked]:bg-[#ef7b21]" />
+                          <Checkbox required checked={field.value} onCheckedChange={field.onChange} aria-required="true" className="mt-1 border-slate-500 data-[state=checked]:border-[#ef7b21] data-[state=checked]:bg-[#ef7b21]" />
                         </FormControl>
                         <div className="space-y-1 leading-none">
                           <FormLabel className="text-sm font-normal leading-6 text-slate-700">
