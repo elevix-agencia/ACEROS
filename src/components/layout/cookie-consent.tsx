@@ -169,12 +169,12 @@ export function CookieConsent() {
           aria-label={text.title}
           className="fixed inset-x-0 bottom-0 z-[70] border-t-4 border-[#ef7b21] bg-[#07121e] text-white shadow-[0_-18px_50px_rgba(7,18,30,.28)]"
         >
-          <div className="mx-auto flex max-w-[1280px] flex-col gap-5 px-5 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-            <div className="flex max-w-3xl items-start gap-4">
-              <Cookie className="mt-1 h-6 w-6 shrink-0 text-[#ef7b21]" aria-hidden="true" />
+          <div className="mx-auto flex max-w-[1280px] flex-col gap-3 px-4 py-3 sm:gap-5 sm:px-5 sm:py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+            <div className="flex max-w-3xl items-start gap-3 sm:gap-4">
+              <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-[#ef7b21] sm:mt-1 sm:h-6 sm:w-6" aria-hidden="true" />
               <div>
-                <h2 className="font-headline text-xl font-bold">{text.title}</h2>
-                <p className="mt-2 text-sm leading-6 text-slate-300">
+                <h2 className="font-headline text-base font-bold sm:text-xl">{text.title}</h2>
+                <p className="mt-1 text-xs leading-5 text-slate-300 sm:mt-2 sm:text-sm sm:leading-6">
                   {text.description}{' '}
                   <Link className="font-semibold text-white underline decoration-[#ef7b21] underline-offset-4" href="/politica-de-privacidade">
                     {text.policy}
@@ -182,14 +182,14 @@ export function CookieConsent() {
                 </p>
               </div>
             </div>
-            <div className="grid shrink-0 gap-2 sm:grid-cols-3 lg:w-auto">
-              <Button type="button" variant="outline" onClick={() => saveConsent(false)} className="rounded-none border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white">
+            <div className="grid shrink-0 grid-cols-2 gap-2 sm:grid-cols-3 lg:w-auto">
+              <Button type="button" variant="outline" onClick={() => saveConsent(false)} className="h-9 rounded-none border-white/40 bg-transparent px-3 text-xs text-white hover:bg-white/10 hover:text-white sm:h-10 sm:text-sm">
                 {text.reject}
               </Button>
-              <Button type="button" variant="outline" onClick={() => setPreferencesOpen(true)} className="rounded-none border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white">
+              <Button type="button" variant="outline" onClick={() => setPreferencesOpen(true)} className="h-9 rounded-none border-white/40 bg-transparent px-3 text-xs text-white hover:bg-white/10 hover:text-white sm:h-10 sm:text-sm">
                 {text.preferences}
               </Button>
-              <Button type="button" onClick={() => saveConsent(true)} className="rounded-none bg-[#ef7b21] font-bold text-white hover:bg-[#cf5f11]">
+              <Button type="button" onClick={() => saveConsent(true)} className="col-span-2 h-9 rounded-none bg-[#ef7b21] px-3 text-xs font-bold text-white hover:bg-[#cf5f11] sm:col-span-1 sm:h-10 sm:text-sm">
                 {text.accept}
               </Button>
             </div>
