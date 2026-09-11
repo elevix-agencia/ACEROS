@@ -162,7 +162,7 @@
                               },
                               {
                                   "id":  "product-gallery-1",
-                                  "description":  "Componente industrial 1",
+                                  "description":  "Componente rotativo industrial em inspeção e acabamento",
                                   "imageUrl":  "/images/imgur/VZKusgh.jpeg",
                                   "imageHint":  "industrial component",
                                   "width":  1200,
@@ -170,7 +170,7 @@
                               },
                               {
                                   "id":  "product-gallery-2",
-                                  "description":  "Componente industrial 2",
+                                  "description":  "Conjunto de componentes tubulares para aplicação industrial",
                                   "imageUrl":  "/images/imgur/15Ik7R7.jpeg",
                                   "imageHint":  "industrial component",
                                   "width":  591,
@@ -178,7 +178,7 @@
                               },
                               {
                                   "id":  "product-gallery-3",
-                                  "description":  "Componente industrial 3",
+                                  "description":  "Conjunto de rolos industriais fabricados sob medida",
                                   "imageUrl":  "/images/imgur/udS8fyK.jpeg",
                                   "imageHint":  "industrial component",
                                   "width":  1280,
@@ -186,7 +186,7 @@
                               },
                               {
                                   "id":  "product-gallery-4",
-                                  "description":  "Componente industrial 4",
+                                  "description":  "Rolos industriais preparados para montagem",
                                   "imageUrl":  "/images/imgur/pp8vZuE.jpeg",
                                   "imageHint":  "industrial component",
                                   "width":  899,
@@ -194,7 +194,7 @@
                               },
                               {
                                   "id":  "product-gallery-5",
-                                  "description":  "Componente industrial 5",
+                                  "description":  "Grelha metálica fundida para operação industrial",
                                   "imageUrl":  "/images/imgur/NxfaUyt.jpeg",
                                   "imageHint":  "industrial component",
                                   "width":  1600,
@@ -202,7 +202,7 @@
                               },
                               {
                                   "id":  "product-gallery-6",
-                                  "description":  "Componente industrial 6",
+                                  "description":  "Rotor industrial em processo de usinagem",
                                   "imageUrl":  "/images/imgur/UKcG4wP.jpeg",
                                   "imageHint":  "industrial component",
                                   "width":  720,
@@ -210,7 +210,7 @@
                               },
                               {
                                   "id":  "product-gallery-7",
-                                  "description":  "Componente industrial 7",
+                                  "description":  "Componentes industriais fabricados e organizados para expedição",
                                   "imageUrl":  "/images/imgur/SFJgJ8n.png",
                                   "imageHint":  "industrial component",
                                   "width":  590,
@@ -218,7 +218,7 @@
                               },
                               {
                                   "id":  "product-gallery-8",
-                                  "description":  "Componente industrial 8",
+                                  "description":  "Peças usinadas com detalhes de acabamento e inspeção",
                                   "imageUrl":  "/images/imgur/DLNl2Zu.png",
                                   "imageHint":  "industrial component",
                                   "width":  606,
@@ -226,7 +226,7 @@
                               },
                               {
                                   "id":  "product-gallery-9",
-                                  "description":  "Componente industrial 9",
+                                  "description":  "Rolos e componentes cilíndricos usinados",
                                   "imageUrl":  "/images/imgur/0NIZVe4.png",
                                   "imageHint":  "industrial component",
                                   "width":  693,
@@ -234,7 +234,7 @@
                               },
                               {
                                   "id":  "product-gallery-10",
-                                  "description":  "Componente industrial 10",
+                                  "description":  "Análise química por espectrometria no controle do material",
                                   "imageUrl":  "/images/imgur/r41I9v5.jpeg",
                                   "imageHint":  "industrial component",
                                   "width":  1280,
@@ -242,7 +242,7 @@
                               },
                               {
                                   "id":  "product-gallery-11",
-                                  "description":  "Componente industrial 11",
+                                  "description":  "Conjunto de rolo industrial montado para inspeção",
                                   "imageUrl":  "/images/imgur/t2wj814.jpg",
                                   "imageHint":  "industrial component",
                                   "width":  1600,
@@ -960,7 +960,7 @@
                               },
                               {
                                   "id":  "history-1",
-                                  "description":  "Peça usinada 1",
+                                  "description":  "Rolos, conjuntos radiantes e serpentinas para aplicações térmicas e siderúrgicas",
                                   "imageUrl":  "/images/imgur/history-brand-v2-1.png",
                                   "imageHint":  "machined part",
                                   "width":  963,
@@ -968,7 +968,7 @@
                               },
                               {
                                   "id":  "history-2",
-                                  "description":  "Peça usinada 2",
+                                  "description":  "Inspeção de perfil com equipamento Rollprof em rolos industriais",
                                   "imageUrl":  "/images/imgur/history-brand-v2-2.png",
                                   "imageHint":  "machined part",
                                   "width":  957,
@@ -976,7 +976,7 @@
                               },
                               {
                                   "id":  "history-4",
-                                  "description":  "Peça usinada 4",
+                                  "description":  "Rolos, conjuntos radiantes e processos de soldagem aplicados à fabricação",
                                   "imageUrl":  "/images/imgur/history-brand-v2-3.png",
                                   "imageHint":  "machined part",
                                   "width":  958,
@@ -984,7 +984,7 @@
                               },
                               {
                                   "id":  "history-5",
-                                  "description":  "Peça usinada 5",
+                                  "description":  "Vigas transportadoras e rolos para lingotamento contínuo",
                                   "imageUrl":  "/images/imgur/history-brand-v2-4.png",
                                   "imageHint":  "machined part",
                                   "width":  963,
@@ -992,7 +992,7 @@
                               },
                               {
                                   "id":  "history-6",
-                                  "description":  "Peça usinada 6",
+                                  "description":  "Rolos e componentes cilíndricos em diferentes etapas de fabricação",
                                   "imageUrl":  "/images/imgur/history-brand-v2-5.png",
                                   "imageHint":  "machined part",
                                   "width":  963,
@@ -1000,7 +1000,7 @@
                               },
                               {
                                   "id":  "history-7",
-                                  "description":  "Peça usinada 7",
+                                  "description":  "Rolos industriais preparados para aplicações em fornos",
                                   "imageUrl":  "/images/imgur/history-brand-v2-6.png",
                                   "imageHint":  "machined part",
                                   "width":  960,
@@ -1008,7 +1008,7 @@
                               },
                               {
                                   "id":  "history-8",
-                                  "description":  "Peça usinada 8",
+                                  "description":  "Sink rolls, braços e componentes para linhas de galvanização",
                                   "imageUrl":  "/images/imgur/history-brand-v2-7.png",
                                   "imageHint":  "machined part",
                                   "width":  959,
@@ -1016,7 +1016,7 @@
                               },
                               {
                                   "id":  "history-9",
-                                  "description":  "Peça usinada 9",
+                                  "description":  "Processo de centrifugação de tubos em liga ASTM A297",
                                   "imageUrl":  "/images/imgur/history-brand-v2-8.png",
                                   "imageHint":  "machined part",
                                   "width":  957,
@@ -1024,7 +1024,7 @@
                               },
                               {
                                   "id":  "history-10",
-                                  "description":  "Peça usinada 10",
+                                  "description":  "Tubo centrifugado em etapas de fusão, usinagem e polimento",
                                   "imageUrl":  "/images/imgur/history-brand-v2-9.png",
                                   "imageHint":  "machined part",
                                   "width":  961,

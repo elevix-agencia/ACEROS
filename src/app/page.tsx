@@ -5,12 +5,7 @@ import { About } from '@/components/sections/about';
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 import { MainGallery } from '@/components/sections/main-gallery';
 import { Sectors } from '@/components/sections/sectors';
-import { ManufacturingHistory } from '@/components/sections/manufacturing-history';
 import { TrustSignals } from '@/components/sections/trust-signals';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useLanguage } from '@/hooks/use-language';
-import { siteExtras } from '@/lib/i18n/site-extras';
 
 // Clients e ClientLogos removidos: sugeriam relacao com clientes especificos
 // que a Aceros nao autoriza divulgar (Petrobras, Vale, Gerdau, etc.).
@@ -18,9 +13,6 @@ import { siteExtras } from '@/lib/i18n/site-extras';
 // e diferenciais, sem citar nomes de clientes.
 
 export default function Home() {
-  const { language } = useLanguage();
-  const extra = siteExtras[language];
-
   return (
     <>
       <Hero />
@@ -30,34 +22,7 @@ export default function Home() {
       <TrustSignals />
       <Sectors />
       <MainGallery />
-      <ManufacturingHistory />
       <LocationMap />
-
-      {/* Seção de Redirecionamento para LPs */}
-      <section className="py-12 bg-white border-t border-b border-slate-100">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
-            <Button
-              asChild
-              size="lg"
-              className="track-home-to-lp bg-primary text-primary-foreground hover:bg-primary/90 font-headline font-bold text-lg md:text-xl px-10 py-8 h-auto rounded-xl shadow-xl transition-all hover:scale-105 active:scale-95"
-            >
-              <Link href="/bucha-de-aco-inox">
-                {extra.home.bushingsLink}
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              className="track-home-to-lp-tubos bg-primary text-primary-foreground hover:bg-primary/90 font-headline font-bold text-lg md:text-xl px-10 py-8 h-auto rounded-xl shadow-xl transition-all hover:scale-105 active:scale-95"
-            >
-              <Link href="/tubos-de-aco-inox">
-                {extra.home.tubesLink}
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       <WhatsAppCta />
     </>

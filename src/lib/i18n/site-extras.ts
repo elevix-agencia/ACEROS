@@ -2,6 +2,17 @@ import type { Language } from '@/hooks/use-language';
 
 type ExtraTranslations = {
   common: { learnMore: string };
+  hero: {
+    eyebrow: string;
+    slides: Array<{ alt: string; label: string }>;
+    selectorLabel: string;
+    showSlide: string;
+    stats: [string, string, string, string];
+    contentLabel: string;
+  };
+  about: { imageAlt: string; production: string; productionDescription: string };
+  whatsapp: { label: string; message: string };
+  carousel: { previous: string; next: string };
   home: { bushingsLink: string; tubesLink: string };
   sectors: { certificates: string; certificatesDescription: string; certificateAlt: string };
   footer: {
@@ -37,6 +48,19 @@ type ExtraTranslations = {
 export const siteExtras: Record<Language, ExtraTranslations> = {
   pt: {
     common: { learnMore: 'Saiba mais' },
+    hero: {
+      eyebrow: 'Engenharia metalúrgica desde 2015',
+      slides: [
+        { alt: 'Tubos de aço centrifugado usinados e polidos pela Aceros', label: 'Tubos centrifugados' },
+        { alt: 'Buchas de aço inox centrifugado usinadas pela Aceros', label: 'Buchas centrifugadas' },
+        { alt: 'Tubos de aço inox usinados e polidos pela Aceros', label: 'Tubos polidos' },
+      ],
+      selectorLabel: 'Selecionar imagem principal', showSlide: 'Exibir',
+      stats: ['Grupo Daniela', 'Divisão Aceros', 'Países atendidos', 'Sob medida'], contentLabel: 'Ir para o conteúdo',
+    },
+    about: { imageAlt: 'Área de usinagem da fábrica Aceros com tubo de aço em produção', production: 'Produção Aceros', productionDescription: 'Estrutura industrial dedicada à usinagem de tubos e componentes sob medida.' },
+    whatsapp: { label: 'Fale conosco pelo WhatsApp', message: 'Olá! Vim pelo site da Aceros e gostaria de solicitar um orçamento.' },
+    carousel: { previous: 'Slide anterior', next: 'Próximo slide' },
     home: {
       bushingsLink: 'Conheça nossa linha de Buchas de Aço Inox Sob Medida',
       tubesLink: 'Conheça nossa linha de Tubos de Aço Inox Sob Medida',
@@ -81,6 +105,19 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
   },
   en: {
     common: { learnMore: 'Learn more' },
+    hero: {
+      eyebrow: 'Metallurgical engineering since 2015',
+      slides: [
+        { alt: 'Centrifugally cast steel tubes machined and polished by Aceros', label: 'Centrifugally cast tubes' },
+        { alt: 'Centrifugally cast stainless steel bushings machined by Aceros', label: 'Centrifugally cast bushings' },
+        { alt: 'Stainless steel tubes machined and polished by Aceros', label: 'Polished tubes' },
+      ],
+      selectorLabel: 'Select main image', showSlide: 'Show',
+      stats: ['Daniela Group', 'Aceros Division', 'Countries served', 'Custom-made'], contentLabel: 'Skip to content',
+    },
+    about: { imageAlt: 'Aceros machining area with a steel tube in production', production: 'Aceros production', productionDescription: 'Industrial facilities dedicated to machining custom tubes and components.' },
+    whatsapp: { label: 'Contact us on WhatsApp', message: 'Hello! I found Aceros through the website and would like to request a quote.' },
+    carousel: { previous: 'Previous slide', next: 'Next slide' },
     home: { bushingsLink: 'Discover our custom stainless steel bushings', tubesLink: 'Discover our custom stainless steel tubes' },
     sectors: { certificates: 'Certificates', certificatesDescription: 'Explore our certificates and quality seals.', certificateAlt: 'Aceros ISO 9001:2015 certificate' },
     footer: {
@@ -115,6 +152,19 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
   },
   es: {
     common: { learnMore: 'Más información' },
+    hero: {
+      eyebrow: 'Ingeniería metalúrgica desde 2015',
+      slides: [
+        { alt: 'Tubos de acero centrifugado mecanizados y pulidos por Aceros', label: 'Tubos centrifugados' },
+        { alt: 'Bujes de acero inoxidable centrifugado mecanizados por Aceros', label: 'Bujes centrifugados' },
+        { alt: 'Tubos de acero inoxidable mecanizados y pulidos por Aceros', label: 'Tubos pulidos' },
+      ],
+      selectorLabel: 'Seleccionar imagen principal', showSlide: 'Mostrar',
+      stats: ['Grupo Daniela', 'División Aceros', 'Países atendidos', 'A medida'], contentLabel: 'Ir al contenido',
+    },
+    about: { imageAlt: 'Área de mecanizado de la fábrica Aceros con un tubo de acero en producción', production: 'Producción Aceros', productionDescription: 'Estructura industrial dedicada al mecanizado de tubos y componentes a medida.' },
+    whatsapp: { label: 'Contáctenos por WhatsApp', message: '¡Hola! Conocí Aceros a través del sitio web y quisiera solicitar un presupuesto.' },
+    carousel: { previous: 'Diapositiva anterior', next: 'Diapositiva siguiente' },
     home: { bushingsLink: 'Conozca nuestra línea de bujes de acero inoxidable a medida', tubesLink: 'Conozca nuestra línea de tubos de acero inoxidable a medida' },
     sectors: { certificates: 'Certificados', certificatesDescription: 'Conozca nuestros certificados y sellos de calidad.', certificateAlt: 'Certificado ISO 9001:2015 de Aceros' },
     footer: {
@@ -149,6 +199,19 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
   },
   de: {
     common: { learnMore: 'Mehr erfahren' },
+    hero: {
+      eyebrow: 'Metallurgische Ingenieurtechnik seit 2015',
+      slides: [
+        { alt: 'Von Aceros bearbeitete und polierte Schleudergussrohre aus Stahl', label: 'Schleudergussrohre' },
+        { alt: 'Von Aceros bearbeitete Schleudergussbuchsen aus Edelstahl', label: 'Schleudergussbuchsen' },
+        { alt: 'Von Aceros bearbeitete und polierte Edelstahlrohre', label: 'Polierte Rohre' },
+      ],
+      selectorLabel: 'Hauptbild auswählen', showSlide: 'Anzeigen',
+      stats: ['Daniela Gruppe', 'Aceros-Sparte', 'Belieferte Länder', 'Maßgefertigt'], contentLabel: 'Zum Inhalt springen',
+    },
+    about: { imageAlt: 'Bearbeitungsbereich im Aceros-Werk mit einem Stahlrohr in Produktion', production: 'Aceros-Produktion', productionDescription: 'Industrieanlage für die Bearbeitung maßgefertigter Rohre und Komponenten.' },
+    whatsapp: { label: 'Kontaktieren Sie uns über WhatsApp', message: 'Hallo! Ich bin über die Aceros-Website auf Sie aufmerksam geworden und möchte ein Angebot anfordern.' },
+    carousel: { previous: 'Vorherige Folie', next: 'Nächste Folie' },
     home: { bushingsLink: 'Entdecken Sie unsere maßgefertigten Edelstahlbuchsen', tubesLink: 'Entdecken Sie unsere maßgefertigten Edelstahlrohre' },
     sectors: { certificates: 'Zertifikate', certificatesDescription: 'Entdecken Sie unsere Zertifikate und Qualitätssiegel.', certificateAlt: 'ISO-9001:2015-Zertifikat von Aceros' },
     footer: {
@@ -183,6 +246,19 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
   },
   it: {
     common: { learnMore: 'Scopri di più' },
+    hero: {
+      eyebrow: 'Ingegneria metallurgica dal 2015',
+      slides: [
+        { alt: 'Tubi in acciaio centrifugato lavorati e lucidati da Aceros', label: 'Tubi centrifugati' },
+        { alt: 'Boccole in acciaio inox centrifugato lavorate da Aceros', label: 'Boccole centrifugate' },
+        { alt: 'Tubi in acciaio inox lavorati e lucidati da Aceros', label: 'Tubi lucidati' },
+      ],
+      selectorLabel: 'Seleziona immagine principale', showSlide: 'Mostra',
+      stats: ['Gruppo Daniela', 'Divisione Aceros', 'Paesi serviti', 'Su misura'], contentLabel: 'Vai al contenuto',
+    },
+    about: { imageAlt: 'Area di lavorazione dello stabilimento Aceros con un tubo in acciaio in produzione', production: 'Produzione Aceros', productionDescription: 'Struttura industriale dedicata alla lavorazione di tubi e componenti su misura.' },
+    whatsapp: { label: 'Contattaci su WhatsApp', message: 'Salve! Ho conosciuto Aceros tramite il sito e vorrei richiedere un preventivo.' },
+    carousel: { previous: 'Diapositiva precedente', next: 'Diapositiva successiva' },
     home: { bushingsLink: 'Scopri la nostra linea di boccole in acciaio inox su misura', tubesLink: 'Scopri la nostra linea di tubi in acciaio inox su misura' },
     sectors: { certificates: 'Certificati', certificatesDescription: 'Scopri i nostri certificati e marchi di qualità.', certificateAlt: 'Certificato ISO 9001:2015 Aceros' },
     footer: {

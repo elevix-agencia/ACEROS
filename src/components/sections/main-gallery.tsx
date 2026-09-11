@@ -19,11 +19,10 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { Separator } from '../ui/separator';
 import { useLanguage } from '@/hooks/use-language';
 
-const galleryImages = PlaceHolderImages.filter(img =>
-  img.id.startsWith('product-gallery-')
+const galleryImages = PlaceHolderImages.filter(
+  img => img.id.startsWith('product-gallery-') || img.id.startsWith('history-')
 );
 
 export function MainGallery() {
@@ -58,62 +57,71 @@ export function MainGallery() {
           onMouseLeave={plugin.current.reset}
         >
           <CarouselContent className="-ml-4">
-            {galleryImages.map((image, index) => (
-              <CarouselItem
-                key={image.id}
-                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
-              >
-                <Dialog>
-                  <div
-                    className="animate-fade-in-up"
-                    style={{
-                      animationDelay: `${index * 0.1}s`,
-                      animationFillMode: 'both',
-                    }}
-                  >
-                    <DialogTrigger asChild>
-                      <button
-                        type="button"
-                        aria-label={image.description}
-                        className="group block w-full cursor-pointer rounded-2xl text-left transition-transform duration-500 hover:scale-105"
-                      >
-                        <Card className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-primary/20">
-                          <div className="aspect-square w-full relative">
-                            <Image
-                              src={image.imageUrl}
-                              alt={image.description}
-                              fill
-                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                              data-ai-hint={image.imageHint}
-                              className="object-cover transition-transform duration-500 group-hover:scale-110"
-                            />
-                          </div>
-                          <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                        </Card>
-                      </button>
-                    </DialogTrigger>
-                  </div>
+            {galleryImages.map((image, index) => {
+              const isTechnicalPanel = image.id.startsWith('history-');
 
-                  <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background border-accent/20">
-                    <DialogHeader>
-                      <DialogTitle className="text-foreground sr-only">
-                        {image.description}
-                      </DialogTitle>
-                    </DialogHeader>
-                    <div className="relative aspect-video w-full mt-4">
-                      <Image
-                        src={image.imageUrl}
-                        alt={image.description}
-                        fill
-                        sizes="90vw"
-                        data-ai-hint={image.imageHint}
-                        className="object-contain rounded-lg"
-                      />
+              return (
+                <CarouselItem
+                  key={image.id}
+                  className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                >
+                  <Dialog>
+                    <div
+                      className="animate-fade-in-up"
+                      style={{
+                        animationDelay: `${index * 0.1}s`,
+                        animationFillMode: 'both',
+                      }}
+                    >
+                      <DialogTrigger asChild>
+                        <button
+                          type="button"
+                          aria-label={image.description}
+                          className="group block w-full cursor-pointer rounded-2xl text-left transition-transform duration-500 hover:scale-105"
+                        >
+                          <Card className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-primary/20">
+                            <div className="aspect-[4/3] w-full relative bg-white">
+                              <Image
+                                src={image.imageUrl}
+                                alt={image.description}
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                data-ai-hint={image.imageHint}
+                                className={`${isTechnicalPanel ? 'object-contain p-2' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`}
+                              />
+                            </div>
+                            <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                            <div className="relative min-h-20 bg-slate-950 px-5 py-4 text-white">
+                              <p className="text-sm font-semibold leading-relaxed sm:text-base">
+                                {image.description}
+                              </p>
+                            </div>
+                          </Card>
+                        </button>
+                      </DialogTrigger>
                     </div>
-                  </DialogContent>
-                </Dialog>
-              </CarouselItem>
-            ))}
+
+                    <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background border-accent/20">
+                      <DialogHeader>
+                        <DialogTitle className="text-foreground sr-only">
+                          {image.description}
+                        </DialogTitle>
+                      </DialogHeader>
+                      <div className="relative aspect-video w-full mt-4">
+                        <Image
+                          src={image.imageUrl}
+                          alt={image.description}
+                          fill
+                          sizes="90vw"
+                          data-ai-hint={image.imageHint}
+                          className="object-contain rounded-lg"
+                        />
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </CarouselItem>
+              );
+            })}
           </CarouselContent>
           <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10" />
           <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10" />

@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { siteExtras } from '@/lib/i18n/site-extras';
 
 const heroSlides = [
   {
@@ -26,12 +27,14 @@ const heroSlides = [
 ];
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const copy = siteExtras[language].hero;
+  const translatedSlides = heroSlides.map((slide, index) => ({ ...slide, ...copy.slides[index] }));
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
     const interval = window.setInterval(() => {
-      setActiveSlide((current) => (current + 1) % heroSlides.length);
+      setActiveSlide((current) => (current + 1) % translatedSlides.length);
     }, 6500);
 
     return () => window.clearInterval(interval);
@@ -40,9 +43,9 @@ export function Hero() {
   return (
     <section className="hero-section relative isolate min-h-[calc(100svh-80px)] overflow-hidden bg-[#07121e] text-white">
       <Image
-        key={heroSlides[activeSlide].src}
-        src={heroSlides[activeSlide].src}
-        alt={heroSlides[activeSlide].alt}
+        key={translatedSlides[activeSlide].src}
+        src={translatedSlides[activeSlide].src}
+        alt={translatedSlides[activeSlide].alt}
         fill
         sizes="100vw"
         className="object-cover object-center opacity-70"
@@ -56,7 +59,7 @@ export function Hero() {
             <div className="max-w-[920px]">
                 <div className="mb-7 flex animate-fade-in-up items-center gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-accent">
                   <span className="h-px w-10 bg-accent" />
-                  Engenharia metalúrgica desde 2015
+                  {copy.eyebrow}
                 </div>
                 <h1 className="max-w-[900px] animate-fade-in-up text-balance font-headline text-[clamp(2.25rem,3.35vw,3.65rem)] font-semibold uppercase leading-[1.08] tracking-[-0.025em] text-white">
                     {t.hero.main_title}
@@ -75,19 +78,19 @@ export function Hero() {
                         <Link href="/produtos">{t.hero.learn_more}</Link>
                     </Button>
                 </div>
-                <div className="mt-7 flex items-center gap-3" aria-label="Selecionar imagem principal">
-                  {heroSlides.map((slide, index) => (
+                <div className="mt-7 flex items-center gap-3" aria-label={copy.selectorLabel}>
+                  {translatedSlides.map((slide, index) => (
                     <button
                       key={slide.src}
                       type="button"
                       onClick={() => setActiveSlide(index)}
-                      aria-label={`Exibir ${slide.label}`}
+                      aria-label={`${copy.showSlide} ${slide.label}`}
                       aria-current={index === activeSlide ? 'true' : undefined}
                       className={`h-1 transition-all duration-300 ${index === activeSlide ? 'w-12 bg-accent' : 'w-7 bg-white/40 hover:bg-white/70'}`}
                     />
                   ))}
                   <span className="ml-2 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-300">
-                    {heroSlides[activeSlide].label}
+                    {translatedSlides[activeSlide].label}
                   </span>
                 </div>
             </div>
@@ -98,10 +101,10 @@ export function Hero() {
       <div className="relative z-20 hidden border-t border-white/15 bg-[#07121e] lg:block">
         <div className="container mx-auto grid grid-cols-2 px-4 lg:grid-cols-4">
           {[
-            ['1999', 'Grupo Daniela'],
-            ['2015', 'Divisão Aceros'],
-            ['+3', 'Países atendidos'],
-            ['100%', 'Sob medida'],
+            ['1999', copy.stats[0]],
+            ['2015', copy.stats[1]],
+            ['+3', copy.stats[2]],
+            ['100%', copy.stats[3]],
           ].map(([value, label]) => (
             <div key={label} className="border-r border-white/10 px-5 py-4 last:border-0 lg:px-8">
               <span className="mr-3 font-headline text-xl font-bold text-white">{value}</span>
@@ -111,7 +114,7 @@ export function Hero() {
         </div>
       </div>
 
-      <Link href="#sobre" aria-label="Ir para o conteúdo" className="absolute bottom-24 right-5 z-20 hidden h-12 w-12 items-center justify-center border border-white/25 text-white transition-colors hover:bg-white hover:text-[#07121e] sm:flex lg:right-10">
+      <Link href="#sobre" aria-label={copy.contentLabel} className="absolute bottom-24 right-5 z-20 hidden h-12 w-12 items-center justify-center border border-white/25 text-white transition-colors hover:bg-white hover:text-[#07121e] sm:flex lg:right-10">
         <ArrowDown className="h-4 w-4" />
       </Link>
     </section>

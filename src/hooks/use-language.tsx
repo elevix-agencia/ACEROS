@@ -15,6 +15,7 @@ import en from '@/lib/i18n/en.json';
 import es from '@/lib/i18n/es.json';
 import de from '@/lib/i18n/de.json';
 import it from '@/lib/i18n/it.json';
+import translationCorrections from '@/lib/i18n/translation-corrections.json';
 
 const translations = { pt, en, es, de, it };
 
@@ -94,10 +95,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
   }, []);
 
-  // Mantém todos os campos disponíveis mesmo quando uma tradução ainda não
-  // possui uma chave específica; nesses casos, o conteúdo original em PT é usado.
+  // Aplica as revisões linguísticas e mantém o português apenas como proteção
+  // para uma eventual chave nova que ainda não exista nos demais idiomas.
   const t = useMemo(
-    () => mergeTranslations<Translations>(pt, translations[language]),
+    () =>
+      mergeTranslations<Translations>(
+        pt,
+        mergeTranslations(translations[language], translationCorrections[language])
+      ),
     [language]
   );
 

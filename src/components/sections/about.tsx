@@ -4,9 +4,11 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, Eye } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
+import { siteExtras } from '@/lib/i18n/site-extras';
 
 export function About() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const copy = siteExtras[language].about;
 
   const pillars = [
     {
@@ -44,14 +46,14 @@ export function About() {
               <div className="relative w-full h-full">
                 <Image
                   src="/images/aceros/generated/historia-fabrica-v3.webp"
-                  alt="Área de usinagem da fábrica Aceros com tubo de aço em produção"
+                  alt={copy.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#07121e] via-[#07121e]/75 to-transparent p-6 pt-20 text-white">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Produção Aceros</p>
-                  <p className="mt-2 max-w-sm text-sm text-slate-200">Estrutura industrial dedicada à usinagem de tubos e componentes sob medida.</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">{copy.production}</p>
+                  <p className="mt-2 max-w-sm text-sm text-slate-200">{copy.productionDescription}</p>
                 </div>
               </div>
             </Card>

@@ -1,0 +1,353 @@
+{
+  "pt": {},
+  "en": {
+    "cta": {
+      "whatsapp_quote": "Request a Quote via WhatsApp"
+    }
+  },
+  "es": {
+    "quality": {
+      "subtitle": "Nuestros laboratorios realizan investigaciones en análisis de corrosión, análisis químicos, ultrasonidos, dureza y ensayos mecánicos, permitiendo a Aceros estudiar mejoras en el diseño o metalurgia de piezas fundidas, resistentes al calor, abrasión y aleaciones especiales.",
+      "improvement_description": "Estudio de mejoras en el diseño y metalurgia de fundiciones y aleaciones especiales."
+    },
+    "products": {
+      "product_tube_description": "Producimos tubos en acero inoxidable y aleaciones especiales, garantizando una vida útil prolongada y un desempeño superior en ambientes altamente exigentes.",
+      "product_large_ring_description": "Anillos de gran diámetro para equipos pesados, fabricados en aleaciones especiales para soportar cargas extremas."
+    },
+    "cta": {
+      "whatsapp_quote": "Solicite una cotización vía WhatsApp"
+    },
+    "qualifications": {
+      "expertise_paragraph2": "La calidad de nuestros productos está garantizada por una amplia variedad de instrumentos de inspección y estándares de calibración, todos rastreados por RBC, lo que garantiza la precisión y confiabilidad de nuestros procesos.",
+      "innovation_description": "Invertimos continuamente en investigación para mejorar los diseños y la metalurgia de las piezas fundidas. Desarrollamos aleaciones especiales resistentes al calor, la abrasión y la corrosión para garantizar el máximo rendimiento y durabilidad de nuestros productos."
+    },
+    "certificates": {
+      "subtitle": "La excelencia y confiabilidad de nuestros productos están comprobadas a través de certificaciones emitidas por los clasificadores industriales y navales más respetados del mundo."
+    },
+    "expertise_sectors": {
+      "page": {
+        "oil_gas_valves_description": "Desarrollamos cuerpos y componentes internos para válvulas que operan en las condiciones más severas, garantizando un control de flujo seguro y eficiente. Nuestras aleaciones especiales ofrecen una resistencia superior a la corrosión y al desgaste, extendiendo la vida útil del equipo.",
+        "pot_hot_dip_description": "Componentes de altas prestaciones sumergidos en baños de Zinc, Zincalume y Aluminio+Si, con aleaciones especiales C.I.S. que garantizan una durabilidad superior.",
+        "guseira_housings_feature2_description": "Utilizamos aleaciones especiales que ofrecen máxima durabilidad y resistencia a la fatiga y al impacto.",
+        "naval_assemblies_subtitle": "Fabricamos conjuntos estructurales complejos y conjuntos de precisión que son la base de equipos navales de alto rendimiento."
+      },
+      "naval": {
+        "description": "Con amplia experiencia en el sector naval, producimos piezas esenciales que cumplen con estrictos estándares internacionales. Nuestros productos garantizan el rendimiento y la confiabilidad de las embarcaciones, desde sistemas de propulsión hasta componentes estructurales.",
+        "solutions": {
+          "naval_propeller_components": {
+            "description": "Anillos y piezas personalizados para sistemas de propulsión naval, fabricados con aleaciones especiales."
+          }
+        }
+      },
+      "siderurgia": {
+        "solutions": {
+          "siderurgia_walking_beam_furnaces": {
+            "description": "VIGAS, COLUMNAS MÓVILES y SELLOS SUPERIORES E INFERIORES con diseño y aleaciones especiales."
+          }
+        }
+      },
+      "oleo_e_gas": {
+        "description": "Suministramos al sector de Petróleo y Gas componentes críticos que operan bajo alta presión y en ambientes corrosivos. Nuestras superaleaciones y aceros inoxidables garantizan la integridad y seguridad de los equipos de exploración, producción y refinación."
+      },
+      "guseira": {
+        "solutions": {
+          "pig_iron_casting_systems": {
+            "description": "Componentes que aseguran un proceso continuo de fundición de arrabio de alta calidad."
+          }
+        }
+      },
+      "tratamento_termico": {
+        "subtitle": "Aleaciones especiales para procesos de alta temperatura.",
+        "description": "Desarrollamos componentes y piezas en aleaciones especiales para hornos de tratamiento térmico, asegurando el desempeño y durabilidad de los equipos en procesos como temple, revenido, cementación y nitruración."
+      },
+      "certificados": {
+        "description": "La excelencia y confiabilidad de nuestros productos están comprobadas a través de certificaciones emitidas por los clasificadores industriales y navales más respetados del mundo.",
+        "cardDescription": "Explora nuestras certificaciones y sellos de calidad que avalan nuestra excelencia."
+      }
+    }
+  },
+  "de": {
+    "contact": {
+      "form_email_placeholder": "your.email@example.com"
+    },
+    "footer": {
+      "email": "sales@aceros.com.br"
+    },
+    "expertise_sectors": {
+      "page": {
+        "sector_not_found": "Sektor nicht gefunden.",
+        "featured_products_subtitle": "Entdecken Sie einige der wesentlichen Komponenten, die wir an die Eisenindustrie liefern.",
+        "featured_products_title": "Ausgewählte Produkte",
+        "mining_solutions_subtitle": "Robuste Hochleistungskomponenten, die darauf ausgelegt sind, die extremsten Herausforderungen in der Bergbauindustrie zu meistern.",
+        "mining_solutions_title": "Lösungen für den Bergbau",
+        "mining_quality_subtitle": "Unser Ziel ist es, Lösungen zu liefern, die die Erwartungen an Leistung und Haltbarkeit nicht nur erfüllen, sondern übertreffen.",
+        "mining_quality_title": "Exzellenz in jeder Komponente",
+        "staves_title": "Dauben (Kühlplatten)",
+        "staves_description": "Entscheidende Komponenten für eine effiziente Hochofenkühlung, die strukturelle Integrität und Langlebigkeit des Betriebs gewährleisten. Hergestellt aus Legierungen mit hoher Wärmeleitfähigkeit und Widerstandsfähigkeit.",
+        "tuyeres_title": "Abblasventile (Tuyeres)",
+        "tuyeres_description": "Unsere Abblasventile sind für die präzise Injektion heißer Luft in den Hochofen konzipiert und so gefertigt, dass sie extremen Temperaturen und aggressiven Umgebungen standhalten und den Verbrennungsprozess optimieren.",
+        "housings_title": "Bearbeitete Gehäuse",
+        "housings_description": "Komplexe, präzisionsbearbeitete Gehäuse schützen interne Bauteile und gewährleisten deren exakte Ausrichtung in Industrieanlagen. Sie sind für den Einsatz unter rauen Bedingungen ausgelegt.",
+        "projects_gallery_subtitle": "Entdecken Sie einige der komplexen Komponenten und kundenspezifischen Teile, die von unserem Ingenieurteam entwickelt wurden.",
+        "projects_gallery_title": "Galerie der Ingenieurprojekte",
+        "oil_gas_products_title": "Wesentliche Komponenten für Öl und Gas",
+        "oil_gas_products_subtitle": "Entdecken Sie unsere kritischen Komponenten, die für maximale Zuverlässigkeit in Hochdruck- und korrosiven Umgebungen ausgelegt sind.",
+        "oil_gas_valves_title": "Hochleistungsventile",
+        "oil_gas_valves_description": "Wir entwickeln Gehäuse und Innenkomponenten für Ventile, die unter härtesten Bedingungen funktionieren und eine sichere und effiziente Durchflussregelung gewährleisten. Unsere Speziallegierungen bieten eine hervorragende Korrosions- und Verschleißbeständigkeit und verlängern die Lebensdauer der Ausrüstung.",
+        "oil_gas_connections_title": "Verbindungen und Flansche",
+        "oil_gas_connections_description": "Wir fertigen Flansche und Verbindungen, die die strukturelle Integrität von Rohrleitungssystemen gewährleisten. Jedes Teil ist so konzipiert, dass es hohen Drücken und Temperaturen standhält, Leckagen verhindert und die Betriebssicherheit gewährleistet.",
+        "oil_gas_custom_parts_title": "Kundenspezifische Teile",
+        "oil_gas_custom_parts_description": "Wir arbeiten mit unseren Kunden zusammen, um maßgeschneiderte Guss- und Bearbeitungsteile zu entwickeln, die den spezifischen technischen Herausforderungen bei der Öl- und Gasexploration, -produktion und -raffinierung gerecht werden.",
+        "mining_deck_rollers_title": "SIEBDECKROLLEN",
+        "mining_sinter_car_walls_title": "OBERE UND UNTERE SEITENWÄNDE FÜR PELLETIER- UND SINTERWAGEN",
+        "mining_sinter_car_walls_description": "Spezielles Design und spezielle Legierungen zur Optimierung der Nutzungsdauer und zur Vermeidung von Vorverbrennungen im oberen Profil.",
+        "mining_grate_bars_title": "GITTERSTANGEN FÜR PELLETWAGEN",
+        "mining_grate_bars_description": "Aus vollständig austenitischen Legierungen gegossen, um die Korrosions- und Hitzebeständigkeit bei hohen Temperaturen zu optimieren.",
+        "mining_sinter_cars_title": "KOMPLETTE PELLETIER- UND SINTERWAGEN FÜR KLEINE ANLAGEN",
+        "mining_sinter_cars_description": "CIS entwirft, entwickelt und produziert komplette Pelletier- und Sinterwagen (Struktur, Seitenwände, Roststäbe, Räder).",
+        "mining_blast_furnace_title": "HOCHOFEN: ABSCHIRM- UND VERSCHLEISSBLECHE",
+        "mining_blast_furnace_description": "Abschirmungen und Verschleißplatten für die Hochöfen Paul Wurth und Double Bell.",
+        "mining_deck_hot_cold_title": "HEISS- UND KALTSIEBDECKS",
+        "mining_deck_hot_cold_description": "Verschleißfeste Siebdecks mit unterschiedlichen Formen und Profilen; Im Schalenformverfahren gegossene Löcher im „Fischgräten“-Design, um die offene Fläche und den „Selbstreinigungseffekt“ zu optimieren.\nSuperlegierungen für den Betrieb bei sehr hohen Temperaturen (bis 1.100 °C).",
+        "bar_furnace_title": "Stabofenteile, Einlass und Auslass, Be- und Entladen",
+        "bar_furnace_subtitle": "TROCKENE UND NASSGEKÜHLTE BESCHICKUNGS- UND AUSTRAGSROLLEN",
+        "bar_furnace_description": "Beschichtete und unbeschichtete Walzen zur Optimierung der Standzeit und zur Minimierung von Ansammlungen (Anhaften)",
+        "guseira_staves_title": "Reaktionssäulen Serpentinen Glendons",
+        "guseira_staves_cta_title": "Bereit zur Optimierung?",
+        "guseira_staves_cta_subtitle": "Sprechen Sie mit unseren Experten und entdecken Sie die beste Lösung für Ihren Hochofen.",
+        "guseira_tuyeres_title": "Reaktionssäulen Serpentinen Glendons – Schritt 2",
+        "mining_deck_rollers_description": "Walzen für Siebanlagen, einzeln über einen Getriebemotor oder eine Kette angetrieben. Der Abstand zwischen den Walzen kann automatisch verstellt werden, ohne die Anlage anzuhalten.\nErhältlich mit Wolframkarbid-Beschichtung (WC) oder unbeschichtet.",
+        "guseira_tuyeres_cta_title": "Unvergleichliche Leistung",
+        "guseira_tuyeres_cta_subtitle": "Unsere Ventile garantieren eine präzise und effiziente Einspritzung und maximieren so die Produktivität Ihres Hochofens.",
+        "guseira_housings_feature1_title": "Präzisionsbearbeitung",
+        "guseira_housings_feature1_description": "Wir garantieren strenge Toleranzen und eine hervorragende Oberflächenbeschaffenheit für eine perfekte Passform und optimierte Leistung.",
+        "guseira_housings_feature2_title": "Hochbeständige Materialien",
+        "guseira_housings_feature3_title": "Maßgeschneiderte Projekte",
+        "guseira_housings_feature2_description": "Wir verwenden spezielle Legierungen, die maximale Haltbarkeit und Widerstandsfähigkeit gegen Ermüdung und Stöße bieten.",
+        "guseira_housings_feature3_description": "Wir entwickeln maßgeschneiderte Gehäuse, um den einzigartigen Spezifikationen jedes Geräts gerecht zu werden.",
+        "guseira_housings_cta_button": "Fordern Sie ein Angebot an",
+        "guseira_wear_plates_cta_button": "Sprechen Sie mit einem Experten",
+        "tratamento_new_section_title": "Komponenten für Hochleistungsöfen",
+        "tratamento_new_section_subtitle": "Präzisionstechnik zur Gewährleistung maximaler Haltbarkeit und Effizienz bei Wärmebehandlungsprozessen.",
+        "tratamento_videos_title": "Prozesse in Aktion",
+        "tratamento_videos_subtitle": "Erleben Sie hautnah die Präzision und Technologie bei der Herstellung unserer Komponenten.",
+        "tratamento_extra_gallery_title": "Komponentengalerie",
+        "tratamento_extra_gallery_subtitle": "Weitere Beispiele unserer Präzisionstechnik für die Wärmebehandlung.",
+        "grelha_forno_poco_title": "Rost für Grubenöfen",
+        "tratamento_orange_gallery_title": "Wärmebehandlungskörbe",
+        "tratamento_orange_gallery_subtitle": "Innovative Designs und robuste Komponenten für anspruchsvollste Anwendungen.",
+        "tratamento_creative_gallery_title": "Grills und Ofengeräte",
+        "tratamento_creative_cta_title": "Beispiellose Leistung",
+        "tratamento_creative_cta_subtitle": "Unsere Komponenten garantieren höchste Effizienz und Langlebigkeit für Ihren Wärmebehandlungsprozess.",
+        "tratamento_creative_cta_button": "Konsultieren Sie einen Experten",
+        "mining_new_section_title": "ROLLENSIEBE ZUR PELLETSKLASSIFIZIERUNG",
+        "mining_new_section_subtitle": "TPC- und TDE-TYPEN: DIE BESTE LÖSUNG BEI DER PELLETIERUNG",
+        "mining_roller_screens_title": "Rollensiebe zum Klassieren von Eisenerzpellets",
+        "naval_flanges_title": "Schiffssteuersystem",
+        "naval_flanges_subtitle": "Hochfest bearbeitete Komponenten für Schiffssteuersysteme, verantwortlich für die Rudersteuerung.",
+        "naval_tubes_title": "Schiffstriebwerke und Propeller",
+        "naval_tubes_subtitle": "Wir entwickeln Propeller und Komponenten für die Marineindustrie, um eine bessere Antriebsqualität zu gewährleisten.",
+        "naval_analysis_title": "Verankerungssystem",
+        "naval_analysis_subtitle": "Mithilfe modernster Technik validieren wir jede Komponente durch Simulationen und detaillierte technische Analysen, um Leistung und Sicherheit zu gewährleisten.",
+        "naval_assemblies_title": "Montage und Demontage von Unterwasserantrieben",
+        "naval_assemblies_subtitle": "Wir fertigen komplexe Strukturbaugruppen und Präzisionsbaugruppen, die die Grundlage für leistungsstarke Marineausrüstung bilden.",
+        "naval_connectors_title": "MANGANPHOSPHAT",
+        "naval_connectors_subtitle": "Manganphosphat: höhere Verschleißfestigkeit, geringere Reibung und Schutz vor Korrosion.",
+        "naval_new_products_title": "Hochleistungsfähige Marinekomponenten",
+        "naval_winch_title": "SCHIFFSWINDE",
+        "kort_nozzle_title": "Fertigung der Kort-Düse",
+        "kort_nozzle_subtitle": "Verfolgen Sie alle Entwicklungsphasen der Kort-Düse – von der ersten Konstruktion bis zum Einsatz in leistungsstarken Schiffssystemen.",
+        "kort_nozzle_step1_title": "Schritt 1: Erster Aufbau",
+        "kort_nozzle_step2_title": "Schritt 2: Fertiggestellte Kort-Düse",
+        "kort_nozzle_step3_title": "Schritt 3: Kort-Düse und Teleskoptunnel",
+        "kort_nozzle_step4_title": "Schritt 4: Bewerbung auf Bohrschiffen"
+      }
+    },
+    "cta": {
+      "whatsapp_quote": "Fordern Sie ein Angebot über WhatsApp an"
+    }
+  },
+  "it": {
+    "products": {
+      "product_machined_parts_name": "Componenti lavorati"
+    },
+    "cta": {
+      "whatsapp_quote": "Richiedi un preventivo tramite WhatsApp"
+    },
+    "qualifications": {
+      "expertise_paragraph2": "La qualità dei nostri prodotti è garantita da un'ampia varietà di strumenti di ispezione e standard di calibrazione, tutti tracciati da RBC, garantendo l'accuratezza e l'affidabilità dei nostri processi.",
+      "innovation_description": "Investiamo continuamente nella ricerca per migliorare la progettazione e la metallurgia dei getti. Sviluppiamo leghe speciali resistenti al calore, all'abrasione e alla corrosione per garantire massime prestazioni e durata dei nostri prodotti."
+    },
+    "certificates": {
+      "subtitle": "L'eccellenza e l'affidabilità dei nostri prodotti sono comprovate attraverso le certificazioni rilasciate dai più autorevoli classificatori industriali e navali del mondo.",
+      "dnv": "Certificazione che attesta il rispetto degli standard internazionali di qualità e sicurezza in diversi settori industriali e marittimi.",
+      "abs": "Riconoscimento da parte dell'American Bureau of Shipping, che garantisce che i nostri prodotti soddisfano gli standard più rigorosi nel settore delle spedizioni.",
+      "bureau_veritas": "Sigillo di un leader mondiale nei test, nelle ispezioni e nella certificazione, che convalida l'eccellenza dei nostri processi e prodotti."
+    },
+    "expertise_sectors": {
+      "page": {
+        "mining_quality_pillar1_description": "Le nostre leghe e i nostri processi garantiscono componenti che superano gli standard del settore.",
+        "oil_gas_connections_description": "Produciamo flange e connessioni che garantiscono l'integrità strutturale dei sistemi di tubazioni. Ogni parte è progettata per resistere a pressioni e temperature elevate, prevenendo perdite e garantendo la sicurezza operativa.",
+        "oil_gas_custom_parts_description": "Lavoriamo in collaborazione con i nostri clienti per sviluppare parti personalizzate fuse e lavorate che soddisfino specifiche sfide ingegneristiche per l'esplorazione, la produzione e la raffinazione di petrolio e gas.",
+        "mining_sinter_car_walls_description": "Design speciale e leghe specifiche per ottimizzare la vita utile ed evitare la precombustione nel profilo superiore.",
+        "mining_grate_bars_description": "Fuso in leghe completamente austenitiche per ottimizzare la resistenza alla corrosione e al calore ad alte temperature.",
+        "mining_deck_hot_cold_description": "Piani vaglianti resistenti all'usura con diverse forme e profili; fori ricavati dal processo shell moulding con disegno “a spina di pesce”, per ottimizzare l'area aperta e l'effetto “autopulente”.\nSuperleghe per funzionamento a temperature molto elevate (fino a 1.100 °C).",
+        "mining_blast_furnace_description": "Schermi e piastre antiusura per altiforni Paul Wurth e Double Bell.",
+        "hsp_feature3_description": "Per i rulli pressori utilizziamo una tavola bimetallica centrifugata per garantire le migliori prestazioni.",
+        "furnace_capl_cgl_description": "Soluzioni complete per linee di ricottura e lavorazione continua e linee di zincatura continua.",
+        "furnace_capl_cgl_item3": "Tecnologia HVOF o SUPER D-GUN per rulli rivestiti.",
+        "pot_hot_dip_description": "Componenti ad alte prestazioni immersi in bagni di Zinco, Zincalume e Alluminio+Si, con leghe speciali C.I.S. che garantiscono una durata superiore.",
+        "pot_hot_dip_item2": "Leghe C.I.S COMPLETAMENTE SENZA FERRITE δ per prestazioni superiori.",
+        "bar_furnace_title": "Parti del forno a barre, ingresso e uscita, carico e scarico",
+        "bar_furnace_subtitle": "RULLI DI CARICO E SCARICO A SECCO E A UMIDO",
+        "bar_furnace_description": "Rulli rivestiti e non rivestiti per ottimizzare la durata e ridurre al minimo il pick-up (adesione)",
+        "guseira_staves_title": "Reaktionssäulen Serpentinen Glendons",
+        "guseira_staves_cta_title": "Bereit zur Optimierung?",
+        "guseira_staves_cta_subtitle": "Parla con i nostri esperti e scopri la soluzione migliore per il tuo altoforno.",
+        "guseira_tuyeres_title": "Reaktionssäulen Serpentinen Glendons – Schritt 2",
+        "guseira_tuyeres_cta_title": "Prestazioni insuperabili",
+        "guseira_housings_feature1_title": "Lavorazione di precisione",
+        "guseira_tuyeres_cta_subtitle": "Le nostre valvole garantiscono un'iniezione precisa ed efficiente, massimizzando la produttività del vostro altoforno.",
+        "guseira_housings_feature1_description": "Garantiamo tolleranze rigorose e un'eccellente finitura superficiale per un adattamento perfetto e prestazioni ottimizzate.",
+        "guseira_housings_feature2_title": "Materiali ad alta resistenza",
+        "guseira_housings_feature2_description": "Utilizziamo leghe speciali che offrono la massima durata e resistenza alla fatica e agli urti.",
+        "guseira_housings_feature3_title": "Progetti personalizzati",
+        "guseira_housings_feature3_description": "Sviluppiamo involucri personalizzati per soddisfare le specifiche uniche di ogni apparecchiatura.",
+        "guseira_housings_cta_button": "Richiedi un preventivo",
+        "guseira_wear_plates_cta_button": "Parla con un esperto",
+        "tratamento_new_section_title": "Componenti per forni ad alte prestazioni",
+        "tratamento_new_section_subtitle": "Ingegneria di precisione per garantire la massima durata ed efficienza nei processi di trattamento termico.",
+        "tratamento_videos_title": "Processi in azione",
+        "tratamento_videos_subtitle": "Scopri da vicino la precisione e la tecnologia coinvolte nella produzione dei nostri componenti.",
+        "tratamento_extra_gallery_title": "Galleria dei componenti",
+        "tratamento_extra_gallery_subtitle": "Altri esempi della nostra ingegneria di precisione per il trattamento termico.",
+        "grelha_forno_poco_title": "Griglia per forno a fossa",
+        "tratamento_orange_gallery_title": "Cesti per trattamenti termici",
+        "tratamento_orange_gallery_subtitle": "Design innovativi e componenti robusti per le applicazioni più esigenti.",
+        "tratamento_creative_gallery_title": "Griglie e dispositivi per forni",
+        "tratamento_creative_cta_title": "Prestazioni senza pari",
+        "tratamento_creative_cta_subtitle": "I nostri componenti garantiscono la massima efficienza e durata del vostro processo di trattamento termico.",
+        "tratamento_creative_cta_button": "Consulta un esperto",
+        "mining_new_section_title": "VAGLI A RULLI PER LA CLASSIFICAZIONE DEL PELLET",
+        "mining_new_section_subtitle": "TIPOLOGIE TPC E TDE: LA MIGLIORE SOLUZIONE NELLA PELLETTIZZAZIONE",
+        "mining_roller_screens_title": "Vagli a rulli per la classificazione dei pellet di minerale di ferro",
+        "naval_flanges_subtitle": "Componenti lavorati ad alta resistenza per sistemi di governo navali, responsabili del controllo del timone.",
+        "naval_flanges_title": "Sistema di governo navale",
+        "naval_tubes_title": "Propulsori ed eliche navali",
+        "naval_analysis_title": "Sistema di ancoraggio",
+        "naval_tubes_subtitle": "Sviluppiamo eliche e componenti per l'industria navale per garantire una migliore qualità di propulsione.",
+        "naval_analysis_subtitle": "Utilizzando un'ingegneria all'avanguardia, convalidiamo ogni componente attraverso simulazioni e analisi tecniche dettagliate per garantire prestazioni e sicurezza.",
+        "naval_assemblies_title": "Montaggio e smontaggio di propulsioni subacquee",
+        "naval_assemblies_subtitle": "Produciamo assemblaggi strutturali complessi e assemblaggi di precisione che costituiscono la base per attrezzature navali ad alte prestazioni.",
+        "naval_connectors_title": "FOSFATO DI MANGANESE",
+        "naval_connectors_subtitle": "Fosfato di manganese: maggiore resistenza all'usura, minore attrito e protezione dalla corrosione.",
+        "naval_new_products_title": "Componenti navali ad alte prestazioni",
+        "naval_winch_title": "VERRICELLO NAVALE",
+        "kort_nozzle_title": "Produzione dell'ugello Kort",
+        "kort_nozzle_subtitle": "Segui tutte le fasi di sviluppo dell'ugello Kort, dalla costruzione iniziale all'impiego nei sistemi navali ad alte prestazioni.",
+        "kort_nozzle_step1_title": "Passaggio 1: costruzione iniziale",
+        "kort_nozzle_step2_title": "Fase 2: ugello Kort completato",
+        "kort_nozzle_step3_title": "Fase 3: ugello Kort e tunnel telescopico",
+        "kort_nozzle_step4_title": "Fase 4: Applicazione su navi da trivellazione"
+      },
+      "mineracao": {
+        "subtitle": "Soluzioni robuste per un settore esigente.",
+        "description": "Forniamo componenti altamente durevoli e resistenti per l'industria mineraria, garantendo efficienza e sicurezza nei processi di estrazione, frantumazione e trasporto dei minerali. Le nostre leghe sono progettate per resistere alle condizioni più difficili.",
+        "solutions": {
+          "mining_crusher_components": {
+            "description": "Anelli, boccole e rivestimenti che aumentano la vita utile delle attrezzature di frantumazione."
+          },
+          "mining_sieving_parts": {
+            "description": "Soluzioni che garantiscono efficienza nella classificazione dei materiali, con elevata resistenza all'usura."
+          },
+          "mining_conveyor_systems": {
+            "description": "Rulli, tamburi e altre parti per nastri trasportatori operanti in ambienti difficili."
+          }
+        }
+      },
+      "naval": {
+        "subtitle": "Componenti di precisione per il mare.",
+        "description": "Con una vasta esperienza nel settore navale, produciamo parti essenziali che soddisfano rigorosi standard internazionali. I nostri prodotti garantiscono le prestazioni e l'affidabilità delle imbarcazioni, dai sistemi di propulsione ai componenti strutturali.",
+        "cardDescription": "Parti fuse come boccole, eliche e tubi, prodotte per soddisfare le rigorose esigenze del settore.",
+        "solutions": {
+          "naval_shaft_bushings": {
+            "description": "Boccole ad alta precisione per alberi elica, che garantiscono un funzionamento regolare e resistenza alla corrosione marina."
+          }
+        }
+      },
+      "siderurgia": {
+        "subtitle": "La forza dell'acciaio per l'industria siderurgica.",
+        "description": "Aceros è un partner strategico per l'industria siderurgica, fornendo componenti che resistono a temperature estreme e usura costante. I nostri rulli, anelli e altri componenti del forno sono fondamentali per la produzione continua di acciaio di alta qualità.",
+        "cardDescription": "Parti essenziali per forni e attrezzature, garantendo la produzione di acciaio di alta qualità.",
+        "solutions": {
+          "siderurgia_tunnel_furnace_rollers": {
+            "description": "I rulli raffreddati e non raffreddati fanno parte della produzione standard ACEROS. Ad oggi sono stati forniti più di 800 rulli a clienti di primaria importanza. Possiamo fornire sia progetti Aceros sia componenti realizzati su disegno del cliente."
+          },
+          "siderurgia_capl_cgl_furnace": {
+            "description": "Soluzioni complete per linee di ricottura e lavorazione continua e linee di zincatura continua."
+          }
+        }
+      },
+      "oleo_e_gas": {
+        "description": "Forniamo al settore petrolifero e del gas componenti critici che operano ad alta pressione e in ambienti corrosivi. Le nostre superleghe e acciai inossidabili garantiscono l'integrità e la sicurezza delle apparecchiature di esplorazione, produzione e raffinazione.",
+        "solutions": {
+          "oil_gas_valve_components": {
+            "description": "Parti interne per valvole di controllo e sicurezza resistenti alla corrosione e all'alta pressione."
+          },
+          "oil_gas_subsea_equipment_parts": {
+            "description": "Componenti per sistemi sottomarini che richiedono la massima affidabilità e resistenza alla corrosione marina."
+          }
+        }
+      },
+      "guseira": {
+        "subtitle": "Componenti robusti per la produzione di ghisa.",
+        "solutions": {
+          "pig_iron_blast_furnace_components": {
+            "description": "Rivestimenti e parti resistenti all'usura e alle alte temperature per aumentare la vita utile degli altiforni."
+          },
+          "pig_iron_torpedo_cars_ladles": {
+            "description": "Pezzi di ricambio e componenti che garantiscono il trasporto sicuro ed efficiente della ghisa liquida."
+          },
+          "pig_iron_casting_systems": {
+            "description": "Componenti che garantiscono un processo di fusione della ghisa continuo e di alta qualità."
+          }
+        }
+      },
+      "tratamento_termico": {
+        "title": "Trattamento termico",
+        "subtitle": "Leghe speciali per processi ad alta temperatura.",
+        "description": "Sviluppiamo componenti e parti in leghe speciali per forni di trattamento termico, garantendo le prestazioni e la durata delle apparecchiature in processi quali tempra, rinvenimento, cementazione e nitrurazione.",
+        "cardDescription": "Componenti per forni industriali e processi di trattamento termico.",
+        "solutions": {
+          "heat_treatment_grids_baskets": {
+            "description": "Griglie, cestelli e dispositivi in ​​leghe refrattarie per il sostegno di particolari nei forni."
+          },
+          "heat_treatment_rollers_radiant_tubes": {
+            "description": "Rulli trasportatori e tubi radianti per forni continui e discontinui."
+          },
+          "heat_treatment_spare_parts": {
+            "description": "Ventole, supporti e altri componenti per forni di trattamento termico."
+          }
+        }
+      },
+      "engenharia": {
+        "description": "Il nostro team di ingegneri sviluppa soluzioni metallurgiche personalizzate, ottimizzando le prestazioni di apparecchiature e componenti per soddisfare le esigenze specifiche di ciascun cliente. Dalla concezione alla realizzazione, offriamo consulenza e supporto tecnico specializzato.",
+        "solutions": {
+          "engineering_metallurgical_consulting": {
+            "description": "Analisi dei guasti, selezione dei materiali e ottimizzazione dei processi per aumentare la vita utile e l'efficienza delle apparecchiature."
+          },
+          "engineering_alloy_development": {
+            "description": "Creazione di leghe personalizzate per applicazioni specifiche che richiedono proprietà meccaniche, termiche o chimiche superiori."
+          },
+          "engineering_component_design": {
+            "description": "Progettazione e simulazione di componenti utilizzando strumenti CAD e FEA per garantire prestazioni e affidabilità prima della produzione."
+          }
+        }
+      },
+      "certificados": {
+        "description": "L'eccellenza e l'affidabilità dei nostri prodotti sono comprovate attraverso le certificazioni rilasciate dai più autorevoli classificatori industriali e navali del mondo.",
+        "cardDescription": "Esplora le nostre certificazioni e sigilli di qualità che garantiscono la nostra eccellenza."
+      }
+    }
+  }
+}

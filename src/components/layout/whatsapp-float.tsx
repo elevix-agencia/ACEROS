@@ -2,15 +2,15 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useLanguage } from '@/hooks/use-language';
+import { siteExtras } from '@/lib/i18n/site-extras';
 
 // Nota: numero placeholder — substituir pelo WhatsApp comercial real da Aceros
 // quando o cliente confirmar (hoje aponta pro telefone da Metalurgica Daniela)
 const WHATSAPP_NUMBER = '551155556551';
-const DEFAULT_MESSAGE = encodeURIComponent(
-  'Olá! Vim pelo site da Aceros e gostaria de solicitar um orçamento.'
-);
-
 export function WhatsAppFloat() {
+  const { language } = useLanguage();
+  const copy = siteExtras[language].whatsapp;
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -18,14 +18,14 @@ export function WhatsAppFloat() {
     return () => clearTimeout(timer);
   }, []);
 
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${DEFAULT_MESSAGE}`;
+  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(copy.message)}`;
 
   return (
     <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Fale conosco pelo WhatsApp"
+      aria-label={copy.label}
       className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/90 bg-[#25D366] text-white shadow-[0_10px_28px_rgba(7,18,30,.28)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#20bd5a] hover:shadow-[0_14px_32px_rgba(7,18,30,.34)] sm:bottom-8 sm:right-10 sm:h-16 sm:w-16 lg:right-12 ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
       }`}
