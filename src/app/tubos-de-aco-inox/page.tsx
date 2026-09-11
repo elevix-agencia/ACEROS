@@ -66,7 +66,7 @@ export default function TubosInoxPage() {
         "name": "Atendem pedidos para o Brasil e exterior?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, possuímos logística estruturada para atender indústrias em todo o Brasil e exportar para o exterior com pontualidade e segurança."
+            "text": "Sim. Atendemos projetos no Brasil e no exterior. Condições de entrega e prazos são confirmados na proposta comercial."
         }
       }
     ]

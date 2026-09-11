@@ -15,12 +15,8 @@ import {
   Factory, 
   Globe, 
   HardHat,
-  Building2,
-  FlaskConical,
-  Utensils,
-  Thermometer,
-  Droplets,
-  Zap,
+   Thermometer,
+   Zap,
   MessageCircle,
   Phone,
   Mail,
@@ -246,7 +242,7 @@ export function TubosInoxClient() {
                   </tr>
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Inspeção</td>
-                    <td className="p-6">Rastreabilidade total, ensaios de dureza, análise química e ultrassom</td>
+                    <td className="p-6">Rastreabilidade e ensaios definidos para o fornecimento, incluindo dureza, análise química e ultrassom quando aplicáveis</td>
                   </tr>
                 </tbody>
               </table>
@@ -264,15 +260,15 @@ export function TubosInoxClient() {
           </div>
           <div className="grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: Settings, title: 'Fabricação sob medida', text: 'Geometrias e dimensões exatas para sua montagem industrial.' },
-              { icon: ShieldCheck, title: 'Ligas de alta performance', text: 'Resistência superior a ambientes agressivos e corrosivos.' },
-              { icon: Zap, title: 'Resistência Térmica', text: 'Tubos projetados para operar em fornos e zonas de alto calor.' },
+              { icon: Settings, title: 'Fabricação sob medida', text: 'Geometrias, dimensões e acabamento definidos conforme o desenho técnico.' },
+              { icon: ShieldCheck, title: 'Seleção de ligas', text: 'Material especificado conforme temperatura, abrasão, corrosão e demais condições de serviço.' },
+              { icon: Zap, title: 'Aplicações de alta temperatura', text: 'Tubos desenvolvidos para fornos e processos térmicos industriais.' },
               { icon: Layers, title: 'Processo de Centrifugação', text: 'Processo que favorece maior densidade estrutural e concentricidade da peça tubular.' },
-              { icon: FileText, title: 'Certificação de Qualidade', text: 'Atendimento às normas internacionais mais rigorosas.' },
-              { icon: Award, title: 'Durabilidade Elevada', text: 'Redução de paradas para manutenção e troca de peças.' },
-              { icon: PenTool, title: 'Usinagem de Precisão', text: 'Acabamento final pronto para instalação imediata.' },
-              { icon: Globe, title: 'Atendimento Nacional', text: 'Entregamos em todo o Brasil e no exterior com segurança.' },
-              { icon: Users, title: 'Engenharia de Materiais', text: 'Suporte técnico na escolha da liga ideal para seu fluido.' }
+              { icon: FileText, title: 'Gestão da qualidade', text: 'Sistema de Gestão da Qualidade certificado conforme ISO 9001:2015.' },
+              { icon: Award, title: 'Projeto para a condição de serviço', text: 'Parâmetros de fabricação avaliados conforme os requisitos informados pelo cliente.' },
+              { icon: PenTool, title: 'Usinagem conforme desenho', text: 'Acabamento e tolerâncias dimensionais definidos pelo projeto.' },
+              { icon: Globe, title: 'Brasil e exterior', text: 'Atendimento comercial para projetos nacionais e internacionais.' },
+              { icon: Users, title: 'Engenharia de Materiais', text: 'Apoio técnico para selecionar a liga adequada à aplicação.' }
             ].map((item, i) => (
               <Card key={i} className="flex h-full flex-col border-slate-100 transition-shadow hover:shadow-lg">
                 <CardHeader className="flex flex-col items-center text-center">
@@ -295,22 +291,19 @@ export function TubosInoxClient() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl font-bold uppercase">Setores Atendidos</h2>
-            <p className="text-slate-400 mt-4">Nossos tubos operam nos ambientes industriais mais desafiadores.</p>
+            <p className="text-slate-400 mt-4">Aplicações atendidas conforme desenho e requisitos de operação.</p>
           </div>
           <div className="grid grid-cols-2 items-stretch gap-8 md:grid-cols-3 lg:grid-cols-5">
             {[
               { icon: Factory, label: 'Siderurgia' },
               { icon: HardHat, label: 'Mineração' },
-              { icon: FileText, label: 'Papel e Celulose' },
-              { icon: FlaskConical, label: 'Indústria Química' },
-              { icon: Droplets, label: 'Petroquímica' },
               { icon: Thermometer, label: 'Tratamento Térmico' },
-              { icon: Utensils, label: 'Indústria Alimentícia' },
-              { icon: Building2, label: 'Cimento' },
-              { icon: Zap, label: 'Energia' },
+              { icon: Layers, label: 'Galvanização' },
+              { icon: Settings, label: 'Indústria Guseira' },
+              { icon: Globe, label: 'Setor Naval' },
               { icon: Settings, label: 'Metalurgia' }
             ].map((app, i) => (
-              <div key={i} className="flex h-full min-h-[150px] flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-6 transition-colors hover:bg-white/10">
+                <div key={i} className="flex h-full min-h-[150px] flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-6 transition-colors hover:bg-white/10">
                 <app.icon className="h-10 w-10 text-accent" />
                 <span className="font-semibold text-center">{app.label}</span>
               </div>
@@ -425,8 +418,8 @@ export function TubosInoxClient() {
                 </div>
               </div>
               <p className="text-slate-400 text-sm mt-6 italic">
-                Cada peça sai da nossa fábrica com rastreabilidade total, laudo metalúrgico, ensaios de dureza,
-                análise química e ultrassom realizados em nosso laboratório próprio.
+                Conforme os requisitos do fornecimento, a documentação pode incluir rastreabilidade, laudo metalúrgico,
+                ensaios de dureza, análise química e ultrassom.
               </p>
             </div>
             <div className="flex justify-center">
@@ -501,7 +494,7 @@ export function TubosInoxClient() {
             <AccordionItem value="item-5">
               <AccordionTrigger className="text-left font-bold text-lg">Atendem pedidos para o Brasil e exterior?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base">
-                Sim, possuímos logística estruturada para entregar nossos tubos industriais em todo o Brasil e exportar para o exterior com pontualidade e segurança.
+                Sim. Atendemos projetos no Brasil e no exterior. Condições de entrega e prazos são confirmados na proposta comercial.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

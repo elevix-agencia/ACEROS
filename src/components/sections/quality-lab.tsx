@@ -210,9 +210,9 @@ export function QualityLab() {
       <section className="bg-white py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1 text-sm font-semibold uppercase tracking-wide text-accent"><ShieldCheck className="h-4 w-4" /> Rastreabilidade total</div>
-            <h2 className="font-headline text-3xl font-bold text-slate-900 md:text-4xl">Cada peça sai da fábrica com laudo metalúrgico</h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Todo pedido é entregue com documentação aplicável ao projeto, incluindo análise química, dureza, ultrassom e memorial do processo, conforme os requisitos definidos para o fornecimento.</p>
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1 text-sm font-semibold uppercase tracking-wide text-accent"><ShieldCheck className="h-4 w-4" /> Rastreabilidade e documentação</div>
+            <h2 className="font-headline text-3xl font-bold text-slate-900 md:text-4xl">Ensaios e documentação conforme o projeto</h2>
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Cada fornecimento é acompanhado pela documentação definida para o projeto, que pode incluir análise química, dureza, ultrassom e registros do processo.</p>
             <p className="mt-5 text-sm italic text-slate-500">Documentação técnica organizada para rastreabilidade e auditoria industrial.</p>
           </div>
         </div>

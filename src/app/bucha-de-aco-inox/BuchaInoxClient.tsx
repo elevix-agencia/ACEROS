@@ -15,12 +15,7 @@ import {
   Factory, 
   Globe, 
   HardHat,
-  Building2,
-  FlaskConical,
-  Utensils,
-  Thermometer,
-  Droplets,
-  Zap,
+   Thermometer,
   MessageCircle,
   Phone,
   Mail,
@@ -227,7 +222,7 @@ export function BuchaInoxClient() {
                   </tr>
                   <tr>
                     <td className="p-6 font-bold bg-slate-50/50">Inspeção</td>
-                    <td className="p-6">Rastreabilidade total, dureza, análise química, Ultrassom e Líquido Penetrante</td>
+                    <td className="p-6">Rastreabilidade e ensaios definidos para o fornecimento, incluindo dureza, análise química, ultrassom e líquido penetrante quando aplicáveis</td>
                   </tr>
                 </tbody>
               </table>
@@ -242,19 +237,19 @@ export function BuchaInoxClient() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-slate-900 uppercase">Diferenciais Aceros</h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">Por que grandes indústrias confiam na Aceros para o fornecimento de buchas especiais.</p>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">Capacidades técnicas para a fabricação de buchas centrifugadas sob medida.</p>
           </div>
           <div className="grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { icon: Award, title: 'Peça de Alta Liga (Não Commodity)', text: 'Fabricação própria por centrifugação + Engenharia de Materiais + Usinagem CNC sob medida.' },
               { icon: Settings, title: 'Fabricação sob medida', text: 'Produção customizada para atender requisitos exatos de montagem.' },
-              { icon: ShieldCheck, title: 'Alta resistência ao desgaste', text: 'Ligas selecionadas para máxima performance em ambientes abrasivos.' },
-              { icon: CheckCircle, title: 'Controle rigoroso de qualidade', text: 'Inspeções em todas as etapas do processo produtivo.' },
-              { icon: Users, title: 'Atendimento técnico especializado', text: 'Suporte de engenheiros especialistas em materiais metálicos.' },
-              { icon: FileText, title: 'Produção conforme projeto', text: 'Capacidade de interpretar e executar projetos complexos.' },
-              { icon: Factory, title: 'Soluções personalizadas', text: 'Desenvolvimento conjunto de soluções para problemas de corrosão.' },
-              { icon: Globe, title: 'Atendimento para todo o Brasil', text: 'Logística ágil para atender indústrias em qualquer região.' },
-              { icon: HardHat, title: 'Fabricação para aplicações severas', text: 'Especialistas em componentes que operam no limite térmico e químico.' }
+              { icon: ShieldCheck, title: 'Seleção de ligas', text: 'Material definido conforme abrasão, corrosão, temperatura e requisitos mecânicos.' },
+              { icon: CheckCircle, title: 'Controle de qualidade', text: 'Inspeções e ensaios definidos conforme os requisitos do fornecimento.' },
+              { icon: Users, title: 'Atendimento técnico', text: 'Apoio da equipe de engenharia na análise da aplicação.' },
+              { icon: FileText, title: 'Produção conforme projeto', text: 'Fabricação e usinagem orientadas pelo desenho técnico.' },
+              { icon: Factory, title: 'Soluções personalizadas', text: 'Desenvolvimento conforme as condições de serviço informadas pelo cliente.' },
+              { icon: Globe, title: 'Brasil e exterior', text: 'Atendimento comercial para projetos nacionais e internacionais.' },
+              { icon: HardHat, title: 'Aplicações severas', text: 'Componentes desenvolvidos para condições térmicas, mecânicas e químicas específicas.' }
             ].map((item, i) => (
               <Card key={i} className="flex h-full flex-col border-slate-100 transition-shadow hover:shadow-lg">
                 <CardHeader className="flex flex-col items-center text-center">
@@ -277,7 +272,7 @@ export function BuchaInoxClient() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl font-bold uppercase">Principais Aplicações</h2>
-            <p className="text-slate-400 mt-4">Nossas buchas atendem os setores mais exigentes da cadeia produtiva.</p>
+            <p className="text-slate-400 mt-4">Aplicações atendidas conforme desenho e requisitos de operação.</p>
           </div>
           <div className="grid grid-cols-2 items-stretch gap-8 md:grid-cols-3 lg:grid-cols-5">
             {[
@@ -285,12 +280,9 @@ export function BuchaInoxClient() {
               { icon: Factory, label: 'Siderurgia' },
               { icon: Layers, label: 'Sink Roll & Pontas' },
               { icon: Thermometer, label: 'Rolos de Forno' },
-              { icon: FlaskConical, label: 'Indústria Química' },
-              { icon: Building2, label: 'Cimento' },
-              { icon: FileText, label: 'Papel e Celulose' },
-              { icon: Utensils, label: 'Indústria Alimentícia' },
-              { icon: Droplets, label: 'Petroquímica' },
-              { icon: Zap, label: 'Energia' }
+              { icon: Thermometer, label: 'Tratamento Térmico' },
+              { icon: Factory, label: 'Galvanização' },
+              { icon: Settings, label: 'Metalurgia' }
             ].map((app, i) => (
               <div key={i} className="flex h-full min-h-[150px] flex-col items-center justify-center gap-4 rounded-2xl bg-white/5 p-6 transition-colors hover:bg-white/10">
                 <app.icon className="h-10 w-10 text-accent" />
@@ -299,7 +291,7 @@ export function BuchaInoxClient() {
             ))}
           </div>
           <p className="mt-16 text-center text-slate-300 max-w-3xl mx-auto">
-            Atendemos desde projetos específicos até fornecimentos contínuos para indústrias de diversos portes, garantindo sempre a mesma qualidade e compromisso da Metalúrgica Daniela.
+            Cada projeto é analisado conforme aplicação, desenho técnico, material e requisitos de inspeção informados pelo cliente.
           </p>
         </div>
       </section>
@@ -349,9 +341,9 @@ export function BuchaInoxClient() {
                 { step: '02', title: 'Análise Técnica', desc: 'Validação de tolerâncias e viabilidade produtiva pela engenharia.' },
                 { step: '03', title: 'Definição da Liga', desc: 'Escolha do material ideal (ASTM A297) para o regime de trabalho.' },
                 { step: '04', title: 'Fabricação', desc: 'Geração do blank por centrifugação e usinagem CNC de precisão.' },
-                { step: '05', title: 'Controle Dimensional', desc: 'Medição precisa para garantir conformidade total com o desenho.' },
+                { step: '05', title: 'Controle Dimensional', desc: 'Medição das dimensões e tolerâncias especificadas no desenho.' },
                 { step: '06', title: 'Inspeção de Qualidade', desc: 'Ensaios não destrutivos e testes metalúrgicos rigorosos.' },
-                { step: '07', title: 'Entrega', desc: 'Expedição segura para qualquer local do Brasil.' }
+                { step: '07', title: 'Entrega', desc: 'Expedição protegida conforme as condições definidas na proposta.' }
               ].map((item, i) => (
                 <div key={i} className={`flex flex-col md:flex-row items-center gap-8 ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                   <div className="flex-1 w-full md:text-right">
@@ -393,8 +385,8 @@ export function BuchaInoxClient() {
                   'Fabricação própria via centrifugação ASTM A297',
                   'Especialistas em Sink Roll e Furnace Roll',
                   'Desenvolvimento de componentes sob medida (não commodities)',
-                  'Alto padrão de qualidade e rastreabilidade total',
-                  'Soluções robustas para aplicações de calor e abrasão extrema'
+                  'Controle e rastreabilidade conforme os requisitos do fornecimento',
+                  'Soluções para aplicações sujeitas a calor, abrasão e corrosão'
                 ].map((point, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
@@ -438,8 +430,8 @@ export function BuchaInoxClient() {
                 </div>
               </div>
               <p className="text-slate-400 text-sm mt-6 italic">
-                Cada bucha sai da nossa fábrica com rastreabilidade total, laudo metalúrgico, ensaios de dureza,
-                análise química e ultrassom realizados em nosso laboratório próprio.
+                Conforme os requisitos do fornecimento, a documentação pode incluir rastreabilidade, laudo metalúrgico,
+                ensaios de dureza, análise química e ultrassom.
               </p>
             </div>
             <div className="flex justify-center">
