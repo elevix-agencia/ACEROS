@@ -54,20 +54,20 @@ export function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />
       <div className="absolute left-0 top-0 h-full w-1 bg-accent" />
 
-      <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-80px)] items-center px-4 py-16 lg:pb-28 lg:pt-20">
+      <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-80px)] items-center px-4 py-10 sm:py-16 lg:pb-28 lg:pt-20">
         <div className="w-full max-w-[920px]">
             <div className="max-w-[920px]">
-                <div className="mb-7 flex animate-fade-in-up items-center gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-accent">
+                <div className="mb-5 flex animate-fade-in-up items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-accent sm:mb-7 sm:text-[11px] sm:tracking-[0.24em]">
                   <span className="h-px w-10 bg-accent" />
                   {copy.eyebrow}
                 </div>
-                <h1 className="max-w-[900px] animate-fade-in-up text-balance font-headline text-[clamp(2.25rem,3.35vw,3.65rem)] font-semibold uppercase leading-[1.08] tracking-[-0.025em] text-white">
+                <h1 className="max-w-[900px] animate-fade-in-up text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] text-white sm:text-[clamp(2.25rem,3.35vw,3.65rem)]">
                     {t.hero.main_title}
                 </h1>
-                <p className="mt-7 max-w-[700px] animate-fade-in-up border-l border-accent/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
+                <p className="mt-5 max-w-[700px] animate-fade-in-up border-l border-accent/80 pl-4 text-[15px] leading-6 text-slate-200 sm:mt-7 sm:pl-5 sm:text-lg sm:leading-8">
                   {t.hero.subtitle}
                 </p>
-                <div className="mt-10 flex animate-fade-in-up flex-col gap-3 sm:flex-row">
+                <div className="mt-7 flex animate-fade-in-up flex-col gap-3 sm:mt-10 sm:flex-row">
                     <Button asChild size="lg" className="h-14 rounded-none bg-accent px-8 text-xs font-bold uppercase tracking-[0.12em] text-white hover:bg-[#cf5f11] sm:h-16">
                         <Link href="/contato" className="flex items-center gap-3">
                           {t.hero.contact_us}
@@ -78,7 +78,7 @@ export function Hero() {
                         <Link href="/produtos">{t.hero.learn_more}</Link>
                     </Button>
                 </div>
-                <div className="mt-7 flex items-center gap-3" aria-label={copy.selectorLabel}>
+                <div className="mt-5 flex items-center gap-3 sm:mt-7" aria-label={copy.selectorLabel}>
                   {translatedSlides.map((slide, index) => (
                     <button
                       key={slide.src}
