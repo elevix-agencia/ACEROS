@@ -9,6 +9,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
 import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
 import { LocationMap } from './location-map';
 import { saveContactMessage } from '@/lib/contact-actions';
@@ -26,13 +27,26 @@ import { useLanguage } from '@/hooks/use-language';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'O nome é obrigatório.' }),
+  company: z.string().min(2, { message: 'A empresa é obrigatória.' }),
   email: z.string().email({ message: 'Por favor, insira um email válido.' }),
   phone: z
     .string()
     .min(10, { message: 'Por favor, insira um telefone válido.' }),
-  message: z
-    .string()
-    .min(10, { message: 'A mensagem deve ter pelo menos 10 caracteres.' }),
+  product: z.string().min(2, { message: 'Informe o produto ou a aplicação.' }),
+  material: z.string().optional(),
+  dimensions: z.string().min(2, { message: 'Informe as dimensões e a quantidade.' }),
+  deadline: z.string().optional(),
+  location: z.string().min(2, { message: 'Informe o país e o estado.' }),
+  drawing: z
+    .any()
+    .refine(
+      (files) => !files?.[0] || files[0].size <= 5 * 1024 * 1024,
+      'O arquivo deve ter no máximo 5 MB.',
+    ),
+  message: z.string().optional(),
+  privacy: z.boolean().refine((accepted) => accepted, {
+    message: 'É necessário aceitar a Política de Privacidade.',
+  }),
 });
 
 export function Contact() {
@@ -43,9 +57,17 @@ export function Contact() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: '',
+      company: '',
       email: '',
       phone: '',
+      product: '',
+      material: '',
+      dimensions: '',
+      deadline: '',
+      location: '',
+      drawing: undefined,
       message: '',
+      privacy: false,
     },
   });
 
@@ -53,7 +75,23 @@ export function Contact() {
   const whatsappNumber = '551155556551';
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const result = await saveContactMessage(values);
+    const payload = new FormData();
+    payload.set('name', values.name);
+    payload.set('company', values.company);
+    payload.set('email', values.email);
+    payload.set('phone', values.phone);
+    payload.set('product', values.product);
+    payload.set('material', values.material || '');
+    payload.set('dimensions', values.dimensions);
+    payload.set('deadline', values.deadline || '');
+    payload.set('location', values.location);
+    payload.set('message', values.message || '');
+    payload.set('privacy', String(values.privacy));
+
+    const drawing = values.drawing?.[0];
+    if (drawing) payload.set('drawing', drawing);
+
+    const result = await saveContactMessage(payload);
     if (result.success) {
       toast({
         title: t.contact.toast_success_title,
@@ -97,69 +135,101 @@ export function Contact() {
                 <h3 className="mb-8 font-headline text-2xl font-bold text-[#07121e] sm:text-3xl">
                   {t.contact.form_title}
                 </h3>
+                <p className="-mt-4 mb-8 text-sm leading-6 text-slate-600">
+                  {t.contact.form_required_hint}
+                </p>
                 <Form {...form}>
                   <form
                     onSubmit={form.handleSubmit(onSubmit)}
                     className="space-y-6"
                   >
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
+                    <div className="grid gap-6 sm:grid-cols-2">
+                      <FormField control={form.control} name="name" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">{t.contact.form_name}</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder={t.contact.form_name_placeholder}
-                              className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]"
-                              {...field}
-                            />
-                          </FormControl>
+                          <FormLabel className="text-base">{t.contact.form_name} *</FormLabel>
+                          <FormControl><Input required autoComplete="name" placeholder={t.contact.form_name_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
+                      )} />
+                      <FormField control={form.control} name="company" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">{t.contact.form_email}</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="email"
-                              placeholder={t.contact.form_email_placeholder}
-                              className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]"
-                              {...field}
-                            />
-                          </FormControl>
+                          <FormLabel className="text-base">{t.contact.form_company} *</FormLabel>
+                          <FormControl><Input required autoComplete="organization" placeholder={t.contact.form_company_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
+                      )} />
+                    </div>
+                    <div className="grid gap-6 sm:grid-cols-2">
+                      <FormField control={form.control} name="email" render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">{t.contact.form_phone}</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder={t.contact.form_phone_placeholder}
-                              className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]"
-                              {...field}
-                            />
-                          </FormControl>
+                          <FormLabel className="text-base">{t.contact.form_email} *</FormLabel>
+                          <FormControl><Input required autoComplete="email" type="email" placeholder={t.contact.form_email_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
                           <FormMessage />
                         </FormItem>
-                      )}
-                    />
+                      )} />
+                      <FormField control={form.control} name="phone" render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-base">{t.contact.form_phone} *</FormLabel>
+                          <FormControl><Input required autoComplete="tel" inputMode="tel" placeholder={t.contact.form_phone_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )} />
+                    </div>
+                    <div className="grid gap-6 sm:grid-cols-2">
+                      <FormField control={form.control} name="product" render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-base">{t.contact.form_product} *</FormLabel>
+                          <FormControl><Input required placeholder={t.contact.form_product_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )} />
+                      <FormField control={form.control} name="material" render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-base">{t.contact.form_material}</FormLabel>
+                          <FormControl><Input placeholder={t.contact.form_material_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )} />
+                    </div>
+                    <div className="grid gap-6 sm:grid-cols-2">
+                      <FormField control={form.control} name="dimensions" render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-base">{t.contact.form_dimensions} *</FormLabel>
+                          <FormControl><Input required placeholder={t.contact.form_dimensions_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )} />
+                      <FormField control={form.control} name="deadline" render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-base">{t.contact.form_deadline}</FormLabel>
+                          <FormControl><Input placeholder={t.contact.form_deadline_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )} />
+                    </div>
+                    <FormField control={form.control} name="location" render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-base">{t.contact.form_location} *</FormLabel>
+                        <FormControl><Input required autoComplete="address-level1" placeholder={t.contact.form_location_placeholder} className="rounded-none border-slate-300 bg-[#f8fafc] py-6 text-base focus-visible:ring-[#ef7b21]" {...field} /></FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
+                    <FormField control={form.control} name="drawing" render={({ field: { onChange, value: _value, ...field } }) => (
+                      <FormItem>
+                        <FormLabel className="text-base">{t.contact.form_drawing}</FormLabel>
+                        <FormControl>
+                          <Input type="file" accept=".pdf,.dwg,.dxf,.step,.stp,.iges,.igs,.jpg,.jpeg,.png" className="h-auto rounded-none border-slate-300 bg-[#f8fafc] py-3 text-sm file:mr-4 file:border-0 file:bg-[#07121e] file:px-4 file:py-2 file:font-semibold file:text-white" onChange={(event) => onChange(event.target.files)} {...field} />
+                        </FormControl>
+                        <p className="text-sm leading-5 text-slate-500">{t.contact.form_drawing_help}</p>
+                        <FormMessage />
+                      </FormItem>
+                    )} />
                     <FormField
                       control={form.control}
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-base">{t.contact.form_message}</FormLabel>
+                          <FormLabel className="text-base">{t.contact.form_message_optional}</FormLabel>
                           <FormControl>
                             <Textarea
                               placeholder={t.contact.form_message_placeholder}
@@ -172,6 +242,22 @@ export function Contact() {
                         </FormItem>
                       )}
                     />
+                    <FormField control={form.control} name="privacy" render={({ field }) => (
+                      <FormItem className="flex items-start gap-3 space-y-0 border border-slate-200 bg-slate-50 p-4">
+                        <FormControl>
+                          <Checkbox checked={field.value} onCheckedChange={field.onChange} aria-required="true" className="mt-1 border-slate-500 data-[state=checked]:border-[#ef7b21] data-[state=checked]:bg-[#ef7b21]" />
+                        </FormControl>
+                        <div className="space-y-1 leading-none">
+                          <FormLabel className="text-sm font-normal leading-6 text-slate-700">
+                            {t.contact.form_privacy_agreement}{' '}
+                            <Link href="/politica-de-privacidade" target="_blank" className="font-semibold text-[#b84d08] underline underline-offset-2">
+                              {t.contact.form_privacy_link}
+                            </Link>.
+                          </FormLabel>
+                          <FormMessage />
+                        </div>
+                      </FormItem>
+                    )} />
                     <div className="flex flex-col gap-4 pt-4">
                       <Button
                         type="submit"

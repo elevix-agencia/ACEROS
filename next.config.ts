@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
     'https://*.cloudworkstations.dev',
   ],
   experimental: {
+    serverActions: {
+      bodySizeLimit: '7mb',
+    },
   },
   typescript: {
     ignoreBuildErrors: true,
