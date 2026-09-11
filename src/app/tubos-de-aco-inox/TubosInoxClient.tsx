@@ -104,7 +104,7 @@ export function TubosInoxClient() {
     { url: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-02.jpg', alt: 'Tubo de aço inox usinado — usinagem da ponta (munhão)' },
     { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg', alt: 'Tubo de aço inox usinado e polido — peça acabada com revenido' },
     { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-02.jpg', alt: 'Tubo de aço inox polido, acabamento espelhado' },
-    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg', alt: 'Tubo de aço inox — peça acabada, controle dimensional rigoroso' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-07.jpg', alt: 'Tubo de aço inox — peça acabada, controle dimensional rigoroso' },
     { url: '/images/aceros/tubos/tubo-aco-inox-misto-aceros-01.jpg', alt: 'Tubo de aço inox com acabamento misto (usinado + polido)' },
   ];
 
@@ -134,7 +134,7 @@ export function TubosInoxClient() {
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="font-headline text-4xl md:text-6xl font-extrabold uppercase tracking-tight leading-tight"
+              className="font-headline text-3xl sm:text-4xl md:text-6xl font-extrabold uppercase tracking-tight leading-tight"
             >
               Tubos de Aço Inox Fabricados Sob Medida para Aplicações Industriais
             </motion.h1>
@@ -144,7 +144,7 @@ export function TubosInoxClient() {
               transition={{ delay: 0.2 }}
               className="mt-6 text-lg md:text-2xl text-slate-300 max-w-2xl"
             >
-              A Aceros fabrica tubos de aço inox e tubos centrifugados com alta resistência mecânica e excelente desempenho para atender às mais diversas aplicações industriais.
+              Tubos mecânicos centrifugados em ligas selecionadas conforme temperatura, abrasão, corrosão e desenho técnico.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -514,7 +514,7 @@ export function TubosInoxClient() {
           <div className="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-2xl overflow-hidden">
             <div className="p-8 md:p-12 bg-primary text-white flex flex-col justify-center">
               <h2 className="font-headline text-3xl font-bold uppercase mb-6">Solicite seu Orçamento de Tubos</h2>
-              <p className="text-slate-400 mb-8">Especialistas prontos para analisar seu projeto e enviar uma proposta comercial competitiva do Grupo Daniela.</p>
+              <p className="text-slate-400 mb-8">Especialistas prontos para analisar seu projeto e preparar uma proposta comercial da Aceros.</p>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-accent/20 p-3 rounded-full"><Phone className="h-6 w-6 text-accent" /></div>
@@ -552,7 +552,7 @@ export function TubosInoxClient() {
                     </div>
                   </div>
                   <div>
-                    <label className="text-sm font-bold text-slate-700 block mb-2">E-mail Corporativo</label>
+                    <label className="text-sm font-bold text-slate-700 block mb-2">E-mail Corporativo *</label>
                     <Input name="email" type="email" placeholder="email@empresa.com.br" required className="bg-slate-50 border-slate-200 track-email-tubos" disabled={isSubmitting} />
                   </div>
                   <div>
@@ -560,9 +560,18 @@ export function TubosInoxClient() {
                     <Textarea name="message" placeholder="Descreva diâmetros, espessuras, comprimentos e ligas desejadas ou mencione o estágio de acabamento..." rows={4} className="bg-slate-50 border-slate-200" disabled={isSubmitting} />
                   </div>
                 </div>
-                <p className="text-[10px] text-slate-500">
-                  Seus dados serão utilizados exclusivamente para retorno do orçamento solicitado, conforme nossa <Link href="/politica-de-privacidade" className="underline font-bold text-slate-900 hover:text-accent">Política de Privacidade</Link>.
-                </p>
+                <label className="flex items-start gap-3 text-xs leading-relaxed text-slate-600">
+                  <input
+                    type="checkbox"
+                    name="privacy"
+                    required
+                    disabled={isSubmitting}
+                    className="mt-0.5 h-4 w-4 shrink-0 accent-orange-500"
+                  />
+                  <span>
+                    Li e aceito a <Link href="/politica-de-privacidade" className="underline font-bold text-slate-900 hover:text-accent">Política de Privacidade</Link> e autorizo o uso dos dados para retorno desta solicitação. *
+                  </span>
+                </label>
                 <Button type="submit" disabled={isSubmitting} className="w-full bg-accent text-accent-foreground hover:bg-accent/90 py-8 text-xl font-bold uppercase tracking-wider">
                   {isSubmitting ? (
                     <>
@@ -581,55 +590,6 @@ export function TubosInoxClient() {
         </div>
       </section>
 
-      {/* Rodapé */}
-      <footer className="bg-white border-t py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div>
-              <Image 
-                src="/images/imgur/OBD0nJ0.png" 
-                alt="Aceros Logo" 
-                width={180} 
-                height={50} 
-                className="mb-6"
-              />
-              <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-                Especialista na fabricação de tubos industriais em aços inoxidáveis e ligas de alto desempenho do Grupo Metalúrgica Daniela.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Contato</h4>
-              <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
-                <li className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-accent" /> +55 (11) 5555-6551</li>
-                <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-accent" /> vendas@aceros.com.br</li>
-                <li className="flex items-start gap-3 text-slate-900 font-medium">
-                  <FileText className="h-4 w-4 text-accent shrink-0" />
-                  <Link href="/politica-de-privacidade" className="hover:underline">Política de Privacidade</Link>
-                </li>
-                <li className="flex items-start gap-3"><MapPin className="h-4 w-4 text-accent shrink-0" /> Rua Hans Oersted, 20–118, Cidade Monções, São Paulo/SP</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-lg mb-6 uppercase tracking-tight">Localização</h4>
-              <div className="rounded-xl overflow-hidden h-40 border shadow-sm grayscale hover:grayscale-0 transition-all">
-                <iframe
-                  src="https://www.google.com/maps?q=Rua+Hans+Oersted,+20-118,+Cidade+Moncoes,+Sao+Paulo,+SP,+04575-010&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  title="Localização Aceros"
-                ></iframe>
-              </div>
-            </div>
-          </div>
-          <div className="mt-16 pt-8 border-t text-center text-xs text-slate-400">
-            &copy; {new Date().getFullYear()} Aceros Inoxidáveis. Todos os direitos reservados.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

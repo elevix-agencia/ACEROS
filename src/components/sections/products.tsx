@@ -125,7 +125,7 @@ const catalogoAceros: ProdutoCatalogo[] = [
   },
   {
     titulo: 'Rolos para Zincagem',
-    descricao: 'Rolos resistentes ao ataque do zinco fundido, alta vida útil.',
+    descricao: 'Rolos desenvolvidos conforme a condição de operação em contato com zinco fundido.',
     aplicacao: 'Siderurgia · Galvanização',
   },
   {
@@ -170,7 +170,7 @@ const catalogoAceros: ProdutoCatalogo[] = [
   },
   {
     titulo: 'Cilindros Inox + Tungstênio',
-    descricao: 'Exclusividade Aceros: cilindros com adição de tungstênio para abrasão extrema.',
+    descricao: 'Cilindros com adição de tungstênio para aplicações sujeitas a abrasão severa.',
     aplicacao: 'Mineração',
   },
 ];
@@ -184,9 +184,9 @@ export function Products() {
           <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
             O que fabricamos
           </p>
-          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">
+          <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-6">
             Peças centrifugadas em aço inoxidável, sob medida
-          </h2>
+          </h1>
           <p className="text-lg text-muted-foreground">
             Não vendemos commodities de prateleira. Fabricamos componentes de alta liga para
             plantas industriais que operam nos limites de calor, abrasão e corrosão.

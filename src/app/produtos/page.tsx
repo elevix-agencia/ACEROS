@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 export default function ProdutosPage() {
   return (
     <div className="pt-20">
-      <h1 className="sr-only">Produtos Aceros — Peças Centrifugadas em Aço Inoxidável</h1>
       <Products />
       <WhatsAppCta />
     </div>
