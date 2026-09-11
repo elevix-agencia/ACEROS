@@ -62,22 +62,28 @@ export function ManufacturingHistory() {
               >
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Card className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-                       <span className="absolute top-2 right-2 z-10 rounded-full bg-black/40 px-2.5 py-1 text-xs font-mono text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        #{String(index + 1).padStart(3, '0')}
-                      </span>
-                      <div className="relative aspect-square w-full bg-white">
-                        <Image
-                          src={image.imageUrl}
-                          alt={image.description}
-                          fill
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          data-ai-hint={image.imageHint}
-                          className="object-contain p-4 transition-transform duration-500 group-hover:scale-110"
-                        />
-                         <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      </div>
-                    </Card>
+                    <button
+                      type="button"
+                      aria-label={image.description}
+                      className="group block w-full cursor-pointer rounded-lg text-left transition-transform duration-300 hover:scale-105"
+                    >
+                      <Card className="relative overflow-hidden rounded-lg shadow-lg">
+                         <span className="absolute top-2 right-2 z-10 rounded-full bg-black/40 px-2.5 py-1 text-xs font-mono text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          #{String(index + 1).padStart(3, '0')}
+                        </span>
+                        <div className="relative aspect-square w-full bg-white">
+                          <Image
+                            src={image.imageUrl}
+                            alt={image.description}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            data-ai-hint={image.imageHint}
+                            className="object-contain p-4 transition-transform duration-500 group-hover:scale-110"
+                          />
+                           <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                        </div>
+                      </Card>
+                    </button>
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background border-accent/20">
                     <DialogHeader>

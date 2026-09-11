@@ -72,19 +72,25 @@ export function MainGallery() {
                     }}
                   >
                     <DialogTrigger asChild>
-                      <Card className="group relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-primary/20 cursor-pointer">
-                        <div className="aspect-square w-full relative">
-                          <Image
-                            src={image.imageUrl}
-                            alt={image.description}
-                            fill
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            data-ai-hint={image.imageHint}
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
-                          />
-                        </div>
-                        <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      </Card>
+                      <button
+                        type="button"
+                        aria-label={image.description}
+                        className="group block w-full cursor-pointer rounded-2xl text-left transition-transform duration-500 hover:scale-105"
+                      >
+                        <Card className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-primary/20">
+                          <div className="aspect-square w-full relative">
+                            <Image
+                              src={image.imageUrl}
+                              alt={image.description}
+                              fill
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              data-ai-hint={image.imageHint}
+                              className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                          </div>
+                          <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                        </Card>
+                      </button>
                     </DialogTrigger>
                   </div>
 

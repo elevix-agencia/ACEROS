@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
-import { motion } from 'framer-motion';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
 const heroSlides = [
@@ -40,69 +39,32 @@ export function Hero() {
 
   return (
     <section className="hero-section relative isolate min-h-[calc(100svh-80px)] overflow-hidden bg-[#07121e] text-white">
-      {heroSlides.map((slide, index) => (
-        <Image
-          key={slide.src}
-          src={slide.src}
-          alt={slide.alt}
-          fill
-          sizes="100vw"
-          className={`object-cover object-center transition-opacity duration-1000 ${index === activeSlide ? 'opacity-70' : 'opacity-0'}`}
-          priority={index === 0}
-        />
-      ))}
+      <Image
+        key={heroSlides[activeSlide].src}
+        src={heroSlides[activeSlide].src}
+        alt={heroSlides[activeSlide].alt}
+        fill
+        sizes="100vw"
+        className="object-cover object-center opacity-70"
+        priority={activeSlide === 0}
+      />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />
       <div className="absolute left-0 top-0 h-full w-1 bg-accent" />
 
       <div className="container relative z-10 mx-auto flex min-h-[calc(100svh-80px)] items-center px-4 py-16 lg:pb-28 lg:pt-20">
         <div className="w-full max-w-[920px]">
-            <motion.div
-                className="max-w-[920px]"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                    hidden: { opacity: 0 },
-                    visible: { 
-                      opacity: 1,
-                      transition: {
-                        staggerChildren: 0.3,
-                        delayChildren: 0.2,
-                      }
-                    }
-                }}
-            >
-                <motion.div
-                  className="mb-7 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-accent"
-                  variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }}
-                >
+            <div className="max-w-[920px]">
+                <div className="mb-7 flex animate-fade-in-up items-center gap-3 text-[11px] font-bold uppercase tracking-[0.24em] text-accent">
                   <span className="h-px w-10 bg-accent" />
                   Engenharia metalúrgica desde 2015
-                </motion.div>
-                <motion.h1
-                  className="max-w-[900px] text-balance font-headline text-[clamp(2.25rem,3.35vw,3.65rem)] font-semibold uppercase leading-[1.08] tracking-[-0.025em] text-white"
-                  variants={{
-                    hidden: { opacity: 0, y: 16 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] } }
-                  }}
-                >
+                </div>
+                <h1 className="max-w-[900px] animate-fade-in-up text-balance font-headline text-[clamp(2.25rem,3.35vw,3.65rem)] font-semibold uppercase leading-[1.08] tracking-[-0.025em] text-white">
                     {t.hero.main_title}
-                </motion.h1>
-                <motion.p 
-                  className="mt-7 max-w-[700px] border-l border-accent/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8"
-                   variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-                  }}
-                >
+                </h1>
+                <p className="mt-7 max-w-[700px] animate-fade-in-up border-l border-accent/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
                   {t.hero.subtitle}
-                </motion.p>
-                <motion.div 
-                  className="mt-10 flex flex-col gap-3 sm:flex-row"
-                   variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-                  }}
-                >
+                </p>
+                <div className="mt-10 flex animate-fade-in-up flex-col gap-3 sm:flex-row">
                     <Button asChild size="lg" className="h-14 rounded-none bg-accent px-8 text-xs font-bold uppercase tracking-[0.12em] text-white hover:bg-[#cf5f11] sm:h-16">
                         <Link href="/contato" className="flex items-center gap-3">
                           {t.hero.contact_us}
@@ -112,12 +74,8 @@ export function Hero() {
                     <Button asChild size="lg" variant="outline" className="h-14 rounded-none border-white/35 bg-white/5 px-8 text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm hover:border-white hover:bg-white hover:text-[#07121e] sm:h-16">
                         <Link href="/produtos">{t.hero.learn_more}</Link>
                     </Button>
-                </motion.div>
-                <motion.div
-                  className="mt-7 flex items-center gap-3"
-                  variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-                  aria-label="Selecionar imagem principal"
-                >
+                </div>
+                <div className="mt-7 flex items-center gap-3" aria-label="Selecionar imagem principal">
                   {heroSlides.map((slide, index) => (
                     <button
                       key={slide.src}
@@ -131,8 +89,8 @@ export function Hero() {
                   <span className="ml-2 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-300">
                     {heroSlides[activeSlide].label}
                   </span>
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
 
         </div>
       </div>
