@@ -9,6 +9,8 @@ import { ManufacturingHistory } from '@/components/sections/manufacturing-histor
 import { TrustSignals } from '@/components/sections/trust-signals';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useLanguage } from '@/hooks/use-language';
+import { siteExtras } from '@/lib/i18n/site-extras';
 
 // Clients e ClientLogos removidos: sugeriam relacao com clientes especificos
 // que a Aceros nao autoriza divulgar (Petrobras, Vale, Gerdau, etc.).
@@ -16,6 +18,9 @@ import Link from 'next/link';
 // e diferenciais, sem citar nomes de clientes.
 
 export default function Home() {
+  const { language } = useLanguage();
+  const extra = siteExtras[language];
+
   return (
     <>
       <Hero />
@@ -38,7 +43,7 @@ export default function Home() {
               className="track-home-to-lp bg-primary text-primary-foreground hover:bg-primary/90 font-headline font-bold text-lg md:text-xl px-10 py-8 h-auto rounded-xl shadow-xl transition-all hover:scale-105 active:scale-95"
             >
               <Link href="/bucha-de-aco-inox">
-                Conheça nossa linha de Buchas de Aço Inox Sob Medida
+                {extra.home.bushingsLink}
               </Link>
             </Button>
             <Button
@@ -47,7 +52,7 @@ export default function Home() {
               className="track-home-to-lp-tubos bg-primary text-primary-foreground hover:bg-primary/90 font-headline font-bold text-lg md:text-xl px-10 py-8 h-auto rounded-xl shadow-xl transition-all hover:scale-105 active:scale-95"
             >
               <Link href="/tubos-de-aco-inox">
-                Conheça nossa linha de Tubos de Aço Inox Sob Medida
+                {extra.home.tubesLink}
               </Link>
             </Button>
           </div>

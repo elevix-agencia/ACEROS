@@ -7,6 +7,8 @@ import React, {
   ReactNode,
   useState,
   useMemo,
+  useCallback,
+  useEffect,
 } from 'react';
 import pt from '@/lib/i18n/pt.json';
 import en from '@/lib/i18n/en.json';
@@ -16,7 +18,14 @@ import it from '@/lib/i18n/it.json';
 
 const translations = { pt, en, es, de, it };
 
-type Language = keyof typeof translations;
+export type Language = keyof typeof translations;
+
+const DEFAULT_LANGUAGE: Language = 'pt';
+const LANGUAGE_STORAGE_KEY = 'aceros-language';
+
+function isLanguage(value: string | null): value is Language {
+  return value !== null && value in translations;
+}
 
 type Translations = typeof pt;
 
@@ -56,7 +65,34 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('pt');
+  const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);
+
+  useEffect(() => {
+    const urlLanguage = new URLSearchParams(window.location.search).get('lang');
+    const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    const initialLanguage = isLanguage(urlLanguage)
+      ? urlLanguage
+      : isLanguage(storedLanguage)
+        ? storedLanguage
+        : DEFAULT_LANGUAGE;
+
+    setLanguageState(initialLanguage);
+    document.documentElement.lang = initialLanguage === 'pt' ? 'pt-BR' : initialLanguage;
+  }, []);
+
+  const setLanguage = useCallback((nextLanguage: Language) => {
+    setLanguageState(nextLanguage);
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage);
+    document.documentElement.lang = nextLanguage === 'pt' ? 'pt-BR' : nextLanguage;
+
+    const url = new URL(window.location.href);
+    if (nextLanguage === DEFAULT_LANGUAGE) {
+      url.searchParams.delete('lang');
+    } else {
+      url.searchParams.set('lang', nextLanguage);
+    }
+    window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
+  }, []);
 
   // Mantém todos os campos disponíveis mesmo quando uma tradução ainda não
   // possui uma chave específica; nesses casos, o conteúdo original em PT é usado.
@@ -65,11 +101,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     [language]
   );
 
-  const value = {
-    language,
-    setLanguage,
-    t,
-  };
+  const value = useMemo(
+    () => ({ language, setLanguage, t }),
+    [language, setLanguage, t]
+  );
 
   return (
     <LanguageContext.Provider value={value}>

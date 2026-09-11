@@ -8,16 +8,24 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { useLanguage } from '@/hooks/use-language';
+import { useLanguage, type Language } from '@/hooks/use-language';
 import { Globe } from 'lucide-react';
 
-const languages = [
+const languages: Array<{ code: Language; name: string; flag: string }> = [
   { code: 'pt', name: 'Português', flag: '🇧🇷' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
   { code: 'it', name: 'Italiano', flag: '🇮🇹' },
 ];
+
+const switcherLabels: Record<Language, (name: string) => string> = {
+  pt: name => `Idioma atual: ${name}. Clique para trocar.`,
+  en: name => `Current language: ${name}. Click to change.`,
+  es: name => `Idioma actual: ${name}. Haga clic para cambiar.`,
+  de: name => `Aktuelle Sprache: ${name}. Zum Ändern klicken.`,
+  it: name => `Lingua attuale: ${name}. Fai clic per cambiare.`,
+};
 
 export function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
@@ -32,7 +40,7 @@ export function LanguageSwitcher() {
           variant="outline"
           size="sm"
           className="h-11 rounded-none border-slate-200 bg-white px-3 text-xs font-semibold text-slate-700 shadow-none hover:bg-slate-50 sm:px-4"
-          aria-label={`Idioma atual: ${selectedLanguage.name}. Clique para trocar.`}
+          aria-label={switcherLabels[language](selectedLanguage.name)}
         >
           <span className="hidden min-[460px]:inline" aria-hidden="true">{selectedLanguage.flag}</span>
           <span className="hidden md:inline">{selectedLanguage.name}</span>
@@ -44,7 +52,7 @@ export function LanguageSwitcher() {
         {languages.map(lang => (
           <DropdownMenuItem
             key={lang.code}
-            onSelect={() => setLanguage(lang.code as any)}
+            onSelect={() => setLanguage(lang.code)}
             className="flex cursor-pointer items-center gap-2 text-sm"
           >
             <span>{lang.flag}</span>

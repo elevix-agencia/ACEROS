@@ -6,9 +6,11 @@ import Image from 'next/image';
 import { Clock, Mail, MapPin, Phone, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/button';
 import { useLanguage } from '@/hooks/use-language';
+import { siteExtras } from '@/lib/i18n/site-extras';
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const extra = siteExtras[language].footer;
 
   const navLinks = [
       { href: "/sobre", label: t.header.about },
@@ -22,7 +24,7 @@ export function Footer() {
       <div className="site-footer-container mx-auto max-w-[1280px] px-5 pb-8 pt-16 lg:px-10 lg:pt-20">
         <div className="grid grid-cols-1 gap-12 text-left md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="flex flex-col items-start md:col-span-2 lg:col-span-4 lg:pr-12">
-            <Link href="/" className="mb-6 flex items-center" aria-label="Aceros — Página inicial">
+            <Link href="/" className="mb-6 flex items-center" aria-label={extra.homeLabel}>
                 <Image
                     src="/images/aceros/generated/logo-footer-crop.png"
                     alt="Aceros — Aços Centrifugados"
@@ -58,7 +60,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-sm text-slate-300 transition-colors hover:text-accent"
                 >
                   <ShieldCheck className="h-4 w-4" />
-                  Política de Privacidade
+                  {extra.privacy}
                 </Link>
               </li>
               <li>
@@ -67,7 +69,7 @@ export function Footer() {
                   onClick={() => window.dispatchEvent(new Event('open-cookie-settings'))}
                   className="flex items-center gap-2 text-left text-sm text-slate-300 transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
-                  Preferências de cookies
+                  {extra.cookiePreferences}
                 </button>
               </li>
             </ul>
@@ -80,7 +82,7 @@ export function Footer() {
                   href="https://www.google.com/maps/search/?api=1&query=Rua+Hans+Oersted%2C+20-118%2C+Cidade+Moncoes%2C+Sao+Paulo%2C+SP%2C+04575-010"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Abrir o endereço da Aceros no mapa"
+                  aria-label={extra.mapLabel}
                   className="flex items-start justify-start gap-3 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <MapPin className="mt-1 h-4 w-4 flex-shrink-0 text-[#ef7b21]" />
@@ -88,7 +90,7 @@ export function Footer() {
                 </a>
                  <a
                   href="mailto:vendas@aceros.com.br"
-                  aria-label="Enviar e-mail para vendas da Aceros"
+                  aria-label={extra.mailLabel}
                   className="flex items-center justify-start gap-3 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <Mail className="h-4 w-4 flex-shrink-0 text-[#ef7b21]" />
@@ -96,7 +98,7 @@ export function Footer() {
                 </a>
                 <a
                   href="tel:+551155556551"
-                  aria-label="Ligar para a Aceros"
+                  aria-label={extra.phoneLabel}
                   className="flex items-center justify-start gap-3 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <Phone className="h-4 w-4 flex-shrink-0 text-[#ef7b21]" />
@@ -105,20 +107,20 @@ export function Footer() {
                 <div className="flex items-start gap-3 justify-start">
                   <Clock className="mt-1 h-4 w-4 flex-shrink-0 text-[#ef7b21]" />
                   <span>
-                    Seg a Qui: 07:30 às 17:30<br />
-                    Sex: 07:30 às 16:30
+                    {extra.hours[0]}<br />
+                    {extra.hours[1]}
                   </span>
                 </div>
               </div>
           </div>
 
           <div className="lg:col-span-3 lg:border-l lg:border-white/15 lg:pl-8">
-            <h3 className="mb-5 font-headline text-2xl font-semibold leading-tight">Fale com a Aceros</h3>
+            <h3 className="mb-5 font-headline text-2xl font-semibold leading-tight">{extra.talkTitle}</h3>
             <p className="mb-6 text-sm leading-6 text-slate-300">
-              Solicite um orçamento sob medida. Nossa equipe técnica retorna com uma proposta comercial competitiva.
+              {extra.talkBody}
             </p>
             <Button asChild className="h-12 w-full rounded-none bg-[#ef7b21] px-6 font-bold text-white hover:bg-[#cf5f11] sm:w-auto">
-              <Link href="/contato">Solicitar orçamento</Link>
+              <Link href="/contato">{extra.quote}</Link>
             </Button>
           </div>
         </div>
@@ -126,7 +128,7 @@ export function Footer() {
         <div className="mt-14 flex flex-col gap-3 border-t border-white/15 pt-7 text-xs leading-5 text-slate-400 md:flex-row md:items-center md:justify-between">
           <div>
             <p>Aceros Centrifugados LTDA &middot; CNPJ 29.506.517/0001-39</p>
-            <p>Divisão de aços inoxidáveis do Grupo Metalúrgica Daniela</p>
+            <p>{extra.division}</p>
           </div>
           <p className="md:text-right">&copy; {new Date().getFullYear()} {t.footer.rights_reserved}</p>
         </div>

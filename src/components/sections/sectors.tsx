@@ -6,6 +6,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 import { useLanguage } from '@/hooks/use-language';
 import { sectorsData } from '@/lib/expertise-data';
+import { siteExtras } from '@/lib/i18n/site-extras';
 
 const sectorImages: Record<string, string> = {
   mineracao: '/images/imgur/GwRqaf7.jpeg',
@@ -19,7 +20,8 @@ const sectorImages: Record<string, string> = {
 };
 
 export function Sectors() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const extra = siteExtras[language];
 
   if (!t?.expertise_sectors) return null;
 
@@ -52,7 +54,7 @@ export function Sectors() {
               <div className="relative h-[220px] shrink-0 overflow-hidden border-b-[3px] border-accent bg-white">
                 <Image
                   src={sectorImages[sector.id]}
-                  alt="Certificado ISO 9001:2015 da Aceros"
+                  alt={extra.sectors.certificateAlt}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-contain p-4 transition duration-500 group-hover:scale-[1.02]"
@@ -60,16 +62,16 @@ export function Sectors() {
               </div>
               <div className="flex flex-1 flex-col items-center px-6 py-7 text-center lg:px-7">
                 <h3 className="mb-4 font-headline text-xl font-bold leading-tight text-slate-950">
-                  Certificados
+                  {extra.sectors.certificates}
                 </h3>
                 <p className="mb-7 text-sm leading-6 text-slate-500">
-                  Explore mais nossos certificados e selos de qualidade.
+                  {extra.sectors.certificatesDescription}
                 </p>
                 <Link
                   href={getLink(sector.id)}
                   className="mt-auto inline-flex w-full items-center justify-center gap-3 border border-accent px-5 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
                 >
-                  Saiba mais
+                  {extra.common.learnMore}
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -100,7 +102,7 @@ export function Sectors() {
                   href={getLink(sector.id)}
                   className="mt-auto inline-flex w-full items-center justify-center gap-3 border border-accent px-5 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
                 >
-                  Saiba mais
+                  {extra.common.learnMore}
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
