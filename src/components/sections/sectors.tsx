@@ -33,9 +33,9 @@ export function Sectors() {
   };
 
   return (
-    <section id="sectors" className="bg-[#ef7b21] py-20 text-white sm:py-28">
+    <section id="sectors" className="bg-[#ef7b21] py-14 text-white sm:py-28">
       <div className="container mx-auto px-4">
-        <div className="mx-auto mb-14 max-w-3xl text-center animate-fade-in-up">
+        <div className="mx-auto mb-10 max-w-3xl text-center animate-fade-in-up sm:mb-14">
           <h2 className="mb-4 font-headline text-4xl font-bold tracking-tight sm:text-5xl">
             {t.sectors.title}
           </h2>
@@ -44,14 +44,14 @@ export function Sectors() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {sectors.map((sector, index) => sector.id === 'certificados' ? (
             <article
               key={sector.id}
-              className="group flex min-h-[460px] flex-col overflow-hidden rounded-lg bg-[#f1f1f3] text-slate-950 shadow-[0_18px_45px_rgba(85,35,6,.18)] animate-fade-in-up"
+              className="group flex min-h-[360px] flex-col overflow-hidden rounded-lg bg-[#f1f1f3] text-slate-950 shadow-[0_18px_45px_rgba(85,35,6,.18)] animate-fade-in-up sm:min-h-[460px]"
               style={{ animationDelay: `${0.1 + index * 0.08}s`, animationFillMode: 'both' }}
             >
-              <div className="relative h-[220px] shrink-0 overflow-hidden border-b-[3px] border-accent bg-white">
+              <div className="relative h-[132px] shrink-0 overflow-hidden border-b-[3px] border-accent bg-white sm:h-[220px]">
                 <Image
                   src={sectorImages[sector.id]}
                   alt={extra.sectors.certificateAlt}
@@ -60,16 +60,16 @@ export function Sectors() {
                   className="object-contain p-4 transition duration-500 group-hover:scale-[1.02]"
                 />
               </div>
-              <div className="flex flex-1 flex-col items-center px-6 py-7 text-center lg:px-7">
-                <h3 className="mb-4 font-headline text-xl font-bold leading-tight text-slate-950">
+              <div className="flex flex-1 flex-col items-center px-3 py-4 text-center sm:px-6 sm:py-7 lg:px-7">
+                <h3 className="mb-2 font-headline text-base font-bold leading-tight text-slate-950 sm:mb-4 sm:text-xl">
                   {extra.sectors.certificates}
                 </h3>
-                <p className="mb-7 text-sm leading-6 text-slate-500">
+                <p className="mb-4 text-xs leading-5 text-slate-500 sm:mb-7 sm:text-sm sm:leading-6">
                   {extra.sectors.certificatesDescription}
                 </p>
                 <Link
                   href={getLink(sector.id)}
-                  className="mt-auto inline-flex w-full items-center justify-center gap-3 border border-accent px-5 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+                  className="mt-auto inline-flex w-full items-center justify-center gap-2 border border-accent px-2 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white sm:gap-3 sm:px-5"
                 >
                   {extra.common.learnMore}
                   <ArrowUpRight className="h-4 w-4" />
@@ -79,10 +79,10 @@ export function Sectors() {
           ) : (
             <article
               key={sector.id}
-              className="group flex min-h-[460px] flex-col overflow-hidden rounded-lg bg-[#f1f1f3] text-slate-950 shadow-[0_18px_45px_rgba(85,35,6,.18)] animate-fade-in-up"
+              className="group flex min-h-[360px] flex-col overflow-hidden rounded-lg bg-[#f1f1f3] text-slate-950 shadow-[0_18px_45px_rgba(85,35,6,.18)] animate-fade-in-up sm:min-h-[460px]"
               style={{ animationDelay: `${0.1 + index * 0.08}s`, animationFillMode: 'both' }}
             >
-              <div className="relative h-[220px] shrink-0 overflow-hidden border-b-[3px] border-accent">
+              <div className="relative h-[132px] shrink-0 overflow-hidden border-b-[3px] border-accent sm:h-[220px]">
                 <Image
                   src={sectorImages[sector.id]}
                   alt={sector.title}
@@ -91,16 +91,16 @@ export function Sectors() {
                   className="object-cover transition duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="flex flex-1 flex-col items-center px-6 py-7 text-center lg:px-7">
-                <h3 className="mb-4 font-headline text-xl font-bold leading-tight text-slate-950">
+              <div className="flex flex-1 flex-col items-center px-3 py-4 text-center sm:px-6 sm:py-7 lg:px-7">
+                <h3 className="mb-2 font-headline text-base font-bold leading-tight text-slate-950 sm:mb-4 sm:text-xl">
                   {sector.title}
                 </h3>
-                <p className="mb-7 text-sm leading-6 text-slate-500">
+                <p className="mb-4 text-xs leading-5 text-slate-500 sm:mb-7 sm:text-sm sm:leading-6">
                   {sector.cardDescription}
                 </p>
                 <Link
                   href={getLink(sector.id)}
-                  className="mt-auto inline-flex w-full items-center justify-center gap-3 border border-accent px-5 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white"
+                  className="mt-auto inline-flex w-full items-center justify-center gap-2 border border-accent px-2 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white sm:gap-3 sm:px-5"
                 >
                   {extra.common.learnMore}
                   <ArrowUpRight className="h-4 w-4" />
