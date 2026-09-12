@@ -173,11 +173,11 @@
     "whatsapp_quote": "Solicite um Orçamento via WhatsApp"
   },
   "qualifications": {
-    "page_title": "Nossas Qualificações",
-    "page_subtitle": "Garantia de precisão e confiabilidade em cada processo.",
-    "expertise_title": "Expertise Técnica e Rigoroso Controle de Qualidade",
-    "expertise_paragraph1": "Com vasta experiência e equipamentos de ponta, a Aceros conta com o Engenheiro Daniel Garcia, qualificado pela Drever (Bélgica), para a medição de “rollprof roll”. Já realizamos o controle de mais de 600 rolos de forno para clientes como Drever, Efco, Danieli e SDI.",
-    "expertise_paragraph2": "A qualidade de nossos produtos é garantida por uma ampla variedade de instrumentos de inspeção e padrões de calibração, todos rastreados pelo RBC, assegurando a precisão e confiabilidade de nossos processos.",
+    "page_title": "Qualidade e certificações",
+    "page_subtitle": "ISO 9001:2015, laboratório e controles definidos conforme os requisitos de cada projeto.",
+    "expertise_title": "Controle de qualidade integrado à fabricação",
+    "expertise_paragraph1": "A Aceros integra metrologia, análise química por espectrometria, ultrassom, dureza e inspeções dimensionais ao processo de fabricação de componentes sob medida.",
+    "expertise_paragraph2": "Os instrumentos e padrões de medição possuem calibração rastreada à RBC, e a documentação aplicável é definida conforme os requisitos de cada fornecimento.",
     "control_title": "Controle de Qualidade",
     "control_description": "Nossos laboratórios estão equipados para realizar uma vasta gama de análises, incluindo ensaios de corrosão, análise química detalhada, ultrassom para detecção de falhas internas, medições de dureza e ensaios mecânicos completos.",
     "innovation_title": "Inovação e Desenvolvimento",
@@ -194,20 +194,20 @@
     "process_optimization_subtitle": "Cálculos estruturais e simulações com temperatura.",
     "items": [
       {
-        "title": "Certificação Especializada",
-        "description": "Engenheiro qualificado pela Drever (Bélgica) para medição precisa de “rollprof roll”."
+        "title": "ISO 9001:2015",
+        "description": "Sistema de gestão certificado pela DQS, com validade até 19 de novembro de 2028."
       },
       {
-        "title": "Vasta Experiência",
-        "description": "Controle de mais de 600 rolos de forno para clientes globais como Drever, Efco, e Danieli."
+        "title": "Análise química",
+        "description": "Espectrometria de emissão óptica para controle da composição das ligas durante a fusão."
       },
       {
-        "title": "Padrões RBC",
-        "description": "Instrumentos de inspeção e padrões de calibração rastreados pelo RBC para máxima confiabilidade."
+        "title": "Metrologia rastreada",
+        "description": "Instrumentos e padrões de medição com calibração rastreada à RBC."
       },
       {
-        "title": "Tecnologia de Ponta",
-        "description": "Utilização de equipamentos avançados para garantir a precisão em todos os nossos processos de medição."
+        "title": "Controle de perfil",
+        "description": "Medição com perfilômetro Rollprof por profissional com treinamento técnico da Drever, Bélgica."
       }
     ]
   },

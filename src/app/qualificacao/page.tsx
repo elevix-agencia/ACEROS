@@ -6,12 +6,12 @@ import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 export const metadata: Metadata = {
   title: 'Qualidade e Certificações — Aços Centrifugados Aceros',
   description:
-    'Nossas certificações, normas e processos de controle de qualidade. Rastreabilidade total, ensaios de dureza, análise química e ultrassom em cada peça fabricada.',
+    'Conheça a certificação ISO 9001:2015 da Aceros e os recursos de análise química, dureza, ultrassom e metrologia aplicados conforme os requisitos de cada projeto.',
   alternates: { canonical: '/qualificacao' },
   openGraph: {
     title: 'Qualidade e Certificações — Aceros',
     description:
-      'Certificações e controle de qualidade das peças fabricadas pela Aceros conforme normas ABNT, ASTM, DIN e AISI.',
+      'ISO 9001:2015, laboratório, metrologia e controles aplicados à fabricação de componentes industriais sob medida.',
     url: '/qualificacao',
   },
 };

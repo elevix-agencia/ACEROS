@@ -14,7 +14,7 @@ export const qualificationsData = (t: any): Qualification[] => [
     description: t.qualifications.items[0].description,
   },
   {
-    icon: 'Star',
+    icon: 'Microscope',
     title: t.qualifications.items[1].title,
     description: t.qualifications.items[1].description,
   },
@@ -24,7 +24,7 @@ export const qualificationsData = (t: any): Qualification[] => [
     description: t.qualifications.items[2].description,
   },
   {
-    icon: 'Zap',
+    icon: 'Search',
     title: t.qualifications.items[3].title,
     description: t.qualifications.items[3].description,
   },

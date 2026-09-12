@@ -16,7 +16,7 @@ export function Qualifications() {
 
   return (
     <div>
-      <section className="relative h-[60vh] min-h-[400px] w-full animate-fade-in">
+      <section className="relative h-[52vh] min-h-[360px] w-full animate-fade-in sm:h-[58vh] sm:min-h-[400px]">
         {qualificationsHeroImage && (
           <Image
             src={qualificationsHeroImage.imageUrl}
@@ -33,7 +33,7 @@ export function Qualifications() {
             className="flex animate-fade-in-up flex-col items-center"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
-            <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl">
               {t.qualifications.page_title}
             </h1>
             <p className="mt-6 max-w-3xl text-lg text-slate-200 md:text-xl">
@@ -43,7 +43,7 @@ export function Qualifications() {
         </div>
       </section>
 
-      <section className="bg-background py-20 sm:py-28" id="qualifications-details">
+      <section className="bg-background py-16 sm:py-24" id="qualifications-details">
         <div className="container mx-auto px-4">
           <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
             <div className="animate-slide-in-left">
@@ -77,7 +77,7 @@ export function Qualifications() {
         </div>
       </section>
 
-      <section className="bg-accent py-16 sm:py-20">
+      <section className="bg-accent py-14 sm:py-20">
         <div className="container mx-auto px-4">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {qualificationsData(t).map((qualification, index) => (

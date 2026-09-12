@@ -123,14 +123,14 @@ export function QualityLab() {
 
             <article className="overflow-hidden rounded-2xl border border-white/15 bg-white/[0.06] shadow-2xl">
               <div className="grid h-full sm:grid-cols-[1.08fr_0.92fr]">
-                <Link href="/images/aceros/drive/certificado-calibracao-espectrometro.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de revisão e calibração do espectrômetro" className="flex min-h-[390px] items-center justify-center bg-white p-3">
-                  <Image src="/images/aceros/drive/certificado-calibracao-espectrometro.png" alt="Registro de análise química e certificado de calibração número 2044/19 do espectrômetro" width={962} height={717} className="h-auto w-full object-contain" />
+                <Link href="/images/aceros/drive/certificado-calibracao-espectrometro.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir registro de revisão e calibração do espectrômetro" className="flex min-h-[390px] items-center justify-center bg-white p-3">
+                  <Image src="/images/aceros/drive/certificado-calibracao-espectrometro.png" alt="Registro de revisão e calibração número 2044/19 do espectrômetro" width={962} height={717} className="h-auto w-full object-contain" />
                 </Link>
                 <div className="flex flex-col justify-center p-7">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Equipamento de laboratório</p>
-                  <h3 className="mt-3 font-headline text-2xl font-bold">Calibração Spectromax</h3>
-                  <p className="mt-4 text-sm leading-6 text-slate-300">Registro de revisão e calibração nº 2044/19 do espectrômetro de emissão óptica utilizado na análise química das ligas.</p>
-                  <p className="mt-5 text-xs leading-5 text-slate-400">Documento histórico recuperado da página técnica anterior da Aceros.</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Registro técnico</p>
+                  <h3 className="mt-3 font-headline text-2xl font-bold">Revisão e calibração Spectromax</h3>
+                  <p className="mt-4 text-sm leading-6 text-slate-300">Documento nº 2044/19 referente ao espectrômetro de emissão óptica utilizado na análise química das ligas.</p>
+                  <p className="mt-5 text-xs leading-5 text-slate-400">O número identifica o registro apresentado no acervo técnico da Aceros; a periodicidade de calibração é definida pelo controle metrológico da empresa.</p>
                   <span className="mt-6 text-sm font-semibold text-accent">Ampliar documento ↗</span>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export function QualityLab() {
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">Laboratório e metrologia</p>
             <h2 className="font-headline text-3xl font-bold text-slate-900 md:text-4xl">O controle de qualidade acontecendo na prática</h2>
-            <p className="mt-5 text-lg leading-8 text-muted-foreground">Análises químicas, ultrassom, dureza, ensaios de corrosão e ensaios mecânicos apoiam o desenvolvimento de ligas e a validação de cada componente.</p>
+            <p className="mt-5 text-lg leading-8 text-muted-foreground">Análises químicas, ultrassom, dureza, ensaios de corrosão e ensaios mecânicos apoiam o desenvolvimento de ligas e a verificação dos requisitos definidos para cada projeto.</p>
           </div>
           <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {capacidadesVisuais.map(item => (
@@ -177,7 +177,7 @@ export function QualityLab() {
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Controle de perfil</p>
               <h3 className="mt-3 font-headline text-3xl font-bold">Medição especializada com Rollprof</h3>
               <p className="mt-5 leading-7 text-slate-300">
-                A Aceros realiza a medição precisa de perfis em rolos de forno, furnace rolls e sink rolls com profissional treinado e qualificado pela Drever, Bélgica.
+                A Aceros realiza a medição de perfis em rolos de forno, furnace rolls e sink rolls com profissional treinado pela Drever, Bélgica.
               </p>
               <div className="mt-7 grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
                 <div><strong className="block text-2xl text-white">+600</strong><span className="text-sm text-slate-400">rolos controlados</span></div>
@@ -212,7 +212,7 @@ export function QualityLab() {
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1 text-sm font-semibold uppercase tracking-wide text-accent"><ShieldCheck className="h-4 w-4" /> Rastreabilidade e documentação</div>
             <h2 className="font-headline text-3xl font-bold text-slate-900 md:text-4xl">Ensaios e documentação conforme o projeto</h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Cada fornecimento é acompanhado pela documentação definida para o projeto, que pode incluir análise química, dureza, ultrassom e registros do processo.</p>
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">Conforme os requisitos acordados, o fornecimento pode incluir análise química, dureza, ultrassom, rastreabilidade e registros do processo.</p>
             <p className="mt-5 text-sm italic text-slate-500">Documentação técnica organizada para rastreabilidade e auditoria industrial.</p>
           </div>
         </div>
