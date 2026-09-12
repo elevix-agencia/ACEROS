@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { About } from '@/components/sections/about';
+import { AboutHistory } from '@/components/sections/about-history';
 import { LocationMap } from '@/components/sections/location-map';
 // Testimonials removido: continham depoimentos ficticios de empresas reais
 // (Petrobras, Vale, Gerdau, etc.) sem autorizacao — risco juridico serio.
@@ -37,6 +38,7 @@ export default function SobrePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
       />
       <About headingLevel="h1" />
+      <AboutHistory />
       <LocationMap />
       <WhatsAppCta />
     </div>

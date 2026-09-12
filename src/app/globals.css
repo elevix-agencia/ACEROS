@@ -558,7 +558,7 @@ header.site-header .header-mobile-actions {
 
 /* AJUSTE EXCLUSIVO PARA MOBILE */
 @media (max-width: 767px) {
-    header .logo img {
+    header.site-header .logo img {
         width: 250px !important;
         max-width: 250px !important;
         position: absolute !important;
@@ -567,7 +567,7 @@ header.site-header .header-mobile-actions {
         transform: translateY(-50%) !important;
         z-index: 9999 !important;
     }
-    header, .site-header, .header-container {
+    header.site-header, .site-header, .header-container {
         height: 115px !important;
         max-height: 115px !important;
         overflow: visible !important;
