@@ -21,12 +21,12 @@ const productListSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Produtos — Peças Centrifugadas em Aço Inox Sob Medida',
+  title: 'Produtos | Peças Centrifugadas em Aço Inox Sob Medida',
   description:
     'Catálogo de produtos Aceros: tubos mecânicos, buchas, Sink Rolls, rolos de forno e componentes centrifugados em ligas especiais. Fabricação sob medida.',
   alternates: { canonical: '/produtos' },
   openGraph: {
-    title: 'Produtos Aceros — Peças Centrifugadas em Aço Inox',
+    title: 'Produtos Aceros | Peças Centrifugadas em Aço Inox',
     description:
       'Tubos, buchas, Sink Rolls, rolos de forno e outros componentes fabricados sob medida por centrifugação.',
     url: '/produtos',

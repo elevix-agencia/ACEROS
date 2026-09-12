@@ -103,7 +103,7 @@
     "form_deadline": "Plazo deseado (opcional)",
     "form_deadline_placeholder": "Ej.: dentro de 30 días",
     "form_location": "País y estado/región",
-    "form_location_placeholder": "Ej.: España — Cataluña",
+    "form_location_placeholder": "Ej.: España, Cataluña",
     "form_drawing": "Plano técnico (opcional)",
     "form_drawing_help": "PDF, DWG, DXF, STEP, IGES, JPG o PNG, hasta 5 MB.",
     "form_message": "Mensaje",

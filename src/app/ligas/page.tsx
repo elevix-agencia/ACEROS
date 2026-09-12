@@ -5,12 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Beaker, Flame, ShieldCheck, Waves, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Ligas de Aço Inox — ASTM A297 e Série 300/400',
+  title: 'Ligas de Aço Inox | ASTM A297 e Série 300/400',
   description:
     'Ligas trabalhadas pela Aceros: aços inoxidáveis das séries 300 e 400 e graus ASTM A297 para componentes industriais fabricados conforme o projeto.',
   alternates: { canonical: '/ligas' },
   openGraph: {
-    title: 'Ligas de Aço Inox — Aceros Centrifugados',
+    title: 'Ligas de Aço Inox | Aceros Centrifugados',
     description:
       'Aços inoxidáveis e ligas resistentes ao calor, abrasão e corrosão. Série 300, 400 e ASTM A297 para aplicações industriais severas.',
     url: '/ligas',
@@ -134,8 +134,8 @@ export default function LigasPage() {
             <span className="text-accent">selecionados por aplicação</span>
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
-            Trabalhamos com uma família ampla de ligas de aço inoxidável — série 300, 400 e
-            graus ASTM A297 — para atender às condições informadas em cada projeto.
+            Trabalhamos com uma família ampla de ligas de aço inoxidável (série 300, 400 e
+            graus ASTM A297) para atender às condições informadas em cada projeto.
             Nossa engenharia avalia a liga com base na temperatura, no ambiente químico
             e regime de trabalho da sua planta.
           </p>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: '/tubos-de-aco-inox',
   },
   openGraph: {
-    title: 'Tubos de Aço Inox Sob Medida — Aceros',
+    title: 'Tubos de Aço Inox Sob Medida | Aceros',
     description:
       'Tubos centrifugados em ligas especiais, fabricados sob medida conforme desenho e condição de operação.',
     url: '/tubos-de-aco-inox',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tubos de Aço Inox Sob Medida — Aceros',
+    title: 'Tubos de Aço Inox Sob Medida | Aceros',
     description:
       'Tubos centrifugados ASTM A297 para aplicações severas. Fabricação sob medida.',
   },

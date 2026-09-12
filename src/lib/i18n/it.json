@@ -103,7 +103,7 @@
     "form_deadline": "Tempi richiesti (facoltativo)",
     "form_deadline_placeholder": "Es.: entro 30 giorni",
     "form_location": "Paese e stato/regione",
-    "form_location_placeholder": "Es.: Italia — Lombardia",
+    "form_location_placeholder": "Es.: Italia, Lombardia",
     "form_drawing": "Disegno tecnico (facoltativo)",
     "form_drawing_help": "PDF, DWG, DXF, STEP, IGES, JPG o PNG, fino a 5 MB.",
     "form_message": "Messaggio",

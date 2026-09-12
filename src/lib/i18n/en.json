@@ -103,7 +103,7 @@
     "form_deadline": "Required delivery date (optional)",
     "form_deadline_placeholder": "E.g. within 30 days",
     "form_location": "Country and state/region",
-    "form_location_placeholder": "E.g. United States — Texas",
+    "form_location_placeholder": "E.g. United States, Texas",
     "form_drawing": "Technical drawing (optional)",
     "form_drawing_help": "PDF, DWG, DXF, STEP, IGES, JPG or PNG, up to 5 MB.",
     "form_message": "Message",

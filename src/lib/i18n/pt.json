@@ -104,7 +104,7 @@
     "form_deadline": "Prazo desejado (opcional)",
     "form_deadline_placeholder": "Ex.: até 30 dias",
     "form_location": "País e estado",
-    "form_location_placeholder": "Ex.: Brasil — São Paulo",
+    "form_location_placeholder": "Ex.: Brasil, São Paulo",
     "form_drawing": "Desenho técnico (opcional)",
     "form_drawing_help": "PDF, DWG, DXF, STEP, IGES, JPG ou PNG, até 5 MB.",
     "form_message": "Mensagem",

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Rolos de Forno Sob Medida | Furnace Rolls Industriais',
   description: 'Rolos de forno centrifugados sob medida para tratamento térmico, linhas CAPL, CGL e fornos contínuos. Análise técnica conforme o projeto.',
   alternates: { canonical: '/rolos-de-forno' },
-  openGraph: { title: 'Rolos de Forno e Furnace Rolls — Aceros', description: 'Rolos centrifugados resistentes a altas temperaturas, fabricados conforme desenho técnico.', url: '/rolos-de-forno', images: [{ url: '/images/imgur/gbNL57g.png', alt: 'Rolo de forno fabricado pela Aceros' }] },
+  openGraph: { title: 'Rolos de Forno e Furnace Rolls | Aceros', description: 'Rolos centrifugados resistentes a altas temperaturas, fabricados conforme desenho técnico.', url: '/rolos-de-forno', images: [{ url: '/images/imgur/gbNL57g.png', alt: 'Rolo de forno fabricado pela Aceros' }] },
 };
 
 const data: CampaignPageData = {

@@ -5,12 +5,12 @@ import { ArrowRight, Clock } from 'lucide-react';
 import { blogPosts, formatBlogDate } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
-  title: 'Blog Técnico — Aceros Centrifugados',
+  title: 'Blog Técnico | Aceros Centrifugados',
   description:
     'Artigos técnicos sobre fundição centrifugada, ligas ASTM A297, Sink Rolls, buchas e aplicações industriais em siderurgia e tratamento térmico.',
   alternates: { canonical: '/blog' },
   openGraph: {
-    title: 'Blog Técnico Aceros — Centrifugação, Ligas e Aplicações Industriais',
+    title: 'Blog Técnico Aceros | Centrifugação, Ligas e Aplicações Industriais',
     description:
       'Guia técnico para engenheiros de projeto e compras industriais. Conteúdo sobre ligas resistentes ao calor e à abrasão.',
     url: '/blog',
@@ -55,7 +55,7 @@ export default function BlogPage() {
             Conteúdo Técnico
           </p>
           <h1 className="mb-6 font-headline text-3xl font-bold uppercase leading-tight sm:text-4xl lg:text-5xl">
-            Blog Aceros —{' '}
+            Blog Aceros:{' '}
             <span className="text-accent">Engenharia em Aços Centrifugados</span>
           </h1>
           <p className="text-lg text-slate-300 leading-relaxed">

@@ -6,12 +6,12 @@ import pt from '@/i18n/pt.json';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Engenharia Metalúrgica — Projetos Sob Medida',
+  title: 'Engenharia Metalúrgica | Projetos Sob Medida',
   description:
     'Engenharia de materiais para componentes centrifugados sob medida. Análise de aplicação, seleção de liga, desenho e avaliação estrutural conforme o projeto.',
   alternates: { canonical: '/engenharia' },
   openGraph: {
-    title: 'Engenharia Metalúrgica Aceros — Projetos Sob Medida',
+    title: 'Engenharia Metalúrgica Aceros | Projetos Sob Medida',
     description:
       'Engenharia de materiais, análise estrutural e desenvolvimento de peças centrifugadas em aços inoxidáveis.',
     url: '/engenharia',

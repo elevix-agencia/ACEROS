@@ -3,7 +3,7 @@ import { About } from '@/components/sections/about';
 import { AboutHistory } from '@/components/sections/about-history';
 import { LocationMap } from '@/components/sections/location-map';
 // Testimonials removido: continham depoimentos ficticios de empresas reais
-// (Petrobras, Vale, Gerdau, etc.) sem autorizacao — risco juridico serio.
+// (Petrobras, Vale, Gerdau, etc.) sem autorizacao | risco juridico serio.
 // Reintroduzir apenas com depoimentos reais + termo de autorizacao assinado.
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 
@@ -18,12 +18,12 @@ const aboutPageSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Sobre a Aceros — Aços Inoxidáveis Centrifugados',
+  title: 'Sobre a Aceros | Aços Inoxidáveis Centrifugados',
   description:
     'Conheça a Aceros: divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, especialista em fabricação sob medida de peças centrifugadas em ligas ASTM A297 para setores industriais exigentes.',
   alternates: { canonical: '/sobre' },
   openGraph: {
-    title: 'Sobre a Aceros — Aços Inoxidáveis Centrifugados',
+    title: 'Sobre a Aceros | Aços Inoxidáveis Centrifugados',
     description:
       'História, missão e expertise da Aceros na fabricação de peças em aços inoxidáveis centrifugados.',
     url: '/sobre',

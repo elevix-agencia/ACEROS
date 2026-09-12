@@ -174,7 +174,7 @@ export async function saveContactMessage(
 
     const emailHtml = `
       <div style="font-family: sans-serif; color: #333; max-width: 680px; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
-        <h2 style="color: #ef7b21; border-bottom: 2px solid #ef7b21; padding-bottom: 10px;">Novo lead — ${escapeHtml(sourceLabel)}</h2>
+        <h2 style="color: #ef7b21; border-bottom: 2px solid #ef7b21; padding-bottom: 10px;">Novo lead: ${escapeHtml(sourceLabel)}</h2>
         <p><strong>Origem:</strong> ${escapeHtml(sourceLabel)}</p>
         <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
         <table style="width: 100%; border-collapse: collapse;">
@@ -209,7 +209,7 @@ export async function saveContactMessage(
         from: LEAD_FROM_EMAIL,
         to: [LEAD_TO_EMAIL],
         reply_to: validatedData.email,
-        subject: `[Lead ${safeSubject(sourceLabel)}] ${safeSubject(validatedData.name)} — ${safeSubject(validatedData.company || 'sem empresa')}`,
+        subject: `[Lead ${safeSubject(sourceLabel)}] ${safeSubject(validatedData.name)} | ${safeSubject(validatedData.company || 'sem empresa')}`,
         html: emailHtml,
         attachments: attachment ? [attachment] : undefined,
       }),

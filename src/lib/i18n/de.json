@@ -103,7 +103,7 @@
     "form_deadline": "Gewünschter Liefertermin (optional)",
     "form_deadline_placeholder": "Z. B. innerhalb von 30 Tagen",
     "form_location": "Land und Bundesland/Region",
-    "form_location_placeholder": "Z. B. Deutschland — Nordrhein-Westfalen",
+    "form_location_placeholder": "Z. B. Deutschland, Nordrhein-Westfalen",
     "form_drawing": "Technische Zeichnung (optional)",
     "form_drawing_help": "PDF, DWG, DXF, STEP, IGES, JPG oder PNG, bis 5 MB.",
     "form_message": "Nachricht",
