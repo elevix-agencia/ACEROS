@@ -130,7 +130,6 @@ export function QualityLab() {
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Registro técnico</p>
                   <h3 className="mt-3 font-headline text-2xl font-bold">Revisão e calibração Spectromax</h3>
                   <p className="mt-4 text-sm leading-6 text-slate-300">Documento nº 2044/19 referente ao espectrômetro de emissão óptica utilizado na análise química das ligas.</p>
-                  <p className="mt-5 text-xs leading-5 text-slate-400">O número identifica o registro apresentado no acervo técnico da Aceros; a periodicidade de calibração é definida pelo controle metrológico da empresa.</p>
                   <span className="mt-6 text-sm font-semibold text-accent">Ampliar documento ↗</span>
                 </div>
               </div>
