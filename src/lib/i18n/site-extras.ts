@@ -60,7 +60,7 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
     },
     about: { imageAlt: 'Área de usinagem da fábrica Aceros com tubo de aço em produção', production: 'Produção Aceros', productionDescription: 'Estrutura industrial dedicada à usinagem de tubos e componentes sob medida.' },
     whatsapp: { label: 'Fale conosco pelo WhatsApp', message: 'Olá! Vim pelo site da Aceros e gostaria de solicitar um orçamento.' },
-    carousel: { previous: 'Slide anterior', next: 'Próximo slide' },
+    carousel: { previous: 'Ver imagem anterior', next: 'Ver próxima imagem' },
     home: {
       bushingsLink: 'Conheça nossa linha de Buchas de Aço Inox Sob Medida',
       tubesLink: 'Conheça nossa linha de Tubos de Aço Inox Sob Medida',
@@ -117,7 +117,7 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
     },
     about: { imageAlt: 'Aceros machining area with a steel tube in production', production: 'Aceros production', productionDescription: 'Industrial facilities dedicated to machining custom tubes and components.' },
     whatsapp: { label: 'Contact us on WhatsApp', message: 'Hello! I found Aceros through the website and would like to request a quote.' },
-    carousel: { previous: 'Previous slide', next: 'Next slide' },
+    carousel: { previous: 'View previous image', next: 'View next image' },
     home: { bushingsLink: 'Discover our custom stainless steel bushings', tubesLink: 'Discover our custom stainless steel tubes' },
     sectors: { certificates: 'Certificates', certificatesDescription: 'Explore our certificates and quality seals.', certificateAlt: 'Aceros ISO 9001:2015 certificate' },
     footer: {
@@ -164,7 +164,7 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
     },
     about: { imageAlt: 'Área de mecanizado de la fábrica Aceros con un tubo de acero en producción', production: 'Producción Aceros', productionDescription: 'Estructura industrial dedicada al mecanizado de tubos y componentes a medida.' },
     whatsapp: { label: 'Contáctenos por WhatsApp', message: '¡Hola! Conocí Aceros a través del sitio web y quisiera solicitar un presupuesto.' },
-    carousel: { previous: 'Diapositiva anterior', next: 'Diapositiva siguiente' },
+    carousel: { previous: 'Ver imagen anterior', next: 'Ver siguiente imagen' },
     home: { bushingsLink: 'Conozca nuestra línea de bujes de acero inoxidable a medida', tubesLink: 'Conozca nuestra línea de tubos de acero inoxidable a medida' },
     sectors: { certificates: 'Certificados', certificatesDescription: 'Conozca nuestros certificados y sellos de calidad.', certificateAlt: 'Certificado ISO 9001:2015 de Aceros' },
     footer: {
@@ -211,7 +211,7 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
     },
     about: { imageAlt: 'Bearbeitungsbereich im Aceros-Werk mit einem Stahlrohr in Produktion', production: 'Aceros-Produktion', productionDescription: 'Industrieanlage für die Bearbeitung maßgefertigter Rohre und Komponenten.' },
     whatsapp: { label: 'Kontaktieren Sie uns über WhatsApp', message: 'Hallo! Ich bin über die Aceros-Website auf Sie aufmerksam geworden und möchte ein Angebot anfordern.' },
-    carousel: { previous: 'Vorherige Folie', next: 'Nächste Folie' },
+    carousel: { previous: 'Vorheriges Bild anzeigen', next: 'Nächstes Bild anzeigen' },
     home: { bushingsLink: 'Entdecken Sie unsere maßgefertigten Edelstahlbuchsen', tubesLink: 'Entdecken Sie unsere maßgefertigten Edelstahlrohre' },
     sectors: { certificates: 'Zertifikate', certificatesDescription: 'Entdecken Sie unsere Zertifikate und Qualitätssiegel.', certificateAlt: 'ISO-9001:2015-Zertifikat von Aceros' },
     footer: {
@@ -258,7 +258,7 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
     },
     about: { imageAlt: 'Area di lavorazione dello stabilimento Aceros con un tubo in acciaio in produzione', production: 'Produzione Aceros', productionDescription: 'Struttura industriale dedicata alla lavorazione di tubi e componenti su misura.' },
     whatsapp: { label: 'Contattaci su WhatsApp', message: 'Salve! Ho conosciuto Aceros tramite il sito e vorrei richiedere un preventivo.' },
-    carousel: { previous: 'Diapositiva precedente', next: 'Diapositiva successiva' },
+    carousel: { previous: 'Vedi immagine precedente', next: 'Vedi immagine successiva' },
     home: { bushingsLink: 'Scopri la nostra linea di boccole in acciaio inox su misura', tubesLink: 'Scopri la nostra linea di tubi in acciaio inox su misura' },
     sectors: { certificates: 'Certificati', certificatesDescription: 'Scopri i nostri certificati e marchi di qualità.', certificateAlt: 'Certificato ISO 9001:2015 Aceros' },
     footer: {
