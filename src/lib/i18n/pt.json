@@ -35,12 +35,12 @@
   },
   "sectors": {
     "title": "Mercado de Atuação",
-    "subtitle": "A Aceros destaca-se na indústria por sua expertise única em engenharia de materiais. O aprimoramento do desempenho de equipamentos e componentes em serviço é um de seus pontos fortes centrais."
+    "subtitle": "A Aceros desenvolve componentes sob medida com engenharia de materiais, centrifugação, usinagem e controle de qualidade para diferentes condições de serviço."
   },
   "about": {
     "title": "Conheça a nossa história",
-    "paragraph1": "A Aceros é fabricante de peças em aço inoxidável e, com sua habilidade técnica e foco no desenvolvimento, se destaca na centrifugação de ligas e superligas. Nossa expertise em usinagem e caldeiraria nos permite entregar um produto final de alta qualidade, resistente ao calor, abrasão e corrosão.",
-    "paragraph2": "Nosso objetivo é otimizar a qualidade dos processos de produção, especialmente em tubos centrífugos e fundidos estáticos, garantindo soluções completas com tecnologia de ponta.",
+    "paragraph1": "A Aceros fabrica peças em aço inoxidável e atua na centrifugação de ligas e superligas. A integração com usinagem e caldeiraria permite fornecer componentes conforme desenho e requisitos de aplicação, incluindo condições de calor, abrasão e corrosão.",
+    "paragraph2": "O trabalho é voltado a tubos centrifugados e fundidos estáticos, com engenharia, controle de processo e acabamento definidos para cada projeto.",
     "pillars_title": "Nossos Pilares",
     "mission_title": "Nossa Missão",
     "mission_description": "Impulsionar o progresso industrial com soluções em aço que superem os limites da engenharia, garantindo segurança e eficiência para nossos parceiros.",
@@ -73,12 +73,12 @@
   },
   "location": {
     "title": "Nossa Localização",
-    "subtitle": "Visite nosso escritório comercial em São Paulo. Estamos prontos para apresentar nossas soluções e discutir as necessidades do seu projeto.",
+    "subtitle": "Endereço de referência da Aceros em São Paulo. Para visitas ou reuniões, confirme previamente o local e o agendamento com nossa equipe.",
     "map_title": "Endereço da Aceros"
   },
   "whatsapp": {
     "title": "Vamos Conversar Sobre a Sua Necessidade?",
-    "subtitle": "Nossa equipe de especialistas está pronta para entender seu projeto e oferecer a solução em aço ideal para você. Clique no botão abaixo e fale conosco diretamente pelo WhatsApp.",
+    "subtitle": "Nossa equipe está pronta para entender seu projeto, analisar os requisitos iniciais e orientar os próximos passos. Fale conosco diretamente pelo WhatsApp.",
     "button": "Iniciar Conversa no WhatsApp",
     "message": "Olá! Estou entrando em contato através do site da Aceros. Gostaria de informações sobre fornecimento e soluções em aço para o meu setor. Poderia me auxiliar?"
   },
@@ -381,7 +381,7 @@
       "title": "Siderurgia",
       "subtitle": "A força do aço para a indústria do aço.",
       "description": "A Aceros é um parceiro estratégico para a indústria siderúrgica, fornecendo componentes que resistem a temperaturas extremas e ao desgaste constante. Nossos rolos de forno, anéis e outras peças são cruciais para a produção contínua de aço de alta qualidade.",
-      "cardDescription": "Peças essenciais para fornos e equipamentos, garantindo a produção de aço de alta qualidade.",
+      "cardDescription": "Peças para fornos, galvanização e outros equipamentos siderúrgicos, conforme projeto.",
       "icon": "Factory",
       "solutions": {
         "siderurgia_continuous_casting": {
@@ -418,7 +418,7 @@
       "title": "Óleo e Gás",
       "subtitle": "Performance e segurança em ambientes extremos.",
       "description": "Fornecemos para o setor de Óleo e Gás componentes críticos que operam sob alta pressão e em ambientes corrosivos. Nossas superligas e aços inoxidáveis garantem a integridade e a segurança de equipamentos de exploração, produção e refino.",
-      "cardDescription": "Componentes de alta resistência e durabilidade para ambientes exigentes.",
+      "cardDescription": "Componentes sob medida para aplicações no setor de óleo e gás.",
       "icon": "Component",
       "solutions": {
         "oil_gas_valve_components": {
