@@ -12,7 +12,7 @@ export function LocationMap() {
     >
       <div>
         <div className="text-center animate-fade-in-up">
-          <h2 className="mb-4 font-headline text-4xl font-bold tracking-tight text-[#07121e] sm:text-5xl">
+          <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-[#07121e] sm:text-5xl">
             {t.location.title}
           </h2>
           <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">

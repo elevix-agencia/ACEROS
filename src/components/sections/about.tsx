@@ -2,22 +2,27 @@
 
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Target, Eye } from 'lucide-react';
+import { DraftingCompass, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 import { siteExtras } from '@/lib/i18n/site-extras';
 
-export function About() {
+type AboutProps = {
+  headingLevel?: 'h1' | 'h2';
+};
+
+export function About({ headingLevel = 'h2' }: AboutProps) {
   const { language, t } = useLanguage();
   const copy = siteExtras[language].about;
+  const Heading = headingLevel;
 
   const pillars = [
     {
-      icon: Target,
+      icon: DraftingCompass,
       title: t.about.mission_title,
       description: t.about.mission_description,
     },
     {
-      icon: Eye,
+      icon: ShieldCheck,
       title: t.about.vision_title,
       description: t.about.vision_description,
     },
@@ -27,13 +32,13 @@ export function About() {
     <div>
       <section
         id="sobre"
-        className="container mx-auto px-4 pt-20 sm:pt-32 pb-16"
+        className="container mx-auto px-4 pt-20 pb-14 sm:pt-28 sm:pb-16"
       >
         <div className="grid gap-12 md:gap-20 md:grid-cols-2 items-center">
           <div className="flex flex-col justify-center animate-slide-in-left">
-            <h2 className="mb-6 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+            <Heading className="mb-6 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
               {t.about.title}
-            </h2>
+            </Heading>
             <p className="mb-6 text-lg text-muted-foreground">
               {t.about.paragraph1}
             </p>
@@ -61,15 +66,15 @@ export function About() {
         </div>
       </section>
 
-      <section id="about-pillars" className="py-24 bg-white">
+      <section id="about-pillars" className="bg-white py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <div
             className="mx-auto max-w-4xl text-center animate-fade-in-up"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
-            <h3 className="mb-12 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+            <h2 className="mb-10 font-headline text-3xl font-bold tracking-tight text-foreground sm:mb-12 sm:text-4xl">
               {t.about.pillars_title}
-            </h3>
+            </h2>
           </div>
           <div className="grid gap-10 md:grid-cols-2">
             {pillars.map((pillar, index) => (
@@ -81,7 +86,7 @@ export function About() {
                   animationFillMode: 'both',
                 }}
               >
-                <CardHeader className="p-8 text-center">
+                <CardHeader className="p-6 text-center sm:p-8">
                   <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-foreground">
                     <pillar.icon className="h-10 w-10" />
                   </div>
@@ -89,7 +94,7 @@ export function About() {
                     {pillar.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-8 pt-0 text-center">
+                <CardContent className="p-6 pt-0 text-center sm:p-8 sm:pt-0">
                   <p className="text-lg text-muted-foreground">
                     {pillar.description}
                   </p>
