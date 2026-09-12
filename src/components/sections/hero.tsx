@@ -103,7 +103,7 @@ export function Hero() {
           {[
             ['1999', copy.stats[0]],
             ['2015', copy.stats[1]],
-            ['+3', copy.stats[2]],
+    ['3', copy.stats[2]],
             ['100%', copy.stats[3]],
           ].map(([value, label]) => (
             <div key={label} className="border-r border-white/10 px-5 py-4 last:border-0 lg:px-8">

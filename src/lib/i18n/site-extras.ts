@@ -97,7 +97,7 @@ export const siteExtras: Record<Language, ExtraTranslations> = {
       certifications: [
         { title: 'ISO 9001:2015', description: 'Certificado nº 60300915 QM15 — emitido pela DQS GmbH (Alemanha) com acreditação DAkkS e IQNET. Válido até novembro/2028.' },
         { title: 'Normas ASME e AWS', description: 'Procedimentos de soldagem qualificados (EPS, RQPS e RQSO) conforme normas internacionais reconhecidas.' },
-        { title: 'Laboratório próprio', description: 'Análise química por espectrometria, ensaio de dureza e ultrassom realizados internamente — controle total de qualidade.' },
+        { title: 'Laboratório próprio', description: 'Análise química por espectrometria, ensaio de dureza e ultrassom realizados internamente para controle da qualidade.' },
       ],
       closingBefore: 'Cada fornecimento pode incluir ', closingStrong: 'rastreabilidade, laudo metalúrgico e ensaios definidos no projeto',
       closingMiddle: '. A experiência industrial da Aceros atende aplicações em ', closingMarkets: 'mineração, tratamento térmico, setor naval e siderurgia',
