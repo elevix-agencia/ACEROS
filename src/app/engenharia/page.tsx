@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Engenharia Metalúrgica — Projetos Sob Medida',
   description:
-    'Engenharia de materiais Aceros: desenvolvimento de projetos de peças centrifugadas em ligas ASTM A297. Análise estrutural, cálculo de espessura, seleção de liga e simulação de comportamento térmico.',
+    'Engenharia de materiais para componentes centrifugados sob medida. Análise de aplicação, seleção de liga, desenho e avaliação estrutural conforme o projeto.',
   alternates: { canonical: '/engenharia' },
   openGraph: {
     title: 'Engenharia Metalúrgica Aceros — Projetos Sob Medida',
@@ -66,6 +66,21 @@ export default function EngenhariaPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            '@id': 'https://aceros.com.br/engenharia#service',
+            name: 'Engenharia metalúrgica para componentes industriais',
+            description: 'Análise de aplicação, seleção de materiais e desenvolvimento de componentes industriais sob medida.',
+            url: 'https://aceros.com.br/engenharia',
+            provider: { '@id': 'https://aceros.com.br/#organization' },
+            areaServed: { '@type': 'Country', name: 'Brasil' },
+          }),
+        }}
+      />
       <EngineeringClient pageData={pageData} />
       <EngineeringCapabilities />
     </>

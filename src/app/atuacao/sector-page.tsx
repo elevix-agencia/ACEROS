@@ -3,16 +3,13 @@ import type { Metadata } from 'next';
 import { ExpertiseDetailsClient } from '@/app/atuacao/[slug]/ExpertiseDetailsClient';
 import pt from '@/i18n/pt.json';
 import { sectorsData } from '@/lib/expertise-data';
-import { sectorSeoContent } from '@/lib/sector-seo-content';
+import { notFound } from 'next/navigation';
 
 export function sectorMetadata(slug: string): Metadata {
   const sector = sectorsData(pt).find((item) => item.id === slug);
 
   if (!sector) {
-    return {
-      title: 'Setor não encontrado',
-      description: 'Página não encontrada.',
-    };
+    return { title: 'Setor não encontrado', robots: { index: false, follow: false } };
   }
 
   const title = `${sector.title} — Aços Centrifugados para o Setor`;
@@ -41,32 +38,35 @@ export function sectorMetadata(slug: string): Metadata {
 export function SectorPage({ slug }: { slug: string }) {
   const sector = sectorsData(pt).find((item) => item.id === slug);
 
-  if (!sector) {
-    return <div className="pt-24 text-center">Setor não encontrado.</div>;
-  }
+  if (!sector) notFound();
 
-  const seoContent = sectorSeoContent[slug];
+  const pageUrl = `https://aceros.com.br/atuacao/${slug}`;
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': `${pageUrl}#service`,
+      name: `${sector.title} — soluções industriais sob medida`,
+      description: sector.description,
+      url: pageUrl,
+      provider: { '@id': 'https://aceros.com.br/#organization' },
+      areaServed: { '@type': 'Country', name: 'Brasil' },
+      serviceType: sector.title,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://aceros.com.br/' },
+        { '@type': 'ListItem', position: 2, name: 'Mercado de Atuação', item: 'https://aceros.com.br/#sectors' },
+        { '@type': 'ListItem', position: 3, name: sector.title, item: pageUrl },
+      ],
+    },
+  ];
 
   return (
     <>
-      <h1 className="sr-only">
-        {sector.title} — Aços Centrifugados Aceros para o Setor de {sector.title}
-      </h1>
-
-      {seoContent && (
-        <section className="sr-only" aria-hidden="false">
-          <p>{seoContent.intro}</p>
-          {seoContent.paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-          <ul>
-            {seoContent.keyPoints.map((point, index) => (
-              <li key={index}>{point}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ExpertiseDetailsClient
         pageData={{
           sector,

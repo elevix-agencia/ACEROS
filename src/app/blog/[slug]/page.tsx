@@ -2,14 +2,18 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ArrowRight, Clock, Share2 } from 'lucide-react';
-import { blogPosts } from '@/lib/blog-posts';
+import { ArrowLeft, ArrowRight, Clock } from 'lucide-react';
+import { blogPosts, formatBlogDate } from '@/lib/blog-posts';
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export const dynamic = 'force-dynamic';
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return blogPosts.map((post) => ({ slug: post.slug }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -96,12 +100,12 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <article className="pt-24 pb-20 bg-background">
+      <article className="bg-background py-12 sm:py-16">
         {/* Hero do post */}
         <header className="container mx-auto px-4 max-w-4xl">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent mb-8"
+            className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-[#a94700] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a94700]"
           >
             <ArrowLeft className="h-4 w-4" />
             Voltar para o blog
@@ -113,7 +117,7 @@ export default async function BlogPostPage({ params }: Props) {
             </span>
           </div>
 
-          <h1 className="font-headline text-3xl md:text-5xl font-bold text-slate-900 leading-tight mb-6">
+          <h1 className="mb-6 font-headline text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
             {post.titulo}
           </h1>
 
@@ -127,7 +131,7 @@ export default async function BlogPostPage({ params }: Props) {
               {post.tempoLeitura} de leitura
             </span>
             <span>·</span>
-            <span>{new Date(post.dataPublicacao).toLocaleDateString('pt-BR')}</span>
+            <time dateTime={post.dataPublicacao}>{formatBlogDate(post.dataPublicacao)}</time>
           </div>
         </header>
 
@@ -148,7 +152,7 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Conteúdo do post */}
         <div className="container mx-auto px-4 max-w-3xl">
           <div
-            className="blog-content text-slate-700 text-lg leading-relaxed [&_p]:mb-6 [&_p]:leading-relaxed [&_h2]:font-headline [&_h2]:text-2xl md:[&_h2]:text-3xl [&_h2]:font-bold [&_h2]:text-slate-900 [&_h2]:mt-12 [&_h2]:mb-4 [&_h3]:font-headline [&_h3]:text-xl md:[&_h3]:text-2xl [&_h3]:font-bold [&_h3]:text-slate-800 [&_h3]:mt-8 [&_h3]:mb-3 [&_strong]:text-slate-900 [&_strong]:font-semibold [&_ul]:my-6 [&_ul]:pl-6 [&_ul]:list-disc [&_li]:my-2 [&_a]:text-accent hover:[&_a]:underline"
+            className="blog-content text-base leading-relaxed text-slate-700 sm:text-lg [&_a]:text-[#a94700] hover:[&_a]:underline [&_h2]:mb-4 [&_h2]:mt-12 [&_h2]:font-headline [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-slate-900 md:[&_h2]:text-3xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:font-headline [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-slate-800 md:[&_h3]:text-2xl [&_li]:my-2 [&_p]:mb-6 [&_p]:leading-relaxed [&_strong]:font-semibold [&_strong]:text-slate-900 [&_ul]:my-6 [&_ul]:list-disc [&_ul]:pl-6"
             dangerouslySetInnerHTML={{ __html: post.conteudo }}
           />
         </div>
@@ -160,11 +164,11 @@ export default async function BlogPostPage({ params }: Props) {
               Precisa aplicar esse conhecimento no seu projeto?
             </h3>
             <p className="text-slate-300 mb-6">
-              Nossa engenharia analisa desenho, especifica a liga ideal e retorna orçamento sem compromisso.
+              Nossa equipe técnica avalia o desenho e os requisitos da aplicação para orientar os próximos passos do projeto.
             </p>
             <Link
               href={relatedSolution.href}
-              className="inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-8 py-3 rounded-lg transition-all"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#b54b00] px-6 py-3 text-base font-bold text-white transition-all hover:bg-[#963e00] sm:px-8 sm:text-lg"
             >
               {relatedSolution.label}
               <ArrowRight className="h-5 w-5" />
@@ -199,7 +203,7 @@ export default async function BlogPostPage({ params }: Props) {
                   <span className={`inline-block text-xs font-bold uppercase tracking-wider px-2 py-1 rounded border ${categoriaCores[p.categoria]} mb-3`}>
                     {p.categoria}
                   </span>
-                  <h3 className="font-headline text-base font-bold text-slate-900 leading-tight group-hover:text-accent transition-colors">
+                  <h3 className="font-headline text-base font-bold leading-tight text-slate-900 transition-colors group-hover:text-[#a94700]">
                     {p.titulo}
                   </h3>
                 </div>

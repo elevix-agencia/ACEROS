@@ -4,7 +4,7 @@ import { buildCampaignSchema } from '@/lib/campaign-schema';
 
 export const metadata: Metadata = {
   title: 'Fundição Centrifugada Sob Medida | Aços Inoxidáveis',
-  description: 'Fundição centrifugada de tubos mecânicos, buchas e componentes em aços inoxidáveis e ligas especiais. Usinagem e fabricação sob desenho.',
+  description: 'Fundição centrifugada de tubos mecânicos, buchas e componentes em aços inoxidáveis e ligas especiais, com fabricação conforme desenho.',
   alternates: { canonical: '/fundicao-centrifugada' },
   openGraph: { title: 'Fundição Centrifugada Sob Medida — Aceros', description: 'Peças centrifugadas em aços inoxidáveis e ligas especiais, do bruto ao acabamento final.', url: '/fundicao-centrifugada', images: [{ url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg', alt: 'Tubo bruto produzido por fundição centrifugada' }] },
 };
@@ -19,7 +19,7 @@ const data: CampaignPageData = {
   heroAlt: 'Tubos de aço inox bruto produzidos por fundição centrifugada pela Aceros',
   overviewTitle: 'Da liga líquida à peça usinada',
   overview: [
-    'Na fundição centrifugada, o metal líquido é lançado contra a parede interna da coquilha em rotação. O processo favorece uma estrutura densa e é especialmente adequado à produção de peças cilíndricas de alta responsabilidade.',
+    'Na fundição centrifugada, o metal líquido é lançado contra a parede interna da coquilha em rotação. O processo favorece uma estrutura densa e é utilizado na produção de peças cilíndricas para aplicações industriais.',
     'A Aceros integra seleção de liga, centrifugação, tratamento térmico, usinagem e inspeção. O cliente pode receber a peça bruta, pré-usinada ou pronta para montagem.',
   ],
   detailImage: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-05.jpg',

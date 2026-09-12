@@ -26,22 +26,22 @@ export function CertificatesCta() {
     {
       id: 'cert-dnv',
       name: 'DNV',
-      description: t.certificates.dnv,
+      description: 'Referência de classificadora cujos requisitos podem ser considerados quando especificados no projeto.',
     },
     {
       id: 'cert-abs',
       name: 'ABS',
-      description: t.certificates.abs,
+      description: 'Referência técnica do setor naval aplicável quando indicada nos requisitos do fornecimento.',
     },
     {
       id: 'cert-bureau-veritas',
       name: 'Bureau Veritas',
-      description: t.certificates.bureau_veritas,
+      description: 'Referência de inspeção e classificação considerada conforme a aplicação e a documentação contratual.',
     },
     {
       id: 'cert-lloyds',
       name: "Lloyd's Register",
-      description: t.certificates.lloyds,
+      description: 'Referência de classificação para projetos que exijam requisitos específicos do setor naval.',
     },
   ];
 
@@ -54,7 +54,7 @@ export function CertificatesCta() {
 
   return (
     <div>
-      <section className="relative h-[60vh] min-h-[400px] w-full animate-fade-in">
+      <section className="relative isolate min-h-[calc(100svh-80px)] w-full overflow-hidden bg-[#07121e] text-white">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -62,27 +62,31 @@ export function CertificatesCta() {
             fill
             sizes="100vw"
             data-ai-hint={heroImage.imageHint}
-            className="object-cover"
+            className="object-cover object-center opacity-70"
             priority
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent" />
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />
+        <div className="absolute left-0 top-0 h-full w-1 bg-accent" />
+        <div className="relative z-10 flex min-h-[calc(100svh-80px)] items-center text-white">
+          <div className="container mx-auto px-4">
           <div
-            className="relative z-10 flex animate-fade-in-up flex-col items-center px-4"
+            className="max-w-[900px] animate-fade-in-up"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
-            <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl">
-              {t.certificates.title}
+            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:mb-7 sm:text-sm"><span className="h-px w-10 bg-accent" />Qualidade e conformidade</p>
+            <h1 className="text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] sm:text-[clamp(2.25rem,3.35vw,3.65rem)]">
+              Certificações e referências técnicas
             </h1>
-            <p className="mt-6 max-w-3xl text-lg text-slate-200 md:text-xl">
-              {t.certificates.subtitle}
+            <p className="mt-5 max-w-[720px] border-l border-accent/80 pl-4 text-base leading-7 text-slate-200 sm:mt-7 sm:pl-5 sm:text-lg sm:leading-8">
+              Documentos do sistema de gestão e referências técnicas aplicáveis conforme os requisitos de cada fornecimento.
             </p>
+          </div>
           </div>
         </div>
       </section>
       
-      <section className="py-20 sm:py-32 bg-secondary/30">
+      <section className="bg-secondary/30 py-14 sm:py-20 lg:py-28">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8">
             {certificateImages.map((cert, index) => {
@@ -128,33 +132,35 @@ export function CertificatesCta() {
                 Galeria de Certificados
               </h3>
               <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">
-                Veja alguns dos nossos certificados de qualidade e conformidade.
+                Consulte imagens e documentos disponíveis no acervo técnico da Aceros.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {galleryCertificateImages.map((image, index) => (
                 <Dialog key={image.id}>
                   <DialogTrigger asChild>
-                    <div
-                      className="animate-fade-in-up"
+                    <button
+                      type="button"
+                      aria-label={`Ampliar: ${image.description}`}
+                      className="block w-full animate-fade-in-up cursor-pointer rounded-2xl text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
                       style={{
                         animationDelay: `${index * 0.1}s`,
                         animationFillMode: 'both',
                       }}
                     >
-                      <Card className="group relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-primary/20 cursor-pointer">
-                        <div className="aspect-square w-full">
+                      <span className="group relative block overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-primary/20">
+                        <span className="block aspect-square w-full">
                           <Image
                             src={image.imageUrl}
                             alt={image.description}
-                            fill
+                            fill sizes="(max-width: 768px) 100vw, 50vw"
                             data-ai-hint={image.imageHint}
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                           />
-                        </div>
-                        <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                      </Card>
-                    </div>
+                        </span>
+                        <span className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      </span>
+                    </button>
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background border-accent/20">
                     <DialogHeader>
@@ -166,7 +172,7 @@ export function CertificatesCta() {
                       <Image
                         src={image.imageUrl}
                         alt={image.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         data-ai-hint={image.imageHint}
                         className="object-contain rounded-lg"
                       />
@@ -203,7 +209,7 @@ export function CertificatesCta() {
                       variant="outline"
                       className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110"
                   >
-                      <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                      <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="track-whatsapp">
                           <MessageCircle className="mr-3 h-5 w-5" />
                           {t.cta.whatsapp}
                       </Link>

@@ -116,11 +116,10 @@ export function Header() {
                 <SheetTitle>
                    <Image
                       src="/images/imgur/OBD0nJ0.png"
-                      alt="Aceros Logo"
+                      alt="Aceros — Aços Centrifugados"
                       width={280}
                       height={70}
                       className="h-auto w-36"
-                      priority
                     />
                 </SheetTitle>
               </SheetHeader>

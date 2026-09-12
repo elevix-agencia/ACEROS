@@ -21,6 +21,35 @@ const contactSchema = z
     source: z.string().max(80).optional(),
   })
   .superRefine((data, context) => {
+    const technicalLandingPages = new Set([
+      'lp-tubos',
+      'lp-bucha',
+      'lp-rolos-forno',
+      'lp-sink-rolls',
+      'lp-fundicao-centrifugada',
+    ]);
+
+    if (technicalLandingPages.has(data.source || '') && !data.privacy) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['privacy'],
+        message: 'É necessário aceitar a Política de Privacidade.',
+      });
+    }
+
+    if (technicalLandingPages.has(data.source || '')) {
+      const technicalRequiredFields: Array<[keyof typeof data, string]> = [
+        ['company', 'Informe a empresa.'],
+        ['dimensions', 'Informe as dimensões e a quantidade.'],
+      ];
+
+      for (const [field, message] of technicalRequiredFields) {
+        if (!data[field]) {
+          context.addIssue({ code: z.ZodIssueCode.custom, path: [field], message });
+        }
+      }
+    }
+
     if (data.source) return;
 
     const requiredFields: Array<[keyof typeof data, string]> = [

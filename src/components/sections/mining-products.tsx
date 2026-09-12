@@ -135,7 +135,7 @@ export function MiningProducts() {
                             variant="accent"
                             className="h-11 w-full rounded-none font-body text-sm font-semibold"
                           >
-                            <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                            <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                               {t.cta.whatsapp_quote}
                             </Link>
                           </Button>
@@ -156,7 +156,7 @@ export function MiningProducts() {
                       <Image
                         src={productImage.imageUrl}
                         alt={productImage.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         data-ai-hint={productImage.imageHint}
                         className="object-contain rounded-lg"
                       />
@@ -182,7 +182,7 @@ export function MiningProducts() {
               size="lg"
               className="rounded-none bg-primary text-white transition-transform duration-300 hover:-translate-y-1 hover:bg-primary/90"
             >
-              <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+              <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-3 h-5 w-5" />
                 Atendimento
               </Link>

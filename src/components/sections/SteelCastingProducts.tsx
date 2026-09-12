@@ -52,7 +52,7 @@ export function SteelCastingProducts() {
                         <Image
                           src={productImage.imageUrl}
                           alt={productImage.description}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, 50vw"
                           data-ai-hint={productImage.imageHint}
                           className="object-contain w-full h-auto transition-transform duration-500 group-hover:scale-105"
                         />
@@ -70,7 +70,7 @@ export function SteelCastingProducts() {
                     <Image
                       src={productImage.imageUrl}
                       alt={productImage.description}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, 50vw"
                       data-ai-hint={productImage.imageHint}
                       className="object-contain rounded-lg"
                     />
@@ -94,7 +94,7 @@ export function SteelCastingProducts() {
 
             <div className="flex">
               <Button asChild size="lg" className="transition-transform hover:scale-105">
-                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Orçamento
                 </Link>

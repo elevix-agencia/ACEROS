@@ -75,7 +75,7 @@ export function FurnaceAndPotProducts() {
                   size="lg"
                   className="bg-accent text-accent-foreground w-fit transition-transform hover:scale-105"
                 >
-                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     Solicitar Orçamento
                   </Link>
@@ -98,7 +98,7 @@ export function FurnaceAndPotProducts() {
                         <Image
                           src={image.imageUrl}
                           alt={image.description}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, 50vw"
                           data-ai-hint={image.imageHint}
                           className="object-contain transition-transform duration-500 group-hover:scale-105"
                         />

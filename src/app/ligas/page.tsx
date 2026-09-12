@@ -7,7 +7,7 @@ import { Beaker, Flame, ShieldCheck, Waves, Zap } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Ligas de Aço Inox — ASTM A297 e Série 300/400',
   description:
-    'Ligas trabalhadas pela Aceros: aços inoxidáveis com mais de 11% de cromo, série 300 (304, 304L, 316, 316L), série 400 (420), série 300H (310) e superligas ASTM A297 (HK, HH, HP) para aplicações em alta temperatura, abrasão e corrosão.',
+    'Ligas trabalhadas pela Aceros: aços inoxidáveis das séries 300 e 400 e graus ASTM A297 para componentes industriais fabricados conforme o projeto.',
   alternates: { canonical: '/ligas' },
   openGraph: {
     title: 'Ligas de Aço Inox — Aceros Centrifugados',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 type Liga = {
   nome: string;
-  familia: 'Série 300' | 'Série 400' | 'ASTM A297 (Refratária)' | 'Exclusividade Aceros';
+  familia: 'Série 300' | 'Série 400' | 'ASTM A297 (Refratária)' | 'Solução especial';
   descricao: string;
   aplicacoes: string[];
   destaque?: boolean;
@@ -37,28 +37,28 @@ const ligas: Liga[] = [
     nome: 'AISI 316 / 316L',
     familia: 'Série 300',
     descricao:
-      'Adição de molibdênio (2-3%) confere resistência excelente a cloretos e ambientes marítimos. Ideal para setores petroquímico, offshore e químico agressivo.',
+      'A adição de molibdênio contribui para a resistência à corrosão em determinados ambientes com cloretos. A aplicação deve ser avaliada conforme as condições do projeto.',
     aplicacoes: ['Petroquímica', 'Naval', 'Química agressiva'],
   },
   {
     nome: 'AISI 310',
     familia: 'Série 300',
     descricao:
-      'Alto teor de cromo (25%) e níquel (20%) para máxima resistência à oxidação e fluência em altas temperaturas contínuas (até ~1.100 °C).',
+      'Aço inoxidável austenítico com teores elevados de cromo e níquel, utilizado em aplicações que exigem avaliação de oxidação e fluência em alta temperatura.',
     aplicacoes: ['Fornos de tratamento térmico', 'Componentes siderúrgicos'],
   },
   {
     nome: 'AISI 420',
     familia: 'Série 400',
     descricao:
-      'Aço inox martensítico endurecível por têmpera. Alta dureza e resistência mecânica, com resistência à corrosão moderada. Ideal para componentes que exigem dureza e resistência ao desgaste.',
+      'Aço inoxidável martensítico endurecível por têmpera, empregado em componentes cujo projeto exige dureza, resistência mecânica e resistência à corrosão moderada.',
     aplicacoes: ['Buchas', 'Componentes de precisão', 'Cutelaria industrial'],
   },
   {
     nome: 'ASTM A297 Gr. HK',
     familia: 'ASTM A297 (Refratária)',
     descricao:
-      'Liga fundida centrifugada com 24-28% de cromo e 18-22% de níquel. Máxima resistência à fluência e oxidação até 1.150 °C. Utilizada em tubos radiantes e fornos petroquímicos.',
+      'Grau de aço fundido resistente ao calor, utilizado em componentes sujeitos à fluência e oxidação. Composição, temperatura e aplicação devem ser confirmadas na especificação do projeto.',
     aplicacoes: ['Tubos radiantes', 'Fornos de reforma', 'Petroquímica'],
     destaque: true,
   },
@@ -66,7 +66,7 @@ const ligas: Liga[] = [
     nome: 'ASTM A297 Gr. HH',
     familia: 'ASTM A297 (Refratária)',
     descricao:
-      'Liga com 24-28% de cromo e 11-14% de níquel. Excelente resistência à fluência a temperaturas de até 1.050 °C. Muito utilizada em fornos de tratamento térmico.',
+      'Grau de aço fundido resistente ao calor, aplicado em componentes para fornos e tratamento térmico conforme temperatura, atmosfera e solicitação mecânica.',
     aplicacoes: ['Rolos de forno', 'Grelhas de tratamento térmico'],
     destaque: true,
   },
@@ -74,15 +74,15 @@ const ligas: Liga[] = [
     nome: 'ASTM A297 Gr. HP',
     familia: 'ASTM A297 (Refratária)',
     descricao:
-      'Liga com 24-28% de cromo e 33-37% de níquel. Resistência à fluência superior à HK, com estabilidade dimensional em ciclos térmicos severos. Utilizada em tubos de reforma catalítica.',
+      'Grau de aço fundido resistente ao calor, usado em aplicações que demandam avaliação de fluência, oxidação e estabilidade dimensional em ciclos térmicos.',
     aplicacoes: ['Reforma catalítica', 'Produção de hidrogênio', 'Craqueamento'],
     destaque: true,
   },
   {
     nome: 'Cilindro Inox + Tungstênio',
-    familia: 'Exclusividade Aceros',
+    familia: 'Solução especial',
     descricao:
-      'Desenvolvimento exclusivo da Aceros: cilindros de aço inoxidável com adição de tungstênio, projetados para resistir a abrasão extrema em equipamentos de mineração e beneficiamento mineral.',
+      'Cilindros de aço inoxidável com adição de tungstênio, desenvolvidos conforme o projeto para aplicações sujeitas à abrasão em mineração e beneficiamento mineral.',
     aplicacoes: ['Mineração', 'Britagem', 'Peneiras de classificação'],
     destaque: true,
   },
@@ -92,20 +92,32 @@ const familiaIcones = {
   'Série 300': ShieldCheck,
   'Série 400': Zap,
   'ASTM A297 (Refratária)': Flame,
-  'Exclusividade Aceros': Beaker,
+  'Solução especial': Beaker,
 };
 
 const familiaCores = {
   'Série 300': 'from-primary/20 to-primary/5 border-primary/30',
   'Série 400': 'from-slate-500/20 to-slate-500/5 border-slate-500/30',
   'ASTM A297 (Refratária)': 'from-orange-500/20 to-orange-500/5 border-orange-500/30',
-  'Exclusividade Aceros': 'from-accent/30 to-accent/10 border-accent',
+  'Solução especial': 'from-accent/30 to-accent/10 border-accent',
 };
 
 export default function LigasPage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Ligas trabalhadas pela Aceros',
+    itemListElement: ligas.map((liga, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: liga.nome,
+      description: liga.descricao,
+    })),
+  };
+
   return (
     <div className="pt-24 pb-20">
-      <h1 className="sr-only">Ligas de Aço Inoxidável Aceros — Série 300, 400 e ASTM A297</h1>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
       {/* Hero */}
       <section className="bg-primary text-white py-20 relative overflow-hidden">
@@ -117,14 +129,14 @@ export default function LigasPage() {
           <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
             Nossas ligas
           </p>
-          <h2 className="font-headline text-3xl md:text-5xl font-bold uppercase leading-tight mb-6">
-            Aços inoxidáveis com mais de 11% de cromo,{' '}
+          <h1 className="font-headline text-3xl md:text-5xl font-bold uppercase leading-tight mb-6">
+            Aços inoxidáveis e ligas resistentes ao calor,{' '}
             <span className="text-accent">selecionados por aplicação</span>
-          </h2>
+          </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
             Trabalhamos com uma família ampla de ligas de aço inoxidável — série 300, 400 e
-            superligas ASTM A297 — para atender cada projeto com o material certo.
-            Nossa engenharia especifica a liga ideal com base na temperatura, ambiente químico
+            graus ASTM A297 — para atender às condições informadas em cada projeto.
+            Nossa engenharia avalia a liga com base na temperatura, no ambiente químico
             e regime de trabalho da sua planta.
           </p>
         </div>
@@ -190,13 +202,13 @@ export default function LigasPage() {
           </h3>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
             Nossa engenharia analisa temperatura de trabalho, ambiente químico, ciclos térmicos
-            e histórico de falhas para recomendar a liga ideal. Sem custo, sem compromisso.
+            e histórico de operação para orientar a seleção do material conforme o projeto.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               asChild
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-10 py-7 h-auto"
+              className="h-auto bg-[#b54b00] px-10 py-7 text-lg text-white hover:bg-[#963e00]"
             >
               <Link href="/contato">Falar com engenheiro</Link>
             </Button>

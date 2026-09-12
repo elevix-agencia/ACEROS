@@ -5,8 +5,7 @@ import { useState, useEffect } from 'react';
 import { useLanguage } from '@/hooks/use-language';
 import { siteExtras } from '@/lib/i18n/site-extras';
 
-// Nota: numero placeholder — substituir pelo WhatsApp comercial real da Aceros
-// quando o cliente confirmar (hoje aponta pro telefone da Metalurgica Daniela)
+// WhatsApp comercial confirmado pela Aceros.
 const WHATSAPP_NUMBER = '551155556551';
 export function WhatsAppFloat() {
   const { language } = useLanguage();

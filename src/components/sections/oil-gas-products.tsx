@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/hooks/use-language';
+import { LazyVideo } from '@/components/media/lazy-video';
 import { Separator } from '../ui/separator';
 import { Button } from '../ui/button';
 import Link from 'next/link';
@@ -40,15 +41,10 @@ const MediaViewer = ({ item }: { item: MediaItem }) => {
           <CardContent className="p-0">
             <div className="relative aspect-video w-full">
               {item.type === 'video' ? (
-                <video
+                <LazyVideo
                   src={item.url.replace('/upload/', '/upload/q_auto:low,w_400/')}
                   className="h-full w-full object-cover pointer-events-none"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  aria-label="Prévia silenciosa de vídeo industrial da Aceros"
+                  ariaLabel="Prévia silenciosa de vídeo industrial da Aceros"
                 />
               ) : (
                 'imageUrl' in item && (

@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Phone, Mail, MapPin, Send, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, MessageCircle, Clock3 } from 'lucide-react';
 import { LocationMap } from './location-map';
 import { saveContactMessage } from '@/lib/contact-actions';
 import { useToast } from '@/hooks/use-toast';
@@ -250,7 +250,7 @@ export function Contact() {
                         <div className="space-y-1 leading-none">
                           <FormLabel className="text-sm font-normal leading-6 text-slate-700">
                             {t.contact.form_privacy_agreement}{' '}
-                            <Link href="/politica-de-privacidade" target="_blank" className="font-semibold text-[#b84d08] underline underline-offset-2">
+                            <Link href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#b84d08] underline underline-offset-2">
                               {t.contact.form_privacy_link}
                             </Link>.
                           </FormLabel>
@@ -275,7 +275,7 @@ export function Contact() {
                         variant="outline"
                         className="rounded-none border-[#07121e] bg-[#07121e] py-7 text-lg font-bold text-white hover:border-[#12263a] hover:bg-[#12263a] hover:text-white"
                       >
-                        <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                        <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                           <MessageCircle className="w-5 h-5 mr-3" />
                           WhatsApp
                         </Link>
@@ -284,56 +284,70 @@ export function Contact() {
                   </form>
                 </Form>
               </div>
-              <div className="flex flex-col justify-center bg-[#07121e] p-8 text-white sm:p-12 md:col-span-2">
-                <h3 className="mb-8 font-headline text-2xl font-bold sm:text-3xl">
-                  {t.contact.details_title}
-                </h3>
-                <p className="mb-10 -mt-2 text-base leading-7 text-slate-300">
-                  {t.contact.details_hours}
-                </p>
-                <div className="space-y-8">
+              <div className="relative flex flex-col overflow-hidden bg-[#07121e] p-8 text-white sm:p-12 md:col-span-2">
+                <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#ef7b21]/10 blur-3xl" />
+                <div className="relative z-10 flex h-full flex-col justify-center">
+                  <h3 className="mb-8 font-headline text-2xl font-bold sm:text-3xl">
+                    {t.contact.details_title}
+                  </h3>
+                  <div className="mb-5 flex items-start gap-4 border border-white/10 bg-white/[0.06] p-5">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-[#ef7b21]/15 text-[#ef7b21]">
+                      <Clock3 className="h-6 w-6" />
+                    </span>
+                    <p className="text-base leading-7 text-slate-200">
+                      {t.contact.details_hours}
+                    </p>
+                  </div>
+                  <div className="space-y-4">
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=Rua+Hans+Oersted%2C+20-118%2C+Cidade+Moncoes%2C+Sao+Paulo%2C+SP%2C+04575-010"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-start gap-5 transition-colors hover:text-[#ef7b21] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
+                    className="group flex items-start gap-4 border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-[#ef7b21]/70 hover:bg-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
                   >
-                    <MapPin className="mt-1 h-7 w-7 shrink-0 text-[#ef7b21]" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-[#ef7b21]/15 text-[#ef7b21] transition-colors group-hover:bg-[#ef7b21] group-hover:text-white">
+                      <MapPin className="h-6 w-6" />
+                    </span>
                     <div>
-                      <p className="text-xl font-semibold">
+                      <p className="text-sm font-bold uppercase tracking-[0.12em] text-white">
                         {t.contact.details_address_title}
                       </p>
-                      <p className="text-base leading-7 text-slate-300">
+                      <p className="mt-1 text-base leading-7 text-slate-300">
                         {t.footer.address}
                       </p>
                     </div>
                   </a>
                   <a
                     href="tel:+551155556551"
-                    className="flex items-start gap-5 transition-colors hover:text-[#ef7b21] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
+                    className="group flex items-start gap-4 border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-[#ef7b21]/70 hover:bg-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
                   >
-                    <Phone className="mt-1 h-7 w-7 shrink-0 text-[#ef7b21]" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-[#ef7b21]/15 text-[#ef7b21] transition-colors group-hover:bg-[#ef7b21] group-hover:text-white">
+                      <Phone className="h-6 w-6" />
+                    </span>
                     <div>
-                      <p className="text-xl font-semibold">
+                      <p className="text-sm font-bold uppercase tracking-[0.12em] text-white">
                         {t.contact.details_phone_title}
                       </p>
-                      <p className="text-base leading-7 text-slate-300">
+                      <p className="mt-1 text-base leading-7 text-slate-300">
                         +55 (11) 5555-6551 (Industrial)
                       </p>
                     </div>
                   </a>
                   <a
                     href="mailto:vendas@aceros.com.br"
-                    className="flex items-start gap-5 transition-colors hover:text-[#ef7b21] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
+                    className="group flex items-start gap-4 border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-[#ef7b21]/70 hover:bg-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ef7b21]"
                   >
-                    <Mail className="mt-1 h-7 w-7 shrink-0 text-[#ef7b21]" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-[#ef7b21]/15 text-[#ef7b21] transition-colors group-hover:bg-[#ef7b21] group-hover:text-white">
+                      <Mail className="h-6 w-6" />
+                    </span>
                     <div>
-                      <p className="text-xl font-semibold">{t.contact.form_email}</p>
-                      <p className="text-base leading-7 text-slate-300">
+                      <p className="text-sm font-bold uppercase tracking-[0.12em] text-white">{t.contact.form_email}</p>
+                      <p className="mt-1 text-base leading-7 text-slate-300">
                         vendas@aceros.com.br
                       </p>
                     </div>
                   </a>
+                  </div>
                 </div>
               </div>
             </CardContent>

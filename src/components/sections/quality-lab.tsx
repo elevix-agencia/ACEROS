@@ -86,7 +86,7 @@ const equipamentos = [
 export function QualityLab() {
   return (
     <>
-      <section className="relative overflow-hidden bg-neutral-800 py-20 text-white">
+      <section className="relative overflow-hidden bg-primary py-20 text-white">
         <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
         <div className="container relative z-10 mx-auto px-4">
           <div className="mx-auto mb-12 max-w-3xl text-center">
@@ -108,7 +108,7 @@ export function QualityLab() {
                 <Link href="/images/aceros/drive/certificado-iso.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado ISO 9001:2015 da Aceros" className="flex min-h-[390px] items-center justify-center bg-white p-4">
                   <Image src="/images/aceros/generated/certificado-iso-2028.png" alt="Certificado ISO 9001:2015 da Aceros válido até novembro de 2028" width={795} height={1124} className="h-full max-h-[420px] w-auto object-contain" />
                 </Link>
-                <Link href="/images/aceros/drive/certificado-iso.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado ISO 9001:2015 da Aceros" className="flex flex-col p-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset">
+                <Link href="/images/aceros/drive/certificado-iso.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado ISO 9001:2015 da Aceros" className="flex flex-col bg-neutral-800 p-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Sistema de gestão</p>
                   <h3 className="mt-3 font-headline text-2xl font-bold">ISO 9001:2015</h3>
                   <p className="mt-4 text-sm leading-6 text-slate-300">Certificação DQS com acreditação DAkkS e reconhecimento da rede IQNet para o escopo industrial da Aceros.</p>
@@ -126,7 +126,7 @@ export function QualityLab() {
                 <Link href="/images/aceros/drive/certificado-calibracao-espectrometro.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir registro de revisão e calibração do espectrômetro" className="flex min-h-[390px] items-center justify-center bg-white p-3">
                   <Image src="/images/aceros/drive/certificado-calibracao-espectrometro.png" alt="Registro de revisão e calibração número 2044/19 do espectrômetro" width={962} height={717} className="h-auto w-full object-contain" />
                 </Link>
-                <Link href="/images/aceros/drive/certificado-calibracao-espectrometro.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir registro de revisão e calibração do espectrômetro" className="flex flex-col p-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset">
+                <Link href="/images/aceros/drive/certificado-calibracao-espectrometro.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir registro de revisão e calibração do espectrômetro" className="flex flex-col bg-neutral-800 p-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Registro técnico</p>
                   <h3 className="mt-3 font-headline text-2xl font-bold">Revisão e calibração Spectromax</h3>
                   <p className="mt-4 text-sm leading-6 text-slate-300">Documento nº 2044/19 referente ao espectrômetro de emissão óptica utilizado na análise química das ligas.</p>

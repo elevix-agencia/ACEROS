@@ -4,7 +4,7 @@ import { buildCampaignSchema } from '@/lib/campaign-schema';
 
 export const metadata: Metadata = {
   title: 'Sink Rolls Sob Medida | Rolos de Imersão para Galvanização',
-  description: 'Sink rolls, buchas de ponta, braços, snout e conjuntos para linhas de galvanização por imersão a quente. Fabricação Aceros sob medida.',
+  description: 'Sink rolls, buchas de ponta, braços, snout e conjuntos sob medida para linhas de galvanização por imersão a quente. Solicite análise técnica.',
   alternates: { canonical: '/sink-rolls' },
   openGraph: { title: 'Sink Rolls para Galvanização — Aceros', description: 'Rolos de imersão e componentes para linhas de galvanização.', url: '/sink-rolls', images: [{ url: '/images/imgur/KZhCZ6S.png', alt: 'Sink Roll fabricado para linha de galvanização' }] },
 };
@@ -29,7 +29,7 @@ const data: CampaignPageData = {
     { title: 'Sink roll', description: 'Rolo principal submerso que direciona a tira dentro do pote de galvanização.' },
     { title: 'Buchas para ponta', description: 'Buchas para a ponta do sink roll, fabricadas conforme o conjunto e a condição de trabalho.' },
     { title: 'Braços', description: 'Braços para sink roll e componentes de sustentação do conjunto de zincagem.' },
-    { title: 'Buchas de ponta', description: 'Buchas centrifugadas de alta precisão para reduzir desgaste e paradas.' },
+    { title: 'Buchas de ponta', description: 'Buchas centrifugadas e usinadas conforme as tolerâncias e condições do conjunto.' },
     { title: 'Snout', description: 'Componente desenvolvido para trabalho no pote de zincagem, conforme projeto da linha.' },
     { title: 'Conjuntos montados', description: 'Fornecimento de conjuntos com rolos e braços para linhas de galvanização.' },
   ],
@@ -37,7 +37,7 @@ const data: CampaignPageData = {
     { label: 'Aplicação', value: 'Linhas CGL e galvanização' },
     { label: 'Componentes', value: 'Rolos, braços, snout e buchas' },
     { label: 'Processo', value: 'Centrifugação e usinagem' },
-    { label: 'Projeto', value: '100% sob medida' },
+    { label: 'Projeto', value: 'Fabricação sob medida' },
   ],
   gallery: [
     { src: '/images/imgur/qdpfn4q.png', alt: 'Componentes para linha de galvanização por imersão a quente' },

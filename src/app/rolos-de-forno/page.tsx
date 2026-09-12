@@ -4,7 +4,7 @@ import { buildCampaignSchema } from '@/lib/campaign-schema';
 
 export const metadata: Metadata = {
   title: 'Rolos de Forno Sob Medida | Furnace Rolls Industriais',
-  description: 'Rolos de forno centrifugados em ligas ASTM A297 para tratamento térmico, CAPL, CGL e fornos contínuos. Fabricação sob medida. Solicite orçamento.',
+  description: 'Rolos de forno centrifugados sob medida para tratamento térmico, linhas CAPL, CGL e fornos contínuos. Análise técnica conforme o projeto.',
   alternates: { canonical: '/rolos-de-forno' },
   openGraph: { title: 'Rolos de Forno e Furnace Rolls — Aceros', description: 'Rolos centrifugados resistentes a altas temperaturas, fabricados conforme desenho técnico.', url: '/rolos-de-forno', images: [{ url: '/images/imgur/gbNL57g.png', alt: 'Rolo de forno fabricado pela Aceros' }] },
 };
@@ -17,21 +17,21 @@ const data: CampaignPageData = {
   heroDescription: 'Rolos centrifugados, resfriados ou não resfriados, desenvolvidos conforme o forno, a carga e o ciclo térmico da sua linha industrial.',
   heroImage: '/images/imgur/gbNL57g.png',
   heroAlt: 'Rolo industrial para forno túnel CSP fabricado pela Aceros',
-  overviewTitle: 'Desempenho previsível dentro do forno',
+  overviewTitle: 'Engenharia aplicada às condições do forno',
   overview: [
-    'A Aceros fabrica rolos de forno em ligas resistentes à fluência, oxidação e ciclos térmicos severos. O projeto considera temperatura, atmosfera, carga, rotação e sistema de refrigeração.',
+    'A Aceros fabrica rolos de forno em ligas selecionadas conforme fluência, oxidação e ciclos térmicos. A análise considera temperatura, atmosfera, carga, rotação e sistema de refrigeração.',
     'O fornecimento pode seguir o desenho do cliente ou ser desenvolvido em conjunto com nossa engenharia, incluindo centrifugação, usinagem, montagem e controle dimensional.',
   ],
   detailImage: '/images/imgur/iYTJsbZ.png',
   detailAlt: 'Tubos radiantes e rolos para fornos CAPL e CGL',
-  benefits: ['Rolos resfriados e não resfriados', 'Ligas ASTM A297 conforme o projeto', 'Opções revestidas e não revestidas', 'Dimensões e acabamento sob medida'],
+  benefits: ['Rolos resfriados e não resfriados', 'Ligas definidas conforme o projeto', 'Opções revestidas e não revestidas', 'Dimensões e acabamento sob medida'],
   applications: [
     { title: 'Fornos túnel CSP', description: 'Rolos para transporte de placas sob regime térmico contínuo e elevada carga.' },
     { title: 'Linhas CAPL e CGL', description: 'Furnace rolls para recozimento e galvanização contínua, com ou sem revestimento.' },
     { title: 'Tratamento térmico', description: 'Rolos transportadores para têmpera, revenimento, recozimento e outros ciclos.' },
     { title: 'Fornos de barras', description: 'Rolos de carga e descarga, secos ou molhados, conforme a configuração do equipamento.' },
     { title: 'Walking beam', description: 'Componentes para fornos de vigas caminhantes e tratamento térmico de tubos.' },
-    { title: 'Modernização de linhas', description: 'Reposição e melhoria de componentes a partir de desenho, amostra ou histórico de falha.' },
+    { title: 'Modernização de linhas', description: 'Reposição e avaliação de componentes a partir de desenho, amostra ou histórico de operação.' },
   ],
   specs: [
     { label: 'Processo', value: 'Fundição centrifugada' },

@@ -1,6 +1,16 @@
 ﻿import type { Metadata } from 'next';
 import { Contact } from '@/components/sections/contact';
 
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': 'https://aceros.com.br/contato#page',
+  url: 'https://aceros.com.br/contato',
+  name: 'Contato Aceros',
+  about: { '@id': 'https://aceros.com.br/#organization' },
+  inLanguage: 'pt-BR',
+};
+
 export const metadata: Metadata = {
   title: 'Contato — Solicite Orçamento de Aços Centrifugados',
   description:
@@ -15,5 +25,13 @@ export const metadata: Metadata = {
 };
 
 export default function ContatoPage() {
-  return <Contact />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
+      <Contact />
+    </>
+  );
 }

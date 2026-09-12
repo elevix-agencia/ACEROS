@@ -50,7 +50,7 @@ export function WhatsAppCta() {
                 size="lg"
                 className="h-auto rounded-none border border-white/20 bg-[#07121e] px-8 py-4 text-base font-bold text-white shadow-[0_16px_35px_rgba(7,18,30,.24)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#12263a]"
               >
-                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-3 h-6 w-6" />
                   {t.whatsapp.button}
                 </Link>

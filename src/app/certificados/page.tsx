@@ -3,14 +3,14 @@ import { CertificatesCta } from '@/components/sections/certificates-cta';
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 
 export const metadata: Metadata = {
-  title: 'Certificados e Selos de Qualidade — Aceros',
+  title: 'Certificações e Referências Técnicas — Aceros',
   description:
-    'Certificados, laudos e selos de qualidade das peças fabricadas pela Aceros. Rastreabilidade total conforme normas ABNT, ASTM, DIN e AISI.',
+    'Certificações do sistema de gestão, documentos técnicos e referências de classificadoras aplicáveis aos fornecimentos da Aceros.',
   alternates: { canonical: '/certificados' },
   openGraph: {
-    title: 'Certificados de Qualidade — Aceros',
+    title: 'Certificações e Referências Técnicas — Aceros',
     description:
-      'Certificações e laudos técnicos garantindo a conformidade das peças em aços centrifugados.',
+      'Documentos do sistema de gestão e referências técnicas aplicáveis aos projetos e fornecimentos.',
     url: '/certificados',
   },
 };
@@ -18,7 +18,20 @@ export const metadata: Metadata = {
 export default function CertificadosPage() {
   return (
     <div className="pt-20">
-      <h1 className="sr-only">Certificados e Selos de Qualidade da Aceros</h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'CollectionPage',
+            name: 'Certificações e referências técnicas da Aceros',
+            description: 'Documentos do sistema de gestão e referências técnicas aplicáveis aos fornecimentos.',
+            url: 'https://aceros.com.br/certificados',
+            isPartOf: { '@id': 'https://aceros.com.br/#website' },
+            about: { '@id': 'https://aceros.com.br/#organization' },
+          }),
+        }}
+      />
       <CertificatesCta />
       <WhatsAppCta />
     </div>

@@ -1,8 +1,9 @@
 
 'use client';
 
-import { useRef, useState, useEffect, Suspense } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
 import { useLanguage } from '@/hooks/use-language';
 import { Sector } from '@/lib/expertise-data';
@@ -16,22 +17,12 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { SteelCastingProducts } from '@/components/sections/SteelCastingProducts';
-import { TunnelFurnaceRollers } from '@/components/sections/TunnelFurnaceRollers';
-import { HotStripMillRollers } from '@/components/sections/HotStripMillRollers';
-import { CaplCglProducts } from '@/components/sections/CaplCglProducts';
-import { FurnaceAndPotProducts } from '@/components/sections/FurnaceAndPotProducts';
-import { WalkingBeamFurnace } from '@/components/sections/WalkingBeamFurnace';
-import { BarFurnaceProducts } from '@/components/sections/BarFurnaceProducts';
-import { MiningProducts } from '@/components/sections/mining-products';
-import { GuseiraStavesSection, GuseiraTuyeresSection, GuseiraHousingsSection, GuseiraWearPlatesSection, GuseiraStructuralComponentsSection, GuseiraMediaSection } from '@/components/sections/featured-products';
-import { OilGasProducts } from '@/components/sections/oil-gas-products';
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
+import { LazyVideo } from '@/components/media/lazy-video';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, Search, Check, BrainCircuit, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { SiderurgiaImageGallery } from '@/components/sections/SiderurgiaImageGallery';
 import {
   Dialog,
   DialogContent,
@@ -40,8 +31,23 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { cn } from '@/lib/utils';
-import { NavalCatalogSection } from '@/components/sections/NavalCatalogSection';
-import { NavalProductCard } from '@/components/sections/NavalProductCard';
+const SteelCastingProducts = dynamic(() => import('@/components/sections/SteelCastingProducts').then(module => module.SteelCastingProducts));
+const TunnelFurnaceRollers = dynamic(() => import('@/components/sections/TunnelFurnaceRollers').then(module => module.TunnelFurnaceRollers));
+const HotStripMillRollers = dynamic(() => import('@/components/sections/HotStripMillRollers').then(module => module.HotStripMillRollers));
+const CaplCglProducts = dynamic(() => import('@/components/sections/CaplCglProducts').then(module => module.CaplCglProducts));
+const FurnaceAndPotProducts = dynamic(() => import('@/components/sections/FurnaceAndPotProducts').then(module => module.FurnaceAndPotProducts));
+const WalkingBeamFurnace = dynamic(() => import('@/components/sections/WalkingBeamFurnace').then(module => module.WalkingBeamFurnace));
+const BarFurnaceProducts = dynamic(() => import('@/components/sections/BarFurnaceProducts').then(module => module.BarFurnaceProducts));
+const MiningProducts = dynamic(() => import('@/components/sections/mining-products').then(module => module.MiningProducts));
+const GuseiraStavesSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraStavesSection));
+const GuseiraTuyeresSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraTuyeresSection));
+const GuseiraHousingsSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraHousingsSection));
+const GuseiraWearPlatesSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraWearPlatesSection));
+const GuseiraStructuralComponentsSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraStructuralComponentsSection));
+const GuseiraMediaSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraMediaSection));
+const OilGasProducts = dynamic(() => import('@/components/sections/oil-gas-products').then(module => module.OilGasProducts));
+const SiderurgiaImageGallery = dynamic(() => import('@/components/sections/SiderurgiaImageGallery').then(module => module.SiderurgiaImageGallery));
+const NavalCatalogSection = dynamic(() => import('@/components/sections/NavalCatalogSection').then(module => module.NavalCatalogSection));
 
 export type ExpertisePageData = {
   sector: Sector;
@@ -65,11 +71,6 @@ export function ExpertiseDetailsClient({
   pageData: ExpertisePageData;
 }) {
   const { t } = useLanguage();
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   if (!pageData) {
     return null;
@@ -90,17 +91,9 @@ export function ExpertiseDetailsClient({
 
   const heroImage = PlaceHolderImages.find(img => img.id === sector.heroImageId);
   
-  if (!isClient) {
-    return (
-      <div className="h-screen w-screen flex items-center justify-center">
-        <p>Carregando...</p>
-      </div>
-    );
-  }
-
   return (
     <div className={`sector-page sector-page--${sector.id}`}>
-      <section className="relative h-[58vh] min-h-[460px] max-h-[660px] w-full overflow-hidden bg-[#07121e]">
+      <section className="relative isolate min-h-[calc(100svh-80px)] w-full overflow-hidden bg-[#07121e]">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -108,16 +101,17 @@ export function ExpertiseDetailsClient({
             fill
             sizes="100vw"
             data-ai-hint={heroImage.imageHint}
-            className="object-cover object-center"
+            className="object-cover object-center opacity-70"
             priority
           />
         )}
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,18,30,.94)_0%,rgba(7,18,30,.82)_42%,rgba(7,18,30,.34)_72%,rgba(7,18,30,.12)_100%)]" />
-        <div className="absolute inset-0 z-10 flex items-center text-white">
+        <div className="absolute left-0 top-0 h-full w-1 bg-accent" />
+        <div className="relative z-10 flex min-h-[calc(100svh-80px)] items-center py-10 text-white sm:py-16 lg:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-[820px]">
             <motion.p 
-              className="mb-5 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.22em] text-accent"
+              className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -126,7 +120,7 @@ export function ExpertiseDetailsClient({
               {translations.expertise_sectors.page.solutions_for}
             </motion.p>
             <motion.h1 
-              className="font-headline text-[clamp(2.65rem,5vw,4.75rem)] font-semibold uppercase leading-[1.02] tracking-[-0.025em]"
+              className="text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] sm:text-[clamp(2.25rem,3.35vw,3.65rem)]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -147,9 +141,7 @@ export function ExpertiseDetailsClient({
       </section>
 
       <div className="sector-flow" data-sector={sector.id}>
-        <Suspense fallback={<div>Carregando conteúdo...</div>}>
-          <SectorContent sector={sector} translations={translations} />
-        </Suspense>
+        <SectorContent sector={sector} translations={translations} />
       </div>
 
       <WhatsAppCta />
@@ -202,7 +194,7 @@ function OilGasNewGallerySection() {
               <Image 
                 src={image.imageUrl} 
                 alt={image.description} 
-                fill 
+                fill sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover" 
                 data-ai-hint={image.imageHint}
               />
@@ -275,7 +267,7 @@ function TratamentoTermicoNewSection({translations}: {translations: any}) {
                       <Image
                         src={image.imageUrl}
                         alt={image.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         data-ai-hint={image.imageHint}
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -348,15 +340,10 @@ function TratamentoTermicoVideos({ videoUrls, translations }: { videoUrls: strin
               transition={{ duration: 0.8, delay: 0.2 + index * 0.2 }}
             >
               <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg border transition-all duration-300 hover:shadow-primary/20 hover:-translate-y-1">
-                <video
+                <LazyVideo
                   src={getSilentVideoSource(url)}
                   className="h-full w-full object-cover"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  aria-label="Vídeo industrial da Aceros reproduzido sem áudio"
+                  ariaLabel="Vídeo industrial da Aceros reproduzido sem áudio"
                 />
               </div>
             </motion.div>
@@ -443,7 +430,7 @@ function TratamentoTermicoExtraGallery({translations}: {translations: any}) {
                       <Image
                         src={image.imageUrl}
                         alt={image.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         data-ai-hint={image.imageHint}
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -455,7 +442,7 @@ function TratamentoTermicoExtraGallery({translations}: {translations: any}) {
                 </DialogTrigger>
                 <DialogContent className="max-w-4xl p-4">
                   <div className="relative aspect-video w-full mt-4">
-                    <Image src={image.imageUrl} alt={image.description} fill className="object-contain rounded-lg" />
+                    <Image src={image.imageUrl} alt={image.description} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-contain rounded-lg" />
                   </div>
                 </DialogContent>
               </Dialog>
@@ -563,7 +550,7 @@ function TratamentoTermicoOrangeGallery({translations}: {translations: any}) {
                       <Image
                         src={image.imageUrl}
                         alt={image.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         data-ai-hint={image.imageHint}
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -575,7 +562,7 @@ function TratamentoTermicoOrangeGallery({translations}: {translations: any}) {
                 </DialogTrigger>
                 <DialogContent className="max-w-4xl p-4">
                   <div className="relative aspect-video w-full mt-4">
-                    <Image src={image.imageUrl} alt={image.description} fill className="object-contain rounded-lg" />
+                    <Image src={image.imageUrl} alt={image.description} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-contain rounded-lg" />
                   </div>
                 </DialogContent>
               </Dialog>
@@ -673,7 +660,7 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
                         <p className="mb-6 text-slate-600">{translations.expertise_sectors.page.tratamento_creative_cta_subtitle}</p>
                         <div className="flex justify-center">
                           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                              <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                              <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                                   {translations.expertise_sectors.page.tratamento_creative_cta_button}
                               </Link>
                           </Button>
@@ -834,7 +821,7 @@ function MiningRollerScreens({translations}: {translations: any}) {
                       <Image
                         src={image.imageUrl}
                         alt={image.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         data-ai-hint={image.imageHint}
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -1006,7 +993,7 @@ function NavalTubesSection({translations}: {translations: any}) {
                   size="lg"
                   className="border-accent text-accent-foreground bg-orange-500 hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-105"
                 >
-                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     WhatsApp
                   </Link>
@@ -1093,7 +1080,7 @@ function NavalAnalysisSection({translations}: {translations: any}) {
                     <Image
                       src={image.imageUrl}
                       alt={image.description}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain p-4 bg-gray-100/50"
                     />
                     <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -1103,7 +1090,7 @@ function NavalAnalysisSection({translations}: {translations: any}) {
                 </DialogTrigger>
                 <DialogContent className="max-w-5xl w-full h-[90vh] p-4 bg-background/90 backdrop-blur-sm border-accent/20">
                   <div className="relative flex-grow h-full">
-                    <Image src={image.imageUrl} alt={image.description} fill className="object-contain" />
+                    <Image src={image.imageUrl} alt={image.description} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-contain" />
                   </div>
                 </DialogContent>
               </Dialog>
@@ -1137,13 +1124,10 @@ function NavalAssembliesSection({translations}: {translations: any}) {
         whileHover={{ scale: 1.05, zIndex: 10 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <video
+        <LazyVideo
           src={url}
           className="object-cover w-full h-full"
-          autoPlay
-          loop
-          muted
-          playsInline
+          ariaLabel="Vídeo industrial da Aceros reproduzido sem áudio"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="p-3 bg-white/20 rounded-full backdrop-blur-sm">
@@ -1223,7 +1207,7 @@ function NavalConnectorsSection({translations}: {translations: any}) {
             </p>
             <div className="flex">
               <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-white/90">
-                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                       Solicitar Orçamento
                   </Link>
               </Button>
@@ -1309,7 +1293,7 @@ function NavalNewProductsSection({translations}: {translations: any}) {
                         <Image
                           src={image.imageUrl}
                           alt={image.description || product.name}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-contain transition-transform duration-500 group-hover:scale-105"
                         />
                       </div>
@@ -1354,7 +1338,7 @@ function NavalWinchSection({translations}: {translations: any}) {
             <Image
               src={image.imageUrl}
               alt={image.description}
-              fill
+              fill sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               data-ai-hint={image.imageHint}
             />
@@ -1438,7 +1422,7 @@ function KortNozzleSection({translations}: {translations: any}) {
                         <Image
                           src={image.imageUrl}
                           alt={image.description}
-                          fill
+                          fill sizes="(max-width: 768px) 100vw, 50vw"
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       </CardContent>
@@ -1510,9 +1494,9 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
   ];
 
   const qualityPillars = [
-    { icon: 'Award' as const, title: 'Qualidade Superior', description: 'Nossas ligas e processos garantem componentes que superam os padrões da indústria.' },
-    { icon: 'Component' as const, title: 'Engenharia de Precisão', description: 'Cada peça é projetada para máxima eficiência, durabilidade e encaixe perfeito.' },
-    { icon: 'ShieldCheck' as const, title: 'Durabilidade Extrema', description: 'Componentes construídos para resistir às condições mais severas de abrasão e impacto.' },
+    { icon: 'Award' as const, title: 'Controle de qualidade', description: 'Materiais e processos são avaliados conforme os requisitos definidos para cada fornecimento.' },
+    { icon: 'Component' as const, title: 'Engenharia sob medida', description: 'Dimensões, liga e acabamento são especificados de acordo com o desenho e a aplicação da peça.' },
+    { icon: 'ShieldCheck' as const, title: 'Aplicações severas', description: 'Componentes desenvolvidos para condições de abrasão, impacto e temperatura informadas no projeto.' },
   ];
 
   switch (sector.id) {
@@ -1656,15 +1640,10 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
                                     <div className="p-2">
                                         {item.type === 'video' && 'url' in item ? (
                                             <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg">
-                                                <video
+                                                <LazyVideo
                                                   src={getSilentVideoSource(item.url)}
                                                   className="h-full w-full object-cover"
-                                                  autoPlay
-                                                  loop
-                                                  muted
-                                                  playsInline
-                                                  preload="metadata"
-                                                  aria-label="Vídeo industrial da Aceros reproduzido sem áudio"
+                                                  ariaLabel="Vídeo industrial da Aceros reproduzido sem áudio"
                                                 />
                                             </div>
                                         ) : item.type === 'image' && 'imageUrl' in item ? (

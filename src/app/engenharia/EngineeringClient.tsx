@@ -104,7 +104,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
   
   return (
     <div>
-      <section className="relative h-[60vh] min-h-[400px] w-full animate-fade-in">
+      <section className="relative isolate min-h-[calc(100svh-80px)] w-full overflow-hidden bg-[#07121e] text-white">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -112,22 +112,26 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
             fill
             sizes="100vw"
             data-ai-hint={heroImage.imageHint}
-            className="object-cover"
+            className="object-cover object-center opacity-70"
             priority
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent" />
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#07121e_0%,rgba(7,18,30,.94)_42%,rgba(7,18,30,.42)_72%,rgba(7,18,30,.12)_100%)]" />
+        <div className="absolute left-0 top-0 h-full w-1 bg-accent" />
+        <div className="relative z-10 flex min-h-[calc(100svh-80px)] items-center text-white">
+          <div className="container mx-auto px-4">
           <div
-            className="relative z-10 flex animate-fade-in-up flex-col items-center px-4"
+            className="max-w-[900px] animate-fade-in-up"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
-            <h1 className="font-headline text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl uppercase">
+            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:mb-7 sm:text-sm"><span className="h-px w-10 bg-accent" />Engenharia aplicada</p>
+            <h1 className="text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] sm:text-[clamp(2.25rem,3.35vw,3.65rem)]">
               {sector.title}
             </h1>
-            <p className="mt-6 max-w-3xl text-lg text-slate-200 md:text-xl">
+            <p className="mt-5 max-w-[720px] border-l border-accent/80 pl-4 text-base leading-7 text-slate-200 sm:mt-7 sm:pl-5 sm:text-lg sm:leading-8">
               {sector.description}
             </p>
+          </div>
           </div>
         </div>
       </section>
@@ -139,7 +143,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
               Nossas Soluções de Engenharia
             </h2>
             <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">
-              Desenvolvemos projetos e análises para garantir a máxima performance e durabilidade dos seus componentes.
+              Desenvolvemos projetos e análises conforme a aplicação, as condições de serviço e os requisitos do componente.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -178,7 +182,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
               Inovação em Cada Projeto
             </h2>
             <p className="mb-8 text-lg text-muted-foreground">
-              Utilizamos as mais recentes tecnologias de simulação e análise para criar componentes que superam os desafios mais extremos da indústria.
+              Utilizamos ferramentas de projeto e simulação para avaliar componentes destinados a diferentes condições industriais.
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-4">
@@ -189,7 +193,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                   <h4 className="font-semibold text-lg">
                     Design Otimizado
                   </h4>
-                  <p className="text-muted-foreground">Projetos que maximizam a eficiência e a vida útil dos componentes.</p>
+                  <p className="text-muted-foreground">Projetos orientados à eficiência, à fabricação e às condições de operação.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -200,7 +204,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                   <h4 className="font-semibold text-lg">
                     Validação por Simulação
                   </h4>
-                  <p className="text-muted-foreground">Testes virtuais rigorosos que garantem a performance antes da produção.</p>
+                  <p className="text-muted-foreground">Simulações utilizadas como apoio à avaliação técnica antes da produção.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -211,7 +215,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                   <h4 className="font-semibold text-lg">
                     Parceria Contínua
                   </h4>
-                   <p className="text-muted-foreground">Acompanhamento técnico para garantir os melhores resultados.</p>
+                   <p className="text-muted-foreground">Acompanhamento técnico durante a análise e o desenvolvimento do projeto.</p>
                 </div>
               </li>
             </ul>
@@ -245,7 +249,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
             {alloyTableFull && (
               <Dialog>
                 <DialogTrigger asChild>
-                  <div className="relative w-full max-w-4xl rounded-xl overflow-hidden shadow-lg border cursor-pointer transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                  <button type="button" aria-label={`Ampliar: ${alloyTableFull.description}`} className="relative w-full max-w-4xl cursor-pointer overflow-hidden rounded-xl border bg-white shadow-lg transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">
                     <Image
                       src={alloyTableFull.imageUrl}
                       alt={alloyTableFull.description}
@@ -254,7 +258,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                       data-ai-hint={alloyTableFull.imageHint}
                       className="object-contain w-full h-auto"
                     />
-                  </div>
+                  </button>
                 </DialogTrigger>
                 <DialogContent className="max-w-6xl w-full h-[90vh] p-4 bg-background border-accent/20 flex flex-col">
                   <DialogHeader>
@@ -267,6 +271,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                       src={alloyTableFull.imageUrl}
                       alt={alloyTableFull.description}
                       fill
+                      sizes="90vw"
                       data-ai-hint={alloyTableFull.imageHint}
                       className="object-contain rounded-lg"
                     />
@@ -385,26 +390,25 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
             {machiningImages.map((image, index) => (
               <Dialog key={image.id}>
                 <DialogTrigger asChild>
-                  <div
-                    className="animate-fade-in-up"
+                  <button
+                    type="button"
+                    aria-label={`Ampliar: ${image.description}`}
+                    className="group relative block aspect-[4/3] w-full animate-fade-in-up cursor-pointer overflow-hidden rounded-2xl bg-slate-100 shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
                     style={{
                       animationDelay: `${index * 0.1}s`,
                       animationFillMode: 'both',
                     }}
                   >
-                    <Card className="group relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-primary/20 cursor-pointer">
-                      <div className="aspect-[4/3] w-full">
-                        <Image
-                          src={image.imageUrl}
-                          alt={image.description}
-                          fill
-                          data-ai-hint={image.imageHint}
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                      </div>
-                      <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    </Card>
-                  </div>
+                    <Image
+                      src={image.imageUrl}
+                      alt=""
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      data-ai-hint={image.imageHint}
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <span className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
+                  </button>
                 </DialogTrigger>
                 <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background border-accent/20">
                   <DialogHeader>
@@ -417,6 +421,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                       src={image.imageUrl}
                       alt={image.description}
                       fill
+                      sizes="(max-width: 896px) 95vw, 896px"
                       data-ai-hint={image.imageHint}
                       className="object-contain rounded-lg"
                     />
@@ -605,4 +610,3 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
 
     
 
-    

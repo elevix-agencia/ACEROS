@@ -96,6 +96,8 @@ const organizationSchema = {
   url: siteUrl,
   logo: `${siteUrl}/images/imgur/OBD0nJ0.png`,
   taxID: '29.506.517/0001-39',
+  email: 'vendas@aceros.com.br',
+  telephone: '+55 11 5555-6551',
   description:
     'Divisão de aços inoxidáveis do Grupo Metalúrgica Daniela. Fabricação sob medida de tubos, buchas e componentes centrifugados em ligas especiais (ASTM A297).',
   address: {
@@ -109,6 +111,14 @@ const organizationSchema = {
   areaServed: {
     '@type': 'Country',
     name: 'Brasil',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    telephone: '+55 11 5555-6551',
+    email: 'vendas@aceros.com.br',
+    areaServed: 'BR',
+    availableLanguage: ['Portuguese'],
   },
   parentOrganization: {
     '@type': 'Organization',

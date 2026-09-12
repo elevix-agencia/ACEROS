@@ -31,7 +31,7 @@ export function BarFurnaceProducts() {
               <Image
                 src={productImage.imageUrl}
                 alt={productImage.description}
-                fill
+                fill sizes="(max-width: 768px) 100vw, 50vw"
                 data-ai-hint={productImage.imageHint}
                 className="object-contain"
               />
@@ -56,7 +56,7 @@ export function BarFurnaceProducts() {
                 size="lg"
                 className="w-full sm:w-fit group"
               >
-                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Orçamento
                 </Link>

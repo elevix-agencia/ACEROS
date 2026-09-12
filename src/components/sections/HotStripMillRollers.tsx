@@ -138,7 +138,7 @@ export function HotStripMillRollers() {
                 size="lg"
                 className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 transition-transform hover:scale-105"
               >
-                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Solicitar Orçamento
                 </Link>

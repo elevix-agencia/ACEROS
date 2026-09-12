@@ -6,13 +6,23 @@ import { LocationMap } from '@/components/sections/location-map';
 // Reintroduzir apenas com depoimentos reais + termo de autorizacao assinado.
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': 'https://aceros.com.br/sobre#page',
+  url: 'https://aceros.com.br/sobre',
+  name: 'Sobre a Aceros',
+  about: { '@id': 'https://aceros.com.br/#organization' },
+  inLanguage: 'pt-BR',
+};
+
 export const metadata: Metadata = {
-  title: 'Sobre a Aceros — Divisão de Aços Inox do Grupo Metalúrgica Daniela',
+  title: 'Sobre a Aceros — Aços Inoxidáveis Centrifugados',
   description:
     'Conheça a Aceros: divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, especialista em fabricação sob medida de peças centrifugadas em ligas ASTM A297 para setores industriais exigentes.',
   alternates: { canonical: '/sobre' },
   openGraph: {
-    title: 'Sobre a Aceros — Divisão de Aços Inox do Grupo Metalúrgica Daniela',
+    title: 'Sobre a Aceros — Aços Inoxidáveis Centrifugados',
     description:
       'História, missão e expertise da Aceros na fabricação de peças em aços inoxidáveis centrifugados.',
     url: '/sobre',
@@ -22,6 +32,10 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }}
+      />
       <About headingLevel="h1" />
       <LocationMap />
       <WhatsAppCta />

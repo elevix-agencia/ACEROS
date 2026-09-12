@@ -1,4 +1,3 @@
-'use client';
 import { Hero } from '@/components/sections/hero';
 import { LocationMap } from '@/components/sections/location-map';
 import { About } from '@/components/sections/about';

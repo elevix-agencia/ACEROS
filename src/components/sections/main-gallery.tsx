@@ -83,7 +83,7 @@ export function MainGallery() {
                             <div className="aspect-[4/3] w-full relative bg-white">
                               <Image
                                 src={image.imageUrl}
-                                alt={image.description}
+                                alt=""
                                 fill
                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 data-ai-hint={image.imageHint}

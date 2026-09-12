@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -200,9 +198,9 @@ export function Products() {
               <Rocket className="h-4 w-4" />
               Linhas de destaque
             </div>
-            <h3 className="font-headline text-2xl sm:text-3xl font-bold text-slate-900">
+            <h2 className="font-headline text-2xl sm:text-3xl font-bold text-slate-900">
               Nossos carros-chefe
-            </h3>
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -225,9 +223,9 @@ export function Products() {
                     <lp.icone className="h-6 w-6" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h4 className="font-headline text-2xl md:text-3xl font-bold uppercase leading-tight">
+                    <h3 className="font-headline text-2xl md:text-3xl font-bold uppercase leading-tight">
                       {lp.titulo}
-                    </h4>
+                    </h3>
                   </div>
                 </div>
 
@@ -266,9 +264,9 @@ export function Products() {
               <Layers className="h-4 w-4" />
               Catálogo completo
             </div>
-            <h3 className="font-headline text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+            <h2 className="font-headline text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
               Além dos tubos e buchas, também fabricamos
-            </h3>
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Portfólio completo de peças centrifugadas para siderurgia, mineração, tratamento térmico, naval e guseira.
             </p>
@@ -284,9 +282,9 @@ export function Products() {
                 <div className="text-xs font-semibold text-accent uppercase tracking-wider mb-2">
                   {prod.aplicacao}
                 </div>
-                <h4 className="font-headline text-lg font-bold text-slate-900 mb-2 group-hover:text-accent transition-colors">
+                <h3 className="font-headline text-lg font-bold text-slate-900 mb-2 group-hover:text-accent transition-colors">
                   {prod.titulo}
-                </h4>
+                </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {prod.descricao}
                 </p>
@@ -301,12 +299,12 @@ export function Products() {
             <PenTool className="h-4 w-4" />
             Projeto sob desenho
           </div>
-          <h3 className="font-headline text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="font-headline text-2xl md:text-3xl font-bold mb-4">
             Precisa de uma peça que não está no catálogo?
-          </h3>
+          </h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
             Fabricamos 100% sob desenho técnico. Nossa engenharia analisa o projeto, especifica a
-            liga ideal (ASTM A297) e retorna proposta comercial.
+            liga adequada ao projeto (ASTM A297) e retorna uma proposta comercial.
           </p>
           <Button
             asChild

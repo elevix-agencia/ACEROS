@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Clock } from 'lucide-react';
-import { blogPosts } from '@/lib/blog-posts';
+import { blogPosts, formatBlogDate } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'Blog Técnico — Aceros Centrifugados',
   description:
-    'Conteúdo técnico sobre aços centrifugados, ligas ASTM A297, Sink Rolls, buchas bimetálicas, processo de centrifugação e aplicações industriais em siderurgia, mineração e tratamento térmico.',
+    'Artigos técnicos sobre fundição centrifugada, ligas ASTM A297, Sink Rolls, buchas e aplicações industriais em siderurgia e tratamento térmico.',
   alternates: { canonical: '/blog' },
   openGraph: {
     title: 'Blog Técnico Aceros — Centrifugação, Ligas e Aplicações Industriais',
@@ -26,13 +26,27 @@ const categoriaCores: Record<string, string> = {
 
 export default function BlogPage() {
   const [destaque, ...outrosPosts] = blogPosts;
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Artigos técnicos da Aceros',
+    itemListElement: blogPosts.map((post, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: post.titulo,
+      url: `https://aceros.com.br/blog/${post.slug}`,
+    })),
+  };
 
   return (
     <div>
-      <h1 className="sr-only">Blog Técnico Aceros — Conteúdo sobre Aços Centrifugados</h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
 
       {/* Hero */}
-      <section className="bg-primary text-white py-20 relative overflow-hidden">
+      <section className="relative overflow-hidden bg-primary py-16 text-white sm:py-20">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         </div>
@@ -40,13 +54,13 @@ export default function BlogPage() {
           <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
             Conteúdo Técnico
           </p>
-          <h2 className="font-headline text-3xl md:text-5xl font-bold uppercase leading-tight mb-6">
+          <h1 className="mb-6 font-headline text-3xl font-bold uppercase leading-tight sm:text-4xl lg:text-5xl">
             Blog Aceros —{' '}
             <span className="text-accent">Engenharia em Aços Centrifugados</span>
-          </h2>
+          </h1>
           <p className="text-lg text-slate-300 leading-relaxed">
             Guias técnicos para engenheiros de projeto, compras e manutenção industrial.
-            Ligas, processos, aplicações e cases de fabricação centrifugada.
+            Ligas, processos, aplicações e controle de qualidade na fabricação industrial.
           </p>
         </div>
       </section>
@@ -74,10 +88,10 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center">
-                <div className="text-xs text-accent font-semibold uppercase tracking-widest mb-3">
+                <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-[#a94700]">
                   Em destaque
                 </div>
-                <h3 className="font-headline text-2xl md:text-3xl font-bold text-slate-900 leading-tight mb-4 group-hover:text-accent transition-colors">
+                <h3 className="mb-4 font-headline text-2xl font-bold leading-tight text-slate-900 transition-colors group-hover:text-[#a94700] md:text-3xl">
                   {destaque.titulo}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -89,9 +103,9 @@ export default function BlogPage() {
                     {destaque.tempoLeitura}
                   </span>
                   <span>·</span>
-                  <span>{new Date(destaque.dataPublicacao).toLocaleDateString('pt-BR')}</span>
+                  <time dateTime={destaque.dataPublicacao}>{formatBlogDate(destaque.dataPublicacao)}</time>
                 </div>
-                <span className="inline-flex items-center gap-2 text-accent font-semibold">
+                <span className="inline-flex items-center gap-2 font-semibold text-[#a94700]">
                   Ler artigo completo
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </span>
@@ -133,17 +147,18 @@ export default function BlogPage() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h4 className="font-headline text-lg font-bold text-slate-900 leading-tight mb-3 group-hover:text-accent transition-colors">
+                    <h4 className="mb-3 font-headline text-lg font-bold leading-tight text-slate-900 transition-colors group-hover:text-[#a94700]">
                       {post.titulo}
                     </h4>
                     <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
                       {post.descricao}
                     </p>
-                    <div className="flex items-center gap-3 text-xs text-slate-500">
+                    <div className="flex items-center justify-between gap-3 text-xs text-slate-500">
                       <span className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
                         {post.tempoLeitura}
                       </span>
+                      <time dateTime={post.dataPublicacao}>{formatBlogDate(post.dataPublicacao)}</time>
                     </div>
                   </div>
                 </Link>
@@ -160,13 +175,13 @@ export default function BlogPage() {
             Precisa de assessoria técnica no seu projeto?
           </h3>
           <p className="text-slate-300 mb-8">
-            Nossa engenharia analisa desenho, especifica a liga ideal e retorna orçamento sem compromisso.
+            Nossa equipe técnica avalia o desenho e os requisitos da aplicação para orientar os próximos passos e preparar o orçamento.
           </p>
           <Link
             href="/contato"
-            className="inline-flex items-center gap-2 bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-10 py-4 rounded-lg transition-all"
+            className="inline-flex items-center gap-2 rounded-lg bg-[#b54b00] px-7 py-4 text-base font-bold text-white transition-all hover:bg-[#963e00] sm:px-10 sm:text-lg"
           >
-            Falar com engenheiro
+            Falar com a equipe técnica
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

@@ -39,7 +39,7 @@ export function Sectors() {
           <h2 className="mb-4 font-headline text-4xl font-bold tracking-tight sm:text-5xl">
             {t.sectors.title}
           </h2>
-          <p className="text-base leading-7 text-white/90 sm:text-lg sm:leading-8">
+          <p className="text-base leading-7 text-slate-950/90 sm:text-lg sm:leading-8">
             {t.sectors.subtitle}
           </p>
         </div>
@@ -69,7 +69,8 @@ export function Sectors() {
                 </p>
                 <Link
                   href={getLink(sector.id)}
-                  className="mt-auto inline-flex w-full items-center justify-center gap-2 border border-accent px-2 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white sm:gap-3 sm:px-5"
+                  aria-label={`${extra.common.learnMore}: ${extra.sectors.certificates}`}
+                  className="mt-auto inline-flex w-full items-center justify-center gap-2 border border-[#b54b00] px-2 py-3 text-sm font-semibold text-[#9a3f00] transition-colors hover:bg-[#b54b00] hover:text-white sm:gap-3 sm:px-5"
                 >
                   {extra.common.learnMore}
                   <ArrowUpRight className="h-4 w-4" />
@@ -100,7 +101,8 @@ export function Sectors() {
                 </p>
                 <Link
                   href={getLink(sector.id)}
-                  className="mt-auto inline-flex w-full items-center justify-center gap-2 border border-accent px-2 py-3 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-white sm:gap-3 sm:px-5"
+                  aria-label={`${extra.common.learnMore}: ${sector.title}`}
+                  className="mt-auto inline-flex w-full items-center justify-center gap-2 border border-[#b54b00] px-2 py-3 text-sm font-semibold text-[#9a3f00] transition-colors hover:bg-[#b54b00] hover:text-white sm:gap-3 sm:px-5"
                 >
                   {extra.common.learnMore}
                   <ArrowUpRight className="h-4 w-4" />

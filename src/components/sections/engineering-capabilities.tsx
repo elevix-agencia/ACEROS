@@ -8,6 +8,7 @@ import {
   Sparkles,
   Thermometer,
 } from 'lucide-react';
+import Image from 'next/image';
 
 const softwares = [
   { nome: 'SolidWorks', desc: 'Modelagem 3D paramétrica e desenho técnico' },
@@ -150,10 +151,12 @@ export function EngineeringCapabilities() {
             </div>
 
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
-              <img
+              <Image
                 src="/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg"
                 alt="Tubo centrifugado bruto — resultado do processo de fundição"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6 text-white">

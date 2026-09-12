@@ -4,6 +4,7 @@
 import Image from 'next/image';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
 import { useLanguage } from '@/hooks/use-language';
+import { LazyVideo } from '@/components/media/lazy-video';
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
 import Link from 'next/link';
@@ -139,7 +140,7 @@ export function GuseiraStavesSection() {
                     <p className="text-muted-foreground mb-4 text-xs">Fale com nossos especialistas.</p>
                     <div className="flex flex-col gap-2 w-full">
                       <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform hover:scale-105 text-xs">
-                          <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                          <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                               <MessageCircle className="mr-1 h-3 w-3" />
                               Solicitar Orçamento
                           </Link>
@@ -231,7 +232,7 @@ export function GuseiraTuyeresSection() {
                             <p className="text-slate-300 mb-6">Nossas válvulas garantem a injeção precisa e eficiente, maximizando a produtividade do seu alto-forno.</p>
                             <div className="flex justify-center">
                               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                                       <MessageCircle className="mr-2 h-5 w-5" />
                                       Atendimento
                                   </Link>
@@ -317,7 +318,7 @@ export function GuseiraHousingsSection() {
                       <Image
                         src={photoImage.imageUrl}
                         alt={photoImage.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                         data-ai-hint={photoImage.imageHint}
                       />
@@ -328,7 +329,7 @@ export function GuseiraHousingsSection() {
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl p-4">
                     <div className="relative aspect-video w-full mt-4">
-                      <Image src={photoImage.imageUrl} alt={photoImage.description} fill className="object-contain" />
+                      <Image src={photoImage.imageUrl} alt={photoImage.description} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-contain" />
                     </div>
                   </DialogContent>
                 </Dialog>
@@ -343,7 +344,7 @@ export function GuseiraHousingsSection() {
                       <Image
                         src={drawingImage.imageUrl}
                         alt={drawingImage.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-contain"
                         data-ai-hint={drawingImage.imageHint}
                       />
@@ -354,7 +355,7 @@ export function GuseiraHousingsSection() {
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl p-4">
                     <div className="relative aspect-video w-full mt-4">
-                      <Image src={drawingImage.imageUrl} alt={drawingImage.description} fill className="object-contain" />
+                      <Image src={drawingImage.imageUrl} alt={drawingImage.description} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-contain" />
                     </div>
                   </DialogContent>
                 </Dialog>
@@ -399,7 +400,7 @@ export function GuseiraHousingsSection() {
             </div>
             <div className="flex">
               <Button asChild size="lg" className="w-full sm:w-auto bg-orange-500 text-white hover:bg-orange-600">
-                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                       Solicitar Orçamento
                       <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
@@ -442,7 +443,7 @@ export function GuseiraWearPlatesSection() {
                       <Image
                         src={photoImage.imageUrl}
                         alt={photoImage.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
                         data-ai-hint={photoImage.imageHint}
                       />
@@ -453,7 +454,7 @@ export function GuseiraWearPlatesSection() {
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl p-4">
                     <div className="relative aspect-video w-full mt-4">
-                      <Image src={photoImage.imageUrl} alt={photoImage.description} fill className="object-contain" />
+                      <Image src={photoImage.imageUrl} alt={photoImage.description} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-contain" />
                     </div>
                   </DialogContent>
                 </Dialog>
@@ -468,7 +469,7 @@ export function GuseiraWearPlatesSection() {
                       <Image
                         src={drawingImage.imageUrl}
                         alt={drawingImage.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-contain"
                         data-ai-hint={drawingImage.imageHint}
                       />
@@ -479,7 +480,7 @@ export function GuseiraWearPlatesSection() {
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl p-4">
                     <div className="relative aspect-video w-full mt-4">
-                      <Image src={drawingImage.imageUrl} alt={drawingImage.description} fill className="object-contain" />
+                      <Image src={drawingImage.imageUrl} alt={drawingImage.description} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-contain" />
                     </div>
                   </DialogContent>
                 </Dialog>
@@ -500,7 +501,7 @@ export function GuseiraWearPlatesSection() {
             </p>
             <div className="flex">
               <Button asChild size="lg" className="w-full sm:w-auto">
-                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="mr-2 h-5 w-5" />
                       Fale com um Especialista
                       <ArrowRight className="ml-2 h-5 w-5" />
@@ -546,7 +547,7 @@ export function GuseiraStructuralComponentsSection() {
                          <Image
                             src={image.imageUrl}
                             alt={image.description}
-                            fill
+                            fill sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-contain rounded-3xl shadow-2xl"
                             data-ai-hint={image.imageHint}
                         />
@@ -563,7 +564,7 @@ export function GuseiraStructuralComponentsSection() {
                          <Image
                             src={newImage.imageUrl}
                             alt={newImage.description}
-                            fill
+                            fill sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-contain rounded-3xl shadow-2xl"
                             data-ai-hint={newImage.imageHint}
                         />
@@ -618,21 +619,16 @@ export function GuseiraMediaSection({ videoUrls, imageIds }: { videoUrls: string
             >
               <div className="relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg border">
                 {item.type === 'video' ? (
-                  <video
+                  <LazyVideo
                     src={item.url}
                     className="h-full w-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    aria-label="Vídeo industrial da Aceros reproduzido sem áudio"
+                    ariaLabel="Vídeo industrial da Aceros reproduzido sem áudio"
                   />
                 ) : (
                   <Image
                     src={item.imageUrl}
                     alt={item.description}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                     data-ai-hint={item.imageHint}
                   />

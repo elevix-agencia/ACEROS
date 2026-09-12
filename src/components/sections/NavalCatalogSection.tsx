@@ -71,7 +71,7 @@ export function NavalCatalogSection() {
                     <Image
                       src={image.imageUrl}
                       alt={image.description}
-                      fill
+                      fill sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain rounded-lg"
                     />
                   </div>

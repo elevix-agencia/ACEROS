@@ -5,7 +5,7 @@ import { BuchaInoxClient } from './BuchaInoxClient';
 export const metadata: Metadata = {
   title: 'Bucha de Aço Inox | Fabricação Sob Medida',
   description:
-    'Fabricamos buchas de aço inox sob medida pelo processo de centrifugação (ASTM A297). Especialistas em Sink Roll e Furnace Roll. Solicite seu orçamento.',
+    'Buchas de aço inox fabricadas por centrifugação e usinadas sob medida para Sink Roll, Furnace Roll e outras aplicações industriais. Solicite uma análise técnica.',
   alternates: {
     canonical: '/bucha-de-aco-inox',
   },
@@ -50,7 +50,7 @@ export default function BuchaInoxPage() {
         "name": "Qual a aplicação das buchas para Rolos de Forno (Furnace Rolls)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "São aplicadas na sustentação e acoplamento dos rolos centrifugados que operam dentro de fornos de tratamento térmico sob temperaturas extremas."
+          "text": "São componentes dimensionados conforme o desenho e as condições de operação dos rolos utilizados em fornos de tratamento térmico."
         }
       },
       {
@@ -66,7 +66,7 @@ export default function BuchaInoxPage() {
         "name": "A Aceros produz buchas conforme desenho técnico?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, nossa especialidade é a fabricação 100% sob medida seguindo rigorosamente o desenho técnico ou projeto fornecido pelo cliente, integrando fundição por centrifugação e usinagem CNC."
+          "text": "Sim. A fabricação e a usinagem são realizadas sob medida conforme o desenho técnico e os requisitos informados pelo cliente."
         }
       }
     ]

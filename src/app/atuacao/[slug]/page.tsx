@@ -1,89 +1,18 @@
-import { sectorsData } from '@/lib/expertise-data';
-import { ExpertiseDetailsClient } from './ExpertiseDetailsClient';
-import pt from '@/i18n/pt.json';
+import { SectorPage, sectorMetadata } from '../sector-page';
 import type { Metadata } from 'next';
-import { sectorSeoContent } from '@/lib/sector-seo-content';
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-// Renderiza cada setor sob demanda. Isso evita depender de um worker de
-// pré-geração e mantém todas as rotas de Mercado de Atuação disponíveis.
-export const dynamic = 'force-dynamic';
-
 export async function generateMetadata(
   { params }: Props,
 ): Promise<Metadata> {
   const { slug } = await params;
-  const sector = sectorsData(pt).find((s) => s.id === slug);
-
-  if (!sector) {
-    return {
-      title: 'Setor não encontrado',
-      description: 'Página não encontrada.',
-    };
-  }
-
-  const title = `${sector.title} — Aços Centrifugados para o Setor`;
-  const description =
-    sector.description ||
-    `Peças em aços inoxidáveis centrifugados fabricadas sob medida para o setor ${sector.title.toLowerCase()}.`;
-
-  return {
-    title,
-    description,
-    alternates: { canonical: `/atuacao/${slug}` },
-    openGraph: {
-      title: `${sector.title} — Aceros`,
-      description,
-      url: `/atuacao/${slug}`,
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${sector.title} — Aceros`,
-      description,
-    },
-  };
+  return sectorMetadata(slug);
 }
 
 export default async function ExpertiseDetailsPage({ params }: Props) {
   const { slug } = await params;
-  const sectorData = sectorsData(pt).find((s) => s.id === slug);
-
-  if (!sectorData) {
-    return <div className="pt-24 text-center">Setor não encontrado.</div>;
-  }
-
-  const pageData = {
-    sector: sectorData,
-    translations: pt,
-  };
-
-  const seoContent = sectorSeoContent[slug];
-
-  return (
-    <>
-      <h1 className="sr-only">
-        {sectorData.title} — Aços Centrifugados Aceros para o Setor de {sectorData.title}
-      </h1>
-
-      {seoContent && (
-        <section className="sr-only" aria-hidden="false">
-          <p>{seoContent.intro}</p>
-          {seoContent.paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-          <ul>
-            {seoContent.keyPoints.map((point, i) => (
-              <li key={i}>{point}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      <ExpertiseDetailsClient pageData={pageData} />
-    </>
-  );
+  return <SectorPage slug={slug} />;
 }

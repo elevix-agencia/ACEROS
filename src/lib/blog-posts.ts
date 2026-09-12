@@ -11,12 +11,18 @@ export type BlogPost = {
   conteudo: string; // HTML string com paragrafos e headings
 };
 
+export function formatBlogDate(date: string) {
+  return new Intl.DateTimeFormat('pt-BR', { timeZone: 'UTC' }).format(
+    new Date(`${date}T00:00:00Z`)
+  );
+}
+
 export const blogPosts: BlogPost[] = [
   {
     slug: 'sink-roll-como-escolher-liga',
-    titulo: 'Sink Roll: como escolher a liga certa para sua linha de galvanização',
+    titulo: 'Sink Roll: como escolher a liga para linhas de galvanização',
     descricao:
-      'Guia técnico para engenheiros de compras: entenda os critérios de seleção da liga do Sink Roll conforme temperatura, ambiente químico e produtividade da linha de galvanização.',
+      'Conheça os critérios de seleção da liga do Sink Roll conforme o banho, a temperatura, a geometria e o regime de operação da linha.',
     categoria: 'Aplicações',
     tempoLeitura: '6 min',
     dataPublicacao: '2026-08-24',
@@ -52,17 +58,17 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'astm-a297-hk-hh-hp-diferencas',
-    titulo: 'ASTM A297: HK, HH e HP — qual usar em cada aplicação',
+    titulo: 'ASTM A297: diferenças entre as classes HH, HK e HP',
     descricao:
-      'As três principais superligas resistentes ao calor da norma ASTM A297 explicadas. Composição, propriedades mecânicas e aplicações típicas de HK, HH e HP.',
+      'Visão geral das classes resistentes ao calor HH, HK e HP da norma ASTM A297, com composição e aplicações industriais típicas.',
     categoria: 'Ligas',
     tempoLeitura: '7 min',
     dataPublicacao: '2026-08-24',
     imagem: '/images/aceros/generated/blog-astm-a297-tubos-v2.webp',
     imagemAlt: 'Tubos centrifugados usinados para aplicações em ligas ASTM A297',
-    keywords: ['ASTM A297', 'HK', 'HH', 'HP', 'liga refrataria', 'superliga'],
+    keywords: ['ASTM A297', 'HK', 'HH', 'HP', 'aço fundido resistente ao calor'],
     conteudo: `
-<p>A norma <strong>ASTM A297</strong> padroniza aços fundidos resistentes ao calor com alto teor de cromo e níquel. As três ligas mais utilizadas no mercado industrial brasileiro são HK, HH e HP, cada uma com composição química e propriedades mecânicas específicas. Escolher a errada compromete a vida útil da peça e a segurança operacional.</p>
+<p>A norma <strong>ASTM A297</strong> reúne classes de aços fundidos resistentes ao calor com diferentes teores de cromo e níquel. HH, HK e HP possuem faixas de composição e características próprias, que precisam ser avaliadas de acordo com o desenho, a temperatura, a atmosfera e o regime de operação.</p>
 
 <h2>Diferenças de composição química</h2>
 
@@ -96,13 +102,15 @@ export const blogPosts: BlogPost[] = [
 <h2>Como a Aceros trabalha com essas ligas</h2>
 
 <p>A Aceros avalia o grau da liga conforme a temperatura de trabalho, a atmosfera do forno, os ciclos térmicos e o histórico da aplicação. A especificação final deve constar no desenho e na documentação técnica do fornecimento.</p>
+
+<p><strong>Nota técnica:</strong> os valores apresentados são referências gerais. A especificação final deve considerar a edição aplicável da norma, os requisitos do projeto e as condições reais de serviço.</p>
 `,
   },
   {
     slug: 'fundicao-centrifugada-vantagens',
-    titulo: 'Fundição Centrifugada: por que é superior à fundição estática',
+    titulo: 'Fundição centrifugada: vantagens e quando utilizar o processo',
     descricao:
-      'Entenda o processo de centrifugação de aço, como funciona a força centrífuga na formação da peça e as vantagens em relação à fundição estática convencional.',
+      'Entenda como funciona a centrifugação, suas vantagens para peças tubulares e quando a fundição estática pode ser indicada.',
     categoria: 'Processo',
     tempoLeitura: '5 min',
     dataPublicacao: '2026-08-24',
@@ -132,7 +140,7 @@ export const blogPosts: BlogPost[] = [
 <h3>4. Ideal para tubos e buchas</h3>
 <p>A geometria tubular torna a centrifugação especialmente adequada à fabricação de tubos mecânicos, buchas e outros componentes cilíndricos avaliados pela engenharia.</p>
 
-<h2>Quando ainda usamos fundição estática?</h2>
+<h2>Quando a fundição estática pode ser indicada?</h2>
 
 <p>A Aceros também trabalha com fundição estática em geometrias que não permitem centrifugação — como carcaças complexas, peças assimétricas e componentes com múltiplas seções. Ambos os processos coexistem na fábrica, e nossa engenharia especifica o mais adequado a cada projeto.</p>
 `,
@@ -232,7 +240,9 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Quando ir além dessas ligas</h2>
 
-<p>Para temperaturas contínuas acima de 1.100 °C ou requisitos mais severos de fluência, as ligas <strong>ASTM A297 (HH, HK, HP)</strong> são a escolha correta. Nossa engenharia auxilia na especificação da liga ideal com base em temperatura de trabalho, ambiente químico e regime operacional.</p>
+<p>Em condições de temperatura elevada ou com requisitos mais severos de fluência, classes da <strong>ASTM A297</strong> podem ser consideradas após a análise da temperatura de trabalho, da atmosfera, do desenho e do regime operacional.</p>
+
+<p><strong>Nota técnica:</strong> temperaturas de referência não substituem a análise das condições de serviço, do desenho e da norma aplicável ao projeto.</p>
 `,
   },
 ];

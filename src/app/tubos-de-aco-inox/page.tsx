@@ -5,7 +5,7 @@ import { TubosInoxClient } from './TubosInoxClient';
 export const metadata: Metadata = {
   title: 'Tubos de Aço Inox Sob Medida | Fabricante Industrial',
   description:
-    'A Aceros fabrica tubos de aço inox e tubos centrifugados sob medida para aplicações industriais. Especialistas em alta temperatura e abrasão. Solicite orçamento.',
+    'Tubos mecânicos de aço inox fabricados por centrifugação, sob medida conforme desenho e condições da aplicação industrial. Solicite uma análise técnica.',
   alternates: {
     canonical: '/tubos-de-aco-inox',
   },
@@ -42,7 +42,7 @@ export default function TubosInoxPage() {
         "name": "Quais são os estágios de acabamento oferecidos pela fábrica?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oferecemos 4 estágios conforme seu projeto: 1. Bruto de centrifugação (alta densidade); 2. Usinado (munhão e corpo acetinado); 3. Polido/Acabado (peça espelhada com revenido térmico); 4. Misto (fornecimento sob demanda)."
+          "text": "O fornecimento pode ser bruto de centrifugação, usinado, polido/acabado ou misto, conforme os requisitos definidos no projeto."
         }
       },
       {

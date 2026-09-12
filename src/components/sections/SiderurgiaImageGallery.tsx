@@ -55,7 +55,7 @@ export function SiderurgiaImageGallery() {
                       <Image
                         src={image.imageUrl}
                         alt={image.description}
-                        fill
+                        fill sizes="(max-width: 768px) 100vw, 50vw"
                         data-ai-hint={image.imageHint}
                         className="object-contain p-4 transition-transform duration-500 group-hover:scale-110"
                       />

@@ -32,7 +32,7 @@ export default function PoliticaPrivacidadePage() {
         <div className="mx-auto max-w-4xl border-t-4 border-[#ef7b21] bg-white px-6 py-10 shadow-[0_20px_50px_rgba(7,18,30,.10)] sm:px-10 sm:py-12 lg:px-14">
           <div className="prose prose-slate max-w-none space-y-5 text-base leading-8 text-slate-700">
         <p>
-          Última atualização: agosto de 2026
+          Última atualização: setembro de 2026
         </p>
         <p>
           Esta Política de Privacidade explica como a Aceros trata os dados pessoais dos usuários que acessam nosso site e preenchem nossos formulários. Ao utilizar o site, você declara estar ciente das condições descritas abaixo.
@@ -51,7 +51,7 @@ export default function PoliticaPrivacidadePage() {
         <p>Coletamos apenas os dados necessários para atender às suas solicitações:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Dados que você fornece:</strong> nome completo, nome da empresa, telefone/WhatsApp, e-mail, cidade/UF e a mensagem com as especificações do seu projeto.
+            <strong>Dados que você fornece:</strong> nome completo, empresa, telefone/WhatsApp, e-mail, cidade/UF, produto, liga ou material, dimensões, quantidade, prazo, mensagem e eventual desenho técnico anexado.
           </li>
           <li>
             <strong>Dados de navegação coletados automaticamente:</strong> endereço IP, tipo de dispositivo e navegador, páginas visitadas e tempo de permanência, obtidos por meio de cookies e ferramentas de análise (como o Google Analytics).
@@ -91,7 +91,7 @@ export default function PoliticaPrivacidadePage() {
           5. Cookies e tecnologias de rastreamento
         </h2>
         <p>
-          Nosso site utiliza cookies, que são pequenos arquivos armazenados no seu dispositivo para lembrar preferências e coletar estatísticas de uso. Usamos cookies essenciais (necessários ao funcionamento do site) e cookies de análise e marketing (Google Analytics, Google Ads e Google Tag Manager), que nos ajudam a entender como os visitantes usam o site e a exibir anúncios relevantes. Os cookies de análise e marketing só são ativados após sua autorização. Você pode aceitar, recusar ou alterar sua escolha a qualquer momento em “Preferências de cookies”, no rodapé do site.
+          Nosso site utiliza cookies, que são pequenos arquivos armazenados no seu dispositivo para lembrar preferências e, quando autorizado, medir o uso do site. Utilizamos cookies essenciais e podemos utilizar ferramentas de análise e marketing configuradas por meio do Google Tag Manager. Cookies opcionais só são ativados após sua autorização. Você pode aceitar, recusar ou alterar sua escolha a qualquer momento em “Preferências de cookies”, no rodapé do site.
         </p>
 
         <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
@@ -102,7 +102,7 @@ export default function PoliticaPrivacidadePage() {
           <li>Provedores de tecnologia que operam o site, o e-mail e as ferramentas de análise e anúncios (como o Google), estritamente para as finalidades aqui descritas.</li>
           <li>Autoridades públicas, quando exigido por lei ou ordem judicial.</li>
         </ul>
-        <p>Esses terceiros são obrigados a proteger seus dados e a utilizá-los somente conforme nossas instruções.</p>
+        <p>Esses provedores estão sujeitos às respectivas obrigações contratuais e legais de privacidade e segurança.</p>
 
         <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
           7. Por quanto tempo guardamos seus dados
@@ -129,6 +129,9 @@ export default function PoliticaPrivacidadePage() {
           <li>Solicitar a portabilidade dos dados.</li>
           <li>Revogar o consentimento a qualquer momento.</li>
           <li>Ser informado sobre com quem seus dados foram compartilhados.</li>
+          <li>Ser informado sobre a possibilidade de não fornecer consentimento e sobre as consequências dessa escolha.</li>
+          <li>Opor-se ao tratamento realizado em desconformidade com a LGPD.</li>
+          <li>Solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado, quando aplicável.</li>
         </ul>
 
         <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
@@ -136,8 +139,7 @@ export default function PoliticaPrivacidadePage() {
         </h2>
         <p>
           Para exercer seus direitos ou tirar dúvidas sobre esta Política, entre em contato pelo e-mail{' '}
-          <a className="font-semibold text-[#07121e] underline decoration-[#ef7b21] underline-offset-4" href="mailto:privacidade@aceros.com.br">privacidade@aceros.com.br</a> ou pelo e-mail comercial{' '}
-          <a className="font-semibold text-[#07121e] underline decoration-[#ef7b21] underline-offset-4" href="mailto:vendas@aceros.com.br">vendas@aceros.com.br</a>. Responderemos no menor prazo possível, conforme a legislação.
+          <a className="font-semibold text-[#07121e] underline decoration-[#ef7b21] underline-offset-4" href="mailto:vendas@aceros.com.br">vendas@aceros.com.br</a>. O pedido será encaminhado ao responsável pelo tratamento de dados e respondido conforme os prazos aplicáveis.
         </p>
 
         <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">
@@ -156,7 +158,7 @@ export default function PoliticaPrivacidadePage() {
           </div>
 
           <div className="mt-12 border-t border-slate-200 pt-8 text-sm text-slate-500">
-            <p>Última atualização: agosto de 2026</p>
+            <p>Última atualização: setembro de 2026</p>
           </div>
         </div>
       </article>
