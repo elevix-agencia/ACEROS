@@ -37,9 +37,9 @@ export const blogPosts: BlogPost[] = [
 <p>Antes de especificar um Sink Roll, o engenheiro de manutenção precisa avaliar:</p>
 
 <ul>
-  <li><strong>Composição e temperatura do banho</strong> — dados necessários para selecionar o material adequado.</li>
-  <li><strong>Geometria e velocidade da linha</strong> — condições que influenciam o projeto do rolo e de suas pontas.</li>
-  <li><strong>Histórico de operação</strong> — desgaste, manutenção e falhas anteriores ajudam a orientar a solução.</li>
+  <li><strong>Composição e temperatura do banho</strong>: dados necessários para selecionar o material adequado.</li>
+  <li><strong>Geometria e velocidade da linha</strong>: condições que influenciam o projeto do rolo e de suas pontas.</li>
+  <li><strong>Histórico de operação</strong>: desgaste, manutenção e falhas anteriores ajudam a orientar a solução.</li>
 </ul>
 
 <h2>Componentes que formam o conjunto</h2>
@@ -73,9 +73,9 @@ export const blogPosts: BlogPost[] = [
 <h2>Diferenças de composição química</h2>
 
 <ul>
-  <li><strong>HH</strong> — 24-28% Cr, 11-14% Ni</li>
-  <li><strong>HK</strong> — 24-28% Cr, 18-22% Ni</li>
-  <li><strong>HP</strong> — 24-28% Cr, 33-37% Ni</li>
+  <li><strong>HH</strong>: 24-28% Cr, 11-14% Ni</li>
+  <li><strong>HK</strong>: 24-28% Cr, 18-22% Ni</li>
+  <li><strong>HP</strong>: 24-28% Cr, 33-37% Ni</li>
 </ul>
 
 <p>Todas contêm carbono na faixa de 0,20-0,60% (essencial para resistência à fluência), silício até 2,5% e teores controlados de manganês, enxofre e fósforo.</p>
@@ -83,20 +83,20 @@ export const blogPosts: BlogPost[] = [
 <h2>Temperatura máxima de trabalho</h2>
 
 <ul>
-  <li><strong>HH</strong> — até 1.050 °C em atmosferas oxidantes</li>
-  <li><strong>HK</strong> — até 1.150 °C</li>
-  <li><strong>HP</strong> — até 1.150 °C com melhor resistência à fluência</li>
+  <li><strong>HH</strong>: até 1.050 °C em atmosferas oxidantes</li>
+  <li><strong>HK</strong>: até 1.150 °C</li>
+  <li><strong>HP</strong>: até 1.150 °C com melhor resistência à fluência</li>
 </ul>
 
 <h2>Aplicações típicas</h2>
 
-<h3>Gr. HH — Rolos de forno e grelhas</h3>
+<h3>Gr. HH: Rolos de forno e grelhas</h3>
 <p>Uso mais comum em rolos de forno de tratamento térmico contínuo (temperaturas até 1.050 °C), grelhas de fornos de poço e cestos de tratamento. Boa relação custo-benefício quando a temperatura não passa dos 1.050 °C.</p>
 
-<h3>Gr. HK — Aplicações versáteis</h3>
-<p>Uma das ligas mais utilizadas em componentes de fornos siderúrgicos — sink rolls, snouts, tubos radiantes de tratamento térmico. Bom equilíbrio entre resistência à fluência, à oxidação e ao custo.</p>
+<h3>Gr. HK: Aplicações versáteis</h3>
+<p>Uma das ligas mais utilizadas em componentes de fornos siderúrgicos, como sink rolls, snouts, tubos radiantes de tratamento térmico. Bom equilíbrio entre resistência à fluência, à oxidação e ao custo.</p>
 
-<h3>Gr. HP — Reforma catalítica e petroquímica</h3>
+<h3>Gr. HP: Reforma catalítica e petroquímica</h3>
 <p>Padrão internacional para tubos de fornos de reforma catalítica (produção de hidrogênio, metanol, amônia). O alto teor de níquel garante estabilidade dimensional em ciclos térmicos severos e operação contínua acima de 900 °C. Frequentemente modificada com nióbio (HP-Nb) para melhorar ainda mais a resistência à fluência.</p>
 
 <h2>Como a Aceros trabalha com essas ligas</h2>
@@ -142,7 +142,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Quando a fundição estática pode ser indicada?</h2>
 
-<p>A Aceros também trabalha com fundição estática em geometrias que não permitem centrifugação — como carcaças complexas, peças assimétricas e componentes com múltiplas seções. Ambos os processos coexistem na fábrica, e nossa engenharia especifica o mais adequado a cada projeto.</p>
+<p>A Aceros também trabalha com fundição estática em geometrias que não permitem centrifugação, como carcaças complexas, peças assimétricas e componentes com múltiplas seções. Ambos os processos coexistem na fábrica, e nossa engenharia especifica o mais adequado a cada projeto.</p>
 `,
   },
   {
@@ -219,7 +219,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>AISI 316 e 316L</h2>
 
-<p>Composição: 16% Cromo + 10% Níquel + <strong>2-3% Molibdênio</strong>. O molibdênio é o segredo — confere resistência excelente a cloretos, ambientes marítimos e químicos agressivos. Também trabalha até ~870 °C em contínuo.</p>
+<p>Composição: 16% Cromo + 10% Níquel + <strong>2-3% Molibdênio</strong>. O molibdênio é o segredo: confere resistência excelente a cloretos, ambientes marítimos e químicos agressivos. Também trabalha até ~870 °C em contínuo.</p>
 
 <p><strong>Aplicações típicas:</strong> equipamentos offshore, indústria petroquímica, sistemas de tratamento de água salobra, componentes farmacêuticos, tubulações químicas.</p>
 

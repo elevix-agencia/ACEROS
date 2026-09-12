@@ -22,7 +22,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Aceros — Aços Centrifugados Sob Medida | Fabricação Industrial',
+    default: 'Aceros Aços Centrifugados Sob Medida | Fabricação Industrial',
     template: '%s | Aceros',
   },
   description:
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     url: siteUrl,
     siteName: 'Aceros',
-    title: 'Aceros — Aços Centrifugados Sob Medida | Fabricação Industrial',
+    title: 'Aceros Aços Centrifugados Sob Medida | Fabricação Industrial',
     description:
       'Fabricamos peças em aços inoxidáveis e superligas por centrifugação (ASTM A297) sob medida para siderurgia, mineração, petroquímica e tratamento térmico.',
     images: [
@@ -60,13 +60,13 @@ export const metadata: Metadata = {
         url: '/images/imgur/OBD0nJ0.png',
         width: 1024,
         height: 1024,
-        alt: 'Aceros — Aços Centrifugados',
+        alt: 'Aceros Aços Centrifugados',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aceros — Aços Centrifugados Sob Medida',
+    title: 'Aceros Aços Centrifugados Sob Medida',
     description:
       'Fabricação sob medida de aços inoxidáveis por centrifugação (ASTM A297).',
     images: ['/images/imgur/OBD0nJ0.png'],
@@ -133,7 +133,7 @@ const websiteSchema = {
   '@type': 'WebSite',
   '@id': `${siteUrl}/#website`,
   url: siteUrl,
-  name: 'Aceros — Aços Centrifugados',
+  name: 'Aceros Aços Centrifugados',
   publisher: { '@id': `${siteUrl}/#organization` },
   inLanguage: 'pt-BR',
 };

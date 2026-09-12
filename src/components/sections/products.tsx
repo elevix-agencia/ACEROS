@@ -22,7 +22,7 @@ const landingPagesDestaque: LandingPage[] = [
     descricao:
       'Tubos mecânicos fabricados por centrifugação em ligas selecionadas conforme a aplicação. Dimensões e acabamento definidos pelo desenho técnico.',
     imagem: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-12.jpg',
-    imagemAlt: 'Tubos de aço inox centrifugados usinados e polidos — fabricação Aceros',
+    imagemAlt: 'Tubos de aço inox centrifugados, usinados e polidos, fabricação Aceros',
     bullets: [
       'Estágios: bruto, usinado (munhão), polido, misto',
       'Diâmetros, espessuras e comprimentos sob medida',
@@ -37,7 +37,7 @@ const landingPagesDestaque: LandingPage[] = [
     descricao:
       'Buchas centrifugadas em ligas de alta dureza para aplicações industriais severas. Especialistas em buchas para ponta de Sink Roll (linhas de galvanização) e Furnace Roll (rolos de forno).',
     imagem: '/images/aceros/buchas/bucha-aco-inox-aceros-06.jpg',
-    imagemAlt: 'Buchas de aço inox usinadas sob medida — fabricação Aceros',
+    imagemAlt: 'Buchas de aço inox usinadas sob medida, fabricação Aceros',
     bullets: [
       'Usinagem conforme tolerâncias do desenho',
       'Material selecionado para a condição de serviço',

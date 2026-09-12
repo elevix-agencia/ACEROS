@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Fundição Centrifugada Sob Medida | Aços Inoxidáveis',
   description: 'Fundição centrifugada de tubos mecânicos, buchas e componentes em aços inoxidáveis e ligas especiais, com fabricação conforme desenho.',
   alternates: { canonical: '/fundicao-centrifugada' },
-  openGraph: { title: 'Fundição Centrifugada Sob Medida — Aceros', description: 'Peças centrifugadas em aços inoxidáveis e ligas especiais, do bruto ao acabamento final.', url: '/fundicao-centrifugada', images: [{ url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg', alt: 'Tubo bruto produzido por fundição centrifugada' }] },
+  openGraph: { title: 'Fundição Centrifugada Sob Medida | Aceros', description: 'Peças centrifugadas em aços inoxidáveis e ligas especiais, do bruto ao acabamento final.', url: '/fundicao-centrifugada', images: [{ url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg', alt: 'Tubo bruto produzido por fundição centrifugada' }] },
 };
 
 const data: CampaignPageData = {

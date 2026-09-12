@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Sink Rolls Sob Medida | Rolos de Imersão para Galvanização',
   description: 'Sink rolls, buchas de ponta, braços, snout e conjuntos sob medida para linhas de galvanização por imersão a quente. Solicite análise técnica.',
   alternates: { canonical: '/sink-rolls' },
-  openGraph: { title: 'Sink Rolls para Galvanização — Aceros', description: 'Rolos de imersão e componentes para linhas de galvanização.', url: '/sink-rolls', images: [{ url: '/images/imgur/KZhCZ6S.png', alt: 'Sink Roll fabricado para linha de galvanização' }] },
+  openGraph: { title: 'Sink Rolls para Galvanização | Aceros', description: 'Rolos de imersão e componentes para linhas de galvanização.', url: '/sink-rolls', images: [{ url: '/images/imgur/KZhCZ6S.png', alt: 'Sink Roll fabricado para linha de galvanização' }] },
 };
 
 const data: CampaignPageData = {

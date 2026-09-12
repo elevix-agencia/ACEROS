@@ -43,10 +43,10 @@ export function Header() {
       <div className="header-container mx-auto flex h-20 max-w-[1280px] items-center justify-between px-5 lg:px-10">
         {/* Logo */}
         <div className="header-logo flex-shrink-0">
-          <Link href="/" className="flex items-center" aria-label="Aceros — Página inicial">
+          <Link href="/" className="flex items-center" aria-label="Aceros, página inicial">
             <Image
               src="/images/imgur/OBD0nJ0.png"
-              alt="Aceros — Aços Centrifugados"
+              alt="Aceros Aços Centrifugados"
               width={220}
               height={55}
               className="h-auto w-[160px] sm:w-[172px]"
@@ -116,7 +116,7 @@ export function Header() {
                 <SheetTitle>
                    <Image
                       src="/images/imgur/OBD0nJ0.png"
-                      alt="Aceros — Aços Centrifugados"
+                      alt="Aceros Aços Centrifugados"
                       width={280}
                       height={70}
                       className="h-auto w-36"

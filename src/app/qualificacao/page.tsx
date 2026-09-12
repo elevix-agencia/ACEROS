@@ -14,12 +14,12 @@ const qualityPageSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Qualidade e Certificações — Aços Centrifugados Aceros',
+  title: 'Qualidade e Certificações | Aços Centrifugados Aceros',
   description:
     'Conheça a certificação ISO 9001:2015 da Aceros e os recursos de análise química, dureza, ultrassom e metrologia aplicados conforme os requisitos de cada projeto.',
   alternates: { canonical: '/qualificacao' },
   openGraph: {
-    title: 'Qualidade e Certificações — Aceros',
+    title: 'Qualidade e Certificações | Aceros',
     description:
       'ISO 9001:2015, laboratório, metrologia e controles aplicados à fabricação de componentes industriais sob medida.',
     url: '/qualificacao',

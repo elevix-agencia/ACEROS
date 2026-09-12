@@ -77,7 +77,7 @@ export function EngineeringCapabilities() {
               Parque de máquinas para peças de qualquer porte
             </h2>
             <p className="text-lg text-slate-300">
-              Da usinagem CNC de precisão milimétrica ao torneamento de peças de até 12 metros —
+              Da usinagem CNC de precisão milimétrica ao torneamento de peças de até 12 metros:
               nossa fábrica está equipada para fabricar componentes centrifugados e usinados
               de porte industrial.
             </p>
@@ -153,7 +153,7 @@ export function EngineeringCapabilities() {
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg"
-                alt="Tubo centrifugado bruto — resultado do processo de fundição"
+                alt="Tubo centrifugado bruto, resultado do processo de fundição"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

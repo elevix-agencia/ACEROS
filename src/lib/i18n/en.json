@@ -1,12 +1,11 @@
-﻿
 {
   "header": {
     "home": "Home",
     "about": "About Us",
     "qualifications": "Quality",
+    "expertise": "Areas of Expertise",
     "products": "Products",
-    "contact": "Contact",
-    "expertise": "Areas of Expertise"
+    "contact": "Contact"
   },
   "footer": {
     "description": "Excellence and innovation in centrifugally cast steels for the most demanding industries.",
@@ -104,7 +103,7 @@
     "form_deadline": "Required delivery date (optional)",
     "form_deadline_placeholder": "E.g. within 30 days",
     "form_location": "Country and state/region",
-    "form_location_placeholder": "E.g. United States — Texas",
+    "form_location_placeholder": "E.g. United States, Texas",
     "form_drawing": "Technical drawing (optional)",
     "form_drawing_help": "PDF, DWG, DXF, STEP, IGES, JPG or PNG, up to 5 MB.",
     "form_message": "Message",
@@ -169,7 +168,8 @@
     "ready_title": "Ready to Start?",
     "ready_subtitle": "Our team is ready to help you find the perfect solution for your project. Get in touch today.",
     "request_quote": "Request Your Quote Now",
-    "whatsapp": "Talk on WhatsApp"
+    "whatsapp": "Talk on WhatsApp",
+    "whatsapp_quote": "Request a Quote via WhatsApp"
   },
   "qualifications": {
     "page_title": "Our Qualifications",
@@ -191,24 +191,7 @@
     "structural_analysis_subtitle": "We use finite element simulation to validate projects and ensure structural integrity.",
     "process_optimization_title": "Process Optimization",
     "process_optimization_subtitle": "Structural calculations and temperature simulations.",
-    "items": [
-      {
-        "title": "Specialized Certification",
-        "description": "Engineer qualified by Drever (Belgium) for precise 'rollprof roll' measurement."
-      },
-      {
-        "title": "Vast Experience",
-        "description": "Experience in the profile control of more than 600 furnace rolls."
-      },
-      {
-        "title": "RBC Standards",
-        "description": "Inspection instruments and calibration standards tracked by the RBC for maximum reliability."
-      },
-      {
-        "title": "Cutting-Edge Technology",
-        "description": "Use of advanced equipment to ensure precision in all our measurement processes."
-      }
-    ]
+    "items": "System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object]"
   },
   "certificates": {
     "title": "Our Certificates: Quality Assured by Global Standards",
@@ -341,9 +324,18 @@
       "cardDescription": "Robust solutions for mineral extraction and processing industries.",
       "icon": "Drill",
       "solutions": {
-        "mining_crusher_components": { "title": "Crusher Components", "description": "Rings, bushings, and linings that increase the lifespan of crushing equipment." },
-        "mining_sieving_parts": { "title": "Sieving Parts", "description": "Solutions that ensure efficiency in material classification with high wear resistance." },
-        "mining_conveyor_systems": { "title": "Conveyor Systems", "description": "Rollers, drums, and other parts for conveyor belts operating in aggressive environments." }
+        "mining_crusher_components": {
+          "title": "Crusher Components",
+          "description": "Rings, bushings, and linings that increase the lifespan of crushing equipment."
+        },
+        "mining_sieving_parts": {
+          "title": "Sieving Parts",
+          "description": "Solutions that ensure efficiency in material classification with high wear resistance."
+        },
+        "mining_conveyor_systems": {
+          "title": "Conveyor Systems",
+          "description": "Rollers, drums, and other parts for conveyor belts operating in aggressive environments."
+        }
       }
     },
     "naval": {
@@ -353,9 +345,18 @@
       "cardDescription": "Cast parts like bushings, propellers, and tubes, manufactured to meet the sector's rigorous demands.",
       "icon": "Ship",
       "solutions": {
-        "naval_shaft_bushings": { "title": "Shaft Bushings", "description": "High-precision bushings for propeller shafts, ensuring smooth operation and resistance to marine corrosion." },
-        "naval_propeller_components": { "title": "Propeller Components", "description": "Rings and custom parts for naval propulsion systems, made with special alloys." },
-        "naval_system_pipes": { "title": "System Pipes", "description": "Centrifugally cast tubes for hydraulic and cooling systems, with high durability in a saline environment." }
+        "naval_shaft_bushings": {
+          "title": "Shaft Bushings",
+          "description": "High-precision bushings for propeller shafts, ensuring smooth operation and resistance to marine corrosion."
+        },
+        "naval_propeller_components": {
+          "title": "Propeller Components",
+          "description": "Rings and custom parts for naval propulsion systems, made with special alloys."
+        },
+        "naval_system_pipes": {
+          "title": "System Pipes",
+          "description": "Centrifugally cast tubes for hydraulic and cooling systems, with high durability in a saline environment."
+        }
       }
     },
     "siderurgia": {
@@ -402,9 +403,18 @@
       "cardDescription": "Solutions in robust components for critical applications in oil and gas.",
       "icon": "Component",
       "solutions": {
-        "oil_gas_valve_components": { "title": "Valve Components", "description": "Internal parts for control and safety valves that resist corrosion and high pressure." },
-        "oil_gas_refinery_furnace_tubes": { "title": "Refinery Furnace Tubes", "description": "Centrifugally cast tubes for cracking furnaces, designed to operate at high temperatures." },
-        "oil_gas_subsea_equipment_parts": { "title": "Subsea Equipment Parts", "description": "Components for subsea systems that require maximum reliability and resistance to marine corrosion." }
+        "oil_gas_valve_components": {
+          "title": "Valve Components",
+          "description": "Internal parts for control and safety valves that resist corrosion and high pressure."
+        },
+        "oil_gas_refinery_furnace_tubes": {
+          "title": "Refinery Furnace Tubes",
+          "description": "Centrifugally cast tubes for cracking furnaces, designed to operate at high temperatures."
+        },
+        "oil_gas_subsea_equipment_parts": {
+          "title": "Subsea Equipment Parts",
+          "description": "Components for subsea systems that require maximum reliability and resistance to marine corrosion."
+        }
       }
     },
     "guseira": {
@@ -414,9 +424,18 @@
       "cardDescription": "Parts and components for blast furnaces and pig iron production.",
       "icon": "Gem",
       "solutions": {
-        "pig_iron_blast_furnace_components": { "title": "Blast Furnace Components", "description": "Wear and high-temperature resistant linings and parts to increase the lifespan of blast furnaces." },
-        "pig_iron_torpedo_cars_ladles": { "title": "Torpedo Cars and Ladles", "description": "Replacement parts and components that ensure the safe and efficient transport of liquid pig iron." },
-        "pig_iron_casting_systems": { "title": "Casting Systems", "description": "Components that ensure a continuous and high-quality pig iron casting process." }
+        "pig_iron_blast_furnace_components": {
+          "title": "Blast Furnace Components",
+          "description": "Wear and high-temperature resistant linings and parts to increase the lifespan of blast furnaces."
+        },
+        "pig_iron_torpedo_cars_ladles": {
+          "title": "Torpedo Cars and Ladles",
+          "description": "Replacement parts and components that ensure the safe and efficient transport of liquid pig iron."
+        },
+        "pig_iron_casting_systems": {
+          "title": "Casting Systems",
+          "description": "Components that ensure a continuous and high-quality pig iron casting process."
+        }
       }
     },
     "tratamento_termico": {
@@ -426,9 +445,18 @@
       "cardDescription": "Components for industrial furnaces and heat treatment processes.",
       "icon": "Cpu",
       "solutions": {
-        "heat_treatment_grids_baskets": { "title": "Grids and Baskets", "description": "Grids, baskets, and fixtures in refractory alloys for supporting parts in furnaces." },
-        "heat_treatment_rollers_radiant_tubes": { "title": "Rollers and Radiant Tubes", "description": "Conveyor rollers and radiant tubes for continuous and batch furnaces." },
-        "heat_treatment_spare_parts": { "title": "Spare Parts", "description": "Fans, supports, and other components for heat treatment furnaces." }
+        "heat_treatment_grids_baskets": {
+          "title": "Grids and Baskets",
+          "description": "Grids, baskets, and fixtures in refractory alloys for supporting parts in furnaces."
+        },
+        "heat_treatment_rollers_radiant_tubes": {
+          "title": "Rollers and Radiant Tubes",
+          "description": "Conveyor rollers and radiant tubes for continuous and batch furnaces."
+        },
+        "heat_treatment_spare_parts": {
+          "title": "Spare Parts",
+          "description": "Fans, supports, and other components for heat treatment furnaces."
+        }
       }
     },
     "engenharia": {
@@ -440,13 +468,11 @@
       "solutions": {
         "engineering_metallurgical_consulting": {
           "title": "Metallurgical Consulting",
-          "description": "Failure analysis, material selection, and process optimization to increase equipment lifespan and efficiency.",
-          "icon": "Component"
+          "description": "Failure analysis, material selection, and process optimization to increase equipment lifespan and efficiency."
         },
         "engineering_alloy_development": {
           "title": "Alloy Development",
-          "description": "Creation of custom alloys for specific applications that require superior mechanical, thermal, or chemical properties.",
-          "icon": "Zap"
+          "description": "Creation of custom alloys for specific applications that require superior mechanical, thermal, or chemical properties."
         },
         "engineering_component_design": {
           "title": "Component Design",
@@ -460,7 +486,7 @@
       "description": "The excellence and reliability of our products are proven through certifications issued by the most respected industrial and naval classifiers in the world.",
       "cardDescription": "Explore our certifications and quality seals that guarantee our excellence.",
       "icon": "Award",
-      "solutions": []
+      "solutions": null
     }
   }
 }

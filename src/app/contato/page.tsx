@@ -12,12 +12,12 @@ const contactPageSchema = {
 };
 
 export const metadata: Metadata = {
-  title: 'Contato — Solicite Orçamento de Aços Centrifugados',
+  title: 'Contato | Solicite Orçamento de Aços Centrifugados',
   description:
     'Fale com nossa equipe técnica. Solicite orçamento de tubos, buchas e componentes centrifugados em aços inoxidáveis. Atendimento Brasil e exterior.',
   alternates: { canonical: '/contato' },
   openGraph: {
-    title: 'Contato — Solicite Orçamento de Aços Centrifugados',
+    title: 'Contato | Solicite Orçamento de Aços Centrifugados',
     description:
       'Fale com a Aceros: envie seu projeto e receba proposta comercial de peças em aços inoxidáveis fabricadas sob medida.',
     url: '/contato',

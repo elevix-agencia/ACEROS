@@ -27,7 +27,7 @@ export function Footer() {
             <Link href="/" className="mb-6 flex items-center" aria-label={extra.homeLabel}>
                 <Image
                     src="/images/aceros/generated/logo-footer-crop.png"
-                    alt="Aceros — Aços Centrifugados"
+                    alt="Aceros Aços Centrifugados"
                     width={732}
                     height={247}
                     className="h-auto w-44"

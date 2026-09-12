@@ -42,7 +42,7 @@ export default function PoliticaPrivacidadePage() {
           1. Quem somos
         </h2>
         <p>
-          A Aceros — Aços Centrifugados é a divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, inscrita no CNPJ nº 29.506.517/0001-39, com endereço comercial na Rua Hans Oersted, 20–118, Cidade Monções, São Paulo/SP, CEP 04575-010. A Aceros atua como controladora dos dados pessoais tratados, nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
+          A Aceros, Aços Centrifugados, é a divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, inscrita no CNPJ nº 29.506.517/0001-39, com endereço comercial na Rua Hans Oersted, 20–118, Cidade Monções, São Paulo/SP, CEP 04575-010. A Aceros atua como controladora dos dados pessoais tratados, nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).
         </p>
 
         <h2 className="mt-10 mb-4 border-l-4 border-[#ef7b21] pl-4 font-headline text-2xl font-bold text-[#07121e]">

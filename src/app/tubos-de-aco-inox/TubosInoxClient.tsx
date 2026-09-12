@@ -89,10 +89,10 @@ export function TubosInoxClient() {
     { url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-01.jpg', alt: 'Tubo centrifugado bruto de aço inox, como sai do processo de fundição' },
     { url: '/images/aceros/tubos/tubo-aco-inox-bruto-aceros-02.jpg', alt: 'Tubo de aço inox bruto pronto para usinagem' },
     { url: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-01.jpg', alt: 'Tubo de aço inox após usinagem de precisão CNC' },
-    { url: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-02.jpg', alt: 'Tubo de aço inox usinado — usinagem da ponta (munhão)' },
-    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg', alt: 'Tubo de aço inox usinado e polido — peça acabada com revenido' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-usinado-aceros-02.jpg', alt: 'Tubo de aço inox usinado, usinagem da ponta (munhão)' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg', alt: 'Tubo de aço inox usinado e polido, peça acabada com revenido' },
     { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-02.jpg', alt: 'Tubo de aço inox polido, acabamento espelhado' },
-    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-07.jpg', alt: 'Tubo de aço inox — peça acabada em inspeção dimensional' },
+    { url: '/images/aceros/tubos/tubo-aco-inox-polido-aceros-07.jpg', alt: 'Tubo de aço inox, peça acabada em inspeção dimensional' },
     { url: '/images/aceros/tubos/tubo-aco-inox-misto-aceros-01.jpg', alt: 'Tubo de aço inox com acabamento misto (usinado + polido)' },
   ];
 
@@ -102,7 +102,7 @@ export function TubosInoxClient() {
       <section className="relative isolate min-h-[calc(100svh-80px)] overflow-hidden bg-[#07121e] text-white">
         <Image
           src="/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg"
-          alt="Tubo de aço inox centrifugado, usinado e polido — fabricação Aceros"
+          alt="Tubo de aço inox centrifugado, usinado e polido, fabricação Aceros"
           fill
           sizes="100vw"
           className="object-cover object-center opacity-70"

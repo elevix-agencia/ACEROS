@@ -90,7 +90,7 @@ export function BuchaInoxClient() {
       <section className="relative isolate min-h-[calc(100svh-80px)] overflow-hidden bg-[#07121e] text-white">
         <Image
           src="/images/aceros/buchas/bucha-aco-inox-aceros-02.jpg"
-          alt="Bucha de aço inox usinada sob medida — fabricação Aceros"
+          alt="Bucha de aço inox usinada sob medida, fabricação Aceros"
           fill
           sizes="100vw"
           className="object-cover object-center opacity-70"
@@ -290,11 +290,11 @@ export function BuchaInoxClient() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-01.jpg', alt: 'Bucha de aço inox usinada sob medida — Aceros' },
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-01.jpg', alt: 'Bucha de aço inox usinada sob medida da Aceros' },
               { url: '/images/aceros/buchas/bucha-aco-inox-aceros-02.jpg', alt: 'Bucha centrifugada de aço inox para aplicação industrial' },
               { url: '/images/aceros/buchas/bucha-aco-inox-aceros-03.jpg', alt: 'Bucha de aço inox com acabamento e usinagem de alta precisão' },
-              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-04.jpg', alt: 'Bucha para ponta de sink roll — fabricação Aceros' },
-              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-05.jpg', alt: 'Bucha de aço inox — peça em inspeção dimensional' },
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-04.jpg', alt: 'Bucha para ponta de sink roll, fabricação Aceros' },
+              { url: '/images/aceros/buchas/bucha-aco-inox-aceros-05.jpg', alt: 'Bucha de aço inox em inspeção dimensional' },
               { url: '/images/aceros/buchas/bucha-aco-inox-aceros-06.jpg', alt: 'Bucha de aço inox pronta para expedição' }
             ].map((img, i) => (
               <Dialog key={i}>
@@ -373,7 +373,7 @@ export function BuchaInoxClient() {
             <div className="order-2 md:order-1 relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/aceros/buchas/bucha-aco-inox-aceros-05.jpg"
-                alt="Bucha de aço inox — acabamento final e controle Aceros"
+                alt="Bucha de aço inox, acabamento final e controle da Aceros"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw" 
                 className="object-cover"

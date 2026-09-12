@@ -12,7 +12,7 @@ export function sectorMetadata(slug: string): Metadata {
     return { title: 'Setor não encontrado', robots: { index: false, follow: false } };
   }
 
-  const title = `${sector.title} — Aços Centrifugados para o Setor`;
+  const title = `${sector.title} | Aços Centrifugados para o Setor`;
   const description =
     sector.description ||
     `Peças em aços inoxidáveis centrifugados fabricadas sob medida para o setor ${sector.title.toLowerCase()}.`;
@@ -22,14 +22,14 @@ export function sectorMetadata(slug: string): Metadata {
     description,
     alternates: { canonical: `/atuacao/${slug}` },
     openGraph: {
-      title: `${sector.title} — Aceros`,
+      title: `${sector.title} | Aceros`,
       description,
       url: `/atuacao/${slug}`,
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${sector.title} — Aceros`,
+      title: `${sector.title} | Aceros`,
       description,
     },
   };
@@ -46,7 +46,7 @@ export function SectorPage({ slug }: { slug: string }) {
       '@context': 'https://schema.org',
       '@type': 'Service',
       '@id': `${pageUrl}#service`,
-      name: `${sector.title} — soluções industriais sob medida`,
+      name: `${sector.title} | soluções industriais sob medida`,
       description: sector.description,
       url: pageUrl,
       provider: { '@id': 'https://aceros.com.br/#organization' },
