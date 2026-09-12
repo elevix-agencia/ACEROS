@@ -1,13 +1,11 @@
-﻿
 {
   "header": {
     "home": "Inicio",
     "about": "Sobre Nosotros",
     "qualifications": "Calidad",
-    "products": "Productos",
-    "contact": "Contacto",
     "expertise": "Área de Actuación",
-    "open_menu": "Abrir menú"
+    "products": "Productos",
+    "contact": "Contacto"
   },
   "footer": {
     "description": "Excelencia e innovación en aceros centrifugados para las industrias más exigentes.",
@@ -170,7 +168,8 @@
     "ready_title": "¿Listo para Empezar?",
     "ready_subtitle": "Nuestro equipo está listo para ayudarle a encontrar la solución perfecta para su proyecto. Póngase en contacto hoy mismo.",
     "request_quote": "Solicite su Cotización Ahora",
-    "whatsapp": "Hablar por WhatsApp"
+    "whatsapp": "Hablar por WhatsApp",
+    "whatsapp_quote": "Solicita una cotización por WhatsApp"
   },
   "qualifications": {
     "page_title": "Nuestras Calificaciones",
@@ -192,26 +191,7 @@
     "structural_analysis_subtitle": "Utilizamos la simulación de elementos finitos para validar proyectos y garantizar la integridad estructural.",
     "process_optimization_title": "Optimización de Procesos",
     "process_optimization_subtitle": "Cálculos estructurales y simulaciones de temperatura.",
-    "diagrams_and_processes_title": "Diagramas y Procesos",
-    "diagrams_and_processes_subtitle": "Visualizaciones detalladas de nuestros procesos y capacidades técnicas.",
-    "items": [
-      {
-        "title": "Certificación Especializada",
-        "description": "Ingeniero calificado por Drever (Bélgica) para la medición precisa de 'rollprof roll'."
-      },
-      {
-        "title": "Vasta Experiencia",
-        "description": "Experiencia en el control de perfil de más de 600 rodillos de horno."
-      },
-      {
-        "title": "Estándares RBC",
-        "description": "Instrumentos de inspección y patrones de calibración rastreados por el RBC para máxima fiabilidad."
-      },
-      {
-        "title": "Tecnología de Punta",
-        "description": "Uso de equipos avanzados para garantizar la precisión en todos os nuestros procesos de medición."
-      }
-    ]
+    "items": "System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object]"
   },
   "certificates": {
     "title": "Nuestros Certificados: Calidad Asegurada por Estándares Globales",
@@ -238,12 +218,6 @@
       "mining_solutions_subtitle": "Componentes robustos y de alto rendimiento, diseñados para superar los desafíos más extremos de la industria minera.",
       "mining_quality_title": "Excelencia en cada componente",
       "mining_quality_subtitle": "Nuestro compromiso es entregar soluciones que no solo cumplan, sino que superen las expectativas de rendimiento y durabilidad.",
-      "mining_quality_pillar1_title": "Calidad superior",
-      "mining_quality_pillar1_description": "Nuestras aleaciones y procesos garantizan componentes que superan los estándares de la industria.",
-      "mining_quality_pillar2_title": "Ingeniería de precisión",
-      "mining_quality_pillar2_description": "Cada pieza está diseñada para una máxima eficiencia, durabilidad y un ajuste perfecto.",
-      "mining_quality_pillar3_title": "Durabilidad extrema",
-      "mining_quality_pillar3_description": "Componentes construidos para resistir las condiciones más severas de abrasión e impacto.",
       "staves_title": "Staves (Placas de Enfriamiento)",
       "staves_description": "Componentes cruciales para el enfriamiento eficiente del alto horno, garantizando la integridad estructural y la longevidad de la operación. Fabricados con aleaciones de alta conductividad térmica y resistencia.",
       "tuyeres_title": "Toberas (Válvulas de Soplado)",
@@ -350,9 +324,18 @@
       "cardDescription": "Soluciones robustas para las industrias de extracción y procesamiento de minerales.",
       "icon": "Drill",
       "solutions": {
-        "mining_crusher_components": { "title": "Componentes de Trituradoras", "description": "Anillos, casquillos y revestimientos que aumentan la vida útil de los equipos de trituración." },
-        "mining_sieving_parts": { "title": "Piezas de Cribado", "description": "Soluciones que aseguran la eficiencia en la clasificación de materiales con alta resistencia al desgaste." },
-        "mining_conveyor_systems": { "title": "Sistemas de Transporte", "description": "Rodillos, tambores y otras piezas para cintas transportadoras que operan en ambientes agresivos." }
+        "mining_crusher_components": {
+          "title": "Componentes de Trituradoras",
+          "description": "Anillos, casquillos y revestimientos que aumentan la vida útil de los equipos de trituración."
+        },
+        "mining_sieving_parts": {
+          "title": "Piezas de Cribado",
+          "description": "Soluciones que aseguran la eficiencia en la clasificación de materiales con alta resistencia al desgaste."
+        },
+        "mining_conveyor_systems": {
+          "title": "Sistemas de Transporte",
+          "description": "Rodillos, tambores y otras piezas para cintas transportadoras que operan en ambientes agresivos."
+        }
       }
     },
     "naval": {
@@ -362,9 +345,18 @@
       "cardDescription": "Piezas fundidas como casquillos, hélices y tubos, fabricadas para cumplir con las rigurosas demandas del sector.",
       "icon": "Ship",
       "solutions": {
-        "naval_shaft_bushings": { "title": "Casquillos de Eje", "description": "Casquillos de alta precisión para ejes de hélice, garantizando un funcionamiento suave y resistente a la corrosión marina." },
-        "naval_propeller_components": { "title": "Componentes de Hélice", "description": "Anillos y piezas personalizadas para sistemas de propulsión naval, fabricados con aleaciones especiais." },
-        "naval_system_pipes": { "title": "Tubos de Sistema", "description": "Tubos centrifugados para sistemas hidráulicos y de refrigeración, con alta durabilidad en ambiente salino." }
+        "naval_shaft_bushings": {
+          "title": "Casquillos de Eje",
+          "description": "Casquillos de alta precisión para ejes de hélice, garantizando un funcionamiento suave y resistente a la corrosión marina."
+        },
+        "naval_propeller_components": {
+          "title": "Componentes de Hélice",
+          "description": "Anillos y piezas personalizadas para sistemas de propulsión naval, fabricados con aleaciones especiais."
+        },
+        "naval_system_pipes": {
+          "title": "Tubos de Sistema",
+          "description": "Tubos centrifugados para sistemas hidráulicos y de refrigeración, con alta durabilidad en ambiente salino."
+        }
       }
     },
     "siderurgia": {
@@ -374,13 +366,34 @@
       "cardDescription": "Piezas para hornos y equipos siderúrgicos, asegurando la producción de acero con alto estándar de calidad.",
       "icon": "Factory",
       "solutions": {
-        "siderurgia_continuous_casting": { "title": "COLADA CONTINUA", "description": "Rodillos para Máquinas de Colada Continua con un rendimiento excepcional." },
-        "siderurgia_tunnel_furnace_rollers": { "title": "RODILLOS PARA HORNOS DE TÚNEL CSP", "description": "Rodillos enfriados (cooled) e no revestidos (uncooled) que forman parte de la producción estándar." },
-        "siderurgia_hot_strip_mill_rollers": { "title": "RODILLOS PARA LAMINADOR DE BANDAS EN CALIENTE (HSP)", "description": "Nueva generación de rodillos para MESA DE TRANSFERENCIA, MESA DE SALIDA, LOOPER, TENSIÓN, PINCH y WRAPPER." },
-        "siderurgia_capl_cgl_furnace": { "title": "CAPL & CGL - HORNO", "description": "Soluciones completas para Líneas de Recocido y Procesamiento Continuo y Líneas de Galvanización Continua." },
-        "siderurgia_hot_dip_galvanizing": { "title": "LÍNEAS DE GALVANIZACIÓN POR INMERSIÓN EN CALIENTE (POTE)", "description": "Componentes de alto rendimiento sumergidos en baños de Zinc, Zincalume y Aluminio+Si." },
-        "siderurgia_walking_beam_furnaces": { "title": "HORNOS DE VIGAS CAMINANTES PARA TRATAMENTO TÉRMICO DE TUBOS", "description": "HORNOS DE VIGAS CAMINANTES, COLUMNAS y SELLOS SUPERIORES E INFERIORES con diseño y aleaciones especiais." },
-        "siderurgia_bar_furnace_parts": { "title": "Piezas para Horno de Barras, Entrada y Salida, Carga y Descarga", "description": "RODILLOS DE CARGA Y DESCARGA SECOS Y HÚMEDOS, revestidos y no revestidos." }
+        "siderurgia_continuous_casting": {
+          "title": "COLADA CONTINUA",
+          "description": "Rodillos para Máquinas de Colada Continua con un rendimiento excepcional."
+        },
+        "siderurgia_tunnel_furnace_rollers": {
+          "title": "RODILLOS PARA HORNOS DE TÚNEL CSP",
+          "description": "Rodillos enfriados (cooled) e no revestidos (uncooled) que forman parte de la producción estándar."
+        },
+        "siderurgia_hot_strip_mill_rollers": {
+          "title": "RODILLOS PARA LAMINADOR DE BANDAS EN CALIENTE (HSP)",
+          "description": "Nueva generación de rodillos para MESA DE TRANSFERENCIA, MESA DE SALIDA, LOOPER, TENSIÓN, PINCH y WRAPPER."
+        },
+        "siderurgia_capl_cgl_furnace": {
+          "title": "CAPL & CGL - HORNO",
+          "description": "Soluciones completas para Líneas de Recocido y Procesamiento Continuo y Líneas de Galvanización Continua."
+        },
+        "siderurgia_hot_dip_galvanizing": {
+          "title": "LÍNEAS DE GALVANIZACIÓN POR INMERSIÓN EN CALIENTE (POTE)",
+          "description": "Componentes de alto rendimiento sumergidos en baños de Zinc, Zincalume y Aluminio+Si."
+        },
+        "siderurgia_walking_beam_furnaces": {
+          "title": "HORNOS DE VIGAS CAMINANTES PARA TRATAMENTO TÉRMICO DE TUBOS",
+          "description": "HORNOS DE VIGAS CAMINANTES, COLUMNAS y SELLOS SUPERIORES E INFERIORES con diseño y aleaciones especiais."
+        },
+        "siderurgia_bar_furnace_parts": {
+          "title": "Piezas para Horno de Barras, Entrada y Salida, Carga y Descarga",
+          "description": "RODILLOS DE CARGA Y DESCARGA SECOS Y HÚMEDOS, revestidos y no revestidos."
+        }
       }
     },
     "oleo_e_gas": {
@@ -390,9 +403,18 @@
       "cardDescription": "Soluciones en componentes robustos para aplicaciones críticas en petróleo y gas.",
       "icon": "Component",
       "solutions": {
-        "oil_gas_valve_components": { "title": "Componentes de Válvulas", "description": "Piezas internas para válvulas de control e seguridad que resisten la corrosión y la alta presión." },
-        "oil_gas_refinery_furnace_tubes": { "title": "Tubos de Horno de Refinería", "description": "Tubos centrifugados para hornos de craqueo, diseñados para operar a altas temperaturas." },
-        "oil_gas_subsea_equipment_parts": { "title": "Piezas para Equipos Submarinos", "description": "Componentes para sistemas submarinos que requieren máxima fiabilidad y resistencia a la corrosión marina." }
+        "oil_gas_valve_components": {
+          "title": "Componentes de Válvulas",
+          "description": "Piezas internas para válvulas de control e seguridad que resisten la corrosión y la alta presión."
+        },
+        "oil_gas_refinery_furnace_tubes": {
+          "title": "Tubos de Horno de Refinería",
+          "description": "Tubos centrifugados para hornos de craqueo, diseñados para operar a altas temperaturas."
+        },
+        "oil_gas_subsea_equipment_parts": {
+          "title": "Piezas para Equipos Submarinos",
+          "description": "Componentes para sistemas submarinos que requieren máxima fiabilidad y resistencia a la corrosión marina."
+        }
       }
     },
     "guseira": {
@@ -402,9 +424,18 @@
       "cardDescription": "Piezas y componentes para altos hornos y producción de arrabio.",
       "icon": "Gem",
       "solutions": {
-        "pig_iron_blast_furnace_components": { "title": "Componentes de Alto Horno", "description": "Revestimientos y piezas resistentes al desgaste y a altas temperaturas para aumentar la vida útil de los altos hornos." },
-        "pig_iron_torpedo_cars_ladles": { "title": "Carros Torpedo y Cucharas", "description": "Piezas de repuesto y componentes que garantizan el transporte seguro ed eficiente del arrabio líquido." },
-        "pig_iron_casting_systems": { "title": "Sistemas de Colada", "description": "Componentes que aseguran un proceso de colada continua de arrabio de alta qualidade." }
+        "pig_iron_blast_furnace_components": {
+          "title": "Componentes de Alto Horno",
+          "description": "Revestimientos y piezas resistentes al desgaste y a altas temperaturas para aumentar la vida útil de los altos hornos."
+        },
+        "pig_iron_torpedo_cars_ladles": {
+          "title": "Carros Torpedo y Cucharas",
+          "description": "Piezas de repuesto y componentes que garantizan el transporte seguro ed eficiente del arrabio líquido."
+        },
+        "pig_iron_casting_systems": {
+          "title": "Sistemas de Colada",
+          "description": "Componentes que aseguran un proceso de colada continua de arrabio de alta qualidade."
+        }
       }
     },
     "tratamento_termico": {
@@ -414,9 +445,18 @@
       "cardDescription": "Componentes para hornos industriales y procesos de tratamiento térmico.",
       "icon": "Cpu",
       "solutions": {
-        "heat_treatment_grids_baskets": { "title": "Parrillas y Cestas", "description": "Parrillas, cestas y accesorios en aleaciones refractarias para soportar piezas en hornos." },
-        "heat_treatment_rollers_radiant_tubes": { "title": "Rodillos y Tubos Radiantes", "description": "Rodillos transportadores y tubos radiantes para hornos continuos y discontinuos." },
-        "heat_treatment_spare_parts": { "title": "Piezas de Repuesto", "description": "Ventiladores, soportes y otros componentes para hornos de tratamiento térmico." }
+        "heat_treatment_grids_baskets": {
+          "title": "Parrillas y Cestas",
+          "description": "Parrillas, cestas y accesorios en aleaciones refractarias para soportar piezas en hornos."
+        },
+        "heat_treatment_rollers_radiant_tubes": {
+          "title": "Rodillos y Tubos Radiantes",
+          "description": "Rodillos transportadores y tubos radiantes para hornos continuos y discontinuos."
+        },
+        "heat_treatment_spare_parts": {
+          "title": "Piezas de Repuesto",
+          "description": "Ventiladores, soportes y otros componentes para hornos de tratamiento térmico."
+        }
       }
     },
     "engenharia": {
@@ -428,13 +468,11 @@
       "solutions": {
         "engineering_metallurgical_consulting": {
           "title": "Consultoría Metalúrgica",
-          "description": "Análisis de fallas, selección de materiales y optimización de procesos para aumentar la vida útil y la eficiencia de los equipos.",
-          "icon": "Component"
+          "description": "Análisis de fallas, selección de materiales y optimización de procesos para aumentar la vida útil y la eficiencia de los equipos."
         },
         "engineering_alloy_development": {
           "title": "Desarrollo de Aleaciones",
-          "description": "Creación de aleaciones personalizadas para aplicaciones específicas que requieren propiedades mecánicas, térmicas o químicas superiores.",
-          "icon": "Zap"
+          "description": "Creación de aleaciones personalizadas para aplicaciones específicas que requieren propiedades mecánicas, térmicas o químicas superiores."
         },
         "engineering_component_design": {
           "title": "Diseño de Componentes",
@@ -448,7 +486,7 @@
       "description": "La excelencia y fiabilidad de nuestros produtos se demuestran a través de certificaciones emitidas por las clasificadoras industriales y navales más respetadas del mundo.",
       "cardDescription": "Explore nuestras certificaciones y sellos de calidad que garantisan nuestra excelencia.",
       "icon": "Award",
-      "solutions": []
+      "solutions": null
     }
   }
 }
