@@ -98,22 +98,6 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-20 hidden border-t border-white/15 bg-[#07121e] lg:block">
-        <div className="container mx-auto grid grid-cols-2 px-4 lg:grid-cols-4">
-          {[
-            ['1999', copy.stats[0]],
-            ['2015', copy.stats[1]],
-    ['3', copy.stats[2]],
-            ['100%', copy.stats[3]],
-          ].map(([value, label]) => (
-            <div key={label} className="border-r border-white/10 px-5 py-4 last:border-0 lg:px-8">
-              <span className="mr-3 font-headline text-xl font-bold text-white">{value}</span>
-              <span className="text-[10px] uppercase tracking-[0.13em] text-slate-400">{label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <Link href="#sobre" aria-label={copy.contentLabel} className="absolute bottom-24 right-5 z-20 hidden h-12 w-12 items-center justify-center border border-white/25 text-white transition-colors hover:bg-white hover:text-[#07121e] sm:flex lg:right-10">
         <ArrowDown className="h-4 w-4" />
       </Link>
