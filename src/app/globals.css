@@ -742,15 +742,15 @@ header.site-header .header-mobile-actions {
 @keyframes zoom4D {     0% { opacity: 0; transform: translateZ(-2000px) scale(0); }     100% { opacity: 1; transform: translateZ(0) scale(1); } }
 
 
-/* Aumenta o container em telas grandes (>= 1440px) para nao deixar tanto
-   espaco vazio nas laterais em desktops widescreen. Mantem 1280px ate 1440px.
-   Usa !important no .container porque o utility do Tailwind ja tem media
-   queries proprias com maior especificidade. */
+/* Aumenta o shell do site em telas grandes (>= 1440px) para nao deixar
+   tanto espaco vazio nas laterais em desktops widescreen. Mantem 1280px
+   ate 1439px. Redefine a variavel --site-shell-max que ja e usada pelo
+   .container:not([class*=max-w-]) do sistema existente. */
 @media (min-width: 1440px) {
+  :root { --site-shell-max: 1440px; }
   .max-w-\[1280px\] { max-width: 1440px; }
-  .container { max-width: 1440px !important; }
 }
 @media (min-width: 1720px) {
+  :root { --site-shell-max: 1600px; }
   .max-w-\[1280px\] { max-width: 1600px; }
-  .container { max-width: 1600px !important; }
 }
