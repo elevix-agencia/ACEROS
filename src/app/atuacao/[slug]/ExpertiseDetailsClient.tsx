@@ -101,7 +101,7 @@ export function ExpertiseDetailsClient({
 }: {
   pageData: ExpertisePageData;
 }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   // Usa o idioma atual (via useLanguage) como fonte das traducoes,
   // recomputando o setor com os dados no idioma escolhido pela usuaria.
@@ -131,7 +131,17 @@ export function ExpertiseDetailsClient({
   }
 
   const heroImage = PlaceHolderImages.find(img => img.id === sector.heroImageId);
-  
+  const whatsappNumber = '551155556551';
+  const whatsappMessage = encodeURIComponent(t.whatsapp?.message ?? '');
+  const breadcrumbLabel: Record<Language, [string, string]> = {
+    pt: ['Início', 'Setores de atuação'],
+    en: ['Home', 'Sectors served'],
+    es: ['Inicio', 'Sectores atendidos'],
+    de: ['Startseite', 'Branchen'],
+    it: ['Home', 'Settori serviti'],
+  };
+  const [homeLabel, sectorsLabel] = breadcrumbLabel[language] ?? breadcrumbLabel.pt;
+
   return (
     <div className={`sector-page sector-page--${sector.id}`}>
       <section className="relative isolate min-h-[calc(100svh-80px)] w-full overflow-hidden bg-[#07121e]">
@@ -151,31 +161,65 @@ export function ExpertiseDetailsClient({
         <div className="relative z-10 flex min-h-[calc(100svh-80px)] items-center py-10 text-white sm:py-16 lg:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-[820px]">
-            <motion.p 
-              className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <span className="h-px w-10 bg-accent" />
-              {translations.expertise_sectors.page.solutions_for}
-            </motion.p>
-            <motion.h1 
-              className="text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] sm:text-[clamp(2.25rem,3.35vw,3.65rem)]"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              {sector.title}
-            </motion.h1>
-            <motion.p 
-              className="mt-7 max-w-[720px] border-l border-accent/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              {sector.description}
-            </motion.p>
+              {/* Breadcrumb navegacao + SEO */}
+              <motion.nav
+                aria-label="breadcrumb"
+                className="mb-6 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-300 sm:text-xs"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.15, duration: 0.6 }}
+              >
+                <Link href="/" className="transition-colors hover:text-accent">{homeLabel}</Link>
+                <span aria-hidden="true" className="text-slate-500">/</span>
+                <Link href="/#sectors" className="transition-colors hover:text-accent">{sectorsLabel}</Link>
+                <span aria-hidden="true" className="text-slate-500">/</span>
+                <span className="text-accent">{sector.title}</span>
+              </motion.nav>
+              <motion.p
+                className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:text-sm"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+              >
+                <span className="h-px w-10 bg-accent" />
+                {translations.expertise_sectors.page.solutions_for}
+              </motion.p>
+              <motion.h1
+                className="text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] sm:text-[clamp(2.25rem,3.35vw,3.65rem)]"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+              >
+                {sector.title}
+              </motion.h1>
+              <motion.p
+                className="mt-7 max-w-[720px] border-l border-accent/80 pl-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+              >
+                {sector.description}
+              </motion.p>
+              {/* CTAs no hero - conversao acima da dobra */}
+              <motion.div
+                className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.8 }}
+              >
+                <Button asChild size="lg" className="h-14 rounded-none bg-accent px-8 text-xs font-bold uppercase tracking-[0.12em] text-white hover:bg-[#cf5f11] sm:h-16">
+                  <Link href="/contato" className="flex items-center gap-2">
+                    {t.cta?.request_quote ?? 'Solicitar Orçamento'}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="h-14 rounded-none border-white/35 bg-white/5 px-8 text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm hover:border-white hover:bg-white hover:text-[#07121e] sm:h-16">
+                  <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <MessageCircle className="h-4 w-4" />
+                    WhatsApp
+                  </Link>
+                </Button>
+              </motion.div>
             </div>
           </div>
         </div>
