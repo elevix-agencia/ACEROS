@@ -741,3 +741,14 @@ header.site-header .header-mobile-actions {
 .hero-buttons .btn-action:hover {     transform: rotateX(20deg) rotateY(20deg) translateZ(80px) scale(1.2) !important;     box-shadow: -20px 20px 60px rgba(0,0,0,0.8), 0 0 30px rgba(255,140,0,0.5) !important; }
 @keyframes zoom4D {     0% { opacity: 0; transform: translateZ(-2000px) scale(0); }     100% { opacity: 1; transform: translateZ(0) scale(1); } }
 
+
+/* Aumenta o container em telas grandes (>= 1440px) para nao deixar tanto
+   espaco vazio nas laterais em desktops widescreen. Mantem 1280px ate 1440px. */
+@media (min-width: 1440px) {
+  .max-w-\[1280px\] { max-width: 1440px; }
+  .container { max-width: 1440px; }
+}
+@media (min-width: 1720px) {
+  .max-w-\[1280px\] { max-width: 1600px; }
+  .container { max-width: 1600px; }
+}

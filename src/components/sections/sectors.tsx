@@ -9,7 +9,7 @@ import { sectorsData } from '@/lib/expertise-data';
 import { siteExtras } from '@/lib/i18n/site-extras';
 
 const sectorImages: Record<string, string> = {
-  mineracao: '/images/imgur/GwRqaf7.jpeg',
+  mineracao: '/images/imgur/ol4Y0fr.jpeg',
   tratamento_termico: '/images/imgur/1LtOK33.jpeg',
   naval: '/images/imgur/5AsJUxh.png',
   siderurgia: '/images/imgur/XJLum1h.png',
