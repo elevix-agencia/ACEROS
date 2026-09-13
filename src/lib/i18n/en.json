@@ -191,7 +191,12 @@
     "structural_analysis_subtitle": "We use finite element simulation to validate projects and ensure structural integrity.",
     "process_optimization_title": "Process Optimization",
     "process_optimization_subtitle": "Structural calculations and temperature simulations.",
-    "items": "System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object]"
+    "items": [
+      { "title": "ISO 9001:2015", "description": "Management system certified by DQS, valid through 19 November 2028." },
+      { "title": "Chemical analysis", "description": "Optical emission spectrometry for control of alloy composition during melting." },
+      { "title": "Traceable metrology", "description": "Instruments and measurement standards calibrated and traceable to RBC." },
+      { "title": "Profile control", "description": "Measurement with a Rollprof profilometer by staff trained by Drever, Belgium." }
+    ]
   },
   "certificates": {
     "title": "Our Certificates: Quality Assured by Global Standards",

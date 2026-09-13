@@ -191,7 +191,12 @@
     "structural_analysis_subtitle": "Utilizamos la simulación de elementos finitos para validar proyectos y garantizar la integridad estructural.",
     "process_optimization_title": "Optimización de Procesos",
     "process_optimization_subtitle": "Cálculos estructurales y simulaciones de temperatura.",
-    "items": "System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object]"
+    "items": [
+      { "title": "ISO 9001:2015", "description": "Sistema de gestión certificado por DQS, con validez hasta el 19 de noviembre de 2028." },
+      { "title": "Análisis químico", "description": "Espectrometría de emisión óptica para el control de la composición de las aleaciones durante la fusión." },
+      { "title": "Metrología trazable", "description": "Instrumentos y patrones de medición con calibración trazable a RBC." },
+      { "title": "Control de perfil", "description": "Medición con perfilómetro Rollprof por profesional con formación técnica de Drever, Bélgica." }
+    ]
   },
   "certificates": {
     "title": "Nuestros Certificados: Calidad Asegurada por Estándares Globales",

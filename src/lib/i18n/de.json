@@ -191,7 +191,12 @@
     "structural_analysis_subtitle": "Wir verwenden die Finite-Elemente-Simulation, um Projekte zu validieren und die strukturelle Integrität zu gewährleisten.",
     "process_optimization_title": "Optimierung von Prozessen",
     "process_optimization_subtitle": "Strukturberechnungen und Temperatursimulationen.",
-    "items": "System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object] System.Collections.Generic.Dictionary`2[System.String,System.Object]"
+    "items": [
+      { "title": "ISO 9001:2015", "description": "Managementsystem zertifiziert durch DQS, gültig bis 19. November 2028." },
+      { "title": "Chemische Analyse", "description": "Optische Emissionsspektrometrie zur Kontrolle der Legierungszusammensetzung während der Schmelze." },
+      { "title": "Rückverfolgbare Messtechnik", "description": "Instrumente und Messnormale kalibriert und über RBC rückverfolgbar." },
+      { "title": "Profilkontrolle", "description": "Messung mit Rollprof-Profilometer durch bei Drever, Belgien, geschultes Fachpersonal." }
+    ]
   },
   "certificates": {
     "title": "Unsere Zertifikate: Qualität durch globale Standards gesichert",
