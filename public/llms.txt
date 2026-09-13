@@ -1,0 +1,46 @@
+# Aceros Aços Centrifugados
+
+> Aceros é a divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, fabricante brasileiro (Itaquaquecetuba/SP) de peças centrifugadas em ligas ASTM A297 e superligas para indústrias de siderurgia, mineração, tratamento térmico, guseira, naval e óleo e gás.
+
+Fabricação 100% sob desenho técnico. Sem catálogo de commodities. Certificação ISO 9001:2015 (DQS, válida até 19/11/2028). Site em 5 idiomas (PT/EN/ES/DE/IT). Atendimento comercial Brasil + exportação (Portugal, EUA, Itália, entre outros).
+
+Site: https://aceros.com.br
+Contato: vendas@aceros.com.br · +55 11 5555-6551
+
+## Linhas de produtos
+
+- [Tubos centrifugados](https://aceros.com.br/tubos-de-aco-inox): Tubos mecânicos em ligas ASTM A297. Estágios bruto, usinado, polido ou misto. Diâmetros, espessuras e comprimentos sob medida.
+- [Buchas de aço inox](https://aceros.com.br/bucha-de-aco-inox): Buchas centrifugadas em ligas de alta dureza. Especialistas em buchas para ponta de Sink Roll e Furnace Roll.
+- [Rolos de forno (Furnace Rolls)](https://aceros.com.br/rolos-de-forno): Rolos para fornos contínuos, linhas CAPL/CGL e tratamento térmico. Resfriados ou não resfriados.
+- [Sink Rolls](https://aceros.com.br/sink-rolls): Rolos de imersão, snout, braços e buchas de ponta para linhas de galvanização a quente.
+- [Fundição centrifugada](https://aceros.com.br/fundicao-centrifugada): Peças cilíndricas em ligas especiais, do bruto ao acabamento final.
+
+## Setores de atuação
+
+- [Mineração](https://aceros.com.br/atuacao/mineracao): Grelhas, roller screens, rolos, componentes para pelotização e sinterização.
+- [Siderurgia](https://aceros.com.br/atuacao/siderurgia): Rolos de forno, walking beam, CAPL/CGL, componentes para linhas de laminação.
+- [Tratamento térmico](https://aceros.com.br/atuacao/tratamento_termico): Rolos, grelhas, tubos radiantes, componentes internos de fornos.
+- [Naval](https://aceros.com.br/atuacao/naval): Flanges, buzinas de reboque (Panamá / ABNT NBR 6754), Kort Nozzle, tubos e conjuntos.
+- [Guseira](https://aceros.com.br/atuacao/guseira): Staves, tuyeres, housings, wear plates, componentes estruturais.
+- [Óleo e Gás](https://aceros.com.br/atuacao/oleo_e_gas): Housings, componentes para refino e petroquímica.
+
+## Ligas de trabalho
+
+Séries 300 (AISI 304/304L, 316/316L, 310), Série 400 (AISI 420), grades ASTM A297 (HK, HH, HP) e soluções especiais (cilindros aço inox + tungstênio para abrasão em mineração). Ver [/ligas](https://aceros.com.br/ligas).
+
+## Engenharia e qualidade
+
+Engenharia própria com SolidWorks, AutoCAD, cálculo estrutural até 800 °C, elementos finitos, Navcad/Propcad (naval). Parque de máquinas com 20 tornos mecânicos (até 1.700 mm × 12 m), 3 tornos CNC, mandrilhadora CN, 2 fresadoras CNC, prensa hidráulica 400 t, corte plasma CNC até 63 mm.
+
+Laboratório com Spectromax (análise química), ultrassom Krautkramer USM 36, Rollprof (perfilômetro), durômetro Mitutoyo, ensaios de corrosão e mecânicos, soldagem qualificada AWS D1.1 e ASME.
+
+## Como pedir orçamento
+
+Envie desenho técnico (PDF, DWG, DXF, STEP, IGES, JPG ou PNG até 5 MB) + dimensões + condição de operação (temperatura, atmosfera, carga) para o [formulário de contato](https://aceros.com.br/contato) ou WhatsApp +55 11 5555-6551. Retorno comercial em até 1 dia útil.
+
+## Optional
+
+- [Certificações e referências](https://aceros.com.br/certificados): ISO 9001:2015 DQS + referências navais (DNV, ABS, Bureau Veritas, Lloyd's Register).
+- [Qualidade e laboratório](https://aceros.com.br/qualificacao): Ensaios químicos, dureza, ultrassom, metrologia rastreada RBC.
+- [Sobre a empresa](https://aceros.com.br/sobre): História desde 1999 (Grupo Metalúrgica Daniela) e 2015 (Aceros).
+- [Sitemap](https://aceros.com.br/sitemap.xml)

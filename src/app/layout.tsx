@@ -46,6 +46,17 @@ export const metadata: Metadata = {
   publisher: 'Aceros Centrifugados LTDA',
   alternates: {
     canonical: '/',
+    // O site renderiza os 5 idiomas na mesma URL (troca por localStorage/queryparam).
+    // Sinaliza ao Google que existe versao em cada idioma; para SEO multi-idioma
+    // com URLs distintas seria necessario mover para rotas /en/ /es/ /de/ /it/.
+    languages: {
+      'pt-BR': '/',
+      en: '/?lang=en',
+      es: '/?lang=es',
+      de: '/?lang=de',
+      it: '/?lang=it',
+      'x-default': '/',
+    },
   },
   openGraph: {
     type: 'website',
@@ -147,6 +158,16 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Google Consent Mode v2 - estado padrao "denied" antes de qualquer
+            script do Google carregar. O CookieConsent atualiza para "granted"
+            se a usuaria aceitar cookies de analytics/marketing. Garante que
+            GTM/GA/Ads respeitem LGPD e nao coletem dados sem consentimento. */}
+        <script
+          id="google-consent-default"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','functionality_storage':'granted','security_storage':'granted','wait_for_update':500});gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

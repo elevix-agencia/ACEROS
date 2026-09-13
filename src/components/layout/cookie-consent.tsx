@@ -76,7 +76,24 @@ const copy = {
   },
 };
 
+type GtagFn = (...args: unknown[]) => void;
+
+function updateConsent(granted: boolean) {
+  // Google Consent Mode v2 - avisa o GTM/GA/Ads que o consent mudou.
+  // O script default esta no layout.tsx e carrega antes de qualquer tag.
+  const trackedWindow = window as Window & { gtag?: GtagFn };
+  if (typeof trackedWindow.gtag !== 'function') return;
+  const value = granted ? 'granted' : 'denied';
+  trackedWindow.gtag('consent', 'update', {
+    ad_storage: value,
+    ad_user_data: value,
+    ad_personalization: value,
+    analytics_storage: value,
+  });
+}
+
 function loadGoogleTagManager() {
+  updateConsent(true);
   if (document.querySelector(`script[data-gtm-id="${GTM_ID}"]`)) return;
 
   const trackedWindow = window as Window & { dataLayer?: unknown[] };
@@ -94,6 +111,7 @@ function loadGoogleTagManager() {
 }
 
 function disableGoogleTagManager() {
+  updateConsent(false);
   const scripts = document.querySelectorAll<HTMLScriptElement>('script[src*="googletagmanager.com"]');
   const wasLoaded = scripts.length > 0;
   scripts.forEach((script) => script.remove());
