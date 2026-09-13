@@ -8,7 +8,86 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '../ui/separator';
 import { MessageCircle } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
-import { useLanguage } from '@/hooks/use-language';
+import { useLanguage, type Language } from '@/hooks/use-language';
+
+type CertCopy = {
+  eyebrow: string; heroTitle: string; heroLead: string;
+  galleryTitle: string; galleryLead: string; zoomAria: string;
+  certs: Array<{ name: string; description: string }>;
+};
+
+const certCopy: Record<Language, CertCopy> = {
+  pt: {
+    eyebrow: 'Qualidade e conformidade',
+    heroTitle: 'Certificações e referências técnicas',
+    heroLead: 'Documentos do sistema de gestão e referências técnicas aplicáveis conforme os requisitos de cada fornecimento.',
+    galleryTitle: 'Galeria de Certificados',
+    galleryLead: 'Consulte imagens e documentos disponíveis no acervo técnico da Aceros.',
+    zoomAria: 'Ampliar',
+    certs: [
+      { name: 'DNV', description: 'Referência de classificadora cujos requisitos podem ser considerados quando especificados no projeto.' },
+      { name: 'ABS', description: 'Referência técnica do setor naval aplicável quando indicada nos requisitos do fornecimento.' },
+      { name: 'Bureau Veritas', description: 'Referência de inspeção e classificação considerada conforme a aplicação e a documentação contratual.' },
+      { name: "Lloyd's Register", description: 'Referência de classificação para projetos que exijam requisitos específicos do setor naval.' },
+    ],
+  },
+  en: {
+    eyebrow: 'Quality and compliance',
+    heroTitle: 'Certifications and technical references',
+    heroLead: 'Management-system documents and technical references applied according to the requirements of each supply.',
+    galleryTitle: 'Certificate gallery',
+    galleryLead: 'Browse images and documents from the Aceros technical library.',
+    zoomAria: 'Enlarge',
+    certs: [
+      { name: 'DNV', description: 'Reference classification whose requirements can be considered when specified in the project.' },
+      { name: 'ABS', description: 'Naval-sector technical reference applied when defined in the supply requirements.' },
+      { name: 'Bureau Veritas', description: 'Inspection and classification reference considered per application and contractual documentation.' },
+      { name: "Lloyd's Register", description: 'Classification reference for projects with specific naval-sector requirements.' },
+    ],
+  },
+  es: {
+    eyebrow: 'Calidad y conformidad',
+    heroTitle: 'Certificaciones y referencias técnicas',
+    heroLead: 'Documentos del sistema de gestión y referencias técnicas aplicables según los requisitos de cada suministro.',
+    galleryTitle: 'Galería de Certificados',
+    galleryLead: 'Consulte imágenes y documentos disponibles en el archivo técnico de Aceros.',
+    zoomAria: 'Ampliar',
+    certs: [
+      { name: 'DNV', description: 'Referencia de clasificadora cuyos requisitos pueden considerarse cuando se especifiquen en el proyecto.' },
+      { name: 'ABS', description: 'Referencia técnica del sector naval aplicable cuando esté indicada en los requisitos del suministro.' },
+      { name: 'Bureau Veritas', description: 'Referencia de inspección y clasificación considerada según la aplicación y la documentación contractual.' },
+      { name: "Lloyd's Register", description: 'Referencia de clasificación para proyectos con requisitos específicos del sector naval.' },
+    ],
+  },
+  de: {
+    eyebrow: 'Qualität und Konformität',
+    heroTitle: 'Zertifizierungen und technische Referenzen',
+    heroLead: 'Dokumente des Managementsystems und technische Referenzen, angewendet gemäß den Anforderungen jeder Lieferung.',
+    galleryTitle: 'Zertifikat-Galerie',
+    galleryLead: 'Bilder und Dokumente aus dem technischen Archiv von Aceros.',
+    zoomAria: 'Vergrößern',
+    certs: [
+      { name: 'DNV', description: 'Klassifizierungsreferenz, deren Anforderungen bei projektbezogener Angabe berücksichtigt werden können.' },
+      { name: 'ABS', description: 'Marine-technische Referenz, angewendet, wenn in den Lieferanforderungen genannt.' },
+      { name: 'Bureau Veritas', description: 'Prüf- und Klassifizierungsreferenz, angewendet nach Anwendung und Vertragsunterlagen.' },
+      { name: "Lloyd's Register", description: 'Klassifizierungsreferenz für Projekte mit spezifischen Marineanforderungen.' },
+    ],
+  },
+  it: {
+    eyebrow: 'Qualità e conformità',
+    heroTitle: 'Certificazioni e riferimenti tecnici',
+    heroLead: 'Documenti del sistema di gestione e riferimenti tecnici applicati secondo i requisiti di ciascuna fornitura.',
+    galleryTitle: 'Galleria dei certificati',
+    galleryLead: 'Consulta immagini e documenti disponibili nell\'archivio tecnico di Aceros.',
+    zoomAria: 'Ingrandisci',
+    certs: [
+      { name: 'DNV', description: 'Riferimento di classificazione i cui requisiti possono essere considerati se specificati nel progetto.' },
+      { name: 'ABS', description: 'Riferimento tecnico del settore navale applicato quando indicato nei requisiti della fornitura.' },
+      { name: 'Bureau Veritas', description: 'Riferimento di ispezione e classificazione considerato in base all\'applicazione e alla documentazione contrattuale.' },
+      { name: "Lloyd's Register", description: 'Riferimento di classificazione per progetti con requisiti specifici del settore navale.' },
+    ],
+  },
+};
 import {
   Dialog,
   DialogContent,
@@ -18,31 +97,16 @@ import {
 } from '@/components/ui/dialog';
 
 export function CertificatesCta() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const c = certCopy[language] ?? certCopy.pt;
 
   const heroImage = PlaceHolderImages.find(img => img.id === 'certificates-hero');
 
   const certificateImages = [
-    {
-      id: 'cert-dnv',
-      name: 'DNV',
-      description: 'Referência de classificadora cujos requisitos podem ser considerados quando especificados no projeto.',
-    },
-    {
-      id: 'cert-abs',
-      name: 'ABS',
-      description: 'Referência técnica do setor naval aplicável quando indicada nos requisitos do fornecimento.',
-    },
-    {
-      id: 'cert-bureau-veritas',
-      name: 'Bureau Veritas',
-      description: 'Referência de inspeção e classificação considerada conforme a aplicação e a documentação contratual.',
-    },
-    {
-      id: 'cert-lloyds',
-      name: "Lloyd's Register",
-      description: 'Referência de classificação para projetos que exijam requisitos específicos do setor naval.',
-    },
+    { id: 'cert-dnv', ...c.certs[0] },
+    { id: 'cert-abs', ...c.certs[1] },
+    { id: 'cert-bureau-veritas', ...c.certs[2] },
+    { id: 'cert-lloyds', ...c.certs[3] },
   ];
 
   const galleryCertificateImages = PlaceHolderImages.filter(img =>
@@ -74,12 +138,12 @@ export function CertificatesCta() {
             className="max-w-[900px] animate-fade-in-up"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
-            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:mb-7 sm:text-sm"><span className="h-px w-10 bg-accent" />Qualidade e conformidade</p>
+            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:mb-7 sm:text-sm"><span className="h-px w-10 bg-accent" />{c.eyebrow}</p>
             <h1 className="text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] sm:text-[clamp(2.25rem,3.35vw,3.65rem)]">
-              Certificações e referências técnicas
+              {c.heroTitle}
             </h1>
             <p className="mt-5 max-w-[720px] border-l border-accent/80 pl-4 text-base leading-7 text-slate-200 sm:mt-7 sm:pl-5 sm:text-lg sm:leading-8">
-              Documentos do sistema de gestão e referências técnicas aplicáveis conforme os requisitos de cada fornecimento.
+              {c.heroLead}
             </p>
           </div>
           </div>
@@ -129,10 +193,10 @@ export function CertificatesCta() {
           <div className="mt-16 sm:mt-20">
             <div className="text-center animate-fade-in-up mb-12">
               <h3 className="mb-4 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-                Galeria de Certificados
+                {c.galleryTitle}
               </h3>
               <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">
-                Consulte imagens e documentos disponíveis no acervo técnico da Aceros.
+                {c.galleryLead}
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -141,7 +205,7 @@ export function CertificatesCta() {
                   <DialogTrigger asChild>
                     <button
                       type="button"
-                      aria-label={`Ampliar: ${image.description}`}
+                      aria-label={`${c.zoomAria}: ${image.description}`}
                       className="block w-full animate-fade-in-up cursor-pointer rounded-2xl text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
                       style={{
                         animationDelay: `${index * 0.1}s`,
