@@ -1,12 +1,43 @@
 
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
-import { useLanguage } from '@/hooks/use-language';
-import { Sector } from '@/lib/expertise-data';
+import { useLanguage, type Language } from '@/hooks/use-language';
+import { Sector, sectorsData } from '@/lib/expertise-data';
+
+// Traducoes dos 3 pilares de qualidade (usados na secao de mineracao).
+// Mantido aqui por proximidade ao componente que renderiza; mesmo padrao de about-history.tsx.
+type QualityPillar = { icon: 'Award' | 'Component' | 'ShieldCheck'; title: string; description: string };
+const qualityPillarsByLang: Record<Language, QualityPillar[]> = {
+  pt: [
+    { icon: 'Award', title: 'Controle de qualidade', description: 'Materiais e processos avaliados conforme os requisitos definidos para cada fornecimento.' },
+    { icon: 'Component', title: 'Engenharia sob medida', description: 'Dimensoes, liga e acabamento especificados de acordo com o desenho e a aplicacao da peca.' },
+    { icon: 'ShieldCheck', title: 'Aplicacoes severas', description: 'Componentes desenvolvidos para condicoes de abrasao, impacto e temperatura informadas no projeto.' },
+  ],
+  en: [
+    { icon: 'Award', title: 'Quality control', description: 'Materials and processes assessed against the requirements defined for each supply order.' },
+    { icon: 'Component', title: 'Custom engineering', description: 'Dimensions, alloy and finish specified according to the drawing and the application of the part.' },
+    { icon: 'ShieldCheck', title: 'Severe applications', description: 'Components designed for the abrasion, impact and temperature conditions defined in the project.' },
+  ],
+  es: [
+    { icon: 'Award', title: 'Control de calidad', description: 'Materiales y procesos evaluados segun los requisitos definidos para cada suministro.' },
+    { icon: 'Component', title: 'Ingenieria a medida', description: 'Dimensiones, aleacion y acabado especificados segun el plano y la aplicacion de la pieza.' },
+    { icon: 'ShieldCheck', title: 'Aplicaciones severas', description: 'Componentes desarrollados para las condiciones de abrasion, impacto y temperatura del proyecto.' },
+  ],
+  de: [
+    { icon: 'Award', title: 'Qualitatskontrolle', description: 'Werkstoffe und Prozesse werden nach den fur jede Lieferung definierten Anforderungen bewertet.' },
+    { icon: 'Component', title: 'Massgeschneiderte Konstruktion', description: 'Abmessungen, Legierung und Ausfuhrung nach Zeichnung und Bauteil-Einsatz spezifiziert.' },
+    { icon: 'ShieldCheck', title: 'Extreme Einsatze', description: 'Komponenten fur die im Projekt genannten Verschleiss-, Schlag- und Temperaturbedingungen entwickelt.' },
+  ],
+  it: [
+    { icon: 'Award', title: 'Controllo qualita', description: 'Materiali e processi valutati secondo i requisiti definiti per ciascuna fornitura.' },
+    { icon: 'Component', title: 'Ingegneria su misura', description: 'Dimensioni, lega e finitura specificate in base al disegno e all applicazione del pezzo.' },
+    { icon: 'ShieldCheck', title: 'Applicazioni severe', description: 'Componenti sviluppati per le condizioni di abrasione, impatto e temperatura previste nel progetto.' },
+  ],
+};
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Icon } from '@/components/icons';
 import {
@@ -72,11 +103,21 @@ export function ExpertiseDetailsClient({
 }) {
   const { t } = useLanguage();
 
+  // Usa o idioma atual (via useLanguage) como fonte das traducoes,
+  // recomputando o setor com os dados no idioma escolhido pela usuaria.
+  // O prop pageData.sector serve apenas para pegar o id (slug).
+  // useMemo antes de qualquer early return para respeitar as regras dos hooks.
+  const sectorId = pageData?.sector?.id;
+  const fallbackSector = pageData?.sector;
+  const sector = useMemo(
+    () => (sectorId ? sectorsData(t).find((s) => s.id === sectorId) ?? fallbackSector : fallbackSector),
+    [t, sectorId, fallbackSector]
+  );
+  const translations = t;
+
   if (!pageData) {
     return null;
   }
-
-  const { sector, translations } = pageData;
 
   if (!sector) {
     return (
@@ -343,7 +384,7 @@ function TratamentoTermicoVideos({ videoUrls, translations }: { videoUrls: strin
                 <LazyVideo
                   src={getSilentVideoSource(url)}
                   className="h-full w-full object-cover"
-                  ariaLabel="Vídeo industrial da Aceros reproduzido sem áudio"
+                  ariaLabel="Aceros industrial video (silent)"
                 />
               </div>
             </motion.div>
@@ -587,7 +628,7 @@ function TratamentoTermicoCreativeGallery({translations}: {translations: any}) {
 
   const [mainImage, sideImage1, sideImage2, ...gallery] = allImages;
 
-  const whatsappMessage = encodeURIComponent('Olá! Gostaria de mais informações sobre suas inovações em tratamento térmico.');
+  const whatsappMessage = encodeURIComponent(t.whatsapp?.message ?? '');
   const whatsappNumber = '551155556551';
 
   return (
@@ -1127,7 +1168,7 @@ function NavalAssembliesSection({translations}: {translations: any}) {
         <LazyVideo
           src={url}
           className="object-cover w-full h-full"
-          ariaLabel="Vídeo industrial da Aceros reproduzido sem áudio"
+          ariaLabel="Aceros industrial video (silent)"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="p-3 bg-white/20 rounded-full backdrop-blur-sm">
@@ -1184,9 +1225,7 @@ function NavalConnectorsSection({translations}: {translations: any}) {
   ].filter((img): img is ImagePlaceholder => !!img);
 
   const [mainImage, thumbnailImage] = images;
-  const whatsappMessage = encodeURIComponent(
-    'Olá! Gostaria de um orçamento para o tratamento de Fosfato de Manganês.'
-  );
+  const whatsappMessage = encodeURIComponent(t.whatsapp?.message ?? '');
   const whatsappNumber = '551155556551';
 
   return (
@@ -1208,7 +1247,7 @@ function NavalConnectorsSection({translations}: {translations: any}) {
             <div className="flex">
               <Button asChild size="lg" className="bg-white text-orange-500 hover:bg-white/90">
                   <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
-                      Solicitar Orçamento
+                      {t.cta?.request_quote ?? 'Solicitar Orçamento'}
                   </Link>
               </Button>
             </div>
@@ -1239,23 +1278,45 @@ function NavalConnectorsSection({translations}: {translations: any}) {
 }
 
 function NavalNewProductsSection({translations}: {translations: any}) {
+  const { language } = useLanguage();
+  const productNames: Record<Language, string[]> = {
+    pt: [
+      'BUZINA PANAMÁ PARA FIXAÇÃO EM BORDA FALSA \n ABNT/NBR 6754 (DIN 81915)',
+      'BUZINA PANAMÁ PARA FIXAÇÃO EM CONVÉS \n ABNT/NBR 6754 (DIN 81915)',
+      'BUZINA DE REBOQUE TRIANGULAR',
+      'BUZINA DE REBOQUE ADICIONAL',
+    ],
+    en: [
+      'PANAMA CHOCK FOR BULWARK MOUNTING \n ABNT/NBR 6754 (DIN 81915)',
+      'PANAMA CHOCK FOR DECK MOUNTING \n ABNT/NBR 6754 (DIN 81915)',
+      'TRIANGULAR TOWING CHOCK',
+      'ADDITIONAL TOWING CHOCK',
+    ],
+    es: [
+      'GATERA PANAMÁ PARA FIJACIÓN EN AMURA FALSA \n ABNT/NBR 6754 (DIN 81915)',
+      'GATERA PANAMÁ PARA FIJACIÓN EN CUBIERTA \n ABNT/NBR 6754 (DIN 81915)',
+      'GATERA DE REMOLQUE TRIANGULAR',
+      'GATERA DE REMOLQUE ADICIONAL',
+    ],
+    de: [
+      'PANAMA-KLÜSE ZUR BEFESTIGUNG AM SCHANZKLEID \n ABNT/NBR 6754 (DIN 81915)',
+      'PANAMA-KLÜSE ZUR BEFESTIGUNG AM DECK \n ABNT/NBR 6754 (DIN 81915)',
+      'DREIECKIGE SCHLEPPKLÜSE',
+      'ZUSÄTZLICHE SCHLEPPKLÜSE',
+    ],
+    it: [
+      'BOCCA PANAMA PER FISSAGGIO SU MURATA FALSA \n ABNT/NBR 6754 (DIN 81915)',
+      'BOCCA PANAMA PER FISSAGGIO SU PONTE \n ABNT/NBR 6754 (DIN 81915)',
+      'BOCCA DI RIMORCHIO TRIANGOLARE',
+      'BOCCA DI RIMORCHIO AGGIUNTIVA',
+    ],
+  };
+  const names = productNames[language] ?? productNames.pt;
   const products = [
-    {
-      id: 'naval-panama-chock-bulwark',
-      name: 'BUZINA PANAMÁ PARA FIXAÇÃO EM BORDA FALSA \n ABNT/NBR 6754 (DIN 81915)',
-    },
-    {
-      id: 'naval-panama-chock-deck',
-      name: 'BUZINA PANAMÁ PARA FIXAÇÃO EM CONVÉS \n ABNT/NBR 6754 (DIN 81915)',
-    },
-    {
-      id: 'naval-triangular-towing-horn',
-      name: 'BUZINA DE REBOQUE TRIANGULAR',
-    },
-     {
-      id: 'naval-buzina-adicional',
-      name: 'BUZINA DE REBOQUE ADICIONAL',
-    },
+    { id: 'naval-panama-chock-bulwark', name: names[0] },
+    { id: 'naval-panama-chock-deck', name: names[1] },
+    { id: 'naval-triangular-towing-horn', name: names[2] },
+    { id: 'naval-buzina-adicional', name: names[3] },
   ];
 
   const images = products.map(p => PlaceHolderImages.find(img => img.id === p.id)).filter((img): img is ImagePlaceholder => !!img);
@@ -1481,7 +1542,7 @@ const ImageCard = ({ image, className }: { image: ImagePlaceholder; className?: 
 );
 
 const SectorContent = ({ sector, translations }: { sector: Sector; translations: any }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
   const featureImage = PlaceHolderImages.find(img => img.id === sector.featureImageId);
   const galleryImages = sector.galleryImageIds?.map(id => PlaceHolderImages.find(img => img.id === id)).filter(Boolean) as ImagePlaceholder[] | undefined;
@@ -1493,11 +1554,7 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
     ...(sector.videoUrls?.map(url => ({ type: 'video' as const, url, id: url })) || []),
   ];
 
-  const qualityPillars = [
-    { icon: 'Award' as const, title: 'Controle de qualidade', description: 'Materiais e processos são avaliados conforme os requisitos definidos para cada fornecimento.' },
-    { icon: 'Component' as const, title: 'Engenharia sob medida', description: 'Dimensões, liga e acabamento são especificados de acordo com o desenho e a aplicação da peça.' },
-    { icon: 'ShieldCheck' as const, title: 'Aplicações severas', description: 'Componentes desenvolvidos para condições de abrasão, impacto e temperatura informadas no projeto.' },
-  ];
+  const qualityPillars = qualityPillarsByLang[language] ?? qualityPillarsByLang.pt;
 
   switch (sector.id) {
     case 'guseira':
@@ -1643,7 +1700,7 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
                                                 <LazyVideo
                                                   src={getSilentVideoSource(item.url)}
                                                   className="h-full w-full object-cover"
-                                                  ariaLabel="Vídeo industrial da Aceros reproduzido sem áudio"
+                                                  ariaLabel="Aceros industrial video (silent)"
                                                 />
                                             </div>
                                         ) : item.type === 'image' && 'imageUrl' in item ? (

@@ -79,8 +79,32 @@ export type EngineeringPageData = {
 export function EngineeringClient({ pageData }: { pageData: EngineeringPageData }) {
   const { t: allTranslations } = useLanguage();
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
-  
-  const { sector, translations: t, images } = pageData;
+
+  // Substitui as translations do servidor (fixadas em pt.json) pelas do idioma atual,
+  // e reconstroi o setor de engenharia a partir do dicionario ativo.
+  const t = {
+    qualifications: (allTranslations as any).qualifications ?? pageData.translations.qualifications,
+    manufacturing_history: (allTranslations as any).manufacturing_history ?? pageData.translations.manufacturing_history,
+  } as EngineeringTranslations;
+  const engenhariaSetorTraduzido = (allTranslations as any)?.expertise_sectors?.engenharia;
+  const sector = engenhariaSetorTraduzido
+    ? {
+        ...pageData.sector,
+        title: engenhariaSetorTraduzido.title ?? pageData.sector.title,
+        description: engenhariaSetorTraduzido.description ?? pageData.sector.description,
+        solutions: Object.fromEntries(
+          Object.entries(pageData.sector.solutions).map(([id, data]) => [
+            id,
+            {
+              ...data,
+              title: engenhariaSetorTraduzido.solutions?.[id]?.title ?? data.title,
+              description: engenhariaSetorTraduzido.solutions?.[id]?.description ?? data.description,
+            },
+          ]),
+        ),
+      }
+    : pageData.sector;
+  const images = pageData.images;
   const { 
     heroImage, 
     featureImage, 

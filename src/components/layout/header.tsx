@@ -20,7 +20,7 @@ import {
 import { LanguageSwitcher } from '../language-switcher';
 
 export function Header() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -30,7 +30,8 @@ export function Header() {
     { href: '/produtos', label: t.header.products },
     { href: '/#sectors', label: t.header.expertise },
     { href: '/qualificacao', label: t.header.qualifications },
-    { href: '/blog', label: 'Blog' },
+    // Blog só aparece em português (posts técnicos escritos apenas em PT)
+    ...(language === 'pt' ? [{ href: '/blog', label: 'Blog' }] : []),
   ];
 
   return (
