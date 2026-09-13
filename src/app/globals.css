@@ -330,7 +330,7 @@ header.site-header .header-navigation {
   }
 
   header.site-header .header-container {
-    max-width: 1440px !important;
+    max-width: var(--site-shell-max) !important;
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
   }
