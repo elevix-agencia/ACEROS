@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function ProdutosPage() {
   return (
-    <div className="pt-20">
+    <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productListSchema) }}

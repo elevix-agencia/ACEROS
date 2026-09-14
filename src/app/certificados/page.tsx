@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function CertificadosPage() {
   return (
-    <div className="pt-20">
+    <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
