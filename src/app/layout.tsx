@@ -46,17 +46,10 @@ export const metadata: Metadata = {
   publisher: 'Aceros Centrifugados LTDA',
   alternates: {
     canonical: '/',
-    // O site renderiza os 5 idiomas na mesma URL (troca por localStorage/queryparam).
-    // Sinaliza ao Google que existe versao em cada idioma; para SEO multi-idioma
-    // com URLs distintas seria necessario mover para rotas /en/ /es/ /de/ /it/.
-    languages: {
-      'pt-BR': '/',
-      en: '/?lang=en',
-      es: '/?lang=es',
-      de: '/?lang=de',
-      it: '/?lang=it',
-      'x-default': '/',
-    },
+    // Sem hreflang: o site tem seletor de idioma para conveniencia do
+    // visitante estrangeiro (indicacao, email direto), mas nao promete SEO
+    // internacional. Se um dia rodar Ads fora do Brasil, mover para rotas
+    // /en/ /es/ /de/ /it/ dedicadas e reativar hreflang.
   },
   openGraph: {
     type: 'website',
