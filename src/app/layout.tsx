@@ -38,7 +38,6 @@ export const metadata: Metadata = {
     'buchas de aço inox',
     'fundição centrifugada',
     'ligas especiais',
-    'metalúrgica daniela',
     'aceros',
   ],
   authors: [{ name: 'Aceros Centrifugados' }],
@@ -103,7 +102,7 @@ const organizationSchema = {
   email: 'vendas@aceros.com.br',
   telephone: '+55 11 5555-6551',
   description:
-    'Divisão de aços inoxidáveis do Grupo Metalúrgica Daniela. Fabricação sob medida de tubos, buchas e componentes centrifugados em ligas especiais (ASTM A297).',
+    'Fabricante brasileira de aços inoxidáveis centrifugados. Fabricação sob medida de tubos, buchas e componentes em ligas especiais (ASTM A297).',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Rua Hans Oersted, 20-118',
@@ -123,11 +122,6 @@ const organizationSchema = {
     email: 'vendas@aceros.com.br',
     areaServed: 'BR',
     availableLanguage: ['Portuguese'],
-  },
-  parentOrganization: {
-    '@type': 'Organization',
-    name: 'Metalúrgica Daniela',
-    url: 'https://metalurgicadaniela.com.br',
   },
   sameAs: [],
 };

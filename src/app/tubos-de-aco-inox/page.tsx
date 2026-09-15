@@ -50,7 +50,7 @@ export default function TubosInoxPage() {
         "name": "A Aceros trabalha com produtos commodities?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Não. Somos uma divisão da Metalúrgica Daniela focada exclusivamente em engenharia e fabricação sob medida de componentes de alta liga centrifugados e usinados conforme desenho técnico."
+          "text": "Não. A Aceros é focada exclusivamente em engenharia e fabricação sob medida de componentes de alta liga centrifugados e usinados conforme desenho técnico."
         }
       },
       {
@@ -82,8 +82,7 @@ export default function TubosInoxPage() {
     "manufacturer": {
       "@type": "Organization",
       "name": "Aceros Centrifugados LTDA",
-      "url": "https://aceros.com.br",
-      "parentOrganization": { "@type": "Organization", "name": "Metalúrgica Daniela" }
+      "url": "https://aceros.com.br"
     },
     "category": "Tubos industriais em aço inoxidável"
   };

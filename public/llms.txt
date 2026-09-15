@@ -1,6 +1,6 @@
 # Aceros Aços Centrifugados
 
-> Aceros é a divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, fabricante brasileiro (Itaquaquecetuba/SP) de peças centrifugadas em ligas ASTM A297 e superligas para indústrias de siderurgia, mineração, tratamento térmico, guseira, naval e óleo e gás.
+> Aceros é fabricante brasileira (Itaquaquecetuba/SP) de peças em aços inoxidáveis centrifugados. Trabalha ligas ASTM A297 e superligas para indústrias de siderurgia, mineração, tratamento térmico, guseira, naval e óleo e gás.
 
 Fabricação 100% sob desenho técnico. Sem catálogo de commodities. Certificação ISO 9001:2015 (DQS, válida até 19/11/2028). Site em 5 idiomas (PT/EN/ES/DE/IT). Atendimento comercial Brasil + exportação (Portugal, EUA, Itália, entre outros).
 
@@ -42,5 +42,5 @@ Envie desenho técnico (PDF, DWG, DXF, STEP, IGES, JPG ou PNG até 5 MB) + dimen
 
 - [Certificações e referências](https://aceros.com.br/certificados): ISO 9001:2015 DQS + referências navais (DNV, ABS, Bureau Veritas, Lloyd's Register).
 - [Qualidade e laboratório](https://aceros.com.br/qualificacao): Ensaios químicos, dureza, ultrassom, metrologia rastreada RBC.
-- [Sobre a empresa](https://aceros.com.br/sobre): História desde 1999 (Grupo Metalúrgica Daniela) e 2015 (Aceros).
+- [Sobre a empresa](https://aceros.com.br/sobre): História da Aceros desde 2015.
 - [Sitemap](https://aceros.com.br/sitemap.xml)

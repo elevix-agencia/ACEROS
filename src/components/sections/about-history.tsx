@@ -13,21 +13,15 @@ type HistoryContent = {
 const content: Record<string, HistoryContent> = {
   pt: {
     eyebrow: 'Nossa história',
-    title: 'De 1999 para o mundo, com engenharia própria',
+    title: 'Engenharia própria em aços inoxidáveis centrifugados',
     intro:
-      'A Aceros é a divisão de aços inoxidáveis do Grupo Metalúrgica Daniela, referência em componentes industriais desde 1999. Cada peça sai da fábrica com engenharia própria, controle metalúrgico e rastreabilidade documentada.',
+      'A Aceros é fabricante brasileira de peças em aços inoxidáveis centrifugados. Cada componente sai da fábrica com engenharia própria, controle metalúrgico e rastreabilidade documentada.',
     milestones: [
       {
-        year: '1999',
-        title: 'Fundação do Grupo Metalúrgica Daniela',
-        description:
-          'O Grupo nasce em Itaquaquecetuba/SP para fornecer peças fundidas e usinadas a clientes das indústrias siderúrgica, naval e de mineração.',
-      },
-      {
         year: '2015',
-        title: 'Criação da Aceros',
+        title: 'Fundação da Aceros',
         description:
-          'A Aceros é estruturada como a divisão de aços inoxidáveis centrifugados do Grupo, com foco em ligas ASTM A297 e produção sob medida por desenho técnico.',
+          'A Aceros nasce em Itaquaquecetuba/SP como fabricante especializada em aços inoxidáveis centrifugados, com foco em ligas ASTM A297 e produção sob medida por desenho técnico.',
       },
       {
         year: 'Hoje',
@@ -41,21 +35,15 @@ const content: Record<string, HistoryContent> = {
   },
   en: {
     eyebrow: 'Our history',
-    title: 'Since 1999, engineering our own path',
+    title: 'In-house engineering in centrifugally cast stainless steels',
     intro:
-      'Aceros is the stainless steel division of the Metalúrgica Daniela Group, a reference in industrial components since 1999. Every part leaves the factory with in-house engineering, metallurgical control and documented traceability.',
+      'Aceros is a Brazilian manufacturer of centrifugally cast stainless steel parts. Every component leaves the factory with in-house engineering, metallurgical control and documented traceability.',
     milestones: [
-      {
-        year: '1999',
-        title: 'Metalúrgica Daniela Group founded',
-        description:
-          'The Group is born in Itaquaquecetuba/SP to supply cast and machined parts to steelmaking, naval and mining customers.',
-      },
       {
         year: '2015',
         title: 'Aceros founded',
         description:
-          'Aceros is structured as the Group’s centrifugally cast stainless steel division, focused on ASTM A297 alloys and custom production from technical drawings.',
+          'Aceros is founded in Itaquaquecetuba/SP as a specialist manufacturer of centrifugally cast stainless steels, focused on ASTM A297 alloys and custom production from technical drawings.',
       },
       {
         year: 'Today',
@@ -69,21 +57,15 @@ const content: Record<string, HistoryContent> = {
   },
   es: {
     eyebrow: 'Nuestra historia',
-    title: 'Desde 1999, con ingeniería propia',
+    title: 'Ingeniería propia en aceros inoxidables centrifugados',
     intro:
-      'Aceros es la división de aceros inoxidables del Grupo Metalúrgica Daniela, referencia en componentes industriales desde 1999. Cada pieza sale de la fábrica con ingeniería propia, control metalúrgico y trazabilidad documentada.',
+      'Aceros es fabricante brasileña de piezas en aceros inoxidables centrifugados. Cada componente sale de la fábrica con ingeniería propia, control metalúrgico y trazabilidad documentada.',
     milestones: [
       {
-        year: '1999',
-        title: 'Fundación del Grupo Metalúrgica Daniela',
-        description:
-          'El Grupo nace en Itaquaquecetuba/SP para suministrar piezas fundidas y mecanizadas a clientes de la siderurgia, naval y minería.',
-      },
-      {
         year: '2015',
-        title: 'Creación de Aceros',
+        title: 'Fundación de Aceros',
         description:
-          'Aceros se estructura como la división de aceros inoxidables centrifugados del Grupo, con foco en aleaciones ASTM A297 y producción a medida por diseño técnico.',
+          'Aceros nace en Itaquaquecetuba/SP como fabricante especializada en aceros inoxidables centrifugados, con foco en aleaciones ASTM A297 y producción a medida por diseño técnico.',
       },
       {
         year: 'Hoy',
@@ -97,21 +79,15 @@ const content: Record<string, HistoryContent> = {
   },
   de: {
     eyebrow: 'Unsere Geschichte',
-    title: 'Seit 1999 mit eigener Ingenieurskompetenz',
+    title: 'Eigene Konstruktion für schleudergegossene Edelstähle',
     intro:
-      'Aceros ist die Edelstahlsparte der Metalúrgica Daniela Gruppe, seit 1999 eine Referenz für Industriekomponenten. Jedes Bauteil verlässt das Werk mit eigener Konstruktion, metallurgischer Kontrolle und dokumentierter Rückverfolgbarkeit.',
+      'Aceros ist ein brasilianischer Hersteller von schleudergegossenen Edelstahl-Bauteilen. Jedes Bauteil verlässt das Werk mit eigener Konstruktion, metallurgischer Kontrolle und dokumentierter Rückverfolgbarkeit.',
     milestones: [
-      {
-        year: '1999',
-        title: 'Gründung der Metalúrgica Daniela Gruppe',
-        description:
-          'Die Gruppe entsteht in Itaquaquecetuba/SP, um Guss- und Bearbeitungsteile für Kunden aus Stahlindustrie, Schifffahrt und Bergbau zu fertigen.',
-      },
       {
         year: '2015',
         title: 'Gründung von Aceros',
         description:
-          'Aceros wird als Sparte für schleudergegossenen Edelstahl der Gruppe strukturiert, mit Fokus auf ASTM A297-Legierungen und Fertigung nach technischer Zeichnung.',
+          'Aceros wird in Itaquaquecetuba/SP als spezialisierter Hersteller schleudergegossener Edelstähle gegründet, mit Fokus auf ASTM A297-Legierungen und Fertigung nach technischer Zeichnung.',
       },
       {
         year: 'Heute',
@@ -125,21 +101,15 @@ const content: Record<string, HistoryContent> = {
   },
   it: {
     eyebrow: 'La nostra storia',
-    title: 'Dal 1999, con ingegneria interna',
+    title: 'Ingegneria interna in acciai inossidabili centrifugati',
     intro:
-      'Aceros è la divisione acciai inossidabili del Gruppo Metalúrgica Daniela, punto di riferimento per componenti industriali dal 1999. Ogni pezzo lascia la fabbrica con ingegneria interna, controllo metallurgico e tracciabilità documentata.',
+      'Aceros è produttore brasiliano di pezzi in acciai inossidabili centrifugati. Ogni componente lascia la fabbrica con ingegneria interna, controllo metallurgico e tracciabilità documentata.',
     milestones: [
       {
-        year: '1999',
-        title: 'Fondazione del Gruppo Metalúrgica Daniela',
-        description:
-          'Il Gruppo nasce a Itaquaquecetuba/SP per fornire pezzi fusi e lavorati a clienti della siderurgia, nautica e miniere.',
-      },
-      {
         year: '2015',
-        title: 'Nascita di Aceros',
+        title: 'Fondazione di Aceros',
         description:
-          'Aceros viene strutturata come divisione acciai inossidabili centrifugati del Gruppo, focalizzata sulle leghe ASTM A297 e sulla produzione su misura da disegno tecnico.',
+          'Aceros viene fondata a Itaquaquecetuba/SP come produttore specializzato di acciai inossidabili centrifugati, focalizzato sulle leghe ASTM A297 e sulla produzione su misura da disegno tecnico.',
       },
       {
         year: 'Oggi',

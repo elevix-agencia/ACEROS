@@ -82,8 +82,7 @@ export default function BuchaInoxPage() {
     "manufacturer": {
       "@type": "Organization",
       "name": "Aceros Centrifugados LTDA",
-      "url": "https://aceros.com.br",
-      "parentOrganization": { "@type": "Organization", "name": "Metalúrgica Daniela" }
+      "url": "https://aceros.com.br"
     },
     "category": "Buchas industriais em aço inoxidável"
   };

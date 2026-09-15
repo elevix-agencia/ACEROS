@@ -51,7 +51,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ctaRequestQuote: 'Solicitar Orçamento', ctaWhatsappTeam: 'Falar com a equipe técnica',
     strip: ['Fabricação sob medida', 'Conforme desenho técnico', 'Atendimento Brasil e exterior', 'Controle de qualidade', 'Equipe especializada'],
     introTitle: 'Excelência em Componentes Industriais',
-    introP1a: 'A Aceros é a divisão de aços inoxidáveis do grupo ', introP1b: 'Metalúrgica Daniela. Não comercializamos produtos commodities ou tubos comuns de prateleira: nossa fábrica produz via processo de centrifugação peças de alta liga resistentes a calor, abrasão e oxidação severa (norma ASTM A297), usinadas sob medida para o projeto do cliente.',
+    introP1a: 'A Aceros é fabricante brasileira de aços inoxidáveis centrifugados. ', introP1b: 'Não comercializamos produtos commodities ou tubos comuns de prateleira: nossa fábrica produz via processo de centrifugação peças de alta liga resistentes a calor, abrasão e oxidação severa (norma ASTM A297), usinadas sob medida para o projeto do cliente.',
     introP2a: 'Nossa engenharia fornece ', introP2b: 'buchas para ponta de Sink Roll (rolos para potes de zinco em linhas de galvanização) e componentes para Rolos de Forno (Furnace Rolls para tratamento térmico), usinados conforme o desenho e as condições de trabalho informadas pelo cliente.',
     specsTitle: 'Especificações Técnicas', specsCol1: 'Categoria', specsCol2: 'Detalhes Disponíveis',
     specRows: [
@@ -101,7 +101,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ],
     whyTitle: 'Por que escolher a Aceros',
     whyPoints: [
-      'Divisão de inoxidáveis do Grupo Metalúrgica Daniela',
+      'Fabricante brasileira de aços inoxidáveis centrifugados',
       'Fabricação por centrifugação em ligas ASTM A297, quando aplicável',
       'Experiência em componentes para Sink Roll e Furnace Roll',
       'Desenvolvimento de componentes sob medida (não commodities)',
@@ -151,7 +151,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ctaRequestQuote: 'Request a quote', ctaWhatsappTeam: 'Talk to the technical team',
     strip: ['Custom manufacturing', 'Made to drawing', 'Serving Brazil and abroad', 'Quality control', 'Specialised team'],
     introTitle: 'Excellence in industrial components',
-    introP1a: 'Aceros is the stainless-steel division of the ', introP1b: 'Metalúrgica Daniela group. We do not sell commodities or off-the-shelf tubes: our shop produces high-alloy centrifugally cast parts resistant to heat, abrasion and severe oxidation (ASTM A297), machined to the customer\'s drawing.',
+    introP1a: 'Aceros is a Brazilian stainless steel centrifugal casting manufacturer. ', introP1b: 'We do not sell commodities or off-the-shelf tubes: our shop produces high-alloy centrifugally cast parts resistant to heat, abrasion and severe oxidation (ASTM A297), machined to the customer\'s drawing.',
     introP2a: 'Our engineering supplies ', introP2b: 'Sink-Roll end bushings (for zinc-pot rolls in galvanising lines) and components for Furnace Rolls (heat-treatment), machined to the drawing and operating conditions provided by the customer.',
     specsTitle: 'Technical specifications', specsCol1: 'Category', specsCol2: 'Available details',
     specRows: [
@@ -201,7 +201,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ],
     whyTitle: 'Why choose Aceros',
     whyPoints: [
-      'Stainless division of the Metalúrgica Daniela group',
+      'Brazilian stainless steel centrifugal casting manufacturer',
       'Centrifugal casting in ASTM A297 alloys when applicable',
       'Experience with Sink-Roll and Furnace-Roll components',
       'Custom development (never commodities)',
@@ -251,7 +251,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ctaRequestQuote: 'Solicitar presupuesto', ctaWhatsappTeam: 'Hablar con el equipo técnico',
     strip: ['Fabricación a medida', 'Según plano técnico', 'Atención Brasil y exterior', 'Control de calidad', 'Equipo especializado'],
     introTitle: 'Excelencia en componentes industriales',
-    introP1a: 'Aceros es la división de aceros inoxidables del grupo ', introP1b: 'Metalúrgica Daniela. No comercializamos commodities ni tubos comunes de estantería: nuestra fábrica produce mediante centrifugación piezas de alta aleación resistentes a calor, abrasión y oxidación severa (norma ASTM A297), mecanizadas a medida para el proyecto del cliente.',
+    introP1a: 'Aceros es fabricante brasileña de aceros inoxidables centrifugados. ', introP1b: 'No comercializamos commodities ni tubos comunes de estantería: nuestra fábrica produce mediante centrifugación piezas de alta aleación resistentes a calor, abrasión y oxidación severa (norma ASTM A297), mecanizadas a medida para el proyecto del cliente.',
     introP2a: 'Nuestra ingeniería suministra ', introP2b: 'bujes para punta de Sink Roll (rodillos en potes de zinc en líneas de galvanizado) y componentes para Rodillos de Horno (Furnace Rolls, tratamiento térmico), mecanizados según el plano y las condiciones de operación indicadas por el cliente.',
     specsTitle: 'Especificaciones técnicas', specsCol1: 'Categoría', specsCol2: 'Detalles disponibles',
     specRows: [
@@ -301,7 +301,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ],
     whyTitle: '¿Por qué elegir Aceros?',
     whyPoints: [
-      'División de inoxidables del Grupo Metalúrgica Daniela',
+      'Fabricante brasileña de aceros inoxidables centrifugados',
       'Fabricación por centrifugación en aleaciones ASTM A297 cuando aplique',
       'Experiencia en componentes para Sink Roll y Furnace Roll',
       'Desarrollo de componentes a medida (no commodities)',
@@ -351,7 +351,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ctaRequestQuote: 'Angebot anfordern', ctaWhatsappTeam: 'Mit dem technischen Team sprechen',
     strip: ['Fertigung nach Maß', 'Nach technischer Zeichnung', 'Brasilien und international', 'Qualitätskontrolle', 'Spezialistenteam'],
     introTitle: 'Exzellenz in Industriekomponenten',
-    introP1a: 'Aceros ist die Edelstahlsparte der Gruppe ', introP1b: 'Metalúrgica Daniela. Wir verkaufen keine Standardware oder Katalogrohre: Unser Werk fertigt im Schleuderguss hochlegierte Bauteile, beständig gegen Hitze, Verschleiß und starke Oxidation (ASTM A297), nach der Zeichnung des Kunden bearbeitet.',
+    introP1a: 'Aceros ist ein brasilianischer Hersteller von schleudergegossenem Edelstahl. ', introP1b: 'Wir verkaufen keine Standardware oder Katalogrohre: Unser Werk fertigt im Schleuderguss hochlegierte Bauteile, beständig gegen Hitze, Verschleiß und starke Oxidation (ASTM A297), nach der Zeichnung des Kunden bearbeitet.',
     introP2a: 'Unsere Konstruktion liefert ', introP2b: 'Endbuchsen für Sink Rolls (Zinkbadrollen in Verzinkungslinien) und Komponenten für Furnace Rolls (Wärmebehandlung), bearbeitet nach Zeichnung und den vom Kunden vorgegebenen Betriebsbedingungen.',
     specsTitle: 'Technische Spezifikationen', specsCol1: 'Kategorie', specsCol2: 'Verfügbare Details',
     specRows: [
@@ -401,7 +401,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ],
     whyTitle: 'Warum Aceros?',
     whyPoints: [
-      'Edelstahlsparte der Metalúrgica Daniela Gruppe',
+      'Brasilianischer Hersteller von schleudergegossenem Edelstahl',
       'Fertigung im Schleuderguss in ASTM-A297-Legierungen, wo zutreffend',
       'Erfahrung mit Sink-Roll- und Furnace-Roll-Komponenten',
       'Entwicklung nach Maß (keine Standardware)',
@@ -451,7 +451,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ctaRequestQuote: 'Richiedi preventivo', ctaWhatsappTeam: 'Parla con il team tecnico',
     strip: ['Fabbricazione su misura', 'Su disegno tecnico', 'Servizio Brasile ed estero', 'Controllo qualità', 'Team specializzato'],
     introTitle: 'Eccellenza nei componenti industriali',
-    introP1a: 'Aceros è la divisione acciai inossidabili del gruppo ', introP1b: 'Metalúrgica Daniela. Non commercializziamo commodity o tubi standard: la nostra fabbrica produce per centrifugazione pezzi in lega alta resistenti a calore, abrasione e ossidazione severa (ASTM A297), lavorati su disegno del cliente.',
+    introP1a: 'Aceros è produttore brasiliano di acciai inossidabili centrifugati. ', introP1b: 'Non commercializziamo commodity o tubi standard: la nostra fabbrica produce per centrifugazione pezzi in lega alta resistenti a calore, abrasione e ossidazione severa (ASTM A297), lavorati su disegno del cliente.',
     introP2a: 'La nostra ingegneria fornisce ', introP2b: 'boccole di estremità per Sink Roll (rulli nei pot di zinco per linee di zincatura) e componenti per Rulli da Forno (Furnace Rolls per trattamento termico), lavorati su disegno e condizioni operative indicate dal cliente.',
     specsTitle: 'Specifiche tecniche', specsCol1: 'Categoria', specsCol2: 'Dettagli disponibili',
     specRows: [
@@ -501,7 +501,7 @@ export const buchaCopy: Record<Language, BuchaCopy> = {
     ],
     whyTitle: 'Perché scegliere Aceros',
     whyPoints: [
-      'Divisione acciai inossidabili del Gruppo Metalúrgica Daniela',
+      'Produttore brasiliano di acciai inossidabili centrifugati',
       'Fabbricazione per centrifugazione in leghe ASTM A297, se applicabili',
       'Esperienza con componenti Sink Roll e Furnace Roll',
       'Sviluppo di componenti su misura (non commodity)',
