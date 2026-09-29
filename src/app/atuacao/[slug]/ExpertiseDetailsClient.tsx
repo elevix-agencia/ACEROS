@@ -152,7 +152,9 @@ export function ExpertiseDetailsClient({
             fill
             sizes="100vw"
             data-ai-hint={heroImage.imageHint}
-            className="object-cover object-center opacity-70"
+            className={sector.id === 'oleo_e_gas'
+              ? 'object-cover object-[center_10%] opacity-70'
+              : 'object-cover object-center opacity-70'}
             priority
           />
         )}
