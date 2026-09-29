@@ -146,22 +146,15 @@ export function ExpertiseDetailsClient({
     <div className={`sector-page sector-page--${sector.id}`}>
       <section className="relative isolate min-h-[calc(100svh-80px)] w-full overflow-hidden bg-[#07121e]">
         {heroImage && (
-          <div className={sector.id === 'siderurgia'
-            ? 'absolute inset-y-0 right-0 w-full sm:w-[72%] lg:w-[62%] lg:max-w-[1200px]'
-            : 'absolute inset-0'}
-            style={sector.id === 'siderurgia'
-              ? { maskImage: 'linear-gradient(to right, transparent 0%, black 32%)' }
-              : undefined}>
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              sizes={sector.id === 'siderurgia' ? '(min-width: 1024px) 1200px, 100vw' : '100vw'}
-              data-ai-hint={heroImage.imageHint}
-              className="object-cover object-center opacity-80"
-              priority
-            />
-          </div>
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            sizes="100vw"
+            data-ai-hint={heroImage.imageHint}
+            className="object-cover object-center opacity-70"
+            priority
+          />
         )}
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,18,30,.94)_0%,rgba(7,18,30,.82)_42%,rgba(7,18,30,.34)_72%,rgba(7,18,30,.12)_100%)]" />
         <div className="absolute left-0 top-0 h-full w-1 bg-accent" />
