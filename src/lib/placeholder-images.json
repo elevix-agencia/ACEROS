@@ -1321,18 +1321,18 @@
                               {
                                   "id":  "siderurgia-hero",
                                   "description":  "Rolos de forno da Aceros apoiados no piso da fábrica.",
-                                  "imageUrl":  "/images/aceros/clientes/rolos-de-forno-aceros.jpg",
+                                  "imageUrl":  "/images/aceros/clientes/rolos-de-forno-aceros-banner.webp",
                                   "imageHint":  "industrial furnace rolls",
-                                  "width":  800,
-                                  "height":  533
+                                  "width":  1600,
+                                  "height":  1066
                               },
                               {
                                   "id":  "oleo_e_gas-hero",
-                                  "description":  "Plataforma de petróleo e gás no oceano ao pôr do sol.",
-                                  "imageUrl":  "/images/imgur/I9Ufb7K.jpeg",
+                                  "description":  "Ilustração de plataforma de petróleo offshore no oceano ao pôr do sol.",
+                                  "imageUrl":  "/images/aceros/generated/oleo-e-gas-plataforma-offshore-hero.webp",
                                   "imageHint":  "oil rig",
-                                  "width":  2752,
-                                  "height":  1536
+                                  "width":  1672,
+                                  "height":  941
                               },
                               {
                                   "id":  "guseira-hero",

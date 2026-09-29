@@ -83,13 +83,15 @@ export function Sectors() {
               className="group flex min-h-[360px] flex-col overflow-hidden rounded-lg bg-[#f1f1f3] text-slate-950 shadow-[0_18px_45px_rgba(85,35,6,.18)] animate-fade-in-up sm:min-h-[460px]"
               style={{ animationDelay: `${0.1 + index * 0.08}s`, animationFillMode: 'both' }}
             >
-              <div className="relative h-[132px] shrink-0 overflow-hidden border-b-[3px] border-accent sm:h-[220px]">
+              <div className={`relative h-[132px] shrink-0 overflow-hidden border-b-[3px] border-accent sm:h-[220px] ${sector.id === 'engenharia' ? 'bg-white' : ''}`}>
                 <Image
                   src={sectorImages[sector.id]}
                   alt={sector.id === 'engenharia' ? 'Desenho técnico de conjunto do sistema de propulsão' : sector.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  className="object-cover transition duration-700 group-hover:scale-105"
+                  className={sector.id === 'engenharia'
+                    ? 'object-contain p-2 sm:p-3'
+                    : 'object-cover transition duration-700 group-hover:scale-105'}
                 />
               </div>
               <div className="flex flex-1 flex-col items-center px-3 py-4 text-center sm:px-6 sm:py-7 lg:px-7">
