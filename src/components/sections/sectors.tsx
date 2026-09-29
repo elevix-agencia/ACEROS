@@ -12,7 +12,7 @@ const sectorImages: Record<string, string> = {
   mineracao: '/images/imgur/ol4Y0fr.jpeg',
   tratamento_termico: '/images/aceros/clientes/tratamento-termico-card-20260923.webp',
   naval: '/images/imgur/5AsJUxh.png',
-  siderurgia: '/images/imgur/XJLum1h.png',
+  siderurgia: '/images/aceros/clientes/cestos-tratamento-termico-20260923.webp',
   guseira: '/images/aceros/generated/guseira-hero-v3.png',
   oleo_e_gas: '/images/imgur/I9Ufb7K.jpeg',
   engenharia: '/images/imgur/bPgdSyM.png',

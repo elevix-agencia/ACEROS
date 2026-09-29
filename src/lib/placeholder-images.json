@@ -1320,11 +1320,11 @@
                               },
                               {
                                   "id":  "siderurgia-hero",
-                                  "description":  "Trabalhador siderúrgico monitorando o aço derretido.",
-                                  "imageUrl":  "/images/imgur/XJLum1h.png",
-                                  "imageHint":  "steel worker",
-                                  "width":  1920,
-                                  "height":  1080
+                                  "description":  "Cestos metálicos para tratamento térmico empilhados e cintados sobre palete na fábrica.",
+                                  "imageUrl":  "/images/aceros/clientes/cestos-tratamento-termico-20260923.webp",
+                                  "imageHint":  "metal heat treatment baskets",
+                                  "width":  1672,
+                                  "height":  941
                               },
                               {
                                   "id":  "oleo_e_gas-hero",
