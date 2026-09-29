@@ -48,7 +48,7 @@ export function About({ headingLevel = 'h2' }: AboutProps) {
           </div>
           <div className="relative animate-slide-in-right">
             <Card className="w-full overflow-hidden rounded-none border-0 shadow-2xl">
-              <div className="relative aspect-[23/10] w-full bg-[#07121e]">
+              <div className="relative aspect-[23/10] w-full overflow-hidden bg-[#07121e]">
                 <Image
                   src="/images/aceros/generated/historia-helices-aceros-v4.webp"
                   alt={copy.imageAlt}
