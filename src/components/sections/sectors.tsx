@@ -15,7 +15,7 @@ const sectorImages: Record<string, string> = {
   siderurgia: '/images/aceros/clientes/rolos-de-forno-aceros.jpg',
   guseira: '/images/aceros/generated/guseira-hero-v3.png',
   oleo_e_gas: '/images/imgur/I9Ufb7K.jpeg',
-  engenharia: '/images/imgur/bPgdSyM.png',
+  engenharia: '/images/aceros/clientes/conjunto-propulsao-desenho-card.webp',
   certificados: '/images/aceros/generated/certificado-iso-2028.png',
 };
 
@@ -86,7 +86,7 @@ export function Sectors() {
               <div className="relative h-[132px] shrink-0 overflow-hidden border-b-[3px] border-accent sm:h-[220px]">
                 <Image
                   src={sectorImages[sector.id]}
-                  alt={sector.title}
+                  alt={sector.id === 'engenharia' ? 'Desenho técnico de conjunto do sistema de propulsão' : sector.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition duration-700 group-hover:scale-105"
