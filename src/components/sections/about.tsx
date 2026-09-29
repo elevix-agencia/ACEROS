@@ -56,10 +56,10 @@ export function About({ headingLevel = 'h2' }: AboutProps) {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="origin-top-left scale-110 object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#07121e] via-[#07121e]/75 to-transparent p-6 pt-20 text-white">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">{copy.production}</p>
-                  <p className="mt-2 max-w-sm text-sm text-slate-200">{copy.productionDescription}</p>
-                </div>
+              </div>
+              <div className="bg-[#07121e] px-6 py-4 text-white">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">{copy.production}</p>
+                <p className="mt-2 max-w-sm text-sm text-slate-200">{copy.productionDescription}</p>
               </div>
             </Card>
           </div>
