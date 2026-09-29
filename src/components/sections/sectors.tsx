@@ -14,7 +14,7 @@ const sectorImages: Record<string, string> = {
   naval: '/images/imgur/5AsJUxh.png',
   siderurgia: '/images/aceros/clientes/rolos-de-forno-aceros.jpg',
   guseira: '/images/aceros/generated/guseira-hero-v3.png',
-  oleo_e_gas: '/images/imgur/I9Ufb7K.jpeg',
+  oleo_e_gas: '/images/aceros/generated/oleo-e-gas-plataforma-offshore-card.webp',
   engenharia: '/images/aceros/clientes/conjunto-propulsao-desenho-card.webp',
   certificados: '/images/aceros/generated/certificado-iso-2028.png',
 };
