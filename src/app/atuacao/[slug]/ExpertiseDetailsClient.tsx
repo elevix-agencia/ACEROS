@@ -148,7 +148,10 @@ export function ExpertiseDetailsClient({
         {heroImage && (
           <div className={sector.id === 'siderurgia'
             ? 'absolute inset-y-0 right-0 w-full sm:w-[72%] lg:w-[62%] lg:max-w-[1200px]'
-            : 'absolute inset-0'}>
+            : 'absolute inset-0'}
+            style={sector.id === 'siderurgia'
+              ? { maskImage: 'linear-gradient(to right, transparent 0%, black 32%)' }
+              : undefined}>
             <Image
               src={heroImage.imageUrl}
               alt={heroImage.description}
