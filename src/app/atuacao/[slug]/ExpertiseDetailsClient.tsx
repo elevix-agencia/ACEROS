@@ -72,7 +72,6 @@ const BarFurnaceProducts = dynamic(() => import('@/components/sections/BarFurnac
 const MiningProducts = dynamic(() => import('@/components/sections/mining-products').then(module => module.MiningProducts));
 const GuseiraStavesSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraStavesSection));
 const GuseiraTuyeresSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraTuyeresSection));
-const GuseiraHousingsSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraHousingsSection));
 const GuseiraWearPlatesSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraWearPlatesSection));
 const GuseiraStructuralComponentsSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraStructuralComponentsSection));
 const GuseiraMediaSection = dynamic(() => import('@/components/sections/featured-products').then(module => module.GuseiraMediaSection));
@@ -1611,7 +1610,6 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
           <GuseiraWearPlatesSection />
           <GuseiraTuyeresSection />
           <GuseiraMediaSection videoUrls={sector.videoUrls || []} imageIds={sector.galleryImageIds || []} />
-          <GuseiraHousingsSection />
         </>
       );
     case 'mineracao':
@@ -1698,7 +1696,6 @@ const SectorContent = ({ sector, translations }: { sector: Sector; translations:
         return (
             <>
               <OilGasProducts />
-              <GuseiraHousingsSection />
               <OilGasNewGallerySection />
             </>
         );

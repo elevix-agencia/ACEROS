@@ -60,7 +60,6 @@ export default function EngenhariaPage() {
       calibrationCertificateImage: PlaceHolderImages.find(img => img.id === 'engineering-centrifugal-force'),
       structuralCalculationImage: PlaceHolderImages.find(img => img.id === 'structural-calculation'),
       rolosAplicacoesImage: PlaceHolderImages.find(img => img.id === 'rolos-aplicacoes'),
-      engineeringNewSectionImage: PlaceHolderImages.find(img => img.id === 'engineering-new-section-image'),
     },
   };
 

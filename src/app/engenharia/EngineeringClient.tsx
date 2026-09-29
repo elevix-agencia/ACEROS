@@ -71,7 +71,6 @@ export type EngineeringPageData = {
     calibrationCertificateImage?: ImagePlaceholder;
     structuralCalculationImage?: ImagePlaceholder;
     rolosAplicacoesImage?: ImagePlaceholder;
-    engineeringNewSectionImage?: ImagePlaceholder;
   };
 };
 
@@ -118,7 +117,6 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
     calibrationCertificateImage,
     structuralCalculationImage,
     rolosAplicacoesImage,
-    engineeringNewSectionImage,
   } = images;
 
   const solutions = Object.entries(sector.solutions).map(([id, data]) => ({
@@ -606,26 +604,32 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
         </div>
       </section>
 
-      {engineeringNewSectionImage && (
-        <section className="py-10 bg-secondary/50">
-          <div className="container mx-auto px-4">
-            <div className="flex justify-center">
-              <div className='animate-fade-in-up max-w-4xl w-full' style={{animationDelay: '0.2s'}}>
-                <div className="relative w-full rounded-xl overflow-hidden shadow-lg border">
-                  <Image
-                    src={engineeringNewSectionImage.imageUrl}
-                    alt={engineeringNewSectionImage.description}
-                    width={1200}
-                    height={800}
-                    data-ai-hint={engineeringNewSectionImage.imageHint}
-                    className="object-contain w-full h-auto"
-                  />
-                </div>
-              </div>
-            </div>
+      <section className="bg-secondary/50 py-20 sm:py-24" aria-labelledby="engineering-process-title">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">Engenharia Aceros</p>
+            <h2 id="engineering-process-title" className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Do desenho técnico à peça pronta
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              Cada fornecimento parte das especificações do projeto para definir material, fabricação e verificações necessárias.
+            </p>
           </div>
-        </section>
-      )}
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {[
+              { number: '01', title: 'Análise do projeto', description: 'Avaliamos o desenho, as dimensões e as condições de aplicação da peça.' },
+              { number: '02', title: 'Material e fabricação', description: 'Definimos a liga e as etapas de produção conforme os requisitos acordados.' },
+              { number: '03', title: 'Inspeção e entrega', description: 'Verificamos as características previstas para o fornecimento antes da entrega.' },
+            ].map((step) => (
+              <div key={step.number} className="rounded-2xl border border-border bg-white p-7 shadow-sm">
+                <span className="text-sm font-bold tracking-widest text-primary">{step.number}</span>
+                <h3 className="mt-7 font-headline text-xl font-bold text-foreground">{step.title}</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <WhatsAppCta />
     </div>

@@ -24,7 +24,7 @@ export function GuseiraStavesSection() {
 
   const imageIds = [
     'guseira-stave-1', 'guseira-stave-2', 'guseira-stave-3',
-    'guseira-stave-4', 'guseira-stave-5', 'guseira-stave-6', 'guseira-stave-7'
+    'guseira-stave-4', 'guseira-stave-5', 'guseira-stave-6'
   ];
 
   const images = imageIds
