@@ -22,11 +22,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Aceros Aços Centrifugados Sob Medida | Fabricação Industrial',
+    default: 'Tubos e Buchas Centrifugadas em Aço Inoxidável | Aceros',
     template: '%s | Aceros',
   },
   description:
-    'Fabricamos peças em aços inoxidáveis e superligas por centrifugação (ASTM A297) sob medida para siderurgia, mineração, petroquímica e tratamento térmico. Solicite orçamento.',
+    'A Aceros fabrica tubos e buchas centrifugadas em aço inoxidável e ligas especiais ASTM A297 para siderurgia, mineração e tratamento térmico. Solicite orçamento.',
   keywords: [
     'aços centrifugados',
     'aço inox',
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     locale: 'pt_BR',
     url: siteUrl,
     siteName: 'Aceros',
-    title: 'Aceros Aços Centrifugados Sob Medida | Fabricação Industrial',
+    title: 'Tubos e Buchas Centrifugadas em Aço Inoxidável | Aceros',
     description:
-      'Fabricamos peças em aços inoxidáveis e superligas por centrifugação (ASTM A297) sob medida para siderurgia, mineração, petroquímica e tratamento térmico.',
+      'A Aceros fabrica tubos e buchas centrifugadas em aço inoxidável e ligas especiais ASTM A297 para siderurgia, mineração e tratamento térmico.',
     images: [
       {
         url: '/images/imgur/OBD0nJ0.png',
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aceros Aços Centrifugados Sob Medida',
+    title: 'Tubos e Buchas Centrifugadas em Aço Inoxidável | Aceros',
     description:
-      'Fabricação sob medida de aços inoxidáveis por centrifugação (ASTM A297).',
+      'Tubos e buchas centrifugadas em aço inoxidável e ligas especiais ASTM A297 para aplicações industriais.',
     images: ['/images/imgur/OBD0nJ0.png'],
   },
   robots: {

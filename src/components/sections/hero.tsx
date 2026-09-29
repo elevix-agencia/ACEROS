@@ -10,9 +10,9 @@ import { siteExtras } from '@/lib/i18n/site-extras';
 
 const heroSlides = [
   {
-    src: '/images/aceros/generated/hero-tubos-centrifugados-v2.webp',
-    alt: 'Tubos de aço centrifugado usinados e polidos pela Aceros',
-    label: 'Tubos centrifugados',
+    src: '/images/aceros/generated/hero-sink-roll-aceros-v1.webp',
+    alt: 'Sink roll da Aceros em processo de usinagem',
+    label: 'Sink roll',
   },
   {
     src: '/images/aceros/generated/hero-buchas-centrifugadas-v3.webp',

@@ -8,11 +8,11 @@ type L = Record<Language, string>;
 
 export const pageTitles: Record<string, L> = {
   '/': {
-    pt: 'Aceros Aços Centrifugados Sob Medida | Fabricação Industrial',
-    en: 'Aceros Custom Centrifugally Cast Steels | Industrial Manufacturing',
-    es: 'Aceros Fabricación Centrifugada a Medida | Fabricación Industrial',
-    de: 'Aceros Schleuderguss nach Maß | Industriefertigung',
-    it: 'Aceros Fusione Centrifugata su Misura | Produzione Industriale',
+    pt: 'Tubos e Buchas Centrifugadas em Aço Inoxidável | Aceros',
+    en: 'Centrifugally Cast Stainless Steel Tubes and Bushings | Aceros',
+    es: 'Tubos y Bujes Centrifugados de Acero Inoxidable | Aceros',
+    de: 'Schleudergegossene Rohre und Buchsen aus Edelstahl | Aceros',
+    it: 'Tubi e Boccole Centrifugati in Acciaio Inossidabile | Aceros',
   },
   '/sobre': {
     pt: 'Sobre a Aceros | Aços Inoxidáveis Centrifugados',

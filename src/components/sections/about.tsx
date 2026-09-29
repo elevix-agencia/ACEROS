@@ -46,15 +46,15 @@ export function About({ headingLevel = 'h2' }: AboutProps) {
               {t.about.paragraph2}
             </p>
           </div>
-          <div className="relative flex items-center justify-center h-[300px] sm:h-[500px] animate-slide-in-right">
+          <div className="relative flex items-center justify-center h-[230px] sm:h-[340px] animate-slide-in-right">
             <Card className="overflow-hidden rounded-none border-0 shadow-2xl w-full h-full">
-              <div className="relative w-full h-full">
+              <div className="relative w-full h-full bg-[#07121e]">
                 <Image
-                  src="/images/aceros/generated/historia-fabrica-v3.webp"
+                  src="/images/aceros/generated/historia-helices-aceros-v4.webp"
                   alt={copy.imageAlt}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover object-center"
+                  className="object-contain object-center"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#07121e] via-[#07121e]/75 to-transparent p-6 pt-20 text-white">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">{copy.production}</p>
