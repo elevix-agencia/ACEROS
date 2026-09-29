@@ -74,7 +74,7 @@ export const tubosCopy: Record<Language, TubosCopy> = {
     ],
     applicationsTitle: 'Setores Atendidos',
     applicationsLead: 'Aplicações atendidas conforme desenho e requisitos de operação.',
-    applicationLabels: ['Siderurgia', 'Mineração', 'Tratamento Térmico', 'Galvanização', 'Indústria Guseira', 'Setor Naval', 'Metalurgia'],
+    applicationLabels: ['Siderurgia', 'Mineração', 'Tratamento Térmico', 'Galvanização', 'Indústria de ferro Gusa', 'Setor Naval', 'Metalurgia'],
     galleryTitle: 'Galeria Técnica e Evolução de Acabamento',
     galleryLead: 'Do bruto de centrifugação à peça polida: veja a qualidade Aceros em cada estágio.',
     zoomAria: 'Ampliar',

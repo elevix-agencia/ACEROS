@@ -145,7 +145,7 @@ export const sectorTitles: Record<string, L> = {
     it: 'Trattamento termico | Acciai centrifugati per il settore',
   },
   guseira: {
-    pt: 'Indústria Guseira | Aços Centrifugados para o Setor',
+    pt: 'Indústria de ferro Gusa | Aços Centrifugados para o Setor',
     en: 'Pig-Iron Industry | Centrifugally Cast Steels for the Sector',
     es: 'Industria del Arrabio | Aceros Centrifugados para el Sector',
     de: 'Roheisenindustrie | Schleuderguss für die Branche',

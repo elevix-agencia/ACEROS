@@ -604,7 +604,7 @@ export function GuseiraMediaSection({ videoUrls, imageIds }: { videoUrls: string
             Componentes Fundidos e Usinados em Ação
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Veja nossos processos de fabricação e a qualidade final das peças que produzimos para a indústria guseira.
+            Veja nossos processos de fabricação e a qualidade final das peças que produzimos para a indústria de ferro gusa.
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto justify-center">

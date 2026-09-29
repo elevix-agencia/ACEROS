@@ -1320,11 +1320,11 @@
                               },
                               {
                                   "id":  "siderurgia-hero",
-                                  "description":  "Cestos metálicos para tratamento térmico empilhados e cintados sobre palete na fábrica.",
-                                  "imageUrl":  "/images/aceros/clientes/cestos-tratamento-termico-20260923.webp",
-                                  "imageHint":  "metal heat treatment baskets",
-                                  "width":  1672,
-                                  "height":  941
+                                  "description":  "Rolos de forno da Aceros apoiados no piso da fábrica.",
+                                  "imageUrl":  "/images/aceros/clientes/rolos-de-forno-aceros.jpg",
+                                  "imageHint":  "industrial furnace rolls",
+                                  "width":  800,
+                                  "height":  533
                               },
                               {
                                   "id":  "oleo_e_gas-hero",

@@ -78,7 +78,7 @@ export const sectorSeoContent: Record<string, SectorSeoContent> = {
   },
   guseira: {
     intro:
-      'A Aceros fornece componentes de alto desempenho para a indústria guseira: staves (placas de resfriamento) para altos-fornos, ventaneiras (tuyeres), carcaças usinadas, colunas de reação serpentinas Glendons e peças estruturais para manuseio de ferro-gusa. Peças fabricadas para máxima produtividade e segurança operacional.',
+      'A Aceros fornece componentes de alto desempenho para a indústria de ferro gusa: staves (placas de resfriamento) para altos-fornos, ventaneiras (tuyeres), carcaças usinadas, colunas de reação serpentinas Glendons e peças estruturais para manuseio de ferro-gusa. Peças fabricadas para máxima produtividade e segurança operacional.',
     paragraphs: [
       'A siderurgia primária, que produz o ferro-gusa no alto-forno, é um dos ambientes mais extremos da indústria pesada. Temperaturas superiores a 2.000 °C na zona de combustão, ciclos térmicos agressivos, cargas mecânicas variáveis e ataque químico por escórias e gases fazem com que os componentes precisem ser projetados com máxima robustez. A Aceros fabrica staves (placas de resfriamento) essenciais para manter a integridade estrutural do alto-forno, usando ligas de alta condutividade térmica que dissipam calor de forma eficiente.',
       'Nossas ventaneiras (tuyeres) são projetadas para a injeção precisa de ar quente na zona de combustão, resistindo a temperaturas extremas e a agentes altamente agressivos. Trabalhamos com ligas fundidas por centrifugação que oferecem excelente combinação de resistência ao choque térmico e à corrosão a quente. Cada ventaneira é dimensionada conforme o alto-forno específico do cliente.',
