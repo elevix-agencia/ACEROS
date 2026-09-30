@@ -26,9 +26,6 @@ export function WalkingBeamFurnace() {
   const vigasMoveisImage1 = PlaceHolderImages.find(
     img => img.id === 'walking-beam-1'
   );
-  const vigasMoveisImage2 = PlaceHolderImages.find(
-    img => img.id === 'walking-beam-2'
-  );
   const vedantesImages = PlaceHolderImages.filter(img =>
     ['vedantes-1', 'vedantes-2', 'vedantes-3', 'vedantes-4', 'vedantes-5'].includes(img.id)
   ).filter(Boolean) as ImagePlaceholder[];
@@ -69,24 +66,24 @@ export function WalkingBeamFurnace() {
                   </Card>
                 </motion.div>
               )}
-               {vigasMoveisImage2 && (
-                <motion.div
-                  whileHover={{ scale: 1.05, zIndex: 10, rotate: 2 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                  className="relative w-full"
-                >
-                  <Card className="overflow-hidden rounded-2xl shadow-lg border-4 border-white">
+              <motion.div
+                whileHover={{ scale: 1.05, zIndex: 10, rotate: 2 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                className="relative w-full"
+              >
+                <Card className="overflow-hidden rounded-2xl shadow-lg border-4 border-white">
+                  <div className="relative aspect-[565/299] overflow-hidden">
                     <Image
-                      src={vigasMoveisImage2.imageUrl}
-                      alt={vigasMoveisImage2.description}
-                      width={400}
-                      height={300}
-                      data-ai-hint={vigasMoveisImage2.imageHint}
-                      className="object-contain w-full h-auto"
+                      src="/images/imgur/history-brand-v2-4.png"
+                      alt="Viga transportadora de barras a quente fabricada pela Aceros"
+                      width={963}
+                      height={674}
+                      className="absolute left-0 h-auto max-w-none"
+                      style={{ top: '-32.4%', width: '170.4%' }}
                     />
-                  </Card>
-                </motion.div>
-              )}
+                  </div>
+                </Card>
+              </motion.div>
             </div>
             <div className="flex mt-10">
               <Button asChild size="lg">

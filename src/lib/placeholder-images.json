@@ -1263,14 +1263,6 @@
                                   "height":  427
                               },
                               {
-                                  "id":  "walking-beam-2",
-                                  "description":  "Outra vista de vigas móveis.",
-                                  "imageUrl":  "/images/imgur/CtVYp6i.png",
-                                  "imageHint":  "walking beams",
-                                  "width":  930,
-                                  "height":  489
-                              },
-                              {
                                   "id":  "walking-beam-3",
                                   "description":  "Vedante superior e inferior para forno de vigas móveis.",
                                   "imageUrl":  "/images/imgur/rZZTCIw.png",
