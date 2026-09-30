@@ -944,11 +944,11 @@
                               },
                               {
                                   "id":  "alloy-table-full",
-                                  "description":  "Tabela completa de ligas de aço",
-                                  "imageUrl":  "/images/imgur/JgWpJKx.png",
+                                  "description":  "Tabela de especificações, composição química e propriedades de ligas de aço",
+                                  "imageUrl":  "/images/aceros/clientes/tabela-ligas-aceros-sem-colunas-externas.png",
                                   "imageHint":  "alloy table",
-                                  "width":  1343,
-                                  "height":  904
+                                  "width":  1035,
+                                  "height":  950
                               },
                               {
                                   "id":  "steel-class-chart",

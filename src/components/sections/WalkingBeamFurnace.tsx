@@ -72,14 +72,14 @@ export function WalkingBeamFurnace() {
                 className="relative w-full"
               >
                 <Card className="overflow-hidden rounded-2xl shadow-lg border-4 border-white">
-                  <div className="relative aspect-[565/299] overflow-hidden">
+                  <div className="relative aspect-[420/221] overflow-hidden">
                     <Image
                       src="/images/imgur/history-brand-v2-4.png"
                       alt="Viga transportadora de barras a quente fabricada pela Aceros"
                       width={963}
                       height={674}
-                      className="absolute left-0 h-auto max-w-none"
-                      style={{ top: '-32.4%', width: '170.4%' }}
+                      className="absolute h-auto max-w-none"
+                      style={{ left: '-19%', top: '-44.8%', width: '229.3%' }}
                     />
                   </div>
                 </Card>
