@@ -146,7 +146,6 @@ export function Contact() {
                     method="POST"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
-                    encType="multipart/form-data"
                   >
                     <input type="hidden" name="form-name" value="contato" />
                     <p hidden><label>Não preencher: <input name="bot-field" /></label></p>

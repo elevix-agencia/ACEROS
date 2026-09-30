@@ -379,7 +379,6 @@ export function BuchaInoxClient() {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                encType="multipart/form-data"
               >
                 <input type="hidden" name="form-name" value="lp-bucha" />
                 <input type="hidden" name="source" value="lp-bucha" />

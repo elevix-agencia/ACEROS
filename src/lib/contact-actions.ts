@@ -1,16 +1,13 @@
 'use client';
 
-// Envia o formulario para o Netlify Forms.
-// A configuracao de notificacao por email (destino: vendas@aceros.com.br) e
-// feita no painel Netlify: Forms > <nome do form> > Settings & usage >
-// Form notifications. Os forms estao registrados em public/__forms.html.
+// Envia formulario para o Netlify Forms via application/x-www-form-urlencoded.
+// Motivo: com Next.js SSR, POST em "/" com multipart/form-data cai no handler
+// do Next.js (404). Netlify so captura urlencoded. Portanto anexo de arquivo
+// nao passa por aqui - se o cliente selecionou arquivo, orientamos a enviar
+// pelo WhatsApp.
+// Notificacao por email configurada no painel Netlify (Forms > Settings) para
+// vendas@aceros.com.br. Forms registrados em public/__forms.html.
 
-const MAX_ATTACHMENT_SIZE = 5 * 1024 * 1024; // 5 MB
-const ALLOWED_ATTACHMENT_EXTENSIONS = new Set([
-  'pdf', 'dwg', 'dxf', 'step', 'stp', 'iges', 'igs', 'jpg', 'jpeg', 'png',
-]);
-
-// Mapa de source -> nome do form registrado em public/__forms.html
 const SOURCE_TO_FORM: Record<string, string> = {
   'lp-tubos': 'lp-tubos',
   'lp-bucha': 'lp-bucha',
@@ -26,42 +23,34 @@ function resolveFormName(source: string | null): string {
 
 export async function saveContactMessage(
   data: unknown,
-): Promise<{ success: boolean; error?: string }> {
+): Promise<{ success: boolean; error?: string; hasAttachment?: boolean }> {
   try {
-    const formData = data instanceof FormData ? data : new FormData();
-    if (!(data instanceof FormData) && data && typeof data === 'object') {
+    const params = new URLSearchParams();
+    let hasAttachment = false;
+
+    if (data instanceof FormData) {
+      for (const [key, value] of data.entries()) {
+        if (value instanceof File) {
+          if (value.size > 0) hasAttachment = true;
+          continue; // nao inclui arquivos no urlencoded
+        }
+        params.append(key, String(value));
+      }
+    } else if (data && typeof data === 'object') {
       for (const [key, value] of Object.entries(data as Record<string, unknown>)) {
         if (value === undefined || value === null) continue;
-        formData.set(key, String(value));
+        params.set(key, String(value));
       }
     }
 
-    // Valida anexo antes de enviar (evita subir arquivo invalido ao Netlify)
-    const drawing = formData.get('drawing');
-    if (drawing instanceof File && drawing.size > 0) {
-      const extension = drawing.name.split('.').pop()?.toLowerCase() || '';
-      if (!ALLOWED_ATTACHMENT_EXTENSIONS.has(extension)) {
-        return { success: false, error: 'Formato de desenho técnico não permitido.' };
-      }
-      if (drawing.size > MAX_ATTACHMENT_SIZE) {
-        return { success: false, error: 'O desenho técnico deve ter no máximo 5 MB.' };
-      }
-    } else if (drawing instanceof File && drawing.size === 0) {
-      // File input vazio: remover para nao mandar entrada nula
-      formData.delete('drawing');
-    }
-
-    const source = typeof formData.get('source') === 'string'
-      ? (formData.get('source') as string)
-      : null;
+    const source = params.get('source');
     const formName = resolveFormName(source);
-
-    // Netlify Forms exige form-name no payload para saber qual form associar
-    formData.set('form-name', formName);
+    params.set('form-name', formName);
 
     const response = await fetch('/', {
       method: 'POST',
-      body: formData,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString(),
     });
 
     if (!response.ok) {
@@ -73,7 +62,7 @@ export async function saveContactMessage(
       };
     }
 
-    return { success: true };
+    return { success: true, hasAttachment };
   } catch (error: unknown) {
     console.error(
       '[contact] Erro ao enviar formulário:',

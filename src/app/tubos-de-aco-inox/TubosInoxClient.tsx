@@ -354,7 +354,6 @@ export function TubosInoxClient() {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                encType="multipart/form-data"
               >
                 <input type="hidden" name="form-name" value="lp-tubos" />
                 <input type="hidden" name="source" value="lp-tubos" />

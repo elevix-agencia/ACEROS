@@ -383,7 +383,6 @@ export function IndustrialCampaignPage({
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              encType="multipart/form-data"
             >
               <input type="hidden" name="form-name" value={data.source} />
               <input type="hidden" name="source" value={data.source} />
