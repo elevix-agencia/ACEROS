@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/use-language';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { siteExtras } from '@/lib/i18n/site-extras';
+import { heroHeadlines } from '@/lib/i18n/hero-headlines';
 
 const heroSlides = [
   {
@@ -29,6 +30,7 @@ const heroSlides = [
 export function Hero() {
   const { language, t } = useLanguage();
   const copy = siteExtras[language].hero;
+  const slideText = heroHeadlines[language];
   const translatedSlides = heroSlides.map((slide, index) => ({ ...slide, ...copy.slides[index] }));
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -62,10 +64,10 @@ export function Hero() {
                   {copy.eyebrow}
                 </div>
                 <h1 className="max-w-[900px] animate-fade-in-up text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] text-white sm:text-[clamp(2.25rem,3.35vw,3.65rem)]">
-                    {t.hero.main_title}
+                    {slideText[activeSlide].title}
                 </h1>
                 <p className="mt-5 max-w-[700px] animate-fade-in-up border-l border-accent/80 pl-4 text-[15px] leading-6 text-slate-200 sm:mt-7 sm:pl-5 sm:text-lg sm:leading-8">
-                  {t.hero.subtitle}
+                  {slideText[activeSlide].subtitle}
                 </p>
                 <div className="mt-7 flex animate-fade-in-up flex-col gap-3 sm:mt-10 sm:flex-row">
                     <Button asChild size="lg" className="h-14 rounded-none bg-accent px-8 text-xs font-bold uppercase tracking-[0.12em] text-white hover:bg-[#cf5f11] sm:h-16">
