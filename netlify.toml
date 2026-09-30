@@ -1,0 +1,15 @@
+# Configuracao do Netlify pro projeto Aceros.
+# Motivo principal: permitir Netlify Forms com Next.js SSR. Sem esta regra,
+# POSTs de formulario caem na serverless function do Next e o Netlify Forms
+# nunca ve a submissao. Redirecionando POST para o arquivo estatico
+# /__forms.html com status 200 (rewrite) e force=true, a submissao chega
+# no processador de forms do Netlify em vez do handler do Next.
+# Publish directory nao e definido aqui - o plugin @netlify/plugin-nextjs
+# controla isso automaticamente.
+
+[[redirects]]
+  from = "/*"
+  to = "/__forms.html"
+  status = 200
+  force = true
+  conditions = { method = ["POST"] }
