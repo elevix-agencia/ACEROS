@@ -69,7 +69,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);
 
   useEffect(() => {
-    const urlLanguage = new URLSearchParams(window.location.search).get('lang');
+    // Ainda aceitamos ?lang= na URL para link direto ao idioma (ex.: link em
+    // email pra cliente estrangeiro), mas nao gravamos mais o querystring
+    // ao trocar. Se veio na URL, limpa apos ler pra nao ficar em SEO.
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLanguage = urlParams.get('lang');
     const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
     const initialLanguage = isLanguage(urlLanguage)
       ? urlLanguage
@@ -79,20 +83,23 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
     setLanguageState(initialLanguage);
     document.documentElement.lang = initialLanguage === 'pt' ? 'pt-BR' : initialLanguage;
+
+    if (isLanguage(urlLanguage)) {
+      // Persiste no localStorage e remove o querystring pra URL ficar limpa
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, urlLanguage);
+      urlParams.delete('lang');
+      const cleanQuery = urlParams.toString();
+      const cleanUrl = `${window.location.pathname}${cleanQuery ? `?${cleanQuery}` : ''}${window.location.hash}`;
+      window.history.replaceState(window.history.state, '', cleanUrl);
+    }
   }, []);
 
   const setLanguage = useCallback((nextLanguage: Language) => {
     setLanguageState(nextLanguage);
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage);
     document.documentElement.lang = nextLanguage === 'pt' ? 'pt-BR' : nextLanguage;
-
-    const url = new URL(window.location.href);
-    if (nextLanguage === DEFAULT_LANGUAGE) {
-      url.searchParams.delete('lang');
-    } else {
-      url.searchParams.set('lang', nextLanguage);
-    }
-    window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
+    // Nao adiciona mais ?lang= na URL. Sem hreflang, o querystring so
+    // confundiria o Google (URLs duplicadas de um mesmo conteudo).
   }, []);
 
   // Aplica as revisões linguísticas e mantém o português apenas como proteção
