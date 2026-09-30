@@ -15,7 +15,14 @@ import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
 import { useLanguage } from '@/hooks/use-language';
 
 export function NavalCatalogSection() {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+  const copy = {
+    pt: ['Catálogo de Produtos Navais', 'Explore nossa linha de componentes e peças para o setor naval.'],
+    en: ['Naval Product Catalogue', 'Explore our components and parts for the marine sector.'],
+    es: ['Catálogo de Productos Navales', 'Explore nuestra línea de componentes y piezas para el sector naval.'],
+    de: ['Produktkatalog für den Schiffbau', 'Entdecken Sie unsere Komponenten und Teile für die Schifffahrt.'],
+    it: ['Catalogo Prodotti Navali', 'Scopri i nostri componenti e pezzi per il settore navale.'],
+  }[language];
 
   const catalogImages = PlaceHolderImages.filter(img =>
     img.id.startsWith('naval-catalog-')
@@ -32,10 +39,10 @@ export function NavalCatalogSection() {
           className="text-center mb-16"
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Catálogo de Produtos Navais
+            {copy[0]}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Explore nossa linha de componentes e peças para o setor naval.
+            {copy[1]}
           </p>
         </motion.div>
 

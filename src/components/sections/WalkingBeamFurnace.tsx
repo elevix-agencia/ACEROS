@@ -45,11 +45,10 @@ export function WalkingBeamFurnace() {
           {/* Coluna da Esquerda */}
           <div className="p-8 sm:p-12 animate-slide-in-left">
             <h3 className="font-headline text-2xl lg:text-3xl font-bold mb-4 uppercase tracking-wider text-foreground">
-             FORNOS DE VIGAS MÓVEIS PARA TRATAMENTO TÉRMICO DE TUBOS
+             {t.expertise_sectors.siderurgia.solutions.siderurgia_walking_beam_furnaces.title}
             </h3>
             <p className="text-muted-foreground mb-6 text-lg">
-              VIGAS MÓVEIS, COLUNAS: Projeto e ligas especiais para otimizar a
-              vida útil e minimizar o pick-up (aderência de material).
+              {t.expertise_sectors.siderurgia.solutions.siderurgia_walking_beam_furnaces.description}
             </p>
             <div className="relative flex flex-col space-y-4 justify-center items-center">
               {vigasMoveisImage1 && (
@@ -93,7 +92,7 @@ export function WalkingBeamFurnace() {
               <Button asChild size="lg">
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Solicitar Orçamento
+                  {t.hero.contact_us}
                 </Link>
               </Button>
             </div>
@@ -122,7 +121,7 @@ export function WalkingBeamFurnace() {
               <Button asChild size="lg" variant="accent" className="w-full">
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Solicitar Orçamento
+                  {t.hero.contact_us}
                 </Link>
               </Button>
             </div>

@@ -23,6 +23,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { engineeringPageCopy } from '@/lib/i18n/engineering-page-copy';
 
 // Estrutura de tipo mais específica para as traduções necessárias.
 export type EngineeringTranslations = {
@@ -76,7 +77,8 @@ export type EngineeringPageData = {
 
 // O componente cliente agora só se preocupa em renderizar os dados que recebe.
 export function EngineeringClient({ pageData }: { pageData: EngineeringPageData }) {
-  const { t: allTranslations } = useLanguage();
+  const { t: allTranslations, language } = useLanguage();
+  const copy = engineeringPageCopy[language];
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
   // Substitui as translations do servidor (fixadas em pt.json) pelas do idioma atual,
@@ -146,7 +148,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
             className="max-w-[900px] animate-fade-in-up"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
-            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:mb-7 sm:text-sm"><span className="h-px w-10 bg-accent" />Engenharia aplicada</p>
+            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-accent sm:mb-7 sm:text-sm"><span className="h-px w-10 bg-accent" />{copy.eyebrow}</p>
             <h1 className="text-balance font-headline text-[2rem] font-semibold uppercase leading-[1.08] tracking-[-0.025em] sm:text-[clamp(2.25rem,3.35vw,3.65rem)]">
               {sector.title}
             </h1>
@@ -162,10 +164,10 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="mb-4 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-              Nossas Soluções de Engenharia
+              {copy.solutionsTitle}
             </h2>
             <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">
-              Desenvolvemos projetos e análises conforme a aplicação, as condições de serviço e os requisitos do componente.
+              {copy.solutionsLead}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -201,10 +203,10 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
           <div className="animate-slide-in-left">
             <h2 className="mb-6 font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Inovação em Cada Projeto
+              {copy.innovationTitle}
             </h2>
             <p className="mb-8 text-lg text-muted-foreground">
-              Utilizamos ferramentas de projeto e simulação para avaliar componentes destinados a diferentes condições industriais.
+              {copy.innovationLead}
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-4">
@@ -213,9 +215,9 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">
-                    Design Otimizado
+                    {copy.innovation[0].title}
                   </h4>
-                  <p className="text-muted-foreground">Projetos orientados à eficiência, à fabricação e às condições de operação.</p>
+                  <p className="text-muted-foreground">{copy.innovation[0].description}</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -224,9 +226,9 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">
-                    Validação por Simulação
+                    {copy.innovation[1].title}
                   </h4>
-                  <p className="text-muted-foreground">Simulações utilizadas como apoio à avaliação técnica antes da produção.</p>
+                  <p className="text-muted-foreground">{copy.innovation[1].description}</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -235,9 +237,9 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg">
-                    Parceria Contínua
+                    {copy.innovation[2].title}
                   </h4>
-                   <p className="text-muted-foreground">Acompanhamento técnico durante a análise e o desenvolvimento do projeto.</p>
+                   <p className="text-muted-foreground">{copy.innovation[2].description}</p>
                 </div>
               </li>
             </ul>
@@ -309,7 +311,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="mb-4 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-              AÇOS - EXEMPLOS DE APLICAÇÕES DE ROLOS
+              {copy.rollApplicationsTitle}
             </h2>
           </div>
           {rolosAplicacoesImage && (
@@ -472,25 +474,25 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
             )}
             <div className="animate-slide-in-right">
               <h2 className="mb-4 font-headline text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-                ACEROS INOXIDÁVEIS PROCESSO DE CENTRIFUGAÇÃO
+                {copy.castingTitle}
               </h2>
               <div className="space-y-3 text-muted-foreground text-sm">
                 <p>
-                  <span className="font-bold">O que é fundição de aço centrifugado?</span>
-                  <br />É um processo de fabricação de tubos mecânicos e buchas, onde o aço líquido é vazado em uma matriz de aço baixo carbono (coquilha) com revestimento interno. A matriz é pré-aquecida em movimento circular. Isso recebe o aço que irá se conformar nas paredes internas, em razão da força centrífuga (força inercial).
+                  <span className="font-bold">{copy.castingQuestion}</span>
+                  <br />{copy.castingAnswer}
                 </p>
                 <p className="italic">
-                  Fig. 1: Vazamento de um tubo, material ASTM A 297 Gr.HP.
+                  {copy.castingCaption}
                 </p>
                 <p>
-                  <span className="font-bold">Como atua a força centrífuga (força inercial)?</span>
-                  <br />A força centrífuga atua expulsando o metal (fuga do centro) para a extremidade interna da parede da matriz. Lá, o aço líquido é depositado a temperaturas entre 1.500 e 1.630 graus Celsius. Este processo forma peças tubulares com seus diâmetros interno e externo concêntricos, a partir do diâmetro exigido em cada projeto.
+                  <span className="font-bold">{copy.forceQuestion}</span>
+                  <br />{copy.forceAnswer}
                 </p>
                 <p>
-                  As rotações de trabalho são calculadas para cada diâmetro, para garantir uma boa união, controle de tamanho e forma dos grãos. Esse controle é calculado pela utilização da mesma relação de força G, cálculos complexos, visto que os diâmetros das matrizes e seus perímetros mudam, além da massa de cada tubo.
+                  {copy.rotationNote}
                 </p>
                 <p>
-                  Outro processo de melhoria da qualidade do produto é a utilização após o processo centrifugação ou fundição estática, de processos de beneficiamento como a solubilização (envelhecimento).
+                  {copy.treatmentNote}
                 </p>
               </div>
             </div>
@@ -499,17 +501,17 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
             <div className="grid md:grid-cols-2 gap-16 items-center mt-16">
               <div className="animate-slide-in-left md:order-last">
                 <h2 className="mb-6 font-headline text-xl font-bold tracking-tight text-foreground sm:text-2xl">
-                  ACEROS – DIVISÃO DE AÇOS INOXIDÁVEIS – TUBOS
+                  {copy.tubesTitle}
                 </h2>
                 <div className="text-sm text-muted-foreground space-y-3">
                   <p>
-                    Fig. 2: Exemplo da atuação da força centrífuga (Máquina com Rotação de com 1190 RPM).
+                    {copy.tubesCaption}
                   </p>
                   <p>
-                    Detalhe do tubo centrifugado após o processo de usinagem e polimento. A peça finalizada é um Rolo de Imersão (Sink Roll).
+                    {copy.sinkRollNote}
                   </p>
                   <p className="italic">
-                    (Esta seção complementa a explicação anterior sobre o Processo de Centrifugação e mostra o produto final, como os rolos de imersão que foram detalhados na Seção 5.)
+                    {copy.sinkRollContext}
                   </p>
                 </div>
               </div>
@@ -544,10 +546,10 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
           )}
           <div className="animate-slide-in-right">
             <h2 className="mb-6 font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              CÁLCULO ESTRUTURAL
+              {copy.calculationTitle}
             </h2>
             <p className="mb-8 text-lg text-muted-foreground">
-              Formamos uma equipe de engenheiros experientes nos mais diversos setores do mercado e utilizamos software específico para cada área.
+              {copy.calculationLead}
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-4">
@@ -555,7 +557,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
                   <Icon name="Star" className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg">Matemática</h4>
+                  <h4 className="font-semibold text-lg">{copy.mathematics}</h4>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -585,7 +587,7 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
             {processFlowchartImage && (
               <div className='animate-fade-in-up max-w-2xl w-full' style={{animationDelay: '0.2s'}}>
                  <div className="text-center mb-8">
-                  <h3 className="font-headline text-2xl font-bold text-foreground">Cálculos Estruturais e simulações de testes com temperatura</h3>
+                  <h3 className="font-headline text-2xl font-bold text-foreground">{copy.temperatureTitle}</h3>
                   <p className="text-muted-foreground max-w-md mx-auto"></p>
                 </div>
                 <div className="relative w-full rounded-xl overflow-hidden shadow-lg border">
@@ -607,19 +609,19 @@ export function EngineeringClient({ pageData }: { pageData: EngineeringPageData 
       <section className="bg-secondary/50 py-20 sm:py-24" aria-labelledby="engineering-process-title">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">Engenharia Aceros</p>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">{copy.processEyebrow}</p>
             <h2 id="engineering-process-title" className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Do desenho técnico à peça pronta
+              {copy.processTitle}
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Cada fornecimento parte das especificações do projeto para definir material, fabricação e verificações necessárias.
+              {copy.processLead}
             </p>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {[
-              { number: '01', title: 'Análise do projeto', description: 'Avaliamos o desenho, as dimensões e as condições de aplicação da peça.' },
-              { number: '02', title: 'Material e fabricação', description: 'Definimos a liga e as etapas de produção conforme os requisitos acordados.' },
-              { number: '03', title: 'Inspeção e entrega', description: 'Verificamos as características previstas para o fornecimento antes da entrega.' },
+              { number: '01', ...copy.steps[0] },
+              { number: '02', ...copy.steps[1] },
+              { number: '03', ...copy.steps[2] },
             ].map((step) => (
               <div key={step.number} className="rounded-2xl border border-border bg-white p-7 shadow-sm">
                 <span className="text-sm font-bold tracking-widest text-primary">{step.number}</span>

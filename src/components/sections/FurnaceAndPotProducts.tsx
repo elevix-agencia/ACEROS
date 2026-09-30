@@ -8,9 +8,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, Layers, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { steelDetailCopy } from '@/lib/i18n/steel-detail-copy';
 
 export function FurnaceAndPotProducts() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const copy = steelDetailCopy[language];
 
   const product2Images = [
     PlaceHolderImages.find(img => img.id === 'hot-dip-galvanizing-1'),
@@ -40,32 +42,28 @@ export function FurnaceAndPotProducts() {
           >
             <div className="flex flex-col justify-center md:order-last">
               <h3 className="font-headline text-2xl lg:text-3xl font-bold mb-4 text-white uppercase tracking-wider">
-                LINHAS DE GALVANIZAÇÃO POR IMERSÃO A QUENTE (POTE)
+                {copy.potTitle}
               </h3>
               <p className="text-gray-300 mb-6 text-lg">
-                Componentes fabricados sob medida para conjuntos que trabalham em
-                linhas de galvanização por imersão a quente.
+                {copy.potIntro}
               </p>
               <ul className="space-y-4 text-gray-300 mb-8">
                 <li className="flex items-start gap-3">
                   <Layers className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <span>
-                    Sink Rolls, braços, Snout, buchas de ponta e conjuntos montados
-                    conforme o projeto da linha.
+                    {copy.potItems[0]}
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Layers className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <span>
-                    Material selecionado conforme o banho, a temperatura, os esforços
-                    e o histórico de operação.
+                    {copy.potItems[1]}
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Layers className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                   <span>
-                    Centrifugação, usinagem e controle dimensional integrados ao
-                    fornecimento.
+                    {copy.potItems[2]}
                   </span>
                 </li>
               </ul>
@@ -77,7 +75,7 @@ export function FurnaceAndPotProducts() {
                 >
                   <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="mr-2 h-5 w-5" />
-                    Solicitar Orçamento
+                    {t.hero.contact_us}
                   </Link>
                 </Button>
               </div>

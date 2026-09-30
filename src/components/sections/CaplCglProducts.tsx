@@ -44,7 +44,7 @@ export function CaplCglProducts() {
           </div>
           <div className="animate-slide-in-right">
             <h3 className="font-headline text-2xl lg:text-3xl font-bold mb-4 uppercase tracking-wider">
-             ROLOS DO FORNO PARA TRANSPORTE DE BARRAS
+             {t.expertise_sectors.page.furnace_capl_cgl_title}
             </h3>
              <p className="text-muted-foreground mb-6 text-lg">
                 {t.expertise_sectors.page.furnace_capl_cgl_description}
@@ -71,7 +71,7 @@ export function CaplCglProducts() {
               <Button asChild size="lg" className="w-full sm:w-fit">
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Solicitar Orçamento
+                  {t.hero.contact_us}
                 </Link>
               </Button>
             </div>

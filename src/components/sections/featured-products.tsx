@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages, ImagePlaceholder } from '@/lib/placeholder-images';
-import { useLanguage } from '@/hooks/use-language';
+import { useLanguage, type Language } from '@/hooks/use-language';
 import { LazyVideo } from '@/components/media/lazy-video';
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
@@ -17,6 +17,44 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { ArrowRight, CheckCircle, Search, MessageCircle } from 'lucide-react';
+
+const guseiraCopy: Record<Language, { chemicalTitle: string; chemicalText: string; mediaTitle: string; mediaText: string; videoLabel: string }> = {
+  pt: {
+    chemicalTitle: 'Análise química por espectrometria',
+    chemicalText: 'Amostras retiradas durante a preparação da carga são resfriadas, polidas e analisadas. A composição da liga é ajustada conforme a norma e os requisitos do projeto.',
+    mediaTitle: 'Componentes fundidos e usinados em ação',
+    mediaText: 'Conheça etapas de fabricação e exemplos de componentes para a indústria de ferro gusa.',
+    videoLabel: 'Vídeo industrial da Aceros reproduzido sem áudio',
+  },
+  en: {
+    chemicalTitle: 'Chemical analysis by spectrometry',
+    chemicalText: 'Samples taken during charge preparation are cooled, polished and analysed. Alloy composition is adjusted to the applicable standard and project requirements.',
+    mediaTitle: 'Cast and machined components in action',
+    mediaText: 'See manufacturing stages and examples of components for the pig iron industry.',
+    videoLabel: 'Aceros industrial video played without sound',
+  },
+  es: {
+    chemicalTitle: 'Análisis químico por espectrometría',
+    chemicalText: 'Las muestras tomadas durante la preparación de la carga se enfrían, pulen y analizan. La composición de la aleación se ajusta según la norma y los requisitos del proyecto.',
+    mediaTitle: 'Componentes fundidos y mecanizados en acción',
+    mediaText: 'Conozca las etapas de fabricación y ejemplos de componentes para la industria del arrabio.',
+    videoLabel: 'Vídeo industrial de Aceros reproducido sin sonido',
+  },
+  de: {
+    chemicalTitle: 'Chemische Analyse durch Spektrometrie',
+    chemicalText: 'Während der Chargenvorbereitung entnommene Proben werden gekühlt, poliert und analysiert. Die Legierungszusammensetzung wird an die geltende Norm und die Projektanforderungen angepasst.',
+    mediaTitle: 'Gegossene und bearbeitete Komponenten im Einsatz',
+    mediaText: 'Sehen Sie Fertigungsschritte und Beispiele von Komponenten für die Roheisenindustrie.',
+    videoLabel: 'Industrievideo von Aceros ohne Ton',
+  },
+  it: {
+    chemicalTitle: 'Analisi chimica mediante spettrometria',
+    chemicalText: 'I campioni prelevati durante la preparazione della carica vengono raffreddati, lucidati e analizzati. La composizione della lega viene adeguata alla norma applicabile e ai requisiti del progetto.',
+    mediaTitle: 'Componenti fusi e lavorati in azione',
+    mediaText: 'Scopri le fasi di produzione ed esempi di componenti per l’industria della ghisa.',
+    videoLabel: 'Video industriale Aceros riprodotto senza audio',
+  },
+};
 
 
 export function GuseiraStavesSection() {
@@ -108,7 +146,7 @@ export function GuseiraStavesSection() {
                 }}
             >
                 <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-                   Colunas de Reação Serpentinas Glendons
+                   {t.expertise_sectors.page.guseira_staves_title}
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                    {t.expertise_sectors.page.staves_description}
@@ -136,13 +174,13 @@ export function GuseiraStavesSection() {
                     </motion.div>
                 ))}
                  <motion.div custom={6} variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-background/50 rounded-2xl p-8 flex flex-col justify-center items-center text-center h-full">
-                    <h3 className="font-headline text-xl font-bold text-foreground mb-2">Pronto para Otimizar?</h3>
-                    <p className="text-muted-foreground mb-4 text-xs">Fale com nossos especialistas.</p>
+                    <h3 className="font-headline text-xl font-bold text-foreground mb-2">{t.expertise_sectors.page.guseira_staves_cta_title}</h3>
+                    <p className="text-muted-foreground mb-4 text-xs">{t.expertise_sectors.page.guseira_staves_cta_subtitle}</p>
                     <div className="flex flex-col gap-2 w-full">
                       <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 transition-transform hover:scale-105 text-xs">
                           <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                               <MessageCircle className="mr-1 h-3 w-3" />
-                              Solicitar Orçamento
+                              {t.hero.contact_us}
                           </Link>
                       </Button>
                     </div>
@@ -194,7 +232,7 @@ export function GuseiraTuyeresSection() {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="font-headline text-3xl md:text-4xl font-bold text-accent mb-4 tracking-tight">
-                        Colunas de Reação Serpentinas Glendons – Etapa 2
+                        {t.expertise_sectors.page.guseira_tuyeres_title}
                     </h2>
                     <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
                         {t.expertise_sectors.page.tuyeres_description}
@@ -228,13 +266,13 @@ export function GuseiraTuyeresSection() {
                             ))}
                         </div>
                         <div className="bg-gray-800/50 rounded-2xl p-8 text-center border border-accent/20">
-                            <h3 className="font-headline text-2xl font-bold text-white mb-3">Performance Incomparável</h3>
-                            <p className="text-slate-300 mb-6">Nossas válvulas garantem a injeção precisa e eficiente, maximizando a produtividade do seu alto-forno.</p>
+                            <h3 className="font-headline text-2xl font-bold text-white mb-3">{t.expertise_sectors.page.guseira_tuyeres_cta_title}</h3>
+                            <p className="text-slate-300 mb-6">{t.expertise_sectors.page.guseira_tuyeres_cta_subtitle}</p>
                             <div className="flex justify-center">
                               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                                   <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                                       <MessageCircle className="mr-2 h-5 w-5" />
-                                      Atendimento
+                                      {t.header.contact}
                                   </Link>
                               </Button>
                             </div>
@@ -414,7 +452,7 @@ export function GuseiraHousingsSection() {
 }
 
 export function GuseiraWearPlatesSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const photoImage = PlaceHolderImages.find(img => img.id === 'guseira-analise-quimica-1');
   const drawingImage = PlaceHolderImages.find(img => img.id === 'guseira-analise-quimica-2');
@@ -494,16 +532,16 @@ export function GuseiraWearPlatesSection() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-              Analise química Spectro
+              {guseiraCopy[language].chemicalTitle}
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              A análise química é realizada retirando corpos de prova durante a montagem da carga. São retiradas amostras, resfriadas e polidas para serem analisadas, onde o profissional Químico faz as correções necessárias com materiais Fe Cr, Fe Si, Fe W, Mo, Co entre outros necessários para cada liga, isto de acordo com informações dadas por normas e pelo Eng. Metalúrgico.
+              {guseiraCopy[language].chemicalText}
             </p>
             <div className="flex">
               <Button asChild size="lg" className="w-full sm:w-auto">
                   <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="mr-2 h-5 w-5" />
-                      Fale com um Especialista
+                      {t.expertise_sectors.page.guseira_wear_plates_cta_button}
                       <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
               </Button>
@@ -516,6 +554,7 @@ export function GuseiraWearPlatesSection() {
 }
 
 export function GuseiraStructuralComponentsSection() {
+    const { t } = useLanguage();
     const image = PlaceHolderImages.find(img => img.id === 'guseira-structural-component');
     const newImage = PlaceHolderImages.find(img => img.id === 'guseira-new-structural-component');
   
@@ -533,7 +572,7 @@ export function GuseiraStructuralComponentsSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                  PROJETO COLUNAS DE REAÇÃO SERPENTINAS GLENDONS
+                  {t.expertise_sectors.page.guseira_staves_title}
               </motion.h2>
               <div className="grid md:grid-cols-2 gap-8 w-full max-w-6xl">
                 <motion.div 
@@ -577,7 +616,7 @@ export function GuseiraStructuralComponentsSection() {
   }
 
 export function GuseiraMediaSection({ videoUrls, imageIds }: { videoUrls: string[], imageIds: string[] }) {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
 
   const images = imageIds.map(id => PlaceHolderImages.find(img => img.id === id)).filter((img): img is ImagePlaceholder => !!img);
 
@@ -601,10 +640,10 @@ export function GuseiraMediaSection({ videoUrls, imageIds }: { videoUrls: string
           transition={{ duration: 0.8 }}
         >
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground mb-4 tracking-tight">
-            Componentes Fundidos e Usinados em Ação
+            {guseiraCopy[language].mediaTitle}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Veja nossos processos de fabricação e a qualidade final das peças que produzimos para a indústria de ferro gusa.
+            {guseiraCopy[language].mediaText}
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto justify-center">
@@ -622,7 +661,7 @@ export function GuseiraMediaSection({ videoUrls, imageIds }: { videoUrls: string
                   <LazyVideo
                     src={item.url}
                     className="h-full w-full object-cover"
-                    ariaLabel="Vídeo industrial da Aceros reproduzido sem áudio"
+                    ariaLabel={guseiraCopy[language].videoLabel}
                   />
                 ) : (
                   <Image

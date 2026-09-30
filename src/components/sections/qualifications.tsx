@@ -9,7 +9,14 @@ import { qualificationsData } from '@/lib/expertise-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Qualifications() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const labels = {
+    pt: ['Precisão documentada', 'Metrologia rastreada', 'Controle dimensional realizado em ambiente climatizado.'],
+    en: ['Documented precision', 'Traceable metrology', 'Dimensional inspection in a climate-controlled room.'],
+    es: ['Precisión documentada', 'Metrología trazable', 'Control dimensional en un ambiente climatizado.'],
+    de: ['Dokumentierte Präzision', 'Rückführbare Messtechnik', 'Maßprüfung in einem klimatisierten Raum.'],
+    it: ['Precisione documentata', 'Metrologia tracciabile', 'Controllo dimensionale in ambiente climatizzato.'],
+  }[language];
   const qualificationsHeroImage = PlaceHolderImages.find(
     image => image.id === 'qualifications-hero'
   );
@@ -48,7 +55,7 @@ export function Qualifications() {
           <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
             <div className="animate-slide-in-left">
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-accent">
-                Precisão documentada
+                {labels[0]}
               </p>
               <h2 className="mb-6 font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 {t.qualifications.expertise_title}
@@ -69,8 +76,8 @@ export function Qualifications() {
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#07121e]/95 to-transparent px-6 pb-5 pt-16 text-white">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">Metrologia rastreada</p>
-                <p className="mt-1 text-sm text-slate-200">Controle dimensional realizado em ambiente climatizado.</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">{labels[1]}</p>
+                <p className="mt-1 text-sm text-slate-200">{labels[2]}</p>
               </div>
             </div>
           </div>

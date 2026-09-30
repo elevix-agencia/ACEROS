@@ -16,7 +16,14 @@ import { Eye, Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function SiderurgiaImageGallery() {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+  const heading = {
+    pt: ['Catálogo de Produtos', 'Explore os detalhes técnicos e a precisão de nossos componentes para a indústria siderúrgica.'],
+    en: ['Product Catalogue', 'Explore the technical details and precision of our components for the steel industry.'],
+    es: ['Catálogo de Productos', 'Explore los detalles técnicos y la precisión de nuestros componentes para la industria siderúrgica.'],
+    de: ['Produktkatalog', 'Entdecken Sie die technischen Details und die Präzision unserer Komponenten für die Stahlindustrie.'],
+    it: ['Catalogo Prodotti', 'Scopri i dettagli tecnici e la precisione dei nostri componenti per l’industria siderurgica.'],
+  }[language];
 
   const imageIds = [
     'siderurgia-new-gallery-1',
@@ -34,10 +41,10 @@ export function SiderurgiaImageGallery() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="mb-4 font-headline text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-            Catálogo de Produtos
+            {heading[0]}
           </h2>
           <p className="mx-auto max-w-3xl text-lg sm:text-xl text-muted-foreground">
-            Explore os detalhes técnicos e a precisão de nossos componentes para a indústria siderúrgica.
+            {heading[1]}
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -84,10 +84,10 @@ export function HotStripMillRollers() {
           </div>
           <div className="animate-slide-in-right">
             <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-accent-foreground sm:text-4xl">
-              ROLOS PARA TRANSPORTE DE TIRAS A QUENTE (HSP)
+              {t.expertise_sectors.page.hsp_title}
             </h2>
             <p className="mb-8 text-lg text-accent-foreground/90">
-              Nova geração de rolos para MESA DE TRANSFERÊNCIA, MESA DE SAÍDA, LOOPER, TENSION (tensão), PINCH (aperto) e WRAPPER (enrolador).
+              {t.expertise_sectors.page.hsp_description}
             </p>
 
             <div className="space-y-6 mb-10">
@@ -97,10 +97,10 @@ export function HotStripMillRollers() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-accent-foreground">
-                    Processo Bi-metálico
+                    {t.expertise_sectors.page.hsp_feature1_title}
                   </h4>
                   <p className="text-accent-foreground/80">
-                    Microestrutura de aço inoxidável martensítico e ferrítico com camada externa dura e interna com menor dureza e resistente.
+                    {t.expertise_sectors.page.hsp_feature1_description}
                   </p>
                 </div>
               </div>
@@ -110,10 +110,10 @@ export function HotStripMillRollers() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-accent-foreground">
-                    Garantia de Performance
+                    {t.expertise_sectors.page.hsp_feature2_title}
                   </h4>
                   <p className="text-accent-foreground/80">
-                    Redução máxima de runout de 0,5 mm (mono-metálica) ou 0,3 mm (bi-metálica) por milhão de tonelada processada.
+                    {t.expertise_sectors.page.hsp_feature2_description}
                   </p>
                 </div>
               </div>
@@ -123,10 +123,10 @@ export function HotStripMillRollers() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-accent-foreground">
-                    Aplicações Críticas
+                    {t.expertise_sectors.page.hsp_feature3_title}
                   </h4>
                   <p className="text-accent-foreground/80">
-                    Para rolos (pinch rollers), utilizamos uma mesa bi-metálica centrifugada para garantir o melhor desempenho.
+                    {t.expertise_sectors.page.hsp_feature3_description}
                   </p>
                 </div>
               </div>
@@ -140,7 +140,7 @@ export function HotStripMillRollers() {
               >
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Solicitar Orçamento
+                  {t.hero.contact_us}
                 </Link>
               </Button>
             </div>

@@ -20,13 +20,14 @@ import {
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import { useLanguage } from '@/hooks/use-language';
+import { galleryCaptions } from '@/lib/i18n/gallery-copy';
 
 const galleryImages = PlaceHolderImages.filter(
   img => img.id.startsWith('product-gallery-') || img.id.startsWith('history-')
 );
 
 export function MainGallery() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   );
@@ -59,6 +60,7 @@ export function MainGallery() {
           <CarouselContent className="-ml-4">
             {galleryImages.map((image, index) => {
               const isTechnicalPanel = image.id.startsWith('history-');
+              const caption = galleryCaptions[language][index] || image.description;
 
               return (
                 <CarouselItem
@@ -76,7 +78,7 @@ export function MainGallery() {
                       <DialogTrigger asChild>
                         <button
                           type="button"
-                          aria-label={image.description}
+                          aria-label={caption}
                           className="group block w-full cursor-pointer rounded-2xl text-left transition-transform duration-500 hover:scale-105"
                         >
                           <Card className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-primary/20">
@@ -93,7 +95,7 @@ export function MainGallery() {
                             <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                             <div className="relative min-h-20 bg-slate-950 px-5 py-4 text-white">
                               <p className="text-sm font-semibold leading-relaxed sm:text-base">
-                                {image.description}
+                                {caption}
                               </p>
                             </div>
                           </Card>
@@ -104,13 +106,13 @@ export function MainGallery() {
                     <DialogContent className="max-w-4xl p-2 sm:p-4 bg-background border-accent/20">
                       <DialogHeader>
                         <DialogTitle className="text-foreground sr-only">
-                          {image.description}
+                          {caption}
                         </DialogTitle>
                       </DialogHeader>
                       <div className="relative aspect-video w-full mt-4">
                         <Image
                           src={image.imageUrl}
-                          alt={image.description}
+                          alt={caption}
                           fill
                           sizes="90vw"
                           data-ai-hint={image.imageHint}

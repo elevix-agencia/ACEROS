@@ -58,7 +58,7 @@ export function BarFurnaceProducts() {
               >
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Orçamento
+                  {t.hero.contact_us}
                 </Link>
               </Button>
             </div>

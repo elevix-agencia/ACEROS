@@ -37,7 +37,14 @@ function formatProductTitle(title: string) {
 }
 
 export function MiningProducts() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const contactCopy = {
+    pt: ['Fale conosco no WhatsApp', 'Tem alguma dúvida ou precisa de um orçamento personalizado? Nossa equipe está pronta para ajudar.'],
+    en: ['Talk to us on WhatsApp', 'Have a question or need a custom quote? Our team is ready to help.'],
+    es: ['Hable con nosotros por WhatsApp', '¿Tiene alguna pregunta o necesita una cotización personalizada? Nuestro equipo está listo para ayudar.'],
+    de: ['Kontaktieren Sie uns über WhatsApp', 'Haben Sie Fragen oder benötigen Sie ein individuelles Angebot? Unser Team hilft Ihnen gerne.'],
+    it: ['Parla con noi su WhatsApp', 'Hai domande o ti serve un preventivo personalizzato? Il nostro team è pronto ad aiutarti.'],
+  }[language];
 
   const products: MiningProduct[] = [
     {
@@ -170,11 +177,10 @@ export function MiningProducts() {
 
         <div className="mt-20 text-center animate-fade-in-up">
           <h3 className="mb-4 font-headline text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Fale conosco no WhatsApp
+            {contactCopy[0]}
           </h3>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground mb-8">
-            Tem alguma dúvida ou precisa de um orçamento personalizado? Nossa
-            equipe está pronta para ajudar.
+            {contactCopy[1]}
           </p>
           <div className="flex justify-center">
             <Button
@@ -184,7 +190,7 @@ export function MiningProducts() {
             >
               <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-3 h-5 w-5" />
-                Atendimento
+                {t.header.contact}
               </Link>
             </Button>
           </div>

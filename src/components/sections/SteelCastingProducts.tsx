@@ -15,8 +15,11 @@ import {
 } from '../ui/dialog';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '@/hooks/use-language';
 
 export function SteelCastingProducts() {
+  const { t, language } = useLanguage();
+  const copy = t.expertise_sectors.siderurgia.solutions.siderurgia_continuous_casting;
   const productImage = PlaceHolderImages.find(
     (img) => img.id === 'steel-casting-roller'
   );
@@ -86,17 +89,17 @@ export function SteelCastingProducts() {
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           >
             <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-accent sm:text-4xl">
-              LINGOTAMENTO CONTÍNUO
+              {copy.title}
             </h2>
             <p className="mb-6 text-lg text-muted-foreground">
-              Rolos para Máquinas de Lingotamento Contínuo: Rolos monometálicos e bi-metálicos e rolos padrão revestidos por soldagem (welded). Estes rolos de aço inoxidável martensíticos (42 a 48 HRC), através do controle de enxofre, carbono e fósforo, garantem a ausência de trincas térmicas quando em contato com as placas do lingotamento contínuo. Estes rolos estão em funcionamento nas máquinas de lingotamento brasileiras e no exterior e produzem cerca de 3,5 milhões de toneladas de placas sem qualquer necessidade de troca ou repasse (re-usinagem) dos rolos.
+              {copy.description}
             </p>
 
             <div className="flex">
               <Button asChild size="lg" className="transition-transform hover:scale-105">
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Orçamento
+                  {language === 'pt' ? 'Orçamento' : language === 'es' ? 'Cotización' : language === 'de' ? 'Angebot' : language === 'it' ? 'Preventivo' : 'Quote'}
                 </Link>
               </Button>
             </div>

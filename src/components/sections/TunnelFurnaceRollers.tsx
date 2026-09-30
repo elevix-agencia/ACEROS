@@ -14,8 +14,12 @@ import {
   DialogTrigger,
 } from '../ui/dialog';
 import { MessageCircle } from 'lucide-react';
+import { useLanguage } from '@/hooks/use-language';
+import { steelDetailCopy } from '@/lib/i18n/steel-detail-copy';
 
 export function TunnelFurnaceRollers() {
+  const { language, t } = useLanguage();
+  const copy = steelDetailCopy[language];
   const productImage = PlaceHolderImages.find(
     (img) => img.id === 'tunnel-furnace-roller'
   );
@@ -71,27 +75,27 @@ export function TunnelFurnaceRollers() {
           </div>
           <div className="animate-slide-in-left md:order-first">
             <h2 className="mb-4 font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              ROLOS PARA FORNOS
+              {t.expertise_sectors.siderurgia.solutions.siderurgia_tunnel_furnace_rollers.title}
             </h2>
             <p className="mb-6 text-lg text-muted-foreground">
-              Rolos resfriados (cooled) e não resfriados (uncooled) fazem parte da produção padrão da ACEROS. Até o momento, mais de 800 rolos foram fornecidos a Clientes de alto potencial. Podemos fornecer tanto projetos próprios quanto projetos conforme o Cliente.
+              {copy.tunnelIntro}
             </p>
 
             <div className="space-y-4 text-muted-foreground mb-10">
               <div>
                 <h4 className="font-semibold text-lg text-foreground">
-                  Soluções Especiais e Rolo Refrigerado
+                  {copy.cooledTitle}
                 </h4>
                 <p>
-                  Foram desenvolvidas soluções especiais para lidar com problemas de aderência de carepa (scale pick-up). O rolo molhado (wet roll) é equipado com anéis (rodas/ tyrerings - rodas metálicas) fabricados por processo centrífugo (anéis tri-metálicos) ou por fundição estática. O isolamento térmico aprimorado permite bom desempenho e perdas de calor limitadas. Os rolos resfriados garantem o trabalho por um período não inferior a 18 meses de serviço contínuo até uma temperatura de 1.300°C limite.
+                  {copy.cooledText}
                 </p>
               </div>
               <div>
                 <h4 className="font-semibold text-lg text-foreground">
-                  Rolo Seco
+                  {copy.dryTitle}
                 </h4>
                 <p>
-                  O rolo seco é fundido usando uma superliga que minimiza a aderência de carepa (scale pick-up) e suporta temperaturas mais elevadas, de até 1.280°C.
+                  {copy.dryText}
                 </p>
               </div>
             </div>
@@ -100,7 +104,7 @@ export function TunnelFurnaceRollers() {
               <Button asChild size="lg">
                 <Link href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Solicitar Orçamento
+                  {t.hero.contact_us}
                 </Link>
               </Button>
             </div>
