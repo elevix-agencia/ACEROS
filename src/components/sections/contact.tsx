@@ -142,7 +142,14 @@ export function Contact() {
                   <form
                     onSubmit={form.handleSubmit(onSubmit)}
                     className="space-y-6"
+                    name="contato"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    encType="multipart/form-data"
                   >
+                    <input type="hidden" name="form-name" value="contato" />
+                    <p hidden><label>Não preencher: <input name="bot-field" /></label></p>
                     <div className="grid gap-6 sm:grid-cols-2">
                       <FormField control={form.control} name="name" render={({ field }) => (
                         <FormItem>

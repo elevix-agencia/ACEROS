@@ -372,7 +372,19 @@ export function BuchaInoxClient() {
               </div>
             </div>
             <div className="p-8 md:p-12">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+                name="lp-bucha"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                encType="multipart/form-data"
+              >
+                <input type="hidden" name="form-name" value="lp-bucha" />
+                <input type="hidden" name="source" value="lp-bucha" />
+                <input type="hidden" name="product" value="Buchas de aço inox centrifugadas" />
+                <p hidden><label>Não preencher: <input name="bot-field" /></label></p>
                 <div className="grid grid-cols-1 gap-4">
                   <div><label htmlFor="bucha-name" className="text-sm font-bold text-slate-700 block mb-2">{c.formName} *</label><Input id="bucha-name" name="name" autoComplete="name" placeholder={c.formNamePh} required className="bg-slate-50 border-slate-200" disabled={isSubmitting} /></div>
                   <div><label htmlFor="bucha-company" className="text-sm font-bold text-slate-700 block mb-2">{c.formCompany} *</label><Input id="bucha-company" name="company" autoComplete="organization" placeholder={c.formCompanyPh} required className="bg-slate-50 border-slate-200" disabled={isSubmitting} /></div>

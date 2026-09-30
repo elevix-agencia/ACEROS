@@ -1,0 +1,121 @@
+<!doctype html>
+<!--
+  Arquivo detectado pelo build do Netlify para registrar os forms do site.
+  O Next.js server-renderiza os forms sem os atributos que o Netlify parseia,
+  entao replicamos aqui em HTML puro pra habilitar o Netlify Forms.
+  Os componentes React submetem via fetch para "/" com o campo form-name.
+
+  Notificacao de email configurada no painel Netlify (Forms > Settings)
+  para chegar em vendas@aceros.com.br.
+-->
+<html>
+  <head><meta charset="utf-8" /><title>Formularios Aceros</title></head>
+  <body>
+    <form name="contato" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contato" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <input name="product" />
+      <input name="material" />
+      <input name="dimensions" />
+      <input name="deadline" />
+      <input name="location" />
+      <input name="drawing" type="file" />
+      <textarea name="message"></textarea>
+      <input name="privacy" type="checkbox" />
+    </form>
+
+    <form name="lp-bucha" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="lp-bucha" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input name="phone" type="tel" />
+      <input name="city" />
+      <input name="email" type="email" />
+      <input name="material" />
+      <input name="deadline" />
+      <input name="dimensions" />
+      <input name="drawing" type="file" />
+      <textarea name="message"></textarea>
+      <input name="privacy" type="checkbox" />
+      <input name="product" />
+      <input name="source" />
+    </form>
+
+    <form name="lp-tubos" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="lp-tubos" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input name="phone" type="tel" />
+      <input name="city" />
+      <input name="email" type="email" />
+      <input name="material" />
+      <input name="deadline" />
+      <input name="dimensions" />
+      <input name="drawing" type="file" />
+      <textarea name="message"></textarea>
+      <input name="privacy" type="checkbox" />
+      <input name="product" />
+      <input name="source" />
+    </form>
+
+    <form name="lp-rolos-forno" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="lp-rolos-forno" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input name="phone" type="tel" />
+      <input name="email" type="email" />
+      <input name="city" />
+      <input name="material" />
+      <input name="deadline" />
+      <input name="dimensions" />
+      <input name="drawing" type="file" />
+      <textarea name="message"></textarea>
+      <input name="privacy" type="checkbox" />
+      <input name="product" />
+      <input name="source" />
+    </form>
+
+    <form name="lp-sink-rolls" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="lp-sink-rolls" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input name="phone" type="tel" />
+      <input name="email" type="email" />
+      <input name="city" />
+      <input name="material" />
+      <input name="deadline" />
+      <input name="dimensions" />
+      <input name="drawing" type="file" />
+      <textarea name="message"></textarea>
+      <input name="privacy" type="checkbox" />
+      <input name="product" />
+      <input name="source" />
+    </form>
+
+    <form name="lp-fundicao-centrifugada" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="lp-fundicao-centrifugada" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input name="phone" type="tel" />
+      <input name="email" type="email" />
+      <input name="city" />
+      <input name="material" />
+      <input name="deadline" />
+      <input name="dimensions" />
+      <input name="drawing" type="file" />
+      <textarea name="message"></textarea>
+      <input name="privacy" type="checkbox" />
+      <input name="product" />
+      <input name="source" />
+    </form>
+  </body>
+</html>

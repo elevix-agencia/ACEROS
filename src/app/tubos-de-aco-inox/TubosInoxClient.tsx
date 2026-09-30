@@ -347,7 +347,19 @@ export function TubosInoxClient() {
               </div>
             </div>
             <div className="p-8 md:p-12">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6"
+                name="lp-tubos"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                encType="multipart/form-data"
+              >
+                <input type="hidden" name="form-name" value="lp-tubos" />
+                <input type="hidden" name="source" value="lp-tubos" />
+                <input type="hidden" name="product" value="Tubos de aço inox centrifugados" />
+                <p hidden><label>Não preencher: <input name="bot-field" /></label></p>
                 <div className="grid grid-cols-1 gap-4">
                   <div><label htmlFor="tubos-name" className="text-sm font-bold text-slate-700 block mb-2">{c.formName} *</label><Input id="tubos-name" name="name" autoComplete="name" placeholder={c.formNamePh} required className="bg-slate-50 border-slate-200" disabled={isSubmitting} /></div>
                   <div><label htmlFor="tubos-company" className="text-sm font-bold text-slate-700 block mb-2">{c.formCompany} *</label><Input id="tubos-company" name="company" autoComplete="organization" placeholder={c.formCompanyPh} required className="bg-slate-50 border-slate-200" disabled={isSubmitting} /></div>

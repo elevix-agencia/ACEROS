@@ -376,7 +376,19 @@ export function IndustrialCampaignPage({
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#a94700]">{u.quoteEyebrow}</p>
             <h2 className="mt-3 font-headline text-3xl font-bold">{u.quoteTitle}</h2>
             <p className="mt-3 leading-7 text-slate-600">{u.quoteLead}</p>
-            <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+            <form
+              onSubmit={handleSubmit}
+              className="mt-8 space-y-5"
+              name={data.source}
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              encType="multipart/form-data"
+            >
+              <input type="hidden" name="form-name" value={data.source} />
+              <input type="hidden" name="source" value={data.source} />
+              <input type="hidden" name="product" value={data.title} />
+              <p hidden><label>Não preencher: <input name="bot-field" /></label></p>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div><label htmlFor={`${data.source}-name`} className="mb-2 block text-sm font-bold text-slate-700">{u.formName} *</label><Input id={`${data.source}-name`} name="name" autoComplete="name" required minLength={2} className="h-12 rounded-none bg-white" disabled={isSubmitting} /></div>
                 <div><label htmlFor={`${data.source}-company`} className="mb-2 block text-sm font-bold text-slate-700">{u.formCompany} *</label><Input id={`${data.source}-company`} name="company" autoComplete="organization" required className="h-12 rounded-none bg-white" disabled={isSubmitting} /></div>
