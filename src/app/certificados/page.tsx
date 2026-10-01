@@ -3,7 +3,7 @@ import { CertificatesCta } from '@/components/sections/certificates-cta';
 import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 
 export const metadata: Metadata = {
-  title: 'Certificações e Referências Técnicas | Aceros',
+  title: 'Certificações e Referências Técnicas',
   description:
     'Certificações do sistema de gestão, documentos técnicos e referências de classificadoras aplicáveis aos fornecimentos da Aceros.',
   alternates: { canonical: '/certificados' },
