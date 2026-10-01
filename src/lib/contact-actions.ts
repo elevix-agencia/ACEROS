@@ -62,6 +62,19 @@ export async function saveContactMessage(
       };
     }
 
+    // dataLayer push para GTM: dispara evento de conversão no sucesso.
+    // Tags de GA4 e Google Ads escutam 'lead_submit' no GTM-WMKKZ3CL.
+    if (typeof window !== 'undefined') {
+      const w = window as unknown as { dataLayer?: Array<Record<string, unknown>> };
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({
+        event: 'lead_submit',
+        form_name: formName,
+        form_source: source || 'contato',
+        page_path: window.location.pathname,
+      });
+    }
+
     return { success: true, hasAttachment };
   } catch (error: unknown) {
     console.error(
