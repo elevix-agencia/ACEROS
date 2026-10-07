@@ -16,6 +16,7 @@ import { useLanguage } from '@/hooks/use-language';
 
 const STORAGE_KEY = 'aceros-cookie-consent-v1';
 const GTM_ID = 'GTM-WMKKZ3CL';
+const CLARITY_ID = 'yu71rpxkgf';
 
 type Consent = {
   analytics: boolean;
@@ -110,6 +111,34 @@ function loadGoogleTagManager() {
   document.head.appendChild(script);
 }
 
+function loadClarity() {
+  // Microsoft Clarity: heatmaps + gravacoes de sessao. So carrega apos
+  // consentimento LGPD (analytics_storage granted). Clarity mascara campos
+  // sensiveis por padrao e nao coleta PII.
+  if (document.querySelector(`script[data-clarity-id="${CLARITY_ID}"]`)) return;
+
+  const trackedWindow = window as Window & {
+    clarity?: ((...args: unknown[]) => void) & { q?: unknown[][] };
+  };
+
+  const clarityFn = function (...args: unknown[]) {
+    (clarityFn.q = clarityFn.q || []).push(args);
+  } as ((...args: unknown[]) => void) & { q?: unknown[][] };
+
+  trackedWindow.clarity = trackedWindow.clarity || clarityFn;
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
+  script.dataset.clarityId = CLARITY_ID;
+  const firstScript = document.getElementsByTagName('script')[0];
+  if (firstScript?.parentNode) {
+    firstScript.parentNode.insertBefore(script, firstScript);
+  } else {
+    document.head.appendChild(script);
+  }
+}
+
 function disableGoogleTagManager() {
   updateConsent(false);
   const scripts = document.querySelectorAll<HTMLScriptElement>('script[src*="googletagmanager.com"]');
@@ -122,6 +151,25 @@ function disableGoogleTagManager() {
   document.cookie.split(';').forEach((cookie) => {
     const name = cookie.split('=')[0]?.trim();
     if (name && (name === '_ga' || name === '_gid' || name === '_gat' || name.startsWith('_ga_'))) {
+      document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
+    }
+  });
+
+  return wasLoaded;
+}
+
+function disableClarity() {
+  const scripts = document.querySelectorAll<HTMLScriptElement>('script[src*="clarity.ms"]');
+  const wasLoaded = scripts.length > 0;
+  scripts.forEach((script) => script.remove());
+
+  const trackedWindow = window as Window & { clarity?: unknown };
+  delete trackedWindow.clarity;
+
+  // Clarity cookies: _clck (user id), _clsk (session id)
+  document.cookie.split(';').forEach((cookie) => {
+    const name = cookie.split('=')[0]?.trim();
+    if (name && (name === '_clck' || name === '_clsk' || name.startsWith('CLID'))) {
       document.cookie = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
     }
   });
@@ -144,7 +192,10 @@ export function CookieConsent() {
       try {
         const consent = JSON.parse(saved) as Consent;
         setAnalytics(consent.analytics);
-        if (consent.analytics) loadGoogleTagManager();
+        if (consent.analytics) {
+          loadGoogleTagManager();
+          loadClarity();
+        }
       } catch {
         localStorage.removeItem(STORAGE_KEY);
         setHasChoice(false);
@@ -173,8 +224,13 @@ export function CookieConsent() {
 
     if (allowAnalytics) {
       loadGoogleTagManager();
-    } else if (disableGoogleTagManager()) {
-      window.location.reload();
+      loadClarity();
+    } else {
+      const gtmWasLoaded = disableGoogleTagManager();
+      const clarityWasLoaded = disableClarity();
+      if (gtmWasLoaded || clarityWasLoaded) {
+        window.location.reload();
+      }
     }
   }
 
