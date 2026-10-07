@@ -15,7 +15,7 @@ import {
 import { useLanguage } from '@/hooks/use-language';
 
 const STORAGE_KEY = 'aceros-cookie-consent-v1';
-const GTM_ID = 'GTM-WMKKZ3CL';
+const GTM_ID = 'GTM-TXCX4GXT';
 const GOOGLE_TAG_ID = 'GT-WR9QFSW7';
 const CLARITY_ID = 'yu71rpxkgf';
 
