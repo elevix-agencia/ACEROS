@@ -16,6 +16,7 @@ import { useLanguage } from '@/hooks/use-language';
 
 const STORAGE_KEY = 'aceros-cookie-consent-v1';
 const GTM_ID = 'GTM-WMKKZ3CL';
+const GOOGLE_TAG_ID = 'GT-WR9QFSW7';
 const CLARITY_ID = 'yu71rpxkgf';
 
 type Consent = {
@@ -111,6 +112,21 @@ function loadGoogleTagManager() {
   document.head.appendChild(script);
 }
 
+function loadGoogleAnalytics() {
+  if (document.querySelector(`script[data-google-tag-id="${GOOGLE_TAG_ID}"]`)) return;
+
+  const trackedWindow = window as Window & { gtag?: GtagFn };
+  if (typeof trackedWindow.gtag !== 'function') return;
+  trackedWindow.gtag('js', new Date());
+  trackedWindow.gtag('config', GOOGLE_TAG_ID);
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`;
+  script.dataset.googleTagId = GOOGLE_TAG_ID;
+  document.head.appendChild(script);
+}
+
 function loadClarity() {
   // Microsoft Clarity: heatmaps + gravacoes de sessao. So carrega apos
   // consentimento LGPD (analytics_storage granted). Clarity mascara campos
@@ -194,6 +210,7 @@ export function CookieConsent() {
         setAnalytics(consent.analytics);
         if (consent.analytics) {
           loadGoogleTagManager();
+          loadGoogleAnalytics();
           loadClarity();
         }
       } catch {
@@ -224,6 +241,7 @@ export function CookieConsent() {
 
     if (allowAnalytics) {
       loadGoogleTagManager();
+      loadGoogleAnalytics();
       loadClarity();
     } else {
       const gtmWasLoaded = disableGoogleTagManager();
