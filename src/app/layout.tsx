@@ -4,6 +4,7 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { AppProviders } from './providers';
 import { CookieConsent } from '@/components/layout/cookie-consent';
+import { ContactClickTracking } from '@/components/layout/contact-click-tracking';
 
 const siteUrl = 'https://aceros.com.br';
 
@@ -172,6 +173,7 @@ export default function RootLayout({
         <AppProviders>
           {children}
           <CookieConsent />
+          <ContactClickTracking />
         </AppProviders>
       </body>
     </html>

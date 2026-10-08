@@ -210,8 +210,6 @@ export function IndustrialCampaignPage({
       const result = await saveContactMessage(fields);
       if (!result.success) throw new Error(result.error);
 
-      const trackedWindow = window as Window & { dataLayer?: Array<Record<string, unknown>> };
-      trackedWindow.dataLayer?.push({ event: 'generate_lead', lead_source: data.source });
       toast({ title: u.toastSuccessTitle, description: u.toastSuccessDesc });
       form.reset();
     } catch (error) {

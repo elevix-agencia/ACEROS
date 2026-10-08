@@ -1,5 +1,7 @@
 'use client';
 
+import { hasAnalyticsConsent } from '@/lib/analytics-consent';
+
 // Envia formulario para o Netlify Forms via application/x-www-form-urlencoded.
 // Motivo: com Next.js SSR, POST em "/" com multipart/form-data cai no handler
 // do Next.js (404). Netlify so captura urlencoded. Portanto anexo de arquivo
@@ -14,6 +16,14 @@ const SOURCE_TO_FORM: Record<string, string> = {
   'lp-rolos-forno': 'lp-rolos-forno',
   'lp-sink-rolls': 'lp-sink-rolls',
   'lp-fundicao-centrifugada': 'lp-fundicao-centrifugada',
+};
+
+const SOURCE_TO_SERVICE: Record<string, string> = {
+  'lp-tubos': 'tubos_aco_inox',
+  'lp-bucha': 'buchas_aco_inox',
+  'lp-rolos-forno': 'rolos_para_fornos',
+  'lp-sink-rolls': 'sink_rolls',
+  'lp-fundicao-centrifugada': 'fundicao_centrifugada',
 };
 
 function resolveFormName(source: string | null): string {
@@ -62,15 +72,20 @@ export async function saveContactMessage(
       };
     }
 
-    // dataLayer push para GTM: dispara evento de conversão no sucesso.
-    // Tags de GA4 e Google Ads escutam 'lead_submit' no GTM-WMKKZ3CL.
-    if (typeof window !== 'undefined') {
+    // Um único evento após a confirmação do Netlify, sem dados pessoais,
+    // valor ou moeda. Formulários enviados sem consentimento não são medidos.
+    if (hasAnalyticsConsent()) {
       const w = window as unknown as { dataLayer?: Array<Record<string, unknown>> };
       w.dataLayer = w.dataLayer || [];
       w.dataLayer.push({
-        event: 'lead_submit',
+        event: 'generate_lead',
+        lead_type: 'orcamento',
+        lead_source: source && SOURCE_TO_FORM[source] ? source : 'website',
+        contact_method: 'form',
         form_name: formName,
-        form_source: source || 'contato',
+        ...(source && SOURCE_TO_SERVICE[source]
+          ? { service_name: SOURCE_TO_SERVICE[source] }
+          : {}),
         page_path: window.location.pathname,
       });
     }
