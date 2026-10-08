@@ -1,6 +1,7 @@
 'use client';
 
 import { hasAnalyticsConsent } from '@/lib/analytics-consent';
+import { trackFormError } from '@/lib/form-analytics';
 
 // Envia formulario para o Netlify Forms via application/x-www-form-urlencoded.
 // Motivo: com Next.js SSR, POST em "/" com multipart/form-data cai no handler
@@ -34,6 +35,7 @@ function resolveFormName(source: string | null): string {
 export async function saveContactMessage(
   data: unknown,
 ): Promise<{ success: boolean; error?: string; hasAttachment?: boolean }> {
+  let formName = 'contato';
   try {
     const params = new URLSearchParams();
     let hasAttachment = false;
@@ -54,7 +56,7 @@ export async function saveContactMessage(
     }
 
     const source = params.get('source');
-    const formName = resolveFormName(source);
+    formName = resolveFormName(source);
     params.set('form-name', formName);
 
     const response = await fetch('/__forms.html', {
@@ -65,6 +67,7 @@ export async function saveContactMessage(
 
     if (!response.ok) {
       console.error('[contact] Netlify Forms retornou erro:', response.status);
+      trackFormError(formName, 'submission_failed');
       return {
         success: false,
         error:
@@ -96,6 +99,7 @@ export async function saveContactMessage(
       '[contact] Erro ao enviar formulário:',
       error instanceof Error ? error.message : 'erro desconhecido',
     );
+    trackFormError(formName, 'network');
     return {
       success: false,
       error:

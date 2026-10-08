@@ -13,6 +13,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Phone, Mail, MapPin, Send, MessageCircle, Clock3 } from 'lucide-react';
 import { LocationMap } from './location-map';
 import { saveContactMessage } from '@/lib/contact-actions';
+import { trackFormError } from '@/lib/form-analytics';
 import { useToast } from '@/hooks/use-toast';
 import {
   Form,
@@ -140,7 +141,7 @@ export function Contact() {
                 </p>
                 <Form {...form}>
                   <form
-                    onSubmit={form.handleSubmit(onSubmit)}
+                    onSubmit={form.handleSubmit(onSubmit, () => trackFormError('contato', 'validation'))}
                     className="space-y-6"
                     name="contato"
                     method="POST"
