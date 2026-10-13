@@ -13,3 +13,29 @@
   status = 200
   force = true
   conditions = { method = ["POST"] }
+
+# Redirecionamentos de enderecos antigos (site anterior) para evitar 404 no
+# Search Console. Todos permanentes (301) para a home.
+[[redirects]]
+  from = "/index.php"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/negocios"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/negocios/*"
+  to = "/"
+  status = 301
+  force = true
