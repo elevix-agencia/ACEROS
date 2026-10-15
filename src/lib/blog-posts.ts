@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     categoria: 'Engenharia',
     tempoLeitura: '4 min',
     dataPublicacao: '2026-10-15',
-    imagem: '/images/aceros/generated/blog-orcamento-peca-sob-medida-v1.jpg',
+    imagem: '/images/aceros/generated/blog-orcamento-peca-sob-medida-aco-inox-sao-paulo-aceros.jpg',
     imagemAlt: 'Desenho técnico e peça de aço inox usinada sobre a bancada para pedido de orçamento sob medida',
     keywords: ['orçamento peça sob medida', 'aço inox sob medida', 'cotação tubos de aço inox', 'buchas de aço inox'],
     conteudo: `
