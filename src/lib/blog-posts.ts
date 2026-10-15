@@ -19,6 +19,52 @@ export function formatBlogDate(date: string) {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'como-pedir-orcamento-peca-sob-medida-aco-inox',
+    titulo: 'Como pedir orçamento de peça sob medida em aço inox: o que enviar',
+    descricao:
+      'Veja o que informar ao pedir orçamento de tubos, buchas e peças sob medida em aço inox para receber uma resposta mais rápida e sem retrabalho.',
+    categoria: 'Engenharia',
+    tempoLeitura: '4 min',
+    dataPublicacao: '2026-10-15',
+    imagem: '/images/aceros/generated/blog-orcamento-peca-sob-medida-v1.jpg',
+    imagemAlt: 'Desenho técnico e peça de aço inox usinada sobre a bancada para pedido de orçamento sob medida',
+    keywords: ['orçamento peça sob medida', 'aço inox sob medida', 'cotação tubos de aço inox', 'buchas de aço inox'],
+    conteudo: `
+<p>Pedir orçamento de uma <strong>peça sob medida em aço inox</strong> fica muito mais rápido quando a equipe técnica recebe, logo no primeiro contato, as informações certas. Um pedido completo evita idas e vindas, reduz erros de interpretação e ajuda a chegar à solução adequada para a aplicação.</p>
+
+<h2>O que enviar no pedido</h2>
+
+<ul>
+  <li><strong>Desenho técnico ou croqui</strong> com dimensões, tolerâncias e acabamento esperado.</li>
+  <li><strong>Material ou liga</strong>, quando já existe uma especificação. Se houver norma indicada, como a ASTM A297, informe também.</li>
+  <li><strong>Quantidade</strong> e se a peça é única ou de uso recorrente.</li>
+  <li><strong>Condições de uso</strong>: temperatura de trabalho, atmosfera, esforços e produto em contato com a peça.</li>
+  <li><strong>Usinagem e acabamento</strong>: se a peça deve chegar pronta para montagem.</li>
+  <li><strong>Prazo desejado</strong> e local de entrega.</li>
+  <li><strong>Fotos e histórico</strong> da peça atual, incluindo falhas e desgastes anteriores.</li>
+</ul>
+
+<h2>E se eu não tiver o desenho?</h2>
+
+<p>Isso é comum. Nesse caso, envie fotos da peça, as medidas que você conseguir tomar e, se possível, uma peça de referência. A equipe técnica avalia o material enviado e orienta o que ainda precisa ser levantado.</p>
+
+<h2>O que acontece depois do envio</h2>
+
+<p>A engenharia da Aceros avalia o desenho e os requisitos da aplicação para orientar os próximos passos e preparar o orçamento. Se algo estiver incompleto ou houver mais de uma solução possível, a equipe entra em contato para alinhar os detalhes antes de seguir.</p>
+
+<h2>Dicas para evitar retrabalho</h2>
+
+<ul>
+  <li>Informe a <strong>unidade de medida</strong> do desenho e a revisão mais recente.</li>
+  <li>Indique <strong>o que é crítico</strong> na peça: encaixe, vedação, resistência ao calor ou ao desgaste.</li>
+  <li>Se a peça substitui outra, informe <strong>por que a atual precisa ser trocada</strong>.</li>
+  <li>Reúna as informações em <strong>um único envio</strong>, com arquivos legíveis.</li>
+</ul>
+
+<p>Quer pedir um orçamento? Fale com a equipe técnica da Aceros pela página de <a href="/contato">contato</a> e envie as informações acima.</p>
+`,
+  },
+  {
     slug: 'sink-roll-como-escolher-liga',
     titulo: 'Sink Roll: como escolher a liga para linhas de galvanização',
     descricao:
