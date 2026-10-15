@@ -32,31 +32,46 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
     '@type': 'Article',
     headline: post.titulo,
     description: post.descricao,
-    image: `https://aceros-elevix.netlify.app${post.imagem}`,
+    image: `https://aceros.com.br${post.imagem}`,
     datePublished: post.dataPublicacao,
     dateModified: post.dataPublicacao,
-    mainEntityOfPage: `https://aceros-elevix.netlify.app/blog/${post.slug}`,
+    mainEntityOfPage: `https://aceros.com.br/blog/${post.slug}`,
     author: {
       '@type': 'Organization',
       name: 'Aceros Centrifugados LTDA',
-      url: 'https://aceros-elevix.netlify.app',
+      url: 'https://aceros.com.br',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Aceros Centrifugados LTDA',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://aceros-elevix.netlify.app/images/imgur/OBD0nJ0.png',
+        url: 'https://aceros.com.br/images/imgur/OBD0nJ0.png',
       },
     },
   };
 
+  const faqHtml = post.conteudo.split(/<h2>[^<]*Perguntas frequentes[^<]*<\/h2>/i)[1] || '';
+  const faqItems = Array.from(faqHtml.matchAll(/<h3>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)).map((m) => ({
+    '@type': 'Question',
+    name: m[1].replace(/<[^>]+>/g, '').trim(),
+    acceptedAnswer: { '@type': 'Answer', text: m[2].replace(/<[^>]+>/g, '').trim() },
+  }));
+  const faqSchema = faqItems.length
+    ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqItems }
+    : null;
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <article className="bg-background py-12 sm:py-16">
         {/* Hero do post */}
@@ -110,7 +125,7 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
         {/* Conteúdo do post */}
         <div className="container mx-auto px-4 max-w-3xl">
           <div
-            className="blog-content text-base leading-relaxed text-slate-700 sm:text-lg [&_a]:text-[#a94700] hover:[&_a]:underline [&_h2]:mb-4 [&_h2]:mt-12 [&_h2]:font-headline [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-slate-900 md:[&_h2]:text-3xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:font-headline [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-slate-800 md:[&_h3]:text-2xl [&_li]:my-2 [&_p]:mb-6 [&_p]:leading-relaxed [&_strong]:font-semibold [&_strong]:text-slate-900 [&_ul]:my-6 [&_ul]:list-disc [&_ul]:pl-6"
+            className="blog-content text-base leading-relaxed text-slate-700 sm:text-lg [&_a]:text-[#a94700] hover:[&_a]:underline [&_h2]:mb-4 [&_h2]:mt-12 [&_h2]:font-headline [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-slate-900 md:[&_h2]:text-3xl [&_h3]:mb-3 [&_h3]:mt-8 [&_h3]:font-headline [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-slate-800 md:[&_h3]:text-2xl [&_li]:my-2 [&_p]:mb-6 [&_p]:leading-relaxed [&_strong]:font-semibold [&_strong]:text-slate-900 [&_ul]:my-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:my-6 [&_ol]:list-decimal [&_ol]:pl-6"
             dangerouslySetInnerHTML={{ __html: post.conteudo }}
           />
         </div>

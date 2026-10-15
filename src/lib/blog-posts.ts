@@ -24,15 +24,21 @@ export const blogPosts: BlogPost[] = [
     descricao:
       'Veja o que informar ao pedir orçamento de tubos, buchas e peças sob medida em aço inox para receber uma resposta mais rápida e sem retrabalho.',
     categoria: 'Engenharia',
-    tempoLeitura: '4 min',
+    tempoLeitura: '7 min',
     dataPublicacao: '2026-10-15',
     imagem: '/images/aceros/generated/blog-orcamento-peca-sob-medida-aco-inox-sao-paulo-aceros.jpg',
     imagemAlt: 'Desenho técnico e peça de aço inox usinada sobre a bancada para pedido de orçamento sob medida',
-    keywords: ['orçamento peça sob medida', 'aço inox sob medida', 'cotação tubos de aço inox', 'buchas de aço inox'],
+    keywords: ['orçamento peça sob medida', 'aço inox sob medida', 'cotação tubos de aço inox', 'buchas de aço inox', 'peça sob medida São Paulo', 'como pedir orçamento aço inox'],
     conteudo: `
-<p>Pedir orçamento de uma <strong>peça sob medida em aço inox</strong> fica muito mais rápido quando a equipe técnica recebe, logo no primeiro contato, as informações certas. Um pedido completo evita idas e vindas, reduz erros de interpretação e ajuda a chegar à solução adequada para a aplicação.</p>
+<p>Pedir orçamento de uma <strong>peça sob medida em aço inox</strong> fica muito mais rápido quando a equipe técnica recebe, logo no primeiro contato, as informações certas. Um pedido completo evita idas e vindas, reduz erros de interpretação e ajuda a chegar à solução adequada para a aplicação. Neste guia, você vê o que enviar, como proceder quando não há desenho, como cada tipo de peça muda o pedido e quais erros evitar.</p>
 
-<h2>O que enviar no pedido</h2>
+<h2>O que é uma peça sob medida em aço inox</h2>
+
+<p>Peça sob medida é aquela fabricada a partir do desenho, da amostra ou da especificação do cliente, e não retirada de um catálogo de itens padronizados. Tubos centrifugados, buchas, rolos e componentes para fornos e linhas industriais costumam ser fornecidos assim, porque cada aplicação tem temperatura, esforço e geometria próprias.</p>
+
+<p>Como o material e o processo de fabricação dependem da aplicação, o orçamento só fica preciso quando a engenharia entende o que a peça vai enfrentar no dia a dia.</p>
+
+<h2>O que enviar no pedido de orçamento</h2>
 
 <ul>
   <li><strong>Desenho técnico ou croqui</strong> com dimensões, tolerâncias e acabamento esperado.</li>
@@ -44,13 +50,64 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Fotos e histórico</strong> da peça atual, incluindo falhas e desgastes anteriores.</li>
 </ul>
 
+<h2>Por que as condições de uso mudam o orçamento</h2>
+
+<p>Duas peças com o mesmo desenho podem exigir ligas diferentes. A temperatura de trabalho, a atmosfera do forno ou do banho, os ciclos de aquecimento e resfriamento e o contato com produtos químicos influenciam a escolha do material e o processo de fabricação.</p>
+
+<p>Por isso, informar só as medidas não basta. Se você quiser entender como a liga é escolhida, leia os guias sobre as <a href="/blog/astm-a297-hk-hh-hp-diferencas">classes HH, HK e HP da ASTM A297</a> e sobre as <a href="/blog/ligas-304-316-310-alta-temperatura">ligas 304, 316 e 310 para alta temperatura</a>.</p>
+
+<h2>O que informar para cada tipo de peça</h2>
+
+<h3>Tubos centrifugados</h3>
+<ul>
+  <li>diâmetro externo e interno, ou diâmetro externo e espessura de parede;</li>
+  <li>comprimento total e se há usinagem nas pontas;</li>
+  <li>temperatura e atmosfera de operação;</li>
+  <li>norma ou classe da liga, quando houver.</li>
+</ul>
+<p>Para entender as vantagens do processo, veja o guia sobre <a href="/blog/fundicao-centrifugada-vantagens">fundição centrifugada</a>.</p>
+
+<h3>Buchas e componentes de Sink Roll</h3>
+<ul>
+  <li>desenho do conjunto, ou das peças que se encaixam na bucha;</li>
+  <li>composição e temperatura do banho;</li>
+  <li>histórico de desgaste e vida útil da peça atual;</li>
+  <li>folgas e tolerâncias de montagem.</li>
+</ul>
+<p>Mais detalhes nos guias sobre <a href="/blog/bucha-bimetalica-sink-roll">buchas para Sink Roll</a> e sobre <a href="/blog/sink-roll-como-escolher-liga">como escolher a liga do Sink Roll</a>.</p>
+
+<h3>Rolos, grelhas e outros componentes para fornos</h3>
+<ul>
+  <li>desenho com dimensões, pontas e pontos de fixação;</li>
+  <li>temperatura máxima e ciclos térmicos;</li>
+  <li>carga que o componente suporta;</li>
+  <li>fotos do componente atual e do local de instalação.</li>
+</ul>
+
 <h2>E se eu não tiver o desenho?</h2>
 
 <p>Isso é comum. Nesse caso, envie fotos da peça, as medidas que você conseguir tomar e, se possível, uma peça de referência. A equipe técnica avalia o material enviado e orienta o que ainda precisa ser levantado.</p>
 
+<p>Para tirar as medidas básicas de uma peça cilíndrica, anote:</p>
+<ul>
+  <li>diâmetro externo e diâmetro interno, em mais de um ponto da peça;</li>
+  <li>comprimento total e comprimento de cada trecho com diâmetro diferente;</li>
+  <li>espessura da parede;</li>
+  <li>posição e dimensões de rasgos, furos e roscas;</li>
+  <li>estado das superfícies de encaixe e de contato.</li>
+</ul>
+<p>Quando o desenho for refeito a partir da peça, vale conferir as dimensões críticas na peça nova antes de produzir.</p>
+
 <h2>O que acontece depois do envio</h2>
 
 <p>A engenharia da Aceros avalia o desenho e os requisitos da aplicação para orientar os próximos passos e preparar o orçamento. Se algo estiver incompleto ou houver mais de uma solução possível, a equipe entra em contato para alinhar os detalhes antes de seguir.</p>
+
+<ol>
+  <li><strong>Recebimento:</strong> a equipe confere se o pedido tem o necessário para avaliar.</li>
+  <li><strong>Análise técnica:</strong> avaliação do desenho, da liga e do processo mais adequado.</li>
+  <li><strong>Alinhamento:</strong> dúvidas e alternativas são combinadas com você antes da proposta.</li>
+  <li><strong>Proposta:</strong> o orçamento informa o escopo, incluindo usinagem, acabamento e documentos.</li>
+</ol>
 
 <h2>Dicas para evitar retrabalho</h2>
 
@@ -60,6 +117,67 @@ export const blogPosts: BlogPost[] = [
   <li>Se a peça substitui outra, informe <strong>por que a atual precisa ser trocada</strong>.</li>
   <li>Reúna as informações em <strong>um único envio</strong>, com arquivos legíveis.</li>
 </ul>
+
+<h2>Erros comuns ao pedir orçamento</h2>
+
+<ul>
+  <li>enviar só uma foto, sem medidas;</li>
+  <li>não informar a temperatura nem a atmosfera de trabalho;</li>
+  <li>pedir "igual à peça antiga" sem saber por que a antiga falhou;</li>
+  <li>mandar vários desenhos de revisões diferentes sem indicar o vigente;</li>
+  <li>esquecer de informar se a peça precisa de usinagem e acabamento prontos para montagem;</li>
+  <li>comparar propostas sem conferir se o escopo é o mesmo.</li>
+</ul>
+
+<h2>Checklist rápido antes de enviar</h2>
+
+<ul>
+  <li>Desenho ou fotos com medidas anexados.</li>
+  <li>Material ou norma indicados, se existirem.</li>
+  <li>Quantidade e prazo desejado informados.</li>
+  <li>Temperatura, atmosfera e esforços descritos.</li>
+  <li>Histórico da peça atual resumido.</li>
+  <li>Contato de quem pode tirar dúvidas técnicas.</li>
+</ul>
+
+<h2>Como a Aceros trabalha com peças sob medida</h2>
+
+<p>A Aceros integra <strong>centrifugação</strong>, usinagem e controle técnico em um mesmo fluxo. Conforme o projeto, a verificação pode envolver análise química, dureza, ultrassom e inspeção dimensional. Isso permite acompanhar o pedido do desenho à entrega e corrigir qualquer desvio ainda na fábrica.</p>
+
+<p>Cada peça é fabricada conforme o desenho e a condição informada pelo cliente. Por isso, quanto mais claro o pedido, mais direta é a conversa técnica e mais rápida a proposta.</p>
+
+<h2>Que documentos podem acompanhar o fornecimento</h2>
+
+<p>Dependendo da aplicação e da exigência do seu cliente ou auditoria, vale combinar desde o orçamento quais registros devem acompanhar a peça:</p>
+
+<ul>
+  <li>relatório dimensional, com as medidas conferidas contra o desenho;</li>
+  <li>resultado da análise química, que confirma a liga entregue;</li>
+  <li>registros de dureza e de ultrassom, quando aplicáveis ao projeto;</li>
+  <li>identificação da peça, para rastrear o lote e a aplicação.</li>
+</ul>
+
+<p>Informar essa necessidade no primeiro contato evita surpresas no recebimento e deixa a proposta mais completa.</p>
+
+<h2>Quando vale pedir orçamento de mais de uma peça de uma vez</h2>
+
+<p>Se você sabe que vai precisar de reposições ou de peças parecidas nos próximos meses, informe isso no pedido. Peças de uso recorrente podem ser planejadas de forma diferente de uma peça isolada, e a equipe pode orientar sobre a melhor forma de organizar os fornecimentos.</p>
+<h2>Perguntas frequentes</h2>
+
+<h3>Preciso saber a liga exata para pedir orçamento?</h3>
+<p>Não. Se você não souber, descreva a aplicação e as condições de trabalho, e a engenharia orienta a liga mais adequada.</p>
+
+<h3>Posso pedir orçamento só com fotos?</h3>
+<p>Pode, mas o pedido fica mais completo com medidas. Fotos ajudam a entender a peça, e as medidas permitem avaliar a fabricação.</p>
+
+<h3>Vocês fabricam uma única peça ou só lotes?</h3>
+<p>Informe a quantidade no pedido. A equipe técnica avalia a melhor forma de atender, seja uma peça isolada ou fornecimento recorrente.</p>
+
+<h3>A usinagem entra no orçamento?</h3>
+<p>Informe se a peça deve chegar usinada e pronta para montagem. A proposta deve deixar claro o que está incluído, como usinagem, acabamento e documentos.</p>
+
+<h3>Quanto tempo leva para receber o orçamento?</h3>
+<p>O tempo depende de quão completo está o pedido e da complexidade da peça. Quanto mais informações no primeiro envio, menos idas e vindas.</p>
 
 <p>Quer pedir um orçamento? Fale com a equipe técnica da Aceros pela página de <a href="/contato">contato</a> e envie as informações acima.</p>
 `,
