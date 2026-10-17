@@ -5,6 +5,7 @@ import { WhatsAppCta } from '@/components/sections/whatsapp-cta';
 import { MainGallery } from '@/components/sections/main-gallery';
 import { Sectors } from '@/components/sections/sectors';
 import { TrustSignals } from '@/components/sections/trust-signals';
+import { LatestArticles } from '@/components/landing-pages/related-articles';
 
 // Clients e ClientLogos removidos: sugeriam relacao com clientes especificos
 // que a Aceros nao autoriza divulgar (Petrobras, Vale, Gerdau, etc.).
@@ -84,6 +85,7 @@ export default function Home() {
       <TrustSignals />
       <Sectors />
       <MainGallery />
+      <LatestArticles />
       <LocationMap />
 
       <WhatsAppCta />

@@ -12,6 +12,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { saveContactMessage } from '@/lib/contact-actions';
 import { useToast } from '@/hooks/use-toast';
 import { RelatedSolutions } from './related-solutions';
+import { RelatedArticles } from './related-articles';
 import { useLanguage, type Language } from '@/hooks/use-language';
 
 type CampaignUi = {
@@ -354,6 +355,7 @@ export function IndustrialCampaignPage({
       </section>
 
       <RelatedSolutions currentPath={data.path} />
+      <RelatedArticles currentPath={data.path} />
 
       <section className="py-14 sm:py-20 lg:py-28">
         <div className="mx-auto grid max-w-[1280px] gap-14 px-5 lg:grid-cols-2 lg:px-10">
