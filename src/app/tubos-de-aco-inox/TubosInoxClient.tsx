@@ -16,6 +16,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { saveContactMessage } from '@/lib/contact-actions';
 import { RelatedSolutions } from '@/components/landing-pages/related-solutions';
+import { RelatedArticles } from '@/components/landing-pages/related-articles';
 import { useLanguage } from '@/hooks/use-language';
 import { tubosCopy } from './tubos-copy';
 
@@ -305,6 +306,7 @@ export function TubosInoxClient() {
       </section>
 
       <RelatedSolutions currentPath="/tubos-de-aco-inox" />
+      <RelatedArticles currentPath="/tubos-de-aco-inox" />
 
       {/* FAQ */}
       <section className="bg-white py-14 sm:py-20">
