@@ -16,7 +16,6 @@ import { useLanguage } from '@/hooks/use-language';
 
 const STORAGE_KEY = 'aceros-cookie-consent-v1';
 const GTM_ID = 'GTM-TXCX4GXT';
-const CLARITY_ID = 'yu71rpxkgf';
 
 type Consent = {
   analytics: boolean;
@@ -111,34 +110,6 @@ function loadGoogleTagManager() {
   document.head.appendChild(script);
 }
 
-function loadClarity() {
-  // Microsoft Clarity: heatmaps + gravacoes de sessao. So carrega apos
-  // consentimento LGPD (analytics_storage granted). Clarity mascara campos
-  // sensiveis por padrao e nao coleta PII.
-  if (document.querySelector(`script[data-clarity-id="${CLARITY_ID}"]`)) return;
-
-  const trackedWindow = window as Window & {
-    clarity?: ((...args: unknown[]) => void) & { q?: unknown[][] };
-  };
-
-  const clarityFn = function (...args: unknown[]) {
-    (clarityFn.q = clarityFn.q || []).push(args);
-  } as ((...args: unknown[]) => void) & { q?: unknown[][] };
-
-  trackedWindow.clarity = trackedWindow.clarity || clarityFn;
-
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
-  script.dataset.clarityId = CLARITY_ID;
-  const firstScript = document.getElementsByTagName('script')[0];
-  if (firstScript?.parentNode) {
-    firstScript.parentNode.insertBefore(script, firstScript);
-  } else {
-    document.head.appendChild(script);
-  }
-}
-
 function disableGoogleTagManager() {
   updateConsent(false);
   const scripts = document.querySelectorAll<HTMLScriptElement>('script[src*="googletagmanager.com"]');
@@ -194,7 +165,6 @@ export function CookieConsent() {
         setAnalytics(consent.analytics);
         if (consent.analytics) {
           loadGoogleTagManager();
-          loadClarity();
         }
       } catch {
         localStorage.removeItem(STORAGE_KEY);
@@ -224,7 +194,6 @@ export function CookieConsent() {
 
     if (allowAnalytics) {
       loadGoogleTagManager();
-      loadClarity();
     } else {
       const gtmWasLoaded = disableGoogleTagManager();
       const clarityWasLoaded = disableClarity();
