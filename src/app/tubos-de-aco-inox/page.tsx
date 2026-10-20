@@ -74,16 +74,17 @@ export default function TubosInoxPage() {
 
   const productSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Tubo de Aço Inox Centrifugado Sob Medida",
+    "serviceType": "Fabricação de tubos de aço inox por centrifugação sob medida",
     "image": "https://aceros.com.br/images/aceros/tubos/tubo-aco-inox-polido-aceros-05.jpg",
     "description": "Tubos de aço inox fabricados por centrifugação, sob medida para aplicações industriais e em ligas selecionadas conforme a condição de operação.",
-    "brand": { "@type": "Brand", "name": "Aceros" },
-    "manufacturer": {
+    "provider": {
       "@type": "Organization",
       "name": "Aceros Centrifugados LTDA",
       "url": "https://aceros.com.br"
     },
+    "areaServed": { "@type": "Country", "name": "Brasil" },
     "category": "Tubos industriais em aço inoxidável"
   };
 
