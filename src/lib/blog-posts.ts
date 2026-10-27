@@ -19,6 +19,132 @@ export function formatBlogDate(date: string) {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'como-escolher-fornecedor-pecas-aco-inox-sob-medida',
+    titulo: 'Como escolher um fornecedor de peças de aço inox sob medida: 7 perguntas antes de contratar',
+    descricao:
+      'Sete perguntas para fazer antes de contratar um fornecedor de peças, tubos e buchas sob medida em aço inox e comparar propostas com segurança.',
+    categoria: 'Engenharia',
+    tempoLeitura: '8 min',
+    dataPublicacao: '2026-10-24',
+    imagem: '/images/aceros/generated/blog-fornecedor-aco-inox-sob-medida-sao-paulo-aceros.jpg',
+    imagemAlt: 'Peça cilíndrica de aço inox com aletas helicoidais em uma máquina de usinagem na fábrica da Aceros',
+    keywords: ['fornecedor aço inox sob medida', 'como escolher fornecedor', 'peças de aço inox', 'tubos centrifugados', 'fornecedor de peças sob medida São Paulo', 'comparar propostas aço inox'],
+    conteudo: `
+<p>Escolher o fornecedor de <strong>peças de aço inox sob medida</strong> é uma decisão que afeta prazo, qualidade e custo de manutenção. Comparar apenas preço pode esconder diferenças importantes no processo, no controle e no suporte técnico. Estas sete perguntas ajudam a avaliar cada proposta, e ao final você encontra um roteiro para comparar fornecedores lado a lado, os erros mais comuns e as dúvidas frequentes.</p>
+
+<h2>Por que o preço sozinho engana</h2>
+
+<p>Duas propostas para a mesma peça podem parecer iguais no papel e entregar resultados muito diferentes. Uma pode incluir usinagem, inspeção e documentos, e a outra pode deixar essas etapas por sua conta. Uma pode usar a liga correta para a temperatura de trabalho, e a outra uma liga que falha antes do tempo.</p>
+
+<p>Uma peça que falha cedo gera parada de linha, troca de emergência e custo de manutenção maior do que a diferença de preço que parecia vantajosa. Por isso, vale avaliar o fornecedor por critérios técnicos antes de decidir.</p>
+
+<h2>1. Fabrica a peça a partir do meu desenho?</h2>
+
+<p>Peças sob medida dependem de interpretação correta do desenho. Pergunte se o fornecedor analisa o projeto, aponta dúvidas antes de produzir e confirma as dimensões e tolerâncias.</p>
+
+<p><strong>Boa resposta:</strong> a equipe técnica revisa o desenho e devolve perguntas ou sugestões antes da proposta final.</p>
+<p><strong>Sinal de alerta:</strong> o fornecedor aceita qualquer desenho sem fazer nenhuma pergunta.</p>
+
+<h2>2. Quais processos fazem parte da fabricação?</h2>
+
+<p>Verifique se a fundição, a usinagem e o controle técnico fazem parte do mesmo fluxo. Quando as etapas são integradas, fica mais simples acompanhar o pedido e corrigir qualquer desvio.</p>
+
+<p>Se parte do trabalho é terceirizada, pergunte quem responde por cada etapa e como a qualidade é conferida na volta. Para entender um dos processos mais usados em peças resistentes ao calor, veja o guia sobre <a href="/blog/fundicao-centrifugada-vantagens">fundição centrifugada</a>.</p>
+
+<h2>3. Como a qualidade é verificada?</h2>
+
+<p>Peça para saber quais verificações são feitas conforme o projeto, como análise química, dureza, ultrassom e inspeção dimensional, e quais registros acompanham a entrega.</p>
+
+<ul>
+  <li><strong>Análise química:</strong> confirma que a liga entregue é a que foi especificada.</li>
+  <li><strong>Dureza:</strong> ajuda a avaliar as propriedades mecânicas do material.</li>
+  <li><strong>Ultrassom:</strong> detecta falhas internas que não aparecem na superfície.</li>
+  <li><strong>Inspeção dimensional:</strong> confere se as medidas e tolerâncias do desenho foram cumpridas.</li>
+</ul>
+
+<h2>4. Existe certificação de qualidade?</h2>
+
+<p>Pergunte se há sistema de gestão certificado, como a ISO 9001, e solicite a confirmação do escopo e da validade. Uma certificação não substitui a verificação da peça, mas indica que há processos documentados e auditados.</p>
+
+<h2>5. O fornecedor atende a liga ou a norma que preciso?</h2>
+
+<p>Se a especificação pede uma classe da ASTM A297 ou outra liga resistente ao calor, confirme que o fornecedor trabalha com ela e que a engenharia avalia a escolha para a sua aplicação.</p>
+
+<p>Se você ainda não definiu a liga, um bom fornecedor ajuda a escolher a partir da temperatura, da atmosfera e do histórico da peça. Os guias sobre as <a href="/blog/astm-a297-hk-hh-hp-diferencas">classes HH, HK e HP</a> e sobre as <a href="/blog/ligas-304-316-310-alta-temperatura">ligas 304, 316 e 310</a> ajudam a entender as diferenças.</p>
+
+<h2>6. Há apoio técnico antes e depois da compra?</h2>
+
+<p>Uma equipe técnica acessível ajuda a corrigir a especificação, reduzir falhas e entender o desgaste da peça ao longo do tempo. Pergunte quem atende em caso de dúvida e se o fornecedor acompanha o desempenho da peça depois da entrega.</p>
+
+<h2>7. Como o prazo é combinado?</h2>
+
+<p>Peça que o prazo seja informado por escrito e que a proposta indique o que está incluído, como usinagem, acabamento e documentos. Desconfie de prazos muito curtos sem explicação do processo.</p>
+
+<h2>Como comparar fornecedores lado a lado</h2>
+
+<p>Monte uma tabela simples com as sete perguntas e anote a resposta de cada fornecedor. Dê mais peso ao que mais importa para a sua operação: precisão de prazo, controle de qualidade ou suporte técnico.</p>
+
+<ul>
+  <li><strong>Escopo:</strong> o que está incluído em cada proposta, incluindo usinagem, acabamento, inspeção e documentos.</li>
+  <li><strong>Material:</strong> liga, norma e como a composição é confirmada.</li>
+  <li><strong>Controle:</strong> quais testes e registros acompanham a entrega.</li>
+  <li><strong>Suporte:</strong> quem responde dúvidas técnicas e como.</li>
+  <li><strong>Prazo:</strong> informado por escrito e com condições claras.</li>
+  <li><strong>Histórico:</strong> experiência com peças parecidas com a sua.</li>
+</ul>
+
+<h2>Erros comuns na escolha do fornecedor</h2>
+
+<ul>
+  <li>decidir só pelo menor preço, sem comparar o escopo;</li>
+  <li>não pedir os registros de qualidade que acompanham a peça;</li>
+  <li>não informar as condições de uso e receber uma liga inadequada;</li>
+  <li>aceitar prazo verbal, sem confirmação por escrito;</li>
+  <li>trocar de fornecedor sem passar o histórico de falhas da peça anterior.</li>
+</ul>
+
+<h2>O que levar para a conversa com o fornecedor</h2>
+
+<p>Quanto mais completo o pedido, mais confiável a comparação. Antes de pedir propostas, reúna desenho, material, quantidade, condições de uso e histórico da peça. O guia <a href="/blog/como-pedir-orcamento-peca-sob-medida-aco-inox">como pedir orçamento de peça sob medida em aço inox</a> traz o passo a passo do que enviar.</p>
+
+<h2>Como a Aceros se encaixa nesses critérios</h2>
+
+<p>A Aceros integra <strong>centrifugação</strong>, usinagem e controle técnico. Conforme o projeto, a verificação pode envolver análise química, dureza, ultrassom e inspeção dimensional. A equipe de engenharia avalia o desenho e a aplicação antes de produzir, para orientar a escolha da liga e do processo.</p>
+
+<p>Use as sete perguntas deste guia também com a Aceros: o objetivo é que você decida com informação, e não apenas por preço.</p>
+
+<h2>Perguntas para quem compra, quem mantém e quem especifica</h2>
+
+<p>Cada área da empresa olha para o fornecedor de um jeito. Reúna as perguntas de todos antes de decidir:</p>
+
+<ul>
+  <li><strong>Compras:</strong> o escopo das propostas é o mesmo? O prazo e as condições estão por escrito?</li>
+  <li><strong>Manutenção:</strong> qual foi o desempenho de peças parecidas? Quem dá suporte se a peça falhar antes do esperado?</li>
+  <li><strong>Engenharia e projetos:</strong> a liga e as tolerâncias atendem ao desenho? Os testes e registros cobrem o que o projeto exige?</li>
+  <li><strong>Qualidade:</strong> quais certificados e relatórios acompanham a entrega?</li>
+</ul>
+
+<h2>Quando vale visitar o fornecedor</h2>
+
+<p>Para peças críticas ou fornecimentos recorrentes, conhecer a fábrica e a equipe técnica ajuda a confirmar o que foi dito na proposta. Observe como as etapas se conectam, como as peças são identificadas e como os controles são registrados.</p>
+<h2>Perguntas frequentes</h2>
+
+<h3>Devo pedir orçamento a mais de um fornecedor?</h3>
+<p>Sim, desde que todos recebam as mesmas informações. Assim as propostas ficam comparáveis.</p>
+
+<h3>O que fazer se o fornecedor não souber indicar a liga?</h3>
+<p>Descreva a aplicação, a temperatura e a atmosfera. Um fornecedor com engenharia própria deve ajudar a definir a liga, em vez de apenas aceitar o pedido.</p>
+
+<h3>Como saber se o prazo informado é realista?</h3>
+<p>Peça que o prazo venha por escrito e pergunte quais etapas ele considera. Desconfie de prazos sem explicação do processo de fabricação.</p>
+
+<h3>Preciso de relatório de qualidade junto com a peça?</h3>
+<p>Depende da sua aplicação e das exigências do seu cliente ou auditoria. Combine na proposta quais registros serão entregues.</p>
+
+<p>A equipe da Aceros avalia o desenho e os requisitos da sua aplicação para orientar os próximos passos. Fale com a gente pela página de <a href="/contato">contato</a>.</p>
+`,
+  },
+  {
     slug: 'como-pedir-orcamento-peca-sob-medida-aco-inox',
     titulo: 'Como pedir orçamento de peça sob medida em aço inox: o que enviar',
     descricao:
