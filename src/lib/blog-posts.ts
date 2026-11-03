@@ -344,6 +344,26 @@ export const blogPosts: BlogPost[] = [
 <p>A Aceros integra <strong>centrifugação</strong>, usinagem e controle técnico. Conforme o projeto, a verificação pode envolver análise química, dureza, ultrassom e inspeção dimensional.</p>
 
 <p>Antes de recomendar a liga, nossa engenharia analisa o histórico da sua linha: composição do banho, velocidade, ciclos térmicos e histórico de falhas anteriores. É esse casamento fino que garante o melhor custo-benefício.</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>O que é um Sink Roll?</h3>
+<p>É um componente de linhas de galvanização por imersão a quente. Ele trabalha submerso no pote de zincagem e está sujeito a esforços mecânicos.</p>
+
+<h3>Que dados são necessários para escolher a liga do Sink Roll?</h3>
+<p>A engenharia precisa da composição e da temperatura do banho, da geometria e da velocidade da linha e do histórico de operação, como desgaste, manutenção e falhas anteriores.</p>
+
+<h3>Existe uma liga única para todo Sink Roll?</h3>
+<p>Não. A escolha do material não deve seguir uma regra única. A engenharia considera temperatura, composição do banho, esforços, dimensões e histórico da aplicação antes de definir a liga.</p>
+
+<h3>Que componentes do conjunto a Aceros fabrica?</h3>
+<p>A Aceros fabrica Sink Rolls, buchas para a ponta do rolo, braços, Snout e conjuntos montados para zincagem. Cada item é feito conforme o desenho e a condição informada pelo cliente.</p>
+
+<h3>Como é feita a verificação das peças?</h3>
+<p>Conforme o projeto, a verificação pode envolver análise química, dureza, ultrassom e inspeção dimensional.</p>
+
+<h3>Como pedir orçamento de Sink Roll?</h3>
+<p>Envie o desenho, a composição e a temperatura do banho, a velocidade da linha e o histórico de falhas pela página de <a href="/contato">contato</a>, e a equipe técnica da Aceros avalia o caso.</p>
 `,
   },
   {
@@ -394,6 +414,26 @@ export const blogPosts: BlogPost[] = [
 <p>A Aceros avalia o grau da liga conforme a temperatura de trabalho, a atmosfera do forno, os ciclos térmicos e o histórico da aplicação. A especificação final deve constar no desenho e na documentação técnica do fornecimento.</p>
 
 <p><strong>Nota técnica:</strong> os valores apresentados são referências gerais. A especificação final deve considerar a edição aplicável da norma, os requisitos do projeto e as condições reais de serviço.</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>O que é a norma ASTM A297?</h3>
+<p>A ASTM A297 reúne classes de aços fundidos resistentes ao calor, com diferentes teores de cromo e níquel.</p>
+
+<h3>Qual a diferença entre as classes HH, HK e HP?</h3>
+<p>Todas têm de 24 a 28% de cromo. O que muda é o níquel: a HH tem de 11 a 14%, a HK de 18 a 22% e a HP de 33 a 37%.</p>
+
+<h3>Qual a temperatura máxima de cada classe?</h3>
+<p>Como referência geral, a HH trabalha até 1.050 °C em atmosferas oxidantes, a HK até 1.150 °C e a HP até 1.150 °C com melhor resistência à fluência. Esses valores não substituem a análise da condição real de serviço.</p>
+
+<h3>Onde cada classe costuma ser usada?</h3>
+<p>A HH é comum em rolos de forno e grelhas. A HK aparece em componentes de fornos siderúrgicos, como sink rolls, snouts e tubos radiantes. A HP é padrão em tubos de fornos de reforma catalítica e petroquímica.</p>
+
+<h3>O que é a liga HP-Nb?</h3>
+<p>É a classe HP modificada com nióbio, usada para melhorar ainda mais a resistência à fluência.</p>
+
+<h3>Como a Aceros define a classe da liga?</h3>
+<p>A Aceros avalia o grau conforme a temperatura de trabalho, a atmosfera do forno, os ciclos térmicos e o histórico da aplicação. A especificação final consta no desenho e na documentação técnica do fornecimento.</p>
 `,
   },
   {
@@ -433,6 +473,26 @@ export const blogPosts: BlogPost[] = [
 <h2>Quando a fundição estática pode ser indicada?</h2>
 
 <p>A Aceros também trabalha com fundição estática em geometrias que não permitem centrifugação, como carcaças complexas, peças assimétricas e componentes com múltiplas seções. Ambos os processos coexistem na fábrica, e nossa engenharia especifica o mais adequado a cada projeto.</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>O que é a fundição centrifugada?</h3>
+<p>É um processo em que o aço líquido é vazado em uma coquilha pré-aquecida e em rotação. A força centrífuga leva o metal contra as paredes da matriz e forma peças tubulares com controle dos diâmetros interno e externo.</p>
+
+<h3>Quais são as vantagens da centrifugação?</h3>
+<p>Estrutura densa, controle de concentricidade entre os diâmetros interno e externo, parâmetros definidos para cada peça e adequação a tubos e buchas.</p>
+
+<h3>Que peças podem ser feitas por centrifugação?</h3>
+<p>Tubos mecânicos, buchas e outros componentes cilíndricos avaliados pela engenharia.</p>
+
+<h3>A peça centrifugada passa por usinagem?</h3>
+<p>Sim. A usinagem posterior permite atingir as dimensões e as tolerâncias indicadas no desenho.</p>
+
+<h3>Em que temperatura o aço chega à coquilha?</h3>
+<p>Na Aceros, o aço é fundido em forno elétrico e chega à coquilha a temperaturas entre 1.500 e 1.630 °C.</p>
+
+<h3>Quando a fundição estática pode ser indicada?</h3>
+<p>Em geometrias que não permitem centrifugação, como carcaças complexas, peças assimétricas e componentes com múltiplas seções. A engenharia da Aceros especifica o processo mais adequado a cada projeto.</p>
 `,
   },
   {
@@ -483,6 +543,26 @@ export const blogPosts: BlogPost[] = [
 <h2>Fabricação Aceros</h2>
 
 <p>A Aceros fabrica buchas por <strong>centrifugação</strong> e realiza usinagem conforme desenho. O controle técnico pode incluir análise química, dureza, ultrassom e inspeção dimensional, de acordo com os requisitos do fornecimento.</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>O que é a bucha da ponta do Sink Roll?</h3>
+<p>É parte do conjunto que trabalha no pote de zincagem nas linhas de galvanização por imersão a quente.</p>
+
+<h3>O que informar para especificar a bucha?</h3>
+<p>O desenho e as dimensões da ponta, da bucha e dos componentes associados, a condição de operação (banho, temperatura, carga e histórico de desgaste) e o material usado hoje, com os registros de falha ou manutenção, quando existirem.</p>
+
+<h3>Como a Aceros fabrica as buchas?</h3>
+<p>Por centrifugação, com usinagem conforme o desenho.</p>
+
+<h3>Que controles podem ser feitos nas buchas?</h3>
+<p>De acordo com os requisitos do fornecimento, o controle técnico pode incluir análise química, dureza, ultrassom e inspeção dimensional.</p>
+
+<h3>Onde as buchas para Sink Roll são aplicadas?</h3>
+<p>Principalmente na ponta de Sink Roll e em conjuntos de Sink Roll de linhas de galvanização a quente. Aplicações industriais semelhantes são avaliadas pela engenharia.</p>
+
+<h3>O que o fornecimento da bucha precisa garantir?</h3>
+<p>Dimensões e tolerâncias conforme o desenho, material selecionado para a aplicação, usinagem e acabamento adequados à montagem, e as inspeções e a documentação definidas no projeto.</p>
 `,
   },
   {
@@ -533,6 +613,26 @@ export const blogPosts: BlogPost[] = [
 <p>Em condições de temperatura elevada ou com requisitos mais severos de fluência, classes da <strong>ASTM A297</strong> podem ser consideradas após a análise da temperatura de trabalho, da atmosfera, do desenho e do regime operacional.</p>
 
 <p><strong>Nota técnica:</strong> temperaturas de referência não substituem a análise das condições de serviço, do desenho e da norma aplicável ao projeto.</p>
+
+<h2>Perguntas frequentes</h2>
+
+<h3>Qual a diferença entre as ligas 304, 316 e 310?</h3>
+<p>A 304 tem cerca de 18% de cromo e 8% de níquel. A 316 acrescenta de 2 a 3% de molibdênio, o que dá resistência a cloretos. A 310 tem cerca de 25% de cromo e 20% de níquel e é a mais indicada para alta temperatura.</p>
+
+<h3>Qual liga resiste à maior temperatura?</h3>
+<p>A 310, que trabalha bem até cerca de 1.100 °C em serviço contínuo. A 304 e a 316 trabalham até cerca de 870 °C.</p>
+
+<h3>Qual liga é melhor contra cloretos e ambientes marítimos?</h3>
+<p>A 316, por causa do molibdênio, que confere resistência excelente a cloretos, ambientes marítimos e químicos agressivos.</p>
+
+<h3>Quando usar a versão L, como a 304L?</h3>
+<p>Quando há necessidade de soldagem intensiva. O baixo carbono evita a sensitização, que é a perda de resistência à corrosão intergranular.</p>
+
+<h3>Qual liga tem o menor custo?</h3>
+<p>Em custo relativo, a 304 é a mais econômica, seguida da 316 e depois da 310.</p>
+
+<h3>Quando é preciso ir além dessas ligas?</h3>
+<p>Em temperatura elevada ou com requisitos mais severos de fluência. Nesses casos, classes da ASTM A297 podem ser consideradas após a análise da temperatura, da atmosfera, do desenho e do regime operacional.</p>
 `,
   },
 ];
