@@ -26,6 +26,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  if (!blogPosts.some(post => post.slug === slug)) notFound();
-  return <BlogArticleClient slug={slug} />;
+  const post = blogPosts.find(p => p.slug === slug);
+  if (!post) notFound();
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://aceros.com.br' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://aceros.com.br/blog' },
+      { '@type': 'ListItem', position: 3, name: post.titulo, item: `https://aceros.com.br/blog/${post.slug}` },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <BlogArticleClient slug={slug} />
+    </>
+  );
 }

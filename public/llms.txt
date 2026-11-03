@@ -35,6 +35,13 @@ Siderurgia, mineração, galvanização por imersão a quente (CGL), tratamento 
 ## Blog
 
 - [Blog Aceros](https://aceros.com.br/blog): Conteúdo técnico sobre centrifugação, ligas e aplicações industriais.
+- [Como escolher um fornecedor de peças de aço inox sob medida: 7 perguntas antes de contratar](https://aceros.com.br/blog/como-escolher-fornecedor-pecas-aco-inox-sob-medida): Sete perguntas para fazer antes de contratar um fornecedor de peças, tubos e buchas sob medida em aço inox e comparar propostas com segurança.
+- [Como pedir orçamento de peça sob medida em aço inox: o que enviar](https://aceros.com.br/blog/como-pedir-orcamento-peca-sob-medida-aco-inox): O que informar ao pedir orçamento de tubos, buchas e peças sob medida em aço inox para receber uma resposta mais rápida e sem retrabalho.
+- [Sink Roll: como escolher a liga para linhas de galvanização](https://aceros.com.br/blog/sink-roll-como-escolher-liga): Critérios de seleção da liga do Sink Roll conforme o banho, a temperatura, a geometria e o regime de operação da linha.
+- [ASTM A297: diferenças entre as classes HH, HK e HP](https://aceros.com.br/blog/astm-a297-hk-hh-hp-diferencas): Visão geral das classes resistentes ao calor HH, HK e HP da norma ASTM A297, com composição e aplicações industriais típicas.
+- [Fundição centrifugada: vantagens e quando utilizar o processo](https://aceros.com.br/blog/fundicao-centrifugada-vantagens): Como funciona a centrifugação, suas vantagens para peças tubulares e quando a fundição estática pode ser indicada.
+- [Buchas para Sink Roll: critérios de especificação e fabricação](https://aceros.com.br/blog/bucha-bimetalica-sink-roll): Quais dados do conjunto e da linha devem ser avaliados na especificação de buchas para ponta de Sink Roll.
+- [Ligas 304, 316 e 310 para alta temperatura: qual escolher](https://aceros.com.br/blog/ligas-304-316-310-alta-temperatura): Comparativo técnico entre as três ligas de aço inox mais utilizadas em ambientes de alta temperatura.
 
 ## Políticas
 
