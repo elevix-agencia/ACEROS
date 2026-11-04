@@ -13,6 +13,14 @@ const categoriaCores: Record<string, string> = {
   Engenharia: 'bg-slate-100 text-slate-800 border-slate-300',
 };
 
+const updatedLabel: Record<string, string> = {
+  pt: 'Atualizado em',
+  en: 'Updated on',
+  es: 'Actualizado el',
+  de: 'Aktualisiert am',
+  it: 'Aggiornato il',
+};
+
 const solutionRoutes = ['/sink-rolls', '/rolos-de-forno', '/fundicao-centrifugada', '/bucha-de-aco-inox', '/tubos-de-aco-inox'];
 
 export default function BlogArticleClient({ slug }: { slug: string }) {
@@ -34,7 +42,7 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
     description: post.descricao,
     image: `https://aceros.com.br${post.imagem}`,
     datePublished: post.dataPublicacao,
-    dateModified: post.dataPublicacao,
+    dateModified: post.dataAtualizacao ?? post.dataPublicacao,
     mainEntityOfPage: `https://aceros.com.br/blog/${post.slug}`,
     author: {
       '@type': 'Organization',
@@ -105,6 +113,15 @@ export default function BlogArticleClient({ slug }: { slug: string }) {
             </span>
             <span>·</span>
             <time dateTime={post.dataPublicacao}>{formatLocalizedBlogDate(post.dataPublicacao, language)}</time>
+            {post.dataAtualizacao && (
+              <>
+                <span>·</span>
+                <span>
+                  {updatedLabel[language]}{' '}
+                  <time dateTime={post.dataAtualizacao}>{formatLocalizedBlogDate(post.dataAtualizacao, language)}</time>
+                </span>
+              </>
+            )}
           </div>
         </header>
 
