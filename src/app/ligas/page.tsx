@@ -10,8 +10,7 @@ export const metadata: Metadata = {
     title: 'Ligas de Aço Inox | Aceros Centrifugados',
     description:
       'Aços inoxidáveis e ligas resistentes ao calor, abrasão e corrosão. Série 300, 400 e ASTM A297 para aplicações industriais severas.',
-    url: '/ligas',
-  },
+    url: '/ligas', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
 };
 
 export default function LigasPage() {

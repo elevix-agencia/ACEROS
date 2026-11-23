@@ -14,8 +14,7 @@ export const metadata: Metadata = {
     title: 'Engenharia Metalúrgica Aceros | Projetos Sob Medida',
     description:
       'Engenharia de materiais, análise estrutural e desenvolvimento de peças centrifugadas em aços inoxidáveis.',
-    url: '/engenharia',
-  },
+    url: '/engenharia', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
 };
 
 

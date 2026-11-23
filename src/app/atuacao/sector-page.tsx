@@ -25,8 +25,7 @@ export function sectorMetadata(slug: string): Metadata {
       title: `${sector.title} | Aceros`,
       description,
       url: `/atuacao/${slug}`,
-      type: 'article',
-    },
+      type: 'article', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
     twitter: {
       card: 'summary_large_image',
       title: `${sector.title} | Aceros`,

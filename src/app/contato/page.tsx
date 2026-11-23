@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Contact } from '@/components/sections/contact';
 
 const contactPageSchema = {
@@ -20,8 +20,7 @@ export const metadata: Metadata = {
     title: 'Contato | Solicite Orçamento de Aços Centrifugados',
     description:
       'Fale com a Aceros: envie seu projeto e receba proposta comercial de peças em aços inoxidáveis fabricadas sob medida.',
-    url: '/contato',
-  },
+    url: '/contato', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
 };
 
 export default function ContatoPage() {

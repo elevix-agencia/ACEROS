@@ -29,8 +29,7 @@ export const metadata: Metadata = {
     title: 'Produtos Aceros | Peças Centrifugadas em Aço Inox',
     description:
       'Tubos, buchas, Sink Rolls, rolos de forno e outros componentes fabricados sob medida por centrifugação.',
-    url: '/produtos',
-  },
+    url: '/produtos', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
 };
 
 export default function ProdutosPage() {

@@ -11,8 +11,7 @@ export const metadata: Metadata = {
     title: 'Certificações e Referências Técnicas | Aceros',
     description:
       'Documentos do sistema de gestão e referências técnicas aplicáveis aos projetos e fornecimentos.',
-    url: '/certificados',
-  },
+    url: '/certificados', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
 };
 
 export default function CertificadosPage() {

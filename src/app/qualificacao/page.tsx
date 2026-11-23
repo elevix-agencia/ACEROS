@@ -22,8 +22,7 @@ export const metadata: Metadata = {
     title: 'Qualidade e Certificações | Aceros',
     description:
       'ISO 9001:2015, laboratório, metrologia e controles aplicados à fabricação de componentes industriais sob medida.',
-    url: '/qualificacao',
-  },
+    url: '/qualificacao', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
 };
 
 export default function QualificacaoPage() {

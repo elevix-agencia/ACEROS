@@ -14,8 +14,7 @@ export const metadata: Metadata = {
     description:
       'Buchas centrifugadas ASTM A297 para Sink Roll e Furnace Roll. Alta resistência a calor, abrasão e corrosão em ambientes de galvanização e tratamento térmico.',
     url: '/bucha-de-aco-inox',
-    type: 'website',
-  },
+    type: 'website', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
   twitter: {
     card: 'summary_large_image',
     title: 'Bucha de Aço Inox Sob Medida | Aceros',

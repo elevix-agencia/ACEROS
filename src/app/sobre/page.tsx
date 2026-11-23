@@ -26,8 +26,7 @@ export const metadata: Metadata = {
     title: 'Sobre a Aceros | Aços Inoxidáveis Centrifugados',
     description:
       'História, missão e expertise da Aceros na fabricação de peças em aços inoxidáveis centrifugados.',
-    url: '/sobre',
-  },
+    url: '/sobre', images: [{ url: '/images/imgur/OBD0nJ0.png', width: 1024, height: 1024, alt: 'Aceros Aços Centrifugados' }], },
 };
 
 export default function SobrePage() {
