@@ -20,7 +20,7 @@ const aboutPageSchema = {
 export const metadata: Metadata = {
   title: 'Sobre a Aceros | Aços Inoxidáveis Centrifugados',
   description:
-    'Conheça a Aceros: fabricante brasileira de aços inoxidáveis centrifugados, com peças sob medida em ligas ASTM A297 para setores industriais exigentes.',
+    'Conheça a Aceros: fabricante brasileira de aços inoxidáveis centrifugados, especialista em fabricação sob medida de peças em ligas ASTM A297 para setores industriais exigentes.',
   alternates: { canonical: '/sobre' },
   openGraph: {
     title: 'Sobre a Aceros | Aços Inoxidáveis Centrifugados',
